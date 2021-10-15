@@ -2,7 +2,7 @@
 
 Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron documentation, I will be frequently linking to it and adding additional information and methods that utilize those concepts.
 
-Slicer screenshots are be taken in SuperSlicer, but any concepts should directly translate to any slicer of your choosing.
+Slicer screenshots are taken in SuperSlicer, but any concepts should directly translate to any slicer of your choosing.
 # Table of Contents
 - [Extrusion Multiplier (Flow %)](#extrusion-multiplier-flow-)
 - [First Layer Squish](#first-layer-squish)

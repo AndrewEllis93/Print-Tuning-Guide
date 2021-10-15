@@ -7,6 +7,8 @@ Much of this guide is specific to Voron printers running Klipper. Rather than re
 Slicer screenshots are taken in SuperSlicer, but any concepts should directly translate to any slicer of your choosing.
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
+
+**Any line widths expressed as percentages are referring to a percentage of nozzle width.**
 # Table of Contents
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
@@ -87,8 +89,10 @@ Example of an actual print with tuned EM:
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
         - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
 
-    - **On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* 45 minutes.** \
-    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
+    - **On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
+    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*:
+
+    ![](/Images/ZDrift.png)
 
 ## Method
 **1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*

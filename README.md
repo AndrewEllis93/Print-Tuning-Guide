@@ -85,19 +85,21 @@ Example of an actual print with tuned EM:
 
 
 ## Method
-<b>1.</b> Scatter square patches around your bed in your slicer. <i>(See Test_Prints folder)</i>
+<b>1)</b> Scatter square patches around your bed in your slicer. <i>(See Test_Prints folder)</i>
 
 ![](Images/FirstLayer-Plate.png)    
 
-<b>2.</b> Set your first layer height to <b>0.25</b> or greater.
+<b>2)</b> Set your first layer height to <b>0.25</b> or greater.
 
 - Thinner first layer heights are considerably more sensitive and more difficult to maintain.
 
-<b>3)</b> Start the print. While it is printing, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height). Refer to the example images below.
+<b>3)</b> Set your first layer line width to <b>120%</b> or greater.
 
-- This can be done via macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
+<b>4)</b> Start the print. While it is printing, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height). Refer to the example images below.
 
-<b>4)</b> Once you are happy with your squish, cancel the print and then save your new offset by entering `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
+- This can be done via gcodes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
+
+<b>5)</b> Once you are happy with your squish, cancel the print and then save your new offset by entering `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
 
 - If you are using the probe as a virtual endstop <i>(rare)</i>, you would instead issue `Z_OFFSET_APPLY_PROBE`.
 - If you are using Klicky auto z calibration, you will have to manually adjust your `switch_offset`. Higher value = more squish.

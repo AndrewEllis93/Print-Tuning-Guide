@@ -4,11 +4,11 @@ Much of this guide is specific to Voron printers running Klipper. Rather than re
 
 Slicer screenshots are taken in SuperSlicer, but any concepts should directly translate to any slicer of your choosing.
 # Table of Contents
-- [Extrusion Multiplier (Flow %)](#extrusion-multiplier-flow-)
+- [Extrusion Multiplier)](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
 - [Pressure Advance](#pressure-advance)
 
-# Extrusion Multiplier (Flow %)
+# Extrusion Multiplier
 
 ![](Images/EM.png)  
 
@@ -113,6 +113,16 @@ Example of an actual print with tuned EM:
 
 # Build Plate Adhesion
 
+- Smooth PEI
+    - Scuff with some Scotch-Brite or a similarly rough pot scrubber or sandpaper.
+    - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify the layers.
+
+- Textured PEI
+    - Needs more squish than smooth PEI. 
+
+- <b>Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.</b>
+
+- Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 # Pressure Advance
 
 ## Background

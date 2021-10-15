@@ -97,7 +97,7 @@ Example of an actual print with tuned EM:
 
 - This can be done via macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
 
-<b>4)</b> Once you are happy with your squish, cancel the print and then save your new offset by entering `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your Z `position_endstop` in your config.
+<b>4)</b> Once you are happy with your squish, cancel the print and then save your new offset by entering `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
 
 - If you are using the probe as a virtual endstop <i>(rare)</i>, you would instead issue `Z_OFFSET_APPLY_PROBE`.
 - If you are using Klicky auto z calibration, you will have to manually adjust your `switch_offset`. Higher value = more squish.

@@ -37,12 +37,12 @@ Both of the above methods I've found to have error of up to 5% Fsometimes even m
 ## Method
 By far the best method I have found is purely visual. *Put the calipers down for now*.
 
-We will print some 30x30x3mm cubes. <i>(see the Test_Prints folder)</i>
+We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
 **Print Settings:**
 - **40+% Infill**\
     We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. 
-    We still need enough to adequately support the top layers.</i>
+    We still need enough to adequately support the top layers.*
 - **120% Infill Line Width**\
     This just increases infill density over my normal settings, which are thicker for reducing print times.
 - **100% Top Layer Line Width**\
@@ -78,7 +78,7 @@ Example of an actual print with tuned EM:
 
 - This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
-- This section also assumes that you have a <i>consistent</i> first layer.
+- This section also assumes that you have a *consistent* first layer.
      - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
         - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare, especially for larger printers, to have a perfect first layer without it.
         - Your heat soaked mesh will also be different from your cold mesh, and will even vary at different temperatures, hence why I prefer to generate a fresh one for every print.
@@ -87,11 +87,11 @@ Example of an actual print with tuned EM:
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
         - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
 
-    - On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for <i>at least</i> 45 minutes. \
-    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up <i>as it prints</i>. 
+    - **On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* 45 minutes.** \
+    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
 
 ## Method
-**1)** Scatter square patches around your bed in your slicer. <i>(See Test_Prints folder)</i>
+**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*
 
 ![](Images/FirstLayer-Plate.png)    
 

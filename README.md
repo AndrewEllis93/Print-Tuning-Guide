@@ -5,6 +5,8 @@
 Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron documentation, I will be frequently linking to it and adding additional information and methods that utilize those concepts.
 
 Slicer screenshots are taken in SuperSlicer, but any concepts should directly translate to any slicer of your choosing.
+
+This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 # Table of Contents
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
@@ -77,7 +79,7 @@ Example of an actual print with tuned EM:
 - This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
 - This section also assumes that you have a <i>consistent</i> first layer.
-     - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)\
+     - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
         - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare, especially for larger printers, to have a perfect first layer without it.
         - Your heat soaked mesh will also be different from your cold mesh, and will even vary at different temperatures, hence why I prefer to generate a fresh one for every print.
 

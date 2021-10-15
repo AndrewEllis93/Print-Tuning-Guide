@@ -72,7 +72,7 @@ Example of an actual print with tuned EM:
 - This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
 - This section also assumes that you have a <i>consistent</i> first layer.
-     - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. \
+     - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)\
      Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare, especially for larger printers, to have a perfect first layer without it.
 
     - If you are using a V2: 
@@ -80,7 +80,7 @@ Example of an actual print with tuned EM:
         - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
 
     - On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for <i>at least</i> 45 minutes. \
-    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up <i>as it prints</i>.
+    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up <i>as it prints</i>. Your heat soaked mesh will also be different from your cold mesh.
 
 
 

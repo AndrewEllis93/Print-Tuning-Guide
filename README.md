@@ -111,58 +111,9 @@ Example of an actual print with tuned EM:
 
 ![](Images/FirstLayerPrint-Example.jpg) 
 
+# Build Plate Adhesion
+
 # Pressure Advance
 
 ## Background
 ## Method
-
-# Start G-Code
-By default, slicers will put heating commands either entirely before or after `PRINT_START`. You have to pass the temps TO `PRINT_START` in order to control when they happen. 
-For example I don’t want my nozzle to heat until the very end so it’s not oozing during QGL, mesh etc.
-
-Example macro:
-```
-[gcode_macro PRINT_START]
-gcode:        
-    # Parameters
-    {% set bedtemp = params.BED|int %}
-    {% set hotendtemp = params.HOTEND|int %}
-    {% set chambertemp = params.CHAMBER|default(0)|int %}
-    
-    # <insert routines>
-    M190 S{bedtemp}                                                              ; wait for bed temp
-    TEMPERATURE_WAIT SENSOR="temperature_sensor chamber" MINIMUM={chambertemp}   ; wait for chamber temp
-    # <insert routines>
-    M109 S{hotendtemp}                                                           ; wait for hotend temp
-    # <insert routines / nozzle clean>
-    G28 Z                                                                    ; final z homing with hot nozzle
-```
-
-This would now be run like `PRINT_START BED=110 HOTEND=240 CHAMBER=50`. 
-Chamber defaults to 0 if not specified.
-
-Then in the slicer you would put this as your start gcode:
-
-<b>SuperSlicer:</b>
- ```    
-M104 S0 ; Stops PS/SS from sending temp waits separately
-M140 S0
-PRINT_START BED=[first_layer_bed_temperature] HOTEND=[first_layer_temperature] CHAMBER=[chamber_temperature]
-```
-
-<b>Prusa Slicer:</b> (doesn’t support chamber temp)
-    
-```
-M104 S0 ; Stops PS/SS from sending temp waits separately
-M140 S0
-PRINT_START BED=[first_layer_bed_temperature] HOTEND=[first_layer_temperature]
-```
-
-
-<b>Cura:</b>
-```
-PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temperature_layer_0} CHAMBER={build_volume_temperature}
-```
-
-
-If you don’t use a chamber thermistor, just remove the chamber stuff. 

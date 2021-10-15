@@ -6,7 +6,7 @@ Much of this guide is specific to Voron printers running Klipper. Rather than re
 
 Slicer screenshots are taken in SuperSlicer, but any concepts should directly translate to any slicer of your choosing.
 # Table of Contents
-- [Extrusion Multiplier)](#extrusion-multiplier)
+- [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)

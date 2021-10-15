@@ -8,7 +8,7 @@ Slicer screenshots are taken in SuperSlicer, but any concepts should directly tr
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
-**Any line widths expressed as percentages are referring to a percentage of nozzle width.**
+**Any line widths expressed as percentages are referring to a percentage of nozzle width.** SuperSlicer allows percentages this way, however Prusa Slicer bases percentages on layer heights, and Cura does not allow percentages at all. For both, you must use static widths *(for example 120% w/ 0.4mm nozzle = 0.48mm)*
 # Table of Contents
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)

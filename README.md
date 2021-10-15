@@ -73,16 +73,15 @@ Example of an actual print with tuned EM:
 
 - This section also assumes that you have a <i>consistent</i> first layer.
      - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)\
-     Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare, especially for larger printers, to have a perfect first layer without it.
+        - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare, especially for larger printers, to have a perfect first layer without it.
+        - Your heat soaked mesh will also be different from your cold mesh, and will even vary at different temperatures, hence why I prefer to generate a fresh one for every print.
 
     - If you are using a V2: 
         - Ensure that you place your `BED_MESH_CALIBRATE` <b>after</b> G32, as G32 clears bed meshes by default.
         - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
 
     - On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for <i>at least</i> 45 minutes. \
-    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up <i>as it prints</i>. Your heat soaked mesh will also be different from your cold mesh.
-
-
+    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up <i>as it prints</i>. 
 
 ## Method
 <b>1)</b> Scatter square patches around your bed in your slicer. <i>(See Test_Prints folder)</i>
@@ -99,10 +98,14 @@ Example of an actual print with tuned EM:
 
 - This can be done via gcodes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
 
-<b>5)</b> Once you are happy with your squish, cancel the print and then save your new offset by entering `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
+<b>5)</b> Once you are happy with your squish, cancel the print and then save your new offset:
 
-- If you are using the probe as a virtual endstop <i>(rare)</i>, you would instead issue `Z_OFFSET_APPLY_PROBE`.
-- If you are using Klicky auto z calibration, you will have to manually adjust your `switch_offset`. Higher value = more squish.
+- V0/V2/Trident: 
+    - Enter `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
+- Switchwire/Legacy: 
+    - Enter `Z_OFFSET_APPLY_PROBE`. This will apply your new offset to your probe's `z_offset`.
+- Klicky Auto z: 
+    - Manually adjust your `switch_offset`. Higher value = more squish.
 
 ### Examples:
 

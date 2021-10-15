@@ -130,6 +130,8 @@ Example of an actual print with tuned EM:
 - Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.
 
 - Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
+
+- Ensure your PEI is not counterfeit. You may have to ask in the Discord for other' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake. This is particularly prevalent with random Amazon brands or unknown Aliexpress sellers.
 # Pressure Advance
 
 ## Background

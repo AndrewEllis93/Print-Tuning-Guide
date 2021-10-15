@@ -89,16 +89,18 @@ Example of an actual print with tuned EM:
 
 ![](Images/FirstLayer-Plate.png)    
 
-<b>2.</b> Set your first layer height to <b>0.25</b> or greater.\
-    1. Thinner first layer heights are considerably more sensitive and more difficult to maintain.
+<b>2.</b> Set your first layer height to <b>0.25</b> or greater.
 
-<b>3)</b> Start the print. While the print is happening, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height). Refer to the example images below.\
-    - This can be done via macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.\
+- Thinner first layer heights are considerably more sensitive and more difficult to maintain.
 
-<b>4)</b> Once you are happy with your squish, cancel the print and then save your new offset by entering `Z_OFFSET_APPLY_ENDSTOP`. \
-    - This will apply your new offset to your Z `position_endstop` in your config.\
-    - If you are using the probe as a virtual endstop (rare), you would instead issue `Z_OFFSET_APPLY_PROBE`.\
-    - If you are using Klicky auto z calibration, you will have to manually adjust your `switch_offset` accordingly. Higher `switch_offset` = more squish.
+<b>3)</b> Start the print. While the print is happening, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height). Refer to the example images below.
+
+- This can be done via macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
+
+<b>4)</b> Once you are happy with your squish, cancel the print and then save your new offset by entering `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your Z `position_endstop` in your config.
+
+- If you are using the probe as a virtual endstop (rare), you would instead issue `Z_OFFSET_APPLY_PROBE`.
+- If you are using Klicky auto z calibration, you will have to manually adjust your `switch_offset` accordingly. Higher `switch_offset` = more squish.
 
 <b>Examples:</b>
 

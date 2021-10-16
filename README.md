@@ -8,7 +8,14 @@ Slicer screenshots are taken in SuperSlicer, but any concepts should directly tr
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
-**Any line widths expressed as percentages are referring to a percentage of nozzle width.** SuperSlicer allows percentages this way, however Prusa Slicer bases percentages on layer heights, and Cura does not allow percentages at all. For both, you must use static widths *(for example 120% w/ 0.4mm nozzle = 0.48mm)*
+## A Note About Line Width
+Any line widths expressed as percentages are referring to a **percentage of nozzle width.** 
+
+SuperSlicer allows percentages to be entered this way, however: 
+- Prusa Slicer bases percentages on layer heights.
+- Cura does not allow percentages at all. 
+
+For Cura/PS, you must use **static widths** *(for example 0.48mm instead of 120%, assuming a 0.4mm nozzle)*
 # Table of Contents
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
@@ -85,7 +92,7 @@ Example of an actual print with tuned EM:
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
         - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
 
-    - **On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
+    - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
     Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*:
 
     ![](/Images/ZDrift.png)

@@ -25,8 +25,8 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
 - [Infill/Perimeter Overlap (Pinholes)](#infill/perimeter-overlap-pinholes)
-- [Retraction](#retraction)
-- [Cooling and Layer Times](#cooling-and-layer-times)
+- [Retraction (WIP)](#retraction)
+- [Cooling and Layer Times (WIP)](#cooling-and-layer-times)
 
 # Extrusion Multiplier
 

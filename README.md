@@ -165,9 +165,9 @@ The only modifications you should make are these:
 **4)** Allow the print to run until it starts showing obvious issues. Then you may cancel.
 
 **5)** Following the [Klipper guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), measure the height of the perfect PA with calipers.
-- Ensure you are not measuring your Z seam corner.
+- Ensure you are **not** measuring your Z seam corner.
 - There should be no signs of divots before or after the corner. 
-- It is *normal* for there to be a small amount of bulge still. When in doubt, choose the lower value.
+- It is normal for there to be a small amount of bulge still. When in doubt, choose the lower value.
 - If the height differs between corners, take a rough average.
 
 **6)** Calculate your new pressure advance value:

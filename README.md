@@ -9,13 +9,18 @@ Slicer screenshots are taken in SuperSlicer, but any concepts should directly tr
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
 ## A Note About Line Width
-Any line widths expressed as percentages are referring to a **percentage of nozzle width.** 
+Any line widths expressed as percentages are referring to a **percentage of nozzle diameter.** \
+This allows the guide to remain agnostic to nozzle diameter.
 
-SuperSlicer allows percentages to be entered this way, however: 
-- Prusa Slicer bases percentages on layer heights.
+SuperSlicer natively allows percentages to be entered this way.
+
+However: 
+- Prusa Slicer bases percentages on *layer heights* instead. (seriously, why?)
 - Cura does not allow percentages at all. 
+- Other slicers may or may not support this.
 
-For Cura/PS, you must use **static widths** *(for example 0.48mm instead of 120%, assuming a 0.4mm nozzle)*
+**For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
+For example, enter **0.48mm** instead of 120%, assuming a 0.4mm nozzle.
 # Table of Contents
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
@@ -48,9 +53,9 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 - **40+% Infill**\
     We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. 
     We still need enough to adequately support the top layers.*
-- **120% Infill Line Width**\
+- **120% Infill [Line Width](#a-note-about-line-width)** \
     This just increases infill density over my normal settings, which are thicker for reducing print times.
-- **100% Top Layer Line Width**\
+- **100% Top Layer [Line Width](#a-note-about-line-width)**\
     This is more subject to interpretation, but I find 100% to have good results.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.

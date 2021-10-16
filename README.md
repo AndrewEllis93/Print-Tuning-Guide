@@ -134,9 +134,23 @@ Example of an actual print with tuned EM:
 - Klicky Auto z: 
     - Manually adjust your `switch_offset`. Higher value = more squish.
 
-### Examples (more to come): 
+## Examples 
+You should still clearly be able to see the lines. If it's completely smooth, your squish is too much.
 
+If you see gaps between the lines, your squish is too little.
+### Good Squish
 ![](Images/FirstLayer-PrintExample.jpg) 
+### Too Much Squish
+
+![](Images/FirstLayer-TooMuchSquish1.png) 
+
+### Not Enough Squish
+
+![](Images/FirstLayer-NotEnoughSquish3.png) 
+
+![](Images/FirstLayer-NotEnoughSquish1.png) 
+![](Images/FirstLayer-NotEnoughSquish2.png) 
+
 
 # Build Surface Adhesion
 

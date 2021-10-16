@@ -24,7 +24,7 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
-- [Infill/Perimeter Overlap](#infill/perimeter-overlap)
+- [Infill/Perimeter Overlap (Pinholes)](#infill/perimeter-overlap-pinholes)
 - [Retraction](#retraction)
 - [Cooling and Layer Times](#cooling-and-layer-times)
 
@@ -251,8 +251,22 @@ Pressure advance **changes the distribution of material,** not the *amount* of m
 
 You can manually tweak pressure advance based on actual prints. Usually increments of 0.005 (with direct drive) are a good starting point.
 
-# Infill/Perimeter Overlap
-WIP
+# Infill/Perimeter Overlap (Pinholes)
+
+After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. 
+
+This is more prevalent in PS/SS.
+
+This is **not** necessarily an indicator that your flow or pressure advance are wrong, though they can impact it. 
+
+Simply tweak "infill/perimeter overlap" (PS/SS) until satisfied.
+
+## Pinholes
+![](Images/Overlap-1.png) 
+![](Images/Overlap-2.png) 
+
+## Overlap Tweaked (40%)
+![](Images/Overlap-Fixed1.png) 
 
 # Retraction
 WIP

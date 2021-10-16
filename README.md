@@ -84,6 +84,10 @@ Example of an actual print with tuned EM:
 
 # First Layer Squish
 
+I'm going to call it "squish" for purposes of being unambiguous. \
+"Z offset" can be conflated with other concepts. \
+[It stops sounding like a real word after you type it 100 times.](https://en.wikipedia.org/wiki/Semantic_satiation)
+
 ## Background and Common Mistakes
 
 - This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
@@ -143,6 +147,7 @@ If you see gaps between the lines, your squish is too little.
 ### Too Much Squish
 
 ![](Images/FirstLayer-TooMuchSquish1.png) 
+![](Images/FirstLayer-TooMuchSquish2.png) 
 
 ### Not Enough Squish
 

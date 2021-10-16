@@ -14,15 +14,11 @@ This is not intended to be an ultimate guide to everything, rather a guide to ad
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
+- [Infill/Perimeter Overlap](#infill/perimeter-overlap)
 - [Retraction](#retraction)
 - [Cooling and Layer Times](#cooling-and-layer-times)
 
 # Extrusion Multiplier
-
-![](Images/EM.png)  
-
-## Background
-
 
 This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 
@@ -140,17 +136,22 @@ Example of an actual print with tuned EM:
 
 The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. 
 
-The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I find that this actually throws off the results a small amount. In my opinion, it is best to run the calibration in close to normal printing conditions.
+The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. In my opinion, it is best to run the calibration in close to normal printing conditions.
+
+This can make it slightly harder to tell the difference, but I find it more accurate.
+
+Remember: *There is no such thing as perfect pressure advance*. Either accelerations or decelerations will always be slightly imperfect.
 ## Initial Calibration
 This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 
-**1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print setting (accelerations and speeds included)*. \
+**1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print setting (accelerations included)*. \
 The only modifications you should make are these:
 
+- **120mm/s perimeter speed**
 - **1 perimeter**
 - **0% infill**
 - **0 top layers**
-- **0 second minimum layer time / layer time goal**
+- **0 second "minimum layer time" / "layer time goal"**
 - **High fan speed**
 
 **2)** Initiate the print.
@@ -160,13 +161,17 @@ The only modifications you should make are these:
 - (Direct Drive) `TUNING_TOWER COMMAND=SET_PRESSURE_ADVANCE PARAMETER=ADVANCE START=0 FACTOR=.0025`
 - (Bowden) `TUNING_TOWER COMMAND=SET_PRESSURE_ADVANCE PARAMETER=ADVANCE START=0 FACTOR=.025`
 
-\* <sup>*Certain patterns in your start gcode can cancel the tuning tower.*</sup>
+You should now see increasing pressure advance values reporting to the g-code terminal as the print progresses.
+
+\* <sup>*Certain patterns in your start gcode can cancel the tuning tower. \
+\* It does not matter how quickly you enter the command, as it is based on height.*</sup>
 
 **4)** Allow the print to run until it starts showing obvious issues. Then you may cancel.
 
 **5)** Following the [Klipper guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), measure the height of the perfect PA with calipers.
 - Ensure you are **not** measuring your Z seam corner.
-- There should be no signs of divots before or after the corner. 
+- There should be no signs of underextrusion before or after the corner. 
+    - It can help to shine a bright flashlight between the walls.
 - It is normal for there to be a small amount of bulge still. When in doubt, choose the lower value.
 - If the height differs between corners, take a rough average.
 
@@ -177,26 +182,30 @@ The only modifications you should make are these:
 **8)** In the `[extruder]` section of your config, update `pressure_advance` to the new value.
 
 **9)** Issue `RESTART` command.
-## Fine-Tuning
+## Fine-Tuning and What to Look For
 
-The pressure advance tower method is usually good enough on its own.
-
-It takes some experience to manually tweak it. Usually increments of 0.005 (with direct drive) are a good starting point.
+The pressure advance tower method is usually good enough on its own, provided you measured correctly. This can take some experience, however, so here are some things to look out for.
 
 Pressure advance **changes the distribution of material,** not the *amount* of material.
 - Lower values cause less material in the middle of lines, and more at the ends/corners. 
 - Higher values cause more material in the middle of lines, and less at the ends/corners.
 ### Pressure Advance is Too High
 - Divots or underextrusion at corners and line ends.
-- Gaps between corners perimeters.
+- Gaps between perimeters at corners.
 
 ![](Images/PA-High-1.png) 
 
 ### Pressure Advance is Too Low
 - Bulging at corners and line ends.
-- Gaps between straight perimeters.
+- Gaps between straight line perimeters.
 
 ![](Images/PA-Low-1.png) 
+
+You can manually tweak pressure advance based on actual prints. Usually increments of 0.005 (with direct drive) are a good starting point.
+
+# Infill/Perimeter Overlap
+WIP
+
 # Retraction
 WIP
 

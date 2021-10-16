@@ -102,6 +102,8 @@ Example of an actual print with tuned EM:
 
          ![](/Images/ZDrift.png)
 
+        It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up.
+
         There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a rabbit hole well outside the scope of this guide.
 
 
@@ -132,7 +134,7 @@ Example of an actual print with tuned EM:
 
 ### Examples (more to come): 
 
-![](Images/FirstLayerPrint-Example.jpg) 
+![](Images/FirstLayer-PrintExample.jpg) 
 
 # Build Surface Adhesion
 
@@ -182,9 +184,9 @@ You should now see increasing pressure advance values reporting to the g-code te
 \* <sup>*Certain patterns in your start gcode can cancel the tuning tower. \
 \* It does not matter how quickly you enter the command, as it is based on height.*</sup>
 
-**4)** Allow the print to run until it starts showing obvious issues. Then you may cancel.
+**4)** Allow the print to run until it starts showing obvious issues/gaps. Then you may cancel.
 
-**5)** Following the [Klipper guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), measure the height of the perfect PA with calipers (see images below)
+**5)** Measure the height of the perfect PA with calipers **(see images below)**
 - Ensure you are **not** measuring your Z seam corner.
 - There should be no signs of underextrusion before or after the corner. 
     - It can help to shine a bright flashlight between the walls.

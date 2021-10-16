@@ -140,8 +140,7 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
 ## Examples 
 You should still clearly be able to see the lines. If it's completely smooth, your squish is too much.
-
-If you see gaps between the lines, your squish is too little.
+ If you see gaps between the lines, you need more squish.
 ### Good Squish
 ![](Images/FirstLayer-PrintExample.jpg) 
 ### Too Much Squish

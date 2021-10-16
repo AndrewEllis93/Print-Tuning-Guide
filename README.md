@@ -20,7 +20,7 @@ However:
 - Other slicers may or may not support this.
 
 **For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
-For example, enter **0.48mm** instead of 120%, assuming a 0.4mm nozzle.
+For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
 # Table of Contents
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
@@ -111,7 +111,7 @@ Example of an actual print with tuned EM:
 
 - Thinner first layer heights are considerably more sensitive and more difficult to maintain.
 
-**3)** Set your first layer line width to **120%** or greater.
+**3)** Set your first layer [line width](#a-note-about-line-width) to **120%** or greater.
 
 **4)** Start the print. While it is printing, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height). Refer to the example images below.
 

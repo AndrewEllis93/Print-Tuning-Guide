@@ -24,7 +24,7 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
-- [Infill/Perimeter Overlap (Pinholes)](#infill/perimeter-overlap-pinholes)
+- [Infill/Perimeter Overlap](#infill/perimeter-overlap-pinholes)
 - [Retraction (WIP)](#retraction)
 - [Cooling and Layer Times (WIP)](#cooling-and-layer-times)
 
@@ -40,7 +40,7 @@ SuperSlicer has a built-in flow calibration tool, however I do not like this eit
 - It has ironing turned on by default.
 - The objects are too small. It's normal for smaller infill areas to look a bit more overextruded than larger infill areas.
 
-Both of the above methods I've found to have error of up to 5% Fsometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
+Both of the above methods I've found to have error of up to 5% (sometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
 
 This must be done per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 
@@ -74,11 +74,19 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
 I have found that most ABS falls within the 91-94% range.
 
-This image shows 0.5% intervals. Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #3). This is not just a trick of the light. Shininess is not always the best indicator, but it makes a good visual example.
+### Examples
+
+This can be difficult to convey in photos. You may have to zoom in quite a bit to see the differences. It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
+You will get better at this through experience.
+#### 2% Intervals
+![](Images/EMPrints-Coarse.png) 
+#### 0.5% Intervals
+Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #3). 
+This is not just a trick of the light. Shininess is not always the best indicator, but it makes a good visual example.
 
 ![](Images/EMPrints-Fine.png) 
 
-Example of an actual print with tuned EM:
+#### Actual Print with Tuned EM:
 
 ![](Images/EMPrint-Example.jpg) 
 
@@ -251,7 +259,7 @@ Pressure advance **changes the distribution of material,** not the *amount* of m
 
 You can manually tweak pressure advance based on actual prints. Usually increments of 0.005 (with direct drive) are a good starting point.
 
-# Infill/Perimeter Overlap (Pinholes)
+# Infill/Perimeter Overlap
 
 After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
 

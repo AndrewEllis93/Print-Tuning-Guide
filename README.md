@@ -42,6 +42,8 @@ SuperSlicer has a built-in flow calibration tool, however I do not like this eit
 
 Both of the above methods I've found to have error of up to 5% Fsometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
 
+This must be done per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
+
 ## Method
 By far the best method I have found is purely visual. *Put the calipers down for now*.
 
@@ -154,11 +156,13 @@ Example of an actual print with tuned EM:
 
 The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. 
 
-The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. In my opinion, it is best to run the calibration in close to normal printing conditions.
-
-This can make it slightly harder to tell the difference, but I find it more accurate.
+The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
 
 Remember: *There is no such thing as perfect pressure advance*. Either accelerations or decelerations will always be slightly imperfect.
+
+Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors of they are noticeably different.
+
+With PS/SS, you can add a `SET_PRESSURE_ADVANCE ADVANCE=X` command to your filament profile's custom start g-code.
 ## Initial Calibration
 This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 

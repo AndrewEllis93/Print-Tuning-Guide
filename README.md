@@ -2,9 +2,7 @@
 
 # Introduction
 
-Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron documentation, I will be frequently linking to it and adding additional information and methods that utilize those concepts.
-
-Slicer screenshots are taken in SuperSlicer, but any concepts should directly translate to any slicer of your choosing.
+Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
@@ -15,7 +13,7 @@ This allows the guide to remain agnostic to nozzle diameter.
 SuperSlicer natively allows percentages to be entered this way.
 
 However: 
-- Prusa Slicer bases percentages on *layer heights* instead. (seriously, why?)
+- Prusa Slicer bases percentages on layer heights instead. *(seriously, why?)*
 - Cura does not allow percentages at all. 
 - Other slicers may or may not support this.
 
@@ -104,7 +102,7 @@ Example of an actual print with tuned EM:
 
          ![](/Images/ZDrift.png)
 
-        There *are* ways around this - specifically by using gantry backers in combination with software frame thermal expansion compensation, but that is a rabbit hole well outside the scope of this guide.
+        There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a rabbit hole well outside the scope of this guide.
 
 
 
@@ -145,7 +143,7 @@ Example of an actual print with tuned EM:
 - **Textured PEI:**
     - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
 
-- Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol. **This is essential.**
+- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
 
 - Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 
@@ -200,6 +198,11 @@ You should now see increasing pressure advance values reporting to the g-code te
 **8)** In the `[extruder]` section of your config, update `pressure_advance` to the new value.
 
 **9)** Issue `RESTART` command.
+
+**You may need to zoom in here, the differences are subtle.** There is always some ambiguity.
+
+![](Images/PA-Tower.png) 
+![](Images/PA-Tower-Annotated.png) 
 ## Fine-Tuning and What to Look For
 
 The pressure advance tower method is usually good enough on its own, provided you measured correctly. This can take some experience, however, so here are some things to look out for.

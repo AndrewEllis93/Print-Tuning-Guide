@@ -98,9 +98,15 @@ Example of an actual print with tuned EM:
         - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
 
     - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
-    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*:
+    Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
 
-    ![](/Images/ZDrift.png)
+        Don't believe me? Look at this:
+
+         ![](/Images/ZDrift.png)
+
+        There *are* ways around this - specifically by using gantry backers in combination with software frame thermal expansion compensation, but that is a rabbit hole well outside the scope of this guide.
+
+
 
 ## Method
 **1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*

@@ -83,7 +83,7 @@ You will get better at this through experience.
 #### 0.5% Intervals
 Now we run the print again at 0.5% intervals between the "too low" and "too high" examples from above.
 
-Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #3). 
+Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #2). 
 This is not just a trick of the light. Shininess is not always the best indicator, but it makes a good visual example.
 
 ![](Images/EMPrints-Fine.png) 

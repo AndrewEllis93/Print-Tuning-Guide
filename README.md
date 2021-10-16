@@ -184,7 +184,7 @@ You should now see increasing pressure advance values reporting to the g-code te
 
 **4)** Allow the print to run until it starts showing obvious issues. Then you may cancel.
 
-**5)** Following the [Klipper guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), measure the height of the perfect PA with calipers.
+**5)** Following the [Klipper guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), measure the height of the perfect PA with calipers (see images below)
 - Ensure you are **not** measuring your Z seam corner.
 - There should be no signs of underextrusion before or after the corner. 
     - It can help to shine a bright flashlight between the walls.
@@ -200,6 +200,8 @@ You should now see increasing pressure advance values reporting to the g-code te
 **9)** Issue `RESTART` command.
 
 **You may need to zoom in here, the differences are subtle.** There is always some ambiguity.
+
+Excuse the mammoth-sized photos.
 
 ![](Images/PA-Tower.png) 
 ![](Images/PA-Tower-Annotated.png) 

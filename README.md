@@ -85,7 +85,7 @@ Example of an actual print with tuned EM:
 # First Layer Squish
 
 I'm going to call it "squish" for purposes of being unambiguous. \
-"Z offset" can be conflated with other concepts. \
+"z offset" and "z height" can be conflated with other concepts. \
 [It stops sounding like a real word after you type it 100 times.](https://en.wikipedia.org/wiki/Semantic_satiation)
 
 ## Background and Common Mistakes

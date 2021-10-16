@@ -80,7 +80,7 @@ Example of an actual print with tuned EM:
 
 - This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
-- This section also assumes that you have a *consistent* first layer.
+- This section also assumes that you have a *consistent* first layer. Here are some tips.
      - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
         - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare, especially for larger printers, to have a perfect first layer without it.
         - Your heat soaked mesh will also be different from your cold mesh, and will even vary at different temperatures, hence why I prefer to generate a fresh one for every print.
@@ -118,7 +118,7 @@ Example of an actual print with tuned EM:
 - Klicky Auto z: 
     - Manually adjust your `switch_offset`. Higher value = more squish.
 
-### Examples:
+### Examples (more to come): 
 
 ![](Images/FirstLayerPrint-Example.jpg) 
 
@@ -126,21 +126,79 @@ Example of an actual print with tuned EM:
 
 - **Smooth PEI:**
     - Scuff with some Scotch-Brite or a similarly rough pot scrubber or sandpaper.
-    - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify the layers.
+    - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify.
 
 - **Textured PEI:**
-    - Needs more squish than smooth PEI. 
+    - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
 
-- Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.
+- Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol. **This is essential.**
 
 - Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for other' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake. This is particularly prevalent with random Amazon brands or unknown Aliexpress sellers.
 # Pressure Advance
 
-## Background
-## Method
+The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. 
 
+The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I find that this actually throws off the results a small amount. In my opinion, it is best to run the calibration in close to normal printing conditions.
+## Initial Calibration
+This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
+
+**1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print setting (accelerations and speeds included)*. \
+The only modifications you should make are these:
+
+- **1 perimeter**
+- **0% infill**
+- **0 top layers**
+- **0 second minimum layer time / layer time goal**
+- **High fan speed**
+
+**2)** Initiate the print.
+
+**3)** After the print has *already started\**, enter the following command:
+
+- (Direct Drive) `TUNING_TOWER COMMAND=SET_PRESSURE_ADVANCE PARAMETER=ADVANCE START=0 FACTOR=.0025`
+- (Bowden) `TUNING_TOWER COMMAND=SET_PRESSURE_ADVANCE PARAMETER=ADVANCE START=0 FACTOR=.025`
+
+\* <sup>*Certain patterns in your start gcode can cancel the tuning tower.*</sup>
+
+**4)** Allow the print to run until it starts showing obvious issues. Then you may cancel.
+
+**5)** Following the [Klipper guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), measure the height of the perfect PA with calipers.
+- Ensure you are not measuring your Z seam corner.
+- There should be no signs of divots before or after the corner. 
+- It is *normal* for there to be a small amount of bulge still. When in doubt, choose the lower value.
+- If the height differs between corners, take a rough average.
+
+**6)** Calculate your new pressure advance value:
+- Multiply measured height by your `FACTOR`.
+- Add the `START` value (usually just 0).
+
+**8)** In the `[extruder]` section of your config, update `pressure_advance` to the new value.
+
+**9)** Issue `RESTART` command.
+## Fine-Tuning
+
+The pressure advance tower method is usually good enough on its own.
+
+It takes some experience to manually tweak it. Usually increments of 0.005 (with direct drive) are a good starting point.
+
+Pressure advance **changes the distribution of material,** not the *amount* of material.
+- Lower values cause less material in the middle of lines, and more at the ends/corners. 
+- Higher values cause more material in the middle of lines, and less at the ends/corners.
+### Pressure Advance is Too High
+- Divots or underextrusion at corners and line ends.
+- Gaps between corners perimeters.
+
+![](Images/PA-High-1.png) 
+
+### Pressure Advance is Too Low
+- Bulging at corners and line ends.
+- Gaps between straight perimeters.
+
+![](Images/PA-Low-1.png) 
 # Retraction
+WIP
 
 # Cooling and Layer Times
+WIP

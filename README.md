@@ -199,9 +199,10 @@ You should now see increasing pressure advance values reporting to the g-code te
 
 **9)** Issue `RESTART` command.
 
+### Example
 **You may need to zoom in here, the differences are subtle.** There is always some ambiguity.
 
-Excuse the mammoth-sized photos.
+Excuse the gigantic photos - high resolution is needed here.
 
 ![](Images/PA-Tower.png) 
 ![](Images/PA-Tower-Annotated.png) 

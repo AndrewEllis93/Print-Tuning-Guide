@@ -59,7 +59,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
     This is more subject to interpretation, but I find 100% to have good results.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
-- **20-30mm/s Solid/Top Infill Speed**\
+- **20-30mm/s Solid & Top Infill Speed**\
     This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results.
 - **0.03 Pressure Advance** (only if you have not yet tuned it)\
     This is simply a PA value on the lowest end of the normal range. 

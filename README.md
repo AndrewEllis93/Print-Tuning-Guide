@@ -59,10 +59,12 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
     This is more subject to interpretation, but I find 100% to have good results.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
-- **20-30mm/s Top Layer Speed**\
+- **20-30mm/s Solid/Top Infill Speed**\
     This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results.
 - **0.03 Pressure Advance** (only if you have not yet tuned it)\
     This is simply a PA value on the lowest end of the normal range. 
+- **High Fan Speed**\
+    As they are only small object, we need to ensure they have enough cooling so that the top layers don't sag.
 
 **Steps:**
 
@@ -76,7 +78,7 @@ I have found that most ABS falls within the 91-94% range.
 
 ### Examples
 
-This can be difficult to convey in photos. You may have to zoom in quite a bit to see the differences. It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
+This can be difficult to convey in photos. **You may have to zoom in quite a bit to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
 You will get better at this through experience.
 #### 2% Intervals
 ![](Images/EMPrints-Coarse.png) 
@@ -125,8 +127,7 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
 
 ## Method
-**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*
-
+**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*\
 ![](Images/FirstLayer-Plate.png)    
 
 **2)** Set your first layer height to **0.25** or greater.

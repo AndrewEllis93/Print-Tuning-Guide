@@ -9,8 +9,8 @@ Much of this guide is specific to Voron printers running Klipper. Rather than re
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
 ## A Note About Line Width
-Any line widths expressed as percentages are referring to a **percentage of nozzle diameter.** \
-This allows the guide to remain agnostic to nozzle diameter.
+Any line widths expressed as percentages are a **percentage of nozzle diameter.** \
+This allows the guide to remain agnostic to nozzles.
 
 SuperSlicer natively allows percentages to be entered this way.
 
@@ -215,6 +215,8 @@ The only modifications you should make are these:
 - (Bowden) `TUNING_TOWER COMMAND=SET_PRESSURE_ADVANCE PARAMETER=ADVANCE START=0 FACTOR=.025`
 
 You should now see increasing pressure advance values reporting to the g-code terminal as the print progresses.
+
+Alternatively, you can temporarily add the command at the end in your start g-code.
 
 \* <sup>*Certain patterns in your start gcode can cancel the tuning tower. \
 \* It does not matter how quickly you enter the command, as it is based on height.*</sup>

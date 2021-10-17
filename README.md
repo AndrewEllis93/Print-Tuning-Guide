@@ -1,7 +1,7 @@
 # THIS IS A WORK IN PROGRESS
 
-Some of these methods may not yet be 100% perfect, and I am looking for feedback. \
-If you have issues, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
+**Some of these methods may not yet be 100% perfect**, and I am looking for feedback. \
+If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 # Introduction
 
 Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.

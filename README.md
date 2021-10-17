@@ -64,7 +64,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 - **0.03 Pressure Advance** (only if you have not yet tuned it)\
     This is simply a PA value on the lowest end of the normal range. 
 - **High Fan Speed**\
-    As they are only small object, we need to ensure they have enough cooling so that the top layers don't sag.
+    As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag.
 
 **Steps:**
 

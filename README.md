@@ -227,7 +227,7 @@ Alternatively, you can temporarily add the command at the end in your start g-co
 - Ensure you are **not** measuring your Z seam corner.
 - There should be no signs of underextrusion before or after the corner. 
     - It can help to shine a bright flashlight between the walls.
-- It is normal for there to be a small amount of bulge still. When in doubt, choose the lower value.
+- **It is normal for there to be a small amount of bulge on the trailing edge. When in doubt, choose the lower value.**
 - If the height differs between corners, take a rough average.
 
 **6)** Calculate your new pressure advance value:

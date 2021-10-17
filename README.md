@@ -1,6 +1,6 @@
 # THIS IS A WORK IN PROGRESS
 
-**Some of these methods may not yet be 100% perfect**, and I am looking for feedback. \
+### Some of these methods may not yet be 100% perfect, and I am looking for feedback. 
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 # Introduction
 

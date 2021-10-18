@@ -17,6 +17,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
+    - [Tower Method (Simple)](#tower-method-simple)
+    - [Marlin Method (Advanced)](#marlin-method-advanced)
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [Cooling and Layer Times](#cooling-and-layer-times)
 - [Retraction (WIP)](#retraction)
@@ -142,26 +144,24 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 # Pressure Advance
 
 ## Background
-The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. 
-
-The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I'm not a fan of this approach.
+The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I'm not a fan of this approach.
 
 In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
+## Notes
 
-Pressure advance **changes the distribution of material,** not the *amount* of material.
+Pressure advance changes the **distribution** of material, not the **amount** of material.
 - Lower values cause less material in the middle of lines, and more at the ends/corners. 
 - Higher values cause more material in the middle of lines, and less at the ends/corners.
+- Here is an example:
+    - **PA Values: 0, 0.035, 0.05, 0.09, 0.12**
+    - ![](Images/PA-Squares.png) 
 
-**PA Values: 0, 0.035, 0.05, 0.09, 0.12**
-![](Images/PA-Squares.png) 
-
-## Notes
 
 - **Remember: There is rarely such thing as perfect pressure advance.** Either accelerations or decelerations will *always* be slightly imperfect. You whould always err on the side of lower PA values.
 
 - Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors of they are noticeably different.
 
-- There are two approaches - the tuning tower method (simple), and the Marlin method (advanced).
+There are two approaches - the [tower method](#tower-method-simple) (simple), and the [Marlin method](#marlin-method-advanced) (advanced).
 
 ## Tower Method (Simple)
 This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 

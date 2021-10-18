@@ -8,6 +8,8 @@ Much of this guide is specific to Voron printers running Klipper. Rather than re
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
+My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
+
 ## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
 This allows the guide to remain agnostic to nozzles.

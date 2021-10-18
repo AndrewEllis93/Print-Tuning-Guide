@@ -379,9 +379,9 @@ This is not just a trick of the light. Shininess is not always the best indicato
 ### An Important Note About Pressure Advance & Flow
 Pressure advance and flow are interrelated. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.
 
-Pressure advance changes the **distribution** of material, not the **amount** of material.
+Remember: pressure advance changes the **distribution** of material, not the **amount** of material.
 
-If your actual print results with faster top layers (within reason) do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [pressure advance](#pressure-advance) value may need further tuning.** 
+If your actual print results with faster top layers do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [pressure advance](#pressure-advance) value may need further tuning.** 
 
 You can run faster solid infill, but I would recommend using a slow-ish top surface layer still. I use 60mm/s.
 

@@ -156,18 +156,25 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 You should still clearly be able to see the lines. If it's completely smooth, your squish is too much.
  If you see gaps between the lines, you need more squish.
 ### Good Squish
-![](Images/FirstLayer-PrintExample.jpg) 
+- ![](Images/FirstLayer-PrintExample.jpg) 
 ### Too Much Squish
 
-![](Images/FirstLayer-TooMuchSquish1.png) 
-![](Images/FirstLayer-TooMuchSquish2.png) 
+- Can't see any lines, or the lines are starting to fade:
+
+    - ![](Images/FirstLayer-TooMuchSquish2.png) 
+    - ![](Images/FirstLayer-TooMuchSquish1.png) 
+
+- Wavy patterns appear:
+
+    - ![](Images/FirstLayer-TooMuchSquish3.png) 
+
 
 ### Not Enough Squish
+- There are gaps between the lines:
 
-![](Images/FirstLayer-NotEnoughSquish3.png) 
-
-![](Images/FirstLayer-NotEnoughSquish1.png) 
-![](Images/FirstLayer-NotEnoughSquish2.png) 
+    - ![](Images/FirstLayer-NotEnoughSquish1.png) 
+    - ![](Images/FirstLayer-NotEnoughSquish2.png) 
+    - ![](Images/FirstLayer-NotEnoughSquish3.png) 
 
 
 # Build Surface Adhesion
@@ -274,6 +281,7 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 ![](Images/Overheating-1.png) ![](Images/Overheating-4.png) 
 ![](Images/Overheating-2.png) 
 ![](Images/Overheating-3.png) 
+![](Images/Overheating-5.png) 
 
 ## How to Fix It
 
@@ -301,14 +309,16 @@ There are multiple things you can do to minimize overheating with ABS.
 
 **3) Print more objects at once, and spread them out.**
 
-- We can allow each objects some "break time" between layers simply by printing more objects and by inducing travels.
+- We can allow objects to have some "break time" between layers simply by printing more objects at once. Spread them out to induce more travel time.
 - ![](Images/Cooling-Spread.png) 
+
+**4) Reduce nozzle and/or bed temperature.**
 
 # Infill/Perimeter Overlap
 
 After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
 
-This is **not** necessarily an indicator that your flow or pressure advance are wrong, though they can impact it. 
+This is **not necessarily** an indicator that your flow or pressure advance are wrong, though they can impact it. 
 
 Slowly increase "infill/perimeter overlap" (PS/SS) until satisfied.
 ## Pinholes
@@ -329,5 +339,53 @@ To resolve this overshoot, you then need to *lower* your overlap. And because ov
 WIP
 # Miscellaneous Tips and Tricks
 
-Random tricks that don't require a whole section. Will add more as they occur to me.
-- Having issues with PLA overheating? Open the front door and point a fan at it.
+Miscellanous tips and tricks that don't require a dedicated section.
+
+### PLA is Overheating
+- Open the front door and point a fan at it.
+- Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN).
+### Small Infill Areas Look Overextruded
+
+- ![](Images/Misc/SmallAreas.png) 
+
+Some amount of this is unavoidable, but there are some things that *may* help:
+- Try reducing your pressure advance smooth time (I use 0.02)
+- Try reducing top infill speeds, accelerations, and accel_to_decel.
+
+
+
+### SuperSlicer Bulging Issues
+
+![](Images/Misc/Bulging.png) 
+![](Images/Misc/Bulging2.png) 
+
+- Disable any "extra perimeters" and "supporting dense infill" settings.
+- [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#bulging-from-high-accelerations)
+
+### Pockmarks
+
+- ![](Images/Misc/Pockmarks.png)
+
+- Ensure your Z seam is not set to "random".
+- Dry your filament. This can be caused be moisture turning to steam and popping.
+
+ 
+
+### Repeating Patterns in Extrusion (BMG Clockwork)
+
+The left cube shows this pattern. The right cube is normal.
+
+- ![](Images/Misc/Backlash-Comparison.png)
+
+- ![](Images/Misc/Backlash-Pattern.png)
+
+- Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
+- **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.**
+    - This is adjusted by moving the motor itself up and down. The motor plate has slotted screw holes to allow for adjustment.
+        - You can reach the bottom left screw by opening the filament latch and inserting a ball-end hex driver.
+        -  ![](Images/Misc/Backlash-Adjust.png)
+
+    - You should have a small amount of backlash **with filament loaded and the spring tensioned.** The backlash will reduce a bit once it is loaded. You will just have to experiment.
+
+### Clacking Noises During Retraction (BMG Clockwork)
+- You have *too much* backlash. See previous section.

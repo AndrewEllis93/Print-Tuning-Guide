@@ -239,9 +239,9 @@ This method is quicker to run and more precise than the tower method, but requir
 [gcode_macro M900]
 gcode:
 	# Parameters
-	{% set k = params.K|default(0)|float %}
+	{% set pa = params.K|default(0)|float %}
 	
-	SET_PRESSURE_ADVANCE ADVANCE={k}
+	SET_PRESSURE_ADVANCE ADVANCE={pa}
 ```
 
 **2)** Type `RESTART` into the g-code terminal.

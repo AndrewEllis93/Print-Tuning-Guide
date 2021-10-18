@@ -34,6 +34,7 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
     - [SuperSlicer Bulging Issues](#superslicer-bulging-issues)
     - [Pockmarks](#pockmarks)
+    - [Repeating Patterns in Extrusion (BMG Clockwork)](#repeating-patterns-in-extrusion-bmg-clockwork)
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
     - [Belt Tooth Marks](#belt-tooth-marks)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)

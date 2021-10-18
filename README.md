@@ -326,9 +326,6 @@ There are multiple things you can do to minimize overheating with ABS.
 # Retraction
 WIP
 # Miscellaneous Fixes, Tips, and Tricks
-
-Miscellanous fixes, tips and tricks that don't require a dedicated section.
-
 ## Pinholes
 
 After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
@@ -415,4 +412,4 @@ The marks will be about 2mm apart (the same distance as the belt teeth)
 
 ## Bulges at STL Vertices
 ![](Images/Misc/Vertex-Bulges.png)
-- Your square coner velocity may be too low. Did you leave it set at 1 by chance?
+- Your square corner velocity may be too low. Did you leave it set at 1 by chance?

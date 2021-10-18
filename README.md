@@ -13,10 +13,10 @@ My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Elli
 
 # Table of Contents
 - [A Note About Line Width](#a-note-about-line-width)
-- [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
+- [Extrusion Multiplier](#extrusion-multiplier)
 - [Cooling and Layer Times](#cooling-and-layer-times)
 - [Retraction (WIP)](#retraction)
 - [Miscellaneous Fixes, Tips, and Tricks](#miscellaneous-fixes-tips-and-tricks)
@@ -43,71 +43,7 @@ However:
 
 **For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
 For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
-# Extrusion Multiplier
 
-This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
-
-Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers. I find this method not to work very well at all, especially with ABS, presumably due to shrinkage.
-
-SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
-- It is very reliant on first layer squish.
-- Because it uses 100% infill, the first layer squish carries through all the way to the top. 
-- It has ironing turned on by default.
-- The objects are too small. It's normal for smaller infill areas to look a bit more overextruded than larger infill areas.
-
-Both of the above methods I've found to have error of up to 5% (sometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
-
-This must be done per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
-
-## Method
-By far the best method I have found is purely visual. *Put the calipers down for now*.
-
-We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
-
-**Print Settings:**
-- **40+% Infill**\
-    We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. 
-    We still need enough to adequately support the top layers.*
-- **120% Infill [Line Width](#a-note-about-line-width)** \
-    This just increases infill density over my normal settings, which are thicker for reducing print times.
-- **100% Top Layer [Line Width](#a-note-about-line-width)**\
-    This is more subject to interpretation, but I find 100% to have good results.
-- **5 Top Layers**\
-    This ensures that we have adequate support for the surface layer.
-- **20-30mm/s Solid & Top Infill Speed**\
-    This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results.
-- **0.03 Pressure Advance** (only if you have not yet tuned it)\
-    This is simply a PA value on the lowest end of the normal range. 
-- **High Fan Speed**\
-    As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag.
-
-**Steps:**
-
-**1)** Print multiple test cubes with variations of 2% EM. You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
-
-**2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
-
-**3)** If desired, run the process again but with 0.5% intervals. Most PIF providers tune down to the 0.5% range, some even less. 
-
-I have found that most ABS falls within the 91-94% range.
-
-### Examples
-
-This can be difficult to convey in photos. **You may have to zoom in quite a bit to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
-You will get better at this through experience.
-#### 2% Intervals
-![](Images/EMPrints-Coarse.png) 
-#### 0.5% Intervals
-Now we run the print again at 0.5% intervals between the "too low" and "too high" examples from above.
-
-Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #2). 
-This is not just a trick of the light. Shininess is not always the best indicator, but it makes a good visual example.
-
-![](Images/EMPrints-Fine.png) 
-
-#### Actual Print with Tuned EM:
-
-![](Images/EMPrint-Example.jpg) 
 
 # First Layer Squish
 
@@ -210,6 +146,11 @@ The Klipper guide recommends limiting acceleration to 500 and square corner velo
 The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I'm not a fan of this approach.
 
 In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
+
+Pressure advance **changes the distribution of material,** not the *amount* of material.
+- Lower values cause less material in the middle of lines, and more at the ends/corners. 
+- Higher values cause more material in the middle of lines, and less at the ends/corners.
+
 
 ## Notes
 
@@ -353,10 +294,6 @@ I will not give extremely specific directions here, as it depends on how you sta
 ## Fine-Tuning and What to Look For
 
 The pressure advance tower method is usually good enough on its own, provided you measured correctly. This can take some experience, however, so here are some things to look out for.
-
-Pressure advance **changes the distribution of material,** not the *amount* of material.
-- Lower values cause less material in the middle of lines, and more at the ends/corners. 
-- Higher values cause more material in the middle of lines, and less at the ends/corners.
 ### Pressure Advance is Too High
 - Divots or underextrusion at corners and line ends.
 - Gaps between perimeters at corners.
@@ -371,6 +308,84 @@ Pressure advance **changes the distribution of material,** not the *amount* of m
 
 You can manually tweak pressure advance based on actual prints. Usually increments of 0.005 (with direct drive) are a good starting point.
 
+# Extrusion Multiplier
+
+You should [tune pressure advance](#pressure-advance) first.
+
+This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
+
+Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers. I find this method not to work very well at all, especially with ABS, presumably due to shrinkage.
+
+SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
+- It is very reliant on first layer squish.
+- Because it uses 100% infill, the first layer squish carries through all the way to the top. 
+- It has ironing turned on by default.
+- The objects are too small. It's normal for smaller infill areas to look a bit more overextruded than larger infill areas.
+
+Both of the above methods I've found to have error of up to 5% (sometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
+
+This must be done per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
+
+## Method
+By far the best method I have found is purely visual. *Put the calipers down for now*.
+
+We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
+
+**Print Settings:**
+- **40+% Infill**\
+    We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. 
+    We still need enough to adequately support the top layers.*
+- **120% Infill [Line Width](#a-note-about-line-width)** \
+    This just increases infill density over my normal settings, which are thicker for reducing print times.
+- **100% Top Layer [Line Width](#a-note-about-line-width)**\
+    This is more subject to interpretation, but I find 100% to have good results.
+- **5 Top Layers**\
+    This ensures that we have adequate support for the surface layer.
+- **20-30mm/s Solid & Top Infill Speed**\
+    This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results\
+
+- **0.03 Pressure Advance** (only if you have not yet tuned it)\
+    This is simply a PA value on the lowest end of the normal range. 
+- **High Fan Speed**\
+    As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag.
+
+**Steps:**
+
+**1)** Print multiple test cubes with variations of 2% EM. You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
+
+**2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
+
+**3)** If desired, run the process again but with 0.5% intervals. Most PIF providers tune down to the 0.5% range, some even less. 
+
+I have found that most ABS falls within the 91-94% range.
+
+### Examples
+
+This can be difficult to convey in photos. **You may have to zoom in quite a bit to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
+You will get better at this through experience.
+#### 2% Intervals
+![](Images/EMPrints-Coarse.png) 
+#### 0.5% Intervals
+Now we run the print again at 0.5% intervals between the "too low" and "too high" examples from above.
+
+Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #2). 
+This is not just a trick of the light. Shininess is not always the best indicator, but it makes a good visual example.
+
+![](Images/EMPrints-Fine.png) 
+
+### An Important Note About Pressure Advance & Flow
+Pressure advance and flow are interrelated. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.
+
+Pressure advance changes the **distribution** of material, not the **amount** of material.
+
+If your actual print results with faster top layers do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [pressure advance](#pressure-advance) value may need further tuning.** 
+
+**PA Values: 0, 0.035, 0.05, 0.09, 0.12**
+![](Images/PA-Squares.png) 
+
+### Actual Print with Tuned EM:
+
+![](Images/EMPrint-Example.jpg) 
 # Cooling and Layer Times
 ## Signs of Overheating
 ![](Images/Overheating-1.png) ![](Images/Overheating-4.png) 

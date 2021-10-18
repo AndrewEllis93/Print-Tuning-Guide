@@ -30,7 +30,7 @@ My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Elli
     - [Belt Tooth Marks](#belt-tooth-marks)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
 
-## A Note About Line Width
+# A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
 This allows the guide to remain agnostic to nozzles.
 

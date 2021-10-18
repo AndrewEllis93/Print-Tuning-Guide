@@ -29,7 +29,7 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [Cooling and Layer Times](#cooling-and-layer-times)
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Retraction (WIP)](#retraction)
-- [Miscellaneous Tips and Tricks](#miscellaneous-tips-and-tricks)
+- [Miscellaneous Fixes, Tips, and Tricks](#miscellaneous-fixes-tips-and-tricks)
 
 # Extrusion Multiplier
 

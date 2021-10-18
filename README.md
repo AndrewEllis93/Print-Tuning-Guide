@@ -27,9 +27,9 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
 - [Cooling and Layer Times](#cooling-and-layer-times)
-- [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Retraction (WIP)](#retraction)
 - [Miscellaneous Fixes, Tips, and Tricks](#miscellaneous-fixes-tips-and-tricks)
+    - [Pinholes](#pinholes)
     - [PLA is Overheating](#pla-is-overheating)
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
     - [SuperSlicer Bulging Issues](#superslicer-bulging-issues)
@@ -321,32 +321,33 @@ There are multiple things you can do to minimize overheating with ABS.
 
 **4) Reduce nozzle and/or bed temperature.**
 
-# Infill/Perimeter Overlap
-
-After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
-
-This is **not necessarily** an indicator that your flow or pressure advance are wrong, though they can impact it. 
-
-Slowly increase "infill/perimeter overlap" (PS/SS) until satisfied.
-## Pinholes
-![](Images/Overlap-1.png) 
-![](Images/Overlap-2.png) 
-
-## Overlap Tweaked (40%)
-![](Images/Overlap-Fixed1.png) 
-
-## Regarding "Not Connected" Top Infill (SuperSlicer)
-
-Some use "not connected" for their top infill. This does resolve the pinholes, however I find this to cause the opposite problem. It *overshoots.* 
-
-To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
-
-
 # Retraction
 WIP
 # Miscellaneous Fixes, Tips, and Tricks
 
 Miscellanous fixes, tips and tricks that don't require a dedicated section.
+
+## Pinholes
+
+After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
+
+![](Images/Overlap-1.png) 
+![](Images/Overlap-2.png) 
+
+This is **not necessarily** an indicator that your flow or pressure advance are wrong, though they can impact it. 
+
+Slowly increase "infill/perimeter overlap" (PS/SS) until satisfied.
+
+Overlap Tweaked (40%):
+
+![](Images/Overlap-Fixed1.png) 
+
+Regarding "Not Connected" Top Infill (SuperSlicer)
+
+- Some use "not connected" for their top infill. This does resolve the pinholes, however I find this to cause the opposite problem. It *overshoots.* 
+
+- To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
+
 
 ## PLA is Overheating
 - Open the front door and point a fan at it.

@@ -357,16 +357,16 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 ![](Images/Misc/SmallAreas.png) 
 
 - Some amount of this is unavoidable, but there are some things that *may* help:
+    - Use single top perimeters (SuperSlicer). This simply makes these infill areas a bit larger.
     - Try reducing your pressure advance smooth time (I use 0.02)
     - Try reducing top infill speeds and accelerations.
-    - Use single top perimeters (SuperSlicer). This simply makes these infill areas a bit larger.
 ## SuperSlicer Bulging Issues
 
 ![](Images/Misc/Bulging.png) 
 ![](Images/Misc/Bulging2.png) 
 
 - Disable any "extra perimeters" and "supporting dense infill" settings.
-- [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#bulging-from-high-accelerations)
+- [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#acceleration-control)
 
 ## Pockmarks
 

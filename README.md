@@ -26,9 +26,10 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
-- [Infill/Perimeter Overlap](#infill/perimeter-overlap-pinholes)
+- [Cooling and Layer Times](#cooling-and-layer-times)
+- [Infill/Perimeter Overlap](#infill/perimeter-overlap)
 - [Retraction (WIP)](#retraction)
-- [Cooling and Layer Times (WIP)](#cooling-and-layer-times)
+- [Miscellaneous Tips and Tricks](#miscellaneous-tips-and-tricks)
 
 # Extrusion Multiplier
 
@@ -144,9 +145,9 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset:
 
-- V0/V2/Trident: 
+- V0/V2/Trident (dedicated Z endstop): 
     - Enter `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
-- Switchwire/Legacy: 
+- Switchwire/Legacy (probe used as virtual Z endstop): 
     - Enter `Z_OFFSET_APPLY_PROBE`. This will apply your new offset to your probe's `z_offset`.
 - Klicky Auto z: 
     - Manually adjust your `switch_offset`. Higher value = more squish.
@@ -171,14 +172,16 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 # Build Surface Adhesion
 
-- **Smooth PEI:**
+
+- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
+
+- Smooth PEI:
     - Scuff with some Scotch-Brite or a similarly rough pot scrubber or sandpaper.
     - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify.
 
-- **Textured PEI:**
+- Textured PEI:
     - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
 
-- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
 
 - Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 
@@ -200,11 +203,11 @@ This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.
 **1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print setting (accelerations included)*. \
 The only modifications you should make are these:
 
-- **120mm/s perimeter speed**
-- **1 perimeter**
-- **0% infill**
-- **0 top layers**
-- **0 second "minimum layer time" / "layer time goal"**
+- **120mm/s** perimeter speed
+- **1** perimeter
+- **0%** infill
+- **0** top layers
+- **0 second** "minimum layer time" / "layer time goal"
 - **High fan speed**
 
 **2)** Initiate the print.
@@ -256,15 +259,50 @@ Pressure advance **changes the distribution of material,** not the *amount* of m
 - Divots or underextrusion at corners and line ends.
 - Gaps between perimeters at corners.
 
-![](Images/PA-High-1.png) 
+- ![](Images/PA-High-1.png) 
 
 ### Pressure Advance is Too Low
 - Bulging at corners and line ends.
 - Gaps between straight line perimeters.
 
-![](Images/PA-Low-1.png) 
+- ![](Images/PA-Low-1.png) 
 
 You can manually tweak pressure advance based on actual prints. Usually increments of 0.005 (with direct drive) are a good starting point.
+
+# Cooling and Layer Times
+## Signs of Overheating
+![](Images/Overheating-1.png) ![](Images/Overheating-4.png) 
+![](Images/Overheating-2.png) 
+![](Images/Overheating-3.png) 
+
+## How to Fix It
+
+People often start printing by ABS with no cooling. While this is valid advice for unenclosed printers, it's not a universal rule. **ABS often needs some cooling, especially in an enclosure.**
+
+There are multiple things you can do to minimize overheating with ABS.
+
+**1) Increase fan speeds.**
+
+- The higher your chamber temperature is, the more fan speed you will need.
+- Use constant fan speeds. **Varying fan speeds during a print will cause inconsistent layers and banding.** Some layers will essentially shrink more than others.
+- You probably need more cooling than you think. 
+    - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
+        - For large plates, I use 35% fan.
+        - For single small objects, I use up to 80% fan.
+- If your prints are curling even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.
+- For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
+    - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
+
+**2) Increase "minimum layer time" / "layer time goal"**
+
+- I set this to a minimum of 15 seconds.
+- This essentially slows down the print for very short/small layers, allowing each layer adequate time to cool.
+- When layer times are **too short**, they do not have enough time to properly cool. You will then be printing on top of layers that are still soft.
+
+**3) Print more objects at once, and spread them out.**
+
+- We can allow each objects some "break time" between layers simply by printing more objects and by inducing travels.
+- ![](Images/Cooling-Spread.png) 
 
 # Infill/Perimeter Overlap
 
@@ -286,8 +324,10 @@ Some use "not connected" for their top infill. This does resolve the pinholes, h
 
 To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
 
+
 # Retraction
 WIP
+# Miscellaneous Tips and Tricks
 
-# Cooling and Layer Times
-WIP
+Random tricks that don't require a whole section. Will add more as they occur to me.
+- Having issues with PLA overheating? Open the front door and point a fan at it.

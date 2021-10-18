@@ -157,7 +157,7 @@ Pressure advance changes the **distribution** of material, not the **amount** of
 - Lower values cause less material in the middle of lines, and more at the ends/corners. 
 - Higher values cause more material in the middle of lines, and less at the ends/corners.
 - Here is an example:
-    - **PA Values: 0, 0.035, 0.05, 0.09, 0.12**
+    - **PA Values: 0, 0.035, 0.05, 0.09, 0.12** (Direct drive - Galileo clockwork / Dragon HF)
     - ![](Images/PA-Squares.png) 
 
 

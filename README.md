@@ -44,7 +44,7 @@ This allows the guide to remain agnostic to nozzles.
 SuperSlicer natively allows percentages to be entered this way.
 
 However: 
-- Prusa Slicer bases percentages on layer heights instead. *(seriously, why?)*
+- Prusa Slicer bases percentages on layer heights instead.
 - Cura does not allow percentages at all. 
 - Other slicers may or may not support this.
 

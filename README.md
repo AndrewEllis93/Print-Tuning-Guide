@@ -456,6 +456,7 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 
 ## PLA is Overheating
 - Open the front door or take off all the panels. Point a fan at it.
+    - Don't go too crazy, or your bed heater might not be able to keep up.
 
     ![](Images/Misc/PLA-Fan.png) 
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.

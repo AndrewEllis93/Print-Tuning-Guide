@@ -511,6 +511,7 @@ The marks will be about 2mm apart (the same distance as the belt teeth)
     - Don't miss the video link in page linked above. 
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
+    - Ensure your motor pulleys are not positioned too high or too low.
     - For V2: [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and then de-rack (see below).
     - For all CoreXY printers: [de-rack.](https://www.youtube.com/watch?v=cOn6u9kXvy0)
 - You may have poor quality motor pulleys and idlers.

@@ -10,6 +10,7 @@ This is not intended to be an ultimate guide to everything, rather a guide to ad
 
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
+Thank you to **bythorsthunder** for help with testing these methods and providing some photos.
 
 # Table of Contents
 - [A Note About Line Width](#a-note-about-line-width)
@@ -151,6 +152,8 @@ Pressure advance **changes the distribution of material,** not the *amount* of m
 - Lower values cause less material in the middle of lines, and more at the ends/corners. 
 - Higher values cause more material in the middle of lines, and less at the ends/corners.
 
+**PA Values: 0, 0.035, 0.05, 0.09, 0.12**
+![](Images/PA-Squares.png) 
 
 ## Notes
 
@@ -310,7 +313,7 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 
 # Extrusion Multiplier
 
-You should [tune pressure advance](#pressure-advance) first.
+**You should [tune pressure advance](#pressure-advance) first.**
 
 This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 
@@ -342,10 +345,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
 - **20-30mm/s Solid & Top Infill Speed**\
-    This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results\
-
-- **0.03 Pressure Advance** (only if you have not yet tuned it)\
-    This is simply a PA value on the lowest end of the normal range. 
+    This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results. 
 - **High Fan Speed**\
     As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag.
 
@@ -378,10 +378,9 @@ Pressure advance and flow are interrelated. The method above has you lowering yo
 
 Pressure advance changes the **distribution** of material, not the **amount** of material.
 
-If your actual print results with faster top layers do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [pressure advance](#pressure-advance) value may need further tuning.** 
+If your actual print results with faster top layers (within reason) do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [pressure advance](#pressure-advance) value may need further tuning.** 
 
-**PA Values: 0, 0.035, 0.05, 0.09, 0.12**
-![](Images/PA-Squares.png) 
+You can run faster solid infill, but I would recommend using a slow-ish top surface layer still. I use 60mm/s.
 
 ### Actual Print with Tuned EM:
 

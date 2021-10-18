@@ -337,9 +337,9 @@ To resolve this overshoot, you then need to *lower* your overlap. And because ov
 
 # Retraction
 WIP
-# Miscellaneous Tips and Tricks
+# Miscellaneous Fixes, Tips, and Tricks
 
-Miscellanous tips and tricks that don't require a dedicated section.
+Miscellanous fixes, tips and tricks that don't require a dedicated section.
 
 ### PLA is Overheating
 - Open the front door and point a fan at it.

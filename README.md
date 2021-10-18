@@ -216,7 +216,7 @@ With PS/SS, you can add a `SET_PRESSURE_ADVANCE ADVANCE=X` command to your filam
 ## Initial Calibration
 This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 
-**1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print setting (accelerations included)*. \
+**1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
 The only modifications you should make are these:
 
 - **120mm/s** perimeter speed
@@ -351,7 +351,7 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 
 ## PLA is Overheating
 - Open the front door and point a fan at it.
-- Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN).
+- Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.
 ## Small Infill Areas Look Overextruded
 
 ![](Images/Misc/SmallAreas.png) 
@@ -383,7 +383,7 @@ The left cube shows this pattern. The right cube is normal.
 ![](Images/Misc/Backlash-Pattern.png)
 
 - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
-- **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.**
+- **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.** You should be able to feel a small amount of "wiggle" when moving it with your fingernail.
     - This is adjusted by moving the motor itself up and down. The motor plate has slotted screw holes to allow for adjustment.
         - You can reach the bottom left screw by opening the filament latch and inserting a ball-end hex driver.
         -  ![](Images/Misc/Backlash-Adjust.png)

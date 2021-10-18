@@ -359,6 +359,7 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 - Some amount of this is unavoidable, but there are some things that *may* help:
     - Try reducing your pressure advance smooth time (I use 0.02)
     - Try reducing top infill speeds and accelerations.
+    - Use single top perimeters (SuperSlicer). This simply makes these infill areas a bit larger.
 ## SuperSlicer Bulging Issues
 
 ![](Images/Misc/Bulging.png) 

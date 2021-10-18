@@ -313,7 +313,8 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 
 # Extrusion Multiplier
 
-**You should [tune pressure advance](#pressure-advance) first.**
+**You should [tune pressure advance](#pressure-advance) first.**\
+These tests try to remove PA as a variable as much as possible, but having a good PA value is still ideal.
 
 This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 

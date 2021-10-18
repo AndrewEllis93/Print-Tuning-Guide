@@ -388,6 +388,7 @@ The left cube shows this pattern. The right cube is normal.
 
     - You should have a small amount of backlash **with filament loaded and the spring tensioned.** The backlash will reduce a bit once it is loaded. You will just have to experiment.
     - This can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
+    - Unfortunately, adjustment is not as simple for the Mini Afterburner. You will have to disassemble it and play with it. You may have to file out some screw holes to create the backlash needed. I don't have a Mini Afterburner so I can't give an exact process.
 
 ## Clacking Noises During Retraction (BMG Clockwork)
 - You have *too much* backlash. See previous section.

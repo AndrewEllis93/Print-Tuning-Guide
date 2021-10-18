@@ -299,7 +299,7 @@ I will not give extremely specific directions here, as it depends on how you sta
     ![](Images/KFactor-Print.jpg) 
 ## Fine-Tuning and What to Look For
 
-The pressure advance tower method is usually good enough on its own, provided you measured correctly. This can take some experience, however, so here are some things to look out for.
+The above methods are usually good enough on their own. Choosing the right height/line, however, can take some experience. Here are some things to look out for.
 ### Pressure Advance is Too High
 - Divots or underextrusion at corners and line ends.
 - Gaps between perimeters at corners.

@@ -21,7 +21,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Marlin Method (Advanced)](#marlin-method-advanced)
     - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
 - [Extrusion Multiplier](#extrusion-multiplier)
-    - [An Important Note About Pressure Advance & Flow](#an-important-note-about-pressure-advance--flow)
+    - [An Important Note About Pressure Advance & EM](#an-important-note-about-pressure-advance--em)
 - [Cooling and Layer Times](#cooling-and-layer-times)
     - [Signs of Overheating](#signs-of-overheating)
     - [How to Fix It](#how-to-fix-it)
@@ -377,7 +377,7 @@ This is not just a trick of the light. Shininess is not always the best indicato
 
 ![](Images/EMPrints-Fine.png) 
 
-### An Important Note About Pressure Advance & Flow
+### An Important Note About Pressure Advance & EM
 Pressure advance and flow are interrelated. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.
 
 Remember: pressure advance changes the **distribution** of material, not the **amount** of material.

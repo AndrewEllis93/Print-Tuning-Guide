@@ -10,20 +10,9 @@ This is not intended to be an ultimate guide to everything, rather a guide to ad
 
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
-## A Note About Line Width
-Any line widths are expressed as a **percentage of nozzle diameter.** \
-This allows the guide to remain agnostic to nozzles.
 
-SuperSlicer natively allows percentages to be entered this way.
-
-However: 
-- Prusa Slicer bases percentages on layer heights instead. *(seriously, why?)*
-- Cura does not allow percentages at all. 
-- Other slicers may or may not support this.
-
-**For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
-For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
 # Table of Contents
+- [A Note About Line Width](#a-note-about-line-width)
 - [Extrusion Multiplier](#extrusion-multiplier)
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
@@ -40,6 +29,20 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
     - [Belt Tooth Marks](#belt-tooth-marks)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
+
+## A Note About Line Width
+Any line widths are expressed as a **percentage of nozzle diameter.** \
+This allows the guide to remain agnostic to nozzles.
+
+SuperSlicer natively allows percentages to be entered this way.
+
+However: 
+- Prusa Slicer bases percentages on layer heights instead. *(seriously, why?)*
+- Cura does not allow percentages at all. 
+- Other slicers may or may not support this.
+
+**For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
+For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
 # Extrusion Multiplier
 
 This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.

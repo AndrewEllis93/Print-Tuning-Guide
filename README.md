@@ -153,7 +153,7 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
 **4)** Start the print. While it is printing, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height). Refer to the example images below.
 
-- This can be done via gcodes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
+- This can be done via g-codes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset:
 
@@ -204,16 +204,22 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for other' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake. This is particularly prevalent with random Amazon brands or unknown Aliexpress sellers.
 # Pressure Advance
 
+## Background
 The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. 
 
-The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
+The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I'm not a fan of this approach.
 
-Remember: *There is no such thing as perfect pressure advance*. Either accelerations or decelerations will always be slightly imperfect.
+In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
 
-Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors of they are noticeably different.
+## Notes
 
-With PS/SS, you can add a `SET_PRESSURE_ADVANCE ADVANCE=X` command to your filament profile's custom start g-code.
-## Initial Calibration
+- **Remember: There is rarely such thing as perfect pressure advance.** Either accelerations or decelerations will *always* be slightly imperfect. You whould always err on the side of lower PA values.
+
+- Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors of they are noticeably different.
+
+- There are two approaches - the tuning tower method (simple), and the Marlin method (advanced).
+
+## Tower Method (Simple)
 This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 
 **1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
@@ -235,10 +241,11 @@ The only modifications you should make are these:
 
 You should now see increasing pressure advance values reporting to the g-code terminal as the print progresses.
 
-Alternatively, you can temporarily add the command at the end in your start g-code.
 
-\* <sup>*Certain patterns in your start gcode can cancel the tuning tower. \
-\* It does not matter how quickly you enter the command, as it is based on height.*</sup>
+
+<sup>\* *Certain patterns in your start g-code can cancel the tuning tower. \
+\* It does not matter how quickly you enter the command, as it is based on height.*\
+\* Alternatively, you can temporarily add the tuning tower command after your start g-code</sup>
 
 **4)** Allow the print to run until it starts showing obvious issues/gaps. Then you may cancel.
 
@@ -264,6 +271,85 @@ Excuse the gigantic photos - high resolution is needed here.
 
 ![](Images/PA-Tower.png) 
 ![](Images/PA-Tower-Annotated.png) 
+
+## Marlin Method (Advanced)
+
+### Background
+This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code files. 
+
+
+**(!) If you are not familiar with manually modifying g-code, please consider using the tower method instead. You risk crashes & damage if you don't know what you are doing.**
+### Method
+
+**1)** Add this macro to your Klipper config.
+
+```
+# Convert Marlin linear advance (M900) commands to Klipper (SET_PRESSURE_ADVANCE) commands.
+# Used in conjunction with Marlin's linear advance calibration tool: 
+# https://marlinfw.org/tools/lin_advance/k-factor.html
+[gcode_macro M900]
+gcode:
+	# Parameters
+	{% set k = params.K|default(0)|float %}
+	
+	SET_PRESSURE_ADVANCE ADVANCE={k}
+```
+
+**2)** Type `RESTART` into the g-code terminal.
+
+**3)** Visit the [Marlin K-factor calibration site](https://marlinfw.org/tools/lin_advance/k-factor.html).
+
+**4)** Fill out the parameters. Most are self explanatory or should be left at defaults, but these are some specific settings that I recommend:
+ 
+- **Printer**
+    - **Layer Height**: 0.25mm
+- **Speed**
+    - **Slow Printing Speed**: Your square corner velocity
+    - **Fast Printing Speed**: 120mm/sec
+    - **Acceleration**: Your perimeter acceleration (NOT external perimeter)
+- **Pattern**
+    - **Starting Value for K**: 0
+    - **Ending Value for K**:  
+        - **Direct Drive**: 0.1
+        - **Bowden**: 1.5
+    - **K-factor Stepping:**: 
+        - **Direct Drive**: 0.005
+        - **Bowden**: 0.05
+    - **Print Anchor Frame**: Checked
+- **Advanced**
+    - **Nozzle Line Ratio**: 1.2
+    - **Use Bed Leveling:** No
+    - **Prime Nozzle**: Unchecked
+    - **Dwell Time**: 0
+
+Note that the "Extrusion Multiplier" setting is is decimal, NOT percent.
+
+**5)** Generate and download the g-code file.
+
+**6)** Edit the g-code file.
+
+**(!) Again, if you are confused about g-code editing, please consider using the tower method instead. You risk crashes & damage if you don't know what you are doing.**
+
+I will not give extremely specific directions here, as it depends on how you start & end your prints. I will show you mine as an example, however.
+
+- Modify the "prepare printing" g-code section appropriately at the beginning.
+    - Add `PRINT_START` in the appropriate place.
+        - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to remove the heating commands and pass them to `PRINT_START` instead, e.g: `PRINT_START HOTEND=240 BED=110`
+            - Example: \
+            ![](Images/KFactor-StartGcode.png) 
+    - Ensure that the preparation commands (G90, M83, G92 E0 etc.) remain, and happen **after** `PRINT_START`.
+
+- Modify the "FINISH" g-code section appropriately at the end.
+    - Don't forget to add `PRINT_END`.\
+    ![](Images/KFactor-EndGcode.png) 
+
+**7)** Print it, and inspect the results. 
+- This calibration pattern is a great visual representation of what I mentioned earlier: **that there is rarely a *perfect* PA value.** 
+    - Usually either acceleration *or* deceleration will be good, but it's rare that both will be perfect on the same line.
+    - **ALWAYS** choose the lower value. In my experience this has always been the line with perfect acceleration, but imperfect deceleration.
+    - This requires some interpretation. In this example, I would choose about 0.055.
+    
+    ![](Images/KFactor-Print.jpg) 
 ## Fine-Tuning and What to Look For
 
 The pressure advance tower method is usually good enough on its own, provided you measured correctly. This can take some experience, however, so here are some things to look out for.

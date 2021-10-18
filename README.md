@@ -341,43 +341,36 @@ WIP
 
 Miscellanous fixes, tips and tricks that don't require a dedicated section.
 
-### PLA is Overheating
+## PLA is Overheating
 - Open the front door and point a fan at it.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN).
-### Small Infill Areas Look Overextruded
+## Small Infill Areas Look Overextruded
 
-- ![](Images/Misc/SmallAreas.png) 
+![](Images/Misc/SmallAreas.png) 
 
-Some amount of this is unavoidable, but there are some things that *may* help:
-- Try reducing your pressure advance smooth time (I use 0.02)
-- Try reducing top infill speeds, accelerations, and accel_to_decel.
-
-
-
-### SuperSlicer Bulging Issues
+- Some amount of this is unavoidable, but there are some things that *may* help:
+    - Try reducing your pressure advance smooth time (I use 0.02)
+    - Try reducing top infill speeds and accelerations.
+## SuperSlicer Bulging Issues
 
 ![](Images/Misc/Bulging.png) 
 ![](Images/Misc/Bulging2.png) 
 
 - Disable any "extra perimeters" and "supporting dense infill" settings.
-- [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#bulging-from-high-accelerations)
+- [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93Ellis-PIF-Profile#bulging-from-high-accelerations)
 
-### Pockmarks
+## Pockmarks
 
-- ![](Images/Misc/Pockmarks.png)
+![](Images/Misc/Pockmarks.png)
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.
-
- 
-
-### Repeating Patterns in Extrusion (BMG Clockwork)
+## Repeating Patterns in Extrusion (BMG Clockwork)
 
 The left cube shows this pattern. The right cube is normal.
 
-- ![](Images/Misc/Backlash-Comparison.png)
-
-- ![](Images/Misc/Backlash-Pattern.png)
+![](Images/Misc/Backlash-Comparison.png)
+![](Images/Misc/Backlash-Pattern.png)
 
 - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
 - **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.**
@@ -386,6 +379,26 @@ The left cube shows this pattern. The right cube is normal.
         -  ![](Images/Misc/Backlash-Adjust.png)
 
     - You should have a small amount of backlash **with filament loaded and the spring tensioned.** The backlash will reduce a bit once it is loaded. You will just have to experiment.
+    - This can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
 
-### Clacking Noises During Retraction (BMG Clockwork)
+## Clacking Noises During Retraction (BMG Clockwork)
 - You have *too much* backlash. See previous section.
+
+## Belt Tooth Marks
+- If it's belt tooth marks, they will be about 2mm apart.
+- Your belts may be too tight. [Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
+    - Don't miss the video link in page linked above. 
+- Your belts may be rubbing a flange somewhere.
+    - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
+- You may have poor quality motor pulleys and idlers.
+    - I, and a few others, have had improvements from switching to authentic Gates brand pulleys and idlers. They are more expensive, but are worth it in my opinion. 
+        - On v2 at least, you only need them for A/B motors and X/Y idlers. Don't waste the money on Z.
+        - US source:
+            - https://www.filastruder.com/products/gates-2gt-pulley?variant=15443750518855
+            - https://www.filastruder.com/products/gates-2gt-idler?variant=15443755728967
+    - For idlers, there is some debate over toothed vs smooth. My personal opinion is:
+        - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
+
+## Bulges at STL Vertices
+![](Images/Misc/Vertex-Bulges.png)
+- Your square coner velocity may be too low. Did you leave it set at 1 by chance?

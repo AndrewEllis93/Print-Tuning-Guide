@@ -291,6 +291,7 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 ![](Images/Overheating-2.png) 
 ![](Images/Overheating-3.png) 
 ![](Images/Overheating-5.png) 
+![](Images/Overheating-6.png) 
 
 ## How to Fix It
 
@@ -364,7 +365,7 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 ![](Images/Misc/Bulging2.png) 
 
 - Disable any "extra perimeters" and "supporting dense infill" settings.
-- [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93Ellis-PIF-Profile#bulging-from-high-accelerations)
+- [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#bulging-from-high-accelerations)
 
 ## Pockmarks
 
@@ -372,6 +373,7 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.
+    - Extrude in midair. Watch and listen. Depending just how wet your filament is, you may hear popping noises and see steam.
 ## Repeating Patterns in Extrusion (BMG Clockwork)
 
 The left cube shows this pattern. The right cube is normal.
@@ -401,6 +403,8 @@ The marks will be about 2mm apart (the same distance as the belt teeth)
     - Don't miss the video link in page linked above. 
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
+    - For V2: [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and then de-rack (see below).
+    - For all CoreXY printers: [de-rack.](https://www.youtube.com/watch?v=cOn6u9kXvy0)
 - You may have poor quality motor pulleys and idlers.
     - I, and a few others, have had improvements from switching to authentic Gates brand pulleys and idlers. They are more expensive, but are worth it in my opinion. 
         - On v2 at least, you only need them for A/B motors and X/Y idlers. Don't waste the money on Z.

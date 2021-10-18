@@ -10,7 +10,7 @@ This is not intended to be an ultimate guide to everything, rather a guide to ad
 
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
-Thank you to **bythorsthunder** for help with testing these methods and providing some photos.
+Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
 # Table of Contents
 - [A Note About Line Width](#a-note-about-line-width)

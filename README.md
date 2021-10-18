@@ -30,7 +30,13 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Retraction (WIP)](#retraction)
 - [Miscellaneous Fixes, Tips, and Tricks](#miscellaneous-fixes-tips-and-tricks)
-
+    - [PLA is Overheating](#pla-is-overheating)
+    - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
+    - [SuperSlicer Bulging Issues](#superslicer-bulging-issues)
+    - [Pockmarks](#pockmarks)
+    - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
+    - [Belt Tooth Marks](#belt-tooth-marks)
+    - [Bulges at STL Vertices](#bulges-at-stl-vertices)
 # Extrusion Multiplier
 
 This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.

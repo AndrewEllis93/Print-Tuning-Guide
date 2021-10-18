@@ -23,6 +23,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Extrusion Multiplier](#extrusion-multiplier)
     - [An Important Note About Pressure Advance & Flow](#an-important-note-about-pressure-advance--flow)
 - [Cooling and Layer Times](#cooling-and-layer-times)
+    - [Signs of Overheating](#signs-of-overheating)
+    - [How to Fix It](#how-to-fix-it)
 - [Retraction (WIP)](#retraction)
 - [Miscellaneous Fixes, Tips, and Tricks](#miscellaneous-fixes-tips-and-tricks)
     - [Pinholes](#pinholes)

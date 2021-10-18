@@ -302,7 +302,7 @@ There are multiple things you can do to minimize overheating with ABS.
 **1) Increase fan speeds.**
 
 - The higher your chamber temperature is, the more fan speed you will need.
-- Use constant fan speeds. **Varying fan speeds during a print will cause inconsistent layers and banding.** Some layers will essentially shrink more than others.
+- Use constant fan speeds. For filaments that shrink, **varying fan speeds during a print will cause inconsistent layers and banding.** Some layers will essentially shrink more than others.
 - You probably need more cooling than you think. 
     - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
         - For large plates, I use 35% fan.

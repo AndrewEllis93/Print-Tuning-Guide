@@ -490,7 +490,7 @@ The left cube shows this pattern. The right cube is normal.
 ![](Images/Misc/Backlash-Pattern.png)
 
 - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
-- **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.** You should be able to feel a small amount of "wiggle" when moving it with your fingernail.
+- **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.** You should be able to feel a small amount of "wiggle" when moving it with your fingernail (but not too much).
     - This is adjusted by moving the motor itself up and down. The motor plate has slotted screw holes to allow for adjustment.
         - You can reach the bottom left screw by opening the filament latch and inserting a ball-end hex driver.
         -  ![](Images/Misc/Backlash-Adjust.png)

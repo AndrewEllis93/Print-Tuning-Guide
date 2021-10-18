@@ -178,9 +178,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 ### Not Enough Squish
 - There are gaps between the lines:
 
-    - ![](Images/FirstLayer-NotEnoughSquish1.png) 
-    - ![](Images/FirstLayer-NotEnoughSquish2.png) 
-    - ![](Images/FirstLayer-NotEnoughSquish3.png) 
+    - ![](Images/FirstLayer-NotEnoughSquish1.png) ![](Images/FirstLayer-NotEnoughSquish2.png) ![](Images/FirstLayer-NotEnoughSquish3.png) 
 
 
 # Build Surface Adhesion

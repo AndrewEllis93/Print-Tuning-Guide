@@ -1,4 +1,4 @@
-# THIS IS A WORK IN PROGRESS
+This documentation is a work in progress.
 
 
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)

@@ -391,7 +391,10 @@ The left cube shows this pattern. The right cube is normal.
 - You have *too much* backlash. See previous section.
 
 ## Belt Tooth Marks
-- If it's belt tooth marks, they will be about 2mm apart.
+The marks will be about 2mm apart (the same distance as the belt teeth)
+
+![](Images/Misc/ToothMarks.png)
+
 - Your belts may be too tight. [Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
     - Don't miss the video link in page linked above. 
 - Your belts may be rubbing a flange somewhere.

@@ -168,8 +168,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 - Can't see any lines, or the lines are starting to fade:
 
-    - ![](Images/FirstLayer-TooMuchSquish2.png) 
-    - ![](Images/FirstLayer-TooMuchSquish1.png) 
+    - ![](Images/FirstLayer-TooMuchSquish2.png) ![](Images/FirstLayer-TooMuchSquish1.png) 
 
 - Wavy patterns appear:
 

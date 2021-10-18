@@ -27,7 +27,7 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
 - [Cooling and Layer Times](#cooling-and-layer-times)
-- [Infill/Perimeter Overlap](#infill/perimeter-overlap)
+- [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Retraction (WIP)](#retraction)
 - [Miscellaneous Tips and Tricks](#miscellaneous-tips-and-tricks)
 
@@ -310,7 +310,7 @@ After tuning flow and pressure advance, you may still have some pinholes where y
 
 This is **not** necessarily an indicator that your flow or pressure advance are wrong, though they can impact it. 
 
-Simply tweak "infill/perimeter overlap" (PS/SS) until satisfied.
+Slowly increase "infill/perimeter overlap" (PS/SS) until satisfied.
 ## Pinholes
 ![](Images/Overlap-1.png) 
 ![](Images/Overlap-2.png) 

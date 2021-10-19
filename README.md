@@ -162,7 +162,7 @@ Pressure advance changes the **distribution** of material, not the **amount** of
     - ![](Images/PA-Squares.png) 
 
 
-- **Remember: There is rarely such thing as perfect pressure advance.** Either accelerations or decelerations will almost always be slightly imperfect. You whould always err on the side of lower PA values.
+- **Remember: There is rarely such thing as perfect pressure advance.** Either accelerations or decelerations will almost always be slightly imperfect. You should always err on the side of lower PA values.
 
 - Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors of they are noticeably different.
 

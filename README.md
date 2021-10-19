@@ -318,7 +318,12 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 
 # Extrusion Multiplier
 
-**You should [tune pressure advance](#pressure-advance) first.**\
+**You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
+
+Calibrating your extruder ensures that the extrusion multiplier will be the same across all printers. 
+
+**You should also [tune pressure advance](#pressure-advance) first.**
+
 These tests try to remove PA as a variable as much as possible, but having a good PA value is still ideal.
 
 This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.

@@ -63,11 +63,11 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 - This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
 - This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. Here are some tips if you are having issues with either.
-     - You may need to use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh) to accomplish this. I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
+     - You should use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
         - Do not omit the `relative_reference_index` setting. This should correspond to the point you calibrate your Z offset to (almost always the center point.)
             - relative_reference_index = ((x points * y points) - 1) / 2
-        - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare, especially for larger printers, to have a perfect first layer without it.
-        - Your heat soaked mesh will also be different from your cold mesh, and will even vary at different temperatures, hence why I prefer to generate a fresh one for every print.
+        - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare for larger printers to have a perfect first layer without it.
+        - Your heat soaked mesh will also be different from your cold mesh. It will even vary at different temperatures. This is why I prefer to generate a fresh bed mesh for every print.
 
     - If you are using a V2: 
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
@@ -133,20 +133,25 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 # Build Surface Adhesion
 
+- **(!)** Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 
 - **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
+    - You should do this even for brand new surfaces.
+    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
+    - I keep a spray bottle of soapy wanted next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
+    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
-- Smooth PEI:
-    - Scuff with some Scotch-Brite or a similarly rough pot scrubber or sandpaper.
+- **Smooth PEI:**
+    - **Scuff it up** with some Scotch-Brite or a similarly rough pot scrubber or sandpaper. This helps immensely. 
+        - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
     - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify.
 
-- Textured PEI:
+- **Textured PEI:**
     - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
 
-
-- Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
-
-- Ensure your PEI is not counterfeit. You may have to ask in the Discord for other' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake. This is particularly prevalent with random Amazon brands or unknown Aliexpress sellers.
+- Ensure your PEI is not counterfeit. You may have to ask in the Discord for other' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
+    - Stick to well-known brands. 
+    - This is prevalent with unknown AliExpress and Amazon sellers.
 # Pressure Advance
 
 Pressure advance changes the **distribution** of material, not the **amount** of material.

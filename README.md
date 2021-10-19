@@ -301,7 +301,8 @@ I will not give extremely specific directions here, as it depends on how you sta
 - This calibration pattern is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
     - Usually either acceleration *or* deceleration will be good, but it's rare that both will be perfect on the same line.
     - **ALWAYS** choose the lower value. In my experience this has always been the line with perfect acceleration, but imperfect deceleration.
-    - This requires some interpretation. In this example, I would choose about **0.055**.
+    - This requires some interpretation. In this example, I would choose about **0.055**.\
+*(note: mine may be higher than yours, I am using an Orbiter + Dragon HF.)*
 
     ![](Images/KFactor-Print.jpg) 
 ## Fine-Tuning and What to Look For

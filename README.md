@@ -152,13 +152,15 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for other' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
     - Stick to well-known brands. 
     - This is prevalent with unknown AliExpress and Amazon sellers.
+
+- Instead of PEI, you can use strong adhesives like [Vision Miner Nano Polymer](https://visionminer.com/products/nano-polymer-adhesive) on bare spring steel.
 # Pressure Advance
 
 Pressure advance changes the **distribution** of material, not the **amount** of material.
-- Lower values cause less material in the middle of lines, and more at the ends/corners. 
-- Higher values cause more material in the middle of lines, and less at the ends/corners.
+- Lower values result in less material in the middle of lines, and more at the ends/corners. 
+- Higher values result in more material in the middle of lines, and less at the ends/corners.
 - Here is an example:
-    - **PA Values: 0, 0.035, 0.05, 0.09, 0.12** (Direct drive - Galileo clockwork / Dragon HF)
+    - PA Values: 0, 0.035, 0.05, 0.09, 0.12 (Galileo clockwork / Dragon HF)
     - ![](Images/PA-Squares.png) 
 
 
@@ -426,9 +428,10 @@ There are multiple things you can do to minimize overheating with ABS.
     - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
         - For large plates, I use 35% fan.
         - For single small objects, I use up to 80% fan.
+    - For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
+        - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
 - If your prints are curling even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.
-- For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
-    - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
+
 
 **2) Increase "minimum layer time" / "layer time goal"**
 

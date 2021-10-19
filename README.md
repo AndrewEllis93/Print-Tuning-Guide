@@ -31,7 +31,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [PLA is Overheating](#pla-is-overheating)
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
     - [SuperSlicer Bulging Issues](#superslicer-bulging-issues)
-    - [Pockmarks](#pockmarks)
+    - [Pockmarks / Skips](#pockmarks--skips)
     - [Repeating Patterns in Extrusion (BMG Clockwork)](#repeating-patterns-in-extrusion-bmg-clockwork)
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
     - [Belt Tooth Marks](#belt-tooth-marks)

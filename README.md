@@ -477,13 +477,19 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 - Disable any "extra perimeters" and "supporting dense infill" settings.
 - [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#acceleration-control)
 
-## Pockmarks
+## Pockmarks / Skips
 
 ![](Images/Misc/Pockmarks.png)
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.
     - Extrude in midair. Watch and listen. Depending just how wet your filament is, you may hear popping noises and see steam.
+- Your extruder could be skipping. 
+    - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
+        - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
+    - With the latch open, try extruding by hand. It should be pretty easy. If there is too much resistance, figure out where it is coming from.
+        - You may need to drill out the filament path in the printed parts, sometimes they can sag.
+    - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
 ## Repeating Patterns in Extrusion (BMG Clockwork)
 
 The left cube shows this pattern. The right cube is normal.
@@ -491,6 +497,7 @@ The left cube shows this pattern. The right cube is normal.
 ![](Images/Misc/Backlash-Comparison.png)
 ![](Images/Misc/Backlash-Pattern.png)
 
+- Ensure that your pulley and idler teeth are free of gunk. I find that I have to clean them occasionally.
 - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
 - **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.** You should be able to feel a small amount of "wiggle" when moving it with your fingernail (but not too much).
     - This is adjusted by moving the motor itself up and down. The motor plate has slotted screw holes to allow for adjustment.
@@ -516,6 +523,7 @@ The marks will be about 2mm apart (the same distance as the belt teeth)
     - Ensure your motor pulleys are not positioned too high or too low.
     - For V2: [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and then de-rack (see below).
     - For all CoreXY printers: [de-rack.](https://www.youtube.com/watch?v=cOn6u9kXvy0)
+- Ensure that your pulley and idler teeth are free of gunk. I find that I have to clean them occasionally.
 - You may have poor quality motor pulleys and idlers.
     - I, and a few others, have had improvements from switching to authentic Gates brand pulleys and idlers. They are more expensive, but are worth it in my opinion. 
         - On v2 at least, you only need them for A/B motors and X/Y idlers. Don't waste the money on Z.

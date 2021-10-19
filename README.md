@@ -489,7 +489,10 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
         - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
     - With the latch open, try extruding by hand. It should be pretty easy. If there is too much resistance, figure out where it is coming from.
         - You may need to drill out the filament path in the printed parts, sometimes they can sag.
+        - Your nozzle may be partially clogged. 
+            - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.
     - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
+    - Check your extruder motor wiring.
 ## Repeating Patterns in Extrusion (BMG Clockwork)
 
 The left cube shows this pattern. The right cube is normal.

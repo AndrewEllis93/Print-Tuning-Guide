@@ -84,6 +84,8 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
         Don't believe me? Look at this:
 
+        (The important one is the red line. Disregard the others.)
+
          ![](/Images/ZDrift.png)
 
         It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up.

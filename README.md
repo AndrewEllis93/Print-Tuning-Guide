@@ -25,7 +25,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Cooling and Layer Times](#cooling-and-layer-times)
     - [Signs of Overheating](#signs-of-overheating)
     - [How to Fix It](#how-to-fix-it)
-- [Retraction (WIP)](#retraction)
+- [Retraction](#retraction)
 - [Miscellaneous Fixes, Tips, and Tricks](#miscellaneous-fixes-tips-and-tricks)
     - [Pinholes](#pinholes)
     - [PLA is Overheating](#pla-is-overheating)

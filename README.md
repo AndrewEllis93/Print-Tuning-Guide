@@ -149,7 +149,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - **Textured PEI:**
     - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
 
-- Ensure your PEI is not counterfeit. You may have to ask in the Discord for other' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
+- Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
     - Stick to well-known brands. 
     - This is prevalent with unknown AliExpress and Amazon sellers.
 

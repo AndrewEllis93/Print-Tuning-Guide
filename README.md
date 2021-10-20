@@ -289,6 +289,7 @@ Note that the "Extrusion Multiplier" setting is is decimal, NOT percent.
 I will not give extremely specific directions here, as it depends on how you start & end your prints. I will show you mine as an example, however.
 
 - Modify the "prepare printing" g-code section appropriately at the beginning.
+    - Replace `M204 P` with `M204 S`.
     - Add `PRINT_START` in the appropriate place.
         - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to remove the heating commands and pass them to `PRINT_START` instead, e.g: `PRINT_START HOTEND=240 BED=110`
             - Example: \

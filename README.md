@@ -481,7 +481,7 @@ If you are having persistent issues:
 
 ## Method
 
-**1)** Ensure your nozzle is clean. You can use a brass brush while it is heated.
+**1)** Ensure that your nozzle is clean. You can use a brass brush while it is heated.
 
 **2)** Set your retract and unretract speeds to **30mm/s** to start. 
 - This is located in the "printer settings" tab, under "extruder 1".

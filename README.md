@@ -88,7 +88,7 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
 ## Method
 **1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*\
-![](Images/FirstLayer-Plate.png)    
+- ![](Images/FirstLayer-Plate.png)    
 
 **2)** Set your first layer height to **0.25** or greater.
 
@@ -352,7 +352,7 @@ Both of the above methods I've found to have error of up to 5% (sometimes even m
 This must be done per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 
 ## Method
-By far the best method I have found is purely visual. *Put the calipers down for now*.
+By far the best method I have found is purely visual/tactile. *Put the calipers down for now*.
 
 We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
@@ -373,7 +373,10 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
 **Steps:**
 
-**1)** Print multiple test cubes with variations of 2% EM. You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
+**1)** Print multiple test cubes with variations of 2% EM. 
+- You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
+    - **(!) In PS/SS, if you set flow per-object, make sure to set your EM to 1 in the filament settings.** \
+    I have heard reports that the per-object EM settings are *multiplied by* your filament settings' EM. I have not confirmed this myself, but better to be sure.
 
 **2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
 
@@ -448,7 +451,81 @@ There are multiple things you can do to minimize overheating with ABS.
 **4) Reduce nozzle and/or bed temperature.**
 
 # Retraction
-WIP
+## Background
+There are a few factors that can affect your retraction settings, such as:
+- Material type
+- Print temperature
+- Hotend
+- Extruder
+
+We will be using using [SuperSlicer](https://github.com/supermerill/SuperSlicer/releases)'s calibration tools. 
+
+- If you do not typically use SuperSlicer, you can start with one of the built-in Voron profiles for this test. 
+    - The built-in profiles are not great in my opinion, but will work fine just for running the calibration tools. 
+    - Shameless plug: try [my profiles](https://github.com/AndrewEllis93/Ellis-PIF-Profile) later on. There are some other warnings and dependencies, however *(please thoroughly read its readme)*, so just stick with the built-in ones for now.
+
+We will be printing these retraction towers at three different temperatures. If you are confident that your filament temperature is well tuned, you may get good results with just one tower.
+
+## Important Notes
+**(!) You should [tune pressure advance](#pressure-advance) first.**
+Pressure advance can lower the amount of retraction needed, especially for bowden.
+
+**There is some trial and error involved.** You may need to re-run these tests at varying retraction speeds and temperatures if you are not getting good results. You will just have to experiment. You should hot tighten your nozzle (unless it's an E3D Revo).
+
+If you are having persistent issues:
+- **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
+- Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
+
+## Method
+
+**1)** Ensure your nozzle is clean. You can use a brass brush while it is heated.
+
+**2)** Set your retract and unretract speeds to **30mm/s** to start. 
+- This is located in the "printer settings" tab, under "extruder 1".
+- I have had more luck with slower retraction speeds. Your mileage may vary.
+
+**3)** Use medium-high fan speeds. 
+- These are located in the "filament settings" tab, under "cooling".
+- These retraction towers are small and need some additional cooling. 
+
+**4)** Select "extruder retraction calibration" from the menu.
+
+- ![](Images/Retraction-Menu.png) 
+
+**5)** Click "remove fil. slowdown".
+
+- ![](Images/Retraction-FilSlowdown.png) 
+
+**6)** Fill out the parameters and select "Generate".
+
+- ![](Images/Retraction-Params.png) 
+
+    - **Start temp:**
+        - Set a **bit higher** than your normal printing temps.
+            - For this example, I will be using 255C with KVP ABS.
+    - **Step:**
+        - Direct drive: **0.1mm**
+        - Bowden: **0.5mm**
+    - **Height:**
+        - Your maximum retraction length will be **(height - 1) * step**.
+            - Do not exceed **1mm** for direct drive.
+                - You will *rarely* need more than this, but it is possible with some high flow hotends and setups. Start with 1mm, only go up to a max of 2mm if required.
+            - For bowden, this can vary. Try starting with a maximum of **3mm**.
+                - You may need more, depending on a few factors like pressure advance, bowden tube length, bowden tube internal diameter, and how firmly attached the tube is in the couplings.
+                - Ensure that your bowden tubes are as firmly attached as possible, and do not [move too much in and out of their couplings during printing](https://youtu.be/lboDSH0945g?t=120). 
+    - **Temp decrease (temp decr):**
+        - **3x10°**.
+            - This will print three retraction towers. One will be at your "start temp", the other two will be 10C increments below this.
+
+    - You should get output like this:
+        - ![](Images/Retraction-Sliced.png) 
+
+    **7) Print it, and inspect the results.** 
+    - If your hotter towers are much stringier, consider choosing a lower extrusion temperature.
+    - **To get your new retraction length:**
+        - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
+            - In my opinion, choose a height **1-2 notches higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
+
 # Miscellaneous Fixes, Tips, and Tricks
 ## Pinholes
 

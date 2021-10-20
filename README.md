@@ -68,6 +68,11 @@ I'm going to call it "squish" for purposes of being unambiguous. \
             - relative_reference_index = ((x points * y points) - 1) / 2
         - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare for larger printers to have a perfect first layer without it.
         - Your heat soaked mesh will also be different from your cold mesh. It will even vary at different temperatures. This is why I prefer to generate a fresh bed mesh for every print.
+        - **Bed mesh can't always save you from mechanical problems.**
+            - Most bed mesh issues are caused by the gantry rather than the bed itself.
+                - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
+                    - These instructions are for V2, but the process should be similar for Trident.
+                - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
 
     - If you are using a V2: 
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
@@ -621,8 +626,9 @@ The marks will be about 2mm apart (the same distance as the belt teeth)
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.
-    - For V2: [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and then de-rack (see below).
-    - For all CoreXY printers: [de-rack.](https://www.youtube.com/watch?v=cOn6u9kXvy0)
+    - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh, first layer, and pulley/belt alignment.
+        - These instructions are for V2, but the process should be similar for Trident.
+    - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
 - Ensure that your pulley and idler teeth are free of gunk. I find that I have to clean them occasionally.
 - You may have poor quality motor pulleys and idlers.
     - I, and a few others, have had improvements from switching to authentic Gates brand pulleys and idlers. They are more expensive, but are worth it in my opinion. 

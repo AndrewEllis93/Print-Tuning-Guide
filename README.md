@@ -471,6 +471,8 @@ We will be printing these retraction towers at three different temperatures. If 
 **(!) You should [tune pressure advance](#pressure-advance) first.**
 Pressure advance can lower the amount of retraction needed, especially for bowden.
 
+**If you typically print with z-hop, leave it on for this test.**
+
 **There is some trial and error involved.** You may need to re-run these tests at varying retraction speeds and temperatures if you are not getting good results. You will just have to experiment. You should hot tighten your nozzle (unless it's an E3D Revo).
 
 If you are having persistent issues:

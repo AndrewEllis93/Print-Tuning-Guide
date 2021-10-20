@@ -73,6 +73,7 @@ I'm going to call it "squish" for purposes of being unambiguous. \
                 - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
                     - These instructions are for V2, but the process should be similar for Trident.
                 - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
+                - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause first layer issues across X that mesh can't compensate for.
 
     - If you are using a V2: 
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
@@ -87,12 +88,11 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
         It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up.
 
-        There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a Rabbit hole well outside the scope of this guide. Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [4](https://github.com/alchemyEngine/measure_thermal_behavior) [5](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) 
-
+        There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a Rabbit hole well outside the scope of this guide. Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://deepfriedhero.in/products/titanium-extrusion-backers?_pos=1&_sid=e2f989fec&_ss=r) [4](https://www.fabreeko.com/collections/voron/products/v2-4-trident-titanium-extrusion-backers) [5](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [6](https://github.com/alchemyEngine/measure_thermal_behavior) [7](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) 
 
 
 ## Method
-**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*\
+**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*
 - ![](Images/FirstLayer-Plate.png)    
 
 **2)** Set your first layer height to **0.25** or greater.

@@ -104,9 +104,9 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
 - V0/V2/Trident (dedicated Z endstop): 
     - Enter `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
-- Switchwire/Legacy (probe used as virtual Z endstop): 
+- Switchwire/Legacy/Klicky (probe used as virtual Z endstop): 
     - Enter `Z_OFFSET_APPLY_PROBE`. This will apply your new offset to your probe's `z_offset`.
-- Klicky Auto z: 
+- Klicky with [Auto Z calibration](https://github.com/protoloft/klipper_z_calibration): 
     - Manually adjust your `switch_offset`. Higher value = more squish.
 
 ## Examples 

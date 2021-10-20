@@ -82,7 +82,7 @@ I'm going to call it "squish" for purposes of being unambiguous. \
 
         It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up.
 
-        There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but [that](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [is](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [a](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [rabbit](https://github.com/alchemyEngine/measure_thermal_behavior) [hole](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) well outside the scope of this guide. 
+        There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a Rabbit hole well outside the scope of this guide. Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [4](https://github.com/alchemyEngine/measure_thermal_behavior) [5](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) 
 
 
 

@@ -15,7 +15,7 @@ My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Elli
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
 # Table of Contents
-- [**(!)** Before We Begin](#before-we-begin)
+- [**(!)** Before We Begin](#-before-we-begin)
     - [A Note About Line Width](#a-note-about-line-width)
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)

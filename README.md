@@ -1,7 +1,3 @@
-This documentation is a work in progress.
-
-
-If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 # Introduction
 
 Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.
@@ -11,6 +7,9 @@ This is not intended to be an ultimate guide to everything, rather a guide to ad
 **(!) Please pay special attention to anything bolded and marked with "(!)"**
 
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
+
+I am adding new information all the time, be sure to check back.\
+If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
@@ -653,7 +652,7 @@ The marks will be about 2mm apart (the same distance as the belt teeth)
     - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh, first layer, and pulley/belt alignment.
         - These instructions are for V2, but the process should be similar for Trident.
     - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
-- Ensure that your pulley and idler teeth are free of gunk. I find that I have to clean them occasionally.
+- Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
 - You may have poor quality motor pulleys and idlers.
     - I, and a few others, have had improvements from switching to authentic Gates brand pulleys and idlers. They are more expensive, but are worth it in my opinion. 
         - On v2 at least, you only need them for A/B motors and X/Y idlers. Don't waste the money on Z.

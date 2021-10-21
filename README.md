@@ -72,8 +72,9 @@ I'm going to call it "squish" for purposes of being unambiguous. \
             - Most bed mesh issues are caused by the gantry rather than the bed itself.
                 - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
                     - These instructions are for V2, but the process should be similar for Trident.
+                    - You have to be *somewhat* quick, as things start cooling down once you take off the panels. Don't stress about it too much though.
                 - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
-                - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause first layer issues across X that mesh can't compensate for.
+                - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
 
     - If you are using a V2: 
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
@@ -445,7 +446,7 @@ There are multiple things you can do to minimize overheating with ABS.
         - For single small objects, I use up to 80% fan.
     - For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
         - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
-- If your prints are curling even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.
+- If your prints are curling away from the bed even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.
 
 
 **2) Increase "minimum layer time" / "layer time goal"**

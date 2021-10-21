@@ -8,6 +8,8 @@ Much of this guide is specific to Voron printers running Klipper. Rather than re
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
+**(!) Please pay special attention to anything bolded and marked with "(!)"**
+
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
@@ -41,13 +43,16 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 
 Before you follow *any* tuning methods in this guide, ensure that:
 - Your nozzle is clean.
-- Your nozzle has been tightened **while hot**, and is not leaking material through the threads around the nozzle or heatbreak.
+- Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
 - **(!) Your nozzle is not partially clogged.**
     - Ensure that you can easily extrude by hand with the filament latch open.
     - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
     - If your nozzle is partially clogged, **you may not even notice**, and may be able to print, but you will have an **extremely difficult time trying to tune**.
 - Your thermistors are the correct types in your config.
     - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
+- **(!) Everything is tight.**
+    - Seriously, go back again and re-tighten *every single screw* you can find, *especially* grub screws and everything in the toolhead. 
+    - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are extremely difficult to troubleshoot.
 ## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
 This allows the guide to remain agnostic to nozzles.
@@ -59,7 +64,7 @@ However:
 - Cura does not allow percentages at all. 
 - Other slicers may or may not support this.
 
-**For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
+**(!) For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
 For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
 
 # First Layer Squish

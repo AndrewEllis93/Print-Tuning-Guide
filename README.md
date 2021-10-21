@@ -15,7 +15,7 @@ My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Elli
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
 # Table of Contents
-- [Before We Begin](#before-we-begin)
+- [**(!)** Before We Begin](#before-we-begin)
     - [A Note About Line Width](#a-note-about-line-width)
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
@@ -39,7 +39,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
     - [Belt Tooth Marks](#belt-tooth-marks)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
-# Before We Begin
+# (!) Before We Begin
 
 Before you follow *any* tuning methods in this guide, ensure that:
 - Your nozzle is clean.
@@ -51,7 +51,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
 - Your thermistors are the correct types in your config.
     - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
 - **(!) Everything is tight.**
-    - Seriously, go back again and re-tighten *every single screw* you can find, *especially* grub screws and everything in the toolhead. 
+    - Seriously, go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are extremely difficult to troubleshoot.
 ## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \

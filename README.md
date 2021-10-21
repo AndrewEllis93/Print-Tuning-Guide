@@ -13,7 +13,8 @@ My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Elli
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
 # Table of Contents
-- [A Note About Line Width](#a-note-about-line-width)
+- [Before We Begin](#before-we-begin)
+    - [A Note About Line Width](#a-note-about-line-width)
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
@@ -36,8 +37,18 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
     - [Belt Tooth Marks](#belt-tooth-marks)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
+# Before We Begin
 
-# A Note About Line Width
+Before you follow *any* tuning methods in this guide, ensure that:
+- Your nozzle is clean.
+- Your nozzle has been tightened **while hot**, and is not leaking material through the threads around the nozzle or heatbreak.
+- **(!) Your nozzle is not partially clogged.**
+    - Ensure that you can easily extrude by hand with the filament latch open.
+    - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
+    - If your nozzle is partially clogged, **you may not even notice**, and may be able to print, but you will have an **extremely difficult time trying to tune**.
+- Your thermistors are the correct types in your config.
+    - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
+## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
 This allows the guide to remain agnostic to nozzles.
 
@@ -50,7 +61,6 @@ However:
 
 **For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
 For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
-
 
 # First Layer Squish
 
@@ -388,7 +398,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 **1)** Print multiple test cubes with variations of 2% EM. 
 - You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
     - **(!) In PS/SS, if you set flow per-object, make sure to set your EM to 1 in the filament settings.** \
-    I have heard reports that the per-object EM settings are *multiplied by* your filament settings' EM. I have not confirmed this myself, but better to be sure.
+    The per-object EM settings are *multiplied by* your filament settings' EM.
 
 **2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
 
@@ -422,6 +432,7 @@ You can run faster solid infill, but I would recommend using a slow-ish top surf
 ### Actual Print with Tuned EM:
 
 ![](Images/EMPrint-Example.jpg) 
+
 # Cooling and Layer Times
 ## Signs of Overheating
 ![](Images/Overheating-1.png) ![](Images/Overheating-4.png) 
@@ -608,7 +619,7 @@ The left cube shows this pattern. The right cube is normal.
 ![](Images/Misc/Backlash-Comparison.png)
 ![](Images/Misc/Backlash-Pattern.png)
 
-- Ensure that your pulley and idler teeth are free of gunk. I find that I have to clean them occasionally.
+- Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
 - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
 - **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.** You should be able to feel a small amount of "wiggle" when moving it with your fingernail (but not too much).
     - This is adjusted by moving the motor itself up and down. The motor plate has slotted screw holes to allow for adjustment.

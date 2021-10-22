@@ -699,14 +699,14 @@ Inspect the object to see which axes the artifacts appear most prominent in.
     - **B** motor *(rare)*
 - Artifacts are most prominent in in X:
     - **XY** joint idlers
-    - **X** rails(s)
+    - **X** linear rails(s)
 - Artifacts are most prominent in in Y:
-    - **Y** rails
+    - **Y** linear rails
 - Artifacts are most prominent in in A/B/X, but not Y:
     - **XY** joint idlers
-    - **X** rail(s)
+    - **X** linear rail(s)
 - Artifacts are most prominent in in A/B/Y, but not X:
-    - **Y** rails
+    - **Y** linear rails
 - Artifacts are equally prominent in all directions:
     - **A *and* B** motor pulleys
     - **X *and* Y** linear rails

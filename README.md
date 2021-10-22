@@ -48,9 +48,10 @@ Before you follow *any* tuning methods in this guide, ensure that:
 - Your nozzle is clean.
 - Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
 - **(!) Your nozzle is not partially clogged.**
-    - Ensure that you can easily extrude by hand with the filament latch open.
-    - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
     - If your nozzle is partially clogged, **you may not even notice**, and may be able to print, but you will have an **extremely difficult time trying to tune**.
+        - Ensure that you can easily extrude by hand with the filament latch open.
+        - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
+
 - Your thermistors are the correct types in your config.
     - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
 - **(!) Everything is tight.**

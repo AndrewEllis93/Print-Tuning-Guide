@@ -39,7 +39,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Pockmarks / Skips](#pockmarks--skips)
     - [Repeating Patterns in Extrusion (BMG Clockwork)](#repeating-patterns-in-extrusion-bmg-clockwork)
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
-    - [Belt Tooth Marks](#belt-tooth-marks)
+    - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
+    - [Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-non-2mm-spacing)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
 # Before We Begin
 

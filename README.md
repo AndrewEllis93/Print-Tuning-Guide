@@ -2,7 +2,7 @@
 
 Much of this guide is specific to Voron CoreXY printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.
 
-A handful of the [troubleshooting sections](#miscellaneous-fixes-tips-and-tricks) focus on CoreXY (sorry, Switchwire folks).\
+A handful of the [troubleshooting sections](#miscellaneous-fixes-tips-and-tricks) focus on CoreXY (sorry, Switchwire folks).
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 

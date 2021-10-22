@@ -16,8 +16,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 [Support my work](https://www.paypal.com/donate?business=U6F2FZMXXSBSW&no_recurring=0&currency_code=USD)
 
 # Table of Contents
-- [**(!)** Before We Begin](#-before-we-begin)
-    - [**(!)** Important Checks](#important-checks)
+- [Before We Begin](#-before-we-begin)
+    - [**(!) Important Checks**](#important-checks)
     - [A Note About Line Width](#a-note-about-line-width)
 - [First Layer Squish](#first-layer-squish)
 - [Build Surface Adhesion](#build-surface-adhesion)
@@ -41,9 +41,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
     - [Belt Tooth Marks](#belt-tooth-marks)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
-# (!) Before We Begin
+# Before We Begin
 
-## Important Checks
+## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 - Your nozzle is clean.
 - Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.

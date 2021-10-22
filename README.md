@@ -57,7 +57,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
 - **(!) Everything is tight.**
     - Seriously, go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are extremely difficult to troubleshoot.
-- Motion components are clean, particularly gear/pulley/idler teeth.
+- Your motion components are clean, particularly gear/pulley/idler teeth.
 
 ## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
@@ -640,8 +640,13 @@ The left cube shows this pattern. The right cube is normal.
 ## Clacking Noises During Retraction (BMG Clockwork)
 - You have *too much* backlash. See previous section.
 
-## Belt Tooth Marks
-The marks will be about 2mm apart (the same distance as the belt teeth)
+## Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing
+If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
+
+Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
+If they are not perfectly vertical (i.e. wood grain, diagonal, etc), see [this section](#repeating-patterns-in-extrusion-bmg-clockwork) instead.
+
+Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
 
 ![](Images/Misc/ToothMarks.png)
 
@@ -662,7 +667,47 @@ The marks will be about 2mm apart (the same distance as the belt teeth)
             - https://www.filastruder.com/products/gates-2gt-idler?variant=15443755728967
     - For idlers, there is some debate over toothed vs smooth. My personal opinion is:
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
+## Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing
 
+Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
+If they are not perfectly vertical (i.e. wood grain, diagonal, etc), see [this section](#repeating-patterns-in-extrusion-bmg-clockwork) instead.
+
+- **Ensure that your A/B pulleys and XY joint idlers are all clean.** Debris can accumulate and compress between the teeth.
+- You may have a bad/poor quality pulley or toothed idler.
+    - See above section for more info / links.
+- You may have a bad/poor quality bearing.
+    - Loosen the A/B belts, pull the belt over the side of each bearing flange, and turn each bearing by running it against your finger. Make sure the whole rotation feels smooth.
+- You may have a bad/poor quality linear rail.
+
+### Narrowing it Down
+Print two square objects, one in normal orentation, and one at 45 degrees. \
+Inspect the object to see which axes the artifacts appear most prominent in.
+
+*(components in each section are in order of likelihood)*
+- Artifacts are most prominent in in A:
+    - Bearings in **A** belt path
+    - **A** motor pulley
+    - **A** belt *(rare)*
+    - **A** motor *(rare)*
+- Artifacts are most prominent in in B:
+    - Bearings in **B** belt path
+    - **B** motor pulley
+    - **B** belt *(rare)*
+    - **B** motor *(rare)*
+- Artifacts are most prominent in in X:
+    - **XY** joint idlers
+    - **X** rails(s)
+- Artifacts are most prominent in in Y:
+    - **Y** rails
+- Artifacts are most prominent in in A/B/X, but not Y:
+    - **XY** joint idlers
+    - **X** rail(s)
+- Artifacts are most prominent in in A/B/Y, but not X:
+    - **Y** rails
+- Artifacts are equally prominent in all directions:
+    - **A *and* B** motor pulleys
+    - **X *and* Y** linear rails
+    - **A *and* B** motors *(rare)*
 ## Bulges at STL Vertices
 ![](Images/Misc/Vertex-Bulges.png)
 - Your square corner velocity may be too low. Did you leave it set at 1 by chance?

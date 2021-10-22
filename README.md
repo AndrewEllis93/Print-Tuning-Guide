@@ -13,6 +13,8 @@ If you have issues, comments, or suggestions, please let me know on Discord: [El
 
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
+[Support my work](https://www.paypal.com/donate?business=U6F2FZMXXSBSW&no_recurring=0&currency_code=USD)
+
 # Table of Contents
 - [**(!)** Before We Begin](#-before-we-begin)
     - [**(!)** Important Checks](#important-checks)
@@ -72,8 +74,7 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 
 # First Layer Squish
 
-I'm going to call it "squish" for purposes of being unambiguous. \
-"z offset" and "z height" can be conflated with other concepts. \
+I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. \
 [It stops sounding like a real word after you type it 100 times.](https://en.wikipedia.org/wiki/Semantic_satiation)
 
 ## Background and Common Issues/Mistakes
@@ -101,14 +102,11 @@ I'm going to call it "squish" for purposes of being unambiguous. \
     - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
     Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
 
-        Don't believe me? Look at this:
-
-        (The important one is the red line. Disregard the others.)
+        Don't believe me? Look at this *(the red line)*:
 
          ![](/Images/ZDrift.png)
 
-        It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up.
-
+        It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up in the morning.\
         There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a rabbit hole well outside the scope of this guide.* 
         
         <sup>* *Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://deepfriedhero.in/products/titanium-extrusion-backers?_pos=1&_sid=e2f989fec&_ss=r) [4](https://www.fabreeko.com/collections/voron/products/v2-4-trident-titanium-extrusion-backers) [5](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [6](https://github.com/alchemyEngine/measure_thermal_behavior) [7](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) [8](https://youtu.be/RXJKdh1KZ0w)</sup>*\

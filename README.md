@@ -673,6 +673,8 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
 If they are not perfectly vertical (i.e. wood grain, diagonal, etc), see [this section](#repeating-patterns-in-extrusion-bmg-clockwork) instead.
 
+These patterns can be subtle (lumps) or sharp like the above section's photo.
+
 - **Ensure that your A/B pulleys and XY joint idlers are all clean.** Debris can accumulate and compress between the teeth.
 - You may have a bad/poor quality pulley or toothed idler.
     - See above section for more info / links.

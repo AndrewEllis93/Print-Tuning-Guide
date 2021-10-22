@@ -708,6 +708,7 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 - Artifacts are equally prominent in all directions:
     - **A *and* B** motor pulleys
     - **X *and* Y** linear rails
+    - **A *and* B** belts *(rare)*
     - **A *and* B** motors *(rare)*
 ## Bulges at STL Vertices
 ![](Images/Misc/Vertex-Bulges.png)

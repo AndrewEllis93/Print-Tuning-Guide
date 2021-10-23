@@ -140,14 +140,16 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
     - Enter `SAVE_CONFIG`.
 
 - **Virtual Z Endstop**\
-(Stock Switchwire and Legacy are set up this way, using the probe as the Z endstop.)
+(Stock Switchwire and Legacy are set up this way, using the probe as the Z endstop)
     - Enter `Z_OFFSET_APPLY_PROBE`. 
         - This will apply your new offset to your probe's `z_offset`.
     - Enter `SAVE_CONFIG`.
 
 - [**Klicky Auto Z Calibration**](https://github.com/protoloft/klipper_z_calibration)\
-(This is a mod, it uses Klicky AND nozzle endstop to automatically baby step before each print.)
-    - Manually adjust your `switch_offset`. Higher value = more squish.
+(This is a mod, it uses Klicky AND nozzle endstop to automatically baby step before each print)
+    - Manually adjust your `switch_offset` based on how much extra you had to baby step. 
+        - Higher value = more squish 
+        - Lower value = less squish
 
 ## Examples 
 You should still clearly be able to see the lines. If it's completely smooth, your squish is too much.

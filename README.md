@@ -131,11 +131,12 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 
 - This can be done via g-codes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
 - **Examples**\
-In these examples, the third square is closest.
+In these examples, the third square is closest.\
+There are print examples in the next section.
 
     - **Top surface**
         - You don't want too many ridges/hairs on top. 
-            - It's normal to have a little bit of this near the corners, or in small footprint areas.
+            - It's normal to have a *little* bit of this near the corners, or in small footprint areas.
         - You shouldn't see any gaps between the lines.
             - It's fine to have some very small pinholes where the infill meets the perimeters.
         - ![](Images/EM-Squares-2.png)
@@ -167,7 +168,7 @@ In these examples, the third square is closest.
         - Lower value = less squish
 
 <sup>* Requires a semi-recent version of Klipper.</sup>
-## Examples 
+## Print Examples 
 You should still clearly be able to see the lines. If it's completely smooth, your squish is too much.
  If you see gaps between the lines, you need more squish.
 ### Good Squish

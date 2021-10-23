@@ -1,6 +1,6 @@
 # Introduction
 
-Much of this guide is specific to Voron CoreXY printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.
+Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.
 
 A handful of the [troubleshooting sections](#miscellaneous-fixes-tips-and-tricks) and some of the tuning hints focus on CoreXY (sorry, Switchwire folks).
 
@@ -173,7 +173,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
     - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
 - **Smooth PEI:**
-    - **Scuff it up** with some Scotch-Brite or a similarly rough pot scrubber or sandpaper. This helps immensely. 
+    - **Scuff it up** with a [Scotch-Brite scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud) or a similarly rough pot scrubber or sandpaper. This helps immensely. 
         - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
     - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify.
 

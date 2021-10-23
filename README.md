@@ -133,11 +133,20 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset:
 
-- V0/V2/Trident (dedicated Z endstop): 
-    - Enter `Z_OFFSET_APPLY_ENDSTOP`. This will apply your new offset to your stepper_z's `position_endstop`.
-- Switchwire/Legacy (probe used as virtual Z endstop): 
-    - Enter `Z_OFFSET_APPLY_PROBE`. This will apply your new offset to your probe's `z_offset`.
-- Klicky Auto z: 
+- **Dedicated Z Endstop**\
+(Stock V0/V2/Trident are set up this way, with nozzle endstops)
+    - Enter `Z_OFFSET_APPLY_ENDSTOP`. 
+        - This will apply your new offset to your stepper_z's `position_endstop`.
+    - Enter `SAVE_CONFIG`.
+
+- **Virtual Z Endstop**\
+(Stock Switchwire and Legacy are set up this way, using the probe as the Z endstop.)
+    - Enter `Z_OFFSET_APPLY_PROBE`. 
+        - This will apply your new offset to your probe's `z_offset`.
+    - Enter `SAVE_CONFIG`.
+
+- [**Klicky Auto Z Calibration**](https://github.com/protoloft/klipper_z_calibration)\
+(This is a mod, it uses Klicky AND nozzle endstop to automatically baby step before each print.)
     - Manually adjust your `switch_offset`. Higher value = more squish.
 
 ## Examples 

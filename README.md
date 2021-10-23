@@ -127,21 +127,36 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 
 **3)** Set your first layer [line width](#a-note-about-line-width) to **120%** or greater.
 
-**4)** Start the print. While it is printing, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height). Refer to the example images below.
+**4)** Start the print. While it is printing, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height).
 
 - This can be done via g-codes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
+- **Examples**\
+In these examples, the third square is closest.
 
-**5)** Once you are happy with your squish, cancel the print and then save your new offset:
+    - **Top surface**
+        - You don't want too many ridges/hairs on top. 
+            - It's normal to have a little bit of this near the corners, or in small footprint areas.
+        - You shouldn't see any gaps between the lines.
+            - It's fine to have some very small pinholes where the infill meets the perimeters.
+        - ![](Images/EM-Squares-2.png)
+        - ![](Images/EM-Squares-2-Annotated.png)
+    - **Bottom Surface**
+        - You should not have any gaps between the lines.
+        - You should still be able to clearly see the lines. They should not be fading or invisible.
+        - ![](Images/EM-Squares-1-Annotated.png)
+
+
+**5)** Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
 
 - **Dedicated Z Endstop**\
 (With dedicated Z endstops. Stock V0/V2/Trident are set up this way)
-    - Enter `Z_OFFSET_APPLY_ENDSTOP`. 
+    - Enter `Z_OFFSET_APPLY_ENDSTOP`* 
         - This will apply your new offset to your stepper_z's `position_endstop`.
     - Enter `SAVE_CONFIG`.
 
 - **Virtual Z Endstop**\
 (When using the probe *as* the Z endstop. Stock Switchwire and Legacy are set up this way)
-    - Enter `Z_OFFSET_APPLY_PROBE`. 
+    - Enter `Z_OFFSET_APPLY_PROBE`*
         - This will apply your new offset to your probe's `z_offset`.
     - Enter `SAVE_CONFIG`.
 
@@ -151,6 +166,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
         - Higher value = more squish 
         - Lower value = less squish
 
+<sup>* Requires a semi-recent version of Klipper.</sup>
 ## Examples 
 You should still clearly be able to see the lines. If it's completely smooth, your squish is too much.
  If you see gaps between the lines, you need more squish.

@@ -173,7 +173,9 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
     - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
 - **Smooth PEI:**
-    - **Scuff it up** with a [Scotch-Brite scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud) or a similarly rough pot scrubber or sandpaper. This helps immensely. 
+    - **Scuff it up** with a [Scotch-Brite scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
+        - The rough side of a fresh sponge, ~800-1000 grit sandpaper, or other brands of scouring pads could also work.
+        - This helps immensely, much like how you would scuff/sand a surface before painting or gluing something to it.
         - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
     - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify.
 

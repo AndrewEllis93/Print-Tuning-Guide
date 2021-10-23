@@ -134,13 +134,13 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 **5)** Once you are happy with your squish, cancel the print and then save your new offset:
 
 - **Dedicated Z Endstop**\
-(Stock V0/V2/Trident are set up this way, with nozzle endstops)
+(With dedicated Z endstops. Stock V0/V2/Trident are set up this way)
     - Enter `Z_OFFSET_APPLY_ENDSTOP`. 
         - This will apply your new offset to your stepper_z's `position_endstop`.
     - Enter `SAVE_CONFIG`.
 
 - **Virtual Z Endstop**\
-(Stock Switchwire and Legacy are set up this way, using the probe as the Z endstop)
+(When using the probe *as* the Z endstop. Stock Switchwire and Legacy are set up this way)
     - Enter `Z_OFFSET_APPLY_PROBE`. 
         - This will apply your new offset to your probe's `z_offset`.
     - Enter `SAVE_CONFIG`.

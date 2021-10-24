@@ -597,12 +597,15 @@ After tuning flow and pressure advance, you may still have some pinholes where y
 
 This is *not necessarily* an indicator that your flow or pressure advance are wrong, though they can impact it. 
 
+*Some people have widely varying overlap settings. You will need to tune this for yourself. I am still figuring out why it varies between people.* \
+*The current theory is that it may be impacted by line width, but I have not yet tested this theory.*
+
 **Simply increase "infill/perimeter overlap" (PS/SS) until satisfied.**
 
 ### Examples
 - ![](Images/Overlap-1.png) 
 - ![](Images/Overlap-2.png) 
-### Overlap Tweaked (40%):
+### Overlap Tweaked:
 
 - ![](Images/Overlap-Fixed1.png) 
 

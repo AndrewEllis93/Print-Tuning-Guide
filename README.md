@@ -33,17 +33,17 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Signs of Overheating](#signs-of-overheating)
     - [How to Fix It](#how-to-fix-it)
 - [Retraction](#retraction)
-- [Miscellaneous Fixes, Tips, and Tricks](#miscellaneous-fixes-tips-and-tricks)
-    - [Pinholes](#pinholes)
+- [Infill/Perimeter Overlap](#infillperimeter-overlap)
+- [Troubleshooting](#troubleshooting)
+    - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
+    - [Bulging](#bulging)
+    - [Bulges at STL Vertices](#bulges-at-stl-vertices)
     - [PLA is Overheating](#pla-is-overheating)
-    - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
-    - [Bulging Issues](#bulging)
     - [Pockmarks / Skips](#pockmarks--skips)
-    - [Repeating Patterns in Extrusion (BMG Clockwork)](#repeating-patterns-in-extrusion-bmg-clockwork)
-    - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
     - [Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-non-2mm-spacing)
-    - [Bulges at STL Vertices](#bulges-at-stl-vertices)
+    - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
+
 # Before We Begin
 
 ## (!) Important Checks
@@ -591,8 +591,7 @@ If you are having persistent issues:
         - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
             - In my opinion, choose a height **1-2 notches higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
 
-# Miscellaneous Fixes, Tips, and Tricks
-## Pinholes
+## Infill/Perimeter Overlap
 
 After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
 
@@ -612,22 +611,34 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
 - Some use "not connected" for their top infill. This does resolve the pinholes, however I find this to cause the opposite problem. It *overshoots.* 
 
 - To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
+# Troubleshooting
 
+## BMG Clockwork Backlash Issues
 
-## PLA is Overheating
-- Open the front door or take off all the panels. Point a fan at it.
-    - Don't go too crazy, or your bed heater might not be able to keep up.
+**Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) between the motor gear and the plastic gear.**
+- Gauge this with filament loaded and the spring tensioned (the backlash will reduce a bit once it is loaded).
+- You want a little backlash, but not *too* much.
 
-    ![](Images/Misc/PLA-Fan.png) 
-- Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.
-## Small Infill Areas Look Overextruded
+This is adjusted by moving the motor itself up and down.\
+The motor plate has 3 slotted screw holes to allow for adjustment:
 
-![](Images/Misc/SmallAreas.png) 
+![](Images/Misc/Backlash-Adjust.png)
 
-- Some amount of this is unavoidable, but there are some things that *may* help:
-    - Use single top perimeters (SuperSlicer). This simply makes these infill areas a bit larger.
-    - Try reducing your pressure advance smooth time (I use 0.02)
-    - Try reducing top infill speeds and accelerations.
+- The top two screws are easily reachable.
+- The bottom left screw can be reached by opening the filament latch fully and using a ball-end hex driver.
+
+Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't have a Mini Afterburner so I can't give an exact process. You will have to disassemble it and play with it. You may have to file out some screw holes.
+
+### Too Little Backlash:
+- Repeating Patterns in Extrusion
+    - The left cube shows this pattern. The right cube is normal:\
+    ![](Images/Misc/Backlash-Comparison.png)
+    - Diagonal patterns:\
+    ![](Images/Misc/Backlash-Pattern.png)
+    - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
+    - These issues can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
+### Too Much Backlash:
+- Clacking Noises During Retraction
 ## Bulging
 
 This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 
@@ -637,6 +648,16 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 
 - Disable any "extra perimeters" and "supporting dense infill" settings (PS/SS)
 - [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#acceleration-control)
+
+## Bulges at STL Vertices
+![](Images/Misc/Vertex-Bulges.png)
+- Your square corner velocity may be too low. Did you leave it set at 1 by chance?
+## PLA is Overheating
+- Open the front door or take off all the panels. Point a fan at it.
+    - Don't go too crazy, or your bed heater might not be able to keep up.
+
+    ![](Images/Misc/PLA-Fan.png) 
+- Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.
 
 ## Pockmarks / Skips
 
@@ -654,27 +675,6 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
             - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.
     - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
     - Check your extruder motor wiring.
-## Repeating Patterns in Extrusion (BMG Clockwork)
-
-The left cube shows this pattern. The right cube is normal.
-
-![](Images/Misc/Backlash-Comparison.png)
-![](Images/Misc/Backlash-Pattern.png)
-
-- Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
-- Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
-- **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) in your plastic gear.** You should be able to feel a small amount of "wiggle" when moving it with your fingernail (but not too much).
-    - This is adjusted by moving the motor itself up and down. The motor plate has slotted screw holes to allow for adjustment.
-        - You can reach the bottom left screw by opening the filament latch and inserting a ball-end hex driver.
-        -  ![](Images/Misc/Backlash-Adjust.png)
-
-    - You should have a small amount of backlash **with filament loaded and the spring tensioned.** The backlash will reduce a bit once it is loaded. You will just have to experiment.
-    - This can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
-    - Unfortunately, adjustment is not as simple for the Mini Afterburner. You will have to disassemble it and play with it. You may have to file out some screw holes to create the backlash needed. I don't have a Mini Afterburner so I can't give an exact process.
-
-## Clacking Noises During Retraction (BMG Clockwork)
-- You have *too much* backlash. See previous section.
-
 ## Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 
@@ -746,6 +746,11 @@ Inspect the object to see which axes the artifacts appear most prominent in.
     - **X *and* Y** linear rails
     - **A *and* B** belts *(rare)*
     - **A *and* B** motors *(rare)*
-## Bulges at STL Vertices
-![](Images/Misc/Vertex-Bulges.png)
-- Your square corner velocity may be too low. Did you leave it set at 1 by chance?
+## Small Infill Areas Look Overextruded
+
+![](Images/Misc/SmallAreas.png) 
+
+- Some amount of this is unavoidable, but there are some things that *may* help:
+    - Use single top perimeters (SuperSlicer). This simply makes these infill areas a bit larger.
+    - Try reducing your pressure advance smooth time (I use 0.02)
+    - Try reducing top infill speeds and accelerations.

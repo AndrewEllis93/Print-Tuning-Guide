@@ -149,20 +149,20 @@ There are print examples in the next section.
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
 
-- **Dedicated Z Endstop**\
+- **Dedicated Z Endstop:**\
 (With dedicated Z endstops. Stock V0/V2/Trident are set up this way)
     - Enter `Z_OFFSET_APPLY_ENDSTOP`* 
         - This will apply your new offset to your stepper_z's `position_endstop`.
     - Enter `SAVE_CONFIG`.
 
-- **Virtual Z Endstop**\
+- **Virtual Z Endstop:**\
 (When using the probe *as* the Z endstop. Stock Switchwire and Legacy are set up this way)
     - Enter `Z_OFFSET_APPLY_PROBE`*
         - This will apply your new offset to your probe's `z_offset`.
     - Enter `SAVE_CONFIG`.
 
-- [**Klicky Auto Z Calibration**](https://github.com/protoloft/klipper_z_calibration)\
-(This is a mod, it uses Klicky AND nozzle endstop to automatically baby step before each print)
+- **Klicky Auto Z Calibration:**\
+(This is a mod, it uses Klicky AND nozzle endstop to automatically baby step before each print. See [here](https://github.com/protoloft/klipper_z_calibration) for more information.)
     - Manually adjust your `switch_offset` based on how much extra you had to baby step. 
         - Higher value = more squish 
         - Lower value = less squish
@@ -595,18 +595,18 @@ If you are having persistent issues:
 
 After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
 
-![](Images/Overlap-1.png) 
-![](Images/Overlap-2.png) 
+This is *not necessarily* an indicator that your flow or pressure advance are wrong, though they can impact it. 
 
-This is **not necessarily** an indicator that your flow or pressure advance are wrong, though they can impact it. 
+**Simply increase "infill/perimeter overlap" (PS/SS) until satisfied.**
 
-Slowly increase "infill/perimeter overlap" (PS/SS) until satisfied.
+### Examples
+- ![](Images/Overlap-1.png) 
+- ![](Images/Overlap-2.png) 
+### Overlap Tweaked (40%):
 
-Overlap Tweaked (40%):
+- ![](Images/Overlap-Fixed1.png) 
 
-![](Images/Overlap-Fixed1.png) 
-
-Regarding "Not Connected" Top Infill (SuperSlicer)
+### Regarding "Not Connected" Top Infill (SuperSlicer)
 
 - Some use "not connected" for their top infill. This does resolve the pinholes, however I find this to cause the opposite problem. It *overshoots.* 
 
@@ -631,12 +631,15 @@ Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't hav
 
 ### Too Little Backlash:
 - Repeating Patterns in Extrusion
-    - The left cube shows this pattern. The right cube is normal:\
+    - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
+    - These issues can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
+    - The left cube shows a pattern. The right cube is normal:\
     ![](Images/Misc/Backlash-Comparison.png)
     - Diagonal patterns:\
     ![](Images/Misc/Backlash-Pattern.png)
-    - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
-    - These issues can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
+    - "Wood Grain":\
+    ![](Images/Misc/Backlash-WoodGrain.png)
+
 ### Too Much Backlash:
 - Clacking Noises During Retraction
 ## Bulging

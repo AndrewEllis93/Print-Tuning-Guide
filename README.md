@@ -242,7 +242,7 @@ In my opinion, it is best to run the calibration in close to normal printing con
 **1)** Download and slice the [pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
 The only modifications you should make are these:
 
-- **120mm/s** perimeter speed
+- **120mm/s** external perimeter speed
 - **1** perimeter
 - **0%** infill
 - **0** top layers

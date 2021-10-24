@@ -37,7 +37,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Pinholes](#pinholes)
     - [PLA is Overheating](#pla-is-overheating)
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
-    - [SuperSlicer Bulging Issues](#superslicer-bulging-issues)
+    - [Bulging Issues](#bulging)
     - [Pockmarks / Skips](#pockmarks--skips)
     - [Repeating Patterns in Extrusion (BMG Clockwork)](#repeating-patterns-in-extrusion-bmg-clockwork)
     - [Clacking Noises During Retraction (BMG Clockwork)](#clacking-noises-during-retraction-bmg-clockwork)
@@ -628,12 +628,14 @@ Regarding "Not Connected" Top Infill (SuperSlicer)
     - Use single top perimeters (SuperSlicer). This simply makes these infill areas a bit larger.
     - Try reducing your pressure advance smooth time (I use 0.02)
     - Try reducing top infill speeds and accelerations.
-## SuperSlicer Bulging Issues
+## Bulging
+
+This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 
 
 ![](Images/Misc/Bulging.png) 
 ![](Images/Misc/Bulging2.png) 
 
-- Disable any "extra perimeters" and "supporting dense infill" settings.
+- Disable any "extra perimeters" and "supporting dense infill" settings (PS/SS)
 - [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#acceleration-control)
 
 ## Pockmarks / Skips

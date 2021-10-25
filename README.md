@@ -430,7 +430,7 @@ If dimensional accuracy is your top priority for other projects:
 - Firstly, adjust your expectations. Remember, 3D printers are glorified hot glue guns, not CNC. You will not reliably get 0.005mm tolerances everywhere.
 - The first thing I would try would be to adjust EM based on part dimensions or fitment, and use the below method to tune *top layer flow separately* for aesthetics and flush fitment.
 - You may also need to play with shrinkage compensation, since we are dealing with ABS. Or print in a material with less shrinkage.
-- There is also some debate around whether you should calibrate your A/B axes. I have never found this necessary, however. 
+- There is also some debate around whether you should calibrate your A/B (or X/Y) axes. I have never found this necessary, however. 
 
 You will have to find the method that works best for you. I am considering tight dimensional accuracy out of the scope of this guide.
 ## Method

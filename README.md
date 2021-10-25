@@ -438,7 +438,7 @@ If dimensional accuracy is your top priority for other projects:
 - You may also need to play with shrinkage compensation, since we are dealing with ABS. Or print in a material with less shrinkage.
 - There is also some debate around whether you should calibrate your A/B (or X/Y) axes. I have never found this necessary, however. 
 
-You will have to find the method that works best for you. I am considering tight dimensional accuracy out of the scope of this guide.
+You will have to find the method that works best for you. I am considering extremely tight dimensional accuracy out of the scope of this guide.
 ## Method
 By far the best method I have found is purely visual/tactile. *Put the calipers down for now*.
 

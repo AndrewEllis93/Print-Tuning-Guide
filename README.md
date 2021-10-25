@@ -389,30 +389,50 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 
 # Extrusion Multiplier
 
+
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
-Calibrating your extruder ensures that the extrusion multiplier will be the same across all printers. Extruder calibration simply ensures that 100mm requested = 100mm extruded. Extrusion *multiplier* is a per-filament setting, depending on the properties of each material.
+- Calibrating your extruder ensures that the extrusion multiplier will be the same across all printers. Extruder calibration simply ensures that 100mm requested = 100mm extruded. Extrusion *multiplier* is a per-filament setting, depending on the properties of each material.
 
 **(!) You should also [tune pressure advance](#pressure-advance) first.**
 
-These tests try to remove PA as a variable as much as possible, but having a good PA value is still ideal.
+- These tests try to remove PA as a variable as much as possible, but having a good PA value is still ideal.
+
+This must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 
 ## Background
+This is a bit of a debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
+### Methods I'm Not a Fan Of
+The below methods I've found to have error of up to 5% (sometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
+- #### Measuring Wall Thickness With Calipers
+    - Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers. 
+        - I find this method not to work very well at all, especially with ABS, presumably due to shrinkage.
+        - This method is also impacted by pressure advance, which can easily throw off your results.
+- #### SuperSlicer Calibration
+    - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
+        - It is very reliant on first layer squish.
+        - Because it uses 100% infill, the first layer squish carries through all the way to the top. 
+        - It has ironing turned on by default.
+        - The objects are too small. It's normal for smaller infill areas to look a bit more overextruded than larger infill areas.
 
-This is a widely misunderstood and debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
+### Notes on Dimensional Accuracy
+I find the below method to result in prints that are within my personal acceptable tolerances, and work well for Voron parts. 
 
-Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers. I find this method not to work very well at all, especially with ABS, presumably due to shrinkage.
+Voron parts are designed both for some shrinkage, and for reasonable tolerances, so **don't go crazy with calipers and comparing measurements to CAD/STL dimensions.** 
 
-SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
-- It is very reliant on first layer squish.
-- Because it uses 100% infill, the first layer squish carries through all the way to the top. 
-- It has ironing turned on by default.
-- The objects are too small. It's normal for smaller infill areas to look a bit more overextruded than larger infill areas.
+With the Voron test prints, as long as:
+- The thread tests screw together nicely, and
+- Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top),
 
-Both of the above methods I've found to have error of up to 5% (sometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
+Then you are pretty much good to go.
 
-This must be done per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
+If dimensional accuracy is your top priority for other projects: 
+- Firstly, adjust your expectations. Remember, 3D printers are glorified hot glue guns, not CNC. You will not reliably get 0.005mm tolerances everywhere.
+- The first thing I would try would be to adjust EM based on part dimensions or fitment, and use the below method to tune *top layer flow separately* for aesthetics and flush fitment.
+- You may also need to play with shrinkage compensation, since we are dealing with ABS. Or print in a material with less shrinkage.
+- There is also some debate around whether you should calibrate your A/B axes. I have never found this necessary, however. 
 
+You will have to find the method that works best for you. I am considering tight dimensional accuracy out of the scope of this guide.
 ## Method
 By far the best method I have found is purely visual/tactile. *Put the calipers down for now*.
 

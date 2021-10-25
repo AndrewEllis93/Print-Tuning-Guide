@@ -658,13 +658,15 @@ Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't hav
 
 ### Too Little Backlash:
 - Repeating Patterns in Extrusion
-    - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
+    - Adjusting backlash can help considerably with these issues, but you are unlikely to get 100% perfect extrusion.
     - These issues can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
-    - The left cube shows a pattern. The right cube is normal:\
+    - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
+    - **Examples:**
+        - The left cube shows a pattern. The right cube is normal:\
     ![](Images/Misc/Backlash-Comparison.png)
-    - Diagonal patterns:\
+        - Diagonal patterns:\
     ![](Images/Misc/Backlash-Pattern.png)
-    - "Wood Grain":\
+        - "Wood Grain":\
     ![](Images/Misc/Backlash-WoodGrain.png)
 
 ### Too Much Backlash:

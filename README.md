@@ -419,7 +419,7 @@ The below methods I've found to have error of up to 5% (sometimes even more) - w
         - It is very reliant on first layer squish.
         - Because it uses 100% infill, the first layer squish carries through all the way to the top. 
         - It has ironing turned on by default.
-        - The objects are too small. It's normal for smaller infill areas to look a bit more overextruded than larger infill areas.
+        - The objects are too small. It's normal for [smaller infill areas to look a bit more overextruded than larger infill areas.](#small-infill-areas-look-overextruded)
 
 ### Notes on Dimensional Accuracy
 I find the below method to result in prints that are within my personal acceptable tolerances, and work well for Voron parts. 

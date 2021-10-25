@@ -534,7 +534,7 @@ There are multiple things you can do to minimize overheating with ABS.
 
 **3) Print more objects at once, and spread them out.**
 
-- We can allow objects to have some "break time" between layers simply by printing more objects at once. Spread them out to induce more travel time.
+- We can allow objects to have some "break time" between layers simply by printing more objects at once. Spread them out to induce more travel time, and even reduce travel speeds.
 - ![](Images/Cooling-Spread.png) 
 
 **4) Reduce nozzle and/or bed temperature.**

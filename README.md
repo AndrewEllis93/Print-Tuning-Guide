@@ -433,7 +433,7 @@ With the Voron test prints, as long as:
 Then you are pretty much good to go.
 
 If dimensional accuracy is your top priority for other projects: 
-- Firstly, adjust your expectations. Remember, 3D printers are glorified hot glue guns, not CNC. You will not reliably get 0.005mm tolerances everywhere.
+- Firstly, adjust your expectations. Remember, our 3D printers are hobby-grade glorified hot glue guns, not CNC. You will not reliably get 0.005mm tolerances everywhere.
 - The first thing I would try would be to adjust EM based on part dimensions or fitment, and use the below method to tune *top layer flow separately* for aesthetics and flush mating surfaces.
 - You may also need to play with shrinkage compensation, part scaling, or CAD dimensions since we are dealing with ABS. Or you can print in a material with less shrinkage.
 - There is also some debate around whether you should calibrate your A/B (or X/Y) axes. I have never found this necessary, however. 
@@ -534,7 +534,7 @@ There are multiple things you can do to minimize overheating with ABS.
 
 **3) Print more objects at once, and spread them out.**
 
-- We can allow objects to have some "break time" between layers simply by printing more objects at once. Spread them out to induce more travel time, and even reduce travel speeds.
+- We can allow objects to have some "break time" between layers simply by printing more objects at once. Spread them out to induce more travel time, and maybe even reduce travel speeds.
 - ![](Images/Cooling-Spread.png) 
 
 **4) Reduce nozzle and/or bed temperature.**

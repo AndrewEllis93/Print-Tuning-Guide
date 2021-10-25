@@ -19,7 +19,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 
 # Table of Contents
 - [Before We Begin](#-before-we-begin)
-    - [**(!) Important Checks**](#important-checks)
+    - [**(!) Important Checks**](#-important-checks)
     - [A Note About Line Width](#a-note-about-line-width)
 - [First Layer Squish](#first-layer-squish)
     - [Background and Common Issues/Mistakes](#background-and-common-issuesmistakes)
@@ -549,7 +549,7 @@ If you typically print with z-hop, leave it on for this test.
 **There is some trial and error involved.** You may need to re-run these tests at varying retraction speeds and temperatures if you are not getting good results. You will just have to experiment. You should hot tighten your nozzle (unless it's an E3D Revo).
 
 If you are having persistent issues:
-- **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
+- **(!) Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
 - Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
 ## Background
 There are a few factors that can affect your retraction settings, such as:

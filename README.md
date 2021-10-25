@@ -22,13 +22,19 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [**(!) Important Checks**](#important-checks)
     - [A Note About Line Width](#a-note-about-line-width)
 - [First Layer Squish](#first-layer-squish)
+    - [Background and Common Issues/Mistakes](#background-and-common-issuesmistakes)
+    - [Method](#method)
+    - [Print Examples](#print-examples)
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
     - [Tower Method (Simple)](#tower-method-simple)
     - [Marlin Method (Advanced)](#marlin-method-advanced)
     - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
 - [Extrusion Multiplier](#extrusion-multiplier)
-    - [An Important Note About Pressure Advance & EM](#an-important-note-about-pressure-advance--em)
+    - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)
+    - [Notes on Dimensional Accuracy](#notes-on-dimensional-accuracy)
+    - [Method](#method-2)
+    - [A Note About Pressure Advance & EM](#a-note-about-pressure-advance--em)
 - [Cooling and Layer Times](#cooling-and-layer-times)
     - [Signs of Overheating](#signs-of-overheating)
     - [How to Fix It](#how-to-fix-it)
@@ -480,7 +486,7 @@ This is not just a trick of the light. Shininess is not always the best indicato
 
 ![](Images/EMPrints-Fine.png) 
 
-### An Important Note About Pressure Advance & EM
+### A Note About Pressure Advance & EM
 Pressure advance and flow are interrelated. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.
 
 Remember: pressure advance changes the **distribution** of material, not the **amount** of material.
@@ -534,6 +540,17 @@ There are multiple things you can do to minimize overheating with ABS.
 **4) Reduce nozzle and/or bed temperature.**
 
 # Retraction
+
+**(!) You should [tune pressure advance](#pressure-advance) first.**
+Pressure advance can lower the amount of retraction needed, especially for bowden.
+
+If you typically print with z-hop, leave it on for this test.
+
+**There is some trial and error involved.** You may need to re-run these tests at varying retraction speeds and temperatures if you are not getting good results. You will just have to experiment. You should hot tighten your nozzle (unless it's an E3D Revo).
+
+If you are having persistent issues:
+- **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
+- Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
 ## Background
 There are a few factors that can affect your retraction settings, such as:
 - Material type
@@ -548,19 +565,6 @@ We will be using using [SuperSlicer](https://github.com/supermerill/SuperSlicer/
     - Shameless plug: try [my profiles](https://github.com/AndrewEllis93/Ellis-PIF-Profile) later on. There are some other warnings and dependencies, however *(please thoroughly read its readme)*, so just stick with the built-in ones for now.
 
 We will be printing these retraction towers at three different temperatures. If you are confident that your filament temperature is well tuned, you may get good results with just one tower.
-
-## Important Notes
-**(!) You should [tune pressure advance](#pressure-advance) first.**
-Pressure advance can lower the amount of retraction needed, especially for bowden.
-
-If you typically print with z-hop, leave it on for this test.
-
-**There is some trial and error involved.** You may need to re-run these tests at varying retraction speeds and temperatures if you are not getting good results. You will just have to experiment. You should hot tighten your nozzle (unless it's an E3D Revo).
-
-If you are having persistent issues:
-- **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
-- Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
-
 ## Method
 
 **1)** Ensure that your nozzle is clean. You can use a brass brush while it is heated.

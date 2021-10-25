@@ -609,7 +609,10 @@ We will be printing these retraction towers at three different temperatures. If 
     - You should get output like this:
         - ![](Images/Retraction-Sliced.png) 
 
-    **7) Print it, and inspect the results.** 
+    **7) (!) Arrange the towers front to back on your build plate, with adequate spacing.**
+    - These objects are printed one at a time. This ensures that they are not knocked over by the gantry/toolhead.
+
+    **8) Print it, and inspect the results.** 
     - If your hotter towers are much stringier, consider choosing a lower extrusion temperature.
     - **To get your new retraction length:**
         - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.

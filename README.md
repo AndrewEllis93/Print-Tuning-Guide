@@ -553,21 +553,21 @@ If you typically print with z-hop, leave it on for this test.
 If you are having persistent issues:
 - **(!) Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
 - Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
-## Background
+
 There are a few factors that can affect your retraction settings, such as:
 - Material type
 - Print temperature
 - Hotend
 - Extruder
+## Method
 
-We will be using using [SuperSlicer](https://github.com/supermerill/SuperSlicer/releases)'s calibration tools. 
+**We will be using using [SuperSlicer](https://github.com/supermerill/SuperSlicer/releases)'s calibration tools.**
 
 - If you do not typically use SuperSlicer, you can start with one of the built-in Voron profiles for this test. 
     - The built-in profiles are not great in my opinion, but will work fine just for running the calibration tools. 
     - Shameless plug: try [my profiles](https://github.com/AndrewEllis93/Ellis-PIF-Profile) later on. There are some other warnings and dependencies, however *(please thoroughly read its readme)*, so just stick with the built-in ones for now.
 
 We will be printing these retraction towers at three different temperatures. If you are confident that your filament temperature is well tuned, you may get good results with just one tower.
-## Method
 
 **1)** Ensure that your nozzle is clean. You can use a brass brush while it is heated.
 

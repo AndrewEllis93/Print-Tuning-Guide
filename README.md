@@ -454,6 +454,8 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
     This is more subject to interpretation, but I find 100% to have good results.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
+- **Monotonic (filled)** top infill pattern\
+    Make sure that this is not set to "ironing". If not available, use rectalinear or "lines" instead (depends on Slicer).
 - **20-30mm/s Solid & Top Infill Speed**\
     This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results. 
 - **High Fan Speed**\
@@ -609,8 +611,13 @@ We will be printing these retraction towers at three different temperatures. If 
     - You should get output like this:
         - ![](Images/Retraction-Sliced.png) 
 
-    **7) (!) Arrange the towers front to back on your build plate, with adequate spacing.**
-    - These objects are printed one at a time. This ensures that they are not knocked over by the gantry/toolhead.
+    **7) (!) Arrange the towers front to back**\* **on your build plate.**
+    - These objects are printed one at a time. **This ensures that they are not knocked over by the gantry/toolhead.** 
+    - Arrange them from the hottest tower at the front, to coolest tower at the back.
+        - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros)
+    - ![](Images/Retraction-Sliced-FrontToBack.png)
+
+     <sup>\* If you are using a different kinematic system than CoreXY/i3 cartesian, you may need to use a different arrangement.</sup>
 
     **8) Print it, and inspect the results.** 
     - If your hotter towers are much stringier, consider choosing a lower extrusion temperature.

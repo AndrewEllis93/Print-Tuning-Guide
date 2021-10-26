@@ -466,7 +466,11 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 **1)** Print multiple test cubes with variations of 2% EM. 
 - You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
     - **(!) In PS/SS, if you set flow per-object, make sure to set your EM to 1 in the filament settings.** \
-    The per-object EM settings are *multiplied by* your filament settings' EM.
+    The per-object EM settings are expressed as a percentage and are **multiplied by** your filament settings' EM.
+
+    1) ![](Images/EM-PerObject.png)\
+    2) ![](Images/EM-PerObject-2.png)\
+    3) ![](Images/EM-PerObject-3.png)
 
 **2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
 

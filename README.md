@@ -65,7 +65,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
     - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
-    - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are extremely difficult to troubleshoot.
+    - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
 - Your motion components are clean, particularly gear/pulley/idler teeth.
 
 ## A Note About Line Width

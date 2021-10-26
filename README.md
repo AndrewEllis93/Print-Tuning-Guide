@@ -66,7 +66,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
-- Your motion components are clean, particularly gear/pulley/idler teeth.
+- Your motion components are clean, particularly between gear/pulley/idler teeth.
 
 ## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
@@ -696,7 +696,8 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 
 ## Bulges at STL Vertices
 ![](Images/Misc/Vertex-Bulges.png)
-- Your square corner velocity may be too low. Did you leave it set at 1 by chance?
+- Your square corner velocity may be too low. (Did you leave it set at 1 by chance?)
+- This can also be a sign that your external perimeter speeds/accels are too high.
 ## PLA is Overheating
 - Open the front door or take off all the panels. Point a fan at it.
     - Don't go too crazy, or your bed heater might not be able to keep up.

@@ -8,7 +8,7 @@ This is not intended to be an ultimate guide to everything, rather a guide to ad
 
 **(!) Please pay special attention to anything bolded and marked with "(!)"**
 
-My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
+My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile), along with some other information like SS tips and volumetric flow rate information with formulas.
 
 I am adding new information all the time, be sure to check back.\
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)

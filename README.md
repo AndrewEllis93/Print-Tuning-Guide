@@ -697,7 +697,7 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 ## Bulges at STL Vertices
 ![](Images/Misc/Vertex-Bulges.png)
 - Your square corner velocity may be too low. (Did you leave it set at 1 by chance?)
-- This can also be a sign that your external perimeter speeds/accels are too high.
+- This can also be a sign that your perimeter speeds/accels are too high.
 ## PLA is Overheating
 - Open the front door or take off all the panels. Point a fan at it.
     - Don't go too crazy, or your bed heater might not be able to keep up.

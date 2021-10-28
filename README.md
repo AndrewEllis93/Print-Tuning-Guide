@@ -205,7 +205,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
     - You should do this even for brand new surfaces.
     - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
-    - I keep a spray bottle of soapy wanted next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
+    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
     - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
 - **Smooth PEI:**
@@ -460,7 +460,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
     Make sure that this is not set to "ironing". If not available, use rectalinear or "lines" instead (depends on slicer).
 - **30mm/s Solid & Top Solid Infill Speed***\
     This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results.\
-    <sup>\* If your pressure advance is well tuned, you *can* print these at your normal print speeds, but keep in mind it can throw off your results if not.</sup>
+    <sup>\* If your pressure advance is well tuned, you may actually get more "true to life"/accurate results printing at your normal print speeds. If your pressure advance is off, however, it will [throw you off further.](#a-note-about-pressure-advance--em)</sup>
 - **High Fan Speed**\
     As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag.
 
@@ -469,9 +469,9 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 **1)** Print multiple test cubes with variations of 2% EM. 
 - You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
     - **(!) In PS/SS, if you set flow per-object, make sure to set your EM to 1 in the filament settings.** The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.
-    1) ![](Images/EM-1.png)\
-    2) ![](Images/EM-PerObject.png)\
-    3) ![](Images/EM-PerObject-2.png)\
+    1) ![](Images/EM-1.png)
+    2) ![](Images/EM-PerObject.png)
+    3) ![](Images/EM-PerObject-2.png)
     4) ![](Images/EM-PerObject-3.png)
 
 **2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
@@ -482,7 +482,7 @@ I have found that most ABS falls within the 91-94% range.
 
 ### Examples
 
-This can be difficult to convey in photos. **You may have to zoom in quite a bit to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
+This can be difficult to convey in photos. **You may have to zoom in to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
 You will get better at this through experience.
 #### 2% Intervals
 ![](Images/EMPrints-Coarse.png) 
@@ -495,13 +495,20 @@ This is not just a trick of the light. Shininess is not always the best indicato
 ![](Images/EMPrints-Fine.png) 
 
 ### A Note About Pressure Advance & EM
-Pressure advance and flow are interrelated. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.
-
 Remember: pressure advance changes the **distribution** of material, not the **amount** of material.
+
+Pressure advance and flow are interrelated, so tuning one can affect the other. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.
+
+The faster you print, the larger the area that pressure advance will impact. Lower speeds will relegate the effects of pressure advance to be closer to the edges, while higher pressure advance will cause it to affect a wider area.
+
+Imagine a single extrusion line. In this line, the toolhead accelerates to full speed, stays at top speed, and then decelerates again towards the end of the line. Pressure advance takes effect during these accelerations and decelerations. \
+In both of the below examples, assume the same acceleration settings.
+- When printing with a faster speed, the line is printed in less time, and the extruder spends a larger portion of the line accelerating and decelerating. Therefore, a larger portion of the line is spent equalizing pressure.
+- When printing with a slower speed, the line is printed in more time, the extruder spends a smaller portion of the line accelerating and decelerating. Therefore, a smaller portion of the line is spent equalizing pressure, and more of the line is printed at steady speed with steady pressure.
 
 If your actual print results with faster top layers do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [pressure advance](#pressure-advance) value may need further tuning.** 
 
-You can run faster solid infill, but I would recommend using a slow-ish top surface layer still. I use 60mm/s.
+You can run faster solid infill, but I would recommend using a moderate top layer speed still. I use 60mm/s.
 
 ### Actual Print with Tuned EM:
 

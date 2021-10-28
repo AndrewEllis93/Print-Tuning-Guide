@@ -448,18 +448,19 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
 **Print Settings:**
 - **40+% Infill**\
-    We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. 
-    We still need enough to adequately support the top layers.*
+    We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. \
+    We still need enough to adequately support the top layers.
 - **120% Infill [Line Width](#a-note-about-line-width)** \
-    This just increases infill density over my normal settings, which are thicker for reducing print times.
+    This increases infill density if you usually run thicker infill than this.
 - **100% Top Layer [Line Width](#a-note-about-line-width)**\
     This is more subject to interpretation, but I find 100% to have good results.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
 - **Monotonic (filled)** top infill pattern\
     Make sure that this is not set to "ironing". If not available, use rectalinear or "lines" instead (depends on slicer).
-- **20-30mm/s Solid & Top Infill Speed**\
-    This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results. 
+- **30mm/s Solid & Top Solid Infill Speed***\
+    This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results.\
+    <sup>\* If your pressure advance is well tuned, you *can* print these at your normal print speeds, but keep in mind it can throw off your results if not.</sup>
 - **High Fan Speed**\
     As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag.
 
@@ -543,8 +544,6 @@ There are multiple things you can do to minimize overheating with ABS.
 
 - We can allow objects to have some "break time" between layers simply by printing more objects at once. Spread them out to induce more travel time, and maybe even reduce travel speeds.
 - ![](Images/Cooling-Spread.png) 
-
-**4) Reduce nozzle and/or bed temperature.**
 
 # Retraction
 

@@ -503,7 +503,7 @@ The faster you print, the larger the area that pressure advance will impact. Low
 
 Imagine a single extrusion line. In this line, the toolhead accelerates to full speed, stays at top speed, and then decelerates again towards the end of the line. Pressure advance takes effect during these accelerations and decelerations. \
 In both of the below examples, assume the same acceleration settings.
-- When printing with a faster speed, the line is printed in less time, and the extruder spends a larger portion of the line accelerating and decelerating. Therefore, a larger portion of the line is spent equalizing pressure.
+- When printing with a faster speed, the line is printed in less time, and the extruder spends a larger portion of the line accelerating and decelerating to reach the higher top speed. Therefore, a larger portion of the line is spent equalizing pressure.
 - When printing with a slower speed, the line is printed in more time, the extruder spends a smaller portion of the line accelerating and decelerating. Therefore, a smaller portion of the line is spent equalizing pressure, and more of the line is printed at steady speed with steady pressure.
 
 If your actual print results with faster top layers do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [pressure advance](#pressure-advance) value may need further tuning.** 

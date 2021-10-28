@@ -710,8 +710,8 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.
 - Open the front door or take off all the panels. Point a fan at it.
     - Don't go too crazy, or your bed heater might not be able to keep up.
-
     ![](Images/Misc/PLA-Fan.png) 
+- Try printing with the bed heater turned off.
 ## Pockmarks / Skips
 
 ![](Images/Misc/Pockmarks.png)

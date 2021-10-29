@@ -744,7 +744,6 @@ These skips will typically be wider than [pockmarks.](#pockmarks)
 Skipping below top layer:
 
 ![](Images/Troubleshooting/ExtruderSkips-5.png)
-![](Images/Troubleshooting/ExtruderSkips-6.png)
 
 - If it occurs mainly on the first layer, ensure that you are not printing with [too much squish]((#first-layer-squish)) or with too much first layer flow.
 - Ensure that your hotend fan is running and is not stopping/starting during printing from a wiring issue.

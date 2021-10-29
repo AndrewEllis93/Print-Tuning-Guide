@@ -718,7 +718,7 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
         - This totally prevents SS from applying bridging settings to overhangs.
         - ![](Images/Troubleshooting/AboveBridgeFlow-DisableOverhang.png)
     - **Set "threshold for bridge flow" to 0**
-        - This prevents SS from applying bridging flow settings to overhangs, but still allows bridging speeds/fan settings to apply.
+        - This prevents SS from applying *bridging flow* settings to overhangs, but still applies bridging speeds/fan settings.
         - ![](Images/Troubleshooting/AboveBridgeFlow-DisableOverhangFlow.png)
     - **Reduce "above the bridges" flow to back to 100%**
         - ![](Images/Troubleshooting/AboveBridgeFlow-Reset.png)

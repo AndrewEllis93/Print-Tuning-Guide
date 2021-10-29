@@ -865,9 +865,11 @@ Inspect the object to see which axes the artifacts appear most prominent in.
     - **A *and* B** motors *(rare)*
 
 ## Slicer is Putting Heating G-codes in the Wrong Place/Order
-You have two options. 
-- [Pass variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start) (allows the most control, but is more complex)
-- [Force g-code ordering](https://github.com/AndrewEllis93/Ellis-PIF-Profile#controlling-when-temperature-g-codes-are-sent-without-passing-variables) (only allows changing the g-code order, but is easy to set up)
+You have two options:
+- Pass variables to `PRINT_START` (allows the most control, but is more complex)
+    - See the *"Passing Variables to PRINT_START"* section [here]().
+- Force g-code ordering (only allows changing the g-code order, but is easy to set up)
+    - See the *"Controlling When Temperature G-codes Are Sent Without Passing Variables"* section [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#controlling-when-temperature-g-codes-are-sent-without-passing-variables).
 ## Small Infill Areas Look Overextruded
 
 ![](Images/Troubleshooting/SmallAreas.png) 

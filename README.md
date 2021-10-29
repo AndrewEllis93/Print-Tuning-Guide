@@ -583,23 +583,28 @@ We will be printing these retraction towers at three different temperatures. If 
 
 **1)** Ensure that your nozzle is clean. You can use a brass brush while it is heated.
 
-**2)** Set your retract and unretract speeds to **30mm/s** to start. 
+**2)** Set your fan speed high.
+- These are small towers, we don't want them to get melty.
+
+**3)** Set your retract and unretract speeds to **30mm/s** to start. 
 - This is located in the "printer settings" tab, under "extruder 1".
 - I have had more luck with slower retraction speeds. Your mileage may vary.
 
-**3)** Use medium-high fan speeds. 
+**4)** Use medium-high fan speeds. 
 - These are located in the "filament settings" tab, under "cooling".
 - These retraction towers are small and need some additional cooling. 
 
-**4)** Select "extruder retraction calibration" from the menu.
+**5)** Select "extruder retraction calibration" from the menu.
 
 - ![](Images/Retraction-Menu.png) 
 
-**5)** Click "remove fil. slowdown".
+**6)** Click "remove fil. slowdown".
 
 - ![](Images/Retraction-FilSlowdown.png) 
 
-**6)** Fill out the parameters and select "Generate".
+**7)** Fill out the parameters and select "Generate".
+
+- *I have blanked out the values.* Read the instructions below to figure out your own.
 
 - ![](Images/Retraction-Params.png) 
 
@@ -611,8 +616,8 @@ We will be printing these retraction towers at three different temperatures. If 
         - Bowden: **0.5mm**
     - **Height:**
         - Your maximum retraction length will be **(height - 1) * step**.
-            - Do not exceed **1mm** for direct drive.
-                - You will *rarely* need more than this, but it is possible with some high flow hotends and setups. Start with 1mm, only go up to a max of 2mm if required.
+            - Do not exceed **1mm** for direct drive. *(height: 11 when using a step of 0.1mm)*
+                - You will *rarely* need more than this, but it is possible with some high flow hotends and setups. Start with 1mm, only go up to an absolute max of 2mm if required.
             - For bowden, this can vary. Try starting with a maximum of **3mm**.
                 - You may need more, depending on a few factors like pressure advance, bowden tube length, bowden tube internal diameter, and how firmly attached the tube is in the couplings.
                 - Ensure that your bowden tubes are as firmly attached as possible, and do not [move too much in and out of their couplings during printing](https://youtu.be/lboDSH0945g?t=120). 
@@ -623,7 +628,7 @@ We will be printing these retraction towers at three different temperatures. If 
     - You should get output like this:
         - ![](Images/Retraction-Sliced.png) 
 
-    **7) (!) Arrange the towers front to back**\* **on your build plate.**
+    **8) (!) Arrange the towers front to back**\* **on your build plate.**
     - These objects are printed one at a time. **This ensures that they are not knocked over by the gantry/toolhead.** 
     - Arrange them from the hottest tower at the front, to coolest tower at the back.
         - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros)
@@ -631,7 +636,7 @@ We will be printing these retraction towers at three different temperatures. If 
 
      <sup>\* If you are using a different kinematic system than CoreXY/i3 cartesian, you may need to use a different arrangement. For example, a cross gantry would need diagonal.</sup>
 
-    **8) Print it, and inspect the results.** 
+    **9) Print it, and inspect the results.** 
     - If your hotter towers are much stringier, consider choosing a lower extrusion temperature.
     - **To get your new retraction length:**
         - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
@@ -826,7 +831,7 @@ These patterns can be subtle (lumps) or sharp like the above section's photo.
 - You may have a bad/poor quality linear rail.
 
 ### Narrowing it Down
-Print two square objects, one in normal orentation, and one at 45 degrees. \
+Print two wide square objects, one in normal orentation, and one at 45 degrees. \
 Inspect the object to see which axes the artifacts appear most prominent in.
 
 *(components in each section are in order of likelihood)*

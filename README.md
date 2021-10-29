@@ -737,7 +737,7 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 - Dry your filament. This can be caused be moisture turning to steam and popping.
     - Extrude in midair. Watch and listen. Depending just how wet your filament is, you may hear popping noises and see steam.
     - **Just because your filament was new/sealed, doesn't mean it's not wet.** I've had plenty of filaments come soaking wet even though they were sealed.
-- Your extruder could be skipping. 
+- Your extruder could be skipping. If this is the case, the gaps will usually be wider than the above image.
     - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
         - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
     - With the latch open, try extruding by hand. It should be pretty easy. If there is too much resistance, figure out where it is coming from.

@@ -52,7 +52,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Pockmarks](#pockmarks)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
     - [Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-non-2mm-spacing)
-    - [Slicer is Putting Heating G-codes in the Wrong Place/Order](#slicer-is-putting-g-codes-in-the-wrong-place--order)
+    - [Slicer is Putting Heating G-codes in the Wrong Place/Order](#slicer-is-putting-heating-g-codes-in-the-wrong-placeorder)
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
 
 # Before We Begin

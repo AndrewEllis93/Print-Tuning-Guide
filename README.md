@@ -679,8 +679,9 @@ Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't hav
 
 ### Too Little Backlash:
 - Repeating Patterns in Extrusion
-    - Adjusting backlash can help considerably with these issues, but you are unlikely to get 100% perfect extrusion.
+    - Adjusting backlash can help considerably with these issues, but is not always guaranteed to fix it.
     - These issues can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
+    - Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience.
     - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
     - **Examples:**
         - The left cube shows a pattern. The right cube is normal:\
@@ -691,7 +692,8 @@ Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't hav
     ![](Images/Troubleshooting/Backlash-WoodGrain.png)
 
 ### Too Much Backlash:
-- Clacking Noises During Retraction
+- Clacking noises during retraction
+- Clacking noises during pressure advance moves
 ## Bulging
 
 This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 

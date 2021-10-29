@@ -52,6 +52,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Pockmarks](#pockmarks)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
     - [Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-non-2mm-spacing)
+    - [Slicer is Putting Heating G-codes in the Wrong Place/Order](#slicer-is-putting-g-codes-in-the-wrong-place--order)
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
 
 # Before We Begin
@@ -862,6 +863,11 @@ Inspect the object to see which axes the artifacts appear most prominent in.
     - **X *and* Y** linear rails
     - **A *and* B** belts *(rare)*
     - **A *and* B** motors *(rare)*
+
+## Slicer is Putting Heating G-codes in the Wrong Place/Order
+You have two options. 
+- [Pass variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start) (allows the most control, but is more complex)
+- [Force g-code ordering](https://github.com/AndrewEllis93/Ellis-PIF-Profile#controlling-when-temperature-g-codes-are-sent-without-passing-variables) (only allows changing the g-code order, but is easy to set up)
 ## Small Infill Areas Look Overextruded
 
 ![](Images/Troubleshooting/SmallAreas.png) 

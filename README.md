@@ -13,7 +13,7 @@ My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Elli
 I am adding new information all the time, be sure to check back.\
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 
-You can find bed the models and textures I am using in [Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
+You can find bed the models and textures I am using in [Hartk's GitHub repo](https://github.com/hartk1213/Troubleshooting/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
 
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
@@ -46,6 +46,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
+    - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
     - [PLA is Overheating](#pla-is-overheating)
     - [Pockmarks / Skips](#pockmarks--skips)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
@@ -520,8 +521,7 @@ You can run faster solid infill, but I would recommend using a moderate top laye
 ![](Images/Overheating-2.png) 
 ![](Images/Overheating-3.png) 
 ![](Images/Overheating-5.png) 
-![](Images/Overheating-6.png) 
-
+![](Images/Overheating-6.jpg) 
 ## How to Fix It
 
 People often start printing by ABS with no cooling. While this is valid advice for unenclosed printers, it's not a universal rule. **ABS often needs some cooling, especially in an enclosure.**
@@ -670,7 +670,7 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 This is adjusted by moving the motor itself up and down.\
 The motor plate has 3 slotted screw holes to allow for adjustment:
 
-![](Images/Misc/Backlash-Adjust.png)
+![](Images/Troubleshooting/Backlash-Adjust.png)
 
 - The top two screws are easily reachable.
 - The bottom left screw can be reached by opening the filament latch fully and using a ball-end hex driver.
@@ -684,11 +684,11 @@ Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't hav
     - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
     - **Examples:**
         - The left cube shows a pattern. The right cube is normal:\
-    ![](Images/Misc/Backlash-Comparison.png)
+    ![](Images/Troubleshooting/Backlash-Comparison.png)
         - Diagonal patterns:\
-    ![](Images/Misc/Backlash-Pattern.png)
+    ![](Images/Troubleshooting/Backlash-Pattern.png)
         - "Wood Grain":\
-    ![](Images/Misc/Backlash-WoodGrain.png)
+    ![](Images/Troubleshooting/Backlash-WoodGrain.png)
 
 ### Too Much Backlash:
 - Clacking Noises During Retraction
@@ -696,25 +696,37 @@ Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't hav
 
 This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 
 
-![](Images/Misc/Bulging.png) 
-![](Images/Misc/Bulging2.png) 
+![](Images/Troubleshooting/Bulging.png) 
+![](Images/Troubleshooting/Bulging2.png) 
 
 - Disable any "extra perimeters" and "supporting dense infill" settings (PS/SS)
 - [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#acceleration-control)
-
 ## Bulges at STL Vertices
-![](Images/Misc/Vertex-Bulges.png)
+![](Images/Troubleshooting/Vertex-Bulges.png)
 - Your square corner velocity may be too low. (Did you leave it set at 1 by chance?)
 - This can also be a sign that your perimeter speeds/accels are too high.
+## Bulging Patterns on Overhangs (SS)
+![](Images/Troubleshooting/AboveBridgeFlow-1.png)
+![](Images/Troubleshooting/AboveBridgeFlow-2.png)
+![](Images/Troubleshooting/AboveBridgeFlow-3.png)
+
+- Some SuperSlicer profiles have "above the bridges" flow set to greater than 100%. This can cause the issues you see above. 
+- There are two solutions:
+    - **Set "threshold for bridge speed and fan" to 0**
+        - This prevents SS from applying bridging settings to overhangs.
+        - ![](Images/Troubleshooting/AboveBridgeFlow-DisableOverhang.png)
+    - **Reduce "above the bridges" flow to back to 100%**
+        - ![](Images/Troubleshooting/AboveBridgeFlow-Reset.png)
+- If these do not fix it, it might instead be an [overheating issue.](#cooling-and-layer-times)
 ## PLA is Overheating
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.
 - Open the front door or take off all the panels. Point a fan at it.
     - Don't go too crazy, or your bed heater might not be able to keep up.
-    ![](Images/Misc/PLA-Fan.png) 
+    ![](Images/Troubleshooting/PLA-Fan.png) 
 - Try printing with the bed heater turned off.
 ## Pockmarks / Skips
 
-![](Images/Misc/Pockmarks.png)
+![](Images/Troubleshooting/Pockmarks.png)
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.
@@ -737,7 +749,7 @@ If they are not perfectly vertical (i.e. wood grain, diagonal, etc), see [this s
 
 Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
 
-![](Images/Misc/ToothMarks.png)
+![](Images/Troubleshooting/ToothMarks.png)
 
 - Your belts may be too tight. [Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
     - Don't miss the video link in page linked above. 
@@ -802,7 +814,7 @@ Inspect the object to see which axes the artifacts appear most prominent in.
     - **A *and* B** motors *(rare)*
 ## Small Infill Areas Look Overextruded
 
-![](Images/Misc/SmallAreas.png) 
+![](Images/Troubleshooting/SmallAreas.png) 
 
 - Some amount of this is unavoidable, but there are some things that *may* help:
     - Use single top perimeters (SuperSlicer). This simply makes these infill areas a bit larger.

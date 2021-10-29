@@ -744,6 +744,17 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
         - You may need to drill out the filament path in the printed parts, sometimes they can sag.
         - Your nozzle may be partially clogged. 
             - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.
+        - Your heatbreak may be partially clogged. 
+            - Unload the filament, take off the nozzle, shine a light through the hotend and look inside. See if there is any plastic stuck against the walls of the heatbreak.
+                - If your heatbreak is obstructed: 
+                    - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork)
+                    - Unplug the hotend fan 
+                    - Heat the hotend up to 180C
+                        - We are purposefully inducing heat creep to soften the plastic in the heatbreak
+                    - Push a long, thin (<=1.8mm) allen key through the top side of the hotend to push the obstruction out of the bottom.
+                    - **Turn off the hotend as soon as you have freed the obstruction.**
+                        - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
+                    - **Be careful - don't burn yourself**
     - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
     - Check your extruder motor wiring.
 ## Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing

@@ -535,7 +535,7 @@ There are multiple things you can do to minimize overheating with ABS.
 - Use constant fan speeds. For filaments that shrink, **varying fan speeds during a print will cause inconsistent layers and banding.** Some layers will essentially shrink more than others.
 - You probably need more cooling than you think. 
     - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
-        - For large plates, I use 35% fan.
+        - For large plates, I use 40% fan.
         - For single small objects, I use up to 80% fan.
     - For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
         - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
@@ -752,18 +752,17 @@ Skipping below top layer:
         - Unclog it using a cold pull or nozzle cleaning needles.
         - Try a new nozzle.
     - Your heatbreak may be partially clogged. 
-        - Unload the filament, take off the nozzle, shine a light through the hotend and look inside. See if there is any plastic stuck against the walls of the heatbreak.
-            - If your heatbreak is obstructed: 
-                - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
-                - Unplug the hotend fan.
-                - Heat the hotend up to 180C.
-                    - We are purposefully inducing heat creep to soften the plastic in the heatbreak.
-                - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
-                - **Turn off the hotend as soon as you have freed the obstruction.**
-                    - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
-                - **Be careful - don't burn yourself!**
+        - Unload the filament, take off the nozzle, shine a light through the hotend and look inside. See if there is any plastic stuck against the walls of the heatbreak. If your heatbreak is obstructed: 
+            - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
+            - Unplug the hotend fan.
+            - Heat the hotend up to 180C.
+                - We are purposefully inducing heat creep to soften the plastic in the heatbreak.
+            - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
+            - **(!) Turn off the hotend as soon as you have freed the obstruction.**
+                - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
+            - **Be careful - don't burn yourself!**
 - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
-    - As a general rule, don't exceed 50-60% of the rated current of your motor as your run_current. *Some motors like more or less current, though*, so your best bet would be to look at the stock configs or to ask in Discord.
+    - As a general rule, don't exceed 50-60% of the rated current of your motor as your `run_current`. *Some motors like more or less current, though*, so your best bet would be to look at the stock configs or to ask in Discord.
     - Galileo/Orbiter:
         - There is some confusion about different motor models. 
             - If you have the 20mm 1a LDO motor, try 0.65a. 
@@ -772,11 +771,12 @@ Skipping below top layer:
 - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
 ## PLA is Overheating
-- Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.
-- Open the front door or take off all the panels. Point a fan at it.
+- Open the front door or take off all the panels.
+- Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:
+- Point a fan at it.
     - Don't go too crazy, or your bed heater might not be able to keep up.
     ![](Images/Troubleshooting/PLA-Fan.png) 
-- Try printing with the bed heater turned off.
+- You can also try printing with the bed heater turned off.
 ## Pockmarks
 ![](Images/Troubleshooting/Pockmarks.png)
 

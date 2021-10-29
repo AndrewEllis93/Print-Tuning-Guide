@@ -751,7 +751,7 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
                     - Unplug the hotend fan 
                     - Heat the hotend up to 180C
                         - We are purposefully inducing heat creep to soften the plastic in the heatbreak
-                    - Push a long, thin (<=1.8mm) allen key through the top side of the hotend to push the obstruction out of the bottom.
+                    - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
                     - **Turn off the hotend as soon as you have freed the obstruction.**
                         - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
                     - **Be careful - don't burn yourself**

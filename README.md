@@ -616,9 +616,11 @@ We will be printing these retraction towers at three different temperatures. If 
         - Bowden: **0.5mm**
     - **Height:**
         - Your maximum retraction length will be **(height - 1) * step**.
-            - Do not exceed **1mm** for direct drive. *(height: 11 when using a step of 0.1mm)*
+            - Do not exceed **1mm** for direct drive.\
+            *(height: 11 when using a step of 0.1mm)*
                 - You will *rarely* need more than this, but it is possible with some high flow hotends and setups. Start with 1mm, only go up to an absolute max of 2mm if required.
-            - For bowden, this can vary. Try starting with a maximum of **3mm**.
+            - For bowden, this can vary. Try starting with a maximum of **3mm**. \
+            *(height: 7 when using a step of 0.5mm)*
                 - You may need more, depending on a few factors like pressure advance, bowden tube length, bowden tube internal diameter, and how firmly attached the tube is in the couplings.
                 - Ensure that your bowden tubes are as firmly attached as possible, and do not [move too much in and out of their couplings during printing](https://youtu.be/lboDSH0945g?t=120). 
     - **Temp decrease (temp decr):**

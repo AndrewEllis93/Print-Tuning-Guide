@@ -745,7 +745,7 @@ Skipping below top layer:
     - **(!) If you use an NTC100K B3950 thermistor, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
 - Ensure that your retraction distance is not too high. 
     - The default Cura profile uses a high retraction distance, as it is still set up for bowden. You should generally use a maximum of 1mm for direct drive.
-- With the latch open, try extruding by hand. It should be easy. If there is much resistance, figure out where it is coming from.
+- With the latch open, try extruding by hand. **It should be easy.** If there is much resistance, figure out where it is coming from.
     - You may need to drill out the filament path in the printed parts, sometimes they can sag.
     - Your nozzle may be partially clogged. 
         - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.

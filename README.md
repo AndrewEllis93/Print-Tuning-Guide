@@ -47,8 +47,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Bulging](#bulging)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
     - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
+    - [Extruder Skips](#extruder-skips)
     - [PLA is Overheating](#pla-is-overheating)
-    - [Pockmarks / Skips](#pockmarks--skips)
+    - [Pockmarks](#pockmarks)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
     - [Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-non-2mm-spacing)
     - [Small Infill Areas Look Overextruded](#small-infill-areas-look-overextruded)
@@ -723,40 +724,66 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
     - **Reduce "above the bridges" flow to back to 100%**
         - ![](Images/Troubleshooting/AboveBridgeFlow-Reset.png)
 - If these do not fix it, it might instead be an [overheating issue.](#cooling-and-layer-times)
+
+## Extruder Skips
+These skips will typically be wider than [pockmarks.](#pockmarks)
+
+![](Images/Troubleshooting/ExtruderSkips-4.png)\
+![](Images/Troubleshooting/ExtruderSkips-1.png)\
+![](Images/Troubleshooting/ExtruderSkips-2.png)
+![](Images/Troubleshooting/ExtruderSkips-3.png)
+
+Skipping below top layer:
+
+![](Images/Troubleshooting/ExtruderSkips-5.png)
+![](Images/Troubleshooting/ExtruderSkips-6.png)
+
+- If it occurs mainly on the first layer, ensure that you are not printing with [too much squish]((#first-layer-squish)) or with too much first layer flow.
+- Ensure that your hotend fan is running and is not stopping/starting during printing from a wiring issue.
+    - Also ensure that your hotend fan is running at 100%. Some vendor githubs have the `[heater_fan hotend_fan]`'s `max_power` setting at 0.4 (40%) for some reason.
+- Ensure that your hotend thermistor is correct in your config.
+    - **(!) If you use an NTC100K B3950 thermistor, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
+- Ensure that your retraction distance is not too high. 
+    - The default Cura profile uses a high retraction distance, as it is still set up for bowden. You should generally use a maximum of 1mm for direct drive.
+- With the latch open, try extruding by hand. It should be easy. If there is much resistance, figure out where it is coming from.
+    - You may need to drill out the filament path in the printed parts, sometimes they can sag.
+    - Your nozzle may be partially clogged. 
+        - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.
+        - Unclog it using a cold pull or nozzle cleaning needles.
+        - Try a new nozzle.
+    - Your heatbreak may be partially clogged. 
+        - Unload the filament, take off the nozzle, shine a light through the hotend and look inside. See if there is any plastic stuck against the walls of the heatbreak.
+            - If your heatbreak is obstructed: 
+                - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
+                - Unplug the hotend fan.
+                - Heat the hotend up to 180C.
+                    - We are purposefully inducing heat creep to soften the plastic in the heatbreak.
+                - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
+                - **Turn off the hotend as soon as you have freed the obstruction.**
+                    - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
+                - **Be careful - don't burn yourself!**
+- Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
+    - As a general rule, don't exceed 50-60% of the rated current of your motor as your run_current. *Some motors like more or less current, though*, so your best bet would be to look at the stock configs or to ask in Discord.
+    - Galileo/Orbiter:
+        - There is some confusion about different motor models. 
+            - If you have the 20mm 1a LDO motor, try 0.65a. 
+            - If you have the 17mm 1a LDO motor, try 0.35-0.4a.
+- Check your extruder motor crimps and wiring.
+- Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
+    - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
 ## PLA is Overheating
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod.
 - Open the front door or take off all the panels. Point a fan at it.
     - Don't go too crazy, or your bed heater might not be able to keep up.
     ![](Images/Troubleshooting/PLA-Fan.png) 
 - Try printing with the bed heater turned off.
-## Pockmarks / Skips
-
+## Pockmarks
 ![](Images/Troubleshooting/Pockmarks.png)
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.
     - Extrude in midair. Watch and listen. Depending just how wet your filament is, you may hear popping noises and see steam.
     - **Just because your filament was new/sealed, doesn't mean it's not wet.** I've had plenty of filaments come soaking wet even though they were sealed.
-- Your extruder could be skipping. If this is the case, the gaps will usually be wider than the above image.
-    - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
-        - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
-    - With the latch open, try extruding by hand. It should be pretty easy. If there is too much resistance, figure out where it is coming from.
-        - You may need to drill out the filament path in the printed parts, sometimes they can sag.
-        - Your nozzle may be partially clogged. 
-            - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.
-        - Your heatbreak may be partially clogged. 
-            - Unload the filament, take off the nozzle, shine a light through the hotend and look inside. See if there is any plastic stuck against the walls of the heatbreak.
-                - If your heatbreak is obstructed: 
-                    - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork)
-                    - Unplug the hotend fan 
-                    - Heat the hotend up to 180C
-                        - We are purposefully inducing heat creep to soften the plastic in the heatbreak
-                    - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
-                    - **Turn off the hotend as soon as you have freed the obstruction.**
-                        - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
-                    - **Be careful - don't burn yourself**
-    - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
-    - Check your extruder motor wiring.
 ## Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 

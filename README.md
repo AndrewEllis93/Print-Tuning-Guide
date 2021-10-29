@@ -713,10 +713,13 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 ![](Images/Troubleshooting/AboveBridgeFlow-3.png)
 
 - Some SuperSlicer profiles have "above the bridges" flow set to greater than 100%. This can cause the issues you see above. 
-- There are two solutions:
+- There are three solutions:
     - **Set "threshold for bridge speed and fan" to 0**
-        - This prevents SS from applying bridging settings to overhangs.
+        - This totally prevents SS from applying bridging settings to overhangs.
         - ![](Images/Troubleshooting/AboveBridgeFlow-DisableOverhang.png)
+    - **Set "threshold for bridge flow" to 0**
+        - This prevents SS from applying bridging flow settings to overhangs, but still allows bridging speeds/fan settings to apply.
+        - ![](Images/Troubleshooting/AboveBridgeFlow-DisableOverhangFlow.png)
     - **Reduce "above the bridges" flow to back to 100%**
         - ![](Images/Troubleshooting/AboveBridgeFlow-Reset.png)
 - If these do not fix it, it might instead be an [overheating issue.](#cooling-and-layer-times)

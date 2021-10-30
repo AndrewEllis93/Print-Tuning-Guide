@@ -47,7 +47,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Bulging](#bulging)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
     - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
-    - [Extruder Skips](#extruder-skips)
+    - [Extruder Skipping](#extruder-skipping)
     - [PLA is Overheating](#pla-is-overheating)
     - [Pockmarks](#pockmarks)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
@@ -733,7 +733,7 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
         - ![](Images/Troubleshooting/AboveBridgeFlow-Reset.png)
 - If these do not fix it, it might instead be an [overheating issue.](#cooling-and-layer-times)
 
-## Extruder Skips
+## Extruder Skipping
 These skips will typically be wider than [pockmarks.](#pockmarks)
 
 ![](Images/Troubleshooting/ExtruderSkips-4.png)\

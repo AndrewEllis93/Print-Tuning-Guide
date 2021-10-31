@@ -147,7 +147,7 @@ There are print examples in the next section.
 
     - ### Smooth Build Surface
         - **Top Surface**
-            - The middle square is best in the below examples.
+            - The middle square is the best in the below examples.
             - You don't want too many ridges/hairs on top. 
                 - It's normal to have a *little* bit of this near the corners, or in small  footprint areas.
             - You shouldn't see any gaps between the lines.
@@ -159,11 +159,11 @@ There are print examples in the next section.
             - You should still be able to clearly see the lines. They should not be fading or   invisible.
             - ![](Images/FirstLayer-Squares-1-Annotated.png)
     - ### Textured Build Surface
-        - The middle square is best in the below examples.
-        - Top Surface
+        - The middle square is the best in the below examples.
+        - **Top Surface**
             - Follow the same guidance as for smooth build surfaces (above). You can see hairs/lumps with too much squish, and gaps with not enough squish.
             - ![](Images/FirstLayer-Squares-Textured.png)
-        - Bottom Surface
+        - **Bottom Surface**
             - **The lines will not be as visible as on a smooth build surface.**
             - As with smooth build surfaces, you should not have any gaps between the lines.
             - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.

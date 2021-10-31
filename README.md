@@ -2,7 +2,7 @@
 
 Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.
 
-A handful of the [troubleshooting sections](#miscellaneous-fixes-tips-and-tricks) and some of the tuning hints focus on CoreXY (sorry, Switchwire folks).
+A handful of the [troubleshooting sections](#troubleshooting) and some of the tuning hints focus on CoreXY (sorry, Switchwire folks).
 
 This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
 
@@ -145,17 +145,29 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 In these examples, the third square is closest.\
 There are print examples in the next section.
 
-    - **Top surface**
-        - You don't want too many ridges/hairs on top. 
-            - It's normal to have a *little* bit of this near the corners, or in small footprint areas.
-        - You shouldn't see any gaps between the lines.
-            - It's fine to have some very small pinholes where the infill meets the perimeters.
-        - ![](Images/EM-Squares-2.png)
-        - ![](Images/EM-Squares-2-Annotated.png)
-    - **Bottom Surface**
-        - You should not have any gaps between the lines.
-        - You should still be able to clearly see the lines. They should not be fading or invisible.
-        - ![](Images/EM-Squares-1-Annotated.png)
+    - ### Smooth Build Surface
+        - **Top Surface**
+            - The middle square is best in the below examples.
+            - You don't want too many ridges/hairs on top. 
+                - It's normal to have a *little* bit of this near the corners, or in small  footprint areas.
+            - You shouldn't see any gaps between the lines.
+                - It's fine to have some very small pinholes where the infill meets the     perimeters.
+            - ![](Images/FirstLayer-Squares-2.png)
+            - ![](Images/FirstLayer-Squares-2-Annotated.png)
+        - **Bottom Surface**
+            - You should not have any gaps between the lines.
+            - You should still be able to clearly see the lines. They should not be fading or   invisible.
+            - ![](Images/FirstLayer-Squares-1-Annotated.png)
+    - ### Textured Build Surface
+        - The middle square is best in the below examples.
+        - Top Surface
+            - Follow the same guidance as for smooth build surfaces (above). You can see hairs/lumps with too much squish, and gaps with not enough squish.
+            - ![](Images/FirstLayer-Squares-Textured.png)
+        - Bottom Surface
+            - **The lines will not be as visible as on a smooth build surface.**
+            - As with smooth build surfaces, you should not have any gaps between the lines.
+            - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.
+            - ![](Images/FirstLayer-Squares-Textured-2.jpg)
 
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
@@ -643,7 +655,7 @@ We will be printing these retraction towers at three different temperatures. If 
     - If your hotter towers are much stringier, consider choosing a lower extrusion temperature.
     - **To get your new retraction length:**
         - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
-            - In my opinion, choose a height **1-2 notches higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
+            - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
 
 ## Infill/Perimeter Overlap
 

@@ -204,7 +204,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 - Wavy patterns appear:
 
-    - ![](Images/FirstLayer-TooMuchSquish3.png) 
+    - ![](Images/FirstLayer-TooMuchSquish3.png) ![](Images/FirstLayer-TooMuchSquish4.png) 
 
 
 ### Not Enough Squish

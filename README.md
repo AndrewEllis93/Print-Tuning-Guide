@@ -67,7 +67,8 @@ Before you follow *any* tuning methods in this guide, ensure that:
         - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
 
 - Your thermistors are the correct types in your config.
-    - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
+    - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152)** 
+        - *(if the link is not working, check the Voron Discord server in #slicers_and_print_help, there is a pinned message from mallcop)*
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
@@ -617,8 +618,6 @@ We will be printing these retraction towers at three different temperatures. If 
 
 **7)** Fill out the parameters and select "Generate".
 
-- *I have blanked out the values.* Read the instructions below to figure out your own.
-
 - ![](Images/Retraction-Params.png) 
 
     - **Start temp:**
@@ -656,6 +655,7 @@ We will be printing these retraction towers at three different temperatures. If 
     - **To get your new retraction length:**
         - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
             - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
+            - We are subtracting 1 because the first ring is 0 retraction.
 
 ## Infill/Perimeter Overlap
 

@@ -757,16 +757,17 @@ Skipping below top layer:
 ![](Images/Troubleshooting/ExtruderSkips-5.png)
 
 - If it occurs mainly on the first layer, ensure that you are not printing with [too much squish]((#first-layer-squish)) or with too much first layer flow.
-- **Use a reverse bowden tube** with direct drive, and ensure that there is not too much resistance coming from the spool. Reverse bowden tubes prevent fast toolhead movements from yanking the filament, and ensure the filament is fed smoothly and consistently.
+- **Use a reverse bowden tube** with direct drive, and ensure that there is not too much resistance coming from the spool. Reverse bowden tubes go from the direct drive extruder back to the spool (and should be fixed at the spool side), and prevent fast toolhead movements from yanking the filament.
     - Use a 3mm inner diameter tube. 1.9mm/2mm ID tubes are more restrictive.
     - Ensure that you don't have any kinks in the reverse bowden tube. 
     - Ensure that your spool is not catching on anything as it rotates. 
     - If you are pulling from a dry box, try without.
+    - For Voron spool holders, make sure you have the PTFE tube piece installed to lessen friction.
 - For Voron direct drive toolheads, ensure that you have the short piece of PTFE tubing installed between the clockwork and the hotend. 
     - Make sure it is not too long or too short. You should trim it down until it just fits without compressing the tube.
 - Ensure that your hotend fan is running and is not stopping/starting during printing from a wiring issue.
     - Also ensure that your hotend fan is running at 100%. Some vendor githubs have the `[heater_fan hotend_fan]`'s `max_power` setting at 0.4 (40%) for some reason.
-- Ensure that your hotend thermistor is correct in your config.
+- Ensure that your hotend thermistor is correct in your config and that you are not using temps that are too low.
     - **(!) If you use an NTC100K B3950 thermistor, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
 - Ensure that your retraction distance is not too high. 
     - The default Cura profile uses a high retraction distance, as it is still set up for bowden. You should generally use a maximum of 1mm for direct drive.

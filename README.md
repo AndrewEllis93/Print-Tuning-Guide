@@ -770,10 +770,12 @@ Skipping below top layer:
         - Unclog it using a cold pull or nozzle cleaning needles.
         - Try a new nozzle.
     - Your heatbreak may be partially clogged. 
-        - Unload the filament, take off the nozzle, shine a light through the hotend and look inside. See if there is any plastic stuck against the walls of the heatbreak. If your heatbreak is obstructed: 
-            - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
+        - Unload the filament and remove the nozzle.
+        - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
+        - Shine a light through the hotend and look into the other side. See if there is any plastic stuck against the walls of the heatbreak.\
+        If your heatbreak is obstructed: 
             - Unplug the hotend fan.
-            - Heat the hotend up to 180C.
+            - Heat the hotend up to ~180C.
                 - We are purposefully inducing heat creep to soften the plastic in the heatbreak.
             - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
             - **(!) Turn off the hotend as soon as you have freed the obstruction.**

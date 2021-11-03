@@ -361,7 +361,7 @@ gcode:
     - **Prime Nozzle**: Unchecked
     - **Dwell Time**: 0
 
-Note that the "Extrusion Multiplier" setting is is decimal, NOT percent.
+Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
 
 **5)** Generate and download the g-code file.
 
@@ -798,6 +798,7 @@ Skipping below top layer:
 - Check your extruder motor crimps and wiring.
 - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
+- Try using the [AB-BN mod](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN). It optimizes hotend cooling and can help with heat creep issues.
 - Try lowering your extruder motor's microstepping and disabling interpolation and stealthchop.
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.

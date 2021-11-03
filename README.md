@@ -142,33 +142,31 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 **4)** Start the print. While it is printing, [live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height).
 
 - This can be done via g-codes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
-- **Examples**\
+### Examples
 In these examples, the third square is closest.\
 There are print examples in the next section.
 
-    - ### Smooth Build Surface
-        - **Top Surface**
-            - The middle square is the best in the below examples.
-            - You don't want too many ridges/hairs on top. 
-                - It's normal to have a *little* bit of this near the corners, or in small  footprint areas.
-            - You shouldn't see any gaps between the lines.
-                - It's fine to have some very small pinholes where the infill meets the     perimeters.
-            - ![](Images/FirstLayer-Squares-2.png)
-            - ![](Images/FirstLayer-Squares-2-Annotated.png)
-        - **Bottom Surface**
-            - You should not have any gaps between the lines.
-            - You should still be able to clearly see the lines. They should not be fading or   invisible.
-            - ![](Images/FirstLayer-Squares-1-Annotated.png)
-    - ### Textured Build Surface
-        - The middle square is the best in the below examples.
-        - **Top Surface**
-            - Follow the same guidance as for smooth build surfaces (above). You can see hairs/lumps with too much squish, and gaps with not enough squish.
-            - ![](Images/FirstLayer-Squares-Textured.png)
-        - **Bottom Surface**
-            - **The lines will not be as visible as on a smooth build surface.**
-            - As with smooth build surfaces, you should not have any gaps between the lines.
-            - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.
-            - ![](Images/FirstLayer-Squares-Textured-2.jpg)
+- #### Smooth Build Surface
+    - **Top Surface**
+        - You don't want too many ridges/hairs on top. 
+            - It's normal to have a *little* bit of this near the corners, or in small  footprint areas.
+        - You shouldn't see any gaps between the lines.
+            - It's fine to have some very small pinholes where the infill meets the     perimeters.
+        - ![](Images/FirstLayer-Squares-2.png)
+        - ![](Images/FirstLayer-Squares-2-Annotated.png)
+    - **Bottom Surface**
+        - You should not have any gaps between the lines.
+        - You should still be able to clearly see the lines. They should not be fading or   invisible.
+        - ![](Images/FirstLayer-Squares-1-Annotated.png)
+- #### Textured Build Surface
+    - **Top Surface**
+        - Follow the same guidance as for smooth build surfaces (above). You can see hairs/lumps with too much squish, and gaps with not enough squish.
+        - ![](Images/FirstLayer-Squares-Textured.png)
+    - **Bottom Surface**
+        - **The lines will not be as visible as on a smooth build surface.**
+        - As with smooth build surfaces, you should not have any gaps between the lines.
+        - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.
+        - ![](Images/FirstLayer-Squares-Textured-2.jpg)
 
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
@@ -418,7 +416,7 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 
 - Calibrating your extruder ensures that the extrusion multiplier will be the same across all printers. Extruder calibration simply ensures that 100mm requested = 100mm extruded. Extrusion *multiplier* is a per-filament setting, depending on the properties of each material.
 
-**(!) You should also [tune pressure advance](#pressure-advance) first.**
+**(!) You should [tune pressure advance](#pressure-advance) first.**
 
 - These tests try to remove PA as a variable as much as possible, but having a good PA value is still ideal.
 
@@ -579,6 +577,7 @@ If you typically print with z-hop, leave it on for this test.
 If you are having persistent issues:
 - **(!) Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
 - Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
+- You may need to use less z hop (z lift). I run 0.2mm. Too high gives me stringing.
 
 There are a few factors that can affect your retraction settings, such as:
 - Material type

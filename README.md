@@ -757,13 +757,20 @@ Skipping below top layer:
 ![](Images/Troubleshooting/ExtruderSkips-5.png)
 
 - If it occurs mainly on the first layer, ensure that you are not printing with [too much squish]((#first-layer-squish)) or with too much first layer flow.
+- **Use a reverse bowden tube** with direct drive, and ensure that there is not too much resistance coming from the spool. Reverse bowden tubes prevent fast toolhead movements from yanking the filament, and ensure the filament is fed smoothly and consistently.
+    - Use a 3mm inner diameter tube. 1.9mm/2mm ID tubes are more restrictive.
+    - Ensure that you don't have any kinks in the reverse bowden tube. 
+    - Ensure that your spool is not catching on anything as it rotates. 
+    - If you are pulling from a dry box, try without.
+- For Voron direct drive toolheads, ensure that you have the short piece of PTFE tubing installed between the clockwork and the hotend. 
+    - Make sure it is not too long or too short. You should trim it down until it just fits without compressing the tube.
 - Ensure that your hotend fan is running and is not stopping/starting during printing from a wiring issue.
     - Also ensure that your hotend fan is running at 100%. Some vendor githubs have the `[heater_fan hotend_fan]`'s `max_power` setting at 0.4 (40%) for some reason.
 - Ensure that your hotend thermistor is correct in your config.
     - **(!) If you use an NTC100K B3950 thermistor, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
 - Ensure that your retraction distance is not too high. 
     - The default Cura profile uses a high retraction distance, as it is still set up for bowden. You should generally use a maximum of 1mm for direct drive.
-- With the latch open, try extruding by hand. **It should be easy.** If there is much resistance, figure out where it is coming from.
+- With the latch open, try extruding by hand. **It should be easy.** If there is much resistance, figure out where it is coming from. Here are some things to try:
     - You may need to drill out the filament path in the printed parts, sometimes they can sag.
     - Your nozzle may be partially clogged. 
         - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.
@@ -790,6 +797,7 @@ Skipping below top layer:
 - Check your extruder motor crimps and wiring.
 - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
+- Try lowering your extruder motor's microstepping and disabling interpolation and stealthchop.
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

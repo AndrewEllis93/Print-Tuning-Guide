@@ -695,8 +695,7 @@ The motor plate has 3 slotted screw holes to allow for adjustment:
 - The top two screws are easily reachable.
 - The bottom left screw can be reached by opening the filament latch fully and using a ball-end hex driver.
 
-Unfortunately, adjustment is not as simple for the Mini Afterburner. I don't have a Mini Afterburner so I can't give an exact process. You will have to disassemble it and play with it. You may have to file out some screw holes.
-
+I don't have a Mini Afterburner so I can't give an exact process for it. From what I understand, it now also has some slotted screw holes to allow for adjustment.
 ### Too Little Backlash:
 - Repeating Patterns in Extrusion
     - Adjusting backlash can help considerably with these issues, but is not always guaranteed to fix it.

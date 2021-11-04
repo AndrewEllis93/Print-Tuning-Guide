@@ -789,7 +789,7 @@ Skipping below top layer:
                 - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
             - **Be careful - don't burn yourself!**
 - (BMG clockwork) - Try turning the plastic gear with your fingernail with the motor turned off. It should be relatively easy. If there is too much resistance: 
-    - Ensure that you have some [backlash in the plastic gear.](#bmg-clockwork-backlash-issues)
+    - Ensure that you have a small amount of [backlash in the plastic gear.](#bmg-clockwork-backlash-issues)
     - Ensure that your drive shaft is not rubbing against the motor:
     - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
 - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.

@@ -788,6 +788,10 @@ Skipping below top layer:
             - **(!) Turn off the hotend as soon as you have freed the obstruction.**
                 - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
             - **Be careful - don't burn yourself!**
+- (BMG clockwork) - Try turning the plastic gear with your fingernail with the motor turned off. It should be relatively easy. If there is too much resistance: 
+    - Ensure that you have some [backlash in the plastic gear.](#bmg-clockwork-backlash-issues)
+    - Ensure that your drive shaft is not rubbing against the motor:
+    - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
 - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
     - As a general rule, don't exceed 50-60% of the rated current of your motor as your `run_current`. *Some motors like more or less current, though*, so your best bet would be to look at the stock configs or to ask in Discord.
     - Galileo/Orbiter:
@@ -799,6 +803,8 @@ Skipping below top layer:
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
 - Try using the [AB-BN mod](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN). It optimizes hotend cooling and can help with heat creep issues.
 - Try lowering your extruder motor's microstepping and disabling interpolation (and stealthchop if you have it on, which you shouldn't).
+
+## Layer Shifting
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

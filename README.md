@@ -791,7 +791,8 @@ Skipping below top layer:
 - (BMG clockwork) - Try turning the plastic gear with your fingernail with the motor turned off. It should be relatively easy. If there is too much resistance: 
     - Ensure that you have a small amount of [backlash in the plastic gear.](#bmg-clockwork-backlash-issues)
     - Ensure that your drive shaft is not rubbing against the motor:
-    - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
+        - A little cheat I have heard here is to test continuity between the drive shaft and the motor. If you do this, however, test throughout the full rotation.
+        - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
 - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
     - As a general rule, don't exceed 50-60% of the rated current of your motor as your `run_current`. *Some motors like more or less current, though*, so your best bet would be to look at the stock configs or to ask in Discord.
     - Galileo/Orbiter:

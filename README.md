@@ -724,6 +724,8 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 - [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#acceleration-control)
 ## Bulges at STL Vertices
 ![](Images/Troubleshooting/Vertex-Bulges.png)
+
+![](Images/Troubleshooting/Vertex-Bulges-2.png) 
 - Your square corner velocity may be too low. (Did you leave it set at 1 by chance?)
 - This can also be a sign that your perimeter speeds/accels are too high.
 ## Bulging Patterns on Overhangs (SS)

@@ -30,7 +30,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
     - [Tower Method (Simple)](#tower-method-simple)
-    - [Marlin Method (Advanced)](#marlin-method-advanced)
+    - [Lines Method (Advanced)](#marlin-method-advanced)
     - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
 - [Extrusion Multiplier](#extrusion-multiplier)
     - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)
@@ -251,7 +251,7 @@ Pressure advance changes the **distribution** of material, not the **amount** of
 
 - Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors of they are noticeably different.
 
-There are two approaches - the [tower method](#tower-method-simple) (simple), and the [Marlin method](#marlin-method-advanced) (advanced).
+There are two approaches - the [tower method](#tower-method-simple) (simple), and the [Lines method](#marlin-method-advanced) (advanced).
 
 ## Tower Method (Simple)
 
@@ -311,7 +311,7 @@ Excuse the gigantic photos - high resolution is needed here.
 ![](Images/PA-Tower.png) 
 ![](Images/PA-Tower-Annotated.png) 
 
-## Marlin Method (Advanced)
+## Lines Method (Advanced)
 
 ### Background
 This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code files. 
@@ -756,43 +756,44 @@ Skipping below top layer:
 ![](Images/Troubleshooting/ExtruderSkips-5.png)
 
 - If it occurs mainly on the first layer, ensure that you are not printing with [too much squish]((#first-layer-squish)) or with too much first layer flow.
-- **Use a reverse bowden tube** with direct drive, and ensure that there is not too much resistance coming from the spool. Reverse bowden tubes go from the direct drive extruder back to the spool (and should be fixed at the spool side), and prevent fast toolhead movements from yanking the filament.
-    - Use a 3mm inner diameter tube. 1.9mm/2mm ID tubes are more restrictive.
-    - Ensure that you don't have any kinks in the reverse bowden tube. 
-    - Ensure that your spool is not catching on anything as it rotates. 
-    - If you are pulling from a dry box, try without.
-    - For Voron spool holders, make sure you have the PTFE tube piece installed to lessen friction.
+- **Use a reverse bowden tube*** with direct drive, and ensure that there is not too much resistance coming from the spool.
+    - *Reverse bowden tubes go from the direct drive extruder back to the spool (and should be fixed at the spool side), and prevent fast toolhead movements from yanking the filament.
+        - Use a 3mm inner diameter tube. 1.9mm/2mm ID tubes are more restrictive.
+        - Ensure that it doesn't have any kinks.
+        - Ensure that your spool is not catching on anything as it rotates. 
+        - If you are pulling from a dry box, try without.
+        - For Voron spool holders, make sure you have the PTFE tube piece installed to lessen friction.
 - For Voron direct drive toolheads, ensure that you have the short piece of PTFE tubing installed between the clockwork and the hotend. 
     - Make sure it is not too long or too short. You should trim it down until it just fits without compressing the tube.
 - Ensure that your hotend fan is running and is not stopping/starting during printing from a wiring issue.
-    - Also ensure that your hotend fan is running at 100%. Some vendor githubs have the `[heater_fan hotend_fan]`'s `max_power` setting at 0.4 (40%) for some reason.
+- Also ensure that your hotend fan is running at 100%. 
+    - Some vendor githubs have the `[heater_fan hotend_fan]`'s `max_power` setting at 0.4 (40%) for some reason.
+    - Ensure that you are running it at the correct voltage.
 - Ensure that your hotend thermistor is correct in your config and that you are not using temps that are too low.
     - **(!) If you use an NTC100K B3950 thermistor, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152).**
 - Ensure that your retraction distance is not too high. 
-    - The default Cura profile uses a high retraction distance, as it is still set up for bowden. You should generally use a maximum of 1mm for direct drive.
-- With the filament latch open, try extruding by hand. **It should be easy.** If there is much resistance, figure out where it is coming from. Here are some things to try:
-    - You may need to drill out the filament path in the printed parts, sometimes they can sag.
+    - The default Cura profile uses a high retraction distance, as it is configured for bowden. 
+    - You should generally use a maximum of 1mm for direct drive.
+- With the filament latch open, try extruding by hand. **It should be easy.** \
+If there is much resistance, *figure out where it is coming from:*
+    - You may need to drill out the filament path in the printed parts.
     - Your nozzle may be partially clogged. 
         - See if extruded plastic is shooting out to the side instead of straight down when extruding in mid-air.
         - Unclog it using a cold pull or nozzle cleaning needles.
         - Try a new nozzle.
     - Your heatbreak may be partially clogged. 
-        - Unload the filament and remove the nozzle.
-        - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
-        - Shine a light through the hotend and look into the other side. See if there is any plastic stuck against the walls of the heatbreak or heatsink.\
-        If it is obstructed: 
-            - Unplug the hotend fan.
-            - Heat the hotend up to ~180C.
+        - Remove the nozzle, cool the hotend, and try pushing fresh filament through it. Make sure to cut off the bulged tip. *If there is resistance:*
+            - Unload the filament and remove the nozzle.
+            - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
+            - Shine a light through the hotend and look into the other side. See if there is any plastic stuck against the walls of the heatbreak or heatsink. *If it is obstructed*: 
+                - Unplug the hotend fan.
+                - Heat the hotend up to ~180C.
                 - We are purposefully inducing heat creep to soften the plastic in the heatbreak.
-            - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
-            - **(!) Turn off the hotend as soon as you have freed the obstruction.**
+                - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
+                - **(!) Turn off the hotend as soon as you have freed the obstruction.**
                 - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
-            - **Be careful - don't burn yourself!**
-- (BMG clockwork) - Try turning the plastic gear with your fingernail with the motor turned off. It should be relatively easy. If there is too much resistance: 
-    - Ensure that you have a small amount of [backlash in the plastic gear.](#bmg-clockwork-backlash-issues)
-    - Ensure that your drive shaft is not rubbing against the motor:
-        - A little cheat I have heard here is to test continuity between the drive shaft and the motor. If you do this, however, test throughout the full rotation.
-        - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
+                - **Be careful - don't burn yourself!**
+
 - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
     - As a general rule, don't exceed 50-60% of the rated current of your motor as your `run_current`. *Some motors like more or less current, though*, so your best bet would be to look at the stock configs or to ask in Discord.
     - Galileo/Orbiter:
@@ -802,10 +803,17 @@ Skipping below top layer:
 - Check your extruder motor crimps and wiring.
 - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
+- Try rotating the extruder (if possible) without filament loaded. It should be easy.
 - Try using the [AB-BN mod](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN). It optimizes hotend cooling and can help with heat creep issues.
 - Try lowering your extruder motor's microstepping and disabling interpolation (and stealthchop if you have it on, which you shouldn't).
-
-## Layer Shifting
+- Take out the motor, and see how powerful it feels. See if you can stop it easily with your fingers. This may indicate a bad motor or bad wiring.
+- ### **BMG Clockwork**
+    - Try turning the plastic gear with your finger with the motor turned off and filament unloaded. It should be relatively easy. *If there is too much resistance:* 
+        - Ensure that you have a small amount of [backlash in the plastic gear.](#bmg-clockwork-backlash-issues)
+            - If they are pushed together too hard, it will cause resistance.
+        - Ensure that your drive shaft is not rubbing against the motor:
+            - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
+            - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

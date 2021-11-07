@@ -544,11 +544,11 @@ There are multiple things you can do to minimize overheating with ABS.
 **1) Increase fan speeds.**
 
 - The higher your chamber temperature is, the more fan speed you will need.
-- Use constant fan speeds. For filaments that shrink, **varying fan speeds during a print will cause inconsistent layers and banding.** Some layers will essentially shrink more than others.
+- Use constant fan speeds when possible. For filaments that shrink, **varying fan speeds during a print will cause inconsistent layers and banding.** Some layers will essentially shrink more than others.
 - You probably need more cooling than you think. 
     - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
         - For large plates, I use 40% fan.
-        - For single small objects, I use up to 80% fan.
+        - For small numbers of small objects, I use up to 80% fan.
     - For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
         - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
 - If your prints are curling away from the bed even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.

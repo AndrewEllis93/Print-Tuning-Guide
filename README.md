@@ -197,7 +197,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - ![](Images/FirstLayer-PrintExample.jpg) 
 ### Too Much Squish
 
-- Can't see any lines, or the lines are starting to fade:
+- Can't see any lines, or the lines are starting to fade (smooth PEI):
 
     - ![](Images/FirstLayer-TooMuchSquish2.png) ![](Images/FirstLayer-TooMuchSquish1.png) 
 
@@ -438,9 +438,9 @@ The below methods I've found to have error of up to 5% (sometimes even more) - w
         - The objects are too small. It's normal for [smaller infill areas to look a bit more overextruded than larger infill areas.](#small-infill-areas-look-overextruded)
 
 ### Notes on Dimensional Accuracy
-I find the below method to result in prints that are within my personal acceptable tolerances, and work well for Voron parts. 
+I find the below method to result in prints that are within my personal acceptable tolerances, and work well for Voron parts. It's an aesthetics-first approach that also happens to get "good enough" dimensional accuracy in my experience.
 
-Voron parts are designed both for some shrinkage, and for reasonable tolerances, so **don't go crazy with calipers and comparing measurements to CAD/STL dimensions.** 
+**Voron parts are designed for some shrinkage**, and for reasonable tolerances, so don't go crazy with calipers and comparing measurements to CAD/STL dimensions. In many cases they are not intended to match.
 
 With the Voron test prints, as long as:
 - The thread tests screw together nicely, and
@@ -448,11 +448,13 @@ With the Voron test prints, as long as:
 
 Then you are pretty much good to go.
 
-If dimensional accuracy is your top priority for other projects: 
-- Firstly, adjust your expectations. Remember, our 3D printers are hobby-grade glorified hot glue guns, not CNC. You will not reliably get 0.005mm tolerances everywhere.
-- The first thing I would try would be to adjust EM based on part dimensions or fitment, and use the below method to tune *top layer flow separately* for aesthetics and flush mating surfaces.
-- You may also need to play with shrinkage compensation, part scaling, or CAD dimensions since we are dealing with ABS. Or you can print in a material with less shrinkage.
-- There is also some debate around whether you should calibrate your A/B (or X/Y) axes. I have never found this necessary, however. 
+**If dimensional accuracy is your top priority for other projects:**
+- Firstly, adjust your expectations. Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
+- You likely need to play with part scaling, CAD dimensions, or even slicer shrinkage compensation since we are dealing with ABS. ABS shrinks a fair bit, and the nature of FDM can also make shrinkage a bit less predicatable. 
+    - The best place to accomodate for shrinkage is in the part design itself. 
+    - Consider using a different plastic with less shrinkage, or even filled ABS.
+- You can fine-tune EM based on part dimensions or fitment, and use my method to tune top layer flow separately for aesthetics and flush mating surfaces.
+- There is some debate around whether you should calibrate your A/B (or X/Y) axes. I have never found this necessary, however. 
 
 You will have to find the method that works best for you. I am considering extremely tight dimensional accuracy outside the scope of this guide. 
 ## Method

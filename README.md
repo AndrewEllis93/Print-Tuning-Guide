@@ -36,7 +36,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)
     - [Notes on Dimensional Accuracy](#notes-on-dimensional-accuracy)
     - [Method](#method-2)
-    - [A Note About Pressure Advance & EM](#a-note-about-pressure-advance--em)
+    - [The Relationship Between Pressure Advance & EM](#the-relationship-between-pressure-advance--em)
 - [Cooling and Layer Times](#cooling-and-layer-times)
     - [Signs of Overheating](#signs-of-overheating)
     - [How to Fix It](#how-to-fix-it)
@@ -458,7 +458,7 @@ Then you are pretty much good to go.
 
 You will have to find the method that works best for you. I am considering extremely tight dimensional accuracy outside the scope of this guide. 
 ## Method
-By far the best method I have found is purely visual/tactile.
+The best method I have found is purely visual/tactile.
 
 We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
@@ -466,19 +466,17 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 - **40+% Infill**\
     We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. \
     We still need enough to adequately support the top layers.
-- **120% Infill [Line Width](#a-note-about-line-width)** \
-    This increases infill density if you usually run thicker infill than this.
 - **100% Top Layer [Line Width](#a-note-about-line-width)**\
-    This is more subject to interpretation, but I find 100% to have good results.
+    This is more subject to interpretation, but I find 100% to have good results. It has a nice finish and tends to show off EM differences the best.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
 - **Monotonic (filled)** top infill pattern\
     Make sure that this is not set to "ironing". If not available, use rectalinear or "lines" instead (depends on slicer).
 - **30mm/s Solid & Top Solid Infill Speed***\
     This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results.\
-    <sup>\* If your pressure advance is well tuned, you may actually get more "true to life"/accurate results printing at your normal print speeds. If your pressure advance is off, however, it will [throw you off further.](#a-note-about-pressure-advance--em)</sup>
+    <sup> - *If your pressure advance is well tuned, you may actually get more "true to life"/accurate results printing at your normal print speeds. If your pressure advance is off, however, it can [throw you off further.](#a-note-about-pressure-advance--em)</sup>
 - **High Fan Speed**\
-    As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag.
+    As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag. This depends on your fan, maybe around 80% with AB-BN or 100% with the stock 4020 fan.
 
 **Steps:**
 
@@ -510,7 +508,7 @@ This is not just a trick of the light. Shininess is not always the best indicato
 
 ![](Images/EMPrints-Fine.png) 
 
-### A Note About Pressure Advance & EM
+### The Relationship Between Pressure Advance & EM
 Remember: pressure advance changes the **distribution** of material, not the **amount** of material.
 
 Pressure advance and flow are interrelated, so tuning one can affect the other. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.

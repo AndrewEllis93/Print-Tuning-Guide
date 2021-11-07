@@ -62,12 +62,12 @@ Before you follow *any* tuning methods in this guide, ensure that:
 - Your nozzle is clean.
 - Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
 - **(!) Your nozzle is not partially clogged.**
-    - If your nozzle is partially clogged, you may not even notice.You may be able to print, but you will have an **extremely difficult time trying to tune**.
+    - If your nozzle is partially clogged, you may not even notice. You may be able to print, but you will have an **extremely difficult time trying to tune**.
         - Ensure that you can easily extrude by hand with the filament latch open.
         - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
 
 - Your thermistors are the correct types in your config.
-    - **(!) If you use NTC100K B3950 thermistors, please see [this](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152)** 
+    - **(!) If you use NTC100K B3950 thermistors, please see [this.](https://discord.com/channels/460117602945990666/461133450636951552/896057891264561152)** 
         - *(if the link is not working, check the Voron Discord server in #slicers_and_print_help, there is a pinned message from mallcop)*
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
@@ -216,12 +216,6 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 - **(!)** Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 
-- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
-    - You should do this even for brand new surfaces.
-    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
-    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
-    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
-
 - **Smooth PEI:**
     - **Scuff it up** with a [Scotch-Brite scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
         - The rough side of a fresh sponge, ~800-1000 grit sandpaper, or other brands of scouring pads could also work.
@@ -231,6 +225,12 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 - **Textured PEI:**
     - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
+
+- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
+    - You should do this even for brand new surfaces.
+    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
+    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
+    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
     - Stick to well-known brands. 
@@ -280,11 +280,9 @@ The only modifications you should make are these:
 
 You should now see increasing pressure advance values reporting to the g-code terminal as the print progresses.
 
-
-
 <sup>\* *Certain patterns in your start g-code can cancel the tuning tower. \
 \* It does not matter how quickly you enter the command, as it is based on height.*\
-\* Alternatively, you can temporarily add the tuning tower command after your start g-code</sup>
+\* Alternatively, you can temporarily add the tuning tower command after your start g-code.</sup>
 
 **4)** Allow the print to run until it starts showing obvious issues/gaps. Then you may cancel.
 
@@ -872,7 +870,7 @@ These patterns can be subtle (lumps) or sharp like the above section's photo.
 - You may have a bad/poor quality linear rail.
 
 ### Narrowing it Down
-Print two wide square objects, one in normal orentation, and one at 45 degrees. \
+Print two wide square objects, one in normal orientation, and one at 45 degrees. \
 Inspect the object to see which axes the artifacts appear most prominent in.
 
 *(components in each section are in order of likelihood)*

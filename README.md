@@ -644,7 +644,7 @@ We will be printing these retraction towers at three different temperatures. If 
     **8) (!) Arrange the towers front to back**\* **on your build plate.**
     - These objects are printed one at a time. **This ensures that they are not knocked over by the gantry/toolhead.** 
     - Arrange them from the hottest tower at the front, to coolest tower at the back.
-        - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros)
+        - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros). 
     - ![](Images/Retraction-Sliced-FrontToBack.png)
 
      <sup>\* If you are using a different kinematic system than CoreXY/i3 cartesian, you may need to use a different arrangement. For example, a cross gantry would need diagonal.</sup>
@@ -662,8 +662,7 @@ After tuning flow and pressure advance, you may still have some pinholes where y
 
 This is *not necessarily* an indicator that your flow or pressure advance are wrong, though they can impact it. 
 
-*Some people have widely varying overlap settings. You will need to tune this for yourself. I am still figuring out why it varies between people.* \
-*The current theory is that it may be impacted by line width, but I have not yet tested this theory.*
+*Some people have widely varying overlap settings. You will need to tune this for yourself. I am still figuring out why it varies between people. It may be impacted by line width, but I have not yet tested this theory.*
 
 **Simply increase "infill/perimeter overlap" (PS/SS) until satisfied.**
 

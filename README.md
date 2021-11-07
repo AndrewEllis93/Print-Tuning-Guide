@@ -620,7 +620,7 @@ We will be printing these retraction towers at three different temperatures. If 
 - ![](Images/Retraction-Params.png) 
 
     - **Start temp:**
-        - Set a **bit higher** than your normal printing temps.
+        - Set a **bit higher** than your normal printing temps (maybe around 10C higher).
             - For this example, I will be using 255C with KVP ABS.
     - **Step:**
         - Direct drive: **0.1mm**

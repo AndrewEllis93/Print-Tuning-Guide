@@ -30,7 +30,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Build Surface Adhesion](#build-surface-adhesion)
 - [Pressure Advance](#pressure-advance)
     - [Tower Method (Simple)](#tower-method-simple)
-    - [Lines Method (Advanced)](#marlin-method-advanced)
+    - [Lines Method (Advanced)](#lines-method-advanced)
     - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
 - [Extrusion Multiplier](#extrusion-multiplier)
     - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)

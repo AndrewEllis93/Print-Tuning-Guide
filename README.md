@@ -494,7 +494,10 @@ I have found that most ABS falls within the 91-94% range.
 
 ### Examples
 
-This can be difficult to convey in photos. **You may have to zoom in to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.\
+This can be difficult to convey in photos. **You may have to zoom in to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.
+
+Focus your attention near the center of the test prints. It's normal for it to look a bit more overextruded near the edges and corners.
+
 You will get better at this through experience.
 #### 2% Intervals
 ![](Images/EMPrints-Coarse.png) 

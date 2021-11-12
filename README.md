@@ -849,7 +849,7 @@ Rule out electrical causes first.
         - For example, with a 2a motor, start around 0.8a.
     - To find the *maximum* `run_current`:
         - A good rule of thumb is to not exceed 70% of the rated current.
-        - For example, a 2a motor would be about 1.4a max *(2a * 0.7)*.
+        - For example, a 2a motor would be about 1.4a max.
         - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber temperature come into play. Margin of safety is also standard practice.
     - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
     - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
@@ -858,6 +858,20 @@ Rule out electrical causes first.
         - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
         - *You cannot accurately gauge this by feel.*
     - **TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.**
+- Check your crimps. Ensure that none of the pins are backing out of the housings.
+    - If any pins are backing out, it's possible that you may have crimped incorrectly. 
+        - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers or similar until you feel them click into place.
+        - Incorrectly crimping microfit pins is very common, and an easy mistake to make.
+            - *Male* pins go into the *female* housings, and vice versa.
+                - ![](Images/Troubleshooting/LayerShifting/Microfit-Housings.jpg)
+            - The crimped side of the pins should be facing *towards the latch*, as shown above.
+            - The female pins (that go into the male housings) have *three* sets of arms. You should only crimp the lower two.
+                - DO NOT CRIMP THESE ARMS.
+                - ![](Images/Troubleshooting/LayerShifting/Microfit-Female.png)
+            - **Example of correct crimps:**
+                - ![](Images/Troubleshooting/LayerShifting/Microfit-Crimps.png)
+
+- Ensure that your wiring is not damaged. 
 
 ### Mechanical
 - With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.

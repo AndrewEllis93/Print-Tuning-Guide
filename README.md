@@ -833,9 +833,8 @@ If there is much resistance, *figure out where it is coming from:*
 
 ## Layer Shifting
 ![](Images/Troubleshooting/LayerShifting/1.png)
-![](Images/Troubleshooting/LayerShifting/2.png)
 
-There are a number of possible causes for layer shifting.
+![](Images/Troubleshooting/LayerShifting/2.png)
 ### Electrical
 - #### Motor Currents
     - Check your motor currents. Ensure that your `run_current`s configured for your A/B/X/Y motors are correct. 
@@ -882,9 +881,10 @@ There are a number of possible causes for layer shifting.
 - #### Wiring
     - Ensure that you are using high strand count wire, of 24awg (0.25 mm²) or thicker.
         - Low strand count wires / solid core wire will break in the drag chains with repeated bending. These breaks usually will not be visible, as they occur inside of the insulation.
+        - You should always run your own wire through the drag chains. Don't trust the wire that came with anything.
     - Ensure that your wiring is not damaged, shorted, or caught under any screw heads. Check continuity.
 ### Mechanical
-- With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
+- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda) have a history of poor quality. You may have to run lower speeds/accels and possibly higher currents with off-brand motors.
 - Identify which axis the shifting is occuring in by inspecting your prints. \
 The circles represent a printed object shifting in the direction of the arrows.
 
@@ -896,14 +896,17 @@ The circles represent a printed object shifting in the direction of the arrows.
     - **Cartesian:**
         - ![](Images/Troubleshooting/LayerShifting/X.jpg)![](Images/Troubleshooting/LayerShifting/Y.jpg)
 
+- With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
+- Pull on each belt and compare the resistance.
 - Once you have indentified the problem axis, go through and check that entire axis/belt path. Find the source(s) of the mechanical resistance.
 - Make sure the belts are routed correctly.
     - Check for belt dust. This can indicate rubbing or misrouting.
     - A common mistake is to accidentally route the belts around the plastic post in the back of the A/B drives:
         - ![](Images/Troubleshooting/LayerShifting/Misrouted-Belt.png)
-    - Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
     - Ensure that the belts are not rubbing/riding up against any of the bearing flanges.
         - It's normal that they may not run perfectly centered. It's usually only an issue if they are rubbing.
+- Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
+- Try rotating the motors by hand. Sometimes a bad motor will be the cause of the resistance.
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

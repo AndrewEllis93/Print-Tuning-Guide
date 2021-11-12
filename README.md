@@ -849,23 +849,24 @@ If there is much resistance, *figure out where it is coming from:*
                 - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
                 - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
         - To find a good starting `run_current`:
-            - **Start with around 40% of rated current.**
-            - For example, with a 2a motor, start around 0.8a.
+            - **Start with around 40-50% of rated current.**
+            - For example, with a 2a motor, start around 0.8-1a.
         - To find the *maximum* `run_current`:
             - A good rule of thumb is to not exceed 70% of the rated current.
             - For example, a 2a motor would be about 1.4a max.
-            - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber temperature come into play. Margin of safety is also standard practice.
+            - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
         - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
         - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
             - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
             - Measure the temps when actually printing in a heat soaked chamber.
             - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
             - *You cannot accurately gauge this by feel.*
-        - **TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.**
+        - TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.
+    - Check your `hold_current` for each motor. A rule of thumb is about 70% of your `run_current`.
 - #### Crimps
-    - Check your crimps. Pull on each wire. Ensure that none of the pins are loose or starting to back out of the housings.
+    - Check your crimps. Pull on each wire. Ensure that none of the pins are starting to back out of the housings.
         - If any pins are backing out, it's possible that you may have crimped incorrectly. 
-            - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers or similar until you feel them click into place.
+            - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers, SIM card tool, or similar until you feel them click into place.
             - Incorrectly crimping microfit pins is very common, and an easy mistake to make.
                 - *Male* pins go into the *female* housings, and vice versa.
                     - ![](Images/Troubleshooting/LayerShifting/Microfit-Housings.jpg)
@@ -884,7 +885,9 @@ If there is much resistance, *figure out where it is coming from:*
         - You should always run your own wire through the drag chains. Don't trust the wire that came with anything.
     - Ensure that your wiring is not damaged, shorted, or caught under any screw heads. Check continuity.
 ### Mechanical
-- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda) have a history of poor quality. You may have to run lower speeds/accels and possibly higher currents with off-brand motors.
+- Try using z lift (z hop), and [check for print overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes. 
+    - Around 0.2mm of z lift is usually good.
+- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda) have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.
 - Identify which axis the shifting is occuring in by inspecting your prints. \
 The circles represent a printed object shifting in the direction of the arrows.
 
@@ -896,8 +899,9 @@ The circles represent a printed object shifting in the direction of the arrows.
     - **Cartesian:**
         - ![](Images/Troubleshooting/LayerShifting/X.jpg)![](Images/Troubleshooting/LayerShifting/Y.jpg)
 
-- With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
-- Pull on each belt and compare the resistance.
+- With the motors powered off: 
+    - Move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
+    - Also pull on each belt and compare the resistance.
 - Once you have indentified the problem axis, go through and check that entire axis/belt path. Find the source(s) of the mechanical resistance.
 - Make sure the belts are routed correctly.
     - Check for belt dust. This can indicate rubbing or misrouting.

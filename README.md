@@ -827,10 +827,7 @@ If there is much resistance, *figure out where it is coming from:*
 ![](Images/Troubleshooting/LayerShifting/1.png)
 ![](Images/Troubleshooting/LayerShifting/2.png)
 
-There are a number of possible causes for layer shifting, either electrical or mechanical.
-
-Rule out electrical causes first.
-
+There are a number of possible causes for layer shifting.
 ### Electrical
 
 - Firstly, check your motor currents. Ensure that your `run_current` for your A/B/X/Y motors are correct. 
@@ -865,13 +862,16 @@ Rule out electrical causes first.
             - *Male* pins go into the *female* housings, and vice versa.
                 - ![](Images/Troubleshooting/LayerShifting/Microfit-Housings.jpg)
             - The crimped side of the pins should be facing *towards the latch*, as shown above.
+            - The lower arms should be crimped onto the insulation, and the next arms should be crimped onto the bare wire.
             - The female pins (that go into the male housings) have *three* sets of arms. You should only crimp the lower two.
-                - DO NOT CRIMP THESE ARMS.
+                - **(!) DO NOT CRIMP THESE ARMS.**
                 - ![](Images/Troubleshooting/LayerShifting/Microfit-Female.png)
             - **Example of correct crimps:**
                 - ![](Images/Troubleshooting/LayerShifting/Microfit-Crimps.png)
+        - Do a "tug test". Ensure that the pins do not come out. 
+            - Microfits hold *very* strongly. The pins should be nearly impossible to pull out, in fact the wire will usually tear before they come out.
 
-- Ensure that your wiring is not damaged. 
+- Ensure that your wiring is not damaged. Check continuity.
 
 ### Mechanical
 - With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.

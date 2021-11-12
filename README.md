@@ -115,6 +115,9 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
     - If you are using a V2: 
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
         - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
+        - You may need to play with how tight your bed mounting screws are. 
+            - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
+            - I've found that if any are *too* loose, it can cause first layer consistency issues.
 
     - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
     Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.

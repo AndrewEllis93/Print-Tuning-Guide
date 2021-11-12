@@ -858,23 +858,24 @@ There are a number of possible causes for layer shifting.
         - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
         - *You cannot accurately gauge this by feel.*
     - **TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.**
-- Check your crimps. Ensure that none of the pins are backing out of the housings.
-    - If any pins are backing out, it's possible that you may have crimped incorrectly. 
-        - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers or similar until you feel them click into place.
-        - Incorrectly crimping microfit pins is very common, and an easy mistake to make.
-            - *Male* pins go into the *female* housings, and vice versa.
-                - ![](Images/Troubleshooting/LayerShifting/Microfit-Housings.jpg)
-            - The crimped side of the pins should be facing *towards the latch*, as shown above.
-            - The lower arms should be crimped onto the insulation, and the next arms should be crimped onto the bare wire.
-            - The female pins (that go into the male housings) have *three* sets of arms. You should only crimp the lower two.
-                - **(!) DO NOT CRIMP THESE ARMS.**
-                - ![](Images/Troubleshooting/LayerShifting/Microfit-Female.png)
-            - **Example of correct crimps:**
-                - ![](Images/Troubleshooting/LayerShifting/Microfit-Crimps.png)
-        - Do a "tug test". Ensure that the pins do not come out. 
-            - Microfits hold *very* strongly. The pins should be nearly impossible to pull out, in fact the wire will usually tear before they come out.
+- #### Crimps
+    - Check your crimps. Ensure that none of the pins are backing out of the housings.
+        - If any pins are backing out, it's possible that you may have crimped incorrectly. 
+            - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers or similar until you feel them click into place.
+            - Incorrectly crimping microfit pins is very common, and an easy mistake to make.
+                - *Male* pins go into the *female* housings, and vice versa.
+                    - ![](Images/Troubleshooting/LayerShifting/Microfit-Housings.jpg)
+                - The crimped side of the pins should be facing *towards the latch*, as shown above.
+                - The lower arms should be crimped onto the insulation, and the next arms should be crimped onto the bare wire.
+                - The female pins (that go into the male housings) have *three* sets of arms. You should only crimp the lower two.
+                    - **(!) DO NOT CRIMP THESE ARMS.**
+                    - ![](Images/Troubleshooting/LayerShifting/Microfit-Female.png)
+                - **Example of correct crimps:**
+                    - ![](Images/Troubleshooting/LayerShifting/Microfit-Crimps.png)
+            - Do a "tug test". Ensure that the pins do not come out. 
+                - Microfits hold *very* strongly. The pins should be nearly impossible to pull out, in fact the wire will usually tear before they come out.
 
-- Ensure that your wiring is not damaged. Check continuity.
+    - Ensure that your wiring is not damaged. Check continuity.
 
 ### Mechanical
 - With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.

@@ -885,9 +885,9 @@ If there is much resistance, *figure out where it is coming from:*
         - You should always run your own wire through the drag chains. Don't trust the wire that came with anything.
     - Ensure that your wiring is not damaged, shorted, or caught under any screw heads. Check continuity.
 ### Mechanical
-- Try using z lift (z hop), and [check for print overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes. 
+- Try using z lift (z hop), and [check your prints for signs of overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes. 
     - Around 0.2mm of z lift is usually good.
-- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda) have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.
+- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda/"Oukedj") have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.
 - Identify which axis the shifting is occuring in by inspecting your prints. \
 The circles represent a printed object shifting in the direction of the arrows.
 
@@ -903,7 +903,7 @@ The circles represent a printed object shifting in the direction of the arrows.
     - Move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
     - Also pull on each belt and compare the resistance.
 - Once you have indentified the problem axis, go through and check that entire axis/belt path. Find the source(s) of the mechanical resistance.
-- Make sure the belts are routed correctly.
+- Make sure your belts are routed correctly.
     - Check for belt dust. This can indicate rubbing or misrouting.
     - A common mistake is to accidentally route the belts around the plastic post in the back of the A/B drives:
         - ![](Images/Troubleshooting/LayerShifting/Misrouted-Belt.png)

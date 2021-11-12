@@ -52,7 +52,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - [Electrical](#electrical)
             - [Motor Currents](#motor-currents)
             - [Crimps](#crimps)
-            - [Other](#other)
+            - [Wiring](#wiring)
         - [Mechanical](#mechanical)
     - [PLA is Overheating](#pla-is-overheating)
     - [Pockmarks](#pockmarks)
@@ -816,7 +816,7 @@ If there is much resistance, *figure out where it is coming from:*
         - There is some confusion about different motor models. 
             - If you have the 20mm 1a LDO motor, try 0.65a. 
             - If you have the 17mm 1a LDO motor, try 0.35-0.4a.
-- Check your extruder motor crimps and wiring.
+- Check your extruder motor [crimps](#crimps) and wiring.
 - Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
 - Try rotating the extruder (if possible) without filament loaded. It should be easy.
@@ -871,21 +871,22 @@ There are a number of possible causes for layer shifting.
                 - *Male* pins go into the *female* housings, and vice versa.
                     - ![](Images/Troubleshooting/LayerShifting/Microfit-Housings.jpg)
                 - The crimped side of the pins should be facing *towards the latch*, as shown above.
-                - The lower arms should be crimped onto the insulation, and the next arms should be crimped onto the bare wire.
-                - The female pins (that go into the male housings) have *three* sets of arms. You should only crimp the lower two.
+                - The lower arms should be crimped onto the insulation, and the following arms should be crimped onto the bare wire.
+                - The female pins have *three* sets of arms. *You should only crimp the lower two.*
                     - **(!) DO NOT CRIMP THESE ARMS.**
                     - ![](Images/Troubleshooting/LayerShifting/Microfit-Female.png)
                 - **Example of correct crimps:**
                     - ![](Images/Troubleshooting/LayerShifting/Microfit-Crimps.png)
-            - Do a "tug test". Ensure that the pins do not come out. 
-                - Microfits hold *very* strongly. The pins should be nearly impossible to pull out, in fact the wire will usually tear before they come out.
-- #### Other
+            - Do a "pull test". Ensure that the pins do not come out. 
+                - Microfits hold *very* strongly. The pins should be nearly impossible to pull out. The wire will usually tear before they ever come out.
+- #### Wiring
+    - Ensure that you are using high strand count wire, of 24awg or thicker.
+        - Low strand count wires / solid core wire will break in the drag chains with repeated bending. These breaks usually will not be visible, as they occur inside of the insulation.
     - Ensure that your wiring is not damaged. Check continuity.
-
 ### Mechanical
 - With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
 - Identify which axis the shifting is occuring in by inspecting your prints. \
-The circle represents a printed object.
+The circles represent a printed object shifting in the direction of the arrows.
 
     - **CoreXY:**
         - When looking at your printer from the front, the B motor is on the left, and A is on the right. \

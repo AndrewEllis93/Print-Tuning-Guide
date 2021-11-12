@@ -896,10 +896,14 @@ The circles represent a printed object shifting in the direction of the arrows.
     - **Cartesian:**
         - ![](Images/Troubleshooting/LayerShifting/X.jpg)![](Images/Troubleshooting/LayerShifting/Y.jpg)
 
-- Once you have indentified the problem axis, check that entire belt path.
+- Once you have indentified the problem axis, go through and check that entire axis/belt path. Find the source(s) of the mechanical resistance.
 - Make sure the belts are routed correctly.
-    - A common mistake is to accidentally route the belts around the plastic post in the A/B drives:
+    - Check for belt dust. This can indicate rubbing or misrouting.
+    - A common mistake is to accidentally route the belts around the plastic post in the back of the A/B drives:
         - ![](Images/Troubleshooting/LayerShifting/Misrouted-Belt.png)
+    - Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
+    - Ensure that the belts are not rubbing/riding up against any of the bearing flanges.
+        - It's normal that they may not run perfectly centered. It's usually only an issue if they are rubbing.
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

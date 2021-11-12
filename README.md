@@ -50,7 +50,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Extruder Skipping](#extruder-skipping)
     - [Layer Shifting](#layer-shifting)
         - [Electrical](#electrical)
+            - [Motor Currents](#motor-currents)
             - [Crimps](#crimps)
+            - [Other](#other)
         - [Mechanical](#mechanical)
     - [PLA is Overheating](#pla-is-overheating)
     - [Pockmarks](#pockmarks)
@@ -835,32 +837,32 @@ If there is much resistance, *figure out where it is coming from:*
 
 There are a number of possible causes for layer shifting.
 ### Electrical
+- #### Motor Currents
+    - Check your motor currents. Ensure that your `run_current`s configured for your A/B/X/Y motors are correct. 
+        - **(!)** The below guidance is for **A/B/X/Y motors only**. 
+            - Extruder motors/pancake steppers are a bit different, as there is more variance between models.
 
-- Firstly, check your motor currents. Ensure that your `run_current` for your A/B/X/Y motors are correct. 
-    - **(!)** The below guidance is for **A/B/X/Y motors only**. 
-        - Extruder motors/pancake steppers are a bit different, as there is more variance between models.
-
-    - **You should start with a more conservative current, and only increase it if you have issues.**
-    - Some motors work better with higher currents, some motors work better with lower currents. It can depend on the manufacturer/model.
-        - If you are using BoM motors, check the stock configs.
-        - Check in Discord to see what others are running.
-        - For example: 
-            - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
-            - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
-    - To find a good starting `run_current`:
-        - **Start with around 40% of rated current.**
-        - For example, with a 2a motor, start around 0.8a.
-    - To find the *maximum* `run_current`:
-        - A good rule of thumb is to not exceed 70% of the rated current.
-        - For example, a 2a motor would be about 1.4a max.
-        - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber temperature come into play. Margin of safety is also standard practice.
-    - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
-    - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
-        - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
-        - Measure the temps when actually printing in a heat soaked chamber.
-        - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
-        - *You cannot accurately gauge this by feel.*
-    - **TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.**
+        - **You should start with a more conservative current, and only increase it if you have issues.**
+        - Some motors work better with higher currents, some motors work better with lower currents. It can depend on the manufacturer/model.
+            - If you are using BoM motors, check the stock configs.
+            - Check in Discord to see what others are running.
+            - For example: 
+                - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
+                - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
+        - To find a good starting `run_current`:
+            - **Start with around 40% of rated current.**
+            - For example, with a 2a motor, start around 0.8a.
+        - To find the *maximum* `run_current`:
+            - A good rule of thumb is to not exceed 70% of the rated current.
+            - For example, a 2a motor would be about 1.4a max.
+            - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber temperature come into play. Margin of safety is also standard practice.
+        - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
+        - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
+            - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
+            - Measure the temps when actually printing in a heat soaked chamber.
+            - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
+            - *You cannot accurately gauge this by feel.*
+        - **TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.**
 - #### Crimps
     - Check your crimps. Ensure that none of the pins are backing out of the housings.
         - If any pins are backing out, it's possible that you may have crimped incorrectly. 
@@ -877,7 +879,7 @@ There are a number of possible causes for layer shifting.
                     - ![](Images/Troubleshooting/LayerShifting/Microfit-Crimps.png)
             - Do a "tug test". Ensure that the pins do not come out. 
                 - Microfits hold *very* strongly. The pins should be nearly impossible to pull out, in fact the wire will usually tear before they come out.
-
+- #### Other
     - Ensure that your wiring is not damaged. Check continuity.
 
 ### Mechanical

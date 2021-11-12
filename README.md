@@ -850,7 +850,7 @@ Rule out electrical causes first.
     - To find the *maximum* `run_current`:
         - A good rule of thumb is to divide the max rated current by 1.4.
         - For example, a 2a motor would be about 1.43a max *(2a / 1.4)*.
-        - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber temp come into play.
+        - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber temp come into play. It's also standard practice to keep a margin of safety.
     - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
     - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
         - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.

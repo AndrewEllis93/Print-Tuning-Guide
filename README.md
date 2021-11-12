@@ -887,7 +887,8 @@ If there is much resistance, *figure out where it is coming from:*
 ### Mechanical
 - Try using z lift (z hop), and [check your prints for signs of overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes. 
     - Around 0.2mm of z lift is usually good.
-- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda/"Oukedj") have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.
+- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda) have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.
+    - Some Oukeda motors have been labeled as "Oukedj". They can't even spell their own brand name correctly.
 - Identify which axis the shifting is occuring in by inspecting your prints. \
 The circles represent a printed object shifting in the direction of the arrows.
 

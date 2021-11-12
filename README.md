@@ -864,7 +864,7 @@ There are a number of possible causes for layer shifting.
             - *You cannot accurately gauge this by feel.*
         - **TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.**
 - #### Crimps
-    - Check your crimps. Ensure that none of the pins are backing out of the housings.
+    - Check your crimps. Pull on each wire. Ensure that none of the pins are loose or starting to back out of the housings.
         - If any pins are backing out, it's possible that you may have crimped incorrectly. 
             - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers or similar until you feel them click into place.
             - Incorrectly crimping microfit pins is very common, and an easy mistake to make.
@@ -880,9 +880,9 @@ There are a number of possible causes for layer shifting.
             - Do a "pull test". Ensure that the pins do not come out. 
                 - Microfits hold *very* strongly. The pins should be nearly impossible to pull out. The wire will usually tear before they ever come out.
 - #### Wiring
-    - Ensure that you are using high strand count wire, of 24awg or thicker.
+    - Ensure that you are using high strand count wire, of 24awg (0.25 mm²) or thicker.
         - Low strand count wires / solid core wire will break in the drag chains with repeated bending. These breaks usually will not be visible, as they occur inside of the insulation.
-    - Ensure that your wiring is not damaged. Check continuity.
+    - Ensure that your wiring is not damaged, shorted, or caught under any screw heads. Check continuity.
 ### Mechanical
 - With the motors powered off, move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
 - Identify which axis the shifting is occuring in by inspecting your prints. \
@@ -896,6 +896,10 @@ The circles represent a printed object shifting in the direction of the arrows.
     - **Cartesian:**
         - ![](Images/Troubleshooting/LayerShifting/X.jpg)![](Images/Troubleshooting/LayerShifting/Y.jpg)
 
+- Once you have indentified the problem axis, check that entire belt path.
+- Make sure the belts are routed correctly.
+    - A common mistake is to accidentally route the belts around the plastic post in the A/B drives:
+        - ![](Images/Troubleshooting/LayerShifting/Misrouted-Belt.png)
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

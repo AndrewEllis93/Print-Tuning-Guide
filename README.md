@@ -48,6 +48,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
     - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
     - [Extruder Skipping](#extruder-skipping)
+    - [Layer Shifting](#layer-shifting)
     - [PLA is Overheating](#pla-is-overheating)
     - [Pockmarks](#pockmarks)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
@@ -821,6 +822,50 @@ If there is much resistance, *figure out where it is coming from:*
         - Ensure that your drive shaft is not rubbing against the motor:
             - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
             - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
+
+## Layer Shifting
+![](Images/Troubleshooting/LayerShifting/1.png)
+![](Images/Troubleshooting/LayerShifting/2.png)
+
+There are a number of possible causes for layer shifting, either electrical or mechanical.
+
+- Firstly, check your motor currents. Ensure that your `run_current` for your A/B/X/Y motors are correct. 
+    - **(!)** The below guidance is for **A/B/X/Y motors only**. 
+        - Extruder motors/pancake steppers are a bit different, as there is more variance between models.
+
+    - **You should start with a more conservative current, and only increase it if you have issues.**
+    - Some motors work better with higher currents, some motors work better with lower currents. It can depend on the manufacturer/model.
+        - If you are using BoM motors, check the stock configs.
+        - Check in Discord to see what others are running.
+        - For example: 
+            - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
+            - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
+    - To find a good starting `run_current`:
+        - **Start with around 50% of rated current.**
+        - For example, with a 2a motor, start around 1a.
+    - To find the *maximum* `run_current`:
+        - Divide the max rated current by sqrt(2). 
+            - sqrt(2) can be approximated as 1.41.
+        - For example, a 2a motor would be about 1.4a max *(2a / 1.41)*.
+    - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
+    - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
+        - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
+        - Measuse the temps when actually printing in a heat soaked chamber.
+        - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
+        - *You cannot accurately gauge this by feel.*
+    - **TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.**
+
+- Identify which axis the shifting is occuring in. 
+
+    - **CoreXY:**
+        - ![](Images/Troubleshooting/LayerShifting/A.jpg)![](Images/Troubleshooting/LayerShifting/B.jpg)
+        - When looking at your printer from the front, the B motor is on the left, and A is on the right. \
+        <sup><sup>....It goes "BBBAA" like a sheep. Sounds silly, but that's how I remember it.</sup></sup>
+    - **Cartesian:**
+        - ![](Images/Troubleshooting/LayerShifting/X.jpg)![](Images/Troubleshooting/LayerShifting/Y.jpg)
+- If the layer shifting occurs only in one axis:
+- If the layer shifting occurs in both axes:
+
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

@@ -725,7 +725,7 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 ![](Images/Troubleshooting/Bulging.png) 
 ![](Images/Troubleshooting/Bulging2.png) 
 
-- Disable any "extra perimeters" and "supporting dense infill" settings (PS/SS)
+- Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
 - [Reduce perimeter accelerations considerably.](https://github.com/AndrewEllis93/Ellis-PIF-Profile#acceleration-control)
 ## Bulges at STL Vertices
 ![](Images/Troubleshooting/Vertex-Bulges.png)

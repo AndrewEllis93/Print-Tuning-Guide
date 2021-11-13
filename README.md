@@ -44,12 +44,14 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Determining Motor Currents](#determining-motor-currents)
 - [Determining Maximum Speeds and Acclerations](#determining-maximum-speeds-and-accelerations)
-    - [Usage of the TEST_SPEED Macro](#usage-of-the-test-speed-macro)
+    - [Method](#method-4)
+    - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
 - [Troubleshooting](#troubleshooting)
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
     - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
+    - [Crimps](#crimps)
     - [Extruder Skipping](#extruder-skipping)
     - [Layer Shifting](#layer-shifting)
         - [Electrical](#electrical)
@@ -738,21 +740,41 @@ You may also get higher maximum accelerations by utilizing input shaper.
 
 Tune maximum speeds first, THEN tune accelerations separately.
 
-**1.** Add [this macro](Macros/TEST_SPEED.cfg) to your `printer.cfg` file.
+**1)** Add [this macro](Macros/TEST_SPEED.cfg) to your `printer.cfg` file.
 
-**2.** Run the `TEST_SPEED` macro (instructions below) with increasing speeds [until you experience skipping.](#determining-if-skipping-occured)
-- Start with a small number of iterations,
+**2)** Lower your `max_accel` in your config.
+- We want to test speeds and accels *separately*. This helps to remove the other as a variable.
 
-**3.** Once you have found a rough maximum, run the test again with a large number of iterations.
-- This is essentially a torture test, similar to overclocking a PC.
+**3)** Run the `TEST_SPEED` macro using the [instructions below](#usage-of-the-test_speed-macro) with increasing speeds [until you experience skipping.](#determining-if-skipping-occured) 
+- Start with a small number of iterations.
+    - Example: `TEST_SPEED SPEED=350 ITERATIONS=2`
+- Once you experience skipping, back the speed down and try again until you no longer get any skipping.
 
-**4.** Use a slightly lower value than your results.
+**4)** Once you have found a rough maximum, run the test again with a large number of iterations.
+- This is essentially an extended torture test.
+    - Example: `TEST_SPEED SPEED=400 ITERATIONS=50`
+- If you experience any skipping during extended tests, back the speed down again.
+
+**5)** *Use a slightly lower value than your results.*
 - Sometimes a maximum that works perfectly, even in extended torture tests, can skip during actual prints. Go a bit lower for a margin of safety.
 
-**5.** Repeat the process with accelerations.
+**6)** Save your new maximum velocity to `max_velocity` in your config.
+
+**7)** Return your `max_accel` in your config to its previous value. *(changed in step 2)*
+
+**8)** Repeat the process, this time increasing accelerations rather than speeds.
+- Example: `TEST_SPEED ACCEL=400 ITERATIONS=2`
+
+**9)** Save your new maximum acceleration to `max_accel` in your config.
+- Set your `max_accel_to_decel` to *half* of this value.
 
 ## Usage of the TEST_SPEED Macro
-This macro will home, QGL *(if your printer uses QGL)*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. You will [watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
+
+The macro is available [here.](Macros/TEST_SPEED.cfg)
+
+This macro will home, QGL *(if your printer uses QGL)*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
+
+You will [watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 
 ### Available arguments
 - `SPEED` - Speed in mm/sec. 
@@ -855,6 +877,22 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
         - ![](Images/Troubleshooting/AboveBridgeFlow-Reset.png)
 - If these do not fix it, it might instead be an [overheating issue.](#cooling-and-layer-times)
 
+## Crimps
+- Pull on each wire. Ensure that none of the pins are starting to back out of the housings.
+    - If any pins are backing out, it's possible that you may have crimped incorrectly. 
+        - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers, SIM card tool, or similar until you feel them click into place.
+        - Incorrectly crimping microfit pins is very common, and an easy mistake to make.
+            - *Male* pins go into the *female* housings, and vice versa.
+                - ![](Images/Troubleshooting/Microfit-Housings.jpg)
+            - The crimped side of the pins should be facing *towards the latch*, as shown above.
+            - The lower arms should be crimped onto the insulation, and the following arms should be crimped onto the bare wire.
+            - The female pins have *three* sets of arms. *You should only crimp the lower two.*
+                - **(!) DO NOT CRIMP THESE ARMS.**
+                - ![](Images/Troubleshooting/Microfit-Female.png)
+            - **Example of correct crimps:**
+                - ![](Images/Troubleshooting/Microfit-Crimps.png)
+        - Do a "pull test". Ensure that the pins do not come out. 
+            - Microfits hold *very* strongly. The pins should be nearly impossible to pull out. The wire will usually tear before they ever come out.
 ## Extruder Skipping
 These skips will typically be wider than [pockmarks.](#pockmarks)
 
@@ -937,23 +975,8 @@ If there is much resistance, *figure out where it is coming from:*
 ### Electrical
 - #### Motor Currents
     - Check your motor currents. Ensure that your `run_current`s configured for your A/B/X/Y motors are correct. See [this section.](#determining-motor-currents)
-- #### Crimps
-    - Check your crimps. Pull on each wire. Ensure that none of the pins are starting to back out of the housings.
-        - If any pins are backing out, it's possible that you may have crimped incorrectly. 
-            - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers, SIM card tool, or similar until you feel them click into place.
-            - Incorrectly crimping microfit pins is very common, and an easy mistake to make.
-                - *Male* pins go into the *female* housings, and vice versa.
-                    - ![](Images/Troubleshooting/LayerShifting/Microfit-Housings.jpg)
-                - The crimped side of the pins should be facing *towards the latch*, as shown above.
-                - The lower arms should be crimped onto the insulation, and the following arms should be crimped onto the bare wire.
-                - The female pins have *three* sets of arms. *You should only crimp the lower two.*
-                    - **(!) DO NOT CRIMP THESE ARMS.**
-                    - ![](Images/Troubleshooting/LayerShifting/Microfit-Female.png)
-                - **Example of correct crimps:**
-                    - ![](Images/Troubleshooting/LayerShifting/Microfit-Crimps.png)
-            - Do a "pull test". Ensure that the pins do not come out. 
-                - Microfits hold *very* strongly. The pins should be nearly impossible to pull out. The wire will usually tear before they ever come out.
 - #### Wiring
+    - [Check your crimps.](#crimps)
     - Ensure that you are using high strand count wire, of 24awg (0.25 mm²) or thicker.
         - Low strand count wires / solid core wire will break in the drag chains with repeated bending. These breaks usually will not be visible, as they occur inside of the insulation.
         - You should always run your own wire through the drag chains. Don't trust the wire that came with anything.
@@ -1000,9 +1023,10 @@ Sometimes layer shifting can occur because you are simply asking too much of you
     - Input shaper also allows for higher accelerations, not just less ringing.
 - Disable stealthcop.
 - Ensure that you are not running your microstepping too high.
-- Check [this section](#determining-maximum-speeds-and-accelerations). 
+- Check [this section](#determining-maximum-speeds-and-accelerations) to test.
     - Try running the `TEST_SPEED` macro without any arguments to test your current maximums.
-- You can try increasing motor currents. Don't exceed the maximums described in [this section](#determining-motor-currents).
+- You can try increasing motor currents. Don't exceed the maximums described in [this section](#determining-motor-currents). 
+    - Ensure that you have proper stepper driver cooling before doing this.
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

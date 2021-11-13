@@ -52,9 +52,6 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Extruder Skipping](#extruder-skipping)
     - [Layer Shifting](#layer-shifting)
         - [Electrical](#electrical)
-            - [Crimps](#crimps)
-            - [Wiring](#wiring)
-            - [Thermal](#thermal)
         - [Mechanical](#mechanical)
         - [Speeds and Accelerations](#speeds-and-accelerations)
     - [PLA is Overheating](#pla-is-overheating)
@@ -695,65 +692,96 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 - To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
 
 # Determining Motor Currents
-- **(!)** The below guidance is for **A/B/X/Y motors only**. 
+**(!)** The below guidance is for **A/B/X/Y motors only**.
 
-    - Extruder motors/pancake steppers are a bit different, as there is more variance between models.
-- **You should start with a more conservative current, and only increase it if you have issues**.
-    - You can also be able to get additional motor performance by increasing currents, but more on that later.
-- Some motors work better with higher currents, some motors work better with lower currents. It can depend on the manufacturer/model.
+Extruder motors/pancake steppers are a bit different, as there is more variance between models. I will add this at a future date.
+
+- **Check the with the community first.**.
     - If you are using BoM motors, check the stock configs.
     - Check in Discord to see what others are running.
-    - For example: 
-        - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
-        - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
-- To find a good starting `run_current`:
-    - **Start with around 40-50% of rated current.**
-    - For example, with a 2a motor, start around 0.8-1a.
-- To find the *maximum* `run_current`:
-    - A good rule of thumb is to not exceed 70% of the rated current.
-    - For example, a 2a motor would be about 1.4a max.
-    - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
+
+- **You should start off with a more conservative** `run_current`.
+    - You may be able to attain additional motor performance by increasing currents, but come back to that later. **Get your printer working reliably first.**
+
+- **Some motors vary.**
+    - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
+    - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
+
+- We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
+- TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.
+
+## Determining Initial `run_current`:
+Start with around **40-50%** of rated current.
+
+For example, with a 2a motor, start around 0.8-1a.
+## Determining Maximum `run_current`:
+A good rule of thumb is to not exceed **70%** of the rated current.
+
+For example, a 2a motor would be about 1.4a max.
+
+
 - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
 - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
-    - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
     - Measure the temps when actually printing in a heat soaked chamber.
-    - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
+        - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
     - *You cannot accurately gauge this by feel.*
-- TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.
-- Check your `hold_current` for each motor. A rule of thumb is about 70% of your `run_current`.
+    - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
+## Determining `hold_current`
+A rule of thumb is about 70% of your `run_current`.
 # Determining Maximum Speeds and Accelerations
+
+You may be able to get higher performance out of your motors by increasing currents (see previous section), but be careful not to push them too high.
+
+You may also get higher maximum accelerations by utilizing input shaper.
+
+Tune maximum speeds first, THEN tune accelerations separately.
+
 **1.** Add [this macro](Macros/TEST_SPEED.cfg) to your printer.cfg file.
 
-**2.** Run the macro: `TEST_SPEED`
-- This macro will home, QGL (if your printer uses QGL), move the toolhead in a test pattern using the `max_velocity` and `max_accel` from your config, and home again.
+**2.** Run the `TEST_SPEED` macro (instructions below) with increasing speeds or accelerations until you experience skipping.
 
-**3.** Watch and listen for skipping. 
+**3.** Once you have found a rough maximum, run the test again with a large number of iterations (as a "torture test")
+
+**4.** Use a slightly lower value than your results.
+
+## Usage of the TEST_SPEED Macro
+This macro will home, QGL (if your printer uses QGL), move the toolhead in a test pattern using the `max_velocity` and `max_accel` from your config, and home again.
+
+You will compare the g-code terminal output from before and after.
+
+### Available arguments
+- `SPEED` - Speed in mm/sec. 
+    - *Default: your `max_velocity`*
+- `ACCEL` - Acceleration 
+    - *Default: your `max_accel`*
+- `ITERATIONS` - Number of times to repeat the test pattern 
+    - *Default: 5*
+- `BOUND` - How far to inset the test pattern. 
+    - *Default: 20mm (from the edges)*
+
+**(!)** *Note that any speed or acceleration you input into this macro can **exceed** 
+`max_velocity` and `max_accel` from your config. 
+### Example
+
+`TEST_SPEED SPEED=300 ACCEL=5000 ITERATIONS=2` 
+
+### Determining if Skipping Occured
+
+**1.** Watch and listen. 
 - Often, the skipping will be very obvious. Your toolhead may start shuddering and making erratic movements and loud noises.
+- Even if no skipping manifests, your motors might start to make loud resonant noises. *This can be an indication that you are near the limit, and should consider backing off a bit.*
 
-**4.** If there was no apparent major skipping, inspect the g-code terminal output to check for minor skipping.
-- Compare the numbers for the X and Y steppers for the first and second homing.
-- ![](Images/TEST_SPEED_Compare.png) 
+**2.** If there was no apparent major skipping, check for minor skipping:
+
+- Inspect the g-code terminal output:
+    - Compare the numbers for the X and Y steppers for the first and second homing.
+    - ![](Images/TEST_SPEED_Compare.png) 
     - These numbers represent the microstep position of the toolhead at X/Y max position.
-    - Ensure that the difference between these numbers **has not exceeded a full step.***
-        - For example, I am running `microsteps` of **32** for my A and B motors. 
-        - I would ensure that the values for each axis have not changed by more than **32**.
+    - Ensure that the difference between these numbers **has not exceeded a full step.**
+        - For example, I am running `microsteps` of **32** for my A and B motors. I would ensure that the values for each axis have not changed by more than **32**.
         - If the number has deviated more than this, that means that the corresponding axis has likely skipped.
 
     \* *Measuring to a full step just accounts for endstop variance. It does not necessarily mean that any microsteps were lost. Endstops are only so accurate.*
-
-**5.** If skipping occured, try decreasing speeds/accels until they resolve. 
-
-**6**. Repeat the process, slowly increasing speed to find your maximum.
-
-Find your maximum speed, *then* find your maximum acceleration.
-- Available arguments:
-    - `SPEED` - Speed in mm/sec
-    - `ACCEL` - Acceleration
-    - `ITERATIONS` - Number of times to repeat the test pattern
-    - `BOUND` *(optional)* - How far to inset the test pattern. Default is 20mm from the edges.
-    - **(!)** *Note that any speed or acceleration you input into this macro will be able to **exceed** 
-    `max_velocity` and `max_accel` from your config. You do not need to update these in your config in order to test higher values.*
-    - **For example:** `TEST_SPEED SPEED=300 ACCEL=5000 ITERATIONS=2` 
 # Troubleshooting
 
 ## BMG Clockwork Backlash Issues

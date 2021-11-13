@@ -43,7 +43,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Retraction](#retraction)
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Determining Motor Currents](#determining-motor-currents)
-- [Determining Maximum Speeds and Acclerations](#determining-maximum-speeds-and-accelerations)
+- [Determining Maximum Speeds and Accelerations](#determining-maximum-speeds-and-accelerations)
     - [Method](#method-4)
     - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
 - [Troubleshooting](#troubleshooting)

@@ -42,6 +42,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [How to Fix It](#how-to-fix-it)
 - [Retraction](#retraction)
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
+- [Determining Motor Currents](#determining-motor-currents)
+- [Determining Maximum Speeds and Acclerations](#determining-maximum-speeds-and-accelerations)
 - [Troubleshooting](#troubleshooting)
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
@@ -50,11 +52,11 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Extruder Skipping](#extruder-skipping)
     - [Layer Shifting](#layer-shifting)
         - [Electrical](#electrical)
-            - [Motor Currents](#motor-currents)
             - [Crimps](#crimps)
             - [Wiring](#wiring)
             - [Thermal](#thermal)
         - [Mechanical](#mechanical)
+        - [Speeds and Accelerations](#speeds-and-accelerations)
     - [PLA is Overheating](#pla-is-overheating)
     - [Pockmarks](#pockmarks)
     - [Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing](#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)
@@ -691,6 +693,67 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 - Some use "not connected" for their top infill. This does resolve the pinholes, however I find this to cause the opposite problem. It *overshoots.* 
 
 - To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
+
+# Determining Motor Currents
+- **(!)** The below guidance is for **A/B/X/Y motors only**. 
+
+    - Extruder motors/pancake steppers are a bit different, as there is more variance between models.
+- **You should start with a more conservative current, and only increase it if you have issues**.
+    - You can also be able to get additional motor performance by increasing currents, but more on that later.
+- Some motors work better with higher currents, some motors work better with lower currents. It can depend on the manufacturer/model.
+    - If you are using BoM motors, check the stock configs.
+    - Check in Discord to see what others are running.
+    - For example: 
+        - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
+        - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
+- To find a good starting `run_current`:
+    - **Start with around 40-50% of rated current.**
+    - For example, with a 2a motor, start around 0.8-1a.
+- To find the *maximum* `run_current`:
+    - A good rule of thumb is to not exceed 70% of the rated current.
+    - For example, a 2a motor would be about 1.4a max.
+    - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
+- Keep in mind that currents approaching maximum may need greater stepper driver cooling.
+- If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
+    - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
+    - Measure the temps when actually printing in a heat soaked chamber.
+    - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
+    - *You cannot accurately gauge this by feel.*
+- TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.
+- Check your `hold_current` for each motor. A rule of thumb is about 70% of your `run_current`.
+# Determining Maximum Speeds and Accelerations
+**1.** Add [this macro](Macros/TEST_SPEED.cfg) to your printer.cfg file.
+
+**2.** Run the macro: `TEST_SPEED`
+- This macro will home, QGL (if your printer uses QGL), move the toolhead in a test pattern using the `max_velocity` and `max_accel` from your config, and home again.
+
+**3.** Watch and listen for skipping. 
+- Often, the skipping will be very obvious. Your toolhead may start shuddering and making erratic movements and loud noises.
+
+**4.** If there was no apparent major skipping, inspect the g-code terminal output to check for minor skipping.
+- Compare the numbers for the X and Y steppers for the first and second homing.
+- ![](Images/TEST_SPEED_Compare.png) 
+    - These numbers represent the microstep position of the toolhead at X/Y max position.
+    - Ensure that the difference between these numbers **has not exceeded a full step.***
+        - For example, I am running `microsteps` of **32** for my A and B motors. 
+        - I would ensure that the values for each axis have not changed by more than **32**.
+        - If the number has deviated more than this, that means that the corresponding axis has likely skipped.
+
+    \* *Measuring to a full step just accounts for endstop variance. It does not necessarily mean that any microsteps were lost. Endstops are only so accurate.*
+
+**5.** If skipping occured, try decreasing speeds/accels until they resolve. 
+
+**6**. Repeat the process, slowly increasing speed to find your maximum.
+
+Find your maximum speed, *then* find your maximum acceleration.
+- Available arguments:
+    - `SPEED` - Speed in mm/sec
+    - `ACCEL` - Acceleration
+    - `ITERATIONS` - Number of times to repeat the test pattern
+    - `BOUND` *(optional)* - How far to inset the test pattern. Default is 20mm from the edges.
+    - **(!)** *Note that any speed or acceleration you input into this macro will be able to **exceed** 
+    `max_velocity` and `max_accel` from your config. You do not need to update these in your config in order to test higher values.*
+    - **For example:** `TEST_SPEED SPEED=300 ACCEL=5000 ITERATIONS=2` 
 # Troubleshooting
 
 ## BMG Clockwork Backlash Issues
@@ -838,36 +901,7 @@ If there is much resistance, *figure out where it is coming from:*
 ![](Images/Troubleshooting/LayerShifting/2.png)
 ### Electrical
 - #### Motor Currents
-    - Ensure that your stepper drivers sticks are getting adequate cooling. 
-        - Ensure that they have heatsinks installed on them.
-        - Ensure that they have adequate airflow. 
-        - The v0 does not spec stepper driver cooling by default. This is usually fine, as it runs lower motor currents. It may be worth trying, though, if you are having issues (especially if you are running higher motor currents.)
-    - Check your motor currents. Ensure that your `run_current`s configured for your A/B/X/Y motors are correct. 
-        - **(!)** The below guidance is for **A/B/X/Y motors only**. 
-            - Extruder motors/pancake steppers are a bit different, as there is more variance between models.
-
-        - **You should start with a more conservative current, and only increase it if you have issues.**
-        - Some motors work better with higher currents, some motors work better with lower currents. It can depend on the manufacturer/model.
-            - If you are using BoM motors, check the stock configs.
-            - Check in Discord to see what others are running.
-            - For example: 
-                - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
-                - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
-        - To find a good starting `run_current`:
-            - **Start with around 40-50% of rated current.**
-            - For example, with a 2a motor, start around 0.8-1a.
-        - To find the *maximum* `run_current`:
-            - A good rule of thumb is to not exceed 70% of the rated current.
-            - For example, a 2a motor would be about 1.4a max.
-            - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
-        - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
-        - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
-            - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
-            - Measure the temps when actually printing in a heat soaked chamber.
-            - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
-            - *You cannot accurately gauge this by feel.*
-        - TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.
-    - Check your `hold_current` for each motor. A rule of thumb is about 70% of your `run_current`.
+    - Check your motor currents. Ensure that your `run_current`s configured for your A/B/X/Y motors are correct. See [this section.](#determining-motor-currents)
 - #### Crimps
     - Check your crimps. Pull on each wire. Ensure that none of the pins are starting to back out of the housings.
         - If any pins are backing out, it's possible that you may have crimped incorrectly. 
@@ -924,19 +958,16 @@ The circles represent a printed object shifting in the direction of the arrows.
 - Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
 - Try rotating the motors by hand. Sometimes a bad motor will be the cause of the resistance.
 
-### Speeds/Accelerations
+### Speeds and Accelerations
 Sometimes layer shifting can occur because you are simply asking too much of your steppers. You may be running accelerations or speeds that are too much for your motors to handle. 
 
 - Try turning accelerations down, especially if you are not using input shaper.
-    - Input shaper allows for higher accelerations, not just less ringing.
-- You can try increasing motor currents (closer to the maxumum `run_current` described above).
+    - Input shaper also allows for higher accelerations, not just less ringing.
 - Disable stealthcop.
 - Ensure that you are not running your microstepping too high.
-- #### Determining Your Maximum Speeds/Accelerations
-    - There is a fairly simple test for your maximum speeds and accelerations. \
-     Essentially you will run a macro that throws your toolhead around for a while at maximum speed/accel. It homes both before and after, and you simply compare how many microsteps were lost.
-     - Add [this macro](Macros/SPEED_TEST.cfg) to your printer.cfg file:
-
+- Check [this section](#determining-maximum-speeds-and-accelerations). 
+    - Try running the `TEST_SPEED` macro without any arguments to test your current maximums.
+- You can try increasing motor currents. Don't exceed the maximums described in [this section](#determining-motor-currents).
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

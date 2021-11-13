@@ -53,6 +53,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
             - [Motor Currents](#motor-currents)
             - [Crimps](#crimps)
             - [Wiring](#wiring)
+            - [Thermal](#thermal)
         - [Mechanical](#mechanical)
     - [PLA is Overheating](#pla-is-overheating)
     - [Pockmarks](#pockmarks)
@@ -837,6 +838,10 @@ If there is much resistance, *figure out where it is coming from:*
 ![](Images/Troubleshooting/LayerShifting/2.png)
 ### Electrical
 - #### Motor Currents
+    - Ensure that your stepper drivers sticks are getting adequate cooling. 
+        - Ensure that they have heatsinks installed on them.
+        - Ensure that they have adequate airflow. 
+        - The v0 does not spec stepper driver cooling by default. This is usually fine, as it runs lower motor currents. It may be worth trying, though, if you are having issues (especially if you are running higher motor currents.)
     - Check your motor currents. Ensure that your `run_current`s configured for your A/B/X/Y motors are correct. 
         - **(!)** The below guidance is for **A/B/X/Y motors only**. 
             - Extruder motors/pancake steppers are a bit different, as there is more variance between models.
@@ -884,11 +889,17 @@ If there is much resistance, *figure out where it is coming from:*
         - Low strand count wires / solid core wire will break in the drag chains with repeated bending. These breaks usually will not be visible, as they occur inside of the insulation.
         - You should always run your own wire through the drag chains. Don't trust the wire that came with anything.
     - Ensure that your wiring is not damaged, shorted, or caught under any screw heads. Check continuity.
+- #### Thermal
+    - Ensure that your stepper drivers sticks are getting adequate cooling. 
+        - Ensure that they have heatsinks installed on them.
+        - Ensure that they have adequate airflow*. 
+            - \* *The v0 does not spec stepper driver cooling by default. This is usually fine, as it runs lower motor currents. It may be worth trying, though, if you are having issues (especially if you are running higher motor currents.)*
 ### Mechanical
-- Try using z lift (z hop), and [check your prints for signs of overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes. 
-    - Around 0.2mm of z lift is usually good.
-- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda) have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.
-    - Some Oukeda motors have been labeled as "Oukedj". They can't even spell their own brand name correctly.
+- Try using z lift (z hop), and [check your prints for signs of overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes and subsequent layer shifs.
+    - Around 0.2-0.3mm of z lift is usually enough. Too much can cause stringing.
+- Ensure that you have good quality motors. Some off-brand motors (notably Oukeda*) have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.\
+
+    <sup>* Some Oukeda motors have been labeled as "Oukedj". They can't even spell their own brand name correctly.</sup>
 - Identify which axis the shifting is occuring in by inspecting your prints. \
 The circles represent a printed object shifting in the direction of the arrows.
 
@@ -912,6 +923,20 @@ The circles represent a printed object shifting in the direction of the arrows.
         - It's normal that they may not run perfectly centered. It's usually only an issue if they are rubbing.
 - Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
 - Try rotating the motors by hand. Sometimes a bad motor will be the cause of the resistance.
+
+### Speeds/Accelerations
+Sometimes layer shifting can occur because you are simply asking too much of your steppers. You may be running accelerations or speeds that are too much for your motors to handle. 
+
+- Try turning accelerations down, especially if you are not using input shaper.
+    - Input shaper allows for higher accelerations, not just less ringing.
+- You can try increasing motor currents (closer to the maxumum `run_current` described above).
+- Disable stealthcop.
+- Ensure that you are not running your microstepping too high.
+- #### Determining Your Maximum Speeds/Accelerations
+    - There is a fairly simple test for your maximum speeds and accelerations. \
+     Essentially you will run a macro that throws your toolhead around for a while at maximum speed/accel. It homes both before and after, and you simply compare how many microsteps were lost.
+     - Add [this macro](Macros/SPEED_TEST.cfg) to your printer.cfg file:
+
 ## PLA is Overheating
 - Open the front door at minimum. Or take off all the side panels.
 - Use [AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:

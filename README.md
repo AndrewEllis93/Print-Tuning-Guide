@@ -44,6 +44,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Determining Motor Currents](#determining-motor-currents)
 - [Determining Maximum Speeds and Acclerations](#determining-maximum-speeds-and-accelerations)
+    - [Usage of the TEST_SPEED Macro](#usage-of-the-test-speed-macro)
 - [Troubleshooting](#troubleshooting)
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
@@ -733,21 +734,25 @@ A rule of thumb is about 70% of your `run_current`.
 You may be able to get higher performance out of your motors by increasing currents (see previous section), but be careful not to push them too high.
 
 You may also get higher maximum accelerations by utilizing input shaper.
+## Method
 
 Tune maximum speeds first, THEN tune accelerations separately.
 
-**1.** Add [this macro](Macros/TEST_SPEED.cfg) to your printer.cfg file.
+**1.** Add [this macro](Macros/TEST_SPEED.cfg) to your `printer.cfg` file.
 
-**2.** Run the `TEST_SPEED` macro (instructions below) with increasing speeds or accelerations until you experience skipping.
+**2.** Run the `TEST_SPEED` macro (instructions below) with increasing speeds [until you experience skipping.](#determining-if-skipping-occured)
+- Start with a small number of iterations,
 
-**3.** Once you have found a rough maximum, run the test again with a large number of iterations (as a "torture test")
+**3.** Once you have found a rough maximum, run the test again with a large number of iterations.
+- This is essentially a torture test, similar to overclocking a PC.
 
 **4.** Use a slightly lower value than your results.
+- Sometimes a maximum that works perfectly, even in extended torture tests, can skip during actual prints. Go a bit lower for a margin of safety.
+
+**5.** Repeat the process with accelerations.
 
 ## Usage of the TEST_SPEED Macro
-This macro will home, QGL (if your printer uses QGL), move the toolhead in a test pattern using the `max_velocity` and `max_accel` from your config, and home again.
-
-You will compare the g-code terminal output from before and after.
+This macro will home, QGL *(if your printer uses QGL)*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. You will [watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 
 ### Available arguments
 - `SPEED` - Speed in mm/sec. 
@@ -761,9 +766,11 @@ You will compare the g-code terminal output from before and after.
 
 **(!)** *Note that any speed or acceleration you input into this macro can **exceed** 
 `max_velocity` and `max_accel` from your config. 
-### Example
+### Examples
 
-`TEST_SPEED SPEED=300 ACCEL=5000 ITERATIONS=2` 
+- `TEST_SPEED SPEED=350 ITERATIONS=50` 
+
+- `TEST_SPEED ACCEL=10000 ITERATIONS=50` 
 
 ### Determining if Skipping Occured
 

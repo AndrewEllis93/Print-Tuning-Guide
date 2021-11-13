@@ -699,7 +699,7 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 
 Extruder motors/pancake steppers are a bit different, as there is more variance between models. I will add this at a future date.
 
-- **Check the with the community first.**.
+- **Check the with the community first.**
     - If you are using BoM motors, check the stock configs.
     - Check in Discord to see what others are running.
 

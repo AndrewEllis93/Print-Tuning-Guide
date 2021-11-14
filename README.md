@@ -1,6 +1,6 @@
 # Introduction
 
-Much of this guide is specific to Voron printers running Klipper. Rather than re-hashing concepts already described in Voron/Klipper documentation, I will be frequently linking to them and adding additional information and methods that utilize those concepts.
+Much of this guide is specific to Voron printers running Klipper.
 
 A handful of the [troubleshooting sections](#troubleshooting) and some of the tuning hints focus on CoreXY (sorry, Switchwire folks).
 

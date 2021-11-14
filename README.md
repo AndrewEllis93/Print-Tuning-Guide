@@ -733,6 +733,8 @@ For example, a 2a motor would be about 1.4a max.
 A rule of thumb is about 70% of your `run_current`.
 # Determining Maximum Speeds and Accelerations
 
+This section is purely about finding your absolute maximum speeds/accels. **This does not necessarily mean that these speeds or accelerations will be practical to print with** - but it can be handy to find the limits of your printer. You can use max speeds for things like travels, mesh, QGL, etc.
+
 You may be able to get higher performance out of your motors by increasing currents (see previous section), but be careful not to push them too high.
 
 You may also get higher maximum accelerations by utilizing input shaper.

@@ -1042,6 +1042,7 @@ Sometimes layer shifting can occur because you are simply asking too much of you
 - Dry your filament. This can be caused be moisture turning to steam and popping.
     - Extrude in midair. Watch and listen. Depending just how wet your filament is, you may hear popping noises and see steam.
     - **Just because your filament was new/sealed, doesn't mean it's not wet.** I've had plenty of filaments come soaking wet even though they were sealed.
+- Try a new nozzle.
 ## Repeating Vertical Fine Artifacts (VFAs) With ~2mm Spacing
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 

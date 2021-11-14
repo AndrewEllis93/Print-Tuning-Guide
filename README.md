@@ -1022,7 +1022,7 @@ Sometimes layer shifting can occur because you are simply asking too much of you
 
 - Try turning accelerations down, especially if you are not using input shaper.
     - Input shaper also allows for higher accelerations, not just less ringing.
-- Disable stealthcop.
+- Disable stealthchop.
 - Ensure that you are not running your microstepping too high.
 - Check [this section](#determining-maximum-speeds-and-accelerations) to test.
     - Try running the `TEST_SPEED` macro without any arguments to test your current maximums.

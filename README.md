@@ -336,10 +336,10 @@ gcode:
     - **Starting Value for K**: 0
     - **Ending Value for K**:  
         - **Direct Drive**: 0.1
-        - **Bowden**: 1.5
+        - **Bowden***: 1.5
     - **K-factor Stepping:**: 
         - **Direct Drive**: 0.005
-        - **Bowden**: 0.05
+        - **Bowden***: 0.05
     - **Print Anchor Frame**: Checked
 - **Advanced**
     - **Nozzle Line Ratio**: 1.2
@@ -348,6 +348,8 @@ gcode:
     - **Dwell Time**: 0
 
 Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
+
+\* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
 
 **5)** Generate and download the g-code file.
 
@@ -376,6 +378,7 @@ I will not give extremely specific directions here, as it depends on how you sta
         - **ALWAYS** choose the lower value. 
     - This requires some interpretation. In this example, I would choose about **0.055**.\
 *(note: mine may be higher than yours, I am using an Orbiter + Dragon HF.)*
+        - **Bowden:** The values I suggested above for bowden cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.
 
     ![](Images/KFactor-Print.jpg) 
 ## Fine-Tuning and What to Look For

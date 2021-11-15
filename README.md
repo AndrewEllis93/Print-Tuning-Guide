@@ -18,41 +18,43 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=U6F2FZMXXSBSW&no_recurring=0&currency_code=USD)
 
 # Table of Contents
-- [Before We Begin](#-before-we-begin)
+- [**Before We Begin**](#-before-we-begin)
     - [**(!) Important Checks**](#-important-checks)
     - [A Note About Line Width](#a-note-about-line-width)
-- [First Layer Squish](#first-layer-squish)
-    - [Background and Common Issues/Mistakes](#background-and-common-issuesmistakes)
-    - [Method](#method)
-    - [Print Examples](#print-examples)
-- [Build Surface Adhesion](#build-surface-adhesion)
-- [Pressure Advance](#pressure-advance)
-    - [Tower Method (Simple)](#tower-method-simple)
-    - [Lines Method (Advanced)](#lines-method-advanced)
-    - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
-- [Extrusion Multiplier](#extrusion-multiplier)
-    - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)
-    - [Notes on Dimensional Accuracy](#notes-on-dimensional-accuracy)
-    - [Method](#method-2)
-    - [The Relationship Between Pressure Advance & EM](#the-relationship-between-pressure-advance--em)
-- [Cooling and Layer Times](#cooling-and-layer-times)
-    - [Signs of Overheating](#signs-of-overheating)
-    - [How to Fix It](#how-to-fix-it)
-- [Retraction](#retraction)
-- [Infill/Perimeter Overlap](#infillperimeter-overlap)
-- [Determining Maximum Volumetric Flow Rate](#determining-maximum-volumetric-flow-rate)
-    - [Why?](#why)
-    - [Approximate Values](#approximate-values)
-    - [How Volumetric Flow Rate Relates to Print Speed](#how-volumetric-flow-rate-relates-to-print-speed)
-    - [Method](#method-4)
-- [Determining Motor Currents](#determining-motor-currents)
-- [Determining Maximum Speeds and Accelerations](#determining-maximum-speeds-and-accelerations)
-    - [Method](#method-5)
-    - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
-- [Miscellaneous](#miscellaneous)
+- **Print Tuning**
+    - [First Layer Squish](#first-layer-squish)
+        - [Background and Common Issues/Mistakes](#background-and-common-issuesmistakes)
+        - [Method](#method)
+        - [Print Examples](#print-examples)
+    - [Build Surface Adhesion](#build-surface-adhesion)
+    - [Pressure Advance](#pressure-advance)
+        - [Tower Method (Simple)](#tower-method-simple)
+        - [Lines Method (Advanced)](#lines-method-advanced)
+        - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
+    - [Extrusion Multiplier](#extrusion-multiplier)
+        - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)
+        - [Notes on Dimensional Accuracy](#notes-on-dimensional-accuracy)
+        - [Method](#method-2)
+        - [The Relationship Between Pressure Advance & EM](#the-relationship-between-pressure-advance--em)
+    - [Cooling and Layer Times](#cooling-and-layer-times)
+        - [Signs of Overheating](#signs-of-overheating)
+        - [How to Fix It](#how-to-fix-it)
+    - [Retraction](#retraction)
+    - [Infill/Perimeter Overlap](#infillperimeter-overlap)
+- **Printer Tuning**
+    - [Determining Maximum Volumetric Flow Rate](#determining-maximum-volumetric-flow-rate)
+        - [Why?](#why)
+        - [Approximate Values](#approximate-values)
+        - [How Volumetric Flow Rate Relates to Print Speed](#how-volumetric-flow-rate-relates-to-print-speed)
+        - [Method](#method-4)
+    - [Determining Motor Currents](#determining-motor-currents)
+    - [Determining Maximum Speeds and Accelerations](#determining-maximum-speeds-and-accelerations)
+        - [Method](#method-5)
+        - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
+- **Miscellaneous**
     - [Passing Variables to PRINT_START](#passing-variables-to-print_start)
     - [Controlling G-code Order *Without* Passing Variables](#controlling-g-code-order-without-passing-variables)
-- [Troubleshooting](#troubleshooting)
+- **Troubleshooting**
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
@@ -102,7 +104,6 @@ However:
 
 **(!) For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
 For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
-
 # First Layer Squish
 
 I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. \
@@ -905,8 +906,7 @@ You will [watch, listen, and compare the terminal output from before/after.](#de
     \* *Measuring to a full step just accounts for endstop variance. It does not necessarily mean that any microsteps were lost. Endstops are only so accurate.*
 
 
-# Miscellaneous
-## Passing Variables to PRINT_START
+# Passing Variables to PRINT_START
 **I would recommend starting with a standard PRINT_START and setting this up later.**
 
 By default, slicers will put heating commands either entirely before or after `PRINT_START`. You have to pass the temps TO `PRINT_START` in order to control when they happen. 
@@ -914,7 +914,7 @@ For example I don’t want my nozzle to heat until the very end so it’s not oo
 
 If you don’t use a chamber thermistor, just remove the chamber stuff. 
 
-### Example macro:
+## Example macro:
 
 This macro is a **template**. \
 You will have to add things like `G32`,`QUAD_GANTRY_LEVEL`,`BED_MESH_CALIBRATE`, or whatever other routines that you need to run during your `PRINT_START`.
@@ -939,10 +939,10 @@ gcode:
 
 This would now be run like `PRINT_START BED=110 HOTEND=240 CHAMBER=50`. 
 Chamber defaults to 0 if not specified.
-### Slicer Start G-code
+## Slicer Start G-code
 
 Don't split any of these gcodes to separate lines.
-#### SuperSlicer
+### SuperSlicer
 (3 lines)
  ```    
 M104 S0 ; Stops PS/SS from sending temp waits separately
@@ -951,7 +951,7 @@ PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[in
 ```
 ![](Images/PassingVariables-SS.png) 
 
-#### Prusa Slicer 
+### Prusa Slicer 
 (3 lines)
 
 *Prusa Slicer doesn’t support chamber temp.*
@@ -963,36 +963,36 @@ PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[in
 ```
 ![](Images/PassingVariables-PS.png) 
 
-#### Cura
+### Cura
 (1 line)
 ```
 PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temperature_layer_0} CHAMBER={build_volume_temperature}
 ```
 ![](Images/PassingVariables-Cura.png) 
 
-## Controlling G-code Order *Without* Passing Variables
+# Controlling G-code Order *Without* Passing Variables
 
 **The [above section](#passing-variables-to-print_start) is the preferable way to set it up**, as it allows you the most control. 
 
 If your slicer is putting heating g-codes AFTER `PRINT_START` and you want them to happen before (or the inverse, or you want to split it), this would be a simpler way to control the ordering. This method only allows you to send temperature g-codes before or after `PRINT_START`, but at least allows you to control the order.
 
 To force the g-code ordering, place any of the following g-codes from the following lists in your start gcode where you desire:
-#### Prusa Slicer / SuperSlicer
+### Prusa Slicer / SuperSlicer
 - `M140 S[first_layer_bed_temperature] ; set bed temp`
 - `M190 S[first_layer_bed_temperature] ; wait for bed`
 - `M104 S{first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} ; set hotend temp`
 - `M109 S{first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} ; wait for hotend `
-#### Cura
+### Cura
 - `M140 S{material_bed_temperature_layer_0} ; set bed temp`
 - `M190 S{material_bed_temperature_layer_0} ; wait for bed`
 - `M104 S{material_print_temperature_layer_0} ; set hotend temp`
 - `M109 S{material_print_temperature_layer_0} ; wait for hotend `
 
-#### Warnings
+### Warnings
 - **These are just lists** of available commands, they don't have to be in this order, nor do you have to use all of them. Place them as you like.
 - Each bullet point is only **ONE** line. Do not split them into multiple lines.
 - There are many other variables available in each slicer, and you can pass whatever variables you like to whatever g-codes you like. The available variables are not always documented.
-#### Example
+### Example
 Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
 - ![](Images/StartGcode-CustomOrder.png) 
 

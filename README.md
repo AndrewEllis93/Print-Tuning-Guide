@@ -41,6 +41,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Retraction](#retraction)
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Determining Maximum Volumetric Flow Rate](#determining-maximum-volumetric-flow-rate)
+    - [Why?](#why)
     - [Approximate Values](#approximate-values)
     - [How Volumetric Flow Rate Relates to Print Speed](#how-volumetric-flow-rate-relates-to-print-speed)
     - [Method](#method-4)

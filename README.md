@@ -1166,6 +1166,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
     - Try more mesh points. Usually anything above 5x5 is overkill, but you can try up to 9x9.
         - Don't forget to update your `relative_reference_index` when changing mesh points.
 - For **V2**:
+    - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as the stock G32 macro clears bed meshes.
     - You may need to play with how tight your bed mounting screws are. 
         - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
         - I've found that if any are *too* loose, it can cause first layer consistency issues.
@@ -1204,7 +1205,6 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 
 - For **V2**: 
     - **(!) Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
-    - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
     - See the above V2 section.
 
 - For **inductive probes *as* Z endstop (virtual endstop)**:

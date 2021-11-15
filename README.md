@@ -50,6 +50,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Determining Maximum Speeds and Accelerations](#determining-maximum-speeds-and-accelerations)
     - [Method](#method-5)
     - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
+- [Miscellaneous](#miscellaneous)
+    - [Passing Variables to PRINT_START](#passing-variables-to-print_start)
+        - [Controlling When Temperatures G-codes Are Sent *Without* Passing Variables](#controlling-when-temperature-g-codes-are-sent-without-passing-variables)
 - [Troubleshooting](#troubleshooting)
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
@@ -901,8 +904,100 @@ You will [watch, listen, and compare the terminal output from before/after.](#de
         - If the number has deviated more than this, that means that the corresponding axis has likely skipped.
 
     \* *Measuring to a full step just accounts for endstop variance. It does not necessarily mean that any microsteps were lost. Endstops are only so accurate.*
-# Troubleshooting
 
+
+# Miscellaneous
+## Passing Variables to PRINT_START
+**I would recommend starting with a standard PRINT_START and setting this up later.**
+
+By default, slicers will put heating commands either entirely before or after `PRINT_START`. You have to pass the temps TO `PRINT_START` in order to control when they happen. 
+For example I don’t want my nozzle to heat until the very end so it’s not oozing during QGL, mesh etc.
+
+If you don’t use a chamber thermistor, just remove the chamber stuff. 
+
+### Example macro:
+
+This macro is a **template**. \
+You will have to add things like `G32`,`QUAD_GANTRY_LEVEL`,`BED_MESH_CALIBRATE`, or whatever other routines that you need to run during your `PRINT_START`.
+
+```
+[gcode_macro PRINT_START]
+gcode:        
+    # Parameters
+    {% set bedtemp = params.BED|int %}
+    {% set hotendtemp = params.HOTEND|int %}
+    {% set chambertemp = params.CHAMBER|default(0)|int %}
+    
+    G28
+    # <insert your routines here>
+    M190 S{bedtemp}                                                              ; set & wait for bed temp
+    TEMPERATURE_WAIT SENSOR="temperature_sensor chamber" MINIMUM={chambertemp}   ; wait for chamber temp
+    # <insert your routines here>
+    M109 S{hotendtemp}                                                           ; set & wait for hotend temp
+    # <insert your routines here>
+    G28 Z                                                                        ; final z homing
+```
+
+This would now be run like `PRINT_START BED=110 HOTEND=240 CHAMBER=50`. 
+Chamber defaults to 0 if not specified.
+### Slicer Start G-code
+
+Don't split any of these gcodes to separate lines.
+#### SuperSlicer
+(3 lines)
+ ```    
+M104 S0 ; Stops PS/SS from sending temp waits separately
+M140 S0
+PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} CHAMBER=[chamber_temperature]
+```
+![](Images/PassingVariables-SS.png) 
+
+#### Prusa Slicer 
+(3 lines)
+
+*Prusa Slicer doesn’t support chamber temp.*
+    
+```
+M104 S0 ; Stops PS/SS from sending temp waits separately
+M140 S0
+PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]}
+```
+![](Images/PassingVariables-PS.png) 
+
+#### Cura
+(1 line)
+```
+PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temperature_layer_0} CHAMBER={build_volume_temperature}
+```
+![](Images/PassingVariables-Cura.png) 
+
+### Controlling When Temperature G-codes Are Sent *Without* Passing Variables
+
+T**he [above section](#passing-variables-to-print_start) is the preferable way to set it up**, as it allows you the most control. 
+
+If your slicer is putting heating g-codes AFTER `PRINT_START` and you want them to happen before (or the inverse, or you want to split it), this would be a simpler way to control the ordering. This method only allows you to send temperature g-codes before or after `PRINT_START`, but at least allows you to control the order.
+
+To force the g-code ordering, place any of the following g-codes from the following lists in your start gcode where you desire:
+#### Prusa Slicer / SuperSlicer
+- `M140 S[first_layer_bed_temperature] ; set bed temp`
+- `M190 S[first_layer_bed_temperature] ; wait for bed`
+- `M104 S{first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} ; set hotend temp`
+- `M109 S{first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} ; wait for hotend `
+#### Cura
+- `M140 S{material_bed_temperature_layer_0} ; set bed temp`
+- `M190 S{material_bed_temperature_layer_0} ; wait for bed`
+- `M104 S{material_print_temperature_layer_0} ; set hotend temp`
+- `M109 S{material_print_temperature_layer_0} ; wait for hotend `
+
+#### Warnings
+- **These are just lists** of available commands, they don't have to be in this order, nor do you have to use all of them. Place them as you like.
+- Each bullet point is only **ONE** line. Do not split them into multiple lines.
+- There are many other variables available in each slicer, and you can pass whatever variables you like to whatever g-codes you like. The available variables are not always documented.
+#### Example
+Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
+- ![](Images/StartGcode-CustomOrder.png) 
+
+# Troubleshooting
 ## BMG Clockwork Backlash Issues
 
 **Ensure that you have some [backlash](https://gfycat.com/mealycautiouscoqui) between the motor gear and the plastic gear.**

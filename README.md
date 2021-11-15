@@ -858,7 +858,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
 **8)** Repeat the process, this time increasing accelerations rather than speeds.
 - Example: `TEST_SPEED ACCEL=400 ITERATIONS=2`
 
-**9)** Save your new maximum acceleration to `max_accel` in your config.
+**9)** Save your new maximum acceleration to `max_accel` in your config and `reload`.
 - Set your `max_accel_to_decel` to *half* of this value.
 
 ## Usage of the TEST_SPEED Macro

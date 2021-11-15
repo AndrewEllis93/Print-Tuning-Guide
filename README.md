@@ -61,6 +61,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Crimps](#crimps)
     - [Extruder Skipping](#extruder-skipping)
     - [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues)
+        - [Thermal Drift](#thermal-drift)
+        - [First Layer Conistency](#first-layer-consistency)
+        - [Squish Consistency (Between Prints)](#squish-consistency-between-prints)
     - [Layer Shifting](#layer-shifting)
         - [Electrical](#electrical)
         - [Mechanical](#mechanical)
@@ -111,8 +114,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - **(!)** This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
 - **(!)** This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
-    - See the [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues) section, **even if you are not having any issues.** There is some important reading there (especially the "Both" sub-section).
-
+    - See the [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues) section, **even if you are not having any issues,** but *especially* the [Thermal Drift](#thermal-drift) sub-section. There is some important information in there that everyone should know.
 ## Method
 **1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*
 - ![](Images/FirstLayer-Plate.png)    
@@ -1126,9 +1128,21 @@ If there is much resistance, *figure out where it is coming from:*
             - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
 
 ## First Layer / Squish Consistency Issues
+### Thermal Drift
+- **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
+Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
+
+    Don't believe me? Look at this. The red line represents Z offset drift over time, as the frame comes up to temperature.
+
+    ![](/Images/ZDrift.png)
+
+    It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up in the morning.\
+    There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a rabbit hole well outside the scope of this guide.* 
+    
+    <sup>* *Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://deepfriedhero.in/products/titanium-extrusion-backers?_pos=1&_sid=e2f989fec&_ss=r) [4](https://www.fabreeko.com/collections/voron/products/v2-4-trident-titanium-extrusion-backers) [5](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [6](https://github.com/alchemyEngine/measure_thermal_behavior) [7](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) [8](https://youtu.be/RXJKdh1KZ0w)</sup>*\
+    <sup>\* *This is the one thing I would ask you not to message me about. It is outside the scope of what I am hoping to accomplish with this guide. The graph above is solely intended to demonstrate my point about heat soak times.*</sup>
 
 ### First Layer Consistency
-
 (If your squish seems to vary at different spots on the bed)
 
 - In my opinion, you should use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
@@ -1148,8 +1162,7 @@ If there is much resistance, *figure out where it is coming from:*
     - You may need to play with how tight your bed mounting screws are. 
         - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
         - I've found that if any are *too* loose, it can cause first layer consistency issues.
-- See the ["Both"](#both) section.
-
+- See the [Thermal Drift](#thermal-drift) section.
 ### Squish Consistency (Between Prints)
 
 (If your Z offset seems to vary between prints.)
@@ -1170,21 +1183,7 @@ If there is much resistance, *figure out where it is coming from:*
     - Ensure that none of your magnets are loose.
     - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
     - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
-
-- See the ["Both"](#both) section.
-### Both
-- **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
-Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
-
-    Don't believe me? Look at this. The red line represents Z offset drift over time, as the frame comes up to temperature.
-
-    ![](/Images/ZDrift.png)
-
-    It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up in the morning.\
-    There *are* ways around this - specifically by using gantry backers in combination with software-based frame thermal expansion compensation, but that is a rabbit hole well outside the scope of this guide.* 
-    
-    <sup>* *Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://deepfriedhero.in/products/titanium-extrusion-backers?_pos=1&_sid=e2f989fec&_ss=r) [4](https://www.fabreeko.com/collections/voron/products/v2-4-trident-titanium-extrusion-backers) [5](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [6](https://github.com/alchemyEngine/measure_thermal_behavior) [7](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) [8](https://youtu.be/RXJKdh1KZ0w)</sup>*\
-    <sup>\* *This is the one thing I would ask you not to message me about. It is outside the scope of what I am hoping to accomplish with this guide. The graph above is solely intended to demonstrate my point about heat soak times.*</sup>
+- See the [Thermal Drift](#thermal-drift) section.
 
 ## Layer Shifting
 ![](Images/Troubleshooting/LayerShifting/1.png)

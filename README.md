@@ -111,7 +111,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - **(!)** This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
 - **(!)** This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
-    - See the [First Layer / Z Offset Consistency Issues](#first-layer--z-offset-consistency-issues) section if you are having issues with either.
+    - See the [First Layer / Z Offset Consistency Issues](#first-layer--z-offset-consistency-issues) section.
 
 ## Method
 **1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*

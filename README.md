@@ -18,7 +18,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=U6F2FZMXXSBSW&no_recurring=0&currency_code=USD)
 
 # Table of Contents
-- [**Before We Begin**](#-before-we-begin)
+- **Before We Begin**
     - [**(!) Important Checks**](#-important-checks)
     - [A Note About Line Width](#a-note-about-line-width)
 - **Print Tuning**

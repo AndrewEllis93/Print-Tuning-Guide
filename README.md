@@ -1131,6 +1131,7 @@ If there is much resistance, *figure out where it is coming from:*
     - Do not omit the `relative_reference_index` setting described in the link above. Follow the formula.
     - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare for larger printers to have a perfect first layer without it.
 - Your heat soaked mesh will also be different from your cold mesh. It will even vary at different temperatures. This is why I prefer to generate a fresh bed mesh for every print.
+
 - **Bed mesh can't always save you from mechanical problems.**
     - Most bed mesh issues are caused by the gantry rather than the bed itself.
         - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
@@ -1139,9 +1140,12 @@ If there is much resistance, *figure out where it is coming from:*
         - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
         - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
 
+    - For nozzle endstops:
+        - Ensure that your start g-code contains a final z homing **with a hot nozzle** near the end.
+            - This ensures that any plastic remaining on the nozzle is squished out of the way, and is less likely to affect your Z offset.
     - If you are using a V2: 
         - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
-        - Ensure that you are homing Z again after QGL, as QGL throws off Z height.
+        - **(!) Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
         - You may need to play with how tight your bed mounting screws are. 
             - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
             - I've found that if any are *too* loose, it can cause first layer consistency issues.

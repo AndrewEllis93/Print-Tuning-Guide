@@ -1164,13 +1164,13 @@ If there is much resistance, *figure out where it is coming from:*
 - For **V2**: 
     - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
     - **(!) Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
-    - See the previous section for V2.
+    - See the above V2 section.
     
 - For Klicky Auto Z Calibration:
     - Ensure that none of your magnets are loose.
     - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
     - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
-    
+
 - See the ["Both"](#both) section.
 ### Both
 - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \

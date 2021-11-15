@@ -53,7 +53,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
 - **Miscellaneous**
     - [Passing Slicer Variables to PRINT_START](#passing-slicer-variables-to-print_start)
-    - [Controlling G-code Order *Without* Passing Variables](#controlling-g-code-order-without-passing-variables)
+    - [Controlling Slicer G-code Order *Without* Passing Variables](#controlling-g-code-order-without-passing-variables)
 - **Troubleshooting**
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
@@ -970,7 +970,7 @@ PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temper
 ```
 ![](Images/PassingVariables-Cura.png) 
 
-# Controlling G-code Order *Without* Passing Variables
+# Controlling Slicer G-code Order *Without* Passing Variables
 
 **The [above section](#passing-variables-to-print_start) is the preferable way to set it up**, as it allows you the most control. 
 
@@ -1302,9 +1302,9 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 ## Slicer is Putting Heating G-codes in the Wrong Place/Order
 You have two options:
 - Pass variables to `PRINT_START` (allows the most control, but is more complex)
-    - See the *"Passing Variables to PRINT_START"* section [here](#passing-variables-to-print_start).
+    - See the *"Passing Variables to PRINT_START"* section [here](#passing-slicer-variables-to-print_start).
 - Force g-code ordering (only allows changing the g-code order, but is easy to set up)
-    - See the *"Controlling G-code Order Without Passing Variables"* section [here](#controlling-g-code-order-without-passing-variables).
+    - See the *"Controlling G-code Order Without Passing Variables"* section [here](#controlling-slicer-g-code-order-without-passing-variables).
 ## Small Infill Areas Look Overextruded
 
 ![](Images/Troubleshooting/SmallAreas.png) 

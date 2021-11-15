@@ -1129,7 +1129,11 @@ If there is much resistance, *figure out where it is coming from:*
 
 ## First Layer / Squish Consistency Issues
 ### Thermal Drift
+
+(This can affect first layer consistency *and* z offset consistency between prints.)
+
 - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
+\
 Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
 
     Don't believe me? Look at this. The red line represents Z offset drift over time, as the frame comes up to temperature.
@@ -1145,45 +1149,77 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 ### First Layer Consistency
 (If your squish seems to vary at different spots on the bed)
 
-- In my opinion, you should use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
+- In my opinion, you should use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. *(requires the config section in the link above.)*
     - Do not omit the `relative_reference_index` setting described in the link above. Follow the formula.
-    - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare for larger printers to have a perfect first layer without it.
-    - Your heat soaked mesh will also be different from your cold mesh. It will even vary at different temperatures. This is why I prefer to generate a fresh bed mesh for every print.
+    - Use `algorithm: bicubic` instead of `algorithm: lagrange`.
+    - Some discourage using bed mesh unless absolutely necessary, but I disagree. In my opinion it's cheap insurance. It's very rare for larger printers to have a perfect first layer without it.
+    - **Your heat soaked mesh will be different from your cold mesh**. The bed and gantry can warp with heat. It will even vary at different temperatures. This is why I prefer to generate a fresh bed mesh for every print.
 
-- **Bed mesh can't always save you from mechanical problems.**
-    - Most bed mesh issues are caused by the gantry rather than the bed itself.
-        - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
-            - These instructions are for V2, but the process should be similar for Trident.
-            - You have to be *somewhat* quick, as things start cooling down once you take off the panels. Don't stress about it too much though.
-        - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
-        - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
-        - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
+    - **Bed mesh can't always save you from mechanical problems.**
+        - Most bed mesh issues are caused by the gantry rather than the bed itself.
+            - On V2/Trident, heat soak for at least an hour, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
+                - These instructions are for V2, but the process should be similar for Trident.
+                - You have to be *somewhat* quick, as things start cooling down once you take off the panels. Don't stress about it too much though.
+            - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
+            - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
+            - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
+    - Try more mesh points. Usually anything above 5x5 is overkill, but you can try up to 9x9.
+        - Don't forget to update your `relative_reference_index` when changing mesh points.
 - For **V2**:
     - You may need to play with how tight your bed mounting screws are. 
         - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
         - I've found that if any are *too* loose, it can cause first layer consistency issues.
-- See the [Thermal Drift](#thermal-drift) section.
+        - Ensure that your Z belts are properly tensioned. They should all be roughly equal tensions. 
+            - I tension mine to **140hz over a 150mm span** of belt.
+            - Your closed loop belts (the short belts loops in the Z drive units) should be quite tight, but not so tight that they are pulling the motors shaft out of parallel. 
+                - (It's not easily possible to measure these with a frequency)
+- For **inductive probes:**
+    - Make sure your PEI is not bubbling in places. Inductive probes can only sense the subsurface, so cannot correct for PEI bubbles. 
+    - Try leaving the toolhead sitting close to the center of the bed during your heat soak. Inductive probes thermally drift, and this can pre-heat it so that it does not drift *during* your mesh generation.
+    - Microswitch-based magprobes (Klicky/Quickdraw) and other physical probes like BLTouch allow for detection of the actual print surface *(though I would recommend Klicky/Quickdraw over BLTouch if you take this route)*
+- Ensure that there is no debris under your spring steel.
+- Disable z lift (z hop) on first layer.
+- Check your Z axis. Make sure everything is tight, especially grub screws.
+- Run `PROBE_ACCURACY` to check for issues with your Z axis repeatability. 
+    - My personal comfort zone:
+        - Standard deviation ≤ **0.004**.
+        - Range ≤ **0.0125**.
+    - On **V2**, run `PROBE_ACCURACY` in each corner of the bed to check all four Z drives.
+- Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend, nozzle, and probe.
+- See the [Thermal Drift](#thermal-drift) section. Ensure that you are heat soaking for long enough on larger enclosed printers.
 ### Squish Consistency (Between Prints)
 
 (If your Z offset seems to vary between prints.)
 
-- Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
-- For nozzle endstops:
+- Check your Z axis. Make sure everything is tight, especially grub screws.
+- Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend, nozzle, and probe.
+- For **nozzle endstops**:
     - Ensure that your start g-code contains a final z homing **with a hot nozzle** near the end.
         - This ensures that any plastic remaining on the nozzle is squished out of the way, and is less likely to affect your Z offset.
-    - Ensure that the pin is square on top, otherwise it can rotate over time and cause your Z offset to drift.
+        - This also accounts for the small amount of thermal expansion in the nozzle as it heats.
+        - You can use a nozzle brush mod to automatically clean any debris. You should still home Z with a hot nozzle, though.
+    - Ensure that the endstop pin is square on top, otherwise it can cause your Z offset to drift as it rotates over time.
+        - Notching your Z endstop pin (as described in the Voron manuals) can prevent it from rotating.
     - Ensure that your nozzle is hitting the center of the pin.
 
 - For **V2**: 
-    - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
     - **(!) Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
+    - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
     - See the above V2 section.
+
+- For **inductive probes *as* Z endstop (virtual endstop)**:
+    - Inductive probes thermally drift, meaning that your Z offset can change at different bed/enclosure temperatures. You may need to calibrate Z offset for the termperatures you intend to print at.
     
-- For Klicky Auto Z Calibration:
+- For Klicky/Quickdraw [**Automatic Z Calibration***](https://github.com/protoloft/klipper_z_calibration):
+
     - Ensure that none of your magnets are loose.
+        - If they are coming loose, make sure to lightly sand the tops of the magnets before gluing them back in. They adhere much better this way.
     - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
     - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
-- See the [Thermal Drift](#thermal-drift) section.
+
+- See the [Thermal Drift](#thermal-drift) section. Ensure that you are heat soaking for long enough on larger enclosed printers.
+
+<sup>\* This is a mod. It essentially baby steps for you, to account for different bed heights in addition to nozzle heights.</sup>
 
 ## Layer Shifting
 ![](Images/Troubleshooting/LayerShifting/1.png)

@@ -1127,16 +1127,11 @@ If there is much resistance, *figure out where it is coming from:*
 
 ## First Layer / Squish Consistency Issues
 
+### First Layer Consistency
 - In my opinion, you should use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
     - Do not omit the `relative_reference_index` setting described in the link above. Follow the formula.
     - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare for larger printers to have a perfect first layer without it.
     - Your heat soaked mesh will also be different from your cold mesh. It will even vary at different temperatures. This is why I prefer to generate a fresh bed mesh for every print.
-
-- For nozzle endstops:
-    - Ensure that your start g-code contains a final z homing **with a hot nozzle** near the end.
-        - This ensures that any plastic remaining on the nozzle is squished out of the way, and is less likely to affect your Z offset.
-    - Ensure that the pin is square on top, otherwise it can rotate over time and cause your Z offset to drift.
-    - Ensure that your nozzle is hitting the center of the pin.
 
 - **Bed mesh can't always save you from mechanical problems.**
     - Most bed mesh issues are caused by the gantry rather than the bed itself.
@@ -1146,15 +1141,27 @@ If there is much resistance, *figure out where it is coming from:*
         - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
         - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
         - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
+- For **V2**:
+    - You may need to play with how tight your bed mounting screws are. 
+    - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
+    - I've found that if any are *too* loose, it can cause first layer consistency issues.
 
+### Squish Consistency (Between Prints)
 
-- If you are using a V2: 
+(If your Z offset seems to vary between prints.)
+
+- For nozzle endstops:
+    - Ensure that your start g-code contains a final z homing **with a hot nozzle** near the end.
+        - This ensures that any plastic remaining on the nozzle is squished out of the way, and is less likely to affect your Z offset.
+    - Ensure that the pin is square on top, otherwise it can rotate over time and cause your Z offset to drift.
+    - Ensure that your nozzle is hitting the center of the pin.
+
+- For **V2**: 
     - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
     - **(!) Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
-    - You may need to play with how tight your bed mounting screws are. 
-        - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
-        - I've found that if any are *too* loose, it can cause first layer consistency issues.
+    - See the previous section for V2.
 
+### Both
 - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
 Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
 
@@ -1168,9 +1175,9 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
     <sup>* *Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://deepfriedhero.in/products/titanium-extrusion-backers?_pos=1&_sid=e2f989fec&_ss=r) [4](https://www.fabreeko.com/collections/voron/products/v2-4-trident-titanium-extrusion-backers) [5](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [6](https://github.com/alchemyEngine/measure_thermal_behavior) [7](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) [8](https://youtu.be/RXJKdh1KZ0w)</sup>*\
     <sup>\* *This is the one thing I would ask you not to message me about. It is outside the scope of what I am hoping to accomplish with this guide. The graph above is solely intended to demonstrate my point about heat soak times.*</sup>
 
-- Klicky Auto Z Calibration
+- For Klicky Auto Z Calibration:
     - Ensure that none of your magnets are loose.
-    - Ensure that your Calibrate_Z macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
+    - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
     - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
 ## Layer Shifting
 ![](Images/Troubleshooting/LayerShifting/1.png)

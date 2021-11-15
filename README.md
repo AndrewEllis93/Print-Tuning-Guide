@@ -6,7 +6,7 @@ A handful of the [troubleshooting sections](#troubleshooting) and some of the tu
 
 **(!) Please pay special attention to anything bolded and marked with "(!)"**
 
-My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile), along with some other information like SS tips and volumetric flow rate information with formulas.
+My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
 I am adding new information all the time, be sure to check back.\
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
@@ -703,11 +703,11 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 
 Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.
 
-Volumetric flow is expressed in mm<sup>3</sup>/sec (cubic millimeters per second)
+Volumetric flow is expressed in mm<sup>3</sup>/sec (cubic millimeters per second).
 ### Why?
 You can use this volumetric flow rate **to determine how fast your hotend/extruder is able to print.**
 
-- See [this section](#how-volumetric-flow-rate-relates-to-print-speed) to determine how fast you can print with a given flow rate.
+- See [this section](#how-volumetric-flow-rate-relates-to-print-speed) to determine what maximum speeds you can print at with a given flow rate.
     - See [this section](#approximate-values) for approximate values for certain hotends.
 - Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
     - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. It will automatically limit you. 

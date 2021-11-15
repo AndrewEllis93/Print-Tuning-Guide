@@ -1169,10 +1169,10 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
     - You may need to play with how tight your bed mounting screws are. 
         - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
         - I've found that if any are *too* loose, it can cause first layer consistency issues.
-        - Ensure that your Z belts are properly tensioned. They should all be roughly equal tensions. 
-            - I tension mine to **140hz over a 150mm span** of belt.
-            - Your closed loop belts (the short belts loops in the Z drive units) should be quite tight, but not so tight that they are pulling the motors shaft out of parallel. 
-                - (It's not easily possible to measure these with a frequency)
+    - Ensure that your Z belts are properly tensioned. They should all be roughly equal tensions. 
+        - I tension mine to **140hz over a 150mm span** of belt.
+        - Your closed loop belts (the short belts loops in the Z drive units) should be quite tight, but not so tight that they are pulling the motors shaft out of parallel. 
+            - (It's not easily possible to measure these with a frequency)
 - For **inductive probes:**
     - Make sure your PEI is not bubbling in places. Inductive probes can only sense the subsurface, so cannot correct for PEI bubbles. 
     - Try leaving the toolhead sitting close to the center of the bed during your heat soak. Inductive probes thermally drift, and this can pre-heat it so that it does not drift *during* your mesh generation.

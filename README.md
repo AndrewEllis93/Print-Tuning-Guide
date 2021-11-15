@@ -1128,6 +1128,9 @@ If there is much resistance, *figure out where it is coming from:*
 ## First Layer / Squish Consistency Issues
 
 ### First Layer Consistency
+
+(If your squish seems to vary at different spots on the bed)
+
 - In my opinion, you should use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
     - Do not omit the `relative_reference_index` setting described in the link above. Follow the formula.
     - Some discourage using bed mesh unless absolutely necessary, but I disagree. As far as I'm concerned, it's cheap insurance. Additionally, it's rare for larger printers to have a perfect first layer without it.
@@ -1143,8 +1146,9 @@ If there is much resistance, *figure out where it is coming from:*
         - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
 - For **V2**:
     - You may need to play with how tight your bed mounting screws are. 
-    - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
-    - I've found that if any are *too* loose, it can cause first layer consistency issues.
+        - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
+        - I've found that if any are *too* loose, it can cause first layer consistency issues.
+- See the ["Both"](#both) section.
 
 ### Squish Consistency (Between Prints)
 
@@ -1166,6 +1170,8 @@ If there is much resistance, *figure out where it is coming from:*
     - Ensure that none of your magnets are loose.
     - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
     - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
+    
+- See the ["Both"](#both) section.
 ### Both
 - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
 Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.

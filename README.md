@@ -907,7 +907,13 @@ You will [watch, listen, and compare the terminal output from before/after.](#de
 
 
 # Passing Slicer Variables to PRINT_START
-**I would recommend starting with a standard PRINT_START and setting this up later.**
+
+This section will demonstrate passing temperature variables to PRINT_START.
+
+- This method can be used for other slicer variables too, not just temperatures / heating commands.
+    - The available variables are not always published, however, so you sometimes need to dig around to find the names of them.
+- SuperSlicer recently introduced [support for custom variables](https://github.com/supermerill/SuperSlicer/releases/tag/2.3.57.5).
+
 
 By default, slicers will put heating commands either entirely before or after `PRINT_START`. You have to pass the temps TO `PRINT_START` in order to control when they happen. 
 For example I don’t want my nozzle to heat until the very end so it’s not oozing during QGL, mesh etc.

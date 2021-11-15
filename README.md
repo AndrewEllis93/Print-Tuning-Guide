@@ -23,7 +23,6 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [A Note About Line Width](#a-note-about-line-width)
 - **Print Tuning**
     - [First Layer Squish](#first-layer-squish)
-        - [Background and Common Issues/Mistakes](#background-and-common-issuesmistakes)
         - [Method](#method)
         - [Print Examples](#print-examples)
     - [Build Surface Adhesion](#build-surface-adhesion)
@@ -107,7 +106,7 @@ However:
 For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
 # First Layer Squish
 
-I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. \
+I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 
 
 - **(!)** This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 

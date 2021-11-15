@@ -1174,6 +1174,8 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
         - I tension mine to **140hz over a 150mm span** of belt.
         - Your closed loop belts (the short belts loops in the Z drive units) should be quite tight, but not so tight that they are pulling the motors shaft out of parallel. 
             - (It's not easily possible to measure these with a frequency)
+- For **V0**:
+    - Ensure that your bed is solidly mounted. Check that the screws are not coming loose in the MGN7 carriage.
 - For **inductive probes:**
     - Make sure your PEI is not bubbling in places. Inductive probes can only sense the subsurface, so cannot correct for PEI bubbles. 
     - Try leaving the toolhead sitting close to the center of the bed during your heat soak. Inductive probes thermally drift, and this can pre-heat it so that it does not drift *during* your mesh generation.

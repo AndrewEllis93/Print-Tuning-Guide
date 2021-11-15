@@ -973,7 +973,7 @@ PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temper
 
 ### Controlling When Temperature G-codes Are Sent *Without* Passing Variables
 
-T**he [above section](#passing-variables-to-print_start) is the preferable way to set it up**, as it allows you the most control. 
+**The [above section](#passing-variables-to-print_start) is the preferable way to set it up**, as it allows you the most control. 
 
 If your slicer is putting heating g-codes AFTER `PRINT_START` and you want them to happen before (or the inverse, or you want to split it), this would be a simpler way to control the ordering. This method only allows you to send temperature g-codes before or after `PRINT_START`, but at least allows you to control the order.
 

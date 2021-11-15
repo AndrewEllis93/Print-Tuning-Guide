@@ -42,7 +42,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [How to Fix It](#how-to-fix-it)
 - [Retraction](#retraction)
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
-- [Determining Max Volumetric Flow Rate](#determining-max-volumetric-flow-rate)
+- [Determining Maximum Volumetric Flow Rate](#determining-maximum-volumetric-flow-rate)
     - [Approximate Values](#approximate-values)
     - [How Volumetric Flow Rate Relates to Print Speed](#how-volumetric-flow-rate-relates-to-print-speed)
     - [Method](#method-4)
@@ -698,7 +698,7 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 
 - To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
 
-# Determining Max Volumetric Flow Rate
+# Determining Maximum Volumetric Flow Rate
 
 Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.
 

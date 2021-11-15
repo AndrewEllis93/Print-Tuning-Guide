@@ -61,6 +61,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
     - [Crimps](#crimps)
     - [Extruder Skipping](#extruder-skipping)
+    - [First Layer / Z Offset Consistency Issues](#first-layer--z-offset-consistency-issues)
     - [Layer Shifting](#layer-shifting)
         - [Electrical](#electrical)
         - [Mechanical](#mechanical)
@@ -107,15 +108,11 @@ For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzl
 # First Layer Squish
 
 I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. \
-[It stops sounding like a real word after you type it 100 times.](https://en.wikipedia.org/wiki/Semantic_satiation)
 
-## Background and Common Issues/Mistakes
+- **(!)** This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
-- This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
-
-- This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. Here are some tips if you are having issues with either.
-
-
+- **(!)** This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
+    - See the [First Layer / Z Offset Consistency Issues](#first-layer--z-offset-consistency-issues) section if you are having issues with either.
 
 ## Method
 **1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*

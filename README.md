@@ -1150,6 +1150,7 @@ If there is much resistance, *figure out where it is coming from:*
 
 (If your Z offset seems to vary between prints.)
 
+- Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
 - For nozzle endstops:
     - Ensure that your start g-code contains a final z homing **with a hot nozzle** near the end.
         - This ensures that any plastic remaining on the nozzle is squished out of the way, and is less likely to affect your Z offset.
@@ -1160,7 +1161,11 @@ If there is much resistance, *figure out where it is coming from:*
     - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as G32 clears bed meshes by default.
     - **(!) Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
     - See the previous section for V2.
-
+    
+- For Klicky Auto Z Calibration:
+    - Ensure that none of your magnets are loose.
+    - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
+    - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
 ### Both
 - **(!) On larger enclosed printers (i.e. V2 & Trident), ensure that you are heat soaking for *at least* an hour.** \
 Z will drift upwards as the frame and gantry thermally expand with chamber heat. This can cause your first layer squish to vary between prints, and can even cause your first layer to drift up *as it prints*.
@@ -1175,10 +1180,6 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
     <sup>* *Some links: [1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://deepfriedhero.in/products/titanium-extrusion-backers?_pos=1&_sid=e2f989fec&_ss=r) [4](https://www.fabreeko.com/collections/voron/products/v2-4-trident-titanium-extrusion-backers) [5](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [6](https://github.com/alchemyEngine/measure_thermal_behavior) [7](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) [8](https://youtu.be/RXJKdh1KZ0w)</sup>*\
     <sup>\* *This is the one thing I would ask you not to message me about. It is outside the scope of what I am hoping to accomplish with this guide. The graph above is solely intended to demonstrate my point about heat soak times.*</sup>
 
-- For Klicky Auto Z Calibration:
-    - Ensure that none of your magnets are loose.
-    - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky switch on the Z endstop, *not* the button of the Klicky switch.
-    - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
 ## Layer Shifting
 ![](Images/Troubleshooting/LayerShifting/1.png)
 

@@ -592,24 +592,22 @@ We will be printing these retraction towers at three different temperatures. If 
 
 **2)** Set your fan speed high.
 - These are small towers, we don't want them to get melty.
+- These are located in the "filament settings" tab, under "cooling".
+- Try 80-100%.
 
 **3)** Set your retract and unretract speeds to **30mm/s** to start. 
 - This is located in the "printer settings" tab, under "extruder 1".
 - I have had more luck with slower retraction speeds. Your mileage may vary.
 
-**4)** Use medium-high fan speeds. 
-- These are located in the "filament settings" tab, under "cooling".
-- These retraction towers are small and need some additional cooling. 
-
-**5)** Select "extruder retraction calibration" from the menu.
+**4)** Select "extruder retraction calibration" from the menu.
 
 - ![](Images/Retraction-Menu.png) 
 
-**6)** Click "remove fil. slowdown".
+**5)** Click "remove fil. slowdown".
 
 - ![](Images/Retraction-FilSlowdown.png) 
 
-**7)** Fill out the parameters and select "Generate".
+**6)** Fill out the parameters and select "Generate".
 
 - ![](Images/Retraction-Params.png) 
 
@@ -635,20 +633,20 @@ We will be printing these retraction towers at three different temperatures. If 
     - You should get output like this:
         - ![](Images/Retraction-Sliced.png) 
 
-    **8) (!) Arrange the towers front to back**\* **on your build plate.**
-    - These objects are printed one at a time. **This ensures that they are not knocked over by the gantry/toolhead.** 
-    - Arrange them from the hottest tower at the front, to coolest tower at the back.
-        - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros). 
-    - ![](Images/Retraction-Sliced-FrontToBack.png)
+**7) (!) Arrange the towers front to back**\* **on your build plate.**
+- These objects are printed one at a time. **This ensures that they are not knocked over by the gantry/toolhead.** 
+- Arrange them from the hottest tower at the front, to coolest tower at the back.
+    - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros). 
+- ![](Images/Retraction-Sliced-FrontToBack.png)
 
-     <sup>\* If you are using a different kinematic system than CoreXY/i3 cartesian, you may need to use a different arrangement. For example, a cross gantry would need diagonal.</sup>
+    <sup>\* If you are using a different kinematic system than CoreXY/i3 cartesian, you may need to use a different arrangement. For example, a cross gantry would need diagonal.</sup>
 
-    **9) Print it, and inspect the results.** 
-    - If your hotter towers are much stringier, consider choosing a lower extrusion temperature.
-    - **To get your new retraction length:**
-        - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
-            - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
-            - We are subtracting 1 because the first ring is 0 retraction.
+**8) Print it, and inspect the results.** 
+- If your hotter towers are much stringier, consider choosing a lower extrusion temperature.
+- **To get your new retraction length:**
+    - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
+        - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
+        - We are subtracting 1 because the first ring is 0 retraction.
 
 ## Infill/Perimeter Overlap
 

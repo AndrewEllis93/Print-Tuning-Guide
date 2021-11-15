@@ -52,7 +52,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
 - [Miscellaneous](#miscellaneous)
     - [Passing Variables to PRINT_START](#passing-variables-to-print_start)
-    - [Controlling When Temperatures G-codes Are Sent *Without* Passing Variables](#controlling-when-temperature-g-codes-are-sent-without-passing-variables)
+    - [Controlling G-code Order *Without* Passing Variables](#controlling-g-code-order-without-passing-variables)
 - [Troubleshooting](#troubleshooting)
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
@@ -971,7 +971,7 @@ PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temper
 ```
 ![](Images/PassingVariables-Cura.png) 
 
-## Controlling When Temperature G-codes Are Sent *Without* Passing Variables
+## Controlling G-code Order *Without* Passing Variables
 
 **The [above section](#passing-variables-to-print_start) is the preferable way to set it up**, as it allows you the most control. 
 

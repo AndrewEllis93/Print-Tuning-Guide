@@ -835,7 +835,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
 
 **1)** Add [this macro](Macros/TEST_SPEED.cfg) to your `printer.cfg` file.
 
-**2)** Lower your `max_accel` in your config.
+**2)** Lower your `max_accel` in your config and then `reload`.
 - We want to test speeds and accels *separately*. This helps to remove the other as a variable.
 
 **3)** Run the `TEST_SPEED` macro using the [instructions below](#usage-of-the-test_speed-macro) with increasing speeds [until you experience skipping.](#determining-if-skipping-occured) 
@@ -853,7 +853,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
 
 **6)** Save your new maximum velocity to `max_velocity` in your config.
 
-**7)** Return your `max_accel` in your config to its previous value. *(changed in step 2)*
+**7)** Return your `max_accel` in your config to its previous value. *(changed in step 2)* and then `reload`.
 
 **8)** Repeat the process, this time increasing accelerations rather than speeds.
 - Example: `TEST_SPEED ACCEL=400 ITERATIONS=2`
@@ -891,7 +891,7 @@ You will [watch, listen, and compare the terminal output from before/after.](#de
 
 **1.** Watch and listen. 
 - Often, the skipping will be very obvious. Your toolhead may start shuddering and making erratic movements and loud noises.
-- Even if no skipping manifests, your motors might start to make loud resonant noises. *This can be an indication that you are near the limit, and should consider backing off a bit.*
+- **Even if no skipping occurs, your motors might start to make loud resonant noises.** This can be an indication that you are near the limit, and should consider backing off a bit.
 
 **2.** If there was no apparent major skipping, check for minor skipping:
 

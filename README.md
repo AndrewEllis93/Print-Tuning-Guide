@@ -52,7 +52,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - [Method](#method-5)
         - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
 - **Miscellaneous**
-    - [Passing Variables to PRINT_START](#passing-variables-to-print_start)
+    - [Passing Slicer Variables to PRINT_START](#passing-slicer-variables-to-print_start)
     - [Controlling G-code Order *Without* Passing Variables](#controlling-g-code-order-without-passing-variables)
 - **Troubleshooting**
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
@@ -906,7 +906,7 @@ You will [watch, listen, and compare the terminal output from before/after.](#de
     \* *Measuring to a full step just accounts for endstop variance. It does not necessarily mean that any microsteps were lost. Endstops are only so accurate.*
 
 
-# Passing Variables to PRINT_START
+# Passing Slicer Variables to PRINT_START
 **I would recommend starting with a standard PRINT_START and setting this up later.**
 
 By default, slicers will put heating commands either entirely before or after `PRINT_START`. You have to pass the temps TO `PRINT_START` in order to control when they happen. 

@@ -43,9 +43,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - [Retraction](#retraction)
 - [Infill/Perimeter Overlap](#infillperimeter-overlap)
 - [Determining Max Volumetric Flow Rate](#determining-max-volumetric-flow-rate)
-    - [Formulas](#formulas)
-    - [How Volumetric Flow Rate Relates to Print Speed](#how-volumetric-flow-rate-relates-to-print-speed)
     - [Approximate Values](#approximate-values)
+    - [How Volumetric Flow Rate Relates to Print Speed](#how-volumetric-flow-rate-relates-to-print-speed)
     - [Method](#method-4)
 - [Determining Motor Currents](#determining-motor-currents)
 - [Determining Maximum Speeds and Accelerations](#determining-maximum-speeds-and-accelerations)
@@ -701,46 +700,18 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 
 # Determining Max Volumetric Flow Rate
 
-This will allow you to measure the maximum amount of plastic that your hotend/extruder can extruder per second.
+Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.
+
+Volumetric flow is expressed in mm<sup>3</sup>/sec (cubic millimeters per second)
 ### Why?
 You can use this volumetric flow rate **to determine how fast your hotend/extruder is able to print.**
 
 - See [this section](#how-volumetric-flow-rate-relates-to-print-speed) to determine how fast you can print with a given flow rate.
     - See [this section](#approximate-values) for approximate values for certain hotends.
-- Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.** 
-    - You can use this as a safety net, so that you can change layer heights, nozzle sizes, etc. without worrying about outrunning your hotend, as it will automatically limit the speeds. \
-    - You can also set any print speeds to 0 (like infill) to print as fast as your hotend will allow.
+- Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
+    - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. It will automatically limit you. 
+    - You can also set any print speeds to 0 (like infill) to print that extrusion type as fast as your hotend will allow.
 - ![](Images/Volumetric-SS.png) 
-
-
-
-## Formulas*
-
-Volumetric flow is expressed in mm<sup>3</sup>/sec (cubic millimeters per second)
-
-- **volume = mm / 0.416**
-
-Or, inversely, 
-
-- **mm = volume * 0.416**
-
-For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm / 0.416)
-
-\* <sup>*For 2.85mm filament, use 0.157 instead of 0.416.*</sup>\
-\* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>
-
-## How Volumetric Flow Rate Relates to Print Speed
-
-Working out how quickly you can print at a given volumetric flow rate is quite simple:
-
-- **speed = volumetric flow / layer height / line width**
-
-Or, inversely,
-- **volumetric flow = speed * line width * layer height**
-
-For example, if your hotend is capable of 24mm<sup>3</sup>/sec, and you are printing with 0.4mm line width, at 0.2mm layer height:
-
-- **24 / 0.4 / 0.2 = Maximum print speed of 300mm/sec**
 
 ## Approximate Values
 
@@ -765,6 +736,19 @@ Nozzle properties may affect these numbers. For example:
 
 *If you want to get more scientific, test with a specific nozzle or setup, or your hotend just isn't listed, see the last section (["Determining Max Volumetric Flow Rate"](#determining-max-volumetric-flow-rate)) for more details.*
 
+## How Volumetric Flow Rate Relates to Print Speed
+
+Working out how quickly you can print at a given volumetric flow rate is quite simple:
+
+- **speed = volumetric flow / layer height / line width**
+
+Or, inversely,
+- **volumetric flow = speed * line width * layer height**
+
+For example, if your hotend is capable of 24mm<sup>3</sup>/sec, and you are printing with 0.4mm line width, at 0.2mm layer height:
+
+- **24 / 0.4 / 0.2 = Maximum print speed of 300mm/sec**
+
 ## Method
 You will follow a similar process to extruder calibration. 
 
@@ -783,8 +767,21 @@ G1 E100 F300 ; Extrude 100mm at 5mm/sec
 Remember the the F speed is in mm/min, **not** mm/sec, so multiply your desired speed by 60.
 
 **5)** Keep increasing speeds and extruding until it starts dropping below 100mm. This is your max flow rate. \
-**6)** Convert your extrusion speed to volumetric speed using the above formulas. \
+**6)** Convert your extrusion speed to volumetric speed using the below formulas. \
 **7)** Enter a slightly lower volumetric speed into the slicer.
+
+### Formulas
+
+**mm<sup>3</sup> = mm / 0.416**
+
+Or, inversely, 
+
+**mm = mm<sup>3</sup> * 0.416**
+
+For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm / 0.416)
+
+\* <sup>*For 2.85mm filament, use 0.157 instead of 0.416.*</sup>\
+\* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>
 # Determining Motor Currents
 **(!)** The below guidance is for **A/B/X/Y motors only**.
 

@@ -1305,7 +1305,7 @@ You have two options:
 - Pass variables to `PRINT_START` (allows the most control, but is more complex)
     - See the *"Passing Variables to PRINT_START"* section [here](#passing-variables-to-print_start).
 - Force g-code ordering (only allows changing the g-code order, but is easy to set up)
-    - See the *"Controlling When Temperature G-codes Are Sent Without Passing Variables"* section [here](#controlling-when-temperature-g-codes-are-sent-without-passing-variables).
+    - See the *"Controlling G-code Order Without Passing Variables"* section [here](#controlling-g-code-order-without-passing-variables).
 ## Small Infill Areas Look Overextruded
 
 ![](Images/Troubleshooting/SmallAreas.png) 

@@ -53,7 +53,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - [Usage of the TEST_SPEED Macro](#usage-of-the-test_speed-macro)
 - **Miscellaneous**
     - [Passing Slicer Variables to PRINT_START](#passing-slicer-variables-to-print_start)
-    - [Controlling Slicer G-code Order *Without* Passing Variables](#controlling-g-code-order-without-passing-variables)
+    - [Controlling Slicer G-code Order *Without* Passing Variables](#controlling-slicer-g-code-order-without-passing-variables)
 - **Troubleshooting**
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)

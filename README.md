@@ -4,8 +4,6 @@ Much of this guide is specific to Voron printers running Klipper.
 
 A handful of the [troubleshooting sections](#troubleshooting) and some of the tuning hints focus on CoreXY (sorry, Switchwire folks).
 
-This is not intended to be an ultimate guide to everything, rather a guide to address common mistakes and confusion I see in the Voron Discord.
-
 **(!) Please pay special attention to anything bolded and marked with "(!)"**
 
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile), along with some other information like SS tips and volumetric flow rate information with formulas.

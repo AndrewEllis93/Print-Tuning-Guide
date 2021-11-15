@@ -976,7 +976,7 @@ If there is much resistance, *figure out where it is coming from:*
 ![](Images/Troubleshooting/LayerShifting/2.png)
 ### Electrical
 - #### Motor Currents
-    - Check your motor currents. Ensure that your `run_current`s configured for your A/B/X/Y motors are correct. See [this section.](#determining-motor-currents)
+    - Check your motor currents. Ensure that the `run_current` configured for your A/B/X/Y motors are correct. See [this section.](#determining-motor-currents)
 - #### Wiring
     - [Check your crimps.](#crimps)
     - Ensure that you are using high strand count wire, of 24awg (0.25 mm²) or thicker.

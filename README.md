@@ -60,7 +60,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
     - [Crimps](#crimps)
     - [Extruder Skipping](#extruder-skipping)
-    - [First Layer / Z Offset Consistency Issues](#first-layer--z-offset-consistency-issues)
+    - [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues)
     - [Layer Shifting](#layer-shifting)
         - [Electrical](#electrical)
         - [Mechanical](#mechanical)
@@ -111,7 +111,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - **(!)** This section assumes that you have already done a rough [Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
 - **(!)** This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
-    - See the [First Layer / Z Offset Consistency Issues](#first-layer--z-offset-consistency-issues) section.
+    - See the [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues) section, **even if you are not having any issues.** There is some important reading there.
 
 ## Method
 **1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*
@@ -1125,7 +1125,7 @@ If there is much resistance, *figure out where it is coming from:*
             - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
             - ![](Images/Troubleshooting/ExtruderSkips-Clearance.png)
 
-## First Layer / Z Offset Consistency Issues
+## First Layer / Squish Consistency Issues
 
 - In my opinion, you should use [bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. (requires the config section in the link above.)
     - Do not omit the `relative_reference_index` setting described in the link above. Follow the formula.

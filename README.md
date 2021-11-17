@@ -59,6 +59,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [Bulges at STL Vertices](#bulges-at-stl-vertices)
     - [Bulging Patterns on Overhangs (SS)](#bulging-patterns-on-overhangs-ss)
     - [Crimps](#crimps)
+    - [Error: "Command Format Mismatch"](#error-command-format-mismatch)
     - [Extruder Skipping](#extruder-skipping)
     - [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues)
         - [Thermal Drift](#thermal-drift)
@@ -91,12 +92,8 @@ Before you follow *any* tuning methods in this guide, ensure that:
 
         - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
 
-            - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating.
+            - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating. See [here](#error-command-format-mismatch).
 
-                - Refer to the flashing documentation for your specific board. This refers to the sections with the `make` commands. 
-                    - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
-
-                - This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code) if configured (commonly used for accelerometer support).
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
@@ -1121,12 +1118,8 @@ Skipping below top layer:
 
     - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
 
-        - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating.
+        - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating. See [here](#error-command-format-mismatch).
 
-            - Refer to the flashing documentation for your specific board. This refers to the sections with the `make` commands. 
-                - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
-
-            - This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code) if configured (commonly used for accelerometer support).
 - Ensure that your retraction distance is not too high. 
     - The default Cura profile uses a high retraction distance, as it is configured for bowden. 
     - You should generally use a maximum of 1mm for direct drive.

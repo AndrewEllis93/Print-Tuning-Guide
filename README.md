@@ -1078,10 +1078,15 @@ This error means that you updated Klipper software, but did not update the firmw
     - ![](Images/Troubleshooting/CommandFormatMismatch.png)
 
 Refer to the [flashing documentation](https://docs.vorondesign.com/build/software/#firmware-flashing) for each specific board*.
+
 - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
+
     - Not all boards are supported this way. You may have to manually place firmware.bin on the SD card. 
+
     - I believe this is currently not working for Spider. Manually place firmware.bin on the SD card. 
 - **This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code)** if configured (commonly used for accelerometer support).
+
+Generally you should not update Klipper unless there is a specific feature or bug fix that you need.
 
 \* *Some MCUs are not yet documented on the Voron documentation site. Find the directions from the vendor. Most of them have a github repository with manuals.*
 ## Extruder Skipping

@@ -93,7 +93,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
 
             - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating.
 
-                - Refer to the documentation for your specific board. This refers to the sections with the `make` commands. 
+                - Refer to the flashing ocumentation for your specific board. This refers to the sections with the `make` commands. 
                     - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
 
                 - This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code) if configured (commonly used for accelerometer support).
@@ -1099,7 +1099,7 @@ Skipping below top layer:
 
         - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating.
 
-            - Refer to the documentation for your specific board. This refers to the sections with the `make` commands. 
+            - Refer to the flashing documentation for your specific board. This refers to the sections with the `make` commands. 
                 - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
 
             - This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code) if configured (commonly used for accelerometer support).

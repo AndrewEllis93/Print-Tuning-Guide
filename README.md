@@ -1067,9 +1067,7 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 Klipper consists of two parts. The "master" host software, and the "slave" MCU firmware. 
 
 This error means that you updated Klipper software, but did not update the firmware on your MCUs.
-- MCU stands for "microcontroller units".
-
-    - This refers to your printer control board(s) (SKR, Spider, Octopus, etc.)
+- MCU stands for "microcontroller units". This refers to your printer control board(s) (SKR, Spider, Octopus, etc.)
 
 **To fix this, re-compile and re-flash the firmware onto each MCU.**
 - Refer to the example image below. Compare the version numbers in your error message to find out which MCUs need flashing.

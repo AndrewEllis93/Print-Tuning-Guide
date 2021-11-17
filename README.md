@@ -1348,10 +1348,11 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
 ## Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing
 
-Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
-If they are not perfectly vertical (i.e. wood grain, diagonal, etc), see [this section](#repeating-patterns-in-extrusion-bmg-clockwork) instead.
+Try printing the test objects [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). 
 
-These patterns can be subtle (lumps) or sharp like the above section's photo.
+Ensure that the artifacts are always vertical or diagonal. These patterns can be subtle (lumps) or sharp (lines).
+
+If the pattern looks like "wood grain", or any of the example photos in that link, see [this section](#repeating-patterns-in-extrusion-bmg-clockwork) instead.
 
 - **Ensure that your A/B pulleys and XY joint idlers are all clean.** Debris can accumulate and compress between the teeth.
 - You may have a bad/poor quality pulley or toothed idler.
@@ -1360,7 +1361,7 @@ These patterns can be subtle (lumps) or sharp like the above section's photo.
     - Loosen the A/B belts, pull the belt over the side of each bearing flange, and turn each bearing by running it against your finger. Make sure the whole rotation feels smooth.
 - You may have a bad/poor quality linear rail.
 
-### Narrowing it Down
+### Narrowing it Down (CoreXY)
 Print two wide square objects, one in normal orientation, and one at 45 degrees. \
 Inspect the object to see which axes the artifacts appear most prominent in.
 
@@ -1385,6 +1386,9 @@ Inspect the object to see which axes the artifacts appear most prominent in.
     - **X** linear rail(s)
 - Artifacts are most prominent in in A/B/Y, but not X:
     - **Y** linear rails
+- Artifacts are most prominent in in X/Y, but not A/B:
+    - **A *and* B** motors
+        - Certain motor models have been found to cause this when both are operating at the same time (i.e. X/Y moves)
 - Artifacts are equally prominent in all directions:
     - **A *and* B** motor pulleys
     - **X *and* Y** linear rails

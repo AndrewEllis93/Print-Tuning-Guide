@@ -1055,7 +1055,6 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
             - *Male* pins go into the *female* housings, and vice versa.
                 - ![](Images/Troubleshooting/Microfit-Housings.jpg)
             - The crimped side of the pins should be facing *towards the latch*, as shown above.
-            - The lower arms should be crimped onto the insulation, and the following arms should be crimped onto the bare wire.
             - The female pins have *three* sets of arms. *You should only crimp the lower two.*
                 - **(!) DO NOT CRIMP THESE ARMS.**
                 - ![](Images/Troubleshooting/Microfit-Female.png)

@@ -707,7 +707,7 @@ Nozzle properties may affect these numbers. For example:
 - Plated copper and tungsten carbide have higher thermal conductivity and might allow a bit higher flow rate. 
 - Bondtech CHT nozzles use a different internal geometry that allows higher flow rates.
 
-*If you want to get more scientific, test with a specific nozzle or setup, or your hotend just isn't listed, see the last section (["Determining Max Volumetric Flow Rate"](#determining-max-volumetric-flow-rate)) for more details.*
+*If you want to get more scientific, test with a specific nozzle or setup, or your hotend just isn't listed, see [here](#method-4) for a testing method.*
 
 ## How Volumetric Flow Rate Relates to Print Speed
 
@@ -1116,7 +1116,7 @@ If there is much resistance, *figure out where it is coming from:*
             - If you have the 20mm 1a LDO motor, try 0.65a. 
             - If you have the 17mm 1a LDO motor, try 0.35-0.4a.
 - Check your extruder motor [crimps](#crimps) and wiring.
-- Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-max-volumetric-flow-rate) to determine your maximum.
+- Check the volumetric speed preview in your slicer. See if it is high for [your particular hotend](https://github.com/AndrewEllis93/Ellis-PIF-Profile#approximate-values). Or see [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile#determining-maximum-volumetric-flow-rate) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
 - Try rotating the extruder (if possible) without filament loaded. It should be easy.
 - Try using the [AB-BN mod](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN). It optimizes hotend cooling and can help with heat creep issues.

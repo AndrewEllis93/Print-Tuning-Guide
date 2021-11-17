@@ -1068,12 +1068,15 @@ Klipper consists of two parts. The "master" host software, and the "slave" MCU f
 
 This error means that you updated Klipper software, but did not update the firmware on your MCUs.
 - MCU stands for "microcontroller units".
+
     - This refers to your printer control board(s) (SKR, Spider, Octopus, etc.)
 
 **To fix this, re-compile and re-flash the firmware onto each MCU.**
 - Refer to the example image below. Compare the version numbers in your error message to find out which MCUs need flashing.
 
     - The "host" version refers to the Klipper software. Each following version number refers to a specific MCU.
+
+    - In this example, the "z" MCU is out of date:
 
     - ![](Images/Troubleshooting/CommandFormatMismatch.png)
 

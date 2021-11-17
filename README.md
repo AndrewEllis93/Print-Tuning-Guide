@@ -1061,6 +1061,8 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
                 - ![](Images/Troubleshooting/Microfit-Female.png)
             - **Example of correct crimps:**
                 - ![](Images/Troubleshooting/Microfit-Crimps.png)
+                - ![](Images/Troubleshooting/Microfit-Crimps-Annotated.png)
+
         - Do a "pull test". Ensure that the pins do not come out. 
             - Microfits hold *very* strongly. The pins should be nearly impossible to pull out. The wire will usually tear before they ever come out.
 ## Extruder Skipping

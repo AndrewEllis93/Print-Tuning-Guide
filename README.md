@@ -1,8 +1,8 @@
 # Introduction
 
-Much of this guide is specific to Voron printers running Klipper.
+Much of this guide is specific to CoreXY/Voron printers running Klipper.
 
-A handful of the [troubleshooting sections](#troubleshooting) and some of the tuning hints focus on CoreXY (sorry, Switchwire folks).
+Some of the troubleshooting/tuning information focuses on CoreXY (sorry, Switchwire folks).
 
 **(!) Please pay special attention to anything bolded and marked with "(!)"**
 

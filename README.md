@@ -927,7 +927,7 @@ This would now be run like `PRINT_START BED=110 HOTEND=240 CHAMBER=50`.
 Chamber defaults to 0 if not specified.
 ### Slicer Start G-code
 
-Don't split any of these gcodes to separate lines.
+Don't split any of these lines.
 #### SuperSlicer
 (3 lines)
  ```    
@@ -958,7 +958,7 @@ PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temper
 
 # Controlling Slicer G-code Order *Without* Passing Variables
 
-**The [above section](#passing-variables-to-print_start) is the preferable way to set it up**, as it allows you the most control. 
+**The [above section](#passing-variables-to-print_start) is generally the preferable way to set it up**, as it allows you the most control. 
 
 If your slicer is putting heating g-codes AFTER `PRINT_START` and you want them to happen before (or the inverse, or you want to split it), this would be a simpler way to control the ordering. This method only allows you to send temperature g-codes before or after `PRINT_START`, but at least allows you to control the order.
 
@@ -1263,7 +1263,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
         - Ensure that they have adequate airflow*. 
             - \* *The v0 does not spec stepper driver cooling by default. This is usually fine, as it runs lower motor currents. It may be worth trying, though, if you are having issues (especially if you are running higher motor currents.)*
 ### Mechanical
-- Try using z lift (z hop), and [check your prints for signs of overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes and subsequent layer shifs.
+- Try using z lift (z hop), and [check your prints for signs of overheating](#cooling-and-layer-times). Print curling can cause nozzle strikes and subsequent layer shifts.
     - Around 0.2-0.3mm of z lift is usually enough. Too much can cause stringing.
 - Ensure that you have good quality motors. 
     - Some off-brand motors (notably Oukeda*) have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.

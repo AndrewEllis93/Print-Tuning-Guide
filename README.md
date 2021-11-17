@@ -93,7 +93,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
 
             - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating.
 
-                - Refer to the flashing ocumentation for your specific board. This refers to the sections with the `make` commands. 
+                - Refer to the flashing documentation for your specific board. This refers to the sections with the `make` commands. 
                     - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
 
                 - This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code) if configured (commonly used for accelerometer support).
@@ -960,7 +960,7 @@ PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temper
 
 **The [above section](#passing-variables-to-print_start) is generally the preferable way to set it up**, as it allows you the most control. 
 
-If your slicer is putting heating g-codes AFTER `PRINT_START` and you want them to happen before (or the inverse, or you want to split it), this would be a simpler way to control the ordering. This method only allows you to send temperature g-codes before or after `PRINT_START`, but at least allows you to control the order.
+If your slicer is putting heating g-codes AFTER `PRINT_START` and you want them to happen before (or the inverse, or you want to split it), this would be a simpler way to control the ordering. This method only allows you to send temperature g-codes before or after `PRINT_START`.
 
 To force the g-code ordering, place any of the following g-codes from the following lists in your start gcode where you desire:
 ### Prusa Slicer / SuperSlicer
@@ -1064,6 +1064,29 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 
         - Do a "pull test". Ensure that the pins do not come out. 
             - Microfits hold *very* strongly. The pins should be nearly impossible to pull out. The wire will usually tear before they ever come out.
+
+## Error: "Command Format Mismatch"
+
+Klipper consists of two parts. The "master" host software, and the "slave" MCU firmware. 
+
+This error means that you updated Klipper software, but did not update the firmware on your MCUs.
+- MCU stands for "microcontroller units".
+    - This refers to your printer control board(s) (SKR, Spider, Octopus, etc.)
+
+**To fix this, re-compile and re-flash the firmware onto each MCU.**
+- Refer to the example image below. Compare the version numbers in your error message to find out which MCUs need flashing.
+
+    - The "host" version refers to the Klipper software. Each following version number refers to a specific MCU.
+
+    - ![](Images/Troubleshooting/CommandFormatMismatch.png)
+
+Refer to the [flashing documentation](https://docs.vorondesign.com/build/software/#firmware-flashing) for each specific board*.
+- Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
+    - Not all boards are supported this way. You may have to manually place firmware.bin on the SD card. 
+    - I believe this is currently not working for Spider. Manually place firmware.bin on the SD card. 
+- **This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code)** if configured (commonly used for accelerometer support).
+
+\* *Some MCUs are not yet documented on the Voron documentation site. Find the directions from the vendor. Most of them have a github repository with manuals.*
 ## Extruder Skipping
 These skips will typically be wider than [pockmarks.](#pockmarks)
 

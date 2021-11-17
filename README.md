@@ -1338,6 +1338,7 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
         - These instructions are for V2, but the process should be similar for Trident.
     - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
+- You may have poor quality belts. **Only use genuine Gates brand belts.**
 - You may have poor quality motor pulleys and idlers.
     - I, and a few others, have had improvements from switching to authentic Gates brand pulleys and idlers. They are more expensive, but are worth it in my opinion. 
         - On v2 at least, you only need them for A/B motors and X/Y idlers. Don't waste the money on Z.
@@ -1359,6 +1360,7 @@ If the pattern looks like "wood grain", or any of the example photos in that lin
     - See above section for more info / links.
 - You may have a bad/poor quality bearing.
     - Loosen the A/B belts, pull the belt over the side of each bearing flange, and turn each bearing by running it against your finger. Make sure the whole rotation feels smooth.
+- You may have poor quality belts. **Only use genuine Gates brand belts.**
 - You may have a bad/poor quality linear rail.
 
 ### Narrowing it Down (CoreXY)

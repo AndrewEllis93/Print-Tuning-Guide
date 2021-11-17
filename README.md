@@ -87,7 +87,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
         - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
 
 - Your thermistors are the correct types in your config.
-    - **(!) If you use an NTC100K B3950 thermistor**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
+    - **(!) If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
 
         - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version.
 - **(!) Everything is tight (seriously, check again)**
@@ -1086,7 +1086,7 @@ Skipping below top layer:
         - Some vendor githubs have the `[heater_fan hotend_fan]`'s `max_power` setting at 0.4 (40%) for some    reason.
         - Ensure that you are running it at the correct voltage.
 - Ensure that your hotend thermistor is correct in your config and that you are not using temps that are too    low.
-- **(!) If you use an NTC100K B3950 thermistor**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
+- **(!) If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
 
     - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version.
 - Ensure that your retraction distance is not too high. 

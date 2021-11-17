@@ -1371,13 +1371,13 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 - Artifacts are most prominent in in A:
     - Bearings in **A** belt path
     - **A** motor pulley
-    - **A** belt *(rare)*
-    - **A** motor *(rare)*
+    - **A** belt
+    - **A** motor
 - Artifacts are most prominent in in B:
     - Bearings in **B** belt path
     - **B** motor pulley
-    - **B** belt *(rare)*
-    - **B** motor *(rare)*
+    - **B** belt
+    - **B** motor
 - Artifacts are most prominent in in X:
     - **XY** joint idlers
     - **X** linear rails(s)
@@ -1394,8 +1394,8 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 - Artifacts are equally prominent in all directions:
     - **A *and* B** motor pulleys
     - **X *and* Y** linear rails
-    - **A *and* B** belts *(rare)*
-    - **A *and* B** motors *(rare)*
+    - **A *and* B** belts
+    - **A *and* B** motors
 
 ## Slicer is Putting Heating G-codes in the Wrong Place/Order
 You have two options:

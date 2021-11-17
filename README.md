@@ -88,6 +88,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
 
 - Your thermistors are the correct types in your config.
     - **(!) If you use an NTC100K B3950 thermistor**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
+        - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version.
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
@@ -1085,6 +1086,7 @@ Skipping below top layer:
         - Ensure that you are running it at the correct voltage.
 - Ensure that your hotend thermistor is correct in your config and that you are not using temps that are too    low.
 - **(!) If you use an NTC100K B3950 thermistor**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
+    - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version.
 - Ensure that your retraction distance is not too high. 
     - The default Cura profile uses a high retraction distance, as it is configured for bowden. 
     - You should generally use a maximum of 1mm for direct drive.

@@ -86,10 +86,17 @@ Before you follow *any* tuning methods in this guide, ensure that:
         - Ensure that you can easily extrude by hand with the filament latch open.
         - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
 
-- Your thermistors are the correct types in your config.
+- Your thermistors are the correct types in your config. Please double check them.
     - **(!) If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
 
-        - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version.
+        - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
+
+            - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating.
+
+                - Refer to the documentation for your specific board. This refers to the sections with the `make` commands. 
+                    - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
+
+                - This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code) if configured (commonly used for accelerometer support).
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
@@ -1088,7 +1095,14 @@ Skipping below top layer:
 - Ensure that your hotend thermistor is correct in your config and that you are not using temps that are too    low.
 - **(!) If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
 
-    - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version.
+    - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
+
+        - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating.
+
+            - Refer to the documentation for your specific board. This refers to the sections with the `make` commands. 
+                - Check if your board supports [SD card updating](https://www.klipper3d.org/SDCard_Updates.html). It can save you from having to juggle SD cards.
+
+            - This includes the [Pi MCU](https://www.klipper3d.org/RPi_microcontroller.html#building-the-micro-controller-code) if configured (commonly used for accelerometer support).
 - Ensure that your retraction distance is not too high. 
     - The default Cura profile uses a high retraction distance, as it is configured for bowden. 
     - You should generally use a maximum of 1mm for direct drive.

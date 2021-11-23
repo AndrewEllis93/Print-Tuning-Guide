@@ -334,7 +334,7 @@ gcode:
 - **Printer**
     - **Layer Height**: 0.25mm
 - **Speed**
-    - **Slow Printing Speed**: Your square corner velocity
+    - **Slow Printing Speed**: Your `square_corner_velocity` *(From your printer.cfg. Default is 5.)*
     - **Fast Printing Speed**: 120mm/sec
     - **Acceleration**: Your perimeter acceleration (NOT external perimeter)
 - **Pattern**
@@ -730,7 +730,9 @@ For example, if your hotend is capable of 24mm<sup>3</sup>/sec, and you are prin
 ## Method
 You will follow a similar process to extruder calibration. 
 
-This is a rough calculation. Maximum volumetric flow rate can change with a number of factors, like temperatures, material, and nozzle type. You should set your limit slightly lower in the slicer for margin of safety, and to avoid having to tune for different filaments that don't flow as nicely.
+This is a rough calculation. Maximum volumetric flow rate can change with a number of factors, like temperatures, material, and nozzle type. 
+
+You should set your limit slightly lower in the slicer for margin of safety, and to avoid having to re-tune for different filaments that don't flow as nicely.
 
 **1)** Heat your hotend. \
 **2)** Extrude a little bit to ensure your E motor is energized and holding.\

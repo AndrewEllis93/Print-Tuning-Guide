@@ -242,7 +242,7 @@ Pressure advance changes the **distribution** of material, not the **amount** of
 
 - **Remember: There is rarely such thing as perfect pressure advance.** Either accelerations or decelerations will almost always be slightly imperfect. You should always err on the side of lower PA values.
 
-- Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors of they are noticeably different.
+- Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors if they are noticeably different.
 
 There are two approaches - the [tower method](#tower-method-simple) (simple), and the [Lines method](#marlin-method-advanced) (advanced).
 
@@ -423,11 +423,12 @@ This must be done, at a minimum, per filament brand/type. It may vary by color o
 ## Background
 This is a bit of a debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 ### Methods I'm Not a Fan Of
-The below methods I've found to have error of up to 5% (sometimes even more) - which may not sound too bad but it makes a *huge* difference on the appearance of your prints.
+The below methods I've found to have large margins for error. Good EM makes a *huge* difference to the appearance of your prints.
 - #### Measuring Wall Thickness With Calipers
     - Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers. 
         - I find this method not to work very well at all, especially with ABS, presumably due to shrinkage.
         - This method is also impacted by pressure advance, which can easily throw off your results.
+        - This method assumes that you have good calipers, which many people don't. Adding to that, the width can vary depending where you mesaure it.
 - #### SuperSlicer Calibration
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
         - It is very reliant on first layer squish.
@@ -999,8 +1000,6 @@ The motor plate has 3 slotted screw holes to allow for adjustment:
 
 - The top two screws are easily reachable.
 - The bottom left screw can be reached by opening the filament latch fully and using a ball-end hex driver.
-
-I don't have a Mini Afterburner so I can't give an exact process for it. From what I understand, it now also has some slotted screw holes to allow for adjustment.
 ### Too Little Backlash:
 - Repeating Patterns in Extrusion
     - Adjusting backlash can help considerably with these issues, but is not always guaranteed to fix it.
@@ -1018,6 +1017,13 @@ I don't have a Mini Afterburner so I can't give an exact process for it. From wh
 ### Too Much Backlash:
 - Clacking noises during retraction
 - Clacking noises during pressure advance moves
+
+### Mini Afterburner
+
+I don't have a Mini Afterburner so I can't give an exact process for tweaking it. I believe it also has some slotted screw holes to allow for adjustment.
+
+I have heard that loosening and threadlocking these screws may also help with its extrusion consistency:
+- ![](Images/Troubleshooting/Backlash-MiniAB-Screws)
 ## Bulging
 
 This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 

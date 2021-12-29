@@ -15,7 +15,7 @@ You can find bed the models and textures I am using in [Hartk's GitHub repo](htt
 
 Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/donate?business=U6F2FZMXXSBSW&no_recurring=0&currency_code=USD)
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
 # Table of Contents
 - **Before We Begin**

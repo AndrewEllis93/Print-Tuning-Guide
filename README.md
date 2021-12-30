@@ -80,8 +80,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
-- Your nozzle is clean.
-- Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
+- **(!) Everything is tight (seriously, check again)**
+    - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws, linear rails, and everything in the toolhead. 
+    - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
 - **(!) Your nozzle is not partially clogged.**
     - If your nozzle is partially clogged, you may not even notice. You may be able to print, but you will have an **extremely difficult time trying to tune**.
         - Ensure that you can easily extrude by hand with the filament latch open.
@@ -93,11 +94,9 @@ Before you follow *any* tuning methods in this guide, ensure that:
         - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
 
             - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating. See [here](#error-command-format-mismatch).
-
-- **(!) Everything is tight (seriously, check again)**
-    - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws and everything in the toolhead. 
-    - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
 - Your motion components are clean, particularly between gear/pulley/idler teeth.
+- Your nozzle is clean.
+- Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
 
 ## A Note About Line Width
 Any line widths are expressed as a **percentage of nozzle diameter.** \
@@ -803,7 +802,9 @@ For example, a 2a motor would be about 1.4a max.
     - *You cannot accurately gauge this by feel.*
     - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
 ## Determining `hold_current`
-A rule of thumb is about 70% of your `run_current`.
+Recently, Klipper docs have started to [recommend against using a separate `hold_current`.](https://github.com/Klipper3d/klipper/pull/4977) You can achieve this by commenting out `hold_current`, or by setting it to the same value as your `run_current`.
+
+If you run a different hold current, a good rule of thumb is about 70% of your `run_current`.
 # Determining Maximum Speeds and Accelerations
 
 This section is purely about finding your absolute maximum speeds/accels. **This does not necessarily mean that these speeds or accelerations will be practical to print with** - but it can be handy to find the limits of your printer. You can use max speeds for things like travels, mesh, QGL, etc.

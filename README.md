@@ -249,6 +249,8 @@ There are two approaches - the [tower method](#tower-method-simple) (simple), an
 
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
+**I would highly recommend using the [lines method](#lines-method-advanced) rather than this method, if you can take some time to wrap your head around a small amount of manual g-code editing.** It is quicker and more precise. This "tower method" is here for beginners, and works alright, but is not my preferred method.
+
 This is based off of the [Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 
 The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I'm not a fan of this approach.

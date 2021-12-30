@@ -262,7 +262,9 @@ The only modifications you should make are these:
 - **1** perimeter
 - **0%** infill
 - **0** top layers
-- **0 second** "minimum layer time" / "layer time goal"
+- **0 second** "minimum layer time" / "layer time goal" / "slow down if layer print time is below"
+    - Under filament cooling settings in PS/SS. 
+    - You can use **ctrl+f** to find settings by name.
 - **High fan speed**
 
 **2)** Initiate the print.
@@ -556,8 +558,9 @@ There are multiple things you can do to minimize overheating with ABS.
 - If your prints are curling away from the bed even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.
 
 
-**2) Increase "minimum layer time" / "layer time goal"**
-
+**2) Increase "minimum layer time" / "layer time goal" / "slow down if layer print time is below"**
+- Under filament cooling settings in PS/SS. 
+    - You can use **ctrl+f** to find settings by name.
 - I set this to a minimum of 15 seconds.
 - This essentially slows down the print for very short/small layers, allowing each layer adequate time to cool.
 - When layer times are **too short**, they do not have enough time to properly cool. You will then be printing on top of layers that are still soft.
@@ -804,7 +807,7 @@ For example, a 2a motor would be about 1.4a max.
 ## Determining `hold_current`
 Recently, Klipper docs have started to [recommend against using a separate `hold_current`.](https://github.com/Klipper3d/klipper/pull/4977) You can achieve this by commenting out `hold_current`, or by setting it to the same value as your `run_current`.
 
-If you run a different hold current, a good rule of thumb is about 70% of your `run_current`.
+If you run a different `hold_current`, a good rule of thumb is about 70% of your `run_current`.
 # Determining Maximum Speeds and Accelerations
 
 This section is purely about finding your absolute maximum speeds/accels. **This does not necessarily mean that these speeds or accelerations will be practical to print with** - but it can be handy to find the limits of your printer. You can use max speeds for things like travels, mesh, QGL, etc.

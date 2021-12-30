@@ -315,7 +315,8 @@ This method is quicker to run and more precise than the tower method, but requir
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
 
-**(!) If you are not familiar with manually modifying g-code, please consider using the tower method instead. You risk crashes & damage if you don't know what you are doing.**
+**(!) If you are not willing to get familiar with manually modifying g-code, please consider using the tower method instead.** 
+- You can risk crashes & damage if you don't understand what changes you are making (for example, accidentally omitting `QUAD_GANTRY_LEVEL` or `PRINT_START`)
 ### Method
 
 **1)** Add this macro to your Klipper config.

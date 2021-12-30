@@ -323,13 +323,11 @@ This method is quicker to run and more precise than the tower method, but requir
 
 ```
 # Convert Marlin linear advance (M900) commands to Klipper (SET_PRESSURE_ADVANCE) commands.
-# Used in conjunction with Marlin's linear advance calibration tool: 
-# https://marlinfw.org/tools/lin_advance/k-factor.html
+# For use with Marlin's linear advance calibration: https://marlinfw.org/tools/lin_advance/k-factor.html
 [gcode_macro M900]
 gcode:
 	# Parameters
 	{% set pa = params.K|float %}
-	
 	SET_PRESSURE_ADVANCE ADVANCE={pa}
 ```
 

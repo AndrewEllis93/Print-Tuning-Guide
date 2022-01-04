@@ -836,8 +836,8 @@ Tune maximum speeds first, THEN tune accelerations separately.
 - `max_accel` needs to be high enough to actually *reach* full speed in a given print volume, but low enough to not risk causing skipping on its own. **This is purely to isolate variables.** You will come back and tune actual max accels later *(step 8)*.
 - You can use the "acceleration" graphing calculator at the bottom of the page [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you will be reaching max speed.
     - For example, for a 300mm linear rail CoreXY printer:
-        - Note that the test pattern is **inset 20mm by default**. Hence 260mm *(300-20\*2)*.
-        - The **blue line** shows that a max speed of 500mm/s is actually being reached and maintained at 3000mm³/s*
+        - Note that the test pattern is **inset 20mm by default** (to help avoid collisions). Hence the distance of **260mm** *(300-20\*2)*.
+        - The **blue line** shows that a max speed of 500mm/s is actually being reached and maintained.
         - ![](Images/TEST_SPEED_Calc.png) 
         - This graph also shows that we would max out a bit under **900mm/s** at this acceleration/distance.
 

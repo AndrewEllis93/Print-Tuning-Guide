@@ -829,14 +829,14 @@ Tune maximum speeds first, THEN tune accelerations separately.
 
 **2)** If you are already pushing high accels, then lower your `max_accel` in your config to something closer to "stock" and `reload`. 
 - Reference the stock Voron configs for a reasonable starting point.
-    - It needs to be high enough to actually *reach* full speed in a given print volume, but low enough to not risk causing skipping on its own. **This is purely to isolate variables.** You will come back and tune actual max accels later *(step 8)*.
     - Some wild guesses:
         - Linear rail CoreXY: *3000mm³/s*
         - Linear rod CoreXY: *2000mm³/s*
         - Bed slinger: *1000mm³/s* 
-- You can use the "acceleration" graphing calculator at the bottom of the page [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you are reaching max speed.
+- `max_accel` needs to be high enough to actually *reach* full speed in a given print volume, but low enough to not risk causing skipping on its own. **This is purely to isolate variables.** You will come back and tune actual max accels later *(step 8)*.
+- You can use the "acceleration" graphing calculator at the bottom of the page [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you will be reaching max speed.
     - For example, for a 300mm linear rail CoreXY printer:
-        - Keep in mind that the movement pattern is **inset 20mm by default**, so the movements are minus 20mm on each end. Hence 260mm.
+        - Note that the test pattern is **inset 20mm by default**. Hence 260mm *(300-20\*2)*.
         - The **blue line** shows that a max speed of 500mm/s is actually being reached and maintained at 3000mm³/s*
         - ![](Images/TEST_SPEED_Calc.png) 
         - This graph shows that we max out a bit under **900mm/s** at an acceleration of 3000mm³/s.

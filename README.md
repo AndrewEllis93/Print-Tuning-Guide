@@ -836,7 +836,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
         - Bed slinger: *1000mm³/s* 
 - You can use the "acceleration" graphing calculator at the bottom of the page [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you are reaching max speed.
     - For example, for a 300mm linear rail CoreXY printer:
-        - Keep in mind that the movement pattern is **inset 20mm by default**, so the movements are minus 20mm on each end. This is why the distance is set to 260mm.
+        - Keep in mind that the movement pattern is **inset 20mm by default**, so the movements are minus 20mm on each end. Hence 260mm.
         - The **blue line** shows that a max speed of 500mm/s is actually being reached and maintained at 3000mm³/s*
         - ![](Images/TEST_SPEED_Calc.png) 
         - This graph shows that we max out a bit under **900mm/s** at an acceleration of 3000mm³/s.

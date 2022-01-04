@@ -869,7 +869,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
 
 The macro is available [here.](Macros/TEST_SPEED.cfg)
 
-This macro will home, QGL *(if your printer uses QGL)*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
+This macro will home, QGL *(if your printer uses QGL / has not yet done a QGL)*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
 
 You will [watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 

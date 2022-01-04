@@ -121,7 +121,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
     - **(!)** See the [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues) section, **even if you are not having any issues.** There is some important information in there that everyone should know, particularly about [thermal drift](#thermal-drift).
 ## Method
 **1)** Scatter square patches around your bed in your slicer. 
-- See Test_Prints folder. Choose a patch that matches your first layer height.
+- See the *Test_Prints* folder. Choose a patch that matches your first layer height.
 - ![](Images/FirstLayer-Plate.png)    
 
 **2)** Set your first layer height to **0.25** or greater.
@@ -839,6 +839,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
         - Keep in mind that the movement pattern is **inset 20mm by default**, so the movements are minus 20mm on each end. This is why the distance is set to 260mm.
         - The **blue line** shows that a max speed of 500mm/s is actually being reached and maintained at 3000mm³/s*
         - ![](Images/TEST_SPEED_Calc.png) 
+        - This graph shows that we max out a bit under **900mm/s** at an acceleration of 3000mm³/s.
 
 
 **3)** Run the `TEST_SPEED` macro using the [instructions below](#usage-of-the-test_speed-macro) with increasing speeds [until you experience skipping.](#determining-if-skipping-occured) 

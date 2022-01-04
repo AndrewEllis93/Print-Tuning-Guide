@@ -120,7 +120,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - **(!)** This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
     - **(!)** See the [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues) section, **even if you are not having any issues.** There is some important information in there that everyone should know, particularly about [thermal drift](#thermal-drift).
 ## Method
-**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder)*
+**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder. Choose a patch that matches your first layer height. I recomment 0.25mm.)*
 - ![](Images/FirstLayer-Plate.png)    
 
 **2)** Set your first layer height to **0.25** or greater.
@@ -815,15 +815,30 @@ This section is purely about finding your absolute maximum speeds/accels. **This
 
 You may be able to get higher performance out of your motors by increasing currents (see previous section), but be careful not to push them too high.
 
-You may also get higher maximum accelerations by utilizing input shaper.
+**You may also get higher maximum accelerations by utilizing input shaper, and may want to re-tune your max accels after tuning input shaper.**
+
+1.8° motors can generally reach higher top speeds/accels than 0.9° motors. Higher voltage systems (e.g. 24v vs 12v) can also generally reach higher top speeds/accels.
+
+For example my 2a 0.9° LDO motors top out around 450mm/s. My 2a 1.8° OMC motors topped out closer to 700-800mm/s.
 ## Method
 
 Tune maximum speeds first, THEN tune accelerations separately.
 
 **1)** Add [this macro](Macros/TEST_SPEED.cfg) to your `printer.cfg` file.
 
-**2)** Lower your `max_accel` in your config and then `reload`.
-- We want to test speeds and accels *separately*. This helps to remove the other as a variable.
+**2)** If you are already pushing high accels, then lower your `max_accel` in your config to something closer to "stock" and `reload`. 
+- Reference the stock Voron configs for a reasonable starting point.
+    - It needs to be high enough to actually *reach* full speed in a given print volume, but low enough to not risk causing skipping on its own. **This is purely to isolate variables.** You will come back and tune actual max accels later *(step 8)*.
+    - Some wild guesses:
+        - Linear rail CoreXY: *3000 mm³/s*
+        - Linear rod CoreXY: *2000 mm³/s*
+        - Bed slinger: *1000 mm³/s* 
+- You can use the "acceleration" graphing calculator at the bottom of the link [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you are reaching max speed.
+    - For example, for a 300mm printer:
+        - Keep in mind that the movement pattern is **inset 20mm by default**, so the movements are minus 20mm on each end. This is why the distance is set to 260mm.
+        - The **blue line** shows that max speed is actually being reached and maintained at these settings:
+        - ![](Images/TEST_SPEED_Calc.png) 
+
 
 **3)** Run the `TEST_SPEED` macro using the [instructions below](#usage-of-the-test_speed-macro) with increasing speeds [until you experience skipping.](#determining-if-skipping-occured) 
 - Start with a small number of iterations.

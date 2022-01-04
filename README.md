@@ -839,7 +839,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
         - Note that the test pattern is **inset 20mm by default** (to help avoid collisions). Hence the distance of **260mm** *(300-20\*2)*.
         - The **blue line** shows that a max speed of 500mm/s is actually being reached and maintained.
         - ![](Images/TEST_SPEED_Calc.png) 
-        - This graph also shows that we would max out a bit under **900mm/s** at this acceleration/distance.
+        - This graph also shows (the **yellow line**) that we would max out a bit under **900mm/s** at this acceleration/distance.
 
 
 **3)** Run the `TEST_SPEED` macro using the [instructions below](#usage-of-the-test_speed-macro) with increasing speeds [until you experience skipping.](#determining-if-skipping-occured) 

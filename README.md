@@ -120,7 +120,8 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - **(!)** This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
     - **(!)** See the [First Layer / Squish Consistency Issues](#first-layer--squish-consistency-issues) section, **even if you are not having any issues.** There is some important information in there that everyone should know, particularly about [thermal drift](#thermal-drift).
 ## Method
-**1)** Scatter square patches around your bed in your slicer. *(See Test_Prints folder. Choose a patch that matches your first layer height. I recomment 0.25mm.)*
+**1)** Scatter square patches around your bed in your slicer. 
+- See Test_Prints folder. Choose a patch that matches your first layer height.
 - ![](Images/FirstLayer-Plate.png)    
 
 **2)** Set your first layer height to **0.25** or greater.
@@ -830,13 +831,13 @@ Tune maximum speeds first, THEN tune accelerations separately.
 - Reference the stock Voron configs for a reasonable starting point.
     - It needs to be high enough to actually *reach* full speed in a given print volume, but low enough to not risk causing skipping on its own. **This is purely to isolate variables.** You will come back and tune actual max accels later *(step 8)*.
     - Some wild guesses:
-        - Linear rail CoreXY: *3000 mm³/s*
-        - Linear rod CoreXY: *2000 mm³/s*
-        - Bed slinger: *1000 mm³/s* 
+        - Linear rail CoreXY: *3000mm³/s*
+        - Linear rod CoreXY: *2000mm³/s*
+        - Bed slinger: *1000mm³/s* 
 - You can use the "acceleration" graphing calculator at the bottom of the page [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you are reaching max speed.
     - For example, for a 300mm linear rail CoreXY printer:
         - Keep in mind that the movement pattern is **inset 20mm by default**, so the movements are minus 20mm on each end. This is why the distance is set to 260mm.
-        - The **blue line** shows that max speed is actually being reached and maintained at these settings:
+        - The **blue line** shows that a max speed of 500mm/s is actually being reached and maintained at 3000mm³/s*
         - ![](Images/TEST_SPEED_Calc.png) 
 
 

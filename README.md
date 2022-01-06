@@ -349,13 +349,13 @@ Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
 \* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
 
 **3)** Modify **Start G-code** as required.
+
 **(!) Again, if you are confused about g-code editing, please consider using the tower method instead. You risk crashes & damage if you don't know what you are doing.**
 
 I will not give extremely specific directions here, as it depends on how you start & end your prints. I will show you mine as an example, however.
 
 - Modify the "prepare printing" g-code section appropriately at the beginning.
-    - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to pass them to `PRINT_START` e.g: `PRINT_START HOTEND=240 BED=110`
-            - Example: \
+    - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to add them to `PRINT_START` e.g: `PRINT_START HOTEND=240 BED=110`
     - When not passing variables to `PRINT_START`, place your start G-code in the **Start G-code** section.  A good start is to copy the configuration in your slicer and replace any variables with appropriate values.
 
 **4)** Generate and download the g-code file.

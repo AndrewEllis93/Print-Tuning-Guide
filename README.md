@@ -311,19 +311,19 @@ Excuse the gigantic photos - high resolution is needed here.
 ## Lines Method (Advanced)
 
 ### Background
-This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code. 
+This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code.
 
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
 
-**(!) If you are not willing to get familiar with manually modifying g-code, please consider using the tower method instead.** 
+**(!) If you are not willing to get familiar with manually modifying g-code, please consider using the tower method instead.**
 - You can risk crashes & damage if you don't understand what changes you are making (for example, accidentally omitting `QUAD_GANTRY_LEVEL` or `PRINT_START`)
 ### Method
 
 **1)** Visit the [Pressure Advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
 
 **2)** Fill out the parameters. Most are self explanatory or should be left at defaults, but these are some specific settings that I recommend:
- 
+
 - **Printer**
     - **Layer Height**: 0.25mm
 - **Speed**
@@ -332,10 +332,10 @@ This method is quicker to run and more precise than the tower method, but requir
     - **Acceleration**: Your perimeter acceleration (NOT external perimeter)
 - **Pattern**
     - **Starting Value for PA**: 0
-    - **Ending Value for PA**:  
+    - **Ending Value for PA**:
         - **Direct Drive**: 0.1
         - **Bowden***: 1.5
-    - **PA Stepping:**: 
+    - **PA Stepping:**:
         - **Direct Drive**: 0.005
         - **Bowden***: 0.05
     - **Print Anchor Frame**: Checked
@@ -360,7 +360,7 @@ I will not give extremely specific directions here, as it depends on how you sta
 
 **4)** Generate and download the g-code file.
 
-**5)** Print it, and inspect the results. 
+**5)** Print it, and inspect the results.
 - This calibration pattern is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
     - Even at the "best" PA value, the line may not be perfect thickness all the way across.
     - Often, either acceleration *or* deceleration will look good. They will not always both look good on the same line.

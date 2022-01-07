@@ -476,7 +476,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
     Make sure that this is not set to "ironing". If not available, use rectalinear or "lines" instead (depends on slicer).
 - **30mm/s Solid & Top Solid Infill Speed***\
     This helps to remove pressure advance as a variable. The faster we go, the more pressure advance will impact our results.\
-    <sup> - *If your pressure advance is well tuned, you may actually get more "true to life"/accurate results printing at your normal print speeds. If your pressure advance is off, however, it can [throw you off further.](#a-note-about-pressure-advance--em)</sup>
+    <sup> - *If your pressure advance is well tuned, you may actually get more "true to life"/accurate results printing at your normal print speeds. If your pressure advance is off, however, it can [throw you off further.](#the-relationship-between-pressure-advance--em)</sup>
 - **High Fan Speed**\
     As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag. This depends on your fan, maybe around 80% with AB-BN or 100% with the stock 4020 fan.
 

@@ -311,33 +311,19 @@ Excuse the gigantic photos - high resolution is needed here.
 ## Lines Method (Advanced)
 
 ### Background
-This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code files. 
+This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code.
 
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
 
-**(!) If you are not willing to get familiar with manually modifying g-code, please consider using the tower method instead.** 
+**(!) If you are not willing to get familiar with manually modifying g-code, please consider using the tower method instead.**
 - You can risk crashes & damage if you don't understand what changes you are making (for example, accidentally omitting `QUAD_GANTRY_LEVEL` or `PRINT_START`)
 ### Method
 
-**1)** Add this macro to your Klipper config.
+**1)** Visit the [Pressure Advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
 
-```
-# Convert Marlin linear advance (M900) commands to Klipper (SET_PRESSURE_ADVANCE) commands.
-# For use with Marlin's linear advance calibration: https://marlinfw.org/tools/lin_advance/k-factor.html
-[gcode_macro M900]
-gcode:
-	# Parameters
-	{% set pa = params.K|float %}
-	SET_PRESSURE_ADVANCE ADVANCE={pa}
-```
+**2)** Fill out the parameters. Most are self explanatory or should be left at defaults, but these are some specific settings that I recommend:
 
-**2)** Type `RESTART` into the g-code terminal.
-
-**3)** Visit the [Marlin K-factor calibration site](https://marlinfw.org/tools/lin_advance/k-factor.html).
-
-**4)** Fill out the parameters. Most are self explanatory or should be left at defaults, but these are some specific settings that I recommend:
- 
 - **Printer**
     - **Layer Height**: 0.25mm
 - **Speed**
@@ -345,17 +331,16 @@ gcode:
     - **Fast Printing Speed**: 120mm/sec
     - **Acceleration**: Your perimeter acceleration (NOT external perimeter)
 - **Pattern**
-    - **Starting Value for K**: 0
-    - **Ending Value for K**:  
+    - **Starting Value for PA**: 0
+    - **Ending Value for PA**:
         - **Direct Drive**: 0.1
         - **Bowden***: 1.5
-    - **K-factor Stepping:**: 
+    - **PA Stepping:**:
         - **Direct Drive**: 0.005
         - **Bowden***: 0.05
     - **Print Anchor Frame**: Checked
 - **Advanced**
     - **Nozzle Line Ratio**: 1.2
-    - **Use Bed Leveling:** No
     - **Prime Nozzle**: Unchecked
     - **Dwell Time**: 0
 
@@ -363,27 +348,19 @@ Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
 
 \* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
 
-**5)** Generate and download the g-code file.
-
-**6)** Edit the g-code file.
+**3)** Modify **Start G-code** as required.
 
 **(!) Again, if you are confused about g-code editing, please consider using the tower method instead. You risk crashes & damage if you don't know what you are doing.**
 
 I will not give extremely specific directions here, as it depends on how you start & end your prints. I will show you mine as an example, however.
 
 - Modify the "prepare printing" g-code section appropriately at the beginning.
-    - Change `M204 P` to `M204 S`.
-    - Add `PRINT_START` in the appropriate place.
-        - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to remove the heating commands and pass them to `PRINT_START` instead, e.g: `PRINT_START HOTEND=240 BED=110`
-            - Example: \
-            ![](Images/KFactor-StartGcode.png) 
-    - Ensure that the preparation commands (G90, M83, G92 E0 etc.) remain, and happen **after** `PRINT_START`.
+    - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to add them to `PRINT_START` e.g: `PRINT_START HOTEND=240 BED=110`
+    - When not passing variables to `PRINT_START`, place your start G-code in the **Start G-code** section.  A good start is to copy the configuration in your slicer and replace any variables with appropriate values.
 
-- Modify the "FINISH" g-code section appropriately at the end.
-    - Don't forget to add `PRINT_END`.\
-    ![](Images/KFactor-EndGcode.png) 
+**4)** Generate and download the g-code file.
 
-**7)** Print it, and inspect the results. 
+**5)** Print it, and inspect the results.
 - This calibration pattern is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
     - Even at the "best" PA value, the line may not be perfect thickness all the way across.
     - Often, either acceleration *or* deceleration will look good. They will not always both look good on the same line.
@@ -393,6 +370,7 @@ I will not give extremely specific directions here, as it depends on how you sta
         - **Bowden:** The values I suggested above for bowden cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.
 
     ![](Images/KFactor-Print.jpg) 
+
 ## Fine-Tuning and What to Look For
 
 The above methods are usually good enough on their own. Choosing the right height/line, however, can take some experience. Here are some things to look out for.

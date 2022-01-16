@@ -316,21 +316,35 @@ This method is quicker to run and more precise than the tower method, but requir
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
 **(!) If you are not familar with setting up start g-code, consider using the tower method instead.**
-- You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START`.
+- You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).
 ### Method
 
 **1)** Visit the [pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
 
 **2)** Fill out the parameters specific to your setup (printer name, bed size, retraction, etc.) 
 
-**3)** Fill out the tuning parameters. Here are some settings that I recommend:
+**3)** Modify the **Start G-code** section.
+
+**(!)** *Exercise caution here. As mentioned previously, you can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).*
+
+- This is where you will set your temperatures (`M109`/`M190`).
+- Copy over your slicer's start g-code (from your printer profile) and paste it beneath the `M109`/`M190`. 
+    - You can usually *replace* the default contents beneath the `M109`/`M190`, but there are some default preperatory g-codes (homing, QGL, etc) just in case.
+        - `PRINT_START` macros usually contains all of this, but please double check.
+            - If you are [passing variables to `PRINT_START`](#passing-slicer-variables-to-print_start), remember to append them to `PRINT_START`. Example: `PRINT_START HOTEND=240 BED=110`
+                - Your variable naming may be different, e.g. `EXTRUDER=` instead of `HOTEND=`.
+                - You can then comment out the separate heating g-codes.
+    - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
+    - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.
+
+**4)** Fill out the tuning parameters. Many can be left at defaults, but here are some specific settings that I recommend:
 
 - **Printer**
     - **Layer Height**: 0.25mm
 - **Speed**
-    - **Slow Printing Speed**: Your `square_corner_velocity` *(From your printer.cfg. Default is 5.)*
+    - **Slow Printing Speed**: Your `square_corner_velocity` From your printer.cfg. Default is 5.
     - **Fast Printing Speed**: 120mm/sec
-    - **Acceleration**: Your perimeter acceleration (NOT external perimeter)
+    - **Acceleration**: Your perimeter acceleration
 - **Pattern**
     - **Starting Value for PA**: 0
     - **Ending Value for PA**:
@@ -345,23 +359,7 @@ This method is quicker to run and more precise than the tower method, but requir
     - **Prime Nozzle**: Unchecked
     - **Dwell Time**: 0
 
-Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
-
 \* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
-
-**4)** **(!)** Modify the **Start G-code** section.
-
-**(!)** Exercise caution here. As mentioned previously, you can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START`.
-
-- This is where you will set your temperatures (`M109`/`M190`).
-- Copy over your slicer's start g-code (from your printer profile) and paste it beneath the `M109`/`M190`. 
-    - You can usually *replace* the default contents beneath the `M109`/`M190`, but there are some default preperatory g-codes (homing, QGL, etc) just in case.
-        - `PRINT_START` macros usually contains all of this, but please double check.
-            - If you are [passing variables to `PRINT_START`](#passing-slicer-variables-to-print_start), remember to append them to `PRINT_START`. Example: `PRINT_START HOTEND=240 BED=110`
-                - Your variable naming may be different, e.g. `EXTRUDER=` instead of `HOTEND=`.
-                - You can then comment out the separate heating g-codes.
-    - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
-    - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.
 
 **5)** Generate and download the g-code file.
 

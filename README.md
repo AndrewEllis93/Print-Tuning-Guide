@@ -332,7 +332,7 @@ This method is quicker to run and more precise than the tower method, but requir
     - You can usually *replace* the default contents beneath the `M109`/`M190`, but there are some default preperatory g-codes (homing, QGL, etc) just in case.
         - `PRINT_START` macros usually contains all of this, but please double check.
             - If you are [passing variables to `PRINT_START`](#passing-slicer-variables-to-print_start), remember to append them to `PRINT_START`. Example: `PRINT_START HOTEND=240 BED=110`
-                - Your variable naming may be different, e.g. `EXTRUDER=` instead of `HOTEND=`.
+                - Your variable naming may be different, e.g. `EXTRUDER=X` instead of `HOTEND=X`.
                 - You can then comment out the separate heating g-codes.
     - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
     - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.
@@ -359,7 +359,7 @@ This method is quicker to run and more precise than the tower method, but requir
     - **Prime Nozzle**: Unchecked
     - **Dwell Time**: 0
 
-\* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
+\* *The bowden values I suggest here cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you nawrrow down a general range to work in, you may want to run the test again with a narrower range of PA values.*
 
 **5)** Generate and download the g-code file.
 

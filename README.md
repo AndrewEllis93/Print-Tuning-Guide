@@ -355,9 +355,8 @@ Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
 - Copy over your slicer's start g-code (from your printer profile) and paste it beneath the `M109`/`M190`. 
     - You can usually *replace* the default contents beneath the `M109`/`M190`, but there are some default preperatory g-codes (homing, QGL, etc) just in case.
         - `PRINT_START` macros usually contains all of this, but please double check.
-            - If you are [passing variables to `PRINT_START`](#passing-slicer-variables-to-print_start), remember to append them to `PRINT_START`.
-                - Example: `PRINT_START HOTEND=240 BED=110`
-                    - Your variable naming may be different, e.g. `EXTRUDER=` instead of `HOTEND=`.
+            - If you are [passing variables to `PRINT_START`](#passing-slicer-variables-to-print_start), remember to append them to `PRINT_START`. Example: `PRINT_START HOTEND=240 BED=110`
+                - Your variable naming may be different, e.g. `EXTRUDER=` instead of `HOTEND=`.
                 - You can then comment out the separate heating g-codes.
     - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
     - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.

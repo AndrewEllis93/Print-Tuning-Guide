@@ -315,7 +315,7 @@ This method is quicker to run and more precise than the tower method, but requir
 
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
-**(!) If you are not familar with setting up start g-code, consider using the tower method instead.**
+**(!) If you are not willing to get familar with setting up start g-code, consider using the tower method instead.**
 - You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).
 ### Method
 

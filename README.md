@@ -321,7 +321,9 @@ This method is quicker to run and more precise than the tower method, but requir
 
 **1)** Visit the [pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
 
-**2)** Fill out the parameters. Most are self explanatory (e.g. bed size / retraction) or should be left at defaults, but these are some specific settings that I recommend:
+**2)** Fill out the parameters specific to your setup (printer name, bed size, retraction, etc.) 
+
+**3)** Fill out the tuning parameters. Here are some settings that I recommend:
 
 - **Printer**
     - **Layer Height**: 0.25mm
@@ -347,7 +349,7 @@ Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
 
 \* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
 
-**3)** **(!)** Modify **Start G-code**. 
+**4)** **(!)** Modify the **Start G-code** section.
 
 **(!)** Exercise caution here. As mentioned previously, you can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START`.
 
@@ -361,9 +363,9 @@ Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
     - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
     - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.
 
-**4)** Generate and download the g-code file.
+**5)** Generate and download the g-code file.
 
-**5)** Print it, and inspect the results.
+**6)** Print it, and inspect the results.
 - This calibration pattern is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
     - Even at the "best" PA value, the line may not be perfect thickness all the way across.
     - Often, either acceleration *or* deceleration will look good. They will not always both look good on the same line.

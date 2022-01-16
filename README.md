@@ -311,16 +311,15 @@ Excuse the gigantic photos - high resolution is needed here.
 ## Lines Method (Advanced)
 
 ### Background
-This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code.
+This method is quicker to run and more precise than the tower method, but requires some additional setup, including some start g-code.
 
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
-
-**(!) If you are not willing to get familiar with manually modifying g-code, please consider using the tower method instead.**
-- You can risk crashes & damage if you don't understand what changes you are making (for example, accidentally omitting `QUAD_GANTRY_LEVEL` or `PRINT_START`)
+**(!) If you are not familar with setting up start g-code, consider using the tower method instead.**
+- You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START`.
 ### Method
 
-**1)** Visit the [Pressure Advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
+**1)** Visit the [pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
 
 **2)** Fill out the parameters. Most are self explanatory or should be left at defaults, but these are some specific settings that I recommend:
 
@@ -348,15 +347,20 @@ Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
 
 \* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
 
-**3)** Modify **Start G-code** as required.
+**3)** **(!)** Modify **Start G-code**. 
 
-**(!) Again, if you are confused about g-code editing, please consider using the tower method instead. You risk crashes & damage if you don't know what you are doing.**
+**(!)** Exercise caution here. As mentioned previously, you can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START`.
 
-I will not give extremely specific directions here, as it depends on how you start & end your prints. I will show you mine as an example, however.
-
-- Modify the "prepare printing" g-code section appropriately at the beginning.
-    - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to add them to `PRINT_START` e.g: `PRINT_START HOTEND=240 BED=110`
-    - When not passing variables to `PRINT_START`, place your start G-code in the **Start G-code** section.  A good start is to copy the configuration in your slicer and replace any variables with appropriate values.
+- This is where you will set your temperatures (`M109`/`M190`).
+- Copy over your slicer's start g-code (from your printer profile) and paste it beneath the `M109`/`M190`. 
+    - You can usually *replace* the default contents beneath the `M109`/`M190`, but there are some default preperatory g-codes (homing, QGL, etc) just in case.
+        - `PRINT_START` macros usually contains all of this, but please double check.
+            - If you are [passing variables to `PRINT_START`](#passing-slicer-variables-to-print_start), remember to append them to `PRINT_START`.
+                - Example: `PRINT_START HOTEND=240 BED=110`
+                    - Your variable naming may be different, e.g. `EXTRUDER=` instead of `HOTEND=`.
+                - You can then comment out the separate heating g-codes.
+    - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
+    - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.
 
 **4)** Generate and download the g-code file.
 

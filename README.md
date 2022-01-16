@@ -321,7 +321,7 @@ This method is quicker to run and more precise than the tower method, but requir
 
 **1)** Visit the [pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
 
-**2)** Fill out the parameters. Most are self explanatory or should be left at defaults, but these are some specific settings that I recommend:
+**2)** Fill out the parameters. Most are self explanatory (e.g. bed size / retraction) or should be left at defaults, but these are some specific settings that I recommend:
 
 - **Printer**
     - **Layer Height**: 0.25mm

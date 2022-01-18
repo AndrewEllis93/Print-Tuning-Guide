@@ -941,10 +941,10 @@ gcode:
     
     G28
     # <insert your routines here>
-    M190 S{bedtemp}                                                              ; set & wait for bed temp
-    TEMPERATURE_WAIT SENSOR="temperature_sensor chamber" MINIMUM={chambertemp}   ; wait for chamber temp
+    M190 S{params.BED}                                                              ; set & wait for bed temp
+    TEMPERATURE_WAIT SENSOR="temperature_sensor chamber" MINIMUM={params.CHAMBER}   ; wait for chamber temp
     # <insert your routines here>
-    M109 S{hotendtemp}                                                           ; set & wait for hotend temp
+    M109 S{params.HOTEND}                                                           ; set & wait for hotend temp
     # <insert your routines here>
     G28 Z                                                                        ; final z homing
 ```

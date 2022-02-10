@@ -410,9 +410,9 @@ This is a bit of a debated subject. Ask ten people, get ten different opinions. 
 
 Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 
-### Get your prints as smooth as a baby's bottom, THEN account for dimensions (if needed)
+### Get your prints as smooth as a baby's bottom, THEN account for dimensions if needed (in my opinion).
 
-My below method is an **aesthetics-first approach**. This method creates very smooth surfaces, both on top layers AND for perimeters (layer stacking).
+Follow my below method. It is an **aesthetics-first approach**. This method creates very smooth surfaces, both on top layers AND for perimeters (layer stacking).
 
 This method results in prints that are of perfectly acceptable tolerances for Voron parts and most other projects with no further compensation. 
 

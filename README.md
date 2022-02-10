@@ -409,7 +409,7 @@ This is a bit of a debated subject. Ask ten people, get ten different opinions. 
 
 Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 
-### Get your prints as smooth as a baby's bottom, THEN account for dimensions (if needed).
+### Get your prints as smooth as a baby's bottom, THEN account for dimensions (if needed)
 
 My below method is an **aesthetics-first approach**. This method creates very smooth surfaces, both on top layers AND for perimeters (layer stacking).
 
@@ -421,7 +421,7 @@ This method results in prints that are of perfectly acceptable tolerances for Vo
     - The thread tests screw together nicely, and
     - Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top).
 
-**If you need true-to-CAD dimensional accuracy for other projects:**
+### If you need true-to-CAD dimensional accuracy for other projects
 - Firstly, *adjust your expectations*. 
     - Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
 - AFTER tuning extrusion multiplier using my below method:

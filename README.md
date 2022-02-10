@@ -320,6 +320,7 @@ This method is quicker to run and more precise than the tower method, but requir
 ### Method
 
 **1)** Visit the [pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
+- Thanks to Deuce#8801 for setting this up! (It's a modified version of [Marlin's linear advance site.](https://marlinfw.org/tools/lin_advance/k-factor.html))
 
 **2)** Fill out the parameters specific to your setup (printer name, bed size, retraction, etc.) 
 

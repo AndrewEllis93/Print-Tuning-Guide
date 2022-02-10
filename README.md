@@ -500,7 +500,7 @@ Pick the cube that looks best to *you*. Typically this will be *just above where
 
 *This is an aesthetics-first approach, so if it looks good to you, it's good enough.*
 
-In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping.
+In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this.
 
 ![](Images/EMPrints-Fine.png) 
 

@@ -687,10 +687,10 @@ You can use this volumetric flow rate **to determine how fast your hotend/extrud
 - See [this section](#how-volumetric-flow-rate-relates-to-print-speed) to determine what maximum speeds you can print at with a given flow rate.
     - See [this section](#approximate-values) for approximate values for certain hotends.
 - Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
-    - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. It will automatically limit you. 
-    - You can also set any print speeds to 0 (like infill) to print that extrusion type as fast as your hotend will allow.
-- ![](Images/Volumetric-SS.png) 
-
+    - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. 
+    - You can also set any print speeds to a high "absolute maximum" speed (like infill) and let it be limited by the volumetric flow limit. This essentially prints at the maximum speed your hotend will allow:
+        - This is utilized by my published SuperSlicer profile (see the ["Volumetric Speed / Auto Speed" section](https://github.com/AndrewEllis93/Ellis-PIF-Profile#volumetric-speed--auto-speed) for more information.)
+        - ![](Images/Volumetric-SS.png) 
 ## Approximate Values
 
 | Hotend     | Flow Rate (mm<sup>3</sup>/sec) |

@@ -137,11 +137,12 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 In these examples, the third square is closest.\
 There are print examples in the next section.
 
+Note: When I refer to "gaps", I mean where you can see BETWEEN/THROUGH the extrusion lines. If you can see any light (excluding pinholes at the perimeter), or the next layer, then you need more squish.
 - #### Smooth Build Surface
     - **Top Surface**
         - You don't want too many ridges/hairs on top. 
             - It's normal to have a *little* bit of this near the corners, or in small  footprint areas.
-        - You shouldn't see any gaps between the lines.
+        - You shouldn't see any gaps* between the lines.
             - It's fine to have some very small pinholes where the infill meets the     perimeters.
         - ![](Images/FirstLayer-Squares-2.png)
         - ![](Images/FirstLayer-Squares-2-Annotated.png)
@@ -158,7 +159,6 @@ There are print examples in the next section.
         - As with smooth build surfaces, you should not have any gaps between the lines.
         - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.
         - ![](Images/FirstLayer-Squares-Textured-2.jpg)
-
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
 
@@ -405,7 +405,34 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 This must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 
 ## Background
-This is a bit of a debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
+This is a bit of a debated subject. Ask ten people, get ten different opinions. I will try to explain my rationale.
+
+Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
+
+### Get your prints as smooth as a baby's bottom, THEN account for dimensions (if needed).
+
+My below method is an **aesthetics-first approach**. This method creates very smooth surfaces, both on top layers AND for perimeters (layer stacking).
+
+This method results in prints that are of perfectly acceptable tolerances for Voron parts and most other projects with no further compensation. 
+
+**(!) Voron parts are designed with shrinkage in mind, so it's fine if the dimensions don't perfectly match CAD.** Please don't drive yourself crazy with calipers for Voron parts, they are not always intended to match.
+
+- With the Voron test prints, you are good to go as long as:
+    - The thread tests screw together nicely, and
+    - Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top).
+
+**If you need true-to-CAD dimensional accuracy for other projects:**
+- Firstly, *adjust your expectations*. 
+    - Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
+- AFTER tuning extrusion multiplier using my below method:
+    - Try your slicer's **shrinkage compensation** settings.
+        - In some slicers, this is just re-named/glorified X/Y part scaling*. 
+            - \*Shrinkage occurs much less in the Z axis.
+            - 100.5%-101% X/Y scaling is about the range you would expect with ABS.
+        - Find any suitable test object (larger is generally better), and ensure that you are measuring flat edges and not any corner bulging or seams. Use the resulting measurements to determine how much shrinkage compensation you need.
+    - Don't mess with your X/Y/A/B `steps_per_mm`/`rotation_distance`, you will just further confuse matters. You are almost always seeing material shrinkage, NOT issues with your axes. 
+        - If dimensions are off by large amounts, you may have the wrong pulleys installed on your motors (for example if you're off by 20%, you probably swapped a 16t pulley with a 20t pulley or vice versa).
+
 ### Methods I'm Not a Fan Of
 The below methods I've found to have large margins for error. Good EM makes a *huge* difference to the appearance of your prints.
 - #### Measuring Wall Thickness With Calipers
@@ -420,26 +447,6 @@ The below methods I've found to have large margins for error. Good EM makes a *h
         - It has ironing turned on by default.
         - The objects are too small. It's normal for [smaller infill areas to look a bit more overextruded than larger infill areas.](#small-infill-areas-look-overextruded)
 
-### Notes on Dimensional Accuracy
-I find the below method to result in prints that are within my personal acceptable tolerances, and work well for Voron parts. It's an aesthetics-first approach that also happens to get "good enough" dimensional accuracy in my experience.
-
-**Voron parts are designed for some shrinkage**, and for reasonable tolerances, so don't go crazy with calipers and comparing measurements to CAD/STL dimensions. In many cases they are not intended to match.
-
-With the Voron test prints, as long as:
-- The thread tests screw together nicely, and
-- Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top),
-
-Then you are pretty much good to go.
-
-**If dimensional accuracy is your top priority for other projects:**
-- Firstly, adjust your expectations. Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
-- You likely need to play with part scaling, CAD dimensions, or even slicer shrinkage compensation since we are dealing with ABS. ABS shrinks a fair bit, and the nature of FDM can also make shrinkage a bit less predicatable. 
-    - The best place to accomodate for shrinkage is in the part design itself. 
-    - Consider using a different plastic with less shrinkage, or even filled ABS.
-- You can fine-tune EM based on part dimensions or fitment, and use my method to tune top layer flow separately for aesthetics and flush mating surfaces.
-- There is some debate around whether you should calibrate your A/B (or X/Y) axes. I have never found this necessary, however. 
-
-You will have to find the method that works best for you. I am considering extremely tight dimensional accuracy outside the scope of this guide. 
 ## Method
 The best method I have found is purely visual/tactile.
 
@@ -481,7 +488,7 @@ I have found that most ABS falls within the 91-94% range.
 
 This can be difficult to convey in photos. **You may have to zoom in to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.
 
-Focus your attention near the center of the test prints. It's normal for it to look a bit more overextruded near the edges and corners.
+Focus all of your attention **!!!!! at the center !!!!!** of the test prints. It's normal for it to look a bit more overextruded near the edges and corners.
 
 You will get better at this through experience.
 #### 2% Intervals
@@ -489,8 +496,11 @@ You will get better at this through experience.
 #### 0.5% Intervals
 Now we run the print again at 0.5% intervals between the "too low" and "too high" examples from above.
 
-Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #2). 
-This is not just a trick of the light. Shininess is not always the best indicator, but it makes a good visual example.
+Pick the cube that looks best to *you*. Typically this will be *just above where gapping in the center starts to disappear*, but not so high that you start to see ridges. 
+
+*This is an aesthetics-first approach, so if it looks good to you, it's good enough.*
+
+In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping.
 
 ![](Images/EMPrints-Fine.png) 
 

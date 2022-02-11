@@ -493,13 +493,14 @@ Focus all of your attention **!!!!! at the center !!!!!** of the test prints. It
 
 You will get better at this through experience.
 #### 2% Intervals
-![](Images/EMPrints-Coarse.png) 
+![](Images/EMPrints-Coarse-Annotated.png) 
 #### 0.5% Intervals
 Now we run the print again at 0.5% intervals between the "too low" and "too high" examples from above.
 
 Pick the cube that looks best to *you*. Typically this will be *just above where gapping in the center starts to disappear*, but not so high that you start to see ridges. 
 
-*This is an aesthetics-first approach, so if it looks good to you, it's good enough.*
+**If you can't decide between two cubes, pick the higher one.**\
+*Additionally, this is an aesthetics-first approach. If it looks good to you, it's good enough.* 
 
 In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this.
 

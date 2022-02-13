@@ -458,6 +458,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
     We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. \
     We still need enough to adequately support the top layers.
 - **100% Top Layer [Line Width](#a-note-about-line-width)**\
+    In SS: Print settings > width and flow > extrusion width > top infill\
     This is more subject to interpretation, but I find 100% to have good results. It has a nice finish and tends to show off EM differences the best.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
@@ -767,7 +768,7 @@ For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup
 # Determining Motor Currents
 **(!)** The below guidance is for **A/B/X/Y motors only**.
 
-Extruder motors/pancake steppers are a bit different, as there is more variance between models. I will add this at a future date.
+Extruder motors/pancake steppers are a bit different, as there is more variance between models.
 
 - **Check with the community first.**
     - If you are using BoM motors, check the stock configs.

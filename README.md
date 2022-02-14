@@ -77,7 +77,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 
 # Before We Begin
 
-Please remember that tuning prints will get you close, but they are *should not be taken as gospel*. You should get in the habit of finely adjusting based on actual prints.
+Please remember that tuning prints will get you close, but they are *should not be taken as gospel*. You should get in the habit of finely adjusting based on actual prints afterwards.
 
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:

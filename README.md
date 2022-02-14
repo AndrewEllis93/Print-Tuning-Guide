@@ -77,6 +77,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 
 # Before We Begin
 
+Please remember that tuning prints will get you close, but they are *should not be taken as gospel*. You should get in the habit of finely adjusting based on actual prints.
+
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 - **(!) Everything is tight (seriously, check again)**
@@ -546,7 +548,8 @@ There are multiple things you can do to minimize overheating with ABS.
     - The hotter your enclosure, the higher fan speeds you will need.
         - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
             - For large plates, I use 40% fan.
-            - For small numbers of small objects, I use up to 80% fan.
+            - For small plates, I may use up to 80% fan.
+            - For single small objects, I may use up to 100% fan.
     - For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
         - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
 - If your prints are curling away from the bed even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.

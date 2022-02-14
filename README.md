@@ -1,14 +1,13 @@
 # Introduction
 
-Much of this guide is specific to CoreXY/Voron printers running Klipper.
+Much of this guide is specific to printers running **Klipper**. 
 
-Some of the troubleshooting/tuning information focuses on CoreXY (sorry, Switchwire folks).
+This guide was originally written for the Voron community, however all of the tuning sections should work on **any Klipper printer**. Some of the bullet points and hardware troubleshooting tips are still Voron specific, however.
 
 **(!) Please pay special attention to anything bolded and marked with "(!)"**
 
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
-I am adding new information all the time, be sure to check back.\
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 
 You can find bed the models and textures I am using in [Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
@@ -31,8 +30,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - [Lines Method (Advanced)](#lines-method-advanced)
         - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
     - [Extrusion Multiplier](#extrusion-multiplier)
+        - [Background](#background-1)    
         - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)
-        - [Notes on Dimensional Accuracy](#notes-on-dimensional-accuracy)
         - [Method](#method-2)
         - [The Relationship Between Pressure Advance & EM](#the-relationship-between-pressure-advance--em)
     - [Cooling and Layer Times](#cooling-and-layer-times)
@@ -410,18 +409,31 @@ This is a bit of a debated subject. Ask ten people, get ten different opinions. 
 
 Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 
+### Methods I'm Not a Fan Of
+Again, *this is a debated subject*. I don't mean to imply that my below method is the "one true way" of calibrating your EM. I am still discovering things myself, and EM can even have different characteristics at different speeds. 
+- #### Measuring Wall Thickness With Calipers
+    - Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers.
+        - While this *can* result in better dimensional accuracy, I find it to result in less attractive parts. This method has always resulted in more layer inconsistencies and rougher top surfaces for me. My personal approach is to tune until everything looks perfect, *then* to account for dimensions. All of my tuning methods are purely visual / based on intuition where possible.
+        - This method assumes that you have good calipers, which many people don't. This can simply limit the accessibility and reliability. The measured widths can also vary depending where you measure it and how much pressure you use, so different people may have different experiences.
+        - If this method works better for you, by all means continue using it.
+- #### SuperSlicer Calibration
+    - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
+        - It is very reliant on first layer squish.
+        - Because it uses 100% infill, the first layer squish carries through all the way to the top. 
+        - It has ironing turned on by default.
+        - The objects are too small. It's normal for [smaller infill areas to look a bit more overextruded than larger infill areas.](#small-infill-areas-look-overextruded)
+
 ### Get your prints as smooth as a baby's bottom, THEN account for dimensions if needed (in my opinion).
 
-Follow my below method. It is an **aesthetics-first approach**. This method creates very smooth surfaces, both on top layers AND for perimeters (layer stacking).
+Follow my below method. It is an **aesthetics-first approach**. This method creates very smooth top surfaces, and additionally can help with layer consistency/stacking.
 
-This method results in prints that are of perfectly acceptable tolerances for Voron parts and most other projects with no further compensation. 
+This also results in prints that are of perfectly acceptable tolerances for Voron parts (and most other projects) with no further compensation. 
 
 **(!) Voron parts are designed with shrinkage in mind, so it's fine if the dimensions don't perfectly match CAD.** Please don't drive yourself crazy with calipers for Voron parts, they are not always intended to match.
 
 - With the Voron test prints, you are good to go as long as:
     - The thread tests screw together nicely, and
     - Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top).
-
 ### If you need true-to-CAD dimensional accuracy for other projects
 - Firstly, *adjust your expectations*. 
     - Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
@@ -433,20 +445,6 @@ This method results in prints that are of perfectly acceptable tolerances for Vo
         - Find any suitable test object (larger is generally better), and ensure that you are measuring flat edges and not any corner bulging or seams. Use the resulting measurements to determine how much shrinkage compensation you need.
     - Don't mess with your X/Y/A/B `steps_per_mm`/`rotation_distance`, you will just further confuse matters. You are almost always seeing material shrinkage, NOT issues with your axes. 
         - If dimensions are off by large amounts, you may have the wrong pulleys installed on your motors (for example if you're off by 20%, you probably swapped a 16t pulley with a 20t pulley or vice versa).
-
-### Methods I'm Not a Fan Of
-The below methods I've found to have large margins for error. Good EM makes a *huge* difference to the appearance of your prints.
-- #### Measuring Wall Thickness With Calipers
-    - Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers. 
-        - I find this method not to work very well at all, especially with ABS, presumably due to shrinkage.
-        - This method is also impacted by pressure advance, which can easily throw off your results.
-        - This method assumes that you have good calipers, which many people don't. Adding to that, the width can vary depending where you mesaure it.
-- #### SuperSlicer Calibration
-    - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
-        - It is very reliant on first layer squish.
-        - Because it uses 100% infill, the first layer squish carries through all the way to the top. 
-        - It has ironing turned on by default.
-        - The objects are too small. It's normal for [smaller infill areas to look a bit more overextruded than larger infill areas.](#small-infill-areas-look-overextruded)
 
 ## Method
 The best method I have found is purely visual/tactile.

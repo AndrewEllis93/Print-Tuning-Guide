@@ -241,7 +241,14 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
     - Stick to well-known brands. 
     - This is prevalent with unknown AliExpress and Amazon sellers.
 
-- Instead of PEI, you can use strong adhesives like [Vision Miner Nano Polymer](https://visionminer.com/products/nano-polymer-adhesive) on bare spring steel.
+- Instead of PEI (or to supplement your PEI), you can use adhesives like [Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT).
+    - Not sponsored: I will praise this stuff until I am blue in the face. It's *excellent*.
+        - It grips like crazy. 
+            - Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used.
+        - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be cleaned)
+        - It's very thin and easy to spread with a brush.
+        - It lasts a long time between applications.
+        - It releases when cooled.
 
 - As a **very last resort**, you can try refreshing the surface with acetone. Keep in mind, however that this weakens PEI over time, and I heave heard cases of it **destroying** certain surfaces (mainly certain brands of textured sheets). **Only try this if it's going in the trash otherwise.**
 # Pressure Advance

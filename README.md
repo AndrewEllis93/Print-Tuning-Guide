@@ -89,7 +89,9 @@ I avoid using calipers as much as possible for initial tuning, for a few reasons
     - Flow characteristics can change at different speeds.
     - Things like bulges, overextruded areas, and layer misalignments can throw measurements off too. 
 
-I certainly don't mean to imply that calibrating with calipers is wrong or impossible. I understand both approaches, but wanted to share what I have personally found to work best and result in the best looking prints.
+I certainly don't mean to imply that calibrating with calipers is wrong or impossible. Many of these things can be mitigated.
+
+I just wanted to share what I have *personally* found to result in the best quality prints. It also becomes more accessible by not requiring quality calipers.
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 - **(!) Everything is tight (seriously, check again)**

@@ -77,8 +77,19 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 
 # Before We Begin
 
-Please remember that tuning prints will get you close, but they are *should not be taken as gospel*. You should get in the habit of finely adjusting based on actual prints afterwards.
+Please remember that tuning prints will get you close, but they are should not be taken as gospel. **You should get in the habit of finely adjusting based on actual prints afterwards.**
 
+My methods are all purely visual / based on intuition. 
+
+I avoid using calipers as much as possible for initial tuning, for a few reasons: 
+- Not everyone has high quality calipers.
+- Not everyone uses them in exactly the same way.
+- 3D printing is not completely consistent. 
+    - Wall thicknesses and first layer thicknesses can vary in different places.
+    - Flow characteristics can change at different speeds.
+    - Things like bulges, overextruded areas, and layer misalignments can throw measurements off too. 
+
+I certainly don't mean to imply that calibrating with calipers is wrong or impossible. I understand both approaches, but wanted to share what I have personally found to work best and result in the best looking prints.
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 - **(!) Everything is tight (seriously, check again)**

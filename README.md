@@ -221,6 +221,14 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 - **(!)** Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 
+- **(!)** Ensure that your [first layer squish](#first-layer-squish) is correct. 
+
+- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
+    - You should do this even for brand new surfaces.
+    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
+    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
+    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
+
 - **Smooth PEI:**
     - **Scuff it up** with a [Scotch-Brite scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
         - The rough side of a fresh sponge, ~800-1000 grit sandpaper, or other brands of scouring pads could also work.
@@ -231,11 +239,8 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - **Textured PEI:**
     - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
 
-- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
-    - You should do this even for brand new surfaces.
-    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
-    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
-    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
+- Use thicker first layer line widths. 
+    - I use 120% normally, but higher line widths can further increase adhesion. They push the plastic into the bed with more force, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
     - Stick to well-known brands. 

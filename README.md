@@ -1078,12 +1078,13 @@ The motor plate has 3 slotted screw holes to allow for adjustment:
     - Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience.
     - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
     - **Examples:**
-        - The left cube shows a pattern. The right cube is normal:\
-    ![](Images/Troubleshooting/Backlash-Comparison.png)
-        - Diagonal patterns:\
-    ![](Images/Troubleshooting/Backlash-Pattern.png)
-        - "Wood Grain":\
-    ![](Images/Troubleshooting/Backlash-WoodGrain.png)
+        - The left cube shows a pattern. The right cube is normal:
+        - See ["Setting Expectations"](#setting-expectations)    
+            - ![](Images/Troubleshooting/Backlash-Comparison.png)
+        - Diagonal patterns:
+            - ![](Images/Troubleshooting/Backlash-Pattern.png)
+        - "Wood Grain":
+            - ![](Images/Troubleshooting/Backlash-WoodGrain.png)
 
 ### Too Much Backlash:
 - Clacking noises during retraction

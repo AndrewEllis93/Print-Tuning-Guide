@@ -29,8 +29,9 @@ Bonus steps 13-16 can also help with first layer *and* with gantry stability.
 
 **5)** Take off your left/right side panels.
 
-**6)** Unscrew and drop your lower Z joints. Your gantry will now be floating on just the belts.
-- Make sure your printer is on a fairly level surface (doesn't have to be perfect, just don't do it on a hill), or your gantry could swing too much to one side.
+**6)** Unscrew and drop your lower Z joints. 
+- Your gantry will now be floating on just the belts.
+    - Make sure your printer is on a fairly level surface, otherwise your gantry could swing too much to one side. (it doesn't have to be perfect, just don't do it on a hill),
 
 - ![](Images/ZJoint-Lowered.png) 
 

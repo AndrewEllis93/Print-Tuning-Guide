@@ -2,12 +2,14 @@
 
 ## Why?
 
-Poor gantry squaring can cause a number of problems, particularly with first layer.\
-Here's a video example of bad gantry squaring.\
+Poor gantry squaring can cause a number of problems.
 Notice that the idlers get "pinched" when moving the X extrusion back/forth (this is shown with loose Z joints).
 
 https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-a424-7d48def0f834.mp4
 
+This can cause a number of problems, primarily:
+- First Layer issues
+- Z belts rubbing against the gantry's printed parts
 
 ## Method
 
@@ -74,6 +76,7 @@ https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-
 
 - Ensure that you do not inadvertently rotate your A/B joints during this process.
     - ![](Images/Alignment-AB-Good.png) 
+    - (Exaggerated)
     - ![](Images/Alignment-AB-Bad.png) 
 
 **9)** Tighten every extrusion connection in the gantry again **except** for the X/Y joints.

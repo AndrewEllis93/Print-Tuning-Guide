@@ -24,6 +24,7 @@ This can potentially cause:
 
 **4)** Loosen your A/B belt tension fully.
 - This prevents the A/B belt tension from pulling the gantry out of alignment while you work on it.
+- Your belts should be fully disengaged. If there is still remaining tension with the idlers fully backed off, you may need to release the belt ends within the toolhead.
 
 - ![](Images/Gantry-ABTension.png) 
 

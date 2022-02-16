@@ -19,7 +19,7 @@ This can potentially cause:
 
 **2)** `G28`, then `QUAD_GANTRY_LEVEL`. 
 
-**3)** Jog your gantry to around the center of the build volume using the LCD or web interface.
+**3)** Jog your gantry to the center of the build volume using the LCD or web interface.
 - This will give you space to work. You need easy access to both the bottom and top of your gantry.
 
 **4)** Loosen your A/B belt tension fully.

@@ -721,7 +721,7 @@ Volumetric flow is expressed in mm<sup>3</sup>/sec (cubic millimeters per second
 You can use this volumetric flow rate **to determine how fast your hotend/extruder is able to print.**
 
 - See [this section](#how-volumetric-flow-rate-relates-to-print-speed) to determine what maximum speeds you can print at with a given flow rate.
-    - See [this section](#approximate-values) for approximate values for certain hotends.
+    - See [the next section](#approximate-values) for approximate values for certain hotends.
 - Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
     - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. 
     - You can also set any print speeds to a high "absolute maximum" speed (like infill) and let it be limited by the volumetric flow limit. This essentially prints at the maximum speed your hotend will allow:
@@ -1473,6 +1473,11 @@ Print two wide square objects, one in normal orientation, and one at 45 degrees.
 Inspect the object to see which axes the artifacts appear most prominent in.
 
 *(components in each section are in order of likelihood)*
+- Artifacts are equally prominent in all directions:
+    - **A *and* B** motor pulleys
+    - **X *and* Y** linear rails
+    - **A *and* B** belts
+    - **A *and* B** motors
 - Artifacts are most prominent in in A:
     - Bearings in **A** belt path
     - **A** motor pulley
@@ -1496,12 +1501,25 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 - Artifacts are most prominent in in X/Y, but not A/B:
     - **A *and* B** motors
         - Certain motor models have been found to cause this when both are operating at the same time (i.e. X/Y moves)
-- Artifacts are equally prominent in all directions:
-    - **A *and* B** motor pulleys
-    - **X *and* Y** linear rails
-    - **A *and* B** belts
-    - **A *and* B** motors
+        - The following motor settings are [passed around on the Voron Discord](https://discord.com/channels/460117602945990666/696930677161197640/925934388703793192), and apparently can help in some cases (particularly with certain LDO motors on Voron V0). It may also help in other cases, worth a try.
+```
+# Set the below settings for both X AND Y motors, **in addition** to your current settings.
 
+[stepper_x]
+microsteps: 32
+
+[tmc2209 stepper_x]
+interpolate: false
+stealthchop_threshold: 999999  # I'm not sure on this one. I tend to advise against using stealthchop (set to 0). Try both.
+driver_TBL: 2
+driver_TOFF: 2
+driver_HEND: 1
+driver_HSTRT: 4
+driver_PWM_LIM: 8 
+driver_PWM_GRAD: 8
+driver_PWM_FREQ: 1
+driver_PWM_REG: 4
+```
 ## Slicer is Putting Heating G-codes in the Wrong Place/Order
 You have two options:
 - Pass variables to `PRINT_START` (allows the most control, but is more complex)

@@ -2,20 +2,20 @@
 
 ## Why?
 
-Poor gantry squaring can cause a number of problems.
+Poor gantry squaring can cause a number of problems.\
 Notice that the idlers get "pinched" when moving the X extrusion back/forth (this is shown with loose Z joints).
 
 https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-a424-7d48def0f834.mp4
 
-This can cause a number of problems, primarily:
+This can potentially cause:
 - First Layer issues
 - Z belts rubbing against the gantry's printed parts
 
-Bonus steps 13-15 can also help with first layer *and* with gantry stability.
+"Bonus" steps 12-14 can also help with first layer *and* with gantry stability.
 ## Method
 
 **1)** Modify the `timeout` setting your `[idle_timeout]` config section. Set it to an arbitrarily high value (in seconds).
-- This just gives us time to work. We need the motors to be energized and holding for the whole process.
+- This just gives us time to work. We need the Z motors to be energized and holding for the whole process.
 
 **2)** `G28`, then `QUAD_GANTRY_LEVEL`. 
 
@@ -83,20 +83,21 @@ Bonus steps 13-15 can also help with first layer *and* with gantry stability.
     - ![](Images/Alignment-AB-Bad.png) 
 
 **9)** Tighten every extrusion bolt again, *except* those in the X/Y joints. (you will tighten those during step 12)
+- Ensure that your Z joints still align properly. Sometimes tightening can move things around.
 
-**10)** Ensure that your Z joints still align properly. Sometimes tightening can move things around.
-
-**11)** Re-install your lower Z joints and *lightly* tighten the M5 bolts.
+**10)** Re-install your lower Z joints and *lightly* tighten the M5 bolts.
 - Do NOT hulk them down yet. The "ball joint" should still be able to articulate completely freely.
 
-**12)** Follow [Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
+**11)** Follow [Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
 - Make sure to come back here afterwards! The following steps are still important.
 
-**13)** Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
+**12)** Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
 
-**14)** `QUAD_GANTRY_LEVEL` 3-5 times to "settle in" the gantry (and level it for the next step).
+**13)** `QUAD_GANTRY_LEVEL` 3-5 times to "settle in" the gantry (and level it for the next step).
 
-**15)** Open the front door and **fully hulk-tighten the M5 bolts in your Z joints** while it's still hot.
+**14)** Open the front door and **fully hulk-tighten the M5 bolts in your Z joints*** while it's still hot.\
+
+\* *Unless your parts are printed in eSun ABS+. It's more brittle than regular ABS. Just tighten them "pretty tight".*
 - This does two things:
     - Somewhat "locks in" your QGL at its state in full thermal expansion.
         - This has helped a number of people with their first layer issues.
@@ -104,4 +105,4 @@ Bonus steps 13-15 can also help with first layer *and* with gantry stability.
         - If you had it "tight but not too tight, so the Z joints can still articulate" (as is often recommended), you will notice that your gantry displaces back/forth while printing.
         - This can help with ringing and layer consistency.
 
-**16)** Restore your `[idle_timeout]` settings (changed in step 1).
+**15)** Restore your `[idle_timeout]` settings (changed in step 1).

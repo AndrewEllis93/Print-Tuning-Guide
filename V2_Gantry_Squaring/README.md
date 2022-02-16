@@ -33,34 +33,38 @@
         - ![](Images/XYLoosen-Bottom.png) 
 
 - A/B joints (repeat for both sides):
-    - Top (don't overdo it on the belt clamps!):
+    - Top:
+        - *Don't overdo the belt clamps!*
         - ![](Images/ABLoosen-Top.png) 
 
-    - Bottom (don't overdo it on the belt clamps!):
+    - Bottom:
+        - *Don't overdo the belt clamps!*
         - ![](Images/ABLoosen-Bottom.png) 
 
 - Front idlers (repeat for both sides):
-    - Top (don't overdo it!):
-
+    - Top:
+        - *Don't overdo it!*
         - ![](Images/IdlersLoosen-Top.png) 
-    - Bottom (don't overdo it!)
-    :
+    - Bottom:
+        - *Don't overdo it!*
         - ![](Images/IdlersLoosen-Bottom.png) 
 
-**8)** Adjust your gantry so that the Z joints line up perfectly. 
-- Your Z joints should feel perfectly flush along the side.
-
-    - ![](Images/Alignment-Side.png) 
-
-- When raising and lowering your lower Z joint, the bolt should slide perfectly into the hole without hitting the sides and without "pulling" your gantry into place:
-
-    - ![](Images/Alignment-Hole.png) 
-
-- This will usually involve moving gantry corner components further closer together or further apart along the extrusion:
+**8)** And now - what we have been prepping for! **Adjust your gantry so that it sits perfectly on top of the lower Z joints.**
+- This involves moving gantry components further aprt or closer together along the extrusions:
     - ![](Images/XAdjust.png) 
 
-    - ![](Images/YAdjust.png) 
+    - ![](Images/YAdjust.png)
+
+- Your gantry should align so that:
+    - The Z joints feel perfectly flush along the side, and
+    - When raising and lowering your lower Z joint by hand, the bolt should slide perfectly without hitting the sides.
+
+    - ![](Images/Alignment-Side.png) ![](Images/Alignment-Hole.png) 
 
 - Ensure that you do not inadvertently rotate your A/B joints during this process.
     - ![](Images/Alignment-AB-Good.png) 
     - ![](Images/Alignment-AB-Bad.png) 
+
+**9)** Tighten everything **except** for the X/Y joints.
+
+**10)** Follow [Neros' de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0)

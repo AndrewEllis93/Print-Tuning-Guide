@@ -65,7 +65,7 @@
     - ![](Images/Alignment-AB-Good.png) 
     - ![](Images/Alignment-AB-Bad.png) 
 
-**9)** Tighten everything in the gantry **except** for the X/Y joints.
+**9)** Tighten every extrusion connection in the gantry again **except** for the X/Y joints.
 
 **10)** Ensure that the lower Z joints still slide nicely into the upper Z joints after tightening.
 

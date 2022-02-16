@@ -98,7 +98,7 @@ Bonus steps 13-15 can also help with first layer *and* with gantry stability.
 
 **15)** Open the front door and **fully hulk-tighten the M5 bolts in your Z joints** while it's still hot.
 - This does two things:
-    - Somewhat "locks in" your QGL at its state in full heatoak.
+    - Somewhat "locks in" your QGL at its state in full thermal expansion.
         - This has helped a number of people with their first layer issues.
     - **Stabilizes your gantry**. 
         - If you had it "tight but not too tight, so the Z joints can still articulate" (as is often recommended), you will notice that your gantry displaces back/forth while printing.

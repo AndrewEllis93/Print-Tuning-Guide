@@ -94,6 +94,7 @@ I certainly don't mean to imply that calibrating with calipers is wrong or impos
 I just wanted to share what I have *personally* found to result in the best quality prints. It also becomes more accessible by not requiring quality calipers.
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
+- Voron V2: I highly recommend following my [V2 gantry squaring](V2_Gantry_Squaring/README.md) instructions first.
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws, linear rails, and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
@@ -1253,10 +1254,9 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 
     - **Bed mesh can't always save you from mechanical problems.**
         - Most bed mesh issues are caused by the gantry rather than the bed itself.
-            - On V2/Trident, heat soak for at least an hour, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
-                - These instructions are for V2, but the process should be similar for Trident.
-                - You have to be *somewhat* quick, as things start cooling down once you take off the panels. Don't stress about it too much though.
-            - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
+            - For V2, follow my [V2 gantry squaring](V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
+            - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
+                - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
             - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
             - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
     - Try more mesh points. Usually anything above 5x5 is overkill, but you can try up to 9x9.
@@ -1409,9 +1409,9 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.
-    - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh, first layer, and pulley/belt alignment.
-        - These instructions are for V2, but the process should be similar for Trident.
-    - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
+    - For V2, follow my [V2 gantry squaring](V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
+    - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
+        - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
 - You may have poor quality belts. **Only use genuine Gates brand belts.**
 - You may have poor quality motor pulleys and idlers.

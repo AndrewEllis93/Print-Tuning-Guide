@@ -1041,7 +1041,7 @@ This is what your prints can look like!
 
 - ![](Images/Setting_Expectations_DirectLight.jpg) 
 
-But... wait a minute. The lighting changed. Wait, Ellis' prints look like shit?"
+But... wait a minute. The lighting changed. Wait, Ellis' prints look like shit?
 
 (this is directly under a bright LED lamp)
 - ![](Images/Setting_Expectations_HarshLight.jpg) 

@@ -11,7 +11,7 @@ This can cause a number of problems, primarily:
 - First Layer issues
 - Z belts rubbing against the gantry's printed parts
 
-Bonus steps 13-16 can also help with first layer *and* with gantry stability.
+Bonus steps 13-15 can also help with first layer *and* with gantry stability.
 ## Method
 
 **1)** Modify the `timeout` setting your `[idle_timeout]` config section. Set it to an arbitrarily high value (in seconds).

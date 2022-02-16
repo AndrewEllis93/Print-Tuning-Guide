@@ -1027,7 +1027,6 @@ To force the g-code ordering, place any of the following g-codes from the follow
 ### Example
 Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
 - ![](Images/StartGcode-CustomOrder.png) 
-
 # Troubleshooting
 ## BMG Clockwork Backlash Issues
 

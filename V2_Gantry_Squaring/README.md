@@ -14,7 +14,7 @@ This can cause a number of problems, primarily:
 Bonus steps 13-16 can also help with first layer *and* with gantry stability.
 ## Method
 
-**1)** Modify your `idle_timeout` in your config to an arbirarily high number, then `reload`. 
+**1)** Modify the `timeout` setting your `[idle_timeout]` config section. Set it to an arbitrarily high value (in seconds).
 - This just gives us time to work. We need the motors to be energized and holding for the whole process.
 
 **2)** `G28`, then `QUAD_GANTRY_LEVEL`. 
@@ -104,4 +104,4 @@ Bonus steps 13-16 can also help with first layer *and* with gantry stability.
         - If you had it "tight but not too tight, so the Z joints can still articulate" (as is often recommended), you will notice that your gantry displaces back/forth while printing.
         - This can help with ringing and layer consistency.
 
-**16)** Restore your `idle_timeout` settings (changed in step 1).
+**16)** Restore your `[idle_timeout]` settings (changed in step 1).

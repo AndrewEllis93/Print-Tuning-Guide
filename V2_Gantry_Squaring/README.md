@@ -30,6 +30,7 @@ Bonus steps 13-16 can also help with first layer *and* with gantry stability.
 **5)** Take off your left/right side panels.
 
 **6)** Unscrew and drop your lower Z joints. Your gantry will now be floating on just the belts.
+- Make sure your printer is on a fairly level surface (doesn't have to be perfect, just don't do it on a hill), or your gantry could swing too much to one side.
 
 - ![](Images/ZJoint-Lowered.png) 
 
@@ -80,9 +81,9 @@ Bonus steps 13-16 can also help with first layer *and* with gantry stability.
     - (Exaggerated)
     - ![](Images/Alignment-AB-Bad.png) 
 
-**9)** Tighten every extrusion connection in the gantry again **except** for the X/Y joints.
+**9)** Tighten every extrusion bolt again, *except* those in the X/Y joints. (you will tighten those during step 12)
 
-**10)** Ensure that the lower Z joints still slide nicely into the upper Z joints after tightening.
+**10)** Ensure that your Z joints still align properly. Sometimes tightening can move things around.
 
 **11)** Re-install your lower Z joints and *lightly* tighten the M5 bolts.
 - Do NOT hulk them down yet. The "ball joint" should still be able to articulate completely freely.

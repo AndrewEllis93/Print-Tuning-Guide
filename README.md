@@ -19,7 +19,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 # Table of Contents
 - **Before We Begin**
     - [**(!) Important Checks**](#-important-checks)
-    - [Voron V2 Gantry Squaring](V2_Gantry_Squaring/README.md)
+    - [Voron V2 Gantry Squaring](Voron_V2_Gantry_Squaring/README.md)
     - [A Note About Line Width](#a-note-about-line-width)
 - **Print Tuning**
     - [First Layer Squish](#first-layer-squish)
@@ -96,7 +96,7 @@ I just wanted to share what I have *personally* found to result in the best qual
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 ### 
-- Voron V2: I highly recommend following my [V2 gantry squaring](Voron_V2_Gantry_Squaring/README.md) instructions first.
+- Voron V2: I highly recommend following my [Voron V2 gantry squaring instructions](Voron_V2_Gantry_Squaring/README.md) first.
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws, linear rails, and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.

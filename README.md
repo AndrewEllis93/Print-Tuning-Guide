@@ -96,7 +96,7 @@ I just wanted to share what I have *personally* found to result in the best qual
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 ### 
-- Voron V2: I highly recommend following my [V2 gantry squaring](V2_Gantry_Squaring/README.md) instructions first.
+- Voron V2: I highly recommend following my [V2 gantry squaring](Voron_V2_Gantry_Squaring/README.md) instructions first.
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws, linear rails, and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
@@ -1256,7 +1256,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 
     - **Bed mesh can't always save you from mechanical problems.**
         - Most bed mesh issues are caused by the gantry rather than the bed itself.
-            - For V2, follow my [V2 gantry squaring](V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
+            - For V2, follow my [V2 gantry squaring](Voron_V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
             - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
                 - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
             - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
@@ -1411,7 +1411,7 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.
-    - For V2, follow my [V2 gantry squaring](V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
+    - For V2, follow my [V2 gantry squaring](Voron_V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
     - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
         - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 

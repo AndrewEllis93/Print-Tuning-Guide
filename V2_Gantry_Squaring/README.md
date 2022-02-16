@@ -50,14 +50,14 @@
         - ![](Images/IdlersLoosen-Bottom.png) 
 
 **8)** And now - what we have been prepping for! **Adjust your gantry so that it sits perfectly on top of the lower Z joints.**
-- This involves moving gantry components further aprt or closer together along the extrusions:
+- This involves moving gantry components further apart or closer together along the extrusions:
     - ![](Images/XAdjust.png) 
 
     - ![](Images/YAdjust.png)
 
 - Your gantry should align so that:
     - The Z joints feel perfectly flush along the side, and
-    - When raising and lowering your lower Z joint by hand, the bolt should slide perfectly without hitting the sides.
+    - When raising and lowering your lower Z joint by hand, the bolt should slide in perfectly without hitting the sides.
 
     - ![](Images/Alignment-Side.png) ![](Images/Alignment-Hole.png) 
 

@@ -46,3 +46,21 @@
     - Bottom (don't overdo it!)
     :
         - ![](Images/IdlersLoosen-Bottom.png) 
+
+**8)** Adjust your gantry so that the Z joints line up perfectly. 
+- Your Z joints should feel perfectly flush along the side.
+
+    - ![](Images/Alignment-Side.png) 
+
+- When raising and lowering your lower Z joint, the bolt should slide perfectly into the hole without hitting the sides and without "pulling" your gantry into place:
+
+    - ![](Images/Alignment-Hole.png) 
+
+- This will usually involve moving gantry corner components further closer together or further apart along the extrusion:
+    - ![](Images/XAdjust.png) 
+
+    - ![](Images/YAdjust.png) 
+
+- Ensure that you do not inadvertently rotate your A/B joints during this process.
+    - ![](Images/Alignment-AB-Good.png) 
+    - ![](Images/Alignment-AB-Bad.png) 

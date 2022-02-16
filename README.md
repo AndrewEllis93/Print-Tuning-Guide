@@ -17,7 +17,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
 # Table of Contents
-- **Before We Begin**
+- [**Before We Begin**](#before-we-begin)
     - [**(!) Important Checks**](#-important-checks)
     - [Voron V2 Gantry Squaring](Voron_V2_Gantry_Squaring/README.md)
     - [A Note About Line Width](#a-note-about-line-width)

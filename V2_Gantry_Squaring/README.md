@@ -65,6 +65,27 @@
     - ![](Images/Alignment-AB-Good.png) 
     - ![](Images/Alignment-AB-Bad.png) 
 
-**9)** Tighten everything **except** for the X/Y joints.
+**9)** Tighten everything in the gantry **except** for the X/Y joints.
 
-**10)** Follow [Neros' de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0)
+**10)** Ensure that the lower Z joints still slide nicely into the upper Z joints after tightening.
+
+**11)** Re-install your lower Z joints and *lightly* tighten the M5 bolts.
+- Do NOT hulk them down yet. The "ball joint" should still be able to articulate completely freely.
+
+**12)** Follow [Neros' de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
+- Make sure to come back here afterwards! The following steps are still important.
+
+**13)** Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
+
+**14)** `QUAD_GANTRY_LEVEL` 3-5 times to "settle in" the gantry (and level it for the next step).
+
+**15)** Open the front door and **fully hulk-tighten the M5 bolts in your Z joints.** Don't take too long.
+- **This is extremely important.** 
+    - This does two things:
+        - Somewhat "locks in" your QGL at its state in full heatoak.
+            - This has helped a number of people with their first layer issues.
+        - **Stabilizes your gantry**. 
+            - If you had it "tight but not too tight, so the Z joints can still articulate" (as is often recommended), you will notice that your gantry displaces back/forth while printing.
+            - This can help with ringing and layer consistency.
+
+**16)** Restore your `idle_timeout` settings (changed in step 1).

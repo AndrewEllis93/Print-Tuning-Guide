@@ -15,7 +15,7 @@
 
 **5)** Take off your left/right side panels.
 
-**6)** Unscrew and drop your Z joints down. Your gantry will now be floating on just the belts.
+**6)** Unscrew and drop your lower Z joints. Your gantry will now be floating on just the belts.
 
 - ![](Images/ZJoint-Lowered.png) 
 
@@ -41,7 +41,7 @@
 
 - Front idlers (repeat for both sides):
     - Top (don't overdo it!):
-    
+
         - ![](Images/IdlersLoosen-Top.png) 
     - Bottom (don't overdo it!)
     :

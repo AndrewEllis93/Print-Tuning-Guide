@@ -1,5 +1,16 @@
 # Voron V2 Gantry Squaring
 
+## Why?
+
+Poor gantry squaring can cause a number of problems, particularly with first layer.\
+Here's a video example of bad gantry squaring.\
+Notice that the idlers get "pinched" when moving the X extrusion back/forth (this is shown with loose Z joints).
+
+https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-a424-7d48def0f834.mp4
+
+
+## Method
+
 **1)** Modify your `idle_timeout` in your config to an arbirarily high number, then `reload`. 
 - This just gives us time to work. We need the motors to be energized and holding for the whole process.
 

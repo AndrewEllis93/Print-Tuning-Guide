@@ -99,6 +99,7 @@ This can potentially cause:
 **13)** Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
 
 **14)** `QUAD_GANTRY_LEVEL` 3-5 times to "settle in" the gantry (and level it for the next step).
+- If you are having new Z accuracy issues, you may have left your Z joints a bit *too* loose.
 
 **15)** Open the front door and **fully hulk-tighten the M5 bolts in your Z joints*** while it's still hot.
 

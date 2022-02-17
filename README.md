@@ -21,6 +21,7 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - [**(!) Important Checks**](#-important-checks)
     - [Voron V2 Gantry Squaring](Voron_V2_Gantry_Squaring/README.md)
     - [A Note About Line Width](#a-note-about-line-width)
+    - [Setting Expectations](#setting-expectations)
 - **Print Tuning**
     - [First Layer Squish](#first-layer-squish)
         - [Method](#method)
@@ -53,7 +54,6 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 - **Miscellaneous**
     - [Passing Slicer Variables to PRINT_START](#passing-slicer-variables-to-print_start)
     - [Controlling Slicer G-code Order *Without* Passing Variables](#controlling-slicer-g-code-order-without-passing-variables)
-    - [Setting Expectations](#setting-expectations)
 - **Troubleshooting**
     - [BMG Clockwork Backlash Issues](#bmg-clockwork-backlash-issues)
     - [Bulging](#bulging)
@@ -94,8 +94,6 @@ I avoid using calipers as much as possible for initial tuning, for a few reasons
 I certainly don't mean to imply that calibrating with calipers is wrong or impossible. Many of these things can be mitigated.
 
 I just wanted to share what I have *personally* found to result in the best quality prints. It also becomes more accessible by not requiring quality calipers.
-
-While we're here, have a gander at [Setting Expectations](#setting-expectations).
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 ### 
@@ -132,6 +130,47 @@ However:
 
 **(!) For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
 For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
+
+# Setting Expectations
+## Layer Consistency
+
+This is what your prints can look like!
+
+- ![](Images/Setting_Expectations_DirectLight.jpg) 
+
+But... wait a minute. The lighting changed. Wait, Ellis' prints look like shit?
+
+<sup> (this is directly under a bright LED lamp at a low angle)
+- ![](Images/Setting_Expectations_HarshLight.jpg) 
+
+*"I thought you could help me fix it!"*
+
+Well... there's a bit of trickery here. Trickery that everyone seems to partake in, willfully or not. \
+**Whenever people show off their prints, they tend to take the photo in direct lighting**. You can make just about any print look like shit in harsh lighting, mine included.
+
+And no, it's not just Vorons / *\<insert brand/printer here\>*. Even professional printers that cost *many* thousands of dollars produce prints that look like this in harsh lighting (in fact, a lot of them are *worse*.)
+
+In low-angle lighting, even a 0.0005mm imperfection is shown off in full force. \
+<sup>(I'm making that number up, but you get the idea.).
+
+Every component in your printer has tiny imperfections. These imperfections all combine with each other and create very minor inconsistencies in your prints. I use authentic Gates idlers (A/B/Z) and Hiwin rails with an Orbiter extruder, and I *still* have these imperfections. 
+
+In fact, the single best thing you can do for this issue is simply have *fewer components*. A simple i3 bed slinger with high quality components could theoretically achieve slightly better print quality than a CoreXY printer in this regard.
+
+There are some improvements to be made, like fixing extruder [backlash issues](#bmg-clockwork-backlash-issues), resolving [repeating patterns]((#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)) that correlate to specific components, using static fan speeds, or using higher quality components - but it will *never* be perfect. Don't drive yourself crazy chasing the unattainable last few percent of quality.
+
+There are entire Discord channels and Discord servers of commiseration. You can tune and get *very* good looking prints, but you can't tune the pain away.
+
+## An Analogy
+Think of it like the below graph. You can infinitely approach perfection, but you will never quite reach it. 
+
+Efforts at the beginning have a much higher relative quality increase, but you get diminishing returns the closer you get to perfection.
+
+![](Images/AnalogyGraph.png) 
+
+
+Now that we've got all that out of the way, on to the tuning!
+
 # First Layer Squish
 
 I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 
@@ -1034,29 +1073,6 @@ To force the g-code ordering, place any of the following g-codes from the follow
 ### Example
 Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
 - ![](Images/StartGcode-CustomOrder.png) 
-
-# Setting Expectations
-
-This is what your prints can look like!
-
-- ![](Images/Setting_Expectations_DirectLight.jpg) 
-
-But... wait a minute. The lighting changed. Wait, Ellis' prints look like shit?
-
-(this is directly under a bright LED lamp)
-- ![](Images/Setting_Expectations_HarshLight.jpg) 
-
-*"Wait... *my* prints look like that too! I thought you could help me fix it!"*
-
-Well... there's a bit of trickery here. Trickery that everyone seems to partake in, willfully or not. **Whenever people show off their prints, they tend to take the photo in direct lighting**. You can make just about any print look like shit in harsh lighting, mine included.
-
-And no, it's not just Vorons / *\<insert brand/printer here\>*. Even professional printers that cost *many* thousands of dollars produce prints that look like this in harsh lighting (in fact, a lot of them are *worse*.)
-
-There are some improvements to be made, like solving [backlash issues](#bmg-clockwork-backlash-issues), but it will *never* be perfect. Many have tried, many have failed. Don't drive yourself to insanity trying to fix it. It's that unachievable last few percent of quality.
-
-*There are entire Discord servers dedicated to this issue.* It's not just you.
-
-It does seem to be a bit worse with ABS than PLA, presumably due to shrinkage.
 # Troubleshooting
 ## BMG Clockwork Backlash Issues
 

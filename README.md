@@ -164,7 +164,7 @@ There are entire Discord channels and Discord servers of commiseration. You can 
 ## An Analogy
 Think of it like the below graph. You can infinitely approach perfection, but you will never quite reach it. 
 
-Efforts at the beginning have a much higher relative quality increase, but you get diminishing returns the closer you get to perfection.
+Efforts at the beginning have a much higher relative quality increase, but you get diminishing returns the closer you get to perfection. 3D printing just has an unfortunate side effect of showing off those imperfections.
 
 ![](Images/AnalogyGraph.png) 
 

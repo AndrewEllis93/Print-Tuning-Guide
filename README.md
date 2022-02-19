@@ -153,7 +153,7 @@ And no, it's not just Vorons / *\<insert brand/printer here\>*. Even professiona
 In low-angle lighting, even a 0.0005mm imperfection is shown off in full force. \
 <sup>(I'm making that number up, but you get the idea.).
 
-Every component in your printer has tiny imperfections. These imperfections all combine with each other and create very minor inconsistencies in your prints. I use authentic Gates idlers (A/B/Z) and Hiwin rails with an Orbiter extruder, and I *still* have these imperfections. 
+Every component in your printer has tiny imperfections. These imperfections all combine with each other and create very minor inconsistencies in your prints. I use authentic Gates pulleys/idlers (A/B/Z) and Hiwin rails with an Orbiter extruder, and I *still* have these imperfections. 
 
 In fact, the single best thing you can do for this issue is simply have *fewer components*. A simple i3 bed slinger with high quality components could theoretically achieve slightly better print quality than a CoreXY printer in this regard.
 
@@ -437,13 +437,16 @@ This method is quicker to run and more precise than the tower method, but requir
 **5)** Generate and download the g-code file.
 
 **6)** Print it, and inspect the results.
-- This calibration pattern is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
-    - Even at the "best" PA value, the line may not be perfect thickness all the way across.
-    - Often, either acceleration *or* deceleration will look good. They will not always both look good on the same line.
-        - **ALWAYS** choose the lower value. 
-    - This requires some interpretation. In this example, I would choose about **0.055**.\
-*(note: mine may be higher than yours, I am using an Orbiter + Dragon HF.)*
-        - **Bowden:** The values I suggested above for bowden cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.
+
+- Often times, the best acceleration and decelerations values will **not be on the same line.** In this case, you should pick a midpoint between both.\
+\
+**ALWAYS** choose the lower value if you are not entirely sure.
+    - This is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
+
+    - In the below example, I would choose about **0.055**.\
+*(note: mine is likely higher than a normal Afterburner. I am using an Orbiter + Dragon HF.)*
+
+    - **For Bowden:** The values I suggested above for bowden cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.
 
     ![](Images/KFactor-Print.jpg) 
 
@@ -896,9 +899,9 @@ Tune maximum speeds first, THEN tune accelerations separately.
 **2)** If you are already pushing high accels, then lower your `max_accel` in your config to something closer to "stock" and `reload`. 
 - Reference the stock Voron configs for a reasonable starting point.
     - Some wild guesses:
-        - Linear rail CoreXY: *3000mm³/s*
-        - Linear rod CoreXY: *2000mm³/s*
-        - Bed slinger: *1000mm³/s* 
+        - Linear rail CoreXY: *3000mm/s²*
+        - Linear rod CoreXY: *2000mm/s²*
+        - Bed slinger: *1000mm/s²* 
 - `max_accel` needs to be high enough to actually *reach* full speed in a given print volume, but low enough to not risk causing skipping on its own. **This is purely to isolate variables.** You will come back and tune actual max accels later *(step 8)*.
 - You can use the "acceleration" graphing calculator at the bottom of the page [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you will be reaching max speed.
     - For example, for a 300mm linear rail CoreXY printer:

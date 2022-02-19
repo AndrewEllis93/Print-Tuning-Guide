@@ -80,14 +80,14 @@ This can potentially cause:
 
 - Ensure that you do not inadvertently rotate your A/B joints during this process.
     - ![](Images/Alignment-AB-Good.png) 
-    - (Exaggerated)
-    - ![](Images/Alignment-AB-Bad.png) 
+    - (Exaggerated)\
+    ![](Images/Alignment-AB-Bad.png) 
 
 **9)** Tighten every extrusion bolt again, *except* those in the X/Y joints. (you will tighten those during step 12)
 - Ensure that your Z joints still align properly. Sometimes tightening can move things around.
 
 **10)** Re-install your lower Z joints and *lightly* tighten the M5 bolts.
-- Do NOT hulk them down yet. The "ball joint" should still be able to articulate completely freely.
+- Do NOT hulk them down yet, or even make them tight. The "ball joint" should still be able to articulate completely freely.
 
 **11)** Follow [Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
 - Make sure to come back here afterwards! The following steps are still important.

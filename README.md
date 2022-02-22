@@ -1478,9 +1478,9 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
 ## Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing
 
-Try printing the test objects [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). 
+Try printing the test objects [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test).
 
-Ensure that the artifacts are always vertical or diagonal. These patterns can be subtle (lumps) or sharp (lines).
+Ensure that the artifacts are *always vertical or diagonal, regardless of part geometry*. These patterns can be subtle (lumps) or sharp (lines).
 
 If the pattern looks like "wood grain", or any of the example photos in that link, see [this section](#repeating-patterns-in-extrusion-bmg-clockwork) instead.
 

@@ -548,13 +548,19 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
 **1)** Print multiple test cubes with variations of 2% EM. 
 - You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
-    - **SuperSlicer / Prusa Slicer:**
+    - **Prusa Slicer:**
+        - There is no way to set the EM per object. You will have to print the test objects one at a time. 
+
+    - **SuperSlicer:**
         - **(!) Make sure to set your EM to 1 in the filament settings.** \
-        The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.  Cura and Prusa Slicer do not have per object Extrusion Multiplier settings so each test cube will need to be printed separately.
+        The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.
 
         1) ![](Images/EM-1.png)
+
         2) ![](Images/EM-PerObject.png)
+
         3) ![](Images/EM-PerObject-2.png)
+        
         4) ![](Images/EM-PerObject-3.png)
         
     - **Cura:**

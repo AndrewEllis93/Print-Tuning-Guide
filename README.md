@@ -949,15 +949,17 @@ This macro will home, QGL *(if your printer uses QGL / has not yet done a QGL)*,
 
 You will [watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 
-### Available arguments
+### Available arguments (omitting any will use the default value)
 - `SPEED` - Speed in mm/sec. 
     - *Default: your `max_velocity`*
-- `ACCEL` - Acceleration 
+- `ACCEL` - Acceleration in mm/sec².
     - *Default: your `max_accel`*
 - `ITERATIONS` - Number of times to repeat the test pattern 
     - *Default: 5*
-- `BOUND` - How far to inset the test pattern. 
-    - *Default: 20mm (from the edges)*
+- `BOUND` - How far to inset the "large" test pattern from the edges (in mm). Normally you do not need to specify/change this. This just helps prevent slamming the toolhead into the sides after small skips, and also accounts for imperfectly set printer dimensions.
+    - *Default: 20*
+- `SMALLPATTERNSIZE` - The box size of the "small" movement pattern to perform at the center (in mm). Normally you do not need to specify/change this.
+    - *Default: 20*
 
 **(!)** *Note that any speed or acceleration you input into this macro can **exceed** 
 `max_velocity` and `max_accel` from your config. 

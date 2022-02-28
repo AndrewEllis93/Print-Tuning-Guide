@@ -956,9 +956,9 @@ You will [watch, listen, and compare the terminal output from before/after.](#de
     - *Default: your `max_accel`*
 - `ITERATIONS` - Number of times to repeat the test pattern 
     - *Default: 5*
-- `BOUND` - How far to inset the "large" test pattern from the edges (in mm). Normally you do not need to specify/change this. This just helps prevent slamming the toolhead into the sides after small skips, and also accounts for imperfectly set printer dimensions.
+- `BOUND` -  (Normally you do not need to specify/change this) How far to inset the "large" test pattern from the edges (in mm).This just helps prevent slamming the toolhead into the sides after small skips, and also accounts for imperfectly set printer dimensions.
     - *Default: 20*
-- `SMALLPATTERNSIZE` - The box size of the "small" movement pattern to perform at the center (in mm). Normally you do not need to specify/change this.
+- `SMALLPATTERNSIZE` -  (Normally you do not need to specify/change this) The box size of the "small" movement pattern to perform at the center (in mm).
     - *Default: 20*
 
 **(!)** *Note that any speed or acceleration you input into this macro can **exceed** 

@@ -1,14 +1,13 @@
 # Introduction
 
-Much of this guide is specific to CoreXY/Voron printers running Klipper.
+Much of this guide is specific to printers running **Klipper**. 
 
-Some of the troubleshooting/tuning information focuses on CoreXY (sorry, Switchwire folks).
+This guide was originally written for the Voron community, however all of the tuning sections should work on **any Klipper printer**. Some of the bullet points and hardware troubleshooting tips are still Voron specific, however.
 
 **(!) Please pay special attention to anything bolded and marked with "(!)"**
 
 My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
-I am adding new information all the time, be sure to check back.\
 If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
 
 You can find bed the models and textures I am using in [Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
@@ -18,9 +17,11 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
 # Table of Contents
-- **Before We Begin**
+- [**Before We Begin**](#before-we-begin)
     - [**(!) Important Checks**](#-important-checks)
+    - [Voron V2 Gantry Squaring](Voron_V2_Gantry_Squaring/README.md)
     - [A Note About Line Width](#a-note-about-line-width)
+    - [Setting Expectations](#setting-expectations)
 - **Print Tuning**
     - [First Layer Squish](#first-layer-squish)
         - [Method](#method)
@@ -31,8 +32,8 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - [Lines Method (Advanced)](#lines-method-advanced)
         - [Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for)
     - [Extrusion Multiplier](#extrusion-multiplier)
+        - [Background](#background-1)    
         - [Methods I'm Not a Fan Of](#methods-im-not-a-fan-of)
-        - [Notes on Dimensional Accuracy](#notes-on-dimensional-accuracy)
         - [Method](#method-2)
         - [The Relationship Between Pressure Advance & EM](#the-relationship-between-pressure-advance--em)
     - [Cooling and Layer Times](#cooling-and-layer-times)
@@ -78,8 +79,25 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 
 # Before We Begin
 
+Please remember that tuning prints will get you close, but they are should not be taken as gospel. **You should get in the habit of finely adjusting based on actual prints afterwards.**
+
+My methods are all purely visual / based on intuition. 
+
+I avoid using calipers as much as possible for initial tuning, for a few reasons: 
+- Not everyone has high quality calipers.
+- Not everyone uses them in exactly the same way.
+- 3D printing is not completely consistent. 
+    - Wall thicknesses and first layer thicknesses can vary in different places.
+    - Flow characteristics can change at different speeds.
+    - Things like bulges, overextruded areas, and layer misalignments can throw measurements off too. 
+
+I certainly don't mean to imply that calibrating with calipers is wrong or impossible. Many of these things can be mitigated.
+
+I just wanted to share what I have *personally* found to result in the best quality prints. It also becomes more accessible by not requiring quality calipers.
 ## (!) Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
+### 
+- Voron V2: I highly recommend following my [Voron V2 gantry squaring instructions](Voron_V2_Gantry_Squaring/README.md) first.
 - **(!) Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws, linear rails, and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.
@@ -87,6 +105,7 @@ Before you follow *any* tuning methods in this guide, ensure that:
     - If your nozzle is partially clogged, you may not even notice. You may be able to print, but you will have an **extremely difficult time trying to tune**.
         - Ensure that you can easily extrude by hand with the filament latch open.
         - Ensure that the material falls straight down out of the nozzle when extruding midair. It should not shoot out to the side.
+    - Hit it with a nozzle cleaning needle just in case.
 
 - Your thermistors are the correct types in your config. Please double check them.
     - **(!) If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
@@ -111,6 +130,47 @@ However:
 
 **(!) For Cura / Prusa Slicer / possibly others, you MUST use static line widths.** \
 For example, enter **0.48mm** instead of **120%** if you are using a 0.4mm nozzle.
+
+# Setting Expectations
+## Layer Consistency
+
+This is what your prints can look like!
+
+- ![](Images/Setting_Expectations_DirectLight.jpg) 
+
+But... wait a minute. The lighting changed. Wait, Ellis' prints look like shit?
+
+<sup> (this is directly under a bright LED lamp at a low angle)
+- ![](Images/Setting_Expectations_HarshLight.jpg) 
+
+*"I thought you could help me fix it!"*
+
+Well... there's a bit of trickery here. Trickery that everyone seems to partake in, willfully or not. \
+**Whenever people show off their prints, they tend to take the photo in direct lighting**. You can make just about any print look like shit in harsh lighting, mine included.
+
+And no, it's not just Vorons / *\<insert brand/printer here\>*. Even professional printers that cost *many* thousands of dollars produce prints that look like this in harsh lighting (in fact, a lot of them are *worse*.)
+
+In low-angle lighting, even a 0.0005mm imperfection is shown off in full force. \
+<sup>(I'm making that number up, but you get the idea.).
+
+Every component in your printer has tiny imperfections. These imperfections all combine with each other and create very minor inconsistencies in your prints. I use authentic Gates pulleys/idlers (A/B/Z) and Hiwin rails with an Orbiter extruder, and I *still* have these imperfections. 
+
+In fact, the single best thing you can do for this issue is simply have *fewer components*. A simple i3 bed slinger with high quality components could theoretically achieve slightly better print quality than a CoreXY printer in this regard.
+
+There are some improvements to be made, like fixing extruder [backlash issues](#bmg-clockwork-backlash-issues), resolving [repeating patterns]((#repeating-vertical-fine-artifacts-vfas-with-2mm-spacing)) that correlate to specific components, using static fan speeds, or using higher quality components - but it will *never* be perfect. Don't drive yourself crazy chasing the unattainable last few percent of quality.
+
+There are entire Discord channels and Discord servers of commiseration. You can tune and get *very* good looking prints, but you can't tune the pain away.
+
+## An Analogy
+Think of it like the below graph. You can infinitely approach perfection, but you will never quite reach it. 
+
+Efforts at the beginning have a much higher relative quality increase, but you get diminishing returns the closer you get to perfection. 3D printing just has an unfortunate side effect of showing off those imperfections.
+
+![](Images/AnalogyGraph.png) 
+
+
+Now that we've got all that out of the way, on to the tuning!
+
 # First Layer Squish
 
 I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 
@@ -137,11 +197,12 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 In these examples, the third square is closest.\
 There are print examples in the next section.
 
+Note: When I refer to "gaps", I mean where you can see BETWEEN/THROUGH the extrusion lines. If you can see any light (excluding pinholes at the perimeter), or the next layer, then you need more squish.
 - #### Smooth Build Surface
     - **Top Surface**
         - You don't want too many ridges/hairs on top. 
             - It's normal to have a *little* bit of this near the corners, or in small  footprint areas.
-        - You shouldn't see any gaps between the lines.
+        - You shouldn't see any gaps* between the lines.
             - It's fine to have some very small pinholes where the infill meets the     perimeters.
         - ![](Images/FirstLayer-Squares-2.png)
         - ![](Images/FirstLayer-Squares-2-Annotated.png)
@@ -158,7 +219,6 @@ There are print examples in the next section.
         - As with smooth build surfaces, you should not have any gaps between the lines.
         - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.
         - ![](Images/FirstLayer-Squares-Textured-2.jpg)
-
 
 **5)** Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
 
@@ -198,7 +258,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
 
 ### Not Enough Squish
-- There are gaps between the lines:
+- There are gaps between the lines (you can see through to the next layer):
 
     - ![](Images/FirstLayer-NotEnoughSquish1.png) ![](Images/FirstLayer-NotEnoughSquish2.png) ![](Images/FirstLayer-NotEnoughSquish3.png) 
 
@@ -206,6 +266,14 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 # Build Surface Adhesion
 
 - **(!)** Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
+
+- **(!)** Ensure that your [first layer squish](#first-layer-squish) is correct. 
+
+- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
+    - You should do this even for brand new surfaces.
+    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
+    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
+    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
 - **Smooth PEI:**
     - **Scuff it up** with a [Scotch-Brite scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
@@ -217,17 +285,21 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - **Textured PEI:**
     - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
 
-- **(!) Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
-    - You should do this even for brand new surfaces.
-    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
-    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
-    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
+- Use thicker first layer line widths. 
+    - I use 120% normally, but higher line widths can further increase adhesion. They push the plastic into the bed with more force, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
     - Stick to well-known brands. 
     - This is prevalent with unknown AliExpress and Amazon sellers.
 
-- Instead of PEI, you can use strong adhesives like [Vision Miner Nano Polymer](https://visionminer.com/products/nano-polymer-adhesive) on bare spring steel.
+- Instead of PEI (or to supplement your PEI), you can use adhesives like [Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT).
+    - Not sponsored: I will praise this stuff until I am blue in the face. It's *excellent*.
+        - It grips like crazy. 
+            - Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used.
+        - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be cleaned)
+        - It's very thin and easy to spread with a brush.
+        - It lasts a long time between applications.
+        - It releases when cooled.
 
 - As a **very last resort**, you can try refreshing the surface with acetone. Keep in mind, however that this weakens PEI over time, and I heave heard cases of it **destroying** certain surfaces (mainly certain brands of textured sheets). **Only try this if it's going in the trash otherwise.**
 # Pressure Advance
@@ -311,88 +383,73 @@ Excuse the gigantic photos - high resolution is needed here.
 ## Lines Method (Advanced)
 
 ### Background
-This method is quicker to run and more precise than the tower method, but requires additional preparation and manually modifying g-code files. 
+This method is quicker to run and more precise than the tower method, but requires some additional setup, including some start g-code.
 
 **(!) You should [calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
-
-**(!) If you are not willing to get familiar with manually modifying g-code, please consider using the tower method instead.** 
-- You can risk crashes & damage if you don't understand what changes you are making (for example, accidentally omitting `QUAD_GANTRY_LEVEL` or `PRINT_START`)
+**(!) If you are not willing to get familar with setting up start g-code, consider using the tower method instead.**
+- You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).
 ### Method
 
-**1)** Add this macro to your Klipper config.
+**1)** Visit the [pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
+- Thanks to Deuce#8801 for setting this up! (It's a modified version of [Marlin's linear advance site.](https://marlinfw.org/tools/lin_advance/k-factor.html))
 
-```
-# Convert Marlin linear advance (M900) commands to Klipper (SET_PRESSURE_ADVANCE) commands.
-# For use with Marlin's linear advance calibration: https://marlinfw.org/tools/lin_advance/k-factor.html
-[gcode_macro M900]
-gcode:
-	# Parameters
-	{% set pa = params.K|float %}
-	SET_PRESSURE_ADVANCE ADVANCE={pa}
-```
+**2)** Fill out the parameters specific to your setup (printer name, bed size, retraction, etc.) 
 
-**2)** Type `RESTART` into the g-code terminal.
+**3)** Modify the **Start G-code** section.
 
-**3)** Visit the [Marlin K-factor calibration site](https://marlinfw.org/tools/lin_advance/k-factor.html).
+**(!)** *Exercise caution here. As mentioned previously, you can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).*
 
-**4)** Fill out the parameters. Most are self explanatory or should be left at defaults, but these are some specific settings that I recommend:
- 
+- This is where you will set your temperatures (`M109`/`M190`).
+- Copy over your slicer's start g-code (from your printer profile) and paste it beneath the `M109`/`M190`. 
+    - You can usually *replace* the default contents beneath the `M109`/`M190`, but there are some default preperatory g-codes (homing, QGL, etc) just in case.
+        - `PRINT_START` macros usually contains all of this, but please double check.
+            - If you are [passing variables to `PRINT_START`](#passing-slicer-variables-to-print_start), remember to append them to `PRINT_START`. Example: `PRINT_START HOTEND=240 BED=110`
+                - Your variable naming may be different, e.g. `EXTRUDER=X` instead of `HOTEND=X`.
+                - You can then comment out the separate heating g-codes.
+    - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
+    - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.
+
+**4)** Fill out the tuning parameters. Many can be left at defaults, but here are some specific settings that I recommend:
+
 - **Printer**
     - **Layer Height**: 0.25mm
 - **Speed**
-    - **Slow Printing Speed**: Your `square_corner_velocity` *(From your printer.cfg. Default is 5.)*
+    - **Slow Printing Speed**: Your `square_corner_velocity` From your printer.cfg. Default is 5.
     - **Fast Printing Speed**: 120mm/sec
-    - **Acceleration**: Your perimeter acceleration (NOT external perimeter)
+    - **Acceleration**: Your perimeter acceleration
 - **Pattern**
-    - **Starting Value for K**: 0
-    - **Ending Value for K**:  
+    - **Starting Value for PA**: 0
+    - **Ending Value for PA**:
         - **Direct Drive**: 0.1
         - **Bowden***: 1.5
-    - **K-factor Stepping:**: 
+    - **PA Stepping:**:
         - **Direct Drive**: 0.005
         - **Bowden***: 0.05
     - **Print Anchor Frame**: Checked
 - **Advanced**
     - **Nozzle Line Ratio**: 1.2
-    - **Use Bed Leveling:** No
     - **Prime Nozzle**: Unchecked
     - **Dwell Time**: 0
 
-Note that the "Extrusion Multiplier" setting is a decimal, NOT a percent.
-
-\* *The bowden values I suggest cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.*
+\* *The bowden values I suggest here cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you nawrrow down a general range to work in, you may want to run the test again with a narrower range of PA values.*
 
 **5)** Generate and download the g-code file.
 
-**6)** Edit the g-code file.
+**6)** Print it, and inspect the results.
 
-**(!) Again, if you are confused about g-code editing, please consider using the tower method instead. You risk crashes & damage if you don't know what you are doing.**
+- Often times, the best acceleration and decelerations values will **not be on the same line.** In this case, you should pick a midpoint between both.\
+\
+**ALWAYS** choose the lower value if you are not entirely sure.
+    - This is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
 
-I will not give extremely specific directions here, as it depends on how you start & end your prints. I will show you mine as an example, however.
+    - In the below example, I would choose about **0.055**.\
+*(note: mine is likely higher than a normal Afterburner. I am using an Orbiter + Dragon HF.)*
 
-- Modify the "prepare printing" g-code section appropriately at the beginning.
-    - Change `M204 P` to `M204 S`.
-    - Add `PRINT_START` in the appropriate place.
-        - If you are [passing variables to `PRINT_START`](https://github.com/AndrewEllis93/Ellis-PIF-Profile#passing-variables-to-print_start), remember to remove the heating commands and pass them to `PRINT_START` instead, e.g: `PRINT_START HOTEND=240 BED=110`
-            - Example: \
-            ![](Images/KFactor-StartGcode.png) 
-    - Ensure that the preparation commands (G90, M83, G92 E0 etc.) remain, and happen **after** `PRINT_START`.
-
-- Modify the "FINISH" g-code section appropriately at the end.
-    - Don't forget to add `PRINT_END`.\
-    ![](Images/KFactor-EndGcode.png) 
-
-**7)** Print it, and inspect the results. 
-- This calibration pattern is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
-    - Even at the "best" PA value, the line may not be perfect thickness all the way across.
-    - Often, either acceleration *or* deceleration will look good. They will not always both look good on the same line.
-        - **ALWAYS** choose the lower value. 
-    - This requires some interpretation. In this example, I would choose about **0.055**.\
-*(note: mine may be higher than yours, I am using an Orbiter + Dragon HF.)*
-        - **Bowden:** The values I suggested above for bowden cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.
+    - **For Bowden:** The values I suggested above for bowden cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.
 
     ![](Images/KFactor-Print.jpg) 
+
 ## Fine-Tuning and What to Look For
 
 The above methods are usually good enough on their own. Choosing the right height/line, however, can take some experience. Here are some things to look out for.
@@ -424,14 +481,17 @@ You can manually tweak pressure advance based on actual prints. Usually incremen
 This must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 
 ## Background
-This is a bit of a debated subject. Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
+This is a bit of a debated subject. Ask ten people, get ten different opinions. I will try to explain my rationale.
+
+Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
+
 ### Methods I'm Not a Fan Of
-The below methods I've found to have large margins for error. Good EM makes a *huge* difference to the appearance of your prints.
+Again, *this is a debated subject*. I don't mean to imply that my below method is the "one true way" of calibrating your EM. I am still discovering things myself, and EM can even have different characteristics at different speeds. 
 - #### Measuring Wall Thickness With Calipers
-    - Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers. 
-        - I find this method not to work very well at all, especially with ABS, presumably due to shrinkage.
-        - This method is also impacted by pressure advance, which can easily throw off your results.
-        - This method assumes that you have good calipers, which many people don't. Adding to that, the width can vary depending where you mesaure it.
+    - Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers.
+        - While this *can* result in better dimensional accuracy, I find it to result in less attractive parts. This method has always resulted in more layer inconsistencies and rougher top surfaces for me. My personal approach is to tune until everything looks perfect, *then* to account for dimensions. All of my tuning methods are purely visual / based on intuition where possible.
+        - This method assumes that you have good calipers, which many people don't. This can simply limit the accessibility and reliability. The measured widths can also vary depending where you measure it and how much pressure you use, so different people may have different experiences.
+        - If this method works better for you, by all means continue using it.
 - #### SuperSlicer Calibration
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
         - It is very reliant on first layer squish.
@@ -439,26 +499,29 @@ The below methods I've found to have large margins for error. Good EM makes a *h
         - It has ironing turned on by default.
         - The objects are too small. It's normal for [smaller infill areas to look a bit more overextruded than larger infill areas.](#small-infill-areas-look-overextruded)
 
-### Notes on Dimensional Accuracy
-I find the below method to result in prints that are within my personal acceptable tolerances, and work well for Voron parts. It's an aesthetics-first approach that also happens to get "good enough" dimensional accuracy in my experience.
+### Get your prints as smooth as a baby's bottom, THEN account for dimensions if needed (in my opinion).
 
-**Voron parts are designed for some shrinkage**, and for reasonable tolerances, so don't go crazy with calipers and comparing measurements to CAD/STL dimensions. In many cases they are not intended to match.
+Follow my below method. It is an **aesthetics-first approach**. This method creates very smooth top surfaces, and additionally can help with layer consistency/stacking.
 
-With the Voron test prints, as long as:
-- The thread tests screw together nicely, and
-- Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top),
+This also results in prints that are of perfectly acceptable tolerances for Voron parts (and most other projects) with no further compensation. 
 
-Then you are pretty much good to go.
+**(!) Voron parts are designed with shrinkage in mind, so it's fine if the dimensions don't perfectly match CAD.** Please don't drive yourself crazy with calipers for Voron parts, they are not always intended to match.
 
-**If dimensional accuracy is your top priority for other projects:**
-- Firstly, adjust your expectations. Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
-- You likely need to play with part scaling, CAD dimensions, or even slicer shrinkage compensation since we are dealing with ABS. ABS shrinks a fair bit, and the nature of FDM can also make shrinkage a bit less predicatable. 
-    - The best place to accomodate for shrinkage is in the part design itself. 
-    - Consider using a different plastic with less shrinkage, or even filled ABS.
-- You can fine-tune EM based on part dimensions or fitment, and use my method to tune top layer flow separately for aesthetics and flush mating surfaces.
-- There is some debate around whether you should calibrate your A/B (or X/Y) axes. I have never found this necessary, however. 
+- With the Voron test prints, you are good to go as long as:
+    - The thread tests screw together nicely, and
+    - Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top).
+### If you need true-to-CAD dimensional accuracy for other projects
+- Firstly, *adjust your expectations*. 
+    - Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
+- AFTER tuning extrusion multiplier using my below method:
+    - Try your slicer's **shrinkage compensation** settings.
+        - In some slicers, this is just re-named/glorified X/Y part scaling*. 
+            - \*Shrinkage occurs much less in the Z axis.
+            - 100.5%-101% X/Y scaling is about the range you would expect with ABS.
+        - Find any suitable test object (larger is generally better), and ensure that you are measuring flat edges and not any corner bulging or seams. Use the resulting measurements to determine how much shrinkage compensation you need.
+    - Don't mess with your X/Y/A/B `steps_per_mm`/`rotation_distance`, you will just further confuse matters. You are almost always seeing material shrinkage, NOT issues with your axes. 
+        - If dimensions are off by large amounts, you may have the wrong pulleys installed on your motors (for example if you're off by 20%, you probably swapped a 16t pulley with a 20t pulley or vice versa).
 
-You will have to find the method that works best for you. I am considering extremely tight dimensional accuracy outside the scope of this guide. 
 ## Method
 The best method I have found is purely visual/tactile.
 
@@ -469,6 +532,7 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
     We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. \
     We still need enough to adequately support the top layers.
 - **100% Top Layer [Line Width](#a-note-about-line-width)**\
+    In SS: Print settings > width and flow > extrusion width > top infill\
     This is more subject to interpretation, but I find 100% to have good results. It has a nice finish and tends to show off EM differences the best.
 - **5 Top Layers**\
     This ensures that we have adequate support for the surface layer.
@@ -484,11 +548,24 @@ We will print some 30x30x3mm cubes. *(see the Test_Prints folder)*
 
 **1)** Print multiple test cubes with variations of 2% EM. 
 - You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
-    - **(!) In PS/SS, if you set flow per-object, make sure to set your EM to 1 in the filament settings.** The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.
-    1) ![](Images/EM-1.png)
-    2) ![](Images/EM-PerObject.png)
-    3) ![](Images/EM-PerObject-2.png)
-    4) ![](Images/EM-PerObject-3.png)
+    - **Prusa Slicer:**
+        - There is no way to set the EM per object. You will have to print the test objects one at a time. 
+
+    - **SuperSlicer:**
+        - **(!) Make sure to set your EM to 1 in the filament settings.** \
+        The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.
+
+        1) ![](Images/EM-1.png)
+
+        2) ![](Images/EM-PerObject.png)
+
+        3) ![](Images/EM-PerObject-2.png)
+        
+        4) ![](Images/EM-PerObject-3.png)
+        
+    - **Cura:**
+
+        1) ![](Images/EM-PerObject-Cura.png)
 
 **2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
 
@@ -500,16 +577,20 @@ I have found that most ABS falls within the 91-94% range.
 
 This can be difficult to convey in photos. **You may have to zoom in to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.
 
-Focus your attention near the center of the test prints. It's normal for it to look a bit more overextruded near the edges and corners.
+Focus all of your attention **!!!!! at the center !!!!!** of the test prints. It's normal for it to look a bit more overextruded near the edges and corners.
 
 You will get better at this through experience.
 #### 2% Intervals
-![](Images/EMPrints-Coarse.png) 
+![](Images/EMPrints-Coarse-Annotated.png) 
 #### 0.5% Intervals
 Now we run the print again at 0.5% intervals between the "too low" and "too high" examples from above.
 
-Notice how the print becomes noticeably more shiny and glass-like around perfect EM (cube #2). 
-This is not just a trick of the light. Shininess is not always the best indicator, but it makes a good visual example.
+Pick the cube that looks best to *you*. Typically this will be *just above where gapping in the center starts to disappear*, but not so high that you start to see ridges. 
+
+**If you can't decide between two cubes, pick the higher one.**\
+*Additionally, this is an aesthetics-first approach. If it looks good to you, it's good enough.* 
+
+In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this.
 
 ![](Images/EMPrints-Fine.png) 
 
@@ -554,7 +635,8 @@ There are multiple things you can do to minimize overheating with ABS.
     - The hotter your enclosure, the higher fan speeds you will need.
         - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
             - For large plates, I use 40% fan.
-            - For small numbers of small objects, I use up to 80% fan.
+            - For small plates, I may use up to 80% fan.
+            - For single small objects, I may use up to 100% fan.
     - For very large objects, you may want to be more conservative with cooling. Large objects are much more prone to warping.
         - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
 - If your prints are curling away from the bed even at low fan speeds, it may actually be a [build surface adhesion](#build-surface-adhesion) issue.
@@ -694,12 +776,12 @@ Volumetric flow is expressed in mm<sup>3</sup>/sec (cubic millimeters per second
 You can use this volumetric flow rate **to determine how fast your hotend/extruder is able to print.**
 
 - See [this section](#how-volumetric-flow-rate-relates-to-print-speed) to determine what maximum speeds you can print at with a given flow rate.
-    - See [this section](#approximate-values) for approximate values for certain hotends.
+    - See [the next section](#approximate-values) for approximate values for certain hotends.
 - Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
-    - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. It will automatically limit you. 
-    - You can also set any print speeds to 0 (like infill) to print that extrusion type as fast as your hotend will allow.
-- ![](Images/Volumetric-SS.png) 
-
+    - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. 
+    - You can also set any print speeds to a high "absolute maximum" speed (like infill) and let it be limited by the volumetric flow limit. This essentially prints at the maximum speed your hotend will allow:
+        - This is utilized by my published SuperSlicer profile (see the ["Volumetric Speed / Auto Speed" section](https://github.com/AndrewEllis93/Ellis-PIF-Profile#volumetric-speed--auto-speed) for more information.)
+        - ![](Images/Volumetric-SS.png) 
 ## Approximate Values
 
 | Hotend     | Flow Rate (mm<sup>3</sup>/sec) |
@@ -774,7 +856,7 @@ For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup
 # Determining Motor Currents
 **(!)** The below guidance is for **A/B/X/Y motors only**.
 
-Extruder motors/pancake steppers are a bit different, as there is more variance between models. I will add this at a future date.
+Extruder motors/pancake steppers are a bit different, as there is more variance between models.
 
 - **Check with the community first.**
     - If you are using BoM motors, check the stock configs.
@@ -830,9 +912,9 @@ Tune maximum speeds first, THEN tune accelerations separately.
 **2)** If you are already pushing high accels, then lower your `max_accel` in your config to something closer to "stock" and `reload`. 
 - Reference the stock Voron configs for a reasonable starting point.
     - Some wild guesses:
-        - Linear rail CoreXY: *3000mm³/s*
-        - Linear rod CoreXY: *2000mm³/s*
-        - Bed slinger: *1000mm³/s* 
+        - Linear rail CoreXY: *3000mm/s²*
+        - Linear rod CoreXY: *2000mm/s²*
+        - Bed slinger: *1000mm/s²* 
 - `max_accel` needs to be high enough to actually *reach* full speed in a given print volume, but low enough to not risk causing skipping on its own. **This is purely to isolate variables.** You will come back and tune actual max accels later *(step 8)*.
 - You can use the "acceleration" graphing calculator at the bottom of the page [here](https://blog.prusaprinters.org/calculator_3416/) to verify that you will be reaching max speed.
     - For example, for a 300mm linear rail CoreXY printer:
@@ -873,15 +955,17 @@ This macro will home, QGL *(if your printer uses QGL / has not yet done a QGL)*,
 
 You will [watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 
-### Available arguments
+### Available arguments (omitting any will use the default value)
 - `SPEED` - Speed in mm/sec. 
     - *Default: your `max_velocity`*
-- `ACCEL` - Acceleration 
+- `ACCEL` - Acceleration in mm/sec².
     - *Default: your `max_accel`*
 - `ITERATIONS` - Number of times to repeat the test pattern 
     - *Default: 5*
-- `BOUND` - How far to inset the test pattern. 
-    - *Default: 20mm (from the edges)*
+- `BOUND` -  (Normally you do not need to specify/change this) How far to inset the "large" test pattern from the edges (in mm).This just helps prevent slamming the toolhead into the sides after small skips, and also accounts for imperfectly set printer dimensions.
+    - *Default: 20*
+- `SMALLPATTERNSIZE` -  (Normally you do not need to specify/change this) The box size of the "small" movement pattern to perform at the center (in mm).
+    - *Default: 20*
 
 **(!)** *Note that any speed or acceleration you input into this macro can **exceed** 
 `max_velocity` and `max_accel` from your config. 
@@ -1007,7 +1091,6 @@ To force the g-code ordering, place any of the following g-codes from the follow
 ### Example
 Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
 - ![](Images/StartGcode-CustomOrder.png) 
-
 # Troubleshooting
 ## BMG Clockwork Backlash Issues
 
@@ -1023,22 +1106,28 @@ The motor plate has 3 slotted screw holes to allow for adjustment:
 - The top two screws are easily reachable.
 - The bottom left screw can be reached by opening the filament latch fully and using a ball-end hex driver.
 ### Too Little Backlash:
-- Repeating Patterns in Extrusion
-    - Adjusting backlash can help considerably with these issues, but is not always guaranteed to fix it.
-    - These issues can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
-    - Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience.
-    - Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
-    - **Examples:**
-        - The left cube shows a pattern. The right cube is normal:\
-    ![](Images/Troubleshooting/Backlash-Comparison.png)
-        - Diagonal patterns:\
-    ![](Images/Troubleshooting/Backlash-Pattern.png)
-        - "Wood Grain":\
-    ![](Images/Troubleshooting/Backlash-WoodGrain.png)
-
+- [Repeating patterns](#repeating-patterns) in extrusion
+- Accelerated wear and damage of the plastic gear, further contributing to repeating patterns in extrusion. \
+This can be permanent until replacement. Check the spaces between the gear teeth.
 ### Too Much Backlash:
-- Clacking noises during retraction
-- Clacking noises during pressure advance moves
+- [Repeating patterns](#repeating-patterns) in extrusion
+- Clacking noises during retraction and pressure advance moves
+
+### Repeating Patterns
+- Adjusting backlash can help considerably with these issues, but is not always guaranteed to fix it.
+- These issues can also be caused by poor quality BMG parts. Genuine Bondtech or Trianglelab BMG parts are best.
+- Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience. Bowden systems are also less prone.
+- Test prints: https://mihaidesigns.com/pages/inconsistent-extrusion-test
+- **Examples:**
+    - See ["Setting Expectations"](#setting-expectations)   
+    - The left cube shows an "innie-outie" pattern across each extrusion line.\
+    The right cube is with properly adjusted backlash, and the pattern is lessened.
+        - ![](Images/Troubleshooting/Backlash-Comparison.png)
+    - "Wood Grain":
+        - ![](Images/Troubleshooting/Backlash-WoodGrain.png)
+    - Diagonal patterns:\
+    *Note: this kind of pattern can also be caused by mechanical issues with printer axes.*
+        - ![](Images/Troubleshooting/Backlash-Pattern.png)
 
 ### Mini Afterburner
 
@@ -1234,10 +1323,9 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 
     - **Bed mesh can't always save you from mechanical problems.**
         - Most bed mesh issues are caused by the gantry rather than the bed itself.
-            - On V2/Trident, heat soak for at least an hour, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh/first layer.
-                - These instructions are for V2, but the process should be similar for Trident.
-                - You have to be *somewhat* quick, as things start cooling down once you take off the panels. Don't stress about it too much though.
-            - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
+            - For V2, follow my [V2 gantry squaring](Voron_V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
+            - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
+                - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
             - If you are using dual X rails, **make sure they are properly aligned with each other.** This can cause left-to-right first layer issues that mesh can't compensate for.
             - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend and nozzle.
     - Try more mesh points. Usually anything above 5x5 is overkill, but you can try up to 9x9.
@@ -1390,9 +1478,9 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.
-    - On V2/Trident, heat soak for 2+ hours, [square your gantry](https://discord.com/channels/460117602945990666/472450547534921729/854120317299064852) and [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). This helps to remove tension in your gantry, and can improve your mesh, first layer, and pulley/belt alignment.
-        - These instructions are for V2, but the process should be similar for Trident.
-    - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0).
+    - For V2, follow my [V2 gantry squaring](Voron_V2_Gantry_Squaring/README.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
+    - On all CoreXY printers: [de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
+        - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
 - You may have poor quality belts. **Only use genuine Gates brand belts.**
 - You may have poor quality motor pulleys and idlers.
@@ -1405,9 +1493,9 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
 ## Repeating Vertical Fine Artifacts (VFAs) With Non-2mm Spacing
 
-Try printing the test objects [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). 
+Try printing the test objects [here](https://mihaidesigns.com/pages/inconsistent-extrusion-test).
 
-Ensure that the artifacts are always vertical or diagonal. These patterns can be subtle (lumps) or sharp (lines).
+Ensure that the artifacts are *always vertical or diagonal, regardless of part geometry*. These patterns can be subtle (lumps) or sharp (lines).
 
 If the pattern looks like "wood grain", or any of the example photos in that link, see [this section](#repeating-patterns-in-extrusion-bmg-clockwork) instead.
 
@@ -1424,6 +1512,11 @@ Print two wide square objects, one in normal orientation, and one at 45 degrees.
 Inspect the object to see which axes the artifacts appear most prominent in.
 
 *(components in each section are in order of likelihood)*
+- Artifacts are equally prominent in all directions:
+    - **A *and* B** motor pulleys
+    - **X *and* Y** linear rails
+    - **A *and* B** belts
+    - **A *and* B** motors
 - Artifacts are most prominent in in A:
     - Bearings in **A** belt path
     - **A** motor pulley
@@ -1447,12 +1540,25 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 - Artifacts are most prominent in in X/Y, but not A/B:
     - **A *and* B** motors
         - Certain motor models have been found to cause this when both are operating at the same time (i.e. X/Y moves)
-- Artifacts are equally prominent in all directions:
-    - **A *and* B** motor pulleys
-    - **X *and* Y** linear rails
-    - **A *and* B** belts
-    - **A *and* B** motors
+        - The following motor settings are [passed around on the Voron Discord](https://discord.com/channels/460117602945990666/696930677161197640/925934388703793192), and apparently can help in some cases (particularly with certain LDO motors on Voron V0). It may also help in other cases, worth a try.
+```
+# Set the below settings for both X AND Y motors, **in addition** to your current settings.
 
+[stepper_x]
+microsteps: 32
+
+[tmc2209 stepper_x]
+interpolate: false
+stealthchop_threshold: 999999  # I'm not sure on this one. I tend to advise against using stealthchop (set to 0). Try both.
+driver_TBL: 2
+driver_TOFF: 2
+driver_HEND: 1
+driver_HSTRT: 4
+driver_PWM_LIM: 8 
+driver_PWM_GRAD: 8
+driver_PWM_FREQ: 1
+driver_PWM_REG: 4
+```
 ## Slicer is Putting Heating G-codes in the Wrong Place/Order
 You have two options:
 - Pass variables to `PRINT_START` (allows the most control, but is more complex)

@@ -43,7 +43,7 @@ Tuning efforts at the beginning (this tuning guide!) will have a much higher rel
 
 ![](/images/AnalogyGraph.png) 
 
-My guide should get you somewhere around the 5 or 10.
+My guide should (hopefully) get you somewhere around the 5 or 10.
 
 
 Now that we've got all that out of the way, on to the tuning!

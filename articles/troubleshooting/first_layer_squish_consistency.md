@@ -1,5 +1,5 @@
 # First Layer / Squish Consistency Issues
-### Thermal Drift
+## Thermal Drift
 
 (This can affect first layer consistency *and* z offset consistency between prints.)
 
@@ -17,7 +17,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
     <sup>* *Some links: :page_facing_up:[1](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers) [2](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers) [3](https://deepfriedhero.in/products/titanium-extrusion-backers?_pos=1&_sid=e2f989fec&_ss=r) [4](https://www.fabreeko.com/collections/voron/products/v2-4-trident-titanium-extrusion-backers) [5](https://github.com/tanaes/whopping_Voron_mods/blob/main/docs/frame_expansion/frame_thermal_compensation_howto.md) [6](https://github.com/alchemyEngine/measure_thermal_behavior) [7](https://github.com/alchemyEngine/measure_thermal_behavior/blob/main/process_frame_expansion.py) [8](https://youtu.be/RXJKdh1KZ0w)</sup>*\
     <sup>\* *This is the one thing I would ask you not to message me about. It is outside the scope of what I am hoping to accomplish with this guide. The graph above is solely intended to demonstrate my point about heat soak times.*</sup>
 
-### First Layer Consistency
+## First Layer Consistency
 (If your squish seems to vary at different spots on the bed)
 
 - In my opinion, you should use [:page_facing_up:bed mesh](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#bed-mesh). I personally recommend generating a bed mesh before every print, by adding `BED_MESH_CALIBRATE` to your `PRINT_START` macro. *(requires the config section in the link above.)*
@@ -60,7 +60,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
     - On **V2**, run `PROBE_ACCURACY` in each corner of the bed to check all four Z drives.
 - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend, nozzle, and probe.
 - See the [:pushpin:Thermal Drift](/articles/troubleshooting/first_layer_squish_consistency.md#thermal-drift) section. Ensure that you are heat soaking for long enough on larger enclosed printers.
-### Squish Consistency (Between Prints)
+## Squish Consistency (Between Prints)
 
 (If your Z offset seems to vary between prints.)
 

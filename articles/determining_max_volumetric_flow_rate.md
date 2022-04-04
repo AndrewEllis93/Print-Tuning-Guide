@@ -3,7 +3,7 @@
 Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.
 
 Volumetric flow is expressed in mm<sup>3</sup>/sec (cubic millimeters per second).
-### Why?
+## Why?
 You can use this volumetric flow rate **to determine how fast your hotend/extruder is able to print.**
 
 - See [:pushpin:this section](/articles/determining_max_volumetric_flow_rate.md#how-volumetric-flow-rate-relates-to-print-speed) to determine what maximum speeds you can print at with a given flow rate.
@@ -72,7 +72,7 @@ Remember the the F speed is in mm/min, **not** mm/sec, so multiply your desired 
 **6)** Convert your extrusion speed to volumetric speed using the below formulas. \
 **7)** Enter a slightly lower volumetric speed into the slicer.
 
-### Formulas
+## Formulas
 
 **mm<sup>3</sup> = mm / 0.416**
 

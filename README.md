@@ -24,9 +24,6 @@ This guide was originally written for the Voron community, however all of the tu
 - Support my drinking habits:
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
-
-
-
 # Table of Contents
 - [Before We Begin](/articles/before_we_begin.md)
     - **:warning: Important Checks**

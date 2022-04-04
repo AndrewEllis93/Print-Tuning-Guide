@@ -1,4 +1,4 @@
-## Infill/Perimeter Overlap
+# Infill/Perimeter Overlap
 
 After tuning flow and pressure advance, you may still have some pinholes where your top infill meets your perimeters. This is more prevalent in PS/SS.
 
@@ -8,14 +8,14 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 
 **Simply increase "infill/perimeter overlap" (PS/SS) until satisfied.**
 
-### Examples
+## Examples
 - ![](/images/Overlap-1.png) 
 - ![](/images/Overlap-2.png) 
-### Overlap Tweaked:
+## Overlap Tweaked:
 
 - ![](/images/Overlap-Fixed1.png) 
 
-### Regarding "Not Connected" Top Infill (SuperSlicer)
+## Regarding "Not Connected" Top Infill (SuperSlicer)
 
 - Some use "not connected" for their top infill. This does resolve the pinholes, however I find this to cause the opposite problem. It *overshoots.* 
 

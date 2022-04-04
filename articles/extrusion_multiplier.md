@@ -1,6 +1,5 @@
 # Extrusion Multiplier
 
-
 **:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
 - Calibrating your extruder ensures that the extrusion multiplier will be the same across all printers. Extruder calibration simply ensures that 100mm requested = 100mm extruded. Extrusion *multiplier* is a per-filament setting, depending on the properties of each material.
@@ -30,7 +29,9 @@ Again, *this is a debated subject*. I don't mean to imply that my below method i
         - It has ironing turned on by default.
         - The objects are too small. It's normal for [:page_facing_up:smaller infill areas to look a bit more overextruded than larger infill areas.](/articles/troubleshooting/small_infill_areas_overextruded.md)
 
-### Get your prints as smooth as a baby's bottom, THEN account for dimensions if needed (in my opinion).
+### Get your prints as smooth as a baby's bottom, THEN account for dimensions if needed.
+
+(in my opinion)
 
 Follow my below method. It is an **aesthetics-first approach**. This method creates very smooth top surfaces, and additionally can help with layer consistency/stacking.
 

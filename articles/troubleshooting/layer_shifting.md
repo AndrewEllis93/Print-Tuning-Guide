@@ -3,7 +3,7 @@
 ![](/images/troubleshooting/LayerShifting/1.png)
 
 ![](/images/troubleshooting/LayerShifting/2.png)
-### Mechanical
+## Mechanical
 - Try using z lift (z hop), and [:page_facing_up:check your prints for signs of overheating](/articles/cooling_and_layer_times.md). Print curling can cause nozzle strikes and subsequent layer shifts.
     - Around 0.2-0.3mm of z lift is usually enough. Too much can cause stringing.
 - Ensure that you have good quality motors. 
@@ -34,7 +34,7 @@ The circles represent a printed object shifting in the direction of the arrows.
 - Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
 - Try rotating the motors by hand. Sometimes a bad motor will be the cause of the resistance.
 
-### Speeds and Accelerations
+## Speeds and Accelerations
 Sometimes layer shifting can occur because you are simply asking too much of your steppers. You may be running accelerations or speeds that are too much for your motors to handle. 
 
 - Try turning accelerations down, especially if you are not using input shaper.
@@ -47,16 +47,16 @@ Sometimes layer shifting can occur because you are simply asking too much of you
     - Ensure that you have proper stepper driver cooling before doing this.LayerShifting/1.png)
 
 ![](/images/troubleshooting/LayerShifting/2.png)
-### Electrical
-- #### Motor Currents
+## Electrical
+- ### Motor Currents
     - Check your motor currents. Ensure that the `run_current` configured for your A/B/X/Y motors are correct. See [:page_facing_up:this article.](/articles/determining_motor_currents.md)
-- #### Wiring
+- ### Wiring
     - [:page_facing_up:Check your crimps.](/articles/troubleshooting/crimps.md)
     - Ensure that you are using high strand count wire, of 24awg (0.25 mm²) or thicker.
         - Low strand count wires / solid core wire will break in the drag chains with repeated bending. These breaks usually will not be visible, as they occur inside of the insulation.
         - You should always run your own wire through the drag chains. Don't trust the wire that came with anything.
     - Ensure that your wiring is not damaged, shorted, or caught under any screw heads. Check continuity.
-- #### Thermal
+- ### Thermal
     - Ensure that your stepper drivers sticks are getting adequate cooling. 
         - Ensure that they have heatsinks installed on them.
         - Ensure that they have adequate airflow*. 

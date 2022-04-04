@@ -91,7 +91,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
     - ![](/images/FirstLayer-NotEnoughSquish1.png) ![](/images/FirstLayer-NotEnoughSquish2.png) ![](/images/FirstLayer-NotEnoughSquish3.png) 
 
-    ## Close, But Not Quite
+    ## Almost, But Not Quite
     - This cube needs just a tiny bit more squish.\
     You can see very slight gapping / shadows between the perimeters and some areas of the infill. The corners are also starting to pull away a bit.
     ![](/images/FirstLayer-NotEnoughSquish4.png)

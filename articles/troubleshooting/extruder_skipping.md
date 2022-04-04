@@ -70,10 +70,10 @@ If there is much resistance, *figure out where it is coming from:*
 - Try using a cooling mod, like the [:page_facing_up:AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN). It optimizes hotend cooling and can help with heat creep issues.
 - Try lowering your extruder motor's microstepping and disabling interpolation (and stealthchop if you have it on, which you shouldn't).
 - Take out the motor, and see how powerful it feels. See if you can stop it easily with your fingers. This may indicate a bad motor or bad wiring.
-- ### **BMG Clockwork**
-    - Try turning the plastic gear with your finger with the motor turned off and filament unloaded. It should be relatively easy. *If there is too much resistance:* 
-        - Ensure that you have a small amount of [:page_facing_up:backlash in the plastic gear.](/articles/troubleshooting/bmg_clockwork_backlash.md)
-            - If they are pushed together too hard, it will cause resistance.
-        - Ensure that your drive shaft is not rubbing against the motor:
-            - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
-            - ![](/images/troubleshooting/ExtruderSkips-Clearance.png)
+## **BMG Clockwork**
+- Try turning the plastic gear with your finger with the motor turned off and filament unloaded. It should be relatively easy. *If there is too much resistance:* 
+    - Ensure that you have a small amount of [:page_facing_up:backlash in the plastic gear.](/articles/troubleshooting/bmg_clockwork_backlash.md)
+        - If they are pushed together too hard, it will cause resistance.
+    - Ensure that your drive shaft is not rubbing against the motor:
+        - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
+        - ![](/images/troubleshooting/ExtruderSkips-Clearance.png)

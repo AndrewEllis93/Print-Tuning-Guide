@@ -23,11 +23,11 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
     - Setting Expectations
     
 - **Print Tuning** \
-**(Follow these in order shown)**
+(Read/follow these in order shown)
+    - [Build Surface Adhesion](/articles/build_surface_adhesion.md)
     - [First Layer Squish](/articles/first_layer_squish.md)
         - Method
         - Print Examples
-    - [Build Surface Adhesion](/articles/build_surface_adhesion.md)
     - [Pressure Advance](/articles/pressure_advance.md)
         - Lines Method
         - Tower Method

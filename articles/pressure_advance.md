@@ -18,15 +18,11 @@ Pressure advance changes the **distribution** of material, not the **amount** of
 
 - Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors if they are noticeably different.
 
-There are two approaches - the  [:pushpin:lines method](/articles/pressure_advance.md#lines-method) (recommended), and the [:pushpin:tower method](/articles/pressure_advance.md#tower-method) (easier for newbies, but less accurate).
-
-
+There are two approaches - the  [:pushpin:lines method](/articles/pressure_advance.md#lines-method) (recommended), and the [:pushpin:tower method](/articles/pressure_advance.md#tower-method) (easier for newbies, but a bit less accurate).
 
 ## Lines Method
 
 This method is quicker to run and more precise than the tower method, but requires some additional setup, including some start g-code.
-
-
 
 **:warning: If you are not willing to get familar with setting up start g-code, consider using the tower method instead.**
 - You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).
@@ -91,26 +87,18 @@ This method is quicker to run and more precise than the tower method, but requir
 
     ![](/images/KFactor-Print.jpg) 
 
-## Fine-Tuning and What to Look For
+**7)** In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.
+- Alternatively, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=<value>` in your slicer's custom filament g-code.*
+    - Replace `<value>` with your desired PA.
+    - \* *Unless you use Cura, which for some reason **still** doesn't support this basic functionality.*
 
-The above methods are usually good enough on their own. Choosing the right height/line, however, can take some experience. Here are some things to look out for.
-### Pressure Advance is Too High
-- Divots or underextrusion at corners and line ends.
-- Gaps between perimeters at corners.
-
-- ![](/images/PA-High-1.png) 
-
-### Pressure Advance is Too Low
-- Bulging at corners and line ends.
-- Gaps between straight line perimeters.
-
-- ![](/images/PA-Low-1.png) 
-
-You can manually tweak pressure advance based on actual prints. Usually increments of 0.005 (with direct drive) are a good starting point.
+**8)** Try printing something! 
+- See [:pushpin:Fine-Tuning and What to Look For](/articles/pressure_advance.md#fine-tuning-and-what-to-look-for) to get an idea of what too high/low look like with actual prints.
+- Tweaking in increments of 0.005 (with direct drive) is a good starting point.
 
 ## Tower Method
 
-**I would highly recommend using the [:pushpin:lines method](/articles/pressure_advance.md#lines-method) rather than this method, if you can take some time to wrap your head around a small amount of manual g-code editing.** It is quicker and more precise. This "tower method" is here for beginners, and works alright, but is not my preferred method as it's a bit less precise.
+**I would highly recommend using the [:pushpin:lines method](/articles/pressure_advance.md#lines-method) rather than this method, if you can take some time to wrap your head around a small amount of manual g-code editing.** It is quicker and more precise. This "tower method" is here for beginners, and works, but is not my preferred method as it's a bit less precise.
 
 This is based off of the [:page_facing_up:Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 
@@ -118,7 +106,7 @@ The Klipper guide recommends limiting acceleration to 500 and square corner velo
 
 In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
 
-**1)** Download and slice the [:page_facing_up:pressure advance tower](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
+**1)** Download and slice the [:page_facing_up:Klipper3d pressure advance tower STL](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
 The only modifications you should make are these:
 
 - **120mm/s** external perimeter speed
@@ -145,7 +133,7 @@ You should now see increasing pressure advance values reporting to the g-code te
 
 **4)** Allow the print to run until it starts showing obvious issues/gaps. Then you may cancel.
 
-**5)** Measure the height of the perfect PA with calipers **(see images below)**
+**5)** Measure the height of the perfect PA with calipers (see [:pushpin:images below](/articles/pressure_advance.md#example))
 - Ensure you are **not** measuring your Z seam corner.
 - There should be no signs of underextrusion before or after the corner. 
     - It can help to shine a bright flashlight between the walls.
@@ -156,9 +144,14 @@ You should now see increasing pressure advance values reporting to the g-code te
 - Multiply measured height by your `FACTOR`.
 - Add the `START` value (usually just 0).
 
-**8)** In the `[extruder]` section of your config, update `pressure_advance` to the new value.
+**8)** In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.
+- Alternatively, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=<value>` in your slicer's custom filament g-code.* 
+    - Replace `<value>` with your desired PA.
+    - \* *Unless you use Cura, which for some reason **still** doesn't support this basic functionality.*
 
-**9)** Issue `RESTART` command.
+**9)** Try printing something! 
+- See [:pushpin:Fine-Tuning and What to Look For](/articles/pressure_advance.md#fine-tuning-and-what-to-look-for) to get an idea of what too high/low look like with actual prints.
+- Tweaking in increments of 0.005 (with direct drive) is a good starting point.
 
 ### Example
 **You may need to zoom in here, the differences are subtle.** There is always some ambiguity.
@@ -167,3 +160,18 @@ Excuse the gigantic photos - high resolution is needed here.
 
 ![](/images/PA-Tower.png) 
 ![](/images/PA-Tower-Annotated.png) 
+
+## Fine-Tuning and What to Look For
+
+The above methods are usually good enough on their own. Choosing the right height/line, however, can take some experience. Here are some things to look out for.
+### Pressure Advance is Too High
+- Divots or underextrusion at corners and line ends.
+- Gaps between perimeters at corners.
+
+- ![](/images/PA-High-1.png) 
+
+### Pressure Advance is Too Low
+- Bulging at corners and line ends.
+- Gaps between straight line perimeters.
+
+- ![](/images/PA-Low-1.png) 

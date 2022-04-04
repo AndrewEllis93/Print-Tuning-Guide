@@ -49,6 +49,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - How Volumetric Flow Rate Relates to Print Speed
         - Method
     - [Determining Motor Currents](/articles/determining_motor_currents.md)
+        - Determining Initial run_current
+        - Determining Maximum run_current
+        - Determining hold_current
     - [Determining Maximum Speeds and Accelerations](/articles/determining_max_speeds_accels.md)
         - Method
         - Usage of the TEST_SPEED Macro

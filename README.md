@@ -8,7 +8,8 @@ This guide was originally written for the Voron community, however all of the tu
 
 - My SuperSlicer profiles are located [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
-- If you have issues, comments, or suggestions, please let me know on Discord: [:page_facing_up:Ellis#4980](https://discordapp.com/users/207622442842062849)
+- If you have issues, comments, or suggestions about the guide, please let me know on GitHub issues or via Discord: [:page_facing_up:Ellis#4980](https://discordapp.com/users/207622442842062849)
+    - For issues help not directly related to the guide contents, or for troubleshooting/print help, please seek the public help channels in the [:page_facing_up:Voron Discord](https://discord.gg/voron) (or the appropriate community for your printer).
 
 - You can find bed the models and textures I am using in [:page_facing_up:Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [:page_facing_up:VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
 
@@ -19,7 +20,7 @@ This guide was originally written for the Voron community, however all of the tu
 
 
 ## Icons
-- :warning: = **!! Please pay special attention to items marked with this. !!**
+- :warning: = **!! Please pay extra attention to items marked with this. !!**
 
 - :page_facing_up: = Link to another page.
 

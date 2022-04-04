@@ -4,7 +4,7 @@ Much of this guide is specific to printers running **Klipper**.
 
 This guide was originally written for the Voron community, however all of the tuning sections should work on **any Klipper printer**. Some of the bullet points and hardware troubleshooting tips are still Voron specific, however.
 
-**:warning: Please pay special attention to anything bolded and marked with ":warning:"**
+**:warning: Please pay extra attention to anything bolded and marked with ":warning:"**
 
 My SuperSlicer profiles are located [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
@@ -17,11 +17,11 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
 # Table of Contents
-- Before We Begin
-    - [Before We Begin](/articles/before_we_begin.md)
-        - **:warning: Important Checks**
-        - A Note About Line Width
-        - Setting Expectations
+- [Before We Begin](/articles/before_we_begin.md)
+    - **:warning: Important Checks**
+    - A Note About Line Width
+    - Setting Expectations
+    
 - **Print Tuning** \
 **(Follow these in order shown)**
     - [First Layer Squish](/articles/first_layer_squish.md)
@@ -70,9 +70,9 @@ Thank you to **bythorsthunder** for help with testing these methods and providin
         - First Layer Conistency
         - Squish Consistency (Between Prints)
     - [Layer Shifting](/articles/troubleshooting/layer_shifting.md)
-        - Electrical
         - Mechanical
         - Speeds and Accelerations
+        - Electrical
     - [PLA is Overheating](/articles/troubleshooting/pla_overheating.md)
     - [Pockmarks](/articles/troubleshooting/pockmarks.md)
     - [VFAs (Vertical Fine Artifacts)](/articles/troubleshooting/vfas.md)

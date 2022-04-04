@@ -14,7 +14,7 @@ This can potentially cause:
 "Bonus" steps 13-15 can also help with first layer *and* with gantry stability.
 ## Method
 
-**1)** Modify the `timeout` setting your `[idle_timeout]` config section. Set it to an arbitrarily high value (in seconds).
+**1)** Modify the `timeout` setting your `[idle_timeout]` config section. Set it to an arbitrarily high value (in seconds) and `reload`.
 - This just gives us time to work. We need the Z motors to be energized and holding for the whole process.
 
 **2)** `G28`, then `QUAD_GANTRY_LEVEL`. 
@@ -40,7 +40,7 @@ This can potentially cause:
 
 **7)** **PARTIALLY** loosen all connections to the extrusions.  
 - You need all of these bolts to be loose enough to freely adjust against the printed part on the extrusions. 
-- :warning::warning::warning: Where there are Z belt clamps, **ensure that you do not loosen the bolts so much that the Z belts release**. Only loosen enough to allow for adjustments.
+- :warning::warning: Where there are Z belt clamps, **ensure that you do not loosen the bolts so much that the Z belts release**. Only loosen enough to allow for adjustments. :warning::warning: 
 
 - X/Y joints (repeat for both sides). 
     - Top:
@@ -92,7 +92,7 @@ This can potentially cause:
 **11)** Follow [:page_facing_up:Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
 - Make sure to come back here afterwards! The following steps are still important.
 
-**12)** [:page_facing_up:Re-tension your A/B belts](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz over a 15cm span).
+**12)** [:page_facing_up:Re-tension your A/B belts](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz **over a 15cm span**).
 - Don't miss the video link in that post. It's easy to overlook.
 - I prefer the Gates Carbon Drive app. Select the "motorcycle" option.
 

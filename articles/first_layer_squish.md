@@ -73,6 +73,8 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
  If you see gaps between the lines, you need more squish.
 ### Good Squish
 - ![](/images/FirstLayer-PrintExample.jpg) 
+
+
 ### Too Much Squish
 
 - Can't see any lines, or the lines are starting to fade (smooth PEI):
@@ -88,3 +90,10 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 - There are gaps between the lines (you can see through to the next layer):
 
     - ![](/images/FirstLayer-NotEnoughSquish1.png) ![](/images/FirstLayer-NotEnoughSquish2.png) ![](/images/FirstLayer-NotEnoughSquish3.png) 
+
+    ## Close, But Not Quite
+    - This cube needs just a tiny bit more squish.\
+    You can see very slight gapping / shadows between the perimeters and some areas of the infill. The corners are also starting to pull away a bit.
+    ![](/images/FirstLayer-NotEnoughSquish4.png)
+    - Better!\
+        ![](/images/FirstLayer-NotEnoughSquish4-Better.png)

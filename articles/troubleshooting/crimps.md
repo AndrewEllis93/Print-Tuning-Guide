@@ -13,5 +13,5 @@
                 - ![](/images/troubleshooting/Microfit-Crimps.png)
                 - ![](/images/troubleshooting/Microfit-Crimps-Annotated.png)
 
-        - Do a "pull test". Ensure that the pins do not come out. 
-            - Microfits hold *very* strongly. The pins should be nearly impossible to pull out. The wire will usually tear before they ever come out.
+        - Do a "pull test". Ensure that the pins do not come out of the housings. 
+            - Microfits hold *very* strongly. The pins should be nearly impossible to pull out of the housings. The wire will usually tear before they ever come out.

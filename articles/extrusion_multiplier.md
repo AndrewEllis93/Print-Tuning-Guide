@@ -125,6 +125,14 @@ In this example, I chose the second cube, as this particular filament started to
 
 ![](/images/EMPrints-Fine.png) 
 
+#### Slightly Too Low
+
+These cubes need a little more EM - you can see slight gapping / valleys / shadows between the lines. 
+
+A bit too high is better than a bit too low.
+
+![](/images/EMPrints-SlightlyLow.png)
+
 ### The Relationship Between Pressure Advance & EM
 Remember: pressure advance changes the **distribution** of material, not the **amount** of material.
 

@@ -29,7 +29,7 @@ This guide was originally written for the Voron community, however all of the tu
     - **:warning: Important Checks**
     - A Note About Line Width
 
-- [Setting Expectations]()
+- [Setting Expectations](/articles/setting_expectations.md)
     
 - **Print Tuning** \
 (Read/follow these in order shown)

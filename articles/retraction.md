@@ -65,7 +65,7 @@ We will be printing these retraction towers at three different temperatures. If 
             - For bowden, this can vary. Try starting with a maximum of **3mm**. \
             *(height: 7 when using a step of 0.5mm)*
                 - You may need more, depending on a few factors like pressure advance, bowden tube length, bowden tube internal diameter, and how firmly attached the tube is in the couplings.
-                - Ensure that your bowden tubes are as firmly attached as possible, and do not [move too much in and out of their couplings during printing](https://youtu.be/lboDSH0945g?t=120). 
+                - Ensure that your bowden tubes are as firmly attached as possible, and do not [:page_facing_up:move too much in and out of their couplings during printing](https://youtu.be/lboDSH0945g?t=120). 
     - **Temp decrease (temp decr):**
         - **3x10°**.
             - This will print three retraction towers. One will be at your "start temp", the other two will be 10C increments below this.

@@ -1,5 +1,11 @@
 # Pressure Advance
 
+**:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
+
+**:warning: You may have to re-tune pressure advance if you enable or disable input shaper.**
+
+## Background
+
 Pressure advance changes the **distribution** of material, not the **amount** of material.
 - Lower values result in less material in the middle of lines, and more at the ends/corners. 
 - Higher values result in more material in the middle of lines, and less at the ends/corners.
@@ -14,11 +20,13 @@ Pressure advance changes the **distribution** of material, not the **amount** of
 
 There are two approaches - the  [:pushpin:lines method](/articles/pressure_advance.md#lines-method) (recommended), and the [:pushpin:tower method](/articles/pressure_advance.md#tower-method) (easier for newbies, but less accurate).
 
+
+
 ## Lines Method
-### Background
+
 This method is quicker to run and more precise than the tower method, but requires some additional setup, including some start g-code.
 
-**:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
+
 
 **:warning: If you are not willing to get familar with setting up start g-code, consider using the tower method instead.**
 - You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).
@@ -101,8 +109,6 @@ The above methods are usually good enough on their own. Choosing the right heigh
 You can manually tweak pressure advance based on actual prints. Usually increments of 0.005 (with direct drive) are a good starting point.
 
 ## Tower Method
-
-**:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 
 **I would highly recommend using the [:pushpin:lines method](/articles/pressure_advance.md#lines-method) rather than this method, if you can take some time to wrap your head around a small amount of manual g-code editing.** It is quicker and more precise. This "tower method" is here for beginners, and works alright, but is not my preferred method as it's a bit less precise.
 

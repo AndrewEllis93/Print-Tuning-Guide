@@ -26,7 +26,7 @@ You can make just about any print look like crap in harsh lighting, mine include
 
 These imperfections all combine with each other and create minor inconsistencies in your prints. 
 
-3D prints, (unfortunately) by nature, show off these imperfections in harsh lighting. Even a 0.005mm imperfection will be shown off in full force.*
+3D prints, by nature, show off these imperfections in harsh lighting. Even a 0.005mm imperfection will be shown off in full force.*
 
 <sup>\* (I'm making that number up, but you get the idea.).</sup> 
 

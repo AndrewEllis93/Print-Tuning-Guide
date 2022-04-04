@@ -4,6 +4,12 @@ Much of this guide is specific to printers running **Klipper**.
 
 This guide was originally written for the Voron community, however all of the tuning sections should work on **any Klipper printer**. Some notes and hardware troubleshooting tips are still Voron specific, however.
 
+## Icons
+- :warning: = **!! Please pay extra attention to items marked with this. !!**
+
+- :page_facing_up: = Link to another page.
+
+- :pushpin: = Jump to section (on same page).
 ## Notes
 
 - My SuperSlicer profiles are located [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
@@ -19,12 +25,7 @@ This guide was originally written for the Voron community, however all of the tu
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
 
-## Icons
-- :warning: = **!! Please pay extra attention to items marked with this. !!**
 
-- :page_facing_up: = Link to another page.
-
-- :pushpin: = Jump to section (on same page).
 
 # Table of Contents
 - [Before We Begin](/articles/before_we_begin.md)

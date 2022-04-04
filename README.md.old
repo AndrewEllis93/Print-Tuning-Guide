@@ -1,0 +1,81 @@
+# Introduction
+
+Much of this guide is specific to printers running **Klipper**. 
+
+This guide was originally written for the Voron community, however all of the tuning instructions should work on **any Klipper printer**. Some of the bullet points and hardware troubleshooting tips are still Voron specific, however.
+
+**:warning: Please pay special attention to anything bolded and marked with ":warning:"**
+
+My SuperSlicer profiles are located [here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
+
+If you have issues, comments, or suggestions, please let me know on Discord: [Ellis#4980](https://discordapp.com/users/207622442842062849)
+
+You can find bed the models and textures I am using in [Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
+
+Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
+
+# Table of Contents
+- Before We Begin
+    - [Before We Begin](/articles/before_we_begin.md)
+        - [**:warning: Important Checks**](/articles/before_we_begin.md#warning-important-checks)
+        - [A Note About Line Width](/articles/before_we_begin.md#a-note-about-line-width)
+        - [Setting Expectations](/articles/before_we_begin.md#setting-expectations)
+- **Print Tuning**
+    - [First Layer Squish](/articles/first_layer_squish.md)
+        - [Method](/articles/first_layer_squish.md#method)
+        - [Print Examples](/articles/first_layer_squish.md#print-examples)
+    - [Build Surface Adhesion](/articles/build_surface_adhesion.md)
+    - [Pressure Advance](/articles/pressure_advance.md)
+        - [Lines Method](/articles/pressure_advance.md#lines-method)
+        - [Tower Method](/articles/pressure_advance.md#tower-method)
+        - [Fine-Tuning and What to Look For](/articles/pressure_advance.md#fine-tuning-and-what-to-look-for)
+    - [Extrusion Multiplier](/articles/extrusion_multiplier.md)
+        - [Background](/articles/extrusion_multiplier.md#background)    
+        - [Methods I'm Not a Fan Of](/articles/extrusion_multiplier.md#methods-im-not-a-fan-of)
+        - [Method](/articles/extrusion_multiplier.md#method)
+        - [The Relationship Between Pressure Advance & EM](/articles/extrusion_multiplier.md#the-relationship-between-pressure-advance--em)
+    - [Cooling and Layer Times](/articles/cooling_and_layer_times.md)
+        - [Signs of Overheating](/articles/cooling_and_layer_times.md#signs-of-overheating)
+        - [How to Fix It](/articles/cooling_and_layer_times.md#how-to-fix-it)
+    - [Retraction](/articles/retraction.md)
+    - [Infill/Perimeter Overlap](/articles/infill_perimeter_overlap.md)
+- **Printer Tuning**
+    - [Determining Maximum Volumetric Flow Rate](/articles/determining_max_volumetric_flow_rate.md)
+        - [Why?](/articles/determining_max_volumetric_flow_rate.md#why)
+        - [Approximate Values](/articles/determining_max_volumetric_flow_rate.md#approximate-values)
+        - [How Volumetric Flow Rate Relates to Print Speed](/articles/determining_max_volumetric_flow_rate.md#how-volumetric-flow-rate-relates-to-print-speed)
+        - [Method](/articles/determining_max_volumetric_flow_rate.md#method)
+    - [Determining Motor Currents](/articles/determining_motor_currents.md)
+    - [Determining Maximum Speeds and Accelerations](/articles/determining_max_speeds_accels.md)
+        - [Method](/articles/determining_max_speeds_accels.md#method)
+        - [Usage of the TEST_SPEED Macro](/articles/determining_max_speeds_accels.md#usage-of-the-test_speed-macro)
+    - [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md)
+- **Miscellaneous**
+    - [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md)
+    - [Controlling Slicer G-code Order *Without* Passing Variables](/articles/controlling_slicer_g-code_order.md)
+- **Troubleshooting**
+    - [BMG Clockwork Backlash Issues (Repeating Patterns / "Wood Grain")](/articles/troubleshooting/bmg_clockwork_backlash.md)
+    - [Bulging](/articles/troubleshooting/bulging.md)
+        - [Bulging Layers](/articles/troubleshooting/bulging.md#bulging-layers)
+        - [Bulges at STL Vertices](/articles/troubleshooting/bulging.md#bulges-at-stl-vertices)
+        - [Bulging Patterns on Overhangs (SS)](/articles/troubleshooting/bulging.md#bulging-patterns-on-overhangs-ss)
+    - [Crimps](/articles/troubleshooting/crimps.md)
+    - [Error: "Command Format Mismatch"](/articles/troubleshooting/command_format_mismatch.md)
+    - [Extruder Skipping](/articles/troubleshooting/extruder_skipping.md)
+    - [First Layer / Squish Consistency Issues](/articles/troubleshooting/first_layer_squish_consistency.md)
+        - [Thermal Drift](/articles/troubleshooting/first_layer_squish_consistency.md#thermal-drift)
+        - [First Layer Conistency](/articles/troubleshooting/first_layer_squish_consistency.md#first-layer-consistency)
+        - [Squish Consistency (Between Prints)](/articles/troubleshooting/first_layer_squish_consistency.md#squish-consistency-between-prints)
+    - [Layer Shifting](/articles/troubleshooting/layer_shifting.md)
+        - [Electrical](/articles/troubleshooting/layer_shifting.md#electrical)
+        - [Mechanical](/articles/troubleshooting/layer_shifting.md#mechanical)
+        - [Speeds and Accelerations](/articles/troubleshooting/layer_shifting.md#speeds-and-accelerations)
+    - [PLA is Overheating](/articles/troubleshooting/pla_overheating.md)
+    - [Pockmarks](/articles/troubleshooting/pockmarks.md)
+    - [VFAs (Vertical Fine Artifacts)](/articles/troubleshooting/vfas.md)
+        - [Repeating VFAs With ~2mm Spacing](/articles/troubleshooting/vfas#repeating-vfas-with-2mm-spacing)
+        - [Repeating VFAs With Non-2mm Spacing](/articles/troubleshooting/vfas#repeating-vfas-with-non-2mm-spacing)
+    - [Slicer is Putting Heating G-codes in the Wrong Place/Order](/articles/troubleshooting/slicer_putting_heating_g-codes_wrong_order.md)
+    - [Small Infill Areas Look Overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md)

@@ -28,7 +28,8 @@ This guide was originally written for the Voron community, however all of the tu
 - [Before We Begin](/articles/before_we_begin.md)
     - **:warning: Important Checks**
     - A Note About Line Width
-    - Setting Expectations
+
+- [Setting Expectations]()
     
 - **Print Tuning** \
 (Read/follow these in order shown)

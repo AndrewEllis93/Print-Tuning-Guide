@@ -52,7 +52,7 @@
 
 - Textured PEI often needs a little more squish than smooth PEI. This pushes the filament into the voids.
 
-## P.S.
+## Last Resort
 As a **very last resort**, you can try refreshing the surface with acetone. 
 
 Keep in mind, however that 

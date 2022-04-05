@@ -18,19 +18,20 @@
         - *:warning: Voron V2 and Trident have a ~10-15C temperature drop due to the thickness of the bed. Most people run ~110C for ABS because of this.
     - Some filament brands recommend inaccurate/conservative temperatures. Try standard temps instead if you are having issues.
 
-- Use adequately thick layer line widths. 
+- Use adequately wide line widths (in your slicer) for your first layer.
     - I use [:page_facing_up:**120%**](/articles/before_we_begin.md#a-note-about-line-width) normally, but higher line widths can further increase adhesion. 
         - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
     - Stick to well-known brands. 
     - This is common with unknown AliExpress and Amazon sellers.
-    - Ensure that the surface is actually meant for printing. Some plates *appear* to be two-sided (yellow/orange coloring for aesthetics) but are actually only one-sided.
+
+- Ensure that your build surface is actually meant for printing. Some plates *appear* to be two-sided (yellow/orange coloring for aesthetics) but are actually only one-sided.
 
 - Instead of PEI (or to supplement your PEI), you can use adhesives like [:page_facing_up:Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT).
     - (Not sponsored) This stuff is excellent.
         - It grips like crazy. 
-            - Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used.
+            - (Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used.)
         - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be cleaned)
         - It's very thin and easy to spread with a brush.
         - It lasts a long time between applications.

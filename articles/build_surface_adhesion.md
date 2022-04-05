@@ -18,7 +18,7 @@
         - *:warning: Voron V2 and Trident have a ~10-15C temperature drop due to the thickness of the bed. Most people run ~110C for ABS because of this.
     - Some filament brands recommend inaccurate/conservative temperatures. Try standard temps instead if you are having issues.
 
-- Use adequately wide line widths (in your slicer) for your first layer.
+- Use adequately thick line widths (in your slicer) for your first layer.
     - I use [:page_facing_up:**120%**](/articles/before_we_begin.md#a-note-about-line-width) normally, but higher line widths can further increase adhesion. 
         - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
@@ -55,8 +55,8 @@
 ## Last Resort
 As a **very last resort**, you can try refreshing the surface with acetone. 
 
-Keep in mind, however that 
- - :warning:This weakens PEI over time
+Keep in mind, however, that:
+ - :warning:This weakens PEI over time.
  - :warning:It can **destroy** certain surfaces (mainly certain brands of textured sheets). 
  
  **Only try this if it's going in the trash otherwise.**

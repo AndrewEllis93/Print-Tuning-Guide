@@ -63,7 +63,7 @@ We will print some 30x30x3mm cubes. *(see the test_prints folder)*
 - **40+% Infill**\
     We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. \
     We still need enough to adequately support the top layers.
-- **100% Top Layer [:page_facing_up:Line Width](/articles/before_we_begin.md#a-note-about-line-width)**\
+- **100% Top Layer [:page_facing_up:Line Width](/articles/a_note_about_line_width.md)**\
     In SS: Print settings > width and flow > extrusion width > top infill\
     This is more subject to interpretation, but I find 100% to have good results. It has a nice finish and tends to show off EM differences the best.
 - **5 Top Layers**\

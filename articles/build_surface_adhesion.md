@@ -19,7 +19,7 @@
     - Some filament brands recommend inaccurate/conservative temperatures. Try standard temps instead if you are having issues.
 
 - Use adequately thick line widths (in your slicer) for your first layer.
-    - I use [:page_facing_up:**120%**](/articles/before_we_begin.md#a-note-about-line-width) normally, but higher line widths can further increase adhesion. 
+    - I use [:page_facing_up:**120%**](/articles/a_note_about_line_width.md) normally, but higher line widths can further increase adhesion. 
         - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.

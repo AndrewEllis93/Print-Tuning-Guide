@@ -27,10 +27,9 @@ This guide was originally written for the Voron community, however all of the tu
 # Table of Contents
 - [Before We Begin](/articles/before_we_begin.md)
     - **:warning: Important Checks**
-    - A Note About Line Width
-
+- [A Note About Line Width](/articles/a_note_about_line_width.md)
 - [Setting Expectations](/articles/setting_expectations.md)
-    
+
 - **Print Tuning** \
 (Read/follow these in order shown)
     - [Build Surface Adhesion](/articles/build_surface_adhesion.md)

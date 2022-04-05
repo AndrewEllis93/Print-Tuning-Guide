@@ -15,7 +15,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 
 - Thinner first layer heights are considerably more sensitive and more difficult to maintain.
 
-**3)** Set your first layer [:page_facing_up:line width](/articles/before_we_begin.md#a-note-about-line-width) to **120%** or greater.
+**3)** Set your first layer [:page_facing_up:line width](/articles/a_note_about_line_width.md) to **120%** or greater.
 
 **4)** Start the print. While it is printing, [:page_facing_up:live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height).
 

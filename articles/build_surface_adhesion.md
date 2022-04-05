@@ -1,5 +1,5 @@
 # Build Surface Adhesion
-
+## All Surfaces
 - **:warning:** Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a clean rag or cloth.
 
 - **:warning:** Ensure that your [:page_facing_up:first layer squish](/articles/first_layer_squish.md) is correct. 
@@ -10,7 +10,7 @@
     - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
     - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
-## All Surfaces
+
 - User a proper first layer temperature.
     - PLA: ~60C
     - PETG: ~80C

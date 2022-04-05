@@ -22,9 +22,9 @@ There are two approaches - the  [:pushpin:lines method](/articles/pressure_advan
 
 ## Lines Method
 
-This method is quicker to run and more precise than the tower method, but requires some additional setup, including some start g-code.
+This method is quicker to run and more precise than the [:pushpin:tower method](/articles/pressure_advance.md#tower-method), but requires some additional setup, including some start g-code.
 
-**:warning: If you are not willing to get familar with setting up start g-code, consider using the tower method instead.**
+**:warning: If you are not willing to get familar with setting up start g-code, consider using the [:pushpin:tower method](/articles/pressure_advance.md#tower-method) instead.** 
 - You can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).
 ### Method
 

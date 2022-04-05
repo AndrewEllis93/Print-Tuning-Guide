@@ -10,25 +10,25 @@
     - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
     - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
-- **Smooth PEI:**
-    - **Scuff it up** with a [:page_facing_up:Scotch-Brite scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
-        - The rough side of a fresh sponge, ~800-1000 grit sandpaper, or other brands of scouring pads could also work.
-        - This helps immensely, much like how you would scuff/sand a surface before painting or gluing something to it.
-        - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
-    - Ensure that you actually *have* smooth PEI. Some spring steels, particularly the reverse side of some textured steels, are yellow/orange in appearance but do not actually have PEI applied. Inspect the edges of the plate to verify.
+## All Surfaces
+- User a proper first layer temperature.
+    - PLA: ~60C
+    - PETG: ~80C
+    - ABS: ~90-100C*
+        - *:warning: Voron V2 and Trident have a ~10-15C temperature drop due to the thickness of the bed. Most people run ~110C for ABS because of this.
+    - Some filament brands recommend inaccurate/conservative temperatures. Try standard temps instead if you are having issues.
 
-- **Textured PEI:**
-    - Needs more squish than smooth PEI, to push the filament into the cracks/dimples.
-
-- Use thicker first layer line widths. 
-    - I use 120% normally, but higher line widths can further increase adhesion. They push the plastic into the bed with more force, resulting in a better bond.
+- Use adequately thick layer line widths. 
+    - I use [:page_facing_up:**120%**](/articles/before_we_begin.md#a-note-about-line-width) normally, but higher line widths can further increase adhesion. 
+        - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
     - Stick to well-known brands. 
-    - This is prevalent with unknown AliExpress and Amazon sellers.
+    - This is common with unknown AliExpress and Amazon sellers.
+    - Ensure that the surface is actually meant for printing. Some plates *appear* to be two-sided (yellow/orange coloring for aesthetics) but are actually only one-sided.
 
 - Instead of PEI (or to supplement your PEI), you can use adhesives like [:page_facing_up:Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT).
-    - Not sponsored: I will praise this stuff until I am blue in the face. It's *excellent*.
+    - (Not sponsored) This stuff is excellent.
         - It grips like crazy. 
             - Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used.
         - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be cleaned)
@@ -36,4 +36,26 @@
         - It lasts a long time between applications.
         - It releases when cooled.
 
-- As a **very last resort**, you can try refreshing the surface with acetone. Keep in mind, however that this weakens PEI over time, and I heave heard cases of it **destroying** certain surfaces (mainly certain brands of textured sheets). **Only try this if it's going in the trash otherwise.**
+
+
+## Smooth PEI
+
+- **Scuff it up** with a [:page_facing_up:kitchen scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
+
+    - ~800-1000 grit sandpaper, or even the scrubby side of a fresh sponge may also work.
+    - **This helps immensely**, much like how you would scuff/sand a surface before painting or gluing something to it.
+    - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
+
+
+## Textured PEI
+
+- Textured PEI often needs a little more squish than smooth PEI. This pushes the filament into the voids.
+
+## P.S.
+As a **very last resort**, you can try refreshing the surface with acetone. 
+
+Keep in mind, however that 
+ - :warning:This weakens PEI over time
+ - :warning:It can **destroy** certain surfaces (mainly certain brands of textured sheets). 
+ 
+ **Only try this if it's going in the trash otherwise.**

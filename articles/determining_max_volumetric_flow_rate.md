@@ -34,7 +34,7 @@ Nozzle properties may affect these numbers. For example:
 - Plated copper and tungsten carbide have higher thermal conductivity and might allow a bit higher flow rate. 
 - Bondtech CHT nozzles use a different internal geometry that allows higher flow rates.
 
-*If you want to get more scientific, test with a specific nozzle or setup, or your hotend just isn't listed, see [here](/articles/determining_max_volumetric_flow_rate.md#method for a testing method.*
+*If you want to get more scientific, test with a specific nozzle or setup, or your hotend just isn't listed, see [here](/articles/determining_max_volumetric_flow_rate.md#method) for a testing method.*
 
 ## How Volumetric Flow Rate Relates to Print Speed
 

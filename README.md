@@ -31,7 +31,7 @@ This guide was originally written for the Voron community, however all of the tu
 - [Setting Expectations](/articles/setting_expectations.md)
 
 - **Print Tuning** \
-(Read/follow these in order shown)
+*Essentials. Read/follow these in order shown.*
     - [Build Surface Adhesion](/articles/build_surface_adhesion.md)
     - [First Layer Squish](/articles/first_layer_squish.md)
     - [Pressure Advance](/articles/pressure_advance.md)
@@ -48,16 +48,18 @@ This guide was originally written for the Voron community, however all of the tu
         - How to Fix It
     - [Retraction](/articles/retraction.md)
     - [Infill/Perimeter Overlap](/articles/infill_perimeter_overlap.md)
-- **Printer Tuning**
+- **Printer Tuning**\
+*Mostly optional. For pushing limits, or for troubleshooting.\
+"Voron V2 Gantry Squaring" is the only essential.*
     - [Determining Maximum Volumetric Flow Rate](/articles/determining_max_volumetric_flow_rate.md)
         - Why?
         - Approximate Values
         - How Volumetric Flow Rate Relates to Print Speed
         - Method
     - [Determining Motor Currents](/articles/determining_motor_currents.md)
-        - Determining Initial run_current
-        - Determining Maximum run_current
-        - Determining hold_current
+        - Determining Initial `run_current`
+        - Determining Maximum `run_current`
+        - Determining `hold_current`
     - [Determining Maximum Speeds and Accelerations](/articles/determining_max_speeds_accels.md)
         - Method
         - Usage of the TEST_SPEED Macro

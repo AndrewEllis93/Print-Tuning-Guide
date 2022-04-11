@@ -57,7 +57,7 @@ This also results in prints that are of perfectly acceptable tolerances for Voro
 ## Method
 The best method I have found is purely visual/tactile.
 
-We will print some 30x30x3mm cubes. *(see the test_prints folder)*
+We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folder](/test_prints))*
 
 **Print Settings:**
 - **40+% Infill**\

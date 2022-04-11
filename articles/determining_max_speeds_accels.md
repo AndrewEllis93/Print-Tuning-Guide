@@ -55,7 +55,7 @@ Tune maximum speeds first, THEN tune accelerations separately.
 
 ## Usage of the TEST_SPEED Macro
 
-The macro is available [:page_facing_up:here.](Macros/TEST_SPEED.cfg)
+The macro is available [:page_facing_up:here.](/macros/TEST_SPEED.cfg)
 
 This macro will home, QGL *(if your printer uses QGL / has not yet done a QGL)*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
 

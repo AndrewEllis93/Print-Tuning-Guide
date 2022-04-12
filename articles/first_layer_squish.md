@@ -7,13 +7,15 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - **:warning:** This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
     - **:warning:** See the [:page_facing_up:First Layer / Squish Consistency Issues](/articles/troubleshooting/first_layer_squish_consistency.md) article, **even if you are not having any issues.** There is some important information in there that everyone should know, particularly about **thermal drift**.
 ## Method
-**1)** Scatter square patches around your bed in your slicer. 
-- See the *test_prints* folder. Choose a patch that matches your first layer height.
+**1)** Set your first layer height to **0.25** or greater (in my opinion).
+
+- Thicker first layer heights are less sensitive and easier to maintain, especially on larger printers where first layer consistency can be a challenge.
+
+**2)** Scatter square patches around your bed in your slicer. 
+- See the [:page_facing_up:test_prints folder](/test_prints). 
+    - Choose a patch that matches your first layer height (0.25mm if you chose to follow step 1, 0.2mm if you have first layer height set to 0.2mm, etc.)
+
 - ![](/images/FirstLayer-Plate.png)    
-
-**2)** Set your first layer height to **0.25** or greater.
-
-- Thinner first layer heights are considerably more sensitive and more difficult to maintain.
 
 **3)** Set your first layer [:page_facing_up:line width](/articles/a_note_about_line_width.md) to **120%** or greater.
 

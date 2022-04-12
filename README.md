@@ -68,7 +68,7 @@ This guide was originally written for the Voron community, however all of the tu
     - [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md)
     - [Controlling Slicer G-code Order *Without* Passing Variables](/articles/controlling_slicer_g-code_order.md)
 - **Troubleshooting**\
-*Even without issues, it's worth looking through these to familiarize yourself with things to look out for.*
+*Even without issues, it's worth looking through some of these to familiarize yourself with things to look out for.*
     - [BMG Clockwork Backlash Issues (Repeating Patterns / "Wood Grain")](/articles/troubleshooting/bmg_clockwork_backlash.md)
     - [Bulging](/articles/troubleshooting/bulging.md)
         - Bulging Layers

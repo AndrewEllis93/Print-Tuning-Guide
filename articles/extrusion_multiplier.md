@@ -11,22 +11,29 @@
 This must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 
 ## Background
-This is a bit of a debated subject. Ask ten people, get ten different opinions. I will try to explain my rationale.
 
 Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
 
+**If you want to skip past my rambling, click [:pushpin:here](/articles/extrusion_multiplier.md#method) to go straight to the instructions.**
+
+This is a debated subject, but I will try to explain my rationale.
 ### Methods I'm Not a Fan Of
-Again, *this is a debated subject*. I don't mean to imply that my below method is the "one true way" of calibrating your EM. I am still discovering things myself, and EM can even have different characteristics at different speeds. 
 - #### Measuring Wall Thickness With Calipers
     - Some guides you will find online mention printing a single or two-walled object and measuring the thickness with calipers.
-        - While this *can* result in better dimensional accuracy, I find it to result in less attractive parts. This method has always resulted in more layer inconsistencies and rougher top surfaces for me. My personal approach is to tune until everything looks perfect, *then* to account for dimensions. All of my tuning methods are purely visual / based on intuition where possible.
-        - This method assumes that you have good calipers, which many people don't. This can simply limit the accessibility and reliability. The measured widths can also vary depending where you measure it and how much pressure you use, so different people may have different experiences.
-        - If this method works better for you, by all means continue using it.
+        - I simply never have good results with this approach, and different people seem to get (sometimes wildly) different results.
+
+        - The measured widths can vary depending where you measure it and how much pressure you use.
+
+        - Any layer wobble whatsoever (which all printers have, in varying degrees) causes these walls to measure thicker, which can throw things off.
+
+        - This method assumes that you have good calipers, which many people don't. This can simply limit the accessibility.
 - #### SuperSlicer Calibration
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
-        - It is very reliant on first layer squish.
-        - Because it uses 100% infill, the first layer squish carries through all the way to the top. 
-        - It has ironing turned on by default.
+
+        - Because it uses 100% infill, the first layer squish carries through all the way to the top. This causes your first layer squish to impact your results.
+
+        - It has ironing turned on by default, which is an odd choice.
+
         - The objects are too small. It's normal for [:page_facing_up:smaller infill areas to look a bit more overextruded than larger infill areas.](/articles/troubleshooting/small_infill_areas_overextruded.md)
 
 ### Get your prints as smooth as a baby's bottom, THEN account for dimensions if needed.
@@ -40,13 +47,19 @@ This also results in prints that are of perfectly acceptable tolerances for Voro
 **:warning: Voron parts are designed with shrinkage in mind, so it's fine if the dimensions don't perfectly match CAD.** Please don't drive yourself crazy with calipers for Voron parts, they are not always intended to match.
 
 - With the Voron test prints, you are good to go as long as:
+
     - The thread tests screw together nicely, and
+
     - Bearings fit nicely without too much force into the Voron cube (F695 on bottom, 625 on top).
 ### If you need true-to-CAD dimensional accuracy for other projects
 - Firstly, *adjust your expectations*. 
+
     - Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
+
 - AFTER tuning extrusion multiplier using my below method:
+
     - Try your slicer's **shrinkage compensation** settings.
+
         - In some slicers, this is just re-named/glorified X/Y part scaling*. 
             - \*Shrinkage occurs much less in the Z axis.
             - 100.5%-101% X/Y scaling is about the range you would expect with ABS.

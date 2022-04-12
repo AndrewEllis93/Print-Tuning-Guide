@@ -36,7 +36,7 @@
             - (Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used. Less is more!)
         - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be easily cleaned with IPA)
         - It lasts a long time between applications.
-        - It releases when cooled.
+        - It (usually) releases when cooled, assuming you didn't use too much.
 
 ## Smooth PEI
 

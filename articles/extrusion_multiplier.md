@@ -125,13 +125,14 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
         
     - **Cura:**
 
-        1) Import the STL and set per-object "flow" for it.\
+        1) Import the STL. Select it, and then and enable the per-object "flow" setting for it.\
         ![](/images/EM-PerObject-Cura.png)
 
         2) Right-click the cube and select "multiply selected". Enter your desired number of test cubes in the prompt.\
         ![](/images/EM-Instances-Cura.png)
 
-        3) Go through each cube and set the EM on each. The setting should already be exposed on each object since we multiplied it.
+        3) Click on each cube and set the EM on each. The setting should already be exposed on each object since we multiplied it.\
+        ![](/images/EM-SetFlow-Cura.png)
 
 **2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
 

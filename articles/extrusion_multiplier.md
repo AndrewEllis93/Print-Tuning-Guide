@@ -104,20 +104,34 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
         - There is no way to set the EM per object. You will have to print the test objects one at a time. 
 
     - **SuperSlicer:**
-        - **:warning: Make sure to set your EM to 1 in the filament settings.** \
-        The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.
+        1) **:warning: Make sure to set your EM to 1 in the filament settings.** \
+        The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.\
+        ![](/images/EM-1.png)
 
-        1) ![](/images/EM-1.png)
+        2) Right-click the cube and select add settings > filament.\
+        ![](/images/EM-PerObject.png)
 
-        2) ![](/images/EM-PerObject.png)
-
-        3) ![](/images/EM-PerObject-2.png)
+        3) Check "extrusion multiplier" and click "okay".\
+        ![](/images/EM-PerObject-2.png)
         
-        4) ![](/images/EM-PerObject-3.png)
+        4) Right-click the cube in the pane on the right, and select "set number of instances". In the prompt, enter your desired number of cubes.\
+        ![](/images/EM-Instances.png)
+
+        5) Select the first instance, hold shift, and then click the last instance (to select all of them). Right click and select "set as separated objects".\
+        ![](/images/EM-SeparateObjects.png)
+
+        6) This will automatically add the custom setting to all of your test cubes! Now go through each object and set an extrusion multiplier for each.\
+        ![](/images/EM-PerObject-3.png)
         
     - **Cura:**
 
-        1) ![](/images/EM-PerObject-Cura.png)
+        1) Import the STL and set per-object "flow" for it.\
+        ![](/images/EM-PerObject-Cura.png)
+
+        2) Right-click the cube and select "multiply selected". Enter your desired number of test cubes in the prompt.\
+        ![](/images/EM-Instances-Cura.png)
+
+        3) Go through each cube and set the EM on each. The setting should already be exposed on each object since we multiplied it.
 
 **2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
 

@@ -15,7 +15,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 **2)** Scatter square patches around your bed in your slicer. 
 - See the [:page_facing_up:test_prints folder](/test_prints). 
     - Choose a patch that matches your first layer height.\
-    *(0.25mm if you chose to follow step 1; 0.2mm if you have first layer height set to 0.2mm, etc.)*
+    *(Patch-25x25x0.25mm.stl if you chose to follow step 1)*
 
 - ![](/images/FirstLayer-Plate.png)    
 
@@ -26,20 +26,23 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - This can be done via g-codes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
 ### Examples
 In these examples, the third square is closest.\
-There are print examples in the next section.
+There are real-life print examples in the next section.
 
-Note: When I refer to "gaps", I mean where you can see BETWEEN/THROUGH the extrusion lines. If you can see any light (excluding pinholes at the perimeter), or the next layer, then you need more squish.
+Note: When I refer to "gaps", I mean where you can see between/through the extrusion lines.
+
+If you can see any light (excluding pinholes at the perimeter), or the next layer on real prints, then you need more squish.
 - #### Smooth Build Surface
     - **Top Surface**
         - You don't want too many ridges/hairs on top. 
-            - It's normal to have a *little* bit of this near the corners, or in small  footprint areas.
+            - It's normal to have a *little* bit of this near the corners, or in small print areas.
         - You shouldn't see any gaps* between the lines.
             - It's fine to have some very small pinholes where the infill meets the     perimeters.
         - ![](/images/FirstLayer-Squares-2.png)
         - ![](/images/FirstLayer-Squares-2-Annotated.png)
     - **Bottom Surface**
         - You should not have any gaps between the lines.
-        - You should still be able to clearly see the lines. They should not be fading or   invisible.
+        - You should still be able to clearly see the lines at the center. They should not be fading or invisible.
+            - It's normal for the lines to fade a bit near the edges/corners.
         - ![](/images/FirstLayer-Squares-1-Annotated.png)
 - #### Textured Build Surface
     - **Top Surface**

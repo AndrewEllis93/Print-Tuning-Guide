@@ -4,10 +4,10 @@
 
 - **:warning:** Ensure that your [:page_facing_up:first layer squish](/articles/first_layer_squish.md) is correct. 
 
-- **:warning: Thoroughly wash all build plates with dish soap and water, followed by 70+% isopropyl alcohol.**
+- **:warning: Thoroughly wash all build plates with dish soap and water** (and make sure to rinse thoroughly too).
     - You should do this even for brand new surfaces.
     - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
-    - I keep a spray bottle of soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA).
+    - I keep a spray bottle of (SLIGHTLY) soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA) to remove the remaining soap residue.
     - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
 
@@ -30,14 +30,13 @@
 
 - Instead of PEI (or to supplement your PEI), you can use adhesives like [:page_facing_up:Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT).
     - (Not sponsored) This stuff is excellent.
+        - Dilute it 1:1 to 3:1 isopropyl alcohol to adhesive - it will last longer and is much easier to spread.
+        - There is a $19 50ml bottle on Amazon but it's not always in stock. 50ml goes a long way, especially if you dilute it.
         - It grips like crazy. 
-            - (Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used.)
-        - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be cleaned)
-        - It's very thin and easy to spread with a brush.
+            - (Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used. Less is more!)
+        - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be easily cleaned with IPA)
         - It lasts a long time between applications.
         - It releases when cooled.
-
-
 
 ## Smooth PEI
 

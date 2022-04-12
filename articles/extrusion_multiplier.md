@@ -108,7 +108,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
         The per-object EM settings are a percentage that is **multiplied by** the EM in your filament settings.\
         ![](/images/EM-1.png)
 
-        2) Right-click the cube and select add settings > filament.\
+        2) Import the cube STL. Right-click it and select add settings > filament.\
         ![](/images/EM-PerObject.png)
 
         3) Check "extrusion multiplier" and click "okay".\

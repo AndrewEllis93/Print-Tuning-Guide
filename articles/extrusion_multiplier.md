@@ -98,7 +98,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
 **Steps:**
 
-**1)** Print multiple test cubes with variations of 2% EM. 
+**1)** Set up your slicer with test cubes with variations of **1-2% EM.** 
 - You can do this all in once plate by adjusting settings for each object. Save it as a .3mf file for reuse later.
     - **Prusa Slicer:**
         - There is no way to set the EM per object. You will have to print the test objects one at a time. 
@@ -111,7 +111,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
         2) Import the cube STL. Right-click it and select add settings > filament.\
         ![](/images/EM-PerObject.png)
 
-        3) Check "extrusion multiplier" and click "okay".\
+        3) Check "extrusion multiplier".\
         ![](/images/EM-PerObject-2.png)
         
         4) Right-click the cube in the pane on the right, and select "set number of instances". In the prompt, enter your desired number of cubes.\
@@ -122,6 +122,9 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
         6) This will automatically add the custom setting to all of your test cubes! Now go through each object and set an extrusion multiplier for each.\
         ![](/images/EM-PerObject-3.png)
+
+        7) Save the project for reuse later.\
+        ![](/images/EM-Save.png)
         
     - **Cura:**
 
@@ -134,9 +137,14 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
         3) Click on each cube and set the EM on each. The setting should already be exposed on each object since we multiplied it.\
         ![](/images/EM-SetFlow-Cura.png)
 
-**2)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
+        4) Save the project for reuse later.\
+        ![](/images/EM-Save-Cura.png)
 
-**3)** If desired, run the process again but with 0.5% intervals. Most PIF providers tune down to the 0.5% range, some even less. 
+**2)** Print it!
+
+**3)** Inspect each cube. Once you are nearing the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps between the lines.
+
+**4)** If desired, run the process again but with 0.5% intervals. Most PIF providers tune down to the 0.5% range, some even less. 
 
 I have found that most ABS falls within the 91-94% range.
 

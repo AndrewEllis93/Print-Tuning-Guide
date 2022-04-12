@@ -10,10 +10,12 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 **1)** Set your first layer height to **0.25** or greater (in my opinion).
 
 - Thicker first layer heights are less sensitive and easier to maintain, especially on larger printers where first layer consistency can be a challenge.
+- Aside from that, this is personal preference.
 
 **2)** Scatter square patches around your bed in your slicer. 
 - See the [:page_facing_up:test_prints folder](/test_prints). 
-    - Choose a patch that matches your first layer height (0.25mm if you chose to follow step 1, 0.2mm if you have first layer height set to 0.2mm, etc.)
+    - Choose a patch that matches your first layer height.\
+    *(0.25mm if you chose to follow step 1; 0.2mm if you have first layer height set to 0.2mm, etc.)*
 
 - ![](/images/FirstLayer-Plate.png)    
 

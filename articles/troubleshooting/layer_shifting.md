@@ -44,9 +44,7 @@ Sometimes layer shifting can occur because you are simply asking too much of you
 - Check [:page_facing_up:this article](/articles/determining_max_speeds_accels.md) to test.
     - Try running the `TEST_SPEED` macro without any arguments to test your current maximums.
 - You can try increasing motor currents. Don't exceed the maximums described in [:page_facing_up:this article](/articles/determining_motor_currents.md). 
-    - Ensure that you have proper stepper driver cooling before doing this.LayerShifting/1.png)
-
-![](/images/troubleshooting/LayerShifting/2.png)
+    - Ensure that you have proper stepper driver cooling before doing this.
 ## Electrical
 - ### Motor Currents
     - Check your motor currents. Ensure that the `run_current` configured for your A/B/X/Y motors are correct. See [:page_facing_up:this article.](/articles/determining_motor_currents.md)

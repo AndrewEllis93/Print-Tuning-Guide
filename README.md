@@ -44,6 +44,9 @@ This guide was originally written for the Voron community, however all of the tu
         - Methods I'm Not a Fan Of
         - Method
         - The Relationship Between Pressure Advance & EM
+    - [PA / EM Oddities](/articles/pa_em_oddities.md)
+        - Slight Perimeter Gapping
+        - Slight Corner Gapping
     - [Cooling and Layer Times](/articles/cooling_and_layer_times.md)
         - Signs of Overheating
         - How to Fix It
@@ -57,6 +60,8 @@ This guide was originally written for the Voron community, however all of the tu
         - Approximate Values
         - How Volumetric Flow Rate Relates to Print Speed
         - Method
+        - Theory vs Reality
+        - Formulas
     - [Determining Motor Currents](/articles/determining_motor_currents.md)
         - Determining Initial `run_current`
         - Determining Maximum `run_current`

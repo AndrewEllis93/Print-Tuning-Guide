@@ -25,6 +25,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 
 - This can be done via g-codes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
 ### Examples
+
 In these examples, the third square is closest.\
 There are real-life print examples in the next section.
 
@@ -37,12 +38,15 @@ If you can see any light (excluding pinholes at the perimeter), or the next laye
             - It's normal to have a *little* bit of this near the corners, or in small print areas.
         - You shouldn't see any gaps* between the lines.
             - It's fine to have some very small pinholes where the infill meets the     perimeters.
+        - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal. I will update these photos later. 
         - ![](/images/FirstLayer-Squares-2.png)
         - ![](/images/FirstLayer-Squares-2-Annotated.png)
+
     - **Bottom Surface**
         - You should not have any gaps between the lines.
         - You should still be able to clearly see the lines at the center. They should not be fading or invisible.
             - It's normal for the lines to fade a bit near the edges/corners.
+        - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal. I will update these photos later. 
         - ![](/images/FirstLayer-Squares-1-Annotated.png)
 - #### Textured Build Surface
     - **Top Surface**
@@ -98,7 +102,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
     - ![](/images/FirstLayer-NotEnoughSquish1.png) ![](/images/FirstLayer-NotEnoughSquish2.png) ![](/images/FirstLayer-NotEnoughSquish3.png) 
 
-    ## Almost, But Not Quite
+    ## Further Fine-Tuning
     - This cube needs just a tiny bit more squish.\
     You can see very slight gapping / shadows between the perimeters and some areas of the infill. The corners are also starting to pull away a bit.
     ![](/images/FirstLayer-NotEnoughSquish4.png)

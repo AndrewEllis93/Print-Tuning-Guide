@@ -148,51 +148,41 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
 I have found that most ABS falls within the 91-94% range.
 
-### Examples
+## Examples
 
 This can be difficult to convey in photos. **You may have to zoom in to see the differences.** It's easier to see in person - especially because you can manipulate the test prints and look at them in different lighting angles.
 
-Focus all of your attention **!!!!! at the center !!!!!** of the test prints. It's normal for it to look a bit more overextruded near the edges and corners.
+Also note that some filaments show EM differences more than others. 
+
+Focus all of your attention **:exclamation:at the center:exclamation:** of the test prints. It's normal for it to look a bit more overextruded near the edges and corners.
 
 You will get better at this through experience.
-#### 2% Intervals
+### 2% Intervals
 ![](/images/EMPrints-Coarse-Annotated.png) 
-#### 0.5% Intervals
+### 0.5% Intervals
 Now we run the print again at 0.5% intervals between the "too low" and "too high" examples from above.
 
 Pick the cube that looks best to *you*. Typically this will be *just above where gapping in the center starts to disappear*, but not so high that you start to see ridges. 
 
-**If you can't decide between two cubes, pick the higher one.**\
+**If you can't decide, pick the higher one.**\
 *Additionally, this is an aesthetics-first approach. If it looks good to you, it's good enough.* 
 
-In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this.
+In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this (most don't.)
 
 ![](/images/EMPrints-Fine.png) 
 
-#### Slightly Too Low
+### Too Low
+
+Holding it up with the infill lines pointing towards a light source can help. This cube's EM is too low - you can see between the lines.
+
+![](/images/em-light.png) 
+### Slightly Too Low
 
 These cubes need a little more EM - you can see slight gapping / valleys / shadows between the lines. 
 
 A bit too high is better than a bit too low.
 
 ![](/images/EMPrints-SlightlyLow.png)
-
-### The Relationship Between Pressure Advance & EM
-Remember: pressure advance changes the **distribution** of material, not the **amount** of material.
-
-Pressure advance and flow are interrelated, so tuning one can affect the other. The method above has you lowering your top layer speeds in order to reduce the impact of pressure advance as much as possible.
-
-The faster you print, the larger the area that pressure advance will impact. Lower speeds will relegate the effects of pressure advance to be closer to the edges, while higher speeds will cause it to affect a wider area.
-
-Imagine a single extrusion line. In this line, the toolhead accelerates to full speed, stays at top speed, and then decelerates again towards the end of the line. Pressure advance takes effect during these accelerations and decelerations. \
-In both of the below examples, assume the same acceleration settings.
-- When printing with a faster speed, the line is printed in less time, and the extruder spends a larger portion of the line accelerating and decelerating to reach the higher top speed. Therefore, a larger portion of the line is spent equalizing pressure.
-- When printing with a slower speed, the line is printed in more time, the extruder spends a smaller portion of the line accelerating and decelerating. Therefore, a smaller portion of the line is spent equalizing pressure, and more of the line is printed at steady speed with steady pressure.
-
-If your actual print results with faster top layers do not look as good as your test cubes, provided they have adequate infill, top layers, etc, **your [:page_facing_up:pressure advance](/articles/pressure_advance.md) value may need further tuning.** 
-
-You can run faster solid infill, but I would recommend using a moderate top layer speed still. I use 60mm/s.
-
-### Actual Print with Tuned EM:
+## Actual Print with Tuned EM:
 
 ![](/images/EMPrint-Example.jpg) 

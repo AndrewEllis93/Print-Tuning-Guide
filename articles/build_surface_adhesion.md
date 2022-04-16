@@ -6,9 +6,12 @@
 
 - **:warning: Thoroughly wash all build plates with dish soap and water** (and make sure to rinse thoroughly too).
     - You should do this even for brand new surfaces.
+
     - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
+
     - I keep a spray bottle of (SLIGHTLY) soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA) to remove the remaining soap residue.
-    - Soap is not needed for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
+
+    - Soap is not necessary for every print. You can use IPA most of the time, with occasional soap when it needs further refreshing.
 
 
 - User a proper first layer temperature.
@@ -30,8 +33,9 @@
 
 - Instead of PEI (or to supplement your PEI), you can use adhesives like [:page_facing_up:Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT).
     - (Not sponsored) This stuff is excellent.
-        - Dilute it 1:1 to 3:1 isopropyl alcohol to adhesive - it will last longer and is much easier to spread.
+    
         - There is a $19 50ml bottle on Amazon but it's not always in stock. 50ml goes a long way, especially if you dilute it.
+        - Dilute it 1:1 to 3:1 isopropyl alcohol to adhesive - it will last longer and is much easier to spread.
         - It grips like crazy. 
             - (Though sometimes it grips *too* much. It can pull chunks out of glass or pull texture off of beds if too much is used. Less is more!)
         - It doesn't leave sticky residue (it does leave some slight whitish coloring though, which can be easily cleaned with IPA)
@@ -42,10 +46,13 @@
 
 - **Scuff it up** with a [:page_facing_up:kitchen scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
 
-    - ~800-1000 grit sandpaper, or even the scrubby side of a fresh sponge may also work.
-    - **This helps immensely**, much like how you would scuff/sand a surface before painting or gluing something to it.
-    - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
+    - Some people choose not to do this, to keep the glass-like surface finish on their prints. However, you will be sacrificing adhesion and may need to use brims and/or adhesives on occasion.
 
+    - ~800-1000 grit sandpaper, or even the scrubby side of a fresh sponge may also work.
+
+    - **This helps immensely**, much like how you would scuff/sand a surface before painting or gluing something to it.
+
+    - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
 
 ## Textured PEI
 

@@ -6,7 +6,7 @@ This is *not necessarily* an indicator that your flow or pressure advance are wr
 
 *Some people have widely varying overlap settings. You will need to tune this for yourself. I am still figuring out why it varies between people. It may be impacted by line width, but I have not yet tested this theory.*
 
-**Simply increase "infill/perimeter overlap" (PS/SS) until satisfied.**
+Simply increase "infill/perimeter overlap" (PS) or "infill/perimeters encroachment" (SS) until satisfied.
 
 ## Examples
 - ![](/images/Overlap-1.png) 

@@ -1,5 +1,5 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # Bulging
-
 ## Bulging Layers
 
 This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 

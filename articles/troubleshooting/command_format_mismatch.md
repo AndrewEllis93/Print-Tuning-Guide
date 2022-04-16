@@ -1,3 +1,4 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # Error: "Command Format Mismatch"
 
 Klipper consists of two parts. The "master" host software, and the "slave" MCU firmware. 

@@ -1,3 +1,4 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # Extruder Skipping
 These skips will typically be wider than [:page_facing_up:pockmarks.](/articles/troubleshooting/pockmarks.md)
 

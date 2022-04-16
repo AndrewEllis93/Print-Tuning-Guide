@@ -1,3 +1,4 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # Crimps
 - Pull on each wire. Ensure that none of the pins are starting to back out of the housings.
     - If any pins are backing out, it's possible that you may have crimped incorrectly. 

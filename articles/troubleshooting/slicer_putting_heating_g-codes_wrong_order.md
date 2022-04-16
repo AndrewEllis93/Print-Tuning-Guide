@@ -1,3 +1,4 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # Slicer is Putting Heating G-codes in the Wrong Place/Order
 You have two options:
 - Pass variables to `PRINT_START` (allows the most control, but is more complex)

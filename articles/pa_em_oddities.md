@@ -1,5 +1,5 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # PA / EM Oddities
-
 ## Slight Perimeter Gapping
 Some find that after tuning PA and EM, minor perimeter gapping is still present:
 

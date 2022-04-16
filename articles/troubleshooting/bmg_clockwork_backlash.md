@@ -1,3 +1,4 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # BMG Clockwork Backlash Issues (Repeating Patterns / "Wood Grain")
 
 **Ensure that you have some [:page_facing_up:backlash](https://gfycat.com/mealycautiouscoqui) between the motor gear and the plastic gear.**

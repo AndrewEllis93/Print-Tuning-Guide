@@ -1,4 +1,4 @@
-[:arrow_left:Back to Table of Contents](/README.md)
+[:arrow_left: Back to Table of Contents](/README.md)
 
 ## A Note About Line Width
 Any line widths in this guide are expressed as a **percentage of nozzle diameter.** \

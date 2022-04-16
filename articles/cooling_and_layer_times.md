@@ -1,3 +1,4 @@
+[:arrow_left: Back to Table of Contents](/README.md)
 # Cooling and Layer Times
 ## Signs of Overheating
 ![](/images/Overheating-1.png) ![](/images/Overheating-4.png) 

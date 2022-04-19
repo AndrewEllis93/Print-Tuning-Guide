@@ -43,7 +43,6 @@ This guide was originally written for the Voron community, however all of the tu
         - Background 
         - Methods I'm Not a Fan Of
         - Method
-        - The Relationship Between Pressure Advance & EM
     - [PA / EM Oddities](/articles/pa_em_oddities.md)
         - Slight Perimeter Gapping
         - Slight Corner Gapping

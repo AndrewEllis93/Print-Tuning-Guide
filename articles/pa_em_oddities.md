@@ -14,9 +14,10 @@ There are a few different things you can do:\
 1. Use a hotend and/or nozzle (Bondtech CHT) with a higher flow ceiling.
     - This simply causes the flow dropoff to not start until a higher flow rate.
     - This can reduce the effect, but may not 100% fix it.
-2. Increase your EM until the gaps dissappear. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
-3. Follow my [:page_facing_up:"determining maximum volumetric flow rate"](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
-4. Slow your perimeters down. The faster you print, the more pronounced this flow dropoff becomes.
+2. If your filament can handle it, increase hotend temperatures a bit. This also just helps with flow rates.
+3. Increase your EM until the gaps dissappear. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
+4. Follow my [:page_facing_up:"determining maximum volumetric flow rate"](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
+5. Slow your perimeters down. The faster you print, the more pronounced this flow dropoff becomes.
 
 ## Slight Corner Gapping
 

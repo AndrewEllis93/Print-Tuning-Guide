@@ -58,9 +58,9 @@ This guide was originally written for the Voron community, however all of the tu
         - Why?
         - Approximate Values
         - How Volumetric Flow Rate Relates to Print Speed
+        - Formulas
         - Method
         - Theory vs Reality
-        - Formulas
     - [Determining Motor Currents](/articles/determining_motor_currents.md)
         - Determining Initial `run_current`
         - Determining Maximum `run_current`

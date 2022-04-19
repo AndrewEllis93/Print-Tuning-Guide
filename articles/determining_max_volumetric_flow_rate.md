@@ -55,6 +55,19 @@ For example, if your hotend is capable of 24mm<sup>3</sup>/sec, and you are prin
 
 - **24 / 0.4 / 0.2 = Maximum print speed of 300mm/sec**
 
+## Formulas
+
+**mm<sup>3</sup> = mm / 0.416**
+
+Or, inversely, 
+
+**mm = mm<sup>3</sup> * 0.416**
+
+For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm / 0.416)
+
+\* <sup>*For 2.85mm filament, use 0.157 instead of 0.416.*</sup>\
+\* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [:page_facing_up:Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>
+
 ## Method
 
 You will follow a similar process to extruder calibration. 
@@ -79,7 +92,7 @@ G1 E100 F300 ; Extrude 100mm at 5mm/sec*
 
 - \* See the [:pushpin:"theory vs reality"](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) section.
 
-**6)** Convert the maximum extrusion speed you found to volumetric speed using the below [:pushpin:formulas](/articles/determining_max_volumetric_flow_rate.md#formulas).
+**6)** Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin:formulas](/articles/determining_max_volumetric_flow_rate.md#formulas).
 
 **7)** Set your new value in your slicer (in SuperSlicer, ctrl+f, search for "max_volumetric_speed").
 
@@ -110,17 +123,3 @@ Many people will actually set a higher volumetric flow rate limit, a bit past th
     - **Stopping before skipping starts:** you can use this number and push speeds for things like infill, BUT you will need to be more vigilant about what speeds you are printing other features (such as perimeters) to prevent underextrusion and line gaps.
 
     - The numbers in the [:pushpin:"approximate values"](/articles/determining_max_volumetric_flow_rate.md#approximate-values) section are **somewhere in the middle** of the two extremes.
-
-
-## Formulas
-
-**mm<sup>3</sup> = mm / 0.416**
-
-Or, inversely, 
-
-**mm = mm<sup>3</sup> * 0.416**
-
-For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm / 0.416)
-
-\* <sup>*For 2.85mm filament, use 0.157 instead of 0.416.*</sup>\
-\* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [:page_facing_up:Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>

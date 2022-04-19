@@ -29,10 +29,10 @@ For example, a 2a motor would be about 1.4a max.
 
 
 - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
-- If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 70-75C.
+- If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 75-80C.
     - Measure the temps when actually printing in a heat soaked chamber.
         - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
-    - *You cannot accurately gauge this by feel.*
+    - *You cannot accurately gauge this by feel.* Even lower temperatures will feel "too hot".
     - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
 ## Determining `hold_current`
 Recently, Klipper docs have started to [:page_facing_up:recommend against using a separate `hold_current`.](https://github.com/Klipper3d/klipper/pull/4977) You can achieve this by commenting out `hold_current`, or by setting it to the same value as your `run_current`.

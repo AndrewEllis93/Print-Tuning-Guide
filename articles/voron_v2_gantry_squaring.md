@@ -12,7 +12,7 @@ This can potentially cause:
 - First Layer issues
 - Z belts rubbing against the gantry's printed parts
 
-"Bonus" steps 13-15 can also help with first layer *and* with gantry stability.
+"Bonus" steps 14-16 can also help with first layer *and* with gantry stability.
 ## Method
 
 **1)** Modify the `timeout` setting your `[idle_timeout]` config section. Set it to an arbitrarily high value (in seconds) and `reload`.
@@ -23,15 +23,19 @@ This can potentially cause:
 **3)** Jog your gantry to the center of the build volume using the LCD or web interface.
 - This will give you space to work. You need easy access to both the bottom and top of your gantry.
 
-**4)** Loosen your A/B belt tension fully.
+**4)** Turn off ONLY your A/B motors using these g-codes (or unplug them):
+- `SET_STEPPER_ENABLE STEPPER=stepper_x ENABLE=0`
+- `SET_STEPPER_ENABLE STEPPER=stepper_y ENABLE=0`
+
+**5)** Loosen your A/B belt tension fully.
 - This prevents the A/B belt tension from pulling the gantry out of alignment while you work on it.
 - Your belts should be fully disengaged. If there is still remaining tension with the idlers fully backed off, you may need to release the belt ends from the X carriage.
 
 - ![](/images/Gantry-ABTension.png) 
 
-**5)** Take off your left/right side panels.
+**6)** Take off your left/right side panels.
 
-**6)** Unscrew and drop your lower Z joints. 
+**7)** Unscrew and drop your lower Z joints. 
 - Your gantry will now be floating on just the belts.
     - Make sure your printer is on a fairly level surface, otherwise your gantry could swing too much to one side. (it doesn't have to be perfect, just don't do it on a hill),
 
@@ -39,7 +43,7 @@ This can potentially cause:
 
 - ![](/images/ZJoints-Lowered.png)
 
-**7)** **PARTIALLY** loosen all connections to the extrusions.  
+**8)** **PARTIALLY** loosen all connections to the extrusions.  
 - You need all of these bolts to be loose enough to freely adjust against the printed part on the extrusions. 
 - :warning::warning: Where there are Z belt clamps, **ensure that you do not loosen the bolts so much that the Z belts release**. Only loosen enough to allow for adjustments. :warning::warning: 
 
@@ -67,7 +71,7 @@ This can potentially cause:
         - *Don't overdo it!*
         - ![](/images/IdlersLoosen-Bottom.png) 
 
-**8)** And now - what we have been prepping for! **Adjust your gantry so that it sits perfectly on top of the lower Z joints.**
+**9)** And now - what we have been prepping for! **Adjust your gantry so that it sits perfectly on top of the lower Z joints.**
 - This involves moving gantry components further apart or closer together along the extrusions:
     - ![](/images/XAdjust.png) 
 
@@ -84,25 +88,25 @@ This can potentially cause:
     - (Exaggerated)\
     ![](/images/Alignment-AB-Bad.png) 
 
-**9)** Tighten every extrusion bolt again, *except* those in the X/Y joints. (you will tighten those during step 12)
+**10)** Tighten every extrusion bolt again, *except* those in the X/Y joints. (you will tighten those during step 12)
 - Ensure that your Z joints still align properly. Sometimes tightening can move things around.
 
-**10)** Re-install your lower Z joints and *lightly* tighten the M5 bolts.
+**11)** Re-install your lower Z joints and *lightly* tighten the M5 bolts.
 - Do NOT hulk them down yet, or even make them tight. The "ball joint" should still be able to articulate completely freely.
 
-**11)** Follow [:page_facing_up:Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
+**12)** Follow [:page_facing_up:Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
 - Make sure to come back here afterwards! The following steps are still important.
 
-**12)** [:page_facing_up:Re-tension your A/B belts](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz **over a 15cm span**).
+**13)** [:page_facing_up:Re-tension your A/B belts](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz **over a 15cm span**).
 - Don't miss the video link in that post. It's easy to overlook.
 - I prefer the Gates Carbon Drive app. Select the "motorcycle" option.
 
-**13)** Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
+**14)** Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
 
-**14)** `QUAD_GANTRY_LEVEL` 3-5 times to "settle in" the gantry (and level it for the next step).
+**15)** `QUAD_GANTRY_LEVEL` 3-5 times to "settle in" the gantry (and level it for the next step).
 - If you are having new Z accuracy issues, you may have left your Z joints a bit *too* loose.
 
-**15)** Open the front door and **fully hulk-tighten the M5 bolts in your Z joints*** while it's still hot.
+**16)** Open the front door and **fully hulk-tighten the M5 bolts in your Z joints*** while it's still hot.
 
 \* *Unless your parts are printed in eSun ABS+. It's more brittle than regular ABS. Just tighten them "pretty tight".*
 - This does two things:
@@ -112,4 +116,4 @@ This can potentially cause:
         - If you had it "tight but not too tight, so the Z joints can still articulate" (as is often recommended), you will notice that your gantry displaces back/forth while printing.
         - This can help with ringing and layer consistency.
 
-**16)** Restore your `[idle_timeout]` settings (changed in step 1).
+**17)** Restore your `[idle_timeout]` settings (changed in step 1).

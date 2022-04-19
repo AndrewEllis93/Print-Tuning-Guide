@@ -69,12 +69,24 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 - Ensure that everything is tight in your toolhead and across your X extrusion, including the hotend, nozzle, and probe.
 - For **nozzle endstops**:
     - Ensure that your start g-code contains a final z homing **with a hot nozzle** near the end.
+
         - This ensures that any plastic remaining on the nozzle is squished out of the way, and is less likely to affect your Z offset.
         - This also accounts for the small amount of thermal expansion in the nozzle as it heats.
         - You can use a nozzle brush mod to automatically clean any debris. You should still home Z with a hot nozzle, though.
+
     - Ensure that the endstop pin is square on top, otherwise it can cause your Z offset to drift as it rotates over time.
+
         - Notching your Z endstop pin (as described in the Voron manuals) can prevent it from rotating.
+
     - Ensure that your nozzle is hitting the center of the pin.
+
+    - Test your endstop's accuracy using [:page_facing_up:`PROBE_Z_ACCURACY`](https://github.com/protoloft/klipper_z_calibration#command-probe_z_accuracy). You may want to try different endstop switches to find a more accurate one.
+
+        - **NOTE:** This *requires* you to install the above linked Klipper plug-in (klipper_z_calibration). This command is NOT built into Klipper natively. 
+
+            - You can just install it for the accuracy test. You don't have to read/use anything else from that link.
+
+            - Scroll all the way to the end of the main page for usage / arguments.
 
 - For **V2**: 
     - **:warning: Ensure that you are homing Z again after QGL**, as QGL throws off Z height.

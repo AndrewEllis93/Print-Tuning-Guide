@@ -184,6 +184,22 @@ These cubes need a little more EM - you can see slight gapping / valleys / shado
 A bit too high is better than a bit too low.
 
 ![](/images/EMPrints-SlightlyLow.png)
-## Actual Print with Tuned EM:
 
-![](/images/EMPrint-Example.jpg) 
+## Tips
+**When I am looking for EM, I am *always* looking at the widest areas in a given print.** 
+
+It's *totally normaly* for [:page_facing_up:smaller infill areas to look a bit overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md). You want to tune for the areas where your extrusion system has had a chance to equalize pressure and coast at a constant flow rate.
+
+In this example, I would primarily be looking at the circled area. 
+
+While some of this print looks overextruded, I think the overall EM is actually pretty good.
+- ![](/images/em-wheretolook.png) 
+## Actual Prints with Tuned EM:
+
+(standard ABS)
+- ![](/images/EMPrint-Example.jpg) 
+- ![](/images/EMPrint-Example4.png) 
+
+(eSun ABS+ - more matte)
+- ![](/images/EMPrint-Example2.jpg) 
+- ![](/images/EMPrint-Example3.jpg) 

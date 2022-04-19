@@ -62,7 +62,7 @@ Note: input shaper will affect these values. You may need to run through this ag
 - Keep in mind that you can **only go up to the theoretical maximum value you found in the previous step.**
     - In most cases, this is very high and a non-issue. 
 
-    - In some cases, however, you may be wondering why you can achieve seemingly "infinite" speeds. This probably means that your speed you are requesting is not actually able to be reached!
+    - In some cases, however, you may be wondering why you can achieve seemingly "infinite" speeds. This probably means that your printer is not actually able to reach the requested speed at that accel/distance!
 
 - Once again, run an extended "torture test" once you find your rough limit. 
 - Example: `TEST_SPEED SPEED=450 ITERATIONS=50`

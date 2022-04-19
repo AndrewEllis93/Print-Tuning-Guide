@@ -67,7 +67,7 @@ This guide was originally written for the Voron community, however all of the tu
         - Determining `hold_current`
     - [Determining Maximum Speeds and Accelerations](/articles/determining_max_speeds_accels.md)
         - Method
-        - Usage of the TEST_SPEED Macro
+        - Usage of the `TEST_SPEED` Macro
     - [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md)
 - **Miscellaneous**
     - [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md)

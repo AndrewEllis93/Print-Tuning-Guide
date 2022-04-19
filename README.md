@@ -19,7 +19,7 @@ This guide was originally written for the Voron community, however all of the tu
 [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)
 
 ## Icons
-- :warning: = **!! Please pay extra attention to items marked with this. !!**
+- :warning: = **:exclamation:Please pay extra attention to items marked with this.:exclamation:**
 
 - :page_facing_up: = Link to another page.
 

@@ -78,6 +78,7 @@ If you can see any light (excluding pinholes at the perimeter), or the next laye
     - Manually adjust your `switch_offset` based on how much extra you had to baby step. 
         - Higher value = more squish 
         - Lower value = less squish
+    - If your value is straying too far from your switch's theoretical `switch_offset` (usually 0.5), there may be another issue at play. Values of 0.4-0.6 are fairly normal (for the standard Omron switches).
 
 <sup>* Requires a semi-recent version of Klipper.</sup>
 ## Print Examples 

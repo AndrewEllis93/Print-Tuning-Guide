@@ -14,10 +14,16 @@ The motor plate has 3 slotted screw holes to allow for adjustment:
 - The bottom left screw can be reached by opening the filament latch fully and using a ball-end hex driver.
 ## Too Little Backlash:
 - [:pushpin:Repeating patterns](/articles/troubleshooting/bmg_clockwork_backlash.md#repeating-patterns) in extrusion
-- Accelerated wear and damage of the plastic gear, further contributing to repeating patterns in extrusion. \
-This can be permanent until replacement. Check the spaces between the gear teeth.
+
+- Accelerated wear and damage of the plastic gear, further contributing to repeating patterns in extrusion.
+    - This can cause permanent extrusion consistency issues until replacement. Check the spaces between the gear teeth. This gear is damaged:
+
+    - ![](/images/troubleshooting/bmg-tooth-damage.png)
+
+
 ## Too Much Backlash:
 - [:pushpin:Repeating patterns](/articles/troubleshooting/bmg_clockwork_backlash.md#repeating-patterns) in extrusion
+
 - Clacking noises during retraction and pressure advance moves
 
 ## Repeating Patterns

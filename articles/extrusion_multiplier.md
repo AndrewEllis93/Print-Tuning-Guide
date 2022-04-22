@@ -83,14 +83,14 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
 - **Top Layer [:page_facing_up:Line Width](/articles/a_note_about_line_width.md):** 100%
 
-   - SS/PS: ctrl+f, search: `top_infill_extrusion_width`
+   - **SS/PS:** ctrl+f, search: `top_infill_extrusion_width`
 
-   - Cura: "Top/Bottom Line Width" - set to equal your nozzle size
+   - **Cura:** "Top/Bottom Line Width" - set to equal your nozzle size
 
     - This is more subject to interpretation, but I find 100% to have good results. It has a nice finish and tends to show off EM differences the best.
 
 - **Bottom Layers:** 2
-    - SS/PS: Make sure "minimum shell thickness" is disabled (directly below) - it will override this.
+    - **SS/PS:** Make sure "minimum shell thickness" are set to 0 (directly below - AKA `top_solid_min_thickness`/`bottom_solid_min_thickness`) - it will override this.
 
     - This makes more space for top layers. See "top layers" details below.
 
@@ -105,24 +105,34 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
 - **Top Infill Pattern:** Monotonic (filled)
 
-    - Cura: "Top/Bottom Pattern" - set to "lines"
+    - **Cura:** "Top/Bottom Pattern" - set to "lines"
 
     - Make sure that this is not set to "ironing". If not available, use rectalinear or "lines" instead (depends on slicer).
 
 - **Solid Infill Speed:** Your Profile's Normal Value
 
-    - Cura: "Top/Bottom Speed"
+    - **Cura:** "Top/Bottom Speed"
 
     - It's best to tune for your normal speeds, as flow can [:page_facing_up:drop off a little bit the faster you print](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) ("Theory vs Reality" section)
 
 - **Top Solid Infill Speed:** 60mm/s Max
-    - Cura: "Top Surface Skin Speed"
+    - **Cura:** "Top Surface Skin Speed"
 
     - I recommend printing your very top layer quite slowly, both for the tests and for your regular prints. It can result in nicer top surfaces.
 
         - Set your regular printing profile to match.
 
     - If you *must* go faster in your normal printing profile, use your normal speed here instead.
+
+- **Minimum Layer Time:** 0
+
+    - **SS:** "Layer Time Goal" (in filament cooling settings - AKA `slowdown_below_layer_time`)
+
+    - **PS:** "Slow Down Print if Layer Print Time Is Below" (in filament cooling settings - AKA `slowdown_below_layer_time`)
+
+    - **Cura:** "Minimum Layer Time"
+
+    - Allows normal print speeds to be reached. Typically found under fila
 
 - **Fan Speed:** High
 

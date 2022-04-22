@@ -111,7 +111,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
     - Cura: "Top/Bottom Speed"
 
-    - It's best to tune for your normal speeds, as flow can [drop off a little bit the faster you print.](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality)
+    - It's best to tune for your normal speeds, as flow can [:page_facing_up:drop off a little bit the faster you print](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) ("Theory vs Reality" section)
 
 - **Top Solid Infill Speed:** 60mm/s Max
     - Cura: "Top Surface Skin Speed"

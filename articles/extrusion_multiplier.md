@@ -99,6 +99,8 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
         - If you are printing with especially thick layer heights, you can scale the cubes up in Z a bit to ensure that you have enough solid layers.
 
+        - Feel free to experiment with even more layers!
+
 - **Top Infill Pattern:** Monotonic (filled)
 
     - Cura: "Top/Bottom Pattern" - set to "lines"

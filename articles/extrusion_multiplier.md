@@ -7,7 +7,6 @@
 
 **:warning: You should [:page_facing_up:tune pressure advance](/articles/pressure_advance.md) first.**
 
-- These tests try to remove PA as a variable as much as possible, but having a good PA value is still ideal.
 
 This must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 

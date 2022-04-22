@@ -90,8 +90,13 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
     - This is more subject to interpretation, but I find 100% to have good results. It has a nice finish and tends to show off EM differences the best.
 
+- **Bottom Layers:** 2
+    - SS/PS: Make sure "minimum shell thickness" is disabled (directly below) - it will override this.
+
+    - This makes more space for top layers. See "top layers" details below.
+
 - **Top Layers:** As many as you can fit and still have at least two layers of infill.\
-(about 8 with 0.2mm layer height)
+(about 12 with 0.2mm layer height)
 
     - The 2 layers of infill provides a small void for any first layer squish issues to settle. Otherwise, an over-squished first layer could carry all the way through to the top surface.
 

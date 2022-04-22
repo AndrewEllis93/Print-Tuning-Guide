@@ -11,6 +11,8 @@
 
 This must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is. With KVP I am usually able to run the same EM for all colors.
 
+Some Slicers seem to "like" slightly higher or lower EM than others.
+
 ## Background
 
 Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints.
@@ -65,7 +67,7 @@ This also results in prints that are of perfectly acceptable tolerances for Voro
             - \*Shrinkage occurs much less in the Z axis.
             - 100.5%-101% X/Y scaling is about the range you would expect with ABS.
         - Find any suitable test object (larger is generally better), and ensure that you are measuring flat edges and not any corner bulging or seams. Use the resulting measurements to determine how much shrinkage compensation you need.
-    - Don't mess with your X/Y/A/B `steps_per_mm`/`rotation_distance`, you will just further confuse matters. You are almost always seeing material shrinkage, NOT issues with your axes. 
+    - Don't mess with your X/Y/A/B `steps_per_mm`/`rotation_distance`, you will just further confuse matters. You are almost always seeing material shrinkage, bulging, layer inconsistencies, etc, NOT issues with your axes. 
         - If dimensions are off by large amounts, you may have the wrong pulleys installed on your motors (for example if you're off by 20%, you probably swapped a 16t pulley with a 20t pulley or vice versa).
 
 ## Method
@@ -74,28 +76,55 @@ The best method I have found is purely visual/tactile.
 We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folder](/test_prints))*
 
 **Print Settings:**
-- **40+% Infill**
-    - We need sparse infill rather than 100% solid infill, to remove the first layer squish from impacting the top layer. \
-    We still need enough to adequately support the top layers.
+- **Infill:** 40%+
 
-- **100% Top Layer [:page_facing_up:Line Width](/articles/a_note_about_line_width.md)**
-   -  In SS: Print settings > width and flow > extrusion width > top infill
+    - Some sparse infill helps to remove first layer squish from impacting the top layer. 
+
+    - To adequately support the top layers so they don't sag.
+
+- **Top Layer [:page_facing_up:Line Width](/articles/a_note_about_line_width.md):** 100%
+
+   - SS/PS: ctrl+f, search: `top_infill_extrusion_width`
+
+   - Cura: "Top/Bottom Line Width" - set to equal your nozzle size
 
     - This is more subject to interpretation, but I find 100% to have good results. It has a nice finish and tends to show off EM differences the best.
 
-- **5 Top Layers**
-    - This ensures that we have adequate support for the surface layer.
+- **Top Layers:** As many as you can fit and still have at least two layers of infill.\
+(about 8 with 0.2mm layer height)
 
-- **Monotonic (filled)** top infill pattern
+    - The 2 layers of infill provides a small void for any first layer squish issues to settle. Otherwise, an over-squished first layer could carry all the way through to the top surface.
+
+    - **The more solid layers we print, the more underextrusion or overextrusion will show**. The effects compound (well, up to a point).
+
+        - If you are printing with especially thick layer heights, you can scale the cubes up in Z a bit to ensure that you have enough solid layers.
+
+- **Top Infill Pattern:** Monotonic (filled)
+
+    - Cura: "Top/Bottom Pattern" - set to "lines"
+
     - Make sure that this is not set to "ironing". If not available, use rectalinear or "lines" instead (depends on slicer).
 
-- **30mm/s Solid & Top Solid Infill Speed***
-    - This helps to reduce the impact of pressure advance. The faster we go, the more pressure advance will impact our results.
+- **Solid Infill Speed:** Your Profile's Normal Value
 
-    - <sup> *If your pressure advance is well tuned, you may actually get more "true to life"/accurate results printing at your normal print speeds. If your pressure advance is off, however, it can potentially [:pushpin:throw you off further.](/articles/extrusion_multiplier.md#the-relationship-between-pressure-advance--em)</sup>
+    - Cura: "Top/Bottom Speed"
 
-- **High Fan Speed**
-    - As these are only small objects, we need to ensure they have enough cooling so that the top layers don't sag. This depends on your fan, maybe around 80% with AB-BN or 100% with the stock 4020 fan.
+    - It's best to tune for your normal speeds, as flow can [drop off a little bit the faster you print.](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality)
+
+- **Top Solid Infill Speed:** 60mm/s Max
+    - Cura: "Top Surface Skin Speed"
+
+    - I recommend printing your very top layer quite slowly, both for the tests and for your regular prints. It can result in nicer top surfaces.
+
+        - Set your regular printing profile to match.
+
+    - If you *must* go faster in your normal printing profile, use your normal speed here instead.
+
+- **Fan Speed:** High
+
+    - As these are only small objects, we need to ensure they have enough cooling so that they don't get melty or sag. 
+    
+    - This depends on your fan and chamber temperatures, maybe around 80% with a 5015 fan setup, or 100% with a 4020 fan.
 
 **Steps:**
 

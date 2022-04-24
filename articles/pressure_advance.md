@@ -68,6 +68,9 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
     - **PA Stepping:**:
         - **Direct Drive**: 0.005
         - **Bowden***: 0.05
+    - **Test Line Spacing:**
+        - **Voron 0 (120mm bed)**: 4
+        - **Default**: 5
     - **Print Anchor Frame**: Checked
 - **Advanced**
     - **Nozzle Line Ratio**: 1.2

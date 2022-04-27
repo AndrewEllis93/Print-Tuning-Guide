@@ -23,7 +23,7 @@ This can potentially cause:
 **3)** Jog your gantry to the center of the build volume using the LCD or web interface.
 - This will give you space to work. You need easy access to both the bottom and top of your gantry.
 
-**4)** Turn off ONLY your A/B motors using these g-codes (or unplug them):
+**4)** Turn off ONLY your A/B motors using these g-codes:
 - `SET_STEPPER_ENABLE STEPPER=stepper_x ENABLE=0`
 - `SET_STEPPER_ENABLE STEPPER=stepper_y ENABLE=0`
 

@@ -37,7 +37,7 @@ The second best thing you can do is to buy higher quality filaments. Low quality
 
 The third best thing you can do is to buy higher printer quality components.
 
-Certain printer/kinematic/extruder designs *can* be better or worse than other (for example, I had a slight improvement when I started using an Orbiter extruder), but you you'll never reach perfection:
+Certain printer/kinematic/extruder designs *can* be better or worse than others (for example, I had a slight improvement when I started using an Orbiter extruder), but you you'll never reach perfection:
 
 ## An Analogy
 Think of it like the below graph. 

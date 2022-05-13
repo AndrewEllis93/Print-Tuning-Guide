@@ -60,7 +60,7 @@ PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[in
 ```
 M104 S0 ; Stops PS/SS from sending temp waits separately
 M140 S0
-PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]}
+PRINT_START BED=[first_layer_bed_temperature] HOTEND=[first_layer_temperature[initial_extruder]]
 ```
 ![](/images/PassingVariables-PS.png) 
 

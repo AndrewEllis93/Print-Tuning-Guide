@@ -24,7 +24,7 @@ pin: z:EXP1_1
 pwm: True
 value: 0
 shutdown_value: 0
-cycle_time: 0.0005
+cycle_time: 0.0005      ; Change the beeper tone
 ```
 
 Example (non PWM beeper, used on some other displays such as the Ender 3 stock display):
@@ -34,6 +34,8 @@ pin: P1.30
 value: 0
 shutdown_value: 0
 ```
+
+You can also use Klipper's [slightly fancier implementation](https://github.com/Klipper3d/klipper/blob/4490a58411b4ce6c200212fb9eaa57fbd1bd32fd/config/sample-macros.cfg#L78).
 
 Example usage: `BEEP I=3` (Beep 3 times)
 

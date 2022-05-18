@@ -71,6 +71,13 @@ This guide was originally written for the Voron community, however all of the tu
     - [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md)
 - **Miscellaneous**
     - [Useful Macros](/articles/useful_macros.md)
+        - Conditional Homing
+        - Beeper
+        - LCD RGB
+        - My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)
+        - Filament Sensor Management
+        - Parking
+        - Dump Parameters
     - [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md)
     - [Controlling Slicer G-code Order *Without* Passing Variables](/articles/controlling_slicer_g-code_order.md)
 - **Troubleshooting**\

@@ -2,7 +2,7 @@
 
 ## Conditional Homing
 
-Home if not already homed. Useful to throw at the beginning of other macros.
+Home if not already homed. Useful to throw at the beginning of other macros. This is used in many of the other macros below.
 ```
 [gcode_macro CG28]
 gcode:

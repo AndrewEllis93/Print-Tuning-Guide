@@ -14,8 +14,7 @@ Skipping below top layer:
 - Mark a line on your extruder motor shaft with a sharpie (on the back side of the motor). Observe what it's doing while the issue is occuring.
     - Shuddering: A wiring issue or mechanical resistance.
     - Not moving at all: A wiring or electrical issue, or stepper driver overheating.
-    - Rotating normally: Either the filament isn't gripping properly, or your grub screw on the filament drive gear has come loose.
-
+    - Rotating normally: Either the filament isn't gripping properly, or a grub screw has come loose.
 - Try a new nozzle. It's often just a partial nozzle clog.
 
 - If it occurs mainly on the first layer, ensure that you are not printing with [:page_facing_up:too much squish](/articles/first_layer_squish.md) or with too much first layer flow.

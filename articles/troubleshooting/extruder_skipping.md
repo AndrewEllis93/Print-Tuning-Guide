@@ -69,9 +69,11 @@ If there is much resistance, *figure out where it is coming from:*
 
 - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.
     - As a general rule, don't exceed 50-60% of the rated current of your motor as your `run_current`. *Some motors like more or less current, though*, so your best bet would be to look at the stock configs or to ask in Discord.
-    - Galileo/Orbiter:
+    - Clockwork 2 / Galileo / Orbiter:
+
         - There is some confusion about different motor models. 
-            - If you have the 20mm 1a LDO motor, try 0.65a. 
+
+            - If you have the 20mm 1a LDO motor, try ~0.65a. 
             - If you have the 17mm 1a LDO motor, try 0.35-0.4a.
 - Check your extruder motor and hotend fan's [:page_facing_up:crimps](/articles/troubleshooting/crimps.md) and wiring.
 - Check the volumetric speed preview in your slicer. See if it is [:page_facing_up:high for your particular hotend](/articles/determining_max_volumetric_flow_rate.md#approximate-values). Or see [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile/articles/determining_max_volumetric_flow_rate.md) to determine your maximum.

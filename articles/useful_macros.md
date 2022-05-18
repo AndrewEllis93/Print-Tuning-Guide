@@ -12,7 +12,7 @@ gcode:
 ```
 ## Beeper
 
-Allows you to utilize your MINI12864 LCD beeper. 
+Allows you to utilize your LCD beeper. 
 
 This requires you to specify your beeper pin as an output pin.
 - Your `pin` may be different.

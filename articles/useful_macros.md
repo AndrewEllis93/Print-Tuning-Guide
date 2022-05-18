@@ -97,7 +97,7 @@ This macro set has a few features:
 - Sets the idle timeout to 12 hours during the pause, and returns it to your configured value upon resume.
 - Turns off your filament sensor during the pause, so it doesn't trip and run its runout gcode again while you're already paused.
 - Turns off the hotend during the pause, and turns it back on for the resume.*
-    - \* *I highly advise keeping this functionality - it's a safety feature. It's not ideal to lave your hotend cooking all night waiting for you to come and swap filament. And with a smart filament sensor, it can even sometimes catch heat creep clogs should your hotend fan fail.*
+    - \* *I highly advise keeping this functionality, even though it's a bit annoying. It's a safety feature. It's not ideal to lave your hotend cooking all night waiting for you to come and swap filament. And with a smart filament sensor, it can even sometimes catch heat creep clogs should your hotend fan fail.*
 
 **Some things are commented out that rely on other macros.** You can uncomment them if you choose to use those other macros.
 

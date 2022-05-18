@@ -234,7 +234,7 @@ gcode:
     RESTORE_GCODE_STATE NAME=PARKFRONT
 ```
 ```
-# Park front center, but low down
+# Park front center, but low down.
 [gcode_macro PARKFRONTLOW]
 gcode:
     CG28                                                                                                                        ; home if not already homed
@@ -254,7 +254,7 @@ gcode:
     RESTORE_GCODE_STATE NAME=PARKREAR
 ```
 ```
-# Park center of build volume
+# Park at center of build volume
 [gcode_macro PARKCENTER]
 gcode:
     CG28                                                                                                                        ; home if not already homed

@@ -42,7 +42,7 @@ gcode:
     {% set i = params.I|default(1)|int %}
     
     {% for beep in range(i|int) %}
-        SET_PIN PIN=beeper VALUE=0.8
+        SET_PIN PIN=beeper VALUE=1
         SET_PIN PIN=beeper VALUE=0
     {% endfor %}
 ```

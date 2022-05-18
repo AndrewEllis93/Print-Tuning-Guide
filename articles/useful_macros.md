@@ -181,7 +181,7 @@ gcode:
     {% endif %}
 ```
 
-### Cancel Print
+### Cancel
 
 Clears any pause and runs PRINT_END macro.
 

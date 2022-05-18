@@ -178,7 +178,7 @@ gcode:
         {% else %}                      
             G1 Z{zhop * -1} F900                                                                                            ; lower Z back down without priming (just in case we are testing the macro with cold hotend)
         {% endif %}                             
-        RESTORE_GCODE_STATE NAME=PAUSE MOVE=1 MOVE_SPEED=100                                                                ; restore position
+        RESTORE_GCODE_STATE NAME=PAUSE MOVE=1 MOVE_SPEED=60                                                                 ; restore position
         BASE_RESUME                                                                                                         ; resume print
     {% endif %}
 ```

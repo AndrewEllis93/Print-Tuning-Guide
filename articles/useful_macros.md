@@ -14,10 +14,10 @@ gcode:
 
 Allows you to utilize your MINI12864 LCD beeper. 
 
-This requires you to specify your beeper pin as a PWM output pin.
-- Your `pin` may be different.s
+This requires you to specify your beeper pin as an output pin.
+- Your `pin` may be different.
 
-Example:
+Example (PWM beeper, used on MINI12864):
 ```
 [output_pin beeper]
 pin: z:EXP1_1
@@ -25,6 +25,12 @@ pwm: True
 value: 0
 shutdown_value: 0
 cycle_time: 0.0005
+```
+
+Example (non PWM beeper, used on some other displays such as the Ender 3 stock display):
+```
+[output_pin beeper]
+pin: P1.30
 ```
 
 Example usage: `BEEP I=3` (Beep 3 times)

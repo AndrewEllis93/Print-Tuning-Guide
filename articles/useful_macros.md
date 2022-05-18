@@ -31,6 +31,8 @@ Example (non PWM beeper, used on some other displays such as the Ender 3 stock d
 ```
 [output_pin beeper]
 pin: P1.30
+value: 0
+shutdown_value: 0
 ```
 
 Example usage: `BEEP I=3` (Beep 3 times)

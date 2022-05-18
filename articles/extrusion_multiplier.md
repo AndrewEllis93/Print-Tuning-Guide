@@ -103,6 +103,11 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
         - If you are printing with especially thick layer heights, you can scale the cubes up in Z a bit to ensure that you have enough solid layers.
 
+    - <sup>This was changed recently. The old guidance of 5 top layers resulted in nice top surfaces for most parts (such as Voron parts), but larger parts would start to have top layer gapping issues. 
+        - <sup>Unfortunately the "perfect" flow for small and large parts seems to be different, at least with Prusa Slicer/SuperSlicer (I have not tried Cura).</sup>
+        - <sup>I sometimes tune for 5 top layes to find a good EM for Voron/smaller parts, and then increase the EM for larger surface area parts (the v2 Z drives often need this).</sup>
+        - <sup>*I am not yet entirely sure why this is the case.* I welcome theories and experiments on this.</sup>
+
 - **Top Infill Pattern:** Monotonic (filled)
 
     - **Cura:** "Top/Bottom Pattern" - set to "lines"

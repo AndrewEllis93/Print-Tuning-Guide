@@ -19,7 +19,7 @@ Skipping below top layer:
 
 - If it occurs mainly on the first layer, ensure that you are not printing with [:page_facing_up:too much squish](/articles/first_layer_squish.md) or with too much first layer flow.
 - Ensure that your filament gear tension (usually a spring tensioner screw) is not too tight or too loose.
-    - Yank on the filament and keep tightening the tensioner screw until it stops slipping. Tighten it a little extra, maybe 1-2 turns.
+    - Yank on the filament and keep tightening the tensioner screw until it stops slipping. Tighten it a little extra, maybe 1-2 turns. Too tight will cause skipping, and too loose will cause filament stripping.
 - **Use a reverse bowden tube*** with direct drive, and ensure that there is not too much resistance coming from the spool.
     - *Reverse bowden tubes go from the direct drive extruder back to the spool (and should be fixed at the spool side), and prevent fast toolhead movements from yanking the filament.
     

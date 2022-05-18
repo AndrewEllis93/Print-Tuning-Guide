@@ -107,16 +107,16 @@ This allows your pause to work natively with slicers that insert `M600` for colo
 ```
 [gcode_macro M600]
 gcode:
-    #LCDRGB R=0 G=1 B=0  # Turn LCD green
-    PAUSE
+    #LCDRGB R=0 G=1 B=0  ; Turn LCD green
+    PAUSE                ; Pause
 ```
 ### Runout G-Code
 This goes in your filament sensor config section.
 ```
 runout_gcode:
-    #LCDRGB R=1 G=0 B=0  # Turn LCD red
-    PAUSE
-    #BEEP I=12
+    #LCDRGB R=1 G=0 B=0  ; Turn LCD red
+    PAUSE                ; Pause
+    #BEEP I=12           ; Beep 12 times
 ```
 
 ### Pause
@@ -183,7 +183,7 @@ gcode:
 
 ### Cancel Print
 
-Clears any pause and runs my PRINT_END macro for cancelations.
+Clears any pause and runs PRINT_END macro.
 
 ```
 [gcode_macro CANCEL_PRINT]

@@ -74,9 +74,10 @@ This can potentially cause:
 
 **9)** And now - what we have been prepping for! **Adjust your gantry so that it sits perfectly on top of the lower Z joints.**
 - This involves moving gantry components further apart or closer together along the extrusions:
-    - ![](/images/XAdjust.png) 
-
-    - ![](/images/YAdjust.png)
+    - **Rear**
+        - ![](/images/XAdjust.png) 
+    - **Sides**
+        - ![](/images/YAdjust.png)
 
 - Your gantry should align so that:
     - The Z joints feel perfectly flush along the side, and

@@ -107,7 +107,7 @@ This macro set has a few features:
 
 ### M600 (Filament Change) Alias
 
-This allows your pause to work natively with slicers that insert `M600` for color changes.
+This allows your pause to work natively with slicers that insert `M600` for color changes. This just calls the pause macro (below).
 ```
 [gcode_macro M600]
 gcode:
@@ -206,7 +206,7 @@ If you use Octoprint, put these in your "GCODE Script" section to enable the UI 
 - ![](/images/Octoprint-Gcode-Scripts.png)
 
 ## Filament Sensor Management
-Disables the filament sensor 1 second after startup. This prevents it from tripping while you're just loading filament, doing testing or maintenance, etc.
+This disables the filament sensor 1 second after startup. This prevents it from tripping while you're just loading filament, doing testing or maintenance, etc.
 
 Put your filament sensor's name after `SENSOR=`.
 
@@ -289,5 +289,5 @@ gcode:
       {% else %}
          { action_respond_info("printer['%s'] = %s" % (name1, printer[name1])) }
       {% endfor %}
-   {% endfor %}-
+   {% endfor %}
 ```

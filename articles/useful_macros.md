@@ -340,7 +340,7 @@ gcode:
     
     M104 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}  ; Set hotend temp
     {% if s != 0 %}
-        TEMPERATURE_WAIT SENSOR=extruder MINIMUM={s} MAXIMUM={s+1}       ; Wait for hotend temp (within 1 degree)
+        TEMPERATURE_WAIT SENSOR=extruder MINIMUM={s} MAXIMUM={s+1}   ; Wait for hotend temp (within 1 degree)
     {% endif %}
 ```
 
@@ -356,6 +356,6 @@ gcode:
 
     M140 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}   ; Set bed temp
     {% if s != 0 %}
-        TEMPERATURE_WAIT SENSOR=heater_bed MINIMUM={s} MAXIMUM={s+1}      ; Wait for bed temp (within 1 degree)
+        TEMPERATURE_WAIT SENSOR=heater_bed MINIMUM={s} MAXIMUM={s+1}  ; Wait for bed temp (within 1 degree)
     {% endif %}
 ```

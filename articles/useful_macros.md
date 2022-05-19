@@ -1,6 +1,8 @@
+[:arrow_left: Back to Table of Contents](/README.md)
+
 # Useful Macros
 
-## Conditional Homing
+# Conditional Homing
 
 Home if not already homed. Useful to throw at the beginning of other macros. This is used in many of the other macros below.
 ```
@@ -10,48 +12,76 @@ gcode:
         G28
     {% endif %}
 ```
-## Beeper
-
+# Beeper
 Allows you to utilize your LCD beeper. 
-
 This requires you to specify your beeper pin as an output pin.
-- Your `pin` may be different.
+## PWM Beeper
+A PWM beeper is more common nowadays, and is used on the common MINI12864 display.
 
-Example (PWM beeper, used on MINI12864):
+Your `pin` may be different.
 ```
 [output_pin beeper]
-pin: z:EXP1_1
-pwm: True
+pin: EXP1_1
 value: 0
 shutdown_value: 0
-cycle_time: 0.0005      ; Change the beeper tone
+pwm: True
+cycle_time: 0.0005 ; Default beeper tone in kHz. 1 / 0.0005 = 2000Hz (2kHz)
 ```
 
-Example (non PWM beeper, used on some other displays such as the Ender 3 stock display):
+Usage:
+- `BEEP`: Beep once with defaults.
+- `BEEP I=3`: Beep 3 times with defaults.
+- `BEEP I=3 DUR=100 FREQ=2000` Beep 3 times, for 100ms each, at 2kHzfrequency.
+
+```
+[gcode_macro BEEP]
+gcode:
+    # Parameters
+    {% set i = params.I|default(1)|int %}           ; Iterations (number of times to beep).
+    {% set dur = params.DUR|default(100)|int %}     ; Duration/wait of each beep in ms. Default 100ms.
+    {% set freq = params.FREQ|default(2000)|int %}  ; Frequency in Hz. Default 2kHz.
+
+    {% for iteration in range(i|int) %}
+        SET_PIN PIN=beeper VALUE=0.8 CYCLE_TIME={ 1.0/freq if freq > 0 else 1 }
+        G4 P{dur}
+        SET_PIN PIN=beeper VALUE=0
+        G4 P{dur}
+    {% endfor %}
+```
+
+This is the simple looping implementation. If you're feeling fancy, you can also [play tunes with it](https://github.com/majarspeed/Profiles-Gcode-Macros/tree/main/Beeper%20tunes). (Tune macros by Dustinspeed#6423)
+
+## Non-PWM Beeper
+Non PWM beepers are used on some other displays such as the Ender 3 stock display.
+
+Your `pin` will likely be different.
 ```
 [output_pin beeper]
 pin: P1.30
 value: 0
 shutdown_value: 0
 ```
-
-You can also use Klipper's [slightly fancier implementation](https://github.com/Klipper3d/klipper/blob/4490a58411b4ce6c200212fb9eaa57fbd1bd32fd/config/sample-macros.cfg#L78).
-
-Example usage: `BEEP I=3` (Beep 3 times)
+Usage: 
+- `BEEP`: Beep once with defaults.
+- `BEEP I=3`: Beep 3 times with defaults.
+- `BEEP I=3 DUR=100` Beep 3 times, for 100ms each.
 
 ```
 [gcode_macro BEEP]
 gcode:
     # Parameters
-    {% set i = params.I|default(1)|int %}
-    
-    {% for beep in range(i|int) %}
+    {% set i = params.I|default(1)|int %}        ; Iterations (number of times to beep).
+    {% set dur = params.DUR|default(100)|int %}  ; Duration/wait of each beep in ms. Default 100ms.
+
+    {% for iteration in range(i|int) %}
         SET_PIN PIN=beeper VALUE=1
+        G4 P{dur}
         SET_PIN PIN=beeper VALUE=0
+		G4 P{dur}
     {% endfor %}
 ```
 
-## LCD RGB
+# LCD RGB
 This just provides an easy shortcut to change your neopixel LCD color. This may need modifying depending on your particular LCD. Mine is an MINI12864.
 
 I have my LCD turn red during runouts, and green during filament swaps.
@@ -87,11 +117,12 @@ gcode:
     RESETRGB
 ```
 
-## My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)
+# My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)
 
 You need `[pause_resume]` specified in your config to be able to use these.
 
-This macro set has a few features:
+This macro set's features:
+
 - Moves the toolhead (z hops) up by 10mm, then moves the toolhead to the front for easy loading/unloading.
     - Will not z hop if this exceeds your max Z position.
 - Has protections to not allow you to automatically hit pause or resume twice.
@@ -105,7 +136,7 @@ This macro set has a few features:
 
 **Some things are commented out that rely on other macros.** You can uncomment them if you choose to use those other macros.
 
-### M600 (Filament Change) Alias
+## M600 (Filament Change) Alias
 
 This allows your pause to work natively with slicers that insert `M600` for color changes. This just calls the pause macro (below).
 ```
@@ -114,7 +145,7 @@ gcode:
     #LCDRGB R=0 G=1 B=0  ; Turn LCD green
     PAUSE                ; Pause
 ```
-### Runout G-Code
+## Runout G-Code
 This goes in your filament sensor config section.
 ```
 runout_gcode:
@@ -123,8 +154,10 @@ runout_gcode:
     #BEEP I=12           ; Beep 12 times
 ```
 
-### Pause
+## Pause
 If you use a filament sensor, put its name in the `SET_FILAMENT_SENSOR` command. Otherwise, comment that out.
+
+If you want your toolhead to park somewhere other than front center, modify the X/Y coordinates in the last `G1` command.
 ```
 [gcode_macro PAUSE]
 rename_existing: BASE_PAUSE
@@ -154,7 +187,7 @@ gcode:
     {% endif %}
 ```
 
-### Resume
+## Resume
 If you use a filament sensor, put its name in the `SET_FILAMENT_SENSOR` command. Otherwise, comment that out.
 ```
 [gcode_macro RESUME]
@@ -185,7 +218,7 @@ gcode:
     {% endif %}
 ```
 
-### Cancel
+## Cancel
 
 Clears any pause and runs PRINT_END macro.
 
@@ -200,12 +233,12 @@ gcode:
     BASE_CANCEL_PRINT
 ```
 
-### Octoprint
+## Octoprint
 If you use Octoprint, put these in your "GCODE Script" section to enable the UI buttons to work properly.
 
 - ![](/images/Octoprint-Gcode-Scripts.png)
 
-## Filament Sensor Management
+# Filament Sensor Management
 This disables the filament sensor 1 second after startup. This prevents it from tripping while you're just loading filament, doing testing or maintenance, etc.
 
 Put your filament sensor's name after `SENSOR=`.
@@ -223,7 +256,7 @@ Then:
 
 The above pause/resume/cancel macros have this already. Just update the sensor name.
 
-## Parking
+# Parking
 
 Park the toolhead at different places. Automatically determined based on your printer's configured size.
 
@@ -290,4 +323,39 @@ gcode:
          { action_respond_info("printer['%s'] = %s" % (name1, printer[name1])) }
       {% endfor %}
    {% endfor %}
+```
+
+# Replace `M109`/`M190` With `TEMPERATURE_WAIT`
+Replace `M109` (wait for hotend temperature) and `M190` (wait for bed temperature) with TEMPERATURE_WAIT.
+
+This just makes Klipper resume immediately after reaching temp. Otherwise it waits for the temperature to stabilize.
+
+## M109
+```
+[gcode_macro M109]
+rename_existing: M99109
+gcode:
+    #Parameters
+    {% set s = params.S|float %}
+    
+    {% if s != 0 %}
+        M104 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}  ; Set hotend temp
+        TEMPERATURE_WAIT SENSOR=extruder MINIMUM={s} MAXIMUM={s+1}       ; Wait for hotend temp (within 1 degree)
+    {% endif %}
+```
+
+## M190
+:warning: If you are using my [bed fans](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Ellis/Bed_Fans) macros, **do not use this version.** Those macros include a variant of this with other essential functions.
+
+```
+[gcode_macro M190]
+rename_existing: M99190
+gcode:
+    #Parameters
+    {% set s = params.S|float %}
+    
+    {% if s != 0 %}
+        M140 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}   ; Set bed temp
+        TEMPERATURE_WAIT SENSOR=heater_bed MINIMUM={s} MAXIMUM={s+1}      ; Wait for bed temp (within 1 degree)
+    {% endif %}
 ```

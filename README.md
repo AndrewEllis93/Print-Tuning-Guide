@@ -78,6 +78,7 @@ This guide was originally written for the Voron community, however all of the tu
         - Filament Sensor Management
         - Parking
         - Dump Parameters
+        - Replace `M109`/`M190` With `TEMPERATURE_WAIT`
     - [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md)
     - [Controlling Slicer G-code Order *Without* Passing Variables](/articles/controlling_slicer_g-code_order.md)
 - **Troubleshooting**\

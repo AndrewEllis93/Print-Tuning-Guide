@@ -80,7 +80,11 @@ This guide was originally written for the Voron community, however all of the tu
         - Dump Parameters
         - Replace `M109`/`M190` With `TEMPERATURE_WAIT`
     - [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md)
-    - [Controlling Slicer G-code Order *Without* Passing Variables](/articles/controlling_slicer_g-code_order.md)
+        - Passing Temperatures
+            - SuperSlicer
+            - Prusa Slicer
+            - Cura
+    - [Controlling Slicer Temperature G-Code Order (Simple Method)](/articles/controlling_slicer_g-code_order.md)
 - **Troubleshooting**\
 *Even without issues, it's worth looking through some of these to familiarize yourself with things to look out for.*
     - [BMG Clockwork Backlash Issues (Repeating Patterns / "Wood Grain")](/articles/troubleshooting/bmg_clockwork_backlash.md)

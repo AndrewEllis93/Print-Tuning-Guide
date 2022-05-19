@@ -11,6 +11,7 @@ https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-
 This can potentially cause:
 - First Layer issues
 - Z belts rubbing against the gantry's printed parts
+- X axis to be "racked" at the front but not the back (or vice versa)
 
 "Bonus" steps 14-16 can also help with first layer *and* with gantry stability.
 ## Method

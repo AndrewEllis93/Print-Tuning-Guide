@@ -338,8 +338,8 @@ gcode:
     #Parameters
     {% set s = params.S|float %}
     
+    M104 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}  ; Set hotend temp
     {% if s != 0 %}
-        M104 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}  ; Set hotend temp
         TEMPERATURE_WAIT SENSOR=extruder MINIMUM={s} MAXIMUM={s+1}       ; Wait for hotend temp (within 1 degree)
     {% endif %}
 ```
@@ -353,9 +353,9 @@ rename_existing: M99190
 gcode:
     #Parameters
     {% set s = params.S|float %}
-    
+
+    M140 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}   ; Set bed temp
     {% if s != 0 %}
-        M140 {% for p in params %}{'%s%s' % (p, params[p])}{% endfor %}   ; Set bed temp
         TEMPERATURE_WAIT SENSOR=heater_bed MINIMUM={s} MAXIMUM={s+1}      ; Wait for bed temp (within 1 degree)
     {% endif %}
 ```

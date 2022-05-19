@@ -31,7 +31,7 @@ cycle_time: 0.0005 ; Default beeper tone in kHz. 1 / 0.0005 = 2000Hz (2kHz)
 Usage:
 - `BEEP`: Beep once with defaults.
 - `BEEP I=3`: Beep 3 times with defaults.
-- `BEEP I=3 DUR=100 FREQ=2000` Beep 3 times, for 100ms each, at 2kHzfrequency.
+- `BEEP I=3 DUR=200 FREQ=2000` Beep 3 times, for 200ms each, at 2kHz frequency.
 
 ```
 [gcode_macro BEEP]

@@ -163,27 +163,27 @@ If you want your toolhead to park somewhere other than front center, modify the 
 rename_existing: BASE_PAUSE
 gcode:
     # Parameters
-    {% set z = params.Z|default(10)|int %}                                                                                  ; z hop amount
+    {% set z = params.Z|default(10)|int %}                                                   ; z hop amount
     
     {% if printer['pause_resume'].is_paused|int == 0 %}     
-        SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=zhop VALUE={z}                                                             ; set z hop variable for reference in resume macro
-        SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=etemp VALUE={printer['extruder'].target}                                   ; set hotend temp variable for reference in resume macro
+        SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=zhop VALUE={z}                              ; set z hop variable for reference in resume macro
+        SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=etemp VALUE={printer['extruder'].target}    ; set hotend temp variable for reference in resume macro
                                 
-        SET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=0                                                                 ; disable filament sensor       
-        SAVE_GCODE_STATE NAME=PAUSE                                                                                         ; save current print position for resume                
-        BASE_PAUSE                                                                                                          ; pause print
-        {% if (printer.gcode_move.position.z + z) < printer.toolhead.axis_maximum.z %}                                      ; check that zhop doesn't exceed z max
-            G91                                                                                                             ; relative positioning
-            G1 Z{z} F900                                                                                                    ; raise Z up by z hop amount
+        SET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=0                                  ; disable filament sensor       
+        SAVE_GCODE_STATE NAME=PAUSE                                                          ; save current print position for resume                
+        BASE_PAUSE                                                                           ; pause print
+        {% if (printer.gcode_move.position.z + z) < printer.toolhead.axis_maximum.z %}       ; check that zhop doesn't exceed z max
+            G91                                                                              ; relative positioning
+            G1 Z{z} F900                                                                     ; raise Z up by z hop amount
         {% else %}
-            { action_respond_info("Pause zhop exceeds maximum Z height.") }                                                 ; if z max is exceeded, show message and set zhop value for resume to 0
+            { action_respond_info("Pause zhop exceeds maximum Z height.") }                  ; if z max is exceeded, show message and set zhop value for resume to 0
             SET_GCODE_VARIABLE MACRO=RESUME VARIABLE=zhop VALUE=0
         {% endif %}
-        G90                                                                                                                 ; absolute positioning
-        G1 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} F19500                                 ; park toolhead at front center
-        SAVE_GCODE_STATE NAME=PAUSEPARK                                                                                     ; save parked position in case toolhead is moved during the pause (otherwise the return zhop can error) 
-        M104 S0                                                                                                             ; turn off hotend
-        SET_IDLE_TIMEOUT TIMEOUT=43200                                                                                      ; set timeout to 12 hours
+        G90                                                                                  ; absolute positioning
+        G1 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} F6000   ; park toolhead at front center
+        SAVE_GCODE_STATE NAME=PAUSEPARK                                                      ; save parked position in case toolhead is moved during the pause (otherwise the return zhop can error) 
+        M104 S0                                                                              ; turn off hotend
+        SET_IDLE_TIMEOUT TIMEOUT=43200                                                       ; set timeout to 12 hours
     {% endif %}
 ```
 
@@ -199,22 +199,22 @@ gcode:
     {% set e = params.E|default(2.5)|int %}
     
     {% if printer['pause_resume'].is_paused|int == 1 %}
-        SET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=1                                                                 ; enable filament sensor
-        #RESETRGB                                                                                                            ; reset LCD color
-        SET_IDLE_TIMEOUT TIMEOUT={printer.configfile.settings.idle_timeout.timeout}                                         ; set timeout back to configured value
+        SET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=1                          ; enable filament sensor
+        #RESETRGB                                                                    ; reset LCD color
+        SET_IDLE_TIMEOUT TIMEOUT={printer.configfile.settings.idle_timeout.timeout}  ; set timeout back to configured value
         {% if etemp > 0 %}
-            M109 S{etemp|int}                                                                                               ; wait for hotend to heat back up
+            M109 S{etemp|int}                                                        ; wait for hotend to heat back up
         {% endif %}
-        RESTORE_GCODE_STATE NAME=PAUSEPARK MOVE=1 MOVE_SPEED=100                                                            ; go back to parked position in case toolhead was moved during pause (otherwise the return zhop can error)  
-        G91                                                                                                                 ; relative positioning
-        M83                                                                                                                 ; relative extruder positioning
+        RESTORE_GCODE_STATE NAME=PAUSEPARK MOVE=1 MOVE_SPEED=100                     ; go back to parked position in case toolhead was moved during pause (otherwise the return zhop can error)  
+        G91                                                                          ; relative positioning
+        M83                                                                          ; relative extruder positioning
         {% if printer[printer.toolhead.extruder].temperature >= printer.configfile.settings.extruder.min_extrude_temp %}                                                
-            G1 Z{zhop * -1} E{e} F900                                                                                       ; prime nozzle by E, lower Z back down
+            G1 Z{zhop * -1} E{e} F900                                                ; prime nozzle by E, lower Z back down
         {% else %}                      
-            G1 Z{zhop * -1} F900                                                                                            ; lower Z back down without priming (just in case we are testing the macro with cold hotend)
+            G1 Z{zhop * -1} F900                                                     ; lower Z back down without priming (just in case we are testing the macro with cold hotend)
         {% endif %}                             
-        RESTORE_GCODE_STATE NAME=PAUSE MOVE=1 MOVE_SPEED=60                                                                 ; restore position
-        BASE_RESUME                                                                                                         ; resume print
+        RESTORE_GCODE_STATE NAME=PAUSE MOVE=1 MOVE_SPEED=60                          ; restore position
+        BASE_RESUME                                                                  ; resume print
     {% endif %}
 ```
 
@@ -264,9 +264,9 @@ Park the toolhead at different places. Automatically determined based on your pr
 # Park front center
 [gcode_macro PARKFRONT]
 gcode:
-    CG28                                                                                                                        ; home if not already homed
+    CG28                              ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKFRONT
-    G90                                                                                                                         ; absolute positioning
+    G90                               ; absolute positioning
     G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} Z{printer.toolhead.axis_maximum.z/2} F19500        
     RESTORE_GCODE_STATE NAME=PARKFRONT
 ```
@@ -274,9 +274,9 @@ gcode:
 # Park front center, but low down.
 [gcode_macro PARKFRONTLOW]
 gcode:
-    CG28                                                                                                                        ; home if not already homed
+    CG28                             ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKFRONT
-    G90                                                                                                                         ; absolute positioning
+    G90                              ; absolute positioning
     G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} Z20 F19500                                     
     RESTORE_GCODE_STATE NAME=PARKFRONT
 ```
@@ -284,9 +284,9 @@ gcode:
 # Park top rear left
 [gcode_macro PARKREAR]
 gcode:
-    CG28                                                                                                                        ; home if not already homed
+    CG28                             ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKREAR
-    G90                                                                                                                         ; absolute positioning
+    G90                              ; absolute positioning
     G0 X{printer.toolhead.axis_minimum.x+10} Y{printer.toolhead.axis_maximum.y-10} Z{printer.toolhead.axis_maximum.z-50} F19500     
     RESTORE_GCODE_STATE NAME=PARKREAR
 ```
@@ -294,9 +294,9 @@ gcode:
 # Park at center of build volume
 [gcode_macro PARKCENTER]
 gcode:
-    CG28                                                                                                                        ; home if not already homed
+    CG28                              ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKCENTER
-    G90                                                                                                                         ; absolute positioning
+    G90                               ; absolute positioning
     G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_maximum.y/2} Z{printer.toolhead.axis_maximum.z/2} F19500    
     RESTORE_GCODE_STATE NAME=PARKCENTER
 ```
@@ -304,9 +304,9 @@ gcode:
 # Park 15mm above center of bed
 [gcode_macro PARKBED]
 gcode:
-    CG28                                                                                                                        ; home if not already homed
+    CG28                               ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKBED
-    G90                                                                                                                         ; absolute positioning
+    G90                                ; absolute positioning
     G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_maximum.y/2} Z15 F19500                                     
     RESTORE_GCODE_STATE NAME=PARKBED
 ```

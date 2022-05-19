@@ -30,7 +30,7 @@ This guide was originally written for the Voron community, however all of the tu
     - **:warning: Important Checks**
 - [A Note About Line Width](/articles/a_note_about_line_width.md)
 - [Setting Expectations](/articles/setting_expectations.md)
-
+- [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md)
 - **Print Tuning** \
 *Essentials. Read/follow these in order shown.*
     - [Build Surface Adhesion](/articles/build_surface_adhesion.md)
@@ -69,6 +69,7 @@ This guide was originally written for the Voron community, however all of the tu
         - Method
         - Usage of the `TEST_SPEED` Macro
     - [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md)
+
 - **Miscellaneous**
     - [Useful Macros](/articles/useful_macros.md)
         - Conditional Homing
@@ -85,6 +86,7 @@ This guide was originally written for the Voron community, however all of the tu
             - Prusa Slicer
             - Cura
     - [Controlling Slicer Temperature G-Code Order (Simple Method)](/articles/controlling_slicer_g-code_order.md)
+
 - **Troubleshooting**\
 *Even without issues, it's worth looking through some of these to familiarize yourself with things to look out for.*
     - [BMG Clockwork Backlash Issues (Repeating Patterns / "Wood Grain")](/articles/troubleshooting/bmg_clockwork_backlash.md)

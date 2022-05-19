@@ -100,7 +100,7 @@ gcode:
     SET_LED LED=lcd RED={r} GREEN={g} BLUE={b} INDEX=3
 ```
 
-To reset the RGB / set the initial RGB. (set your default LCD colors here, and use `RESETRGB` to call set it back.)
+To reset the RGB / set the initial RGB. (**set your default LCD colors here**, and use `RESETRGB` to call set it back.)
 ```
 [gcode_macro RESETRGB]
 gcode:

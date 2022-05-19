@@ -267,7 +267,7 @@ gcode:
     CG28                              ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKFRONT
     G90                               ; absolute positioning
-    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} Z{printer.toolhead.axis_maximum.z/2} F19500        
+    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} Z{printer.toolhead.axis_maximum.z/2} F6000        
     RESTORE_GCODE_STATE NAME=PARKFRONT
 ```
 ```
@@ -277,7 +277,7 @@ gcode:
     CG28                             ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKFRONT
     G90                              ; absolute positioning
-    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} Z20 F19500                                     
+    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_minimum.y+5} Z20 F6000                                     
     RESTORE_GCODE_STATE NAME=PARKFRONT
 ```
 ```
@@ -287,7 +287,7 @@ gcode:
     CG28                             ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKREAR
     G90                              ; absolute positioning
-    G0 X{printer.toolhead.axis_minimum.x+10} Y{printer.toolhead.axis_maximum.y-10} Z{printer.toolhead.axis_maximum.z-50} F19500     
+    G0 X{printer.toolhead.axis_minimum.x+10} Y{printer.toolhead.axis_maximum.y-10} Z{printer.toolhead.axis_maximum.z-50} F6000     
     RESTORE_GCODE_STATE NAME=PARKREAR
 ```
 ```
@@ -297,7 +297,7 @@ gcode:
     CG28                              ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKCENTER
     G90                               ; absolute positioning
-    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_maximum.y/2} Z{printer.toolhead.axis_maximum.z/2} F19500    
+    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_maximum.y/2} Z{printer.toolhead.axis_maximum.z/2} F6000    
     RESTORE_GCODE_STATE NAME=PARKCENTER
 ```
 ```
@@ -307,7 +307,7 @@ gcode:
     CG28                               ; home if not already homed
     SAVE_GCODE_STATE NAME=PARKBED
     G90                                ; absolute positioning
-    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_maximum.y/2} Z15 F19500                                     
+    G0 X{printer.toolhead.axis_maximum.x/2} Y{printer.toolhead.axis_maximum.y/2} Z15 F6000                                     
     RESTORE_GCODE_STATE NAME=PARKBED
 ```
 

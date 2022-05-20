@@ -77,7 +77,7 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
     - **Prime Nozzle**: Unchecked
     - **Dwell Time**: 0
 
-\* *The bowden values I suggest here cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you nawrrow down a general range to work in, you may want to run the test again with a narrower range of PA values.*
+\* *The bowden values I suggest here cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you narrow down a general range to work in, you may want to run the test again with a narrower range of PA values.*
 
 **5)** Generate and download the g-code file.
 

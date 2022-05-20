@@ -15,7 +15,7 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.
-    - For V2, follow my [:page_facing_up:V2 gantry squaring](/articles/voron_v2_gantry_squaring.md) instructions. A poorly squared gantry can be the root cause of a lot of first layer issues.
+    - For V2, follow my [:page_facing_up:V2 gantry squaring](/articles/voron_v2_gantry_squaring.md) instructions. A poorly squared gantry can be the root cause of a lot of alignment issues.
     - On all CoreXY printers: [:page_facing_up:de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
         - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 

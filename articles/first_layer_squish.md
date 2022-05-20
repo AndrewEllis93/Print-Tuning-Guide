@@ -16,7 +16,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 **2)** Scatter square patches around your bed in your slicer. 
 - See the [:page_facing_up:test_prints folder](/test_prints). 
     - Choose a patch that matches your first layer height.\
-    *(Patch-25x25x0.25mm.stl if you chose to follow step 1)*
+    *(`First_Layer_Patch-0.25mm.stl` if you chose to follow step 1)*
 
 - ![](/images/FirstLayer-Plate.png)    
 

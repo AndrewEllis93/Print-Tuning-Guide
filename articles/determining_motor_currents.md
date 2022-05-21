@@ -25,7 +25,7 @@ For example, with a 2a motor, start around 0.8-1a.
 ## Determining Maximum `run_current`:
 
 ---------------------------------
-:warning:**In most cases, your motors will reach maximum or near-maximum performance before this point. Don't just slap them straight to max current.** 
+:warning: **In most cases, your motors will reach maximum or near-maximum performance before this point. Don't just slap them straight to max current.** 
 
 - Often that just results in extra heat (and potential driver overheating problems) for little actual gain past a certain breakpoint.
 

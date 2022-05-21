@@ -35,6 +35,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
             - This is a giant rabbit hole, be warned. Please don't ask me for help with this (sorry)
     - [Decontaminator nozzle brush](https://github.com/VoronDesign/VoronUsers/tree/master/abandoned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
     - Voron V2.2 handles & single panel front door
+    - PiCam with some random Thingiverse mount
     - [Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Other_Printer_Mods/tree/master/All_Printers/Annex_Panel_2020_Clips_and_Hinges)
 
 

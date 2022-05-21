@@ -325,6 +325,55 @@ gcode:
     RESTORE_GCODE_STATE NAME=PARKBED
 ```
 
+# Off
+
+Just an idea more than a copy-pastable macro as **yours will be different**. 
+
+It's just handy to have a shortcut to turn off everything at once!
+
+```
+[gcode_macro OFF]
+gcode:
+    M84                                  ; turn steppers off
+    TURN_OFF_HEATERS                     ; turn bed / hotend off
+    M107                                 ; turn print cooling fan off
+    #SET_FAN_SPEED FAN=Exhaust SPEED=0   ; turn exhaust fan off
+    #SET_FAN_SPEED FAN=BedFans SPEED=0   ; bed fan off
+    #SET_PIN PIN=caselight VALUE=0       ; turn light off
+```
+# Shut Down Pi
+
+OctoPrint and Moonraker use different shutdown commands, but it doesn't hurt to have both.
+
+I also throw in commands to turn off everything else first, otherwise your case lighting / neopixels etc will stay on.
+
+```
+[gcode_macro SHUTDOWN]
+gcode:
+    #LCDRGB R=0 G=0 B=0                               ; Turn off LCD neopixels
+    #OFF                                              ; Shortcut to turn everything off (see above section)
+    {action_respond_info('action:poweroff')}          ; OctoPrint compatible host shutdown
+	{action_call_remote_method("shutdown_machine")}   ; Moonraker compatible host shutdown
+```
+
+Then you can add it to the "setup" menu of your LCD with this:
+```
+[menu __main __setup __shutdown]
+type: command
+enable: {not printer.idle_timeout.state == "Printing"}
+name: Shut down
+gcode: SHUTDOWN
+```
+
+Or the "control" menu, if you prefer, with this:
+```
+[menu __main __control __shutdown]
+type: command
+enable: {not printer.idle_timeout.state == "Printing"}
+name: Shut down
+gcode: SHUTDOWN
+```
+
 # Dump Parameters
 This dumps all Klipper parameters to the g-code terminal. This helps to find Klipper system variables for use in macros.
 ```

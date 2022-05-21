@@ -78,6 +78,9 @@ This guide was originally written for the Voron community, however all of the tu
         - My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)
         - Filament Sensor Management
         - Parking
+        - Off
+        - Shut Down Pi
+            - As option in LCD menu
         - Dump Parameters
         - Replace `M109`/`M190` With `TEMPERATURE_WAIT`
     - [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md)

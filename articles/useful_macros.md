@@ -339,7 +339,7 @@ gcode:
     M107                                 ; turn print cooling fan off
     #SET_FAN_SPEED FAN=Exhaust SPEED=0   ; turn exhaust fan off
     #SET_FAN_SPEED FAN=BedFans SPEED=0   ; bed fan off
-    #SET_PIN PIN=caselight VALUE=0       ; turn light off
+    #SET_PIN PIN=caselight VALUE=0       ; turn case light off
 ```
 # Shut Down Pi
 
@@ -350,8 +350,8 @@ I also throw in commands to turn off everything else first, otherwise your case 
 ```
 [gcode_macro SHUTDOWN]
 gcode:
-    #LCDRGB R=0 G=0 B=0                               ; Turn off LCD neopixels
-    #OFF                                              ; Shortcut to turn everything off (see above section)
+    #LCDRGB R=0 G=0 B=0                               ; Turn off LCD neopixels (see above for this macro)
+    #OFF                                              ; Shortcut to turn everything off (see above for this macro)
     {action_respond_info('action:poweroff')}          ; OctoPrint compatible host shutdown
 	{action_call_remote_method("shutdown_machine")}   ; Moonraker compatible host shutdown
 ```

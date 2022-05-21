@@ -98,8 +98,7 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
 - `SMALLPATTERNSIZE` -  (Normally you do not need to specify/change this) The box size of the "small" movement pattern to perform at the center (in mm).
     - *Default: 20*
 
-**:warning:** *Note that any speed or acceleration you input into this macro can **exceed** 
-`max_velocity` and `max_accel` from your config. 
+**:warning:** Note that any speeds/accels you input into this macro can **override** the `max_velocity` and `max_accel` from your config. 
 ### Examples
 
 - `TEST_SPEED SPEED=400 ITERATIONS=50` 

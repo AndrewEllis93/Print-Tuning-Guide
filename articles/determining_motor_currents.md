@@ -48,7 +48,7 @@ For example, a 2a motor would be about 1.4a max.
 
 - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
 
-- If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 75-80C.
+- If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 80C.
     - Measure the temps when actually printing in a heat soaked chamber.
         - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
     - *You cannot accurately gauge this by feel.* Even lower temperatures will feel "too hot".

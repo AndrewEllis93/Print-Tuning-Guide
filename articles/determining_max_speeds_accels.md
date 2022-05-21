@@ -50,7 +50,7 @@ Tune maximum accelerations first, then tune speeds second.
 
 **8)** Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up:here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
 
-- This is only a *theoretical* maximum. I will explain more in the next step.
+- This is only a theoretical maximum. I will explain more in the next step.
 
 - For example, for a 300mm printer*, with a max accel of 3500:
 
@@ -92,10 +92,11 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
     - *Default: 5*
 - `BOUND` -  (Normally you do not need to specify/change this) How far to inset the "large" test pattern from the edges (in mm).This just helps prevent slamming the toolhead into the sides after small skips, and also accounts for imperfectly set printer dimensions.
     - *Default: 20*
-- `SMALLPATTERNSIZE` -  (Normally you do not need to specify/change this) The box size of the "small" movement pattern to perform at the center (in mm).
+- `SMALLPATTERNSIZE` -  (Normally you do not need to specify/change this) The box size of the small movement pattern to perform at the center (in mm).
     - *Default: 20*
 
-**:warning:** Note that any speeds/accels you input into this macro can **override** the `max_velocity` and `max_accel` from your config. 
+**:warning:** Note that the speeds/accels you input can **override** the `max_velocity` and `max_accel` in your config. 
+
 ### Examples
 
 - `TEST_SPEED SPEED=400 ITERATIONS=50` 

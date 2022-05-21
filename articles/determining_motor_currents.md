@@ -6,6 +6,7 @@ Extruder motors/pancake steppers are a bit different, as there is more variance 
 
 - **Check with the community first.**
     - If you are using BoM motors, check the stock configs.
+
     - Check in Discord to see what others are running.
 
 - **You should start off with a more conservative** `run_current`.
@@ -13,6 +14,7 @@ Extruder motors/pancake steppers are a bit different, as there is more variance 
 
 - **Some motors vary.**
     - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
+
     - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
 
 - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
@@ -21,7 +23,11 @@ Extruder motors/pancake steppers are a bit different, as there is more variance 
 ## Determining Initial `run_current`:
 Start with around **40-50%** of rated current.
 
-For example, with a 2a motor, start around 0.8-1a.
+- For example, with a 2a motor, start around 0.8-1a.
+
+Then you can [test your maximum speeds/accels](/articles/determining_max_speeds_accels.md) and make sure your motors are performing well. In most cases, the motors can handle speeds/accels much faster than what you would realistically be printing at.
+- If you are having issues reaching reasonable speeds/accels, you may have a mechanical problem. See [here](/articles/troubleshooting/layer_shifting.md).
+
 ## Determining Maximum `run_current`:
 
 ---------------------------------

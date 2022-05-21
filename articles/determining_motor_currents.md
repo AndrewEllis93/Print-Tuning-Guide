@@ -24,7 +24,16 @@ Start with around **40-50%** of rated current.
 For example, with a 2a motor, start around 0.8-1a.
 ## Determining Maximum `run_current`:
 
-:warning:**In most cases, your motors will reach maximum or near-maximum performance before this point. Don't just slap it straight to max current.** Often that just results in extra heat (and potential driver overheating problems) for little actual gain.
+---------------------------------
+:warning:**In most cases, your motors will reach maximum or near-maximum performance before this point. Don't just slap them straight to max current.** 
+
+- Often that just results in extra heat (and potential driver overheating problems) for little actual gain past a certain breakpoint.
+
+- Most 1.8 degree motors already have way more performance than you realistically need. 0.9 degree motors are more sensitive, however.
+
+- The ideal current is usually somewhere in the middle. Experiment with different motor currents and [test how they affect your maximum speeds/accels](/articles/determining_max_speeds_accels.md).
+
+---------------------------------
 
 A good rule of thumb is to not exceed **70%** of the rated current as absolute max.
 
@@ -32,6 +41,7 @@ For example, a 2a motor would be about 1.4a max.
 
 
 - Keep in mind that currents approaching maximum may need greater stepper driver cooling.
+
 - If you are pushing higher currents, you may also want to consider measuring the temperature of your motors. Ensure that they do not exceed 75-80C.
     - Measure the temps when actually printing in a heat soaked chamber.
         - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.

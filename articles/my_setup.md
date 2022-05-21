@@ -1,6 +1,6 @@
 # My Setup
 
-Voron V2.4 350mm
+Voron V2.4 350mm (with a lot of V2.2 bits still on it)
 - **Toolhead**
     - [AB-BN-30](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN)
         - Stealthburner will replace this.
@@ -40,4 +40,10 @@ Voron V2.4 350mm
 
 Excuse the hazy panels. Fact of life with ABS.
 
+I'm not a photographer, in case it wasn't astoundingly obvious :)
+
 ![](/images/my_setup.jpg)
+
+![](/images/my_setup_2.jpg)
+
+![](/images/my_setup_3.jpg)

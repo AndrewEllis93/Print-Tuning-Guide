@@ -19,7 +19,7 @@ Voron V2.4 350mm
     - Umbilical 
         - i.e. "flappy cable". No X/Y cable chains. 
         - This saves a fair bit of weight on the X axis, and I have not had a single wire break since (I had a lot of wire breaks with cable chains and got sick of them.) It's also WAY easier to service. You do lose a bit of Z height, though.
-        - I just did this the janky way - I just zip tied the far end to the Z chain, and the toolhead size to the reverse bowden tube. There are prettier mods out there for it.
+        - I just did this the janky way - I just wrapped the wires up and zip tied the far end to the Z chain, and the toolhead side to the reverse bowden tube. There are prettier mods out there for it.
     - Toolhead X endstop & A drive Y endstop 
         - Allows for umbilical.
         - A drive Y endstop is part of the pin mod below.

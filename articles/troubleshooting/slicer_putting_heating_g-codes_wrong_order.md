@@ -15,4 +15,4 @@ The two options below allow you to control this order.
 
 - Force g-code ordering (only allows changing the g-code order, but is easy to set up)
 
-    - See the *"Controlling G-code Order Without Passing Variables"* article [:page_facing_up:here](/articles/controlling_slicer_g-code_order.md).
+    - See the *"Controlling Slicer Temperature G-Code Order (Simple Method)"* article [:page_facing_up:here](/articles/controlling_slicer_g-code_order.md).

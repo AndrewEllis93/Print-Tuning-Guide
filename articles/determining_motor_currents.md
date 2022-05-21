@@ -1,6 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
 # Determining Motor Currents
-**:warning:** The below guidance is for **A/B/X/Y motors only**.
+**:warning:** The below guidance is for **axis motors only**.
 
 Extruder motors/pancake steppers are a bit different, as there is more variance between models.
 

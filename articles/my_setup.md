@@ -34,3 +34,8 @@ Voron V2.4 350mm
         - Used for sofware frame thermal expansion compensation (to combat thermal drift. Allows me to print from cold, without heat soaking. Though I do still wait for a minimum chamber temp to be reached.)
             - This is a giant rabbit hole, be warned. Please don't ask me for help with this (sorry)
     - [Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Other_Printer_Mods/tree/master/All_Printers/Annex_Panel_2020_Clips_and_Hinges)
+
+
+Excuse the hazy panels. Fact of life with ABS.
+
+![](/images/my_setup.jpg)

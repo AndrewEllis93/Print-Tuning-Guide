@@ -86,6 +86,7 @@ This guide was originally written for the Voron community, however all of the tu
             - Prusa Slicer
             - Cura
     - [Controlling Slicer Temperature G-Code Order (Simple Method)](/articles/controlling_slicer_g-code_order.md)
+    - [My Setup](/articles/my_setup.md) (since people ask a lot)
 
 - **Troubleshooting**\
 *Even without issues, it's worth looking through some of these to familiarize yourself with things to look out for.*

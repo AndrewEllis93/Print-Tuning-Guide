@@ -4,7 +4,9 @@
 
 # Conditional Homing
 
-Home if not already homed. Useful to throw at the beginning of other macros. This is used in many of the other macros below.
+**Home if not already homed.** 
+
+This is useful to throw at the beginning of other macros. This is used in many of the other macros below.
 ```
 [gcode_macro CG28]
 gcode:
@@ -52,7 +54,7 @@ gcode:
 This is the simple looping implementation. If you're feeling fancy, you can also [play tunes with it](https://github.com/majarspeed/Profiles-Gcode-Macros/tree/main/Beeper%20tunes). (Tune macros by Dustinspeed#6423)
 
 ## Non-PWM Beeper
-Non PWM beepers are used on some other displays such as the Ender 3 stock display.
+Non-PWM beepers are used on some other displays such as the Ender 3 stock display.
 
 Your `pin` will likely be different.
 ```
@@ -119,22 +121,23 @@ gcode:
 
 # My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)
 
-You need `[pause_resume]` specified in your config to be able to use these.
+**You need `[pause_resume]` specified in your config to be able to use these.**
 
-This macro set's features:
+Features:
 
-- Moves the toolhead (z hops) up by 10mm, then moves the toolhead to the front for easy loading/unloading.
-    - Will not z hop if this exceeds your max Z position.
-- Has protections to not allow you to automatically hit pause or resume twice.
-- During the pause, allows you to move toolhead around, and even run load/unload filament macros etc. It wil automatically return to its original position before resuming.
-- Automatically restores your gcode state (absolute vs relative extrusion mode, etc), should it be changed during the pause by another macro.
+- On pause, moves the toolhead (z hops) up by 10mm, then moves the toolhead to the front for easy loading/unloading.
+    - Will not z hop if this exceeds your max Z height.
+- Will not allow you to accidentally execute pause or resume twice.
+- Allows you to take other actions during the pause without messing anything up.
+    - You can move toolhead around during the pause, run load/unload filament macros etc. It wil automatically return to its original position before resuming.
+    - It also automatically restores your gcode state (absolute vs relative extrusion mode, etc), should it be changed during the pause by another macro.
 - Primes the nozzle while traveling back to resume the print, wiping the excess along the way. This just results in one little string to pick off.
 - Sets the idle timeout to 12 hours during the pause, and returns it to your configured value upon resume.
 - Turns off your filament sensor during the pause, so it doesn't trip and run its runout gcode again while you're already paused.
 - Turns off the hotend during the pause, and turns it back on for the resume.*
-    - \* *I highly advise keeping this functionality, even though it's a bit annoying. It's a safety feature. It's not ideal to lave your hotend cooking all night waiting for you to come and swap filament. And with a smart filament sensor, it can even sometimes catch heat creep clogs should your hotend fan fail.*
+    - \* ***I highly advise keeping this functionality**, even though it can be a bit annoying at times. It's a **safety feature**. It stops your hotend from cooking all night waiting for you to come and swap filament. And with a smart filament sensor, it can even sometimes catch heat creep clogs should your hotend fan fail.*
 
-**Some things are commented out that rely on other macros.** You can uncomment them if you choose to use those other macros.
+Some things are commented out that rely on other macros. You can uncomment them if you choose to use those other macros.
 
 ## M600 (Filament Change) Alias
 
@@ -243,7 +246,7 @@ If you use Octoprint, put these in your "GCODE Script" section to enable the UI 
 - ![](/images/Octoprint-Gcode-Scripts.png)
 
 # Filament Sensor Management
-This disables the filament sensor 1 second after startup. This prevents it from tripping while you're just loading filament, doing testing or maintenance, etc.
+This disables the filament sensor 1 second after startup. This prevents it from tripping constantly while you're just loading filament, doing testing or maintenance, etc.
 
 Put your filament sensor's name after `SENSOR=`.
 

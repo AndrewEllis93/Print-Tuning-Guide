@@ -33,6 +33,7 @@ Voron V2.4 350mm
     - Frame thermistor
         - Used for sofware frame thermal expansion compensation (to combat thermal drift. Allows me to print from cold, without heat soaking. Though I do still wait for a minimum chamber temp to be reached.)
             - This is a giant rabbit hole, be warned. Please don't ask me for help with this (sorry)
+    - [Decontaminator nozzle brush](https://github.com/VoronDesign/VoronUsers/tree/master/abandoned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
     - [Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Other_Printer_Mods/tree/master/All_Printers/Annex_Panel_2020_Clips_and_Hinges)
 
 

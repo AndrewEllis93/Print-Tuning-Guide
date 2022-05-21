@@ -21,9 +21,7 @@ It's also just a bit of fun. <sup>haha printer go brrrr</sup>
 
 ## Method
 
-Tune maximum accelerations first, THEN tune speeds second.
-
-Note: input shaper will affect these values. You may need to run through this again if you enable or disable input shaper.
+Tune maximum accelerations first, then tune speeds second.
 
 **1)** Add [:page_facing_up:this macro](/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
 
@@ -49,7 +47,6 @@ Note: input shaper will affect these values. You may need to run through this ag
 - Sometimes a maximum that works perfectly, even in extended torture tests, can skip during actual prints. Go a bit lower for a margin of safety.
 
 **7)** Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
-- Set your `max_accel_to_decel` to *half* of this value.
 
 **8)** Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up:here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
 

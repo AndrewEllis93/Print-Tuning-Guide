@@ -71,19 +71,19 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
     - **Layer Height**: 0.25mm
 - **Speed**
     - **Slow Printing Speed**: Your `square_corner_velocity` From your printer.cfg. Default is 5.
-    - **Fast Printing Speed**: 120mm/s
-        - *For bed slingers, 120mm/s may be less realistic. Just set this to the max print speed you see yourself using for perimeters.*
+    - **Fast Printing Speed**: 120mm/s*
+        - \* You can set this to your fastest perimeter speed to try and better simulate real life prints. However if you typically print perimeters slowly, the results may be harder to read. Faster speeds exaggerate the effect.
     - **Acceleration**: Your perimeter acceleration
 - **Pattern**
-    - **Starting Value for PA**: 0
-    - **Ending Value for PA**:
-        - **Direct Drive**: 0.1
-        - **Bowden***: 1.5
-    - **PA Stepping:**:
-        - **Direct Drive**: 0.005
-        - **Bowden***: 0.05
+    - **Starting Value for PA:** 0
+    - **Ending Value for PA:**
+        - **Direct Drive:** 0.1
+        - **Bowden:** 1.5*
+    - **PA Stepping:**
+        - **Direct Drive:** 0.005
+        - **Bowden:** 0.05*
     - **Test Line Spacing:**
-        - **Voron 0 (120mm bed)**: 4
+        - **Voron 0 (120mm bed):** 4
         - **Default**: 5
     - **Print Anchor Frame**: Checked
 - **Advanced**
@@ -91,7 +91,7 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
     - **Prime Nozzle**: Unchecked
     - **Dwell Time**: 0
 
-\* *The bowden values I suggest here cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you narrow down a general range to work in, you may want to run the test again with a narrower range of PA values.*
+\* *The bowden values I suggest here cover a wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you narrow down a general range to work in, you may want to run the test again with a narrower range of PA values.*
 
 **5)** Generate and download the g-code file.
 
@@ -105,13 +105,13 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
     - In the below example, I would choose about **0.055**.\
 *(note: mine is likely higher than a normal Afterburner. I am using an Orbiter + Dragon HF.)*
 
-    - **For Bowden:** The values I suggested above for bowden cover a very wide range of PA values (0-1.5), because each bowden setup can vary widely. Once you find a general range to work in from the first test, you may want to run the test again with a narrower range of PA values.
-
-    ![](/images/KFactor-Print.jpg) 
+    - ![](/images/KFactor-Print.jpg) 
 
 **7)** In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.
 - Alternatively, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=<value>` in your slicer's custom filament g-code.*
+
     - Replace `<value>` with your desired PA.
+
     - \* *Unless you use Cura, which for some reason **still** doesn't support this basic functionality.*
 
 **8)** Try printing something! 
@@ -120,13 +120,17 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
 
 ## Tower Method
 
-**I would highly recommend using the [:pushpin:lines method](/articles/pressure_advance.md#lines-method) rather than this method, if you can take some time to wrap your head around a small amount of manual g-code editing.** It is quicker and more precise. This "tower method" is here for beginners, and works, but is not my preferred method as it's a bit less precise.
+---
+
+**I would highly recommend using the [:pushpin:lines method](/articles/pressure_advance.md#lines-method) rather than this method, if you can take some time to wrap your head around a small amount of g-code.** It is quicker and more precise. This "tower method" is here for beginners, and works, but is not my preferred method as it's a bit less precise.
 
 This is based off of the [:page_facing_up:Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 
 The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I'm not a fan of this approach.
 
 In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
+
+---
 
 **1)** Download and slice the [:page_facing_up:Klipper3d pressure advance tower STL](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
 The only modifications you should make are these:

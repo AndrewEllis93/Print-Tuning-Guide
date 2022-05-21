@@ -1,15 +1,24 @@
 [:arrow_left: Back to Table of Contents](/README.md)
 # Determining Maximum Speeds and Accelerations
 
-This article is purely about finding your absolute maximum speeds/accels. **This does not necessarily mean that these speeds or accelerations will be practical to print with** - but it can be handy to find the limits of your printer. You can use max speeds for things like travels, mesh, QGL, etc.
+This article is purely about finding your absolute maximum speeds/accels. **This does not necessarily mean that these speeds or accelerations will be practical to print with,** and in fact your max speeds/accels will often be way higher than is reasonable to daily drive (for longevity). 
 
-You may be able to get higher performance out of your motors by increasing currents (see [:page_facing_up:here](/articles/determining_motor_currents.md) for more info), but be careful not to push them too high.
+It's very handy for troubleshooting motor skipping issues, and for optimizing 0.9° motors, however. You can also use these speeds for travels (but fast travels have significantly dimishing returns for overall print times). Or just if you're into speed benchies.
 
-**You may also get higher maximum accelerations by utilizing input shaper, and may want to re-tune your max accels after tuning input shaper.**
+It's also just a bit of fun. <sup>haha printer go brrrr</sup>
 
-1.8° motors can generally reach higher top speeds/accels than 0.9° motors. Higher voltage systems (e.g. 24v vs 12v) can also generally reach higher top speeds/accels.
+**Notes:**
 
-For example my 2a 0.9° LDO motors top out around 450mm/s. My 2a 1.8° OMC motors topped out closer to 700-800mm/s.
+- 1.8° motors can generally reach higher top speeds/accels than 0.9° motors. 
+
+    - For example my 2a 0.9° LDO motors top out around 450mm/s. My 2a 1.8° OMC motors could reach closer to 800-1000mm/s.
+
+- You may be able to get higher performance out of your motors by increasing currents (see [:page_facing_up:here](/articles/determining_motor_currents.md) for more info), but be careful not to push them too high.
+
+- You may also get higher maximum accelerations by utilizing input shaper, and may want to **re-tune your max accels after tuning input shaper.**
+
+- Higher voltage systems (e.g. 24v vs 12v) can also generally reach higher top speeds/accels.
+
 ## Method
 
 Tune maximum accelerations first, THEN tune speeds second.

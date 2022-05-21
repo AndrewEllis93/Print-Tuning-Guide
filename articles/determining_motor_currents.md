@@ -13,9 +13,9 @@ Extruder motors/pancake steppers are a bit different, as there is more variance 
     - You may be able to attain additional motor performance by increasing currents, but come back to that later. **Get your printer working reliably first.**
 
 - **Some motors vary.**
-    - I have found my LDO 0.9 degree steppers to be able to achieve notably higher max accels/speeds with higher currents. 
+    - I have found my LDO 0.9° steppers to be able to achieve notably higher max accels/speeds with higher currents. 
 
-    - My OMC 1.8 degree motors, on the other hand, performed very well even at moderate currents.
+    - My OMC 1.8° motors, on the other hand, performed very well even at moderate currents.
 
 - We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
 - TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.
@@ -35,7 +35,7 @@ Then you can [:page_facing_up:test your maximum speeds/accels](/articles/determi
 
 - Often that just results in extra heat (and potential driver overheating problems) for little actual gain past a certain breakpoint.
 
-- Most 1.8 degree motors already have way more performance than you realistically need. 0.9 degree motors are more sensitive, however.
+- Most 1.8° motors already have way more performance than you realistically need. 0.9° motors are more sensitive, however.
 
 - The ideal current is usually somewhere in the middle. Experiment with different motor currents and [:page_facing_up:test how they affect your maximum speeds/accels](/articles/determining_max_speeds_accels.md).
 

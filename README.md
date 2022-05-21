@@ -89,7 +89,7 @@ This guide was originally written for the Voron community, however all of the tu
     - [My Setup](/articles/my_setup.md) (since people ask a lot)
 
 - **Troubleshooting**\
-*Even without issues, it's worth looking through some of these to familiarize yourself with things to look out for. Especially thermal drift under "First Layer / Squish Consistency Issues"*
+*Even without issues, it's worth looking through some of these to familiarize yourself with things to look out for. **Especially** thermal drift under "First Layer / Squish Consistency Issues"*
     - [BMG Clockwork Backlash Issues (Repeating Patterns / "Wood Grain")](/articles/troubleshooting/bmg_clockwork_backlash.md)
     - [Bulging](/articles/troubleshooting/bulging.md)
         - Bulging Layers

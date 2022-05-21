@@ -81,7 +81,8 @@ Note: input shaper will affect these values. You may need to run through this ag
 
 The macro is available [:page_facing_up:here.](/macros/TEST_SPEED.cfg)
 
-This macro will home, QGL *(if your printer uses QGL / has not yet done a QGL)*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
+This macro will home, QGL*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
+- **If your printer uses QGL / has not yet done a QGL. This is important, as a contorted gantry can cause alignment issues and skipping.*
 
 You will [:pushpin:watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 

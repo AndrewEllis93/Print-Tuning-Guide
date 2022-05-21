@@ -73,6 +73,7 @@ This guide was originally written for the Voron community, however all of the tu
 - **Miscellaneous**
     - [Useful Macros](/articles/useful_macros.md)
         - Conditional Homing
+        - Conditional QGL
         - Beeper
         - LCD RGB
         - My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)

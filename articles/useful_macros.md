@@ -14,6 +14,20 @@ gcode:
         G28
     {% endif %}
 ```
+
+# Conditional QGL
+QGL if not already done.
+
+I don't personally use this, I prefer to QGL every print. But some people like it.
+```
+[gcode_macro CQGL]
+gcode:
+    {% if printer.quad_gantry_level.applied == False %}
+        QUAD_GANTRY_LEVEL
+        G28 Z
+    {% endif %}
+```
+
 # Beeper
 Allows you to utilize your LCD beeper. 
 This requires you to specify your beeper pin as an output pin.

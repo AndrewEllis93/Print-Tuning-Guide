@@ -24,7 +24,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
         - Allows for umbilical.
         - A drive Y endstop is part of the pin mod below.
         - The toolhead X endstop is my own mod, and is outdated now. Not sure what other options are currently available, haven't looked into it.
-    - [Pin mod]()
+    - [Pin mod](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_Pins_Mod)
     - [GE5C mod](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_GE5C)
     - Gantry backers
         - [MGN9 Y backers](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers)

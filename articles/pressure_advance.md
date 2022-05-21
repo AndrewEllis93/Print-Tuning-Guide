@@ -43,14 +43,26 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
 **:warning:** *Exercise caution here. As mentioned previously, you can damage your printer if you don't set up the start g-code correctly, for example forgetting `QUAD_GANTRY_LEVEL` or `PRINT_START` (if used).*
 
 - This is where you will set your temperatures (`M109`/`M190`).
+
 - Copy over your slicer's start g-code (from your printer profile) and paste it beneath the `M109`/`M190`. 
+
     - You can usually *replace* the default contents beneath the `M109`/`M190`, but there are some default preperatory g-codes (homing, QGL, etc) just in case.
         - `PRINT_START` macros usually contains all of this, but please double check.
+
             - If you are [:page_facing_up:passing variables to `PRINT_START`](/articles/passing_slicer_variables.md), remember to append them to `PRINT_START`. Example: `PRINT_START HOTEND=240 BED=110`
+
                 - Your variable naming may be different, e.g. `EXTRUDER=X` instead of `HOTEND=X`.
+
                 - You can then comment out the separate heating g-codes.
+
+            - For **Vorons** with the stock `PRINT_START` macro, this is all you need:\
+            (change the temperatures appropriately, though):
+
+                - ![](/images/pa_start_gcode.png)
+
     - If your start g-code has any slicer variables (for example `[first_layer_bed_temperature]`), make sure to replace them with appropriate values.
-    - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check / failsafe. This is just to ensure you don't try to use the default start g-code completely unmodified.
+
+    - Remove the `M112`. This is an emergency stop, and is there as a reading comprehension check to ensure that you have verified the start g-code.
 
 **4)** Fill out the tuning parameters. Many can be left at defaults, but here are some specific settings that I recommend:
 

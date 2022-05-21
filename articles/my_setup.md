@@ -39,6 +39,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
     - [Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Other_Printer_Mods/tree/master/All_Printers/Annex_Panel_2020_Clips_and_Hinges)
 
 
+## Photos
 Excuse the hazy panels. Fact of life with ABS.
 
 I'm not a photographer, in case it wasn't astoundingly obvious :)

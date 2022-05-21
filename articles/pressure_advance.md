@@ -47,6 +47,7 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
 - Copy over your slicer's start g-code (from your printer profile) and paste it beneath the `M109`/`M190`. 
 
     - You can usually *replace* the default contents beneath the `M109`/`M190`. There are some default preperatory g-codes (`G28`, `G32`, etc) just in case.
+
         - `PRINT_START` macros usually contains all of this, but please double check.
 
             - If you are [:page_facing_up:passing variables to `PRINT_START`](/articles/passing_slicer_variables.md), remember to append them to `PRINT_START`. Example: `PRINT_START HOTEND=240 BED=110`
@@ -70,7 +71,8 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
     - **Layer Height**: 0.25mm
 - **Speed**
     - **Slow Printing Speed**: Your `square_corner_velocity` From your printer.cfg. Default is 5.
-    - **Fast Printing Speed**: 120mm/sec
+    - **Fast Printing Speed**: 120mm/s
+        - *For bed slingers, 120mm/s may be less realistic. Just set this to the max print speed you see yourself using for perimeters.*
     - **Acceleration**: Your perimeter acceleration
 - **Pattern**
     - **Starting Value for PA**: 0

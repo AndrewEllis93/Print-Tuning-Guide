@@ -23,7 +23,10 @@ Start with around **40-50%** of rated current.
 
 For example, with a 2a motor, start around 0.8-1a.
 ## Determining Maximum `run_current`:
-A good rule of thumb is to not exceed **70%** of the rated current.
+
+:warning:**In most cases, your motors will reach maximum or near-maximum performance before this point. Don't just slap it straight to max current.** Often that just results in extra heat (and potential driver overheating problems) for little actual gain.
+
+A good rule of thumb is to not exceed **70%** of the rated current as absolute max.
 
 For example, a 2a motor would be about 1.4a max.
 

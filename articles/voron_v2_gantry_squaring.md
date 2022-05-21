@@ -101,7 +101,9 @@ This can potentially cause:
 
 **13)** [:page_facing_up:Re-tension your A/B belts](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz **over a 15cm span**).
 - Don't miss the video link in that post. It's easy to overlook.
-- I prefer the Gates Carbon Drive app. Select the "motorcycle" option.
+- Apps:
+    - Android: Gates Carbon Drive (select "motorcyle" option) or Spectroid.
+    - iPhone: Gates Carbon Drive (select "motorcyle" option) or Sound Spectrum Analysis.
 
 **14)** Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
 

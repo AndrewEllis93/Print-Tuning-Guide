@@ -12,6 +12,9 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 
 - Your belts may be too tight. [:page_facing_up:Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
     - Don't miss the video link in page linked above. 
+    - Apps:
+        - Android: Gates Carbon Drive (select "motorcyle" option) or Spectroid.
+        - iPhone: Gates Carbon Drive (select "motorcyle" option) or Sound Spectrum Analysis.
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.

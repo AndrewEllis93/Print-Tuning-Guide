@@ -9,6 +9,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
     - Orbiter 1.5
 - **Hardware Upgrades**
     - LDO-42STH40-2004MAH(VRN) A/B motors
+        - Honestly I'd stick with the motors from the sourcing guide. Didn't get much out of the upgrade to 0.9 degree motors apart from lower speeds :clown_face:
     - Single Hiwin MGN9 rail on X
     - Genuine gates pulleys/idlers in gantry
     - [BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Filament-Sensor-Detection-Printer/dp/B07Z7Y5VY9)

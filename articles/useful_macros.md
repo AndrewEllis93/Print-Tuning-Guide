@@ -171,7 +171,6 @@ This goes in your filament sensor config section.
 ```
 runout_gcode:
     #LCDRGB R=1 G=0 B=0  ; Turn LCD red
-    PAUSE                ; Pause
     #BEEP I=12           ; Beep 12 times
 ```
 -------------

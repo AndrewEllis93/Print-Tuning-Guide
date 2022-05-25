@@ -219,7 +219,7 @@ variable_zhop: 0
 variable_etemp: 0
 gcode:
     # Parameters
-    {% set e = params.E|default(2.5)|int %}
+    {% set e = params.E|default(2.5)|int %}                                          ; hotend prime amount (in mm)
     
     {% if printer['pause_resume'].is_paused|int == 1 %}
         SET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=1                          ; enable filament sensor

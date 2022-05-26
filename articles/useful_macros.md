@@ -166,7 +166,7 @@ gcode:
     PAUSE                ; Pause
 ```
 ## Example Filament Sensor Config
-Connect your filament sensor to any free endstop port, and update `switch_pin` in the below configs accordingly.
+Connect your filament sensor to any free endstop port, and update `switch_pin` in the below configs accordingly. **Don't forget the pullup (`^`) on the pin** or you may get false positives.
 
 ### Basic Filament Switch Sensor
 [Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_switch_sensor)
@@ -204,7 +204,7 @@ runout_gcode:
 ```
 -------------
 
-*I use a [BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. You can poke through my config [here](https://github.com/AndrewEllis93/v2.247_backup_klipper_config), but there's not much to it apart from the macros described in this guide. Just **don't forget the pullup on the pin (`^`)!!***
+*I use a [BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!***
 
 ## Pause
 If you use a filament sensor, put its name in the `SET_FILAMENT_SENSOR` command. Otherwise, comment that out.
@@ -307,10 +307,6 @@ Then:
 - Put `SET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=0` in your `PRINT_END`/pause/cancel macros. 
 
 The above pause/resume/cancel macros have this already. Just update the sensor name.
-
--------------
-
-*I use a [BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. You can poke through my config [here](https://github.com/AndrewEllis93/v2.247_backup_klipper_config), but there's not much to it apart from the macros described in this guide. Just **don't forget the pullup on the pin (`^`)!!***
 
 # Parking
 

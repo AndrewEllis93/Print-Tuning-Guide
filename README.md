@@ -77,6 +77,13 @@ This guide was originally written for the Voron community, however all of the tu
         - Beeper
         - LCD RGB
         - My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)
+            - M600 (Filament Change) Alias
+            - Example Filament Sensor Config
+                - Basic Filament Switch Sensor
+                - Smart Filament Sensor
+            - Pause
+            - Resume
+            - Cancel 
         - Filament Sensor Management
         - Parking
         - Off

@@ -84,7 +84,7 @@ This guide was originally written for the Voron community, however all of the tu
             - Pause
             - Resume
             - Cancel
-            - Octoprint 
+            - Octoprint Configuration 
         - Filament Sensor Management
         - Parking
         - Off

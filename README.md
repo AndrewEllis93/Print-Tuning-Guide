@@ -83,7 +83,8 @@ This guide was originally written for the Voron community, however all of the tu
                 - Smart Filament Sensor
             - Pause
             - Resume
-            - Cancel 
+            - Cancel
+            - Octoprint 
         - Filament Sensor Management
         - Parking
         - Off

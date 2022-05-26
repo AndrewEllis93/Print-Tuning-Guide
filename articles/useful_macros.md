@@ -285,7 +285,7 @@ gcode:
     BASE_CANCEL_PRINT
 ```
 
-## Octoprint
+## Octoprint Configuration
 If you use Octoprint, put these in your "GCODE Script" section to enable the UI buttons to work properly.
 
 - ![](/images/Octoprint-Gcode-Scripts.png)

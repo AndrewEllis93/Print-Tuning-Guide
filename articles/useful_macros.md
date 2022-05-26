@@ -191,7 +191,7 @@ Note that a smart filament sensor only works when the filament is moving (or not
 
 ```
 [filament_motion_sensor filament_sensor]
-detection_length: 10     ; 
+detection_length: 10
 extruder: extruder
 switch_pin: ^P1.24
 pause_on_runout: True

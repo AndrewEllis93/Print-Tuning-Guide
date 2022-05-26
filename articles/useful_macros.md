@@ -165,13 +165,42 @@ gcode:
     #LCDRGB R=0 G=1 B=0  ; Turn LCD green
     PAUSE                ; Pause
 ```
-## Runout G-Code
-This goes in your filament sensor config section.
+## Example Filament Sensor Config
+Connect your filament sensor to any free endstop port, and update `switch_pin` in the below configs accordingly.
+
+### Basic Filament Switch Sensor
+[Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_switch_sensor)
+```
+[filament_switch_sensor filament_sensor]
+switch_pin: ^P1.24
+pause_on_runout: True
+insert_gcode:
+    M117 Insert Detected
+runout_gcode:
+    M117 Runout Detected
+    #LCDRGB R=1 G=0 B=0  # Turn LCD red
+    #BEEP I=12
+```
+
+### Smart Filament Sensor
+[Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_motion_sensor)
+
+Adjust `detection_length` to change the sensitivity. The BTT sensor "ticks" every 7mm. I recommend starting with 10mm to prevent false positives from flow dropoff, bowden slack, etc.
+
+Note that a smart filament sensor only works when the filament is moving (or not) during extrusion. Testing with `QUERY_FILAMENT_SENSOR` will not work. Test by releasing filament drive tension or grabbing/cutting the filament during a print.
 
 ```
+[filament_motion_sensor filament_sensor]
+detection_length: 10     ; 
+extruder: extruder
+switch_pin: ^P1.24
+pause_on_runout: True
+insert_gcode:
+    M117 Insert Detected
 runout_gcode:
-    #LCDRGB R=1 G=0 B=0  ; Turn LCD red
-    #BEEP I=12           ; Beep 12 times
+    M117 Runout Detected
+    #LCDRGB R=1 G=0 B=0  # Turn LCD red
+    #BEEP I=12
 ```
 -------------
 

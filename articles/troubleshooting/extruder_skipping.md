@@ -13,6 +13,8 @@ Skipping below top layer:
 
 ![](/images/troubleshooting/ExtruderSkips-5.png)
 
+- If you are printing PLA, **don't do it in an enclosure**. Enclosure temps can *easily* get hot enough to soften PLA in the extruder/heatbreak and cause endless jams. Open your chamber door - or better yet, take the panels/enclosure off entirely.
+
 - Mark a line on your extruder motor shaft with a sharpie (on the back side of the motor). Observe what it's doing while the issue is occuring.
     - Shuddering: A wiring issue or mechanical resistance.
     - Not moving at all: A wiring or electrical issue, or stepper driver overheating.

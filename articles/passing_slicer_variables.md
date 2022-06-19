@@ -48,13 +48,15 @@ Chamber defaults to 0 if not specified.
 
 ### Parameters
 
-The "Parameters" section at the beginning takes the arguments (parameters) being passed to the macro (right side) and saves each to its own variable (left side). 
+The "Parameters" section at the beginning takes the arguments (parameters) being passed to the macro (right side) and saves each to its own runtime variable (left side). 
 
 This way, we only have to set the data type (int, float, string, etc) and set any defaults **once**. This allows for easy reuse in the rest of the macro. It also consolidates all of your parameters and defaults into one place for easy readability/sharing.
 
 You can technically forego the parameter setup section entirely and just pass the parameters directly (for example `M190 S{params.BED|int}`).
 
 It's a preference, but I think it's better practice to do it this way.
+
+These variables are discarded once the macro finishes. You *can* set up persistent/global variables, but that's another topic.
 
 ---
 ### Slicer Start G-code

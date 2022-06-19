@@ -42,7 +42,9 @@ gcode:
 ```
 
 This would now be run like `PRINT_START BED=110 HOTEND=240 CHAMBER=50`. 
-Chamber defaults to 0 if not specified.
+Chamber defaults to 0 if not specified*.
+
+<sup>* I wouldn't recommend setting defaults for bed & hotend temp. You **want** your macro to fail if your slicer does not correctly pass those temperatures.</sup>
 
 ---
 
@@ -52,7 +54,7 @@ The "Parameters" section at the beginning takes the arguments (parameters) being
 
 This way, we only have to set the data type (int, float, string, etc) and set any defaults **once**. This allows for easy reuse in the rest of the macro. It also consolidates all of your parameters and defaults into one place for easy readability/sharing.
 
-You can technically forego the parameter setup section entirely and just pass the parameters directly (for example `M190 S{params.BED|int}`).
+You can technically forgo the parameter setup section entirely and just pass the parameters directly (for example `M190 S{params.BED|int}`).
 
 It's a preference, but I think it's better practice to do it this way.
 

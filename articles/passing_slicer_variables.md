@@ -15,7 +15,7 @@ This section will demonstrate passing temperature variables to PRINT_START.
 By default, slicers will put heating commands either entirely before or after `PRINT_START`. You have to pass the temps TO `PRINT_START` in order to control when they happen. 
 For example I don’t want my nozzle to heat until the very end so it’s not oozing during QGL, mesh etc.
 
-If you don’t use a chamber thermistor, just remove the chamber stuff. 
+If you don’t use a chamber thermistor, just remove/comment out the chamber stuff. 
 
 ### Example macro:
 

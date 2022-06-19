@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Determining Motor Currents
 **:warning:** The below guidance is for **axis motors only**.
 
@@ -57,3 +59,6 @@ For example, a 2a motor would be about 1.4a max.
 Recently, Klipper docs have started to [:page_facing_up:recommend against using a separate `hold_current`.](https://github.com/Klipper3d/klipper/pull/4977) You can achieve this by commenting out `hold_current`, or by setting it to the same value as your `run_current`.
 
 If you run a different `hold_current`, a good rule of thumb is about 70% of your `run_current`.
+
+---
+[:arrow_left: Back to Table of Contents](/README.md)

@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Determining Maximum Volumetric Flow Rate
 
 Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.
@@ -57,15 +59,15 @@ For example, if your hotend is capable of 24mm<sup>3</sup>/sec, and you are prin
 
 ## Formulas
 
-**mm<sup>3</sup> = mm / 0.416**
+**mm<sup>3</sup> = mm * 2.4***
 
 Or, inversely, 
 
-**mm = mm<sup>3</sup> * 0.416**
+**mm = mm<sup>3</sup> / 2.4**
 
-For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm / 0.416)
+For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm * 2.4)
 
-\* <sup>*For 2.85mm filament, use 0.157 instead of 0.416.*</sup>\
+\* <sup>*For 2.85mm filament, use 6.37 instead of 2.4.*</sup>\
 \* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [:page_facing_up:Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>
 
 ## Method
@@ -123,3 +125,6 @@ Many people will actually set a higher volumetric flow rate limit, a bit past th
     - **Stopping before skipping starts:** you can use this number and push speeds for things like infill, BUT you will need to be more vigilant about what speeds you are printing other features (such as perimeters) to prevent underextrusion and line gaps.
 
     - The numbers in the [:pushpin:"approximate values"](/articles/determining_max_volumetric_flow_rate.md#approximate-values) section are **somewhere in the middle** of the two extremes.
+
+---
+[:arrow_left: Back to Table of Contents](/README.md)

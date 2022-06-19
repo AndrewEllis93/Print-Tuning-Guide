@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # First Layer Squish
 
 I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 
@@ -111,3 +113,7 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
     ![](/images/FirstLayer-NotEnoughSquish4.png)
     - Better!\
         ![](/images/FirstLayer-NotEnoughSquish4-Better.png)
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

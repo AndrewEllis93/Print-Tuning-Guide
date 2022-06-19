@@ -1,5 +1,7 @@
 [:arrow_left: Back to Table of Contents](/README.md)
 
+---
+
 # Useful Macros
 
 # Conditional Homing
@@ -460,3 +462,7 @@ gcode:
         TEMPERATURE_WAIT SENSOR=heater_bed MINIMUM={s} MAXIMUM={s+1}  ; Wait for bed temp (within 1 degree)
     {% endif %}
 ```
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

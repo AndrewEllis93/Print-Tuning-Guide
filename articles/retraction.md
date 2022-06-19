@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Retraction
 
 **:warning: You should [:page_facing_up:tune pressure advance](/articles/pressure_advance.md) first.**
@@ -88,3 +90,7 @@ We will be printing these retraction towers at three different temperatures. If 
     - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
         - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
         - We are subtracting 1 because the first ring is 0 retraction.
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

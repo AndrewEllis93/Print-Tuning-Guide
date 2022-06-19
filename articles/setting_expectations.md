@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Setting Expectations
 ## Layer Consistency
 
@@ -50,3 +52,7 @@ My guide should (hopefully) get you somewhere around the 5 or 10.
 
 
 Now that we've got all that out of the way, on to the tuning!
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

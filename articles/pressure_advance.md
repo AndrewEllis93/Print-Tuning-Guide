@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Pressure Advance
 
 **:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
@@ -201,3 +203,7 @@ The above methods are usually good enough on their own. Choosing the right heigh
 - Gaps between straight line perimeters.
 
 - ![](/images/PA-Low-1.png) 
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

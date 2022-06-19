@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Voron V2 Gantry Squaring
 
 ## Why?
@@ -121,3 +123,7 @@ This can potentially cause:
         - This can help with ringing and layer consistency.
 
 **17)** Restore your `[idle_timeout]` settings (changed in step 1).
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

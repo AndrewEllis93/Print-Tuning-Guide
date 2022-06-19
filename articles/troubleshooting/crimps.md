@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Crimps
 - Pull on each wire. Ensure that none of the pins are starting to back out of the housings.
     - If any pins are backing out, it's possible that you may have crimped incorrectly. 
@@ -16,3 +18,7 @@
 
         - Do a "pull test". Ensure that the pins do not come out of the housings. 
             - Microfits hold *very* strongly. The pins should be nearly impossible to pull out of the housings. The wire will usually tear before they ever come out.
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Layer Shifting
 
 ![](/images/troubleshooting/LayerShifting/1.png)
@@ -60,3 +62,7 @@ Sometimes layer shifting can occur because you are simply asking too much of you
         - Ensure that they have heatsinks installed on them.
         - Ensure that they have adequate airflow*. 
             - \* *The v0 does not spec stepper driver cooling by default. This is usually fine, as it runs lower motor currents. It may be worth trying, though, if you are having issues (especially if you are running higher motor currents.)*
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

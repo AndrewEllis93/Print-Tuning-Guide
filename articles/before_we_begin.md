@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Before We Begin
 
 Please remember that tuning prints will get you close, but they should not be taken as gospel. **You should get in the habit of finely adjusting based on actual prints afterwards.**
@@ -38,3 +40,6 @@ Before you follow *any* tuning methods in this guide, ensure that:
 - Your motion components are clean, particularly between gear/pulley/idler teeth.
 - Your nozzle is clean.
 - Your nozzle has been tightened **while hot** (unless it's a Revo), and is not leaking material through the threads around the nozzle or heatbreak.
+
+---
+[:arrow_left: Back to Table of Contents](/README.md)

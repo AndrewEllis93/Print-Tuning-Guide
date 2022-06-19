@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # PA / EM Oddities
 ## Slight Perimeter Gapping
 Some find that after tuning PA and EM, minor perimeter gapping is still present:
@@ -40,3 +42,7 @@ There are a few different things you can do:\
 1. Cover them up using single top perimeters (only available in SuperSlicer).
 2. Slowly increase your EM until the gaps are covered. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
 3. Slow your perimeters down. The faster you print, the more pronounced these PA imperfections become.
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

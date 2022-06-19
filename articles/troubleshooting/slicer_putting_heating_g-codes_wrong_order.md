@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Slicer is Putting Heating G-codes in the Wrong Place/Order
 
 For example:
@@ -16,3 +18,7 @@ The two options below allow you to control this order.
 - Force g-code ordering (only allows changing the g-code order, but is easy to set up)
 
     - See the *"Controlling Slicer Temperature G-Code Order (Simple Method)"* article [:page_facing_up:here](/articles/controlling_slicer_g-code_order.md).
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

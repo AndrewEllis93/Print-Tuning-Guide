@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Extruder Skipping
 These skips will typically be wider than [:page_facing_up:pockmarks.](/articles/troubleshooting/pockmarks.md)
 
@@ -89,3 +91,7 @@ If there is much resistance, *figure out where it is coming from:*
     - Ensure that your drive shaft is not rubbing against the motor:
         - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
         - ![](/images/troubleshooting/ExtruderSkips-Clearance.png)
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

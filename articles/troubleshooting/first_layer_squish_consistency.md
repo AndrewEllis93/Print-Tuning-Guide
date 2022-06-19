@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # First Layer / Squish Consistency Issues
 ## Thermal Drift
 
@@ -125,3 +127,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 - See the [:pushpin:Thermal Drift](/articles/troubleshooting/first_layer_squish_consistency.md#thermal-drift) section. Ensure that you are heat soaking for long enough on larger enclosed printers.
 
 <sup>\* This is a mod. It essentially baby steps for you, to account for different bed heights in addition to nozzle heights.</sup>
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

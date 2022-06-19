@@ -1,5 +1,7 @@
 [:arrow_left: Back to Table of Contents](/README.md)
 
+---
+
 # My Setup
 
 Voron V2.4 350mm (with a lot of V2.2 bits still on it)
@@ -52,3 +54,7 @@ I'm not a photographer, in case it wasn't astoundingly obvious :)
 ![](/images/my_setup_2.jpg)
 
 ![](/images/my_setup_3.jpg)
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

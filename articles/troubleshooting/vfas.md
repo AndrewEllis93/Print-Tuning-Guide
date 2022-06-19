@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # VFAs (Vertical Fine Artifacts)
 ## Repeating VFAs With ~2mm Spacing
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
@@ -99,3 +101,7 @@ driver_PWM_GRAD: 8
 driver_PWM_FREQ: 1
 driver_PWM_REG: 4
 ```
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

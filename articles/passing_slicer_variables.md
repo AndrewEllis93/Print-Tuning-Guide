@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Passing Slicer Variables to PRINT_START
 
 This section will demonstrate passing temperature variables to PRINT_START.
@@ -70,3 +72,7 @@ PRINT_START BED=[first_layer_bed_temperature] HOTEND=[first_layer_temperature[in
 PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temperature_layer_0} CHAMBER={build_volume_temperature}
 ```
 ![](/images/PassingVariables-Cura.png) 
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

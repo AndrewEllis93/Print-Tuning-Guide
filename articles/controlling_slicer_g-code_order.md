@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Controlling Slicer Temperature G-Code Order (Simple Method)
 
 **The method shown in the [:page_facing_up:"Passing Slicer Variables to PRINT_START"](/articles/passing_slicer_variables.md) instructions is generally the preferable way to set it up**, as it allows you the most control, but it is more complex.
@@ -24,3 +26,6 @@ To force the g-code ordering, place any of the following g-codes from the follow
 ## Example
 Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
 - ![](/images/StartGcode-CustomOrder.png) 
+
+---
+[:arrow_left: Back to Table of Contents](/README.md)

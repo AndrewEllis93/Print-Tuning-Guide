@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Pockmarks
 ![](/images/troubleshooting/Pockmarks.png)
 
@@ -7,3 +9,7 @@
     - Extrude in midair. Watch and listen. Depending just how wet your filament is, you may hear popping noises and see steam.
     - **Just because your filament was new/sealed, doesn't mean it's not wet.** I've had plenty of filaments come soaking wet even though they were sealed.
 - Try a new nozzle.
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

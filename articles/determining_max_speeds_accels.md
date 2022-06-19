@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Determining Maximum Speeds and Accelerations
 
 This article is purely about finding your absolute maximum speeds/accels. **This does not necessarily mean that these speeds or accelerations will be practical to print with,** and in fact your max speeds/accels will often be way higher than is reasonable to daily drive (for longevity). 
@@ -120,3 +122,6 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
         - If the number has deviated more than this, that means that the corresponding axis has likely skipped.
 
     \* *Measuring to a full step just accounts for endstop variance. It does not necessarily mean that any microsteps were lost. Endstops are only so accurate.*
+
+---
+[:arrow_left: Back to Table of Contents](/README.md)

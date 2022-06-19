@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Extrusion Multiplier
 
 **:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
@@ -251,3 +253,7 @@ While some of this print looks overextruded, I think the overall EM is actually 
 (eSun ABS+ - more matte)
 - ![](/images/EMPrint-Example2.jpg) 
 - ![](/images/EMPrint-Example3.jpg) 
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

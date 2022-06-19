@@ -1,4 +1,6 @@
 [:arrow_left: Back to Table of Contents](/README.md)
+
+---
 # Small Infill Areas Look Overextruded
 
 ![](/images/troubleshooting/SmallAreas.png) 
@@ -20,3 +22,7 @@ In this example, I would primarily be looking at the circled area.
 While some of this print looks overextruded, I think the overall EM is actually pretty good.
 
 - ![](/images/em-wheretolook.png) 
+
+---
+
+[:arrow_left: Back to Table of Contents](/README.md)

@@ -39,6 +39,7 @@ gcode:
     M109 S{hotendtemp}                                                           ; set & wait for hotend temp
     # <insert your routines here>
     G28 Z                                                                        ; final z homing
+    G90                                                                          ; absolute positioning
 ```
 
 This would now be run like `PRINT_START BED=110 HOTEND=240 CHAMBER=50`. 

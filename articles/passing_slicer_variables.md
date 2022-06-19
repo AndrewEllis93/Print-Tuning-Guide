@@ -7,7 +7,7 @@ This section will demonstrate passing temperature variables to PRINT_START.
 
 **This method can be used for other slicer variables too, not just temperatures / heating commands.**
 - The available variables are not always published, however, so you sometimes need to dig around to find the names of them.
-- SuperSlicer recently introduced [:page_facing_up:support for custom variables](https://github.com/supermerill/SuperSlicer/releases/tag/2.3.57.5).
+- SuperSlicer now has support for [:page_facing_up:custom variables](https://github.com/supermerill/SuperSlicer/releases/tag/2.3.57.5).
 
 
 ## Passing Temperatures

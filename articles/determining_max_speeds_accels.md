@@ -118,10 +118,13 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
         - These numbers represent the microstep position of the toolhead at X/Y max position.
 
     - Ensure that the difference between these numbers **has not exceeded a full step.**
+
         - For example, I am running `microsteps` of **32** for my A and B motors. I would ensure that the values for each axis have not changed by more than **32**.
+
         - If the number has deviated more than this, that means that the corresponding axis has likely skipped.
 
-    \* *Measuring to a full step just accounts for endstop variance. It does not necessarily mean that any microsteps were lost. Endstops are only so accurate.*
+        - Measuring to a full step just accounts for a bit of endstop inaccuracy. It does not necessarily mean that any microsteps were lost.\
+        For **hall effect endstops**, you may need to measure to a few full steps. They can be bit less accurate, and they thermally drift.
 
 ---
 [:arrow_left: Back to Table of Contents](/README.md)

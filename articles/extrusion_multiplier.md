@@ -139,7 +139,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
     - **Cura:** "Minimum Layer Time"
 
-    - Allows normal print speeds to be reached. Typically found under fila
+
 
 - **Fan Speed:** High
 

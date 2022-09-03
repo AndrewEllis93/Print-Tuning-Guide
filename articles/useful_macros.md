@@ -415,17 +415,25 @@ gcode: SHUTDOWN
 ```
 
 # Dump Parameters
-This dumps all Klipper parameters to the g-code terminal. This helps to find Klipper system variables for use in macros.
+This dumps all Klipper parameters to the g-code terminal. This helps to find Klipper system variables for use in macros. A filter for both name and value can be applied.
 ```
 [gcode_macro DUMP_PARAMETERS]
 gcode:
-   {% for name1 in printer %}
-      {% for name2 in printer[name1] %}
-         { action_respond_info("printer['%s'].%s = %s" % (name1, name2, printer[name1][name2])) }
-      {% else %}
-         { action_respond_info("printer['%s'] = %s" % (name1, printer[name1])) }
-      {% endfor %}
-   {% endfor %}
+    {% set filter_name = params.FILTER_NAME|default('')|string|lower %}
+    {% set filter_value = params.FILTER_VALUE|default('')|string|lower %}
+    {% set show_cfg = params.SHOW_CFG|default(0)|int %}
+
+    {% for name1 in printer %}
+        {% for name2 in printer[name1] %}
+            {% if (show_cfg or not ((name1|lower) == 'configfile' and (name2|lower) in ['config', 'settings'])) and ((filter_name == '' and filter_value == '') or (filter_name != '' and filter_value == '' and (filter_name in (name1|lower) or filter_name in (name2|lower))) or (filter_name == '' and filter_value != '' and filter_value in (printer[name1][name2]|string|lower)) or (filter_name != '' and filter_value != '' and (filter_name in (name1|lower) or filter_name in (name2|lower)) and filter_value in (printer[name1][name2]|string|lower))) %}
+                { action_respond_info("printer['%s'].%s = %s" % (name1, name2, printer[name1][name2])) }
+            {% endif %}
+        {% else %}
+            {% if (filter_name == '' and filter_value == '') or (filter_name != '' and filter_value == '' and filter_name in (name1|lower)) or (filter_name == '' and filter_value != '' and filter_value in (printer[name1]|string|lower)) or (filter_name != '' and filter_value != '' and filter_name in (name1|lower) and filter_value in (printer[name1]|string|lower)) %}
+                { action_respond_info("printer['%s'] = %s" % (name1, printer[name1])) }
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
 ```
 
 # Replace `M109`/`M190` With `TEMPERATURE_WAIT`

@@ -110,11 +110,12 @@ This method is quicker to run and more precise than the [:pushpin:tower method](
     - ![](/images/KFactor-Print.jpg) 
 
 **7)** In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.
-- Alternatively, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=<value>` in your slicer's custom filament g-code.*
+- Alternatively: 
+    - In **PS/SS**, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=<value>` in your slicer's custom filament g-code.*
 
-    - Replace `<value>` with your desired PA.
+        - Replace `<value>` with your desired PA.
 
-    - \* *Unless you use Cura, which for some reason **still** doesn't support this basic functionality.*
+    - In **Cura**, you can set it during slicing using [this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
 
 **8)** Try printing something! 
 - See [:pushpin:Fine-Tuning and What to Look For](/articles/pressure_advance.md#fine-tuning-and-what-to-look-for) to get an idea of what too high/low look like with actual prints.

@@ -64,11 +64,11 @@ If there is much resistance, *figure out where it is coming from:*
             - Get access to the top of the hotend (you may need to either remove the hotend or the clockwork).
             - Shine a light through the hotend and look into the other side. See if there is any plastic stuck against the walls of the heatbreak or heatsink. *If it is obstructed*: 
                 - Unplug the hotend fan.
-                - Heat the hotend up to ~180C.
+                - Heat the hotend up to your normal printing temp for that filament.
                 - We are purposefully inducing heat creep to soften the plastic in the heatbreak.
                 - Push a long, thin (<=1.8mm) allen key or similar through the top side of the hotend to push the obstruction out of the bottom.
                 - **:warning: Turn off the hotend as soon as you have freed the obstruction.**
-                - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
+                    - If you let it cook without cooling for a long time, it will eventually start to soften the printed hotend mounting.
                 - **Be careful - don't burn yourself!**
 
 - Ensure that you are using the correct `run_current` for your motor. Too high or too low can both cause skipping.

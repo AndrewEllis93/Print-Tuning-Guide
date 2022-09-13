@@ -8,10 +8,12 @@ This guide was originally written for the Voron community, however all of the tu
 - My SuperSlicer profiles are located [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile).
 
 - If you have issues, comments, or suggestions about the guide, please let me know on GitHub issues or via Discord: [:page_facing_up:Ellis#4980](https://discordapp.com/users/207622442842062849)
+
     - For issues **not directly related to the guide content itself**, or for troubleshooting & print help, please use the public help channels in the [:page_facing_up:Voron Discord](https://discord.gg/voron) (or the appropriate community for your printer). 
+
     - I can't be everyone's personal troubleshooting assistant - there are lots of people hanging out in the public channels who can help!
 
-- You can find bed the models and textures I am using in [:page_facing_up:Hartk's GitHub repo](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/SuperSlicer). The bed texture I am using is an older one from him in [:page_facing_up:VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
+- You can find the bed models and textures I am using [:page_facing_up:here](https://github.com/VoronDesign/Voron-Extras/tree/main/Bed_Models). The bed texture I am using in some of the older screenshots is from [:page_facing_up:VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape) 
 
 - Thank you to **bythorsthunder** for help with testing these methods and providing some of the photos.
 

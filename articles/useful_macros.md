@@ -415,7 +415,10 @@ gcode: SHUTDOWN
 ```
 
 # Dump Variables
-This dumps all Klipper variables to the g-code terminal. This helps to find Klipper system variables for use in macros. A filter for both name and value can be applied.
+This dumps all current Klipper variables to the g-code terminal. 
+
+This helps to find Klipper system variables for use in macros. A filter for both name and value can be applied.
+
 ```
 [gcode_macro DUMP_VARIABLES]
 gcode:
@@ -440,16 +443,26 @@ gcode:
     {action_respond_info(out|join("\n"))}
 ```
 
-Usage:
+*The filtering functionality was contributed by [FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*
+## Arguments
+- `NAME` *(string)* - Filter results based on name (only show varables with names containing this string)
+- `VALUE` *(string)* - Filter results based on value (only show values containing this value)
+- `SHOW_CFG` *(integer, 0-1)* - Set to 1 to include entire config in output. Default 0 (config filtered out)
+
+## Examples
 - `DUMP_VARIABLES`: Returns all variables (excluding `printer['configfile'].config` and `printer['configfile'].settings` as they contain the entire config).
 - `DUMP_VARIABLES NAME=stepper`: Returns all variables which have the string `stepper` in their name.
 - `DUMP_VARIABLES VALUE=extruder` : Returns all variables which have the string `extruder` in their value.
 - `DUMP_VARIABLES NAME=stepper VALUE=extruder` : Returns all variables which have the string `stepper` in their name and the string `extruder` in their value.
-- `DUMP_VARIABLES SHOW_CFG=1` : Returns all variables.
+- `DUMP_VARIABLES SHOW_CFG=1` : Returns all variables, including the config.
 
 # Get Variable
+*Contributed by [FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*
+
 This returns value and type of a single variable to the g-code terminal. Keys and indexes can be chained to access nested dictionaries and lists.
 ```
+[gcode_macro GET_VARIABLE]
+gcode:
     {% set names = (params.NAME).split('.')|list %}
     {% set join = (params.JOIN)|default(1)|int %}
     
@@ -500,8 +513,10 @@ This returns value and type of a single variable to the g-code terminal. Keys an
         { action_respond_info('"printer.%s" does not contain "%s"!' % (names[0:_dummy0.break]|join('.'), names[_dummy0.break])) }
     {% endif %}
 ```
+## Arguments
+- `NAME` *(string) (required)* - Specify the name of the variable that you want to retreive.
 
-Usage:
+## Examples
 - `GET_VARIABLE NAME=toolhead`: Returns value and type of variable `printer.toolhead`.
 - `GET_VARIABLE NAME=bed_mesh.profiles.default.points.1.0`: Returns value and type of variable `printer.bed_mesh.profiles.default.points[1][0]`.
 

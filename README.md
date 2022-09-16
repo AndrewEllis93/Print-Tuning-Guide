@@ -58,7 +58,7 @@ This guide was originally written for the Voron community, however all of the tu
     - How Volumetric Flow Rate Relates to Print Speed
     - Formulas
     - Method
-    - Theory vs Reality
+    - Flow Dropoff
 - [Determining Motor Currents](/articles/determining_motor_currents.md)
     - Determining Initial `run_current`
     - Determining Maximum `run_current`

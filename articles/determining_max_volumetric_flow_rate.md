@@ -3,38 +3,35 @@
 ---
 # Determining Maximum Volumetric Flow Rate
 
-Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.
-
+Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.\
 Volumetric flow is expressed in mm<sup>3</sup>/s (cubic millimeters per second).
 ## Why?
 You can use this volumetric flow rate **to determine how fast your hotend/extruder is able to print.**
-
 - See the [:pushpin:"how flow rate relates to speed"](/articles/determining_max_volumetric_flow_rate.md#how-volumetric-flow-rate-relates-to-print-speed) section to determine what maximum speeds you can print at with a given flow rate.
-
     - See the [:pushpin:"approximate values"](/articles/determining_max_volumetric_flow_rate.md#approximate-values) section for approximate values for certain hotends.
 
 - Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
-
     - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. 
-
     - You can also set any print speeds to a high "absolute maximum" speed (like infill) and let it be limited by the volumetric flow limit. This essentially prints at the maximum speed your hotend will allow:
         - This is utilized by my published SuperSlicer profile (see its [:page_facing_up:"Volumetric Speed Limiting"](https://github.com/AndrewEllis93/Ellis-PIF-Profile#volumetric-speed-limiting) section for more information.)
-
-        - ![](/images/Volumetric-SS.png) 
+        - ![](/images/Volumetric-SS.png)
+        - :warning:**In Prusa Slicer, this must be set in the filament settings instead.** The setting in the "auto speed" section only applies in specific circumstances in PS.
 ## Approximate Values
 
-| Hotend     | Flow Rate (mm<sup>3</sup>/sec) |
-| :---        |    :----:   |
-| E3D V6            | 11
-| E3D Revo            | 15
-| Dragon SF| 15
-| Dragon HF| 24
-| Mosquito| 20
-| Mosquito Magnum| 30
+These approximate values **assume a standard 0.4mm brass nozzle.** 
+| Hotend | Flow Rate (mm<sup>3</sup>/sec) |
+| --- | --- |
+| E3D V6 | 11 |
+| E3D Revo | 15 |
+| Dragon SF | 15 |
+| Dragon HF | 24 |
+| Dragonfly BMO | 13 |
+| Rapido HF | 24 |
+| Rapido UHF | 30 |
+| Mosquito | 20 |
+| Mosquito Magnum | 30 |
 
-You should (generally) be okay using an approximate value and just lowering it if you have any issues. 
-
-These are approximate values **assuming a standard brass 0.4mm nozzle.** 
+You will *usually* be okay using an approximate value from above and just lowering it if you have any issues. But - keep in mind that **there is also no guarantee that you will reach them.** There are many factors and variables that can cause your actual performance to vary.
 
 Nozzle properties may affect these numbers. For example:
 - Larger diameter nozzles will have higher flow rates
@@ -47,22 +44,16 @@ Nozzle properties may affect these numbers. For example:
 ## How Volumetric Flow Rate Relates to Print Speed
 
 Working out how quickly you can print at a given volumetric flow rate is quite simple:
-
-- **speed = volumetric flow / layer height / line width**
-
-Or, inversely,
+- **speed = volumetric flow / layer height / line width**\
+*(Or, inversely)* 
 - **volumetric flow = speed * line width * layer height**
-
-For example, if your hotend is capable of 24mm<sup>3</sup>/sec, and you are printing with 0.4mm line width, at 0.2mm layer height:
-
-- **24 / 0.4 / 0.2 = Maximum print speed of 300mm/sec**
+- For example, if your hotend is capable of 24mm<sup>3</sup>/sec, and you are printing with 0.4mm line width & 0.2mm layer height:
+    - 24 / 0.4 / 0.2 = Maximum print speed of 300mm/sec
 
 ## Formulas
 
-**mm<sup>3</sup> = mm * 2.4***
-
-Or, inversely, 
-
+**mm<sup>3</sup> = mm * 2.4***\
+*(Or, inversely)* \
 **mm = mm<sup>3</sup> / 2.4**
 
 For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm * 2.4)
@@ -82,7 +73,6 @@ You will follow a similar process to extruder calibration.
 
 **4)** Extrude at increasing speeds. 
 - At each interval, measure to ensure that exactly 100mm* entered the extruder.
-
 - For example, the gcode to extrude at 5mm/sec is:
 ```
 M83 ; Relative extrusion mode
@@ -92,18 +82,16 @@ G1 E100 F300 ; Extrude 100mm at 5mm/sec*
 
 **5)** Keep increasing speeds and extruding until it starts dropping below 100mm\*. This is your max flow rate. 
 
-- \* See the [:pushpin:"theory vs reality"](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) section.
+- \* See the [:pushpin:"Flow Dropoff"](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) section.
 
 **6)** Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin:formulas](/articles/determining_max_volumetric_flow_rate.md#formulas).
 
 **7)** Set your new value in your slicer (in SuperSlicer, ctrl+f, search for "max_volumetric_speed").
-
+- :warning:**In Prusa Slicer, this must be set in the filament settings instead.** The setting in the "auto speed" section only applies in specific circumstances in PS.
 - You should set your limit slightly lower in the slicer for margin of safety.
-
 - Keep in mind that maximum volumetric flow rate can change with a number of factors, like temperatures, material, and nozzle type. 
-
 - This value will work with most filaments. Sometimes, however, you may find a particular filament that doesn't flow as nicely. For these, (in PS/SS at least) you can set a volumetric flow override in that filament's "Filament Overrides" section.
-## Theory vs Reality
+## Flow Dropoff
 Stephan from CNC Kitchen did some flow rate testing. He has a great article and video [:page_facing_up:here](https://www.cnckitchen.com/blog/flow-rate-benchmarking-of-a-hotend).
 
 I don't want to steal his work, so here's an artist's rendition:
@@ -113,7 +101,7 @@ I don't want to steal his work, so here's an artist's rendition:
 *(you should really just visit the link)*
 
 
-The main takeaway from this is that there is that **the closer you get to the absolute limit of your hotend (extruder skipping) , the more and more you will underextrude**.
+The main takeaway from this is that there is that **the closer you get to the limits of your hotend (extruder skipping), the more and more you will underextrude**.
 
 Many people will actually set a higher volumetric flow rate limit, a bit past the point where this dropoff starts.
 

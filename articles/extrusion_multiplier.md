@@ -50,7 +50,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
 - **Solid Infill Speed:** Your profile's normal value
     - **Cura:** "Top/Bottom Speed"
-    - It's best to tune for your actual speeds, as [:page_facing_up:flow can drop off the faster you print](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality). ("Theory vs Reality" section)
+    - It's best to tune for your actual speeds, as [:page_facing_up:flow can drop off the faster you print](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff). ("Flow Dropoff" section)
 
 - **Top Solid Infill Speed:** Low/Moderate. 60mm/s is what I use.
     - **Cura:** "Top Surface Skin Speed"

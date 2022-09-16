@@ -9,7 +9,7 @@ Some find that after tuning PA and EM, minor perimeter gapping is still present:
 
 Assuming EM is well tuned, this is often caused by a slight flow dropoff at higher print speeds — since most people print their perimeters faster than their top layer.
 
-See [:page_facing_up:here](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) for more information on flow dropoff.
+See [:page_facing_up:here](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) for more information on flow dropoff.
 
 There are a few different things you can do:\
 *(in order of my preference)*
@@ -18,7 +18,7 @@ There are a few different things you can do:\
     - This can reduce the effect, but may not 100% fix it.
 2. If your filament can handle it, increase hotend temperatures a bit. This also just helps with flow rates.
 3. Increase your EM until the gaps disappear. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
-4. Follow my [:page_facing_up:"determining maximum volumetric flow rate"](/articles/determining_max_volumetric_flow_rate.md#theory-vs-reality) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
+4. Follow my [:page_facing_up:"determining maximum volumetric flow rate"](/articles/determining_max_volumetric_flow_rate.md) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
 5. Slow your perimeters down. The faster you print, the greater this flow dropoff becomes.
 
 ## Slight Corner Gapping

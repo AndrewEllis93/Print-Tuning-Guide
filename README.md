@@ -38,6 +38,8 @@ This guide was originally written for the Voron community, however all of the tu
     - [Build Surface Adhesion](/articles/build_surface_adhesion.md)
     - [First Layer Squish](/articles/first_layer_squish.md)
     - [Pressure Advance](/articles/pressure_advance.md)
+        - Why PA is Needed
+        - What PA Does
         - Lines Method
         - Fine-Tuning and What to Look For
         - [Tower Method](/articles/pressure_advance_tower_method.md) 

@@ -39,8 +39,8 @@ This guide was originally written for the Voron community, however all of the tu
     - [First Layer Squish](/articles/first_layer_squish.md)
     - [Pressure Advance](/articles/pressure_advance.md)
         - Lines Method
-        - Tower Method
         - Fine-Tuning and What to Look For
+        - [Tower Method](/articles/pressure_advance_tower_method.md) 
     - [Extrusion Multiplier](/articles/extrusion_multiplier.md)
         - Background 
         - Methods I'm Not a Fan Of

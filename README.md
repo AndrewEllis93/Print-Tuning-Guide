@@ -43,8 +43,8 @@ This guide was originally written for the Voron community, however all of the tu
         - [Tower Method](/articles/pressure_advance_tower_method.md) 
     - [Extrusion Multiplier](/articles/extrusion_multiplier.md)
         - Background 
-        - Methods I'm Not a Fan Of
         - Method
+        - Rationale & Dimensional Accuracy
     - [PA / EM Oddities](/articles/pa_em_oddities.md)
         - Slight Perimeter Gapping
         - Slight Corner Gapping

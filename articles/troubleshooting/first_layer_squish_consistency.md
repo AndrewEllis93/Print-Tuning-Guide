@@ -45,9 +45,11 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 - For **V2**:
     - Ensure that you place your `BED_MESH_CALIBRATE` **after** G32, as the stock G32 macro clears bed meshes.
 
-    - You may need to play with how tight your bed mounting screws are. 
-        - The common advice of only three bed screws, with "one tight, two snug" is generally good advice. 
-        - I've found that if any are *too* loose, it can cause first layer consistency issues.
+    - You may need to play with how tight your bed mounting screws are.
+
+        - I heat soak, fully hot-tighten 3/4 bed screws, and make the 4th screw "snug but not tight"
+        
+            - *It's commonly advised to mount your bed with only three screws, with "one tight, two loose". Anecdotally this advice has caused fist layer issues for me.*
 
     - Ensure that your Z belts are properly tensioned. They should all be roughly equal tensions. 
         - I tension mine to **140hz over a 150mm span** of belt.
@@ -112,7 +114,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 
 - For **V2**: 
     - **:warning: Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
-    - See the above V2 section.
+    - See the V2 notes under the [:pushpin:First Layer Consistency section](/articles/troubleshooting/first_layer_squish_consistency.md#first-layer-consistency) above.
 
 - For **inductive probes *as* Z endstop (virtual endstop)**:
     - Inductive probes thermally drift, meaning that your Z offset can change at different bed/enclosure temperatures. You may need to calibrate Z offset for the temperatures you intend to print at.

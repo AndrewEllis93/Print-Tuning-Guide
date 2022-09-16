@@ -145,7 +145,7 @@ Features:
     - Will not z hop if this exceeds your max Z height.
 - Will not allow you to accidentally execute pause or resume twice.
 - Allows you to take other actions during the pause without messing anything up.
-    - You can move toolhead around during the pause, run load/unload filament macros etc. It wil automatically return to its original position before resuming.
+    - You can move toolhead around during the pause, run load/unload filament macros etc. It will automatically return to its original position before resuming.
     - It also automatically restores your gcode state (absolute vs relative extrusion mode, etc), should it be changed during the pause by another macro.
 - Primes the nozzle while traveling back to resume the print, wiping the excess along the way. This just results in one little string to pick off.
 - Sets the idle timeout to 12 hours during the pause, and returns it to your configured value upon resume.
@@ -189,7 +189,7 @@ runout_gcode:
 
 Adjust `detection_length` to change the sensitivity. The BTT sensor "ticks" every 7mm. I recommend starting with 10mm to prevent false positives from flow dropoff, bowden slack, etc.
 
-Note that a smart filament sensor only works when the filament is moving (or not) during extrusion. Testing with `QUERY_FILAMENT_SENSOR` will not work. Test by releasing filament drive tension or grabbing/cutting the filament during a print.
+Note that a smart filament sensor only works when the filament is moving (or not) during extrusion. **Testing with `QUERY_FILAMENT_SENSOR` may not work how you expect**. Test by releasing filament drive tension or grabbing/cutting the filament during a print.
 
 ```
 [filament_motion_sensor filament_sensor]

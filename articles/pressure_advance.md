@@ -86,8 +86,8 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
     - **Layer Height**: 0.25mm
 - **Speed**
     - **Slow Printing Speed**: Your `square_corner_velocity` From your printer.cfg. Default is 5.
-    - **Fast Printing Speed**: 120mm/s*
-        - \* You can set this to your fastest perimeter speed to try and better simulate real life prints. However if you typically print perimeters slowly, the results may be harder to read. Faster speeds exaggerate the effect.
+    - **Fast Printing Speed**: Your fastest perimeter speed*
+        - \* If your perimeter speeds are particularly slow, it may be hard to read the results. You may need to use a higher speed here in that case.
     - **Acceleration**: Your perimeter acceleration
 - **Pattern**
     - **Starting Value for PA:** 0

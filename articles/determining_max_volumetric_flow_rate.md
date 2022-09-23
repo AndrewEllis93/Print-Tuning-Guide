@@ -20,7 +20,7 @@ You can use this volumetric flow rate **to determine how fast your hotend/extrud
 
 These approximate values **assume a standard 0.4mm brass nozzle.** 
 | Hotend | Flow Rate (mm<sup>3</sup>/sec) |
-| --- | --- |
+| --- | :---: |
 | E3D V6 | 11 |
 | E3D Revo | 15 |
 | Dragon SF | 15 |
@@ -39,7 +39,7 @@ Nozzle properties may affect these numbers. For example:
 - Plated copper and tungsten carbide have higher thermal conductivity and might allow a bit higher flow rate. 
 - Bondtech CHT nozzles use a different internal geometry that allows higher flow rates.
 
-*If you want to get more scientific, test with a specific nozzle or setup, or your hotend just isn't listed, see [:pushpin:here](/articles/determining_max_volumetric_flow_rate.md#method) for a testing method.*
+To test your own flow rate, see [:pushpin:here](/articles/determining_max_volumetric_flow_rate.md#method).
 
 ## How Volumetric Flow Rate Relates to Print Speed
 

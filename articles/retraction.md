@@ -6,22 +6,25 @@
 **:warning: You should [:page_facing_up:tune pressure advance](/articles/pressure_advance.md) first.**
 Pressure advance can lower the amount of retraction needed, especially for bowden.
 
+**I usually just pick a reasonable retraction distance and just bump it up a little if I have issues.**\
+(Starting at 0.5mm with direct drive, going up to 1mm max.)
+
+I dont typically find it super necessary to run these tuning towers outside of troubleshooting. If you continue to have stringing issues, its often caused by something else (see [:pushpin:here](#if-you-are-having-persistent-issues) for some possible causes).
+
+## Method
+
 If you typically print with z-hop, leave it on for this test.*\
 <sup>\* Don't go overboard or it will cause more stringing. 0.2mm-0.3mm is usually enough.</sup>
 
 **There is some trial and error involved.** You may need to re-run these tests at varying retraction speeds and temperatures if you are not getting good results. You will just have to experiment. You should hot tighten your nozzle (unless it's an E3D Revo).
 
-If you are having persistent issues:
-- **:warning: Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
-- Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
-- You may need to use less z hop (z lift). I run 0.2mm. Too high gives me stringing.
+
 
 There are a few factors that can affect your retraction settings, such as:
 - Material type
 - Print temperature
 - Hotend
 - Extruder
-## Method
 
 **We will be using using [:page_facing_up:SuperSlicer](https://github.com/supermerill/SuperSlicer/releases)'s calibration tools.**
 
@@ -90,6 +93,19 @@ We will be printing these retraction towers at three different temperatures. If 
     - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
         - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
         - We are subtracting 1 because the first ring is 0 retraction.
+
+## If You Are Having Persistent Issues:
+- **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
+    - Even brand new, factory sealed filament can still come wet. 
+- Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
+    - Your nozzle should be hot tightened (to the manufacturer's recommended torque specification if possible).
+    - On most hotends *(particularly ones without a free-floating heater block like the v6 & Dragonfly)*, the nozzle should not be "bottomed out" against the heater block. You should see a little bit of a gap/thread. If the nozzle is bottomed out, that means that the heatbreak is not screwed in far enough and is not making adequate contact.
+- You may need to use less z hop (z lift). I run 0.2mm. Much higher than 0.3mm gives me stringing.
+- Your retraction/unretraction speeds may be too fast *(or too slow - but anecdotally I have had better results with slower speeds, around 30mm/s).*
+- Make sure you are not overextruding. Tuning article [:page_facing_up:here](/articles/extrusion_multiplier.md).
+- Try extruding and then retracting (with the e motor off) by turning the extruder by hand. There shouldn't be too much of a "dead zone" when reversing directions. This could indicate too much backlash, a loose grub screw, or another extruder issue.
+- Your pressure advance may be too low.
+- If all else fails, rebuild your extruder/toolhead.
 
 ---
 

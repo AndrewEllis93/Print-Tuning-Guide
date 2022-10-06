@@ -6,10 +6,20 @@
 **:warning: You should [:page_facing_up:tune pressure advance](/articles/pressure_advance.md) first.**
 Pressure advance can lower the amount of retraction needed, especially for bowden.
 
-**I usually just pick a reasonable retraction distance and just bump it up a little if I have issues.**\
-(Starting at 0.5mm with direct drive, going up to 1mm max.)
+---
 
-I dont typically find it super necessary to run these tuning towers outside of troubleshooting. If you continue to have stringing issues, its often caused by something else (see [:pushpin:here](#if-you-are-having-persistent-issues) for some possible causes).
+**In many cases, following this tuning method is not necessary.** 
+
+I usually just pick a reasonable retraction distance and just bump it up if I have issues.
+- **Direct drive** - Start at 0.5mm @ 30mm/s. 
+    - Try to stay under 1mm.
+- **Bowden** - Start at 1mm @ 30mm/s. 
+    - The upper limit depends on your bowden length/slack/tolerances.
+    - Pressure advance can *significantly* reduce retraction needed for bowden.
+
+If you continue to have persistent stringing issues, it's often caused by [:pushpin:something else](#if-you-are-having-persistent-issues).
+
+---
 
 ## Method
 
@@ -97,6 +107,7 @@ We will be printing these retraction towers at three different temperatures. If 
 ## If You Are Having Persistent Issues:
 - **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
     - Even brand new, factory sealed filament can still come wet. 
+- Ensure that your nozzle is relatively clean.
 - Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
     - Your nozzle should be hot tightened (to the manufacturer's recommended torque specification if possible).
     - On most hotends *(particularly ones without a free-floating heater block like the v6 & Dragonfly)*, the nozzle should not be "bottomed out" against the heater block. You should see a little bit of a gap/thread. If the nozzle is bottomed out, that means that the heatbreak is not screwed in far enough and is not making adequate contact.
@@ -105,7 +116,15 @@ We will be printing these retraction towers at three different temperatures. If 
 - Make sure you are not overextruding. Tuning article [:page_facing_up:here](/articles/extrusion_multiplier.md).
 - Try extruding and then retracting (with the e motor off) by turning the extruder by hand. There shouldn't be too much of a "dead zone" when reversing directions. This could indicate too much backlash, a loose grub screw, or another extruder issue.
 - Your pressure advance may be too low.
+- Try a new nozzle.
 - If all else fails, rebuild your extruder/toolhead.
+
+**With PETG**
+- If you're using PETG, you may just need to live with some stringing. 
+    - PETG is near impossible to get string-free prints with.
+    - Well-tuned PA/EM helps.
+    - [E3D Nozzle X](https://e3d-online.com/blogs/news/nozzle-x-the-one-nozzle-to-rule-them-all) has a nonstick coating that *might* help, however I have not tested this theory. 
+        - If you try it, let me know. I'm curious.
 
 ---
 

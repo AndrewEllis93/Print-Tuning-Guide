@@ -7,6 +7,10 @@ This section will demonstrate passing temperature variables to PRINT_START.
 
 **This method can be used for other slicer variables too, not just temperatures / heating commands.**
 - The available variables are not always published, however, so you sometimes need to dig around to find the names of them.
+    - In SuperSlicer / Prusa Slicer, you can find many of the variable names in the hover text of each setting.
+        - Others can be found in the .ini files. Either export the profile or look in the appdata folders:
+            - %APPDATA%\SuperSlicer
+            - %APPDATA%\PrusaSlicer
 - SuperSlicer now has support for [:page_facing_up:custom variables](https://github.com/supermerill/SuperSlicer/releases/tag/2.3.57.5).
 
 

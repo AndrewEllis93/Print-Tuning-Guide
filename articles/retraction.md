@@ -17,7 +17,7 @@ I usually just pick a reasonable retraction distance and just bump it up if I ha
     - The upper limit depends on your bowden length/slack/tolerances.
     - Pressure advance can *significantly* reduce retraction needed for bowden.
 
-If you continue to have persistent stringing issues, it's often caused by [:pushpin:something else](#if-you-are-having-persistent-issues).
+If you continue to have persistent stringing issues, it's often caused by [:pushpin:something else](#if-you-are-having-persistent-issues). I'd recommend reading through that section before continuing with the tuning towers.
 
 ---
 
@@ -119,12 +119,17 @@ We will be printing these retraction towers at three different temperatures. If 
 - Try a new nozzle.
 - If all else fails, rebuild your extruder/toolhead.
 
-**With PETG**
-- If you're using PETG, you may just need to live with some stringing. 
-    - PETG is near impossible to get string-free prints with.
-    - Well-tuned PA/EM helps.
-    - [E3D Nozzle X](https://e3d-online.com/blogs/news/nozzle-x-the-one-nozzle-to-rule-them-all) has a nonstick coating that *might* help, however I have not tested this theory. 
-        - If you try it, let me know. I'm curious.
+### **With PETG**
+
+If you're using PETG, you may just need to live with some stringing. \
+PETG is near impossible to get string-free prints with.
+
+- Well-tuned PA/EM helps.
+- Use [avoid_crossing_perimeters](https://cdn.help.prusa3d.com/wp-content/uploads/2021/01/avoid_crossing2-2048x977.jpg) in PS/SS or [combing](https://all3dp.com/2/combing-mode-cura-simply-explained/) in Cura. 
+    - This keeps travels/stringing inside the infill where possible. 
+    - It increases slicing and print times, however, so there's no need to keep it on for other materials.
+- [E3D Nozzle X](https://e3d-online.com/blogs/news/nozzle-x-the-one-nozzle-to-rule-them-all) has a nonstick coating that *might* help, however I have not tested this theory. 
+    - If you try it, let me know. I'm curious.
 
 ---
 

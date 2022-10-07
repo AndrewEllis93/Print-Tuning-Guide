@@ -125,10 +125,10 @@ If you're using PETG, you may just need to live with some stringing. \
 PETG is near impossible to get string-free prints with.
 
 - Well-tuned PA/EM helps.
-- Use [avoid_crossing_perimeters](https://cdn.help.prusa3d.com/wp-content/uploads/2021/01/avoid_crossing2-2048x977.jpg) in PS/SS or [combing](https://all3dp.com/2/combing-mode-cura-simply-explained/) in Cura. 
+- Use [:page_facing_up:avoid_crossing_perimeters](https://cdn.help.prusa3d.com/wp-content/uploads/2021/01/avoid_crossing2-2048x977.jpg) in PS/SS or [:page_facing_up:combing](https://all3dp.com/2/combing-mode-cura-simply-explained/) in Cura. 
     - This keeps travels/stringing inside the infill where possible. 
     - It increases slicing and print times, however, so there's no need to keep it on for other materials.
-- [E3D Nozzle X](https://e3d-online.com/blogs/news/nozzle-x-the-one-nozzle-to-rule-them-all) has a nonstick coating that *might* help, however I have not tested this theory. 
+- [:page_facing_up:E3D Nozzle X](https://e3d-online.com/blogs/news/nozzle-x-the-one-nozzle-to-rule-them-all) has a nonstick coating that *might* help, however I have not tested this theory. 
     - If you try it, let me know. I'm curious.
 
 ---

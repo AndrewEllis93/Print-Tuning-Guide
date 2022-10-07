@@ -67,7 +67,7 @@ gcode:
     {% endfor %}
 ```
 
-This is the simple looping implementation. If you're feeling fancy, you can also [play tunes with it](https://github.com/majarspeed/Profiles-Gcode-Macros/tree/main/Beeper%20tunes). (Tune macros by Dustinspeed#6423)
+This is the simple looping implementation. If you're feeling fancy, you can also [:page_facing_up:play tunes with it](https://github.com/majarspeed/Profiles-Gcode-Macros/tree/main/Beeper%20tunes). (Tune macros by Dustinspeed#6423)
 
 ## Non-PWM Beeper
 Non-PWM beepers are used on some other displays such as the Ender 3 stock display.
@@ -171,7 +171,7 @@ gcode:
 Connect your filament sensor to any free endstop port, and update `switch_pin` in the below configs accordingly. **Don't forget the pullup (`^`) on the pin** or you may get false positives.
 
 ### Basic Filament Switch Sensor
-[Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_switch_sensor)
+[:page_facing_up:Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_switch_sensor)
 ```
 [filament_switch_sensor filament_sensor]
 switch_pin: ^P1.24
@@ -185,7 +185,7 @@ runout_gcode:
 ```
 
 ### Smart Filament Sensor
-[Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_motion_sensor)
+[:page_facing_up:Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_motion_sensor)
 
 Adjust `detection_length` to change the sensitivity. The BTT sensor "ticks" every 7mm. I recommend starting with 10mm to prevent false positives from flow dropoff, bowden slack, etc.
 
@@ -206,7 +206,7 @@ runout_gcode:
 ```
 -------------
 
-*I use a [BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!***
+*I use a [:page_facing_up:BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!***
 
 ## Pause
 If you use a filament sensor, put its name in the `SET_FILAMENT_SENSOR` command. Otherwise, comment that out.
@@ -443,7 +443,7 @@ gcode:
     {action_respond_info(out|join("\n"))}
 ```
 
-*The filtering functionality was contributed by [FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*
+*The filtering functionality was contributed by [:page_facing_up:FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*
 ## Arguments
 - `NAME` *(string)* - Filter results based on name (only show varables with names containing this string)
 - `VALUE` *(string)* - Filter results based on value (only show values containing this value)
@@ -457,7 +457,7 @@ gcode:
 - `DUMP_VARIABLES SHOW_CFG=1` : Returns all variables, including the config.
 
 # Get Variable
-*Contributed by [FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*
+*Contributed by [:page_facing_up:FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*
 
 This returns value and type of a single variable to the g-code terminal. Keys and indexes can be chained to access nested dictionaries and lists.
 ```
@@ -540,7 +540,7 @@ gcode:
 ```
 
 ## M190
-:warning: If you are using my [bed fan](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Ellis/Bed_Fans) macros, **do not use this version.** Those macros include a variant of this with other essential functions.
+:warning: If you are using my [:page_facing_up:bed fan](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Ellis/Bed_Fans) macros, **do not use this version.** Those macros include a variant of this with other essential functions.
 
 ```
 [gcode_macro M190]

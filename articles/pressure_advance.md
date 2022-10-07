@@ -11,7 +11,7 @@
 
 ### Without PA
 ![](/images/pa_graph_off.png)\
-<sup>*(Source: https://marlinfw.org/assets/images/features/lin_advance/k-factor_low.png)*</sup>\
+<sup>*(Source: :page_facing_up:https://marlinfw.org/assets/images/features/lin_advance/k-factor_low.png)*</sup>\
 <sup>*You can see the real-world version of this [:pushpin:below](/articles/pressure_advance.md#result). (The bottom line has PA completely off.)*</sup>
 
 A certain pressure must be reached to achieve the expected flow rate. This extrusion pressure takes a short time to build up. During accelerations, there will be underextrusion while the pressure is still building up. **(2)**.
@@ -28,7 +28,7 @@ During decelerations it does the opposite - it pulls back (kind of like an early
 **Compare this image to the above image.** Notice how PA tries to cancel out those unwanted effects.
 
 ![](/images/pa_graph_annotated.png)\
-<sup>*(Generated using Klipper's [graph_extruder.py](https://github.com/Klipper3d/klipper/blob/master/scripts/graph_extruder.py).)*</sup>
+<sup>*(Generated using Klipper's [:page_facing_up:graph_extruder.py](https://github.com/Klipper3d/klipper/blob/master/scripts/graph_extruder.py).)*</sup>
 
 Keep in mind that pressure advance only changes the **distribution** of material, not the **amount** of material.
 
@@ -122,8 +122,8 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
 **7)** In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.
 - Alternatively: 
     - In **PS/SS**, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=`\<value> in your custom filament g-code.
-        - You can also set different values for different nozzle sizes using [this](https://github.com/AndrewEllis93/Ellis-PIF-Profile#changing-pa-based-on-nozzle-size).
-    - In **Cura**, you can set it during slicing using [this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
+        - You can also set different values for different nozzle sizes using [:page_facing_up:this](https://github.com/AndrewEllis93/Ellis-PIF-Profile#changing-pa-based-on-nozzle-size).
+    - In **Cura**, you can set it during slicing using [:page_facing_up:this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
 
 **8)** Try printing something! 
 

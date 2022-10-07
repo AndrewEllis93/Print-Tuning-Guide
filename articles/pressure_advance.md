@@ -122,6 +122,7 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
 **7)** In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.
 - Alternatively: 
     - In **PS/SS**, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=`\<value> in your custom filament g-code.
+        - You can also set different values for different nozzle sizes using [this](https://github.com/AndrewEllis93/Ellis-PIF-Profile#changing-pa-based-on-nozzle-size).
     - In **Cura**, you can set it during slicing using [this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
 
 **8)** Try printing something! 

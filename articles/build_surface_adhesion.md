@@ -48,14 +48,11 @@
 ## Smooth PEI
 
 - **Scuff it up** with a [:page_facing_up:kitchen scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
-
     - Some people choose not to do this, to keep the glass-like surface finish on their prints. However, you will be sacrificing adhesion and may need to use brims and/or adhesives on occasion.
-
     - ~800-1000 grit sandpaper, or even the scrubby side of a fresh sponge may also work.
-
     - **This helps immensely**, much like how you would scuff/sand a surface before painting or gluing something to it.
-
     - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
+    - You should probably retire the scouring pad/sponge from the kitchen afterwards. I'm not sure the health effects of plastic dust ending up on your dishes - better safe than sorry!
 
 ## Textured PEI
 

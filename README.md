@@ -47,6 +47,8 @@ This guide was originally written for the Voron community, however all of the tu
     - Signs of Overheating
     - How to Fix It
 - [Retraction](/articles/retraction.md)
+    - If You Are Having Persistent Issues
+        - With PETG
 - [Infill/Perimeter Overlap](/articles/infill_perimeter_overlap.md)
 
 ## **Printer Tuning**

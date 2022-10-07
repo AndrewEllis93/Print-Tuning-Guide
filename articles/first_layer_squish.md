@@ -42,7 +42,7 @@ If you can see any light (excluding pinholes at the perimeter), or the next laye
             - It's normal to have a *little* bit of this near the corners, or in small print areas.
         - You shouldn't see any gaps* between the lines.
             - It's fine to have some very small pinholes where the infill meets the     perimeters.
-        - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal. I will update these photos later. 
+        - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal.
         - ![](/images/FirstLayer-Squares-2.png)
         - ![](/images/FirstLayer-Squares-2-Annotated.png)
 
@@ -50,7 +50,7 @@ If you can see any light (excluding pinholes at the perimeter), or the next laye
         - You should not have any gaps between the lines.
         - You should still be able to clearly see the lines at the center. They should not be fading or invisible.
             - It's normal for the lines to fade a bit near the edges/corners.
-        - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal. I will update these photos later. 
+        - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal.
         - ![](/images/FirstLayer-Squares-1-Annotated.png)
 - #### Textured Build Surface
     - **Top Surface**
@@ -58,6 +58,7 @@ If you can see any light (excluding pinholes at the perimeter), or the next laye
         - ![](/images/FirstLayer-Squares-Textured.png)
     - **Bottom Surface**
         - **The lines will not be as visible as on a smooth build surface.**
+            - *Note: this doesn't mean they should be **invisible**.*
         - As with smooth build surfaces, you should not have any gaps between the lines.
         - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.
         - ![](/images/FirstLayer-Squares-Textured-2.jpg)
@@ -108,6 +109,8 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
     - ![](/images/FirstLayer-NotEnoughSquish1.png) ![](/images/FirstLayer-NotEnoughSquish2.png) ![](/images/FirstLayer-NotEnoughSquish3.png) 
 
     ## Further Fine-Tuning
+    - If you have a gappy *second* layer (or first few layers), it may indicate that you need a little more squish.
+        - There are other possible causes for this issue (like not heat soaking for long enough, or flow dropoff)
     - This cube needs just a tiny bit more squish.\
     You can see very slight gapping / shadows between the perimeters and some areas of the infill. The corners are also starting to pull away a bit.
     ![](/images/FirstLayer-NotEnoughSquish4.png)

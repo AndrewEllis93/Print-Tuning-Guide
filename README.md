@@ -120,6 +120,7 @@ This guide was originally written for the Voron community, however all of the tu
     - Mechanical
     - Speeds and Accelerations
     - Electrical
+- [Perimeter Separation](/articles/troubleshooting/perimeter_separation.md)
 - [PLA is Overheating](/articles/troubleshooting/pla_overheating.md)
 - [Pockmarks](/articles/troubleshooting/pockmarks.md)
 - [VFAs (Vertical Fine Artifacts)](/articles/troubleshooting/vfas.md)

@@ -90,52 +90,6 @@ Features:
 
 Some things are commented out that rely on other macros. You can uncomment them if you choose to use those other macros.
 
-## M600 (Filament Change) Alias
-
-This allows your pause to work natively with slicers that insert `M600` for color changes. This just calls the pause macro (below).
-```
-[gcode_macro M600]
-gcode:
-    #LCDRGB R=0 G=1 B=0  ; Turn LCD green
-    PAUSE                ; Pause
-```
-## Example Filament Sensor Config
-Connect your filament sensor to any free endstop port, and update `switch_pin` in the below configs accordingly. **Don't forget the pullup (`^`) on the pin** or you may get false positives.
-
-### Basic Filament Switch Sensor
-[:page_facing_up:Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_switch_sensor)
-```
-[filament_switch_sensor filament_sensor]
-switch_pin: ^P1.24
-pause_on_runout: True
-insert_gcode:
-    M117 Insert Detected
-runout_gcode:
-    M117 Runout Detected
-    #LCDRGB R=1 G=0 B=0  # Turn LCD red
-    #BEEP I=12
-```
-
-### Smart Filament Sensor
-[:page_facing_up:Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_motion_sensor)
-
-Adjust `detection_length` to change the sensitivity. The BTT sensor "ticks" every 7mm. I recommend starting with 10mm to prevent false positives from flow dropoff, bowden slack, etc.
-
-Note that a smart filament sensor only works when the filament is moving (or not) during extrusion. **Testing with `QUERY_FILAMENT_SENSOR` may not work how you expect**. Test by releasing filament drive tension or grabbing/cutting the filament during a print.
-
-```
-[filament_motion_sensor filament_sensor]
-detection_length: 10
-extruder: extruder
-switch_pin: ^P1.24
-pause_on_runout: True
-insert_gcode:
-    M117 Insert Detected
-runout_gcode:
-    M117 Runout Detected
-    #LCDRGB R=1 G=0 B=0  # Turn LCD red
-    #BEEP I=12
-```
 -------------
 
 *I use a [:page_facing_up:BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!***
@@ -229,6 +183,53 @@ If you use Octoprint, put these in your "GCODE Script" section to enable the UI 
 
 - ![](/images/Octoprint-Gcode-Scripts.png)
 
+
+## M600 (Filament Change) Alias
+
+This allows your pause to work natively with slicers that insert `M600` for color changes. This just calls the pause macro (below).
+```
+[gcode_macro M600]
+gcode:
+    #LCDRGB R=0 G=1 B=0  ; Turn LCD green
+    PAUSE                ; Pause
+```
+## Example Filament Sensor Config
+Connect your filament sensor to any free endstop port, and update `switch_pin` in the below configs accordingly. **Don't forget the pullup (`^`) on the pin** or you may get false positives.
+
+### Basic Filament Switch Sensor
+[:page_facing_up:Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_switch_sensor)
+```
+[filament_switch_sensor filament_sensor]
+switch_pin: ^P1.24
+pause_on_runout: True
+insert_gcode:
+    M117 Insert Detected
+runout_gcode:
+    M117 Runout Detected
+    #LCDRGB R=1 G=0 B=0  # Turn LCD red
+    #BEEP I=12
+```
+
+### Smart Filament Sensor
+[:page_facing_up:Klipper Config Reference](https://www.klipper3d.org/Config_Reference.html#filament_motion_sensor)
+
+Adjust `detection_length` to change the sensitivity. The BTT sensor "ticks" every 7mm. I recommend starting with 10mm to prevent false positives from flow dropoff, bowden slack, etc.
+
+Note that a smart filament sensor only works when the filament is moving (or not) during extrusion. **Testing with `QUERY_FILAMENT_SENSOR` may not work how you expect**. Test by releasing filament drive tension or grabbing/cutting the filament during a print.
+
+```
+[filament_motion_sensor filament_sensor]
+detection_length: 10
+extruder: extruder
+switch_pin: ^P1.24
+pause_on_runout: True
+insert_gcode:
+    M117 Insert Detected
+runout_gcode:
+    M117 Runout Detected
+    #LCDRGB R=1 G=0 B=0  # Turn LCD red
+    #BEEP I=12
+```
 ## Filament Sensor Management
 This disables the filament sensor 1 second after startup. This prevents it from tripping constantly while you're just loading filament, doing testing or maintenance, etc.
 

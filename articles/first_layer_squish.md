@@ -17,6 +17,9 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 - Aside from that, this is personal preference.
 
 **2)** Scatter square patches around your bed in your slicer. 
+- A simple trick to do this quickly is to right-click the Arrange button in SuperSlicer/PrusaSlicer and set the distance value to something big (you can go over 100 by clicking on the edit button on the right):<br/>
+  ![image](https://user-images.githubusercontent.com/56029/196033444-4cd875ef-66a7-4b07-bcae-727f2f26da06.png)
+
 - See the [:page_facing_up:test_prints folder](/test_prints). 
     - Choose a patch that matches your first layer height.\
     *(`First_Layer_Patch-0.25mm.stl` if you chose to follow step 1)*

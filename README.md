@@ -75,8 +75,7 @@ This guide was originally written for the Voron community, however all of the tu
 - [Useful Macros](/articles/useful_macros.md)
     - Conditional Homing
     - Conditional QGL
-    - Beeper
-    - LCD RGB
+    - :warning: Hotend Fan RPM Monitoring
     - My Pause/Resume Macros (For Runouts, Filament Swaps, and Manual Pauses)
         - M600 (Filament Change) Alias
         - Example Filament Sensor Config
@@ -86,7 +85,9 @@ This guide was originally written for the Voron community, however all of the tu
         - Resume
         - Cancel
         - Octoprint Configuration 
-    - Filament Sensor Management
+        - Filament Sensor Management
+    - Beeper
+    - LCD RGB
     - Parking
     - Off
     - Shut Down Pi

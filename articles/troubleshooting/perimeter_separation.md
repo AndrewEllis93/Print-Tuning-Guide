@@ -3,7 +3,7 @@
 ---
 # Perimeter Separation
 
-Adapted from [**bythorsthunder**](https://discordapp.com/users/830305218679144509)'s Discord pin. Thanks!
+Adapted from [:page_facing_up:**bythorsthunder**](https://discordapp.com/users/830305218679144509)'s Discord pin. Thanks!
 
 ![](/images/troubleshooting/perimeter_separation/perimeter_separation.jpg)
 

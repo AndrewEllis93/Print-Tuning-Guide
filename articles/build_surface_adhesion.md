@@ -10,6 +10,8 @@
 - **:warning: Thoroughly wash all build plates with dish soap and water** (and make sure to rinse thoroughly too).
     - You should do this even for brand new surfaces.
 
+    - Dry with a paper towel rather than a cloth/rag. Many laundry products contain fats, oils, or waxes.
+
     - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
 
     - I keep a spray bottle of (SLIGHTLY) soapy water next to my printer. Using a paper towel, I scrub with soapy water, then again with isopropyl alcohol (IPA) to remove the remaining soap residue.

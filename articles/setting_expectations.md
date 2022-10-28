@@ -33,7 +33,7 @@ These imperfections all combine with each other and create minor inconsistencies
 
 <sup>\* (I'm making that number up, but you get the idea.).</sup> 
 
-**The single best thing you can do for this issue is simply have *fewer components*.** In fact, a simple i3-style printer can achieve better print quality than a CoreXY printer in this regard.
+Apart from building your printer well, the single best thing you can do for this issue is simply have *fewer components*. In fact, a simple i3-style printer can achieve slightly better print quality than a CoreXY printer in this regard.
 
 The second best thing you can do is to buy higher quality filaments. Low quality filaments can have fluctuating diameters, [:page_facing_up:which can exacerbate these issues.](https://github.com/Deutherius/Filament-Width-Comp-Experiments/blob/main/README.md#some-updates)
 
@@ -42,7 +42,7 @@ The third best thing you can do is to buy higher quality printer components.
 Certain printer/kinematic/extruder designs *can* be better or worse than others (for example, I had a slight improvement when I started using an Orbiter extruder), but you you'll never reach perfection:
 
 ## An Analogy
-Think of it like the below graph. 
+Think of it like the below (arbitrary) graph. 
 
 Tuning efforts at the beginning (this tuning guide!) will have a much higher relative quality increase, but you get diminishing returns the closer you get to perfection. 3D printing just has an unfortunate side effect of showing off those imperfections.
 

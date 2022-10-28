@@ -22,7 +22,7 @@ These approximate values **assume a standard 0.4mm brass nozzle.**
 | Hotend | Flow Rate (mm<sup>3</sup>/sec) |
 | --- | :---: |
 | E3D V6 | 11 |
-| E3D Revo | 15 |
+| E3D Revo | 11 |
 | Dragon SF | 15 |
 | Dragon HF | 24 |
 | Dragonfly BMO | 13 |
@@ -62,6 +62,12 @@ For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup
 \* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [:page_facing_up:Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>
 
 ## Method
+
+---
+
+:bulb: This is a "quick and dirty" method that will get you a rough idea of your max flow rate. It's quick, easy, and "good enough" in most cases. There are more precise methods, like [:page_facing_up:CNC Kitchen's](https://youtu.be/lBi0-NotcP0), however his requires a milligram scale.
+
+---
 
 You will follow a similar process to extruder calibration. 
 

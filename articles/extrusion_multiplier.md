@@ -182,7 +182,7 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
         - I simply never have good results with this approach, and different people seem to get (sometimes wildly) different results.
         - The measured widths can vary depending where you measure it and how much pressure you use.
         - Any layer wobble (which all printers have in varying degrees) causes these walls to measure thicker, which can throw things off.
-        - This method required half-decent calipers, which many people just don't have. This limits the accessibility.
+        - This method requires half-decent calipers, which many people just don't have. This limits the accessibility.
 
 - #### **SuperSlicer Calibration**
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:

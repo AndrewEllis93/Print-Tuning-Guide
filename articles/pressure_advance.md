@@ -7,6 +7,10 @@
 
 **:warning: You may have to re-tune pressure advance if you enable or disable input shaper.** 
 
+:first_quarter_moon: If you are using Marlin, this page is still relevant, but: 
+- You will use [:page_facing_up:Marlin's calibration site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead. 
+- Marlin's version is called "linear advance", but the concepts are the same.
+- Linear advance does not have smoothing.
 ## Why PA is Needed
 
 ### Without PA

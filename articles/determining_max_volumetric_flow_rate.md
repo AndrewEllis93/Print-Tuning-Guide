@@ -67,6 +67,8 @@ For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup
 
 :bulb: This is a "quick and dirty" method that will get you a rough idea of your max flow rate. It's quick, easy, and "good enough" in most cases. There are more precise methods, like [:page_facing_up:CNC Kitchen's](https://youtu.be/lBi0-NotcP0) using [:page_facing_up:this site](https://hotend-flow-tester.netlify.app), however his requires a milligram scale.
 
+If you use the CNC Kitchen method, you may need to temporarily increase your  `max_extrude_cross_section` in your `[extruder]` section.
+
 ---
 
 You will follow a similar process to extruder calibration. 

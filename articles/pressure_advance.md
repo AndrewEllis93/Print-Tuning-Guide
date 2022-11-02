@@ -120,6 +120,9 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
     #### Result
 - ![](/images/KFactor-Print.jpg) 
 - Sometimes the best acceleration and decelerations values will not be on the same line. In this case, you should pick a midpoint between both.
+    - If they are more than a line or two apart:
+        - This often happens when there's too much [:page_facing_up:backlash](https://gfycat.com/mealycautiouscoqui) in the extruder. Pressure advance uses a reverse extruder move during decelerations. Excessive backlash causes some of that reverse move to be lost. 
+        - You still want a tiny amount of backlash (when filament is loaded) to ensure your extruder gears aren't over tensioned.
 - Always choose the lower value if you are not entirely sure.
 - This is a great visual representation of what I mentioned earlier: **that there is rarely a perfect PA value.** 
 

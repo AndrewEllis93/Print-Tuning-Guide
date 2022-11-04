@@ -4,12 +4,12 @@
 # Pressure Advance
 
 **:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
-- [:page_facing_up:Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
+- :fish:[:page_facing_up:Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
 
 **:warning: You may have to re-tune pressure advance if you enable or disable input shaper.** 
 - (I personally haven't really found this to be the case, but that's what the Klipper docs say)
 
-:waxing_gibbous_moon: If you are using Marlin, this page is still relevant, but: 
+:fish: If you are using Marlin, this page is still relevant, but: 
 - You will use [:page_facing_up:Marlin's calibration site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead. 
 - Marlin's version is called "linear advance" rather than "pressure advance", but the concepts are exactly the same.
 - Marlin's linear advance does not have smoothing.
@@ -18,7 +18,7 @@
 ### Without PA
 ![](/images/pressure_advance/pa_graph_off.png)\
 <sup>*(Source: :page_facing_up:https://marlinfw.org/assets/images/features/lin_advance/k-factor_low.png)*</sup>\
-<sup>*You can see the real-world version of this [:pushpin:below](/articles/pressure_advance.md#result). (The bottom line has PA completely off.)*</sup>
+![](/images/pressure_advance/pa_off_example.png)
 
 A certain pressure must be reached to achieve the expected flow rate. This extrusion pressure takes a short time to build up. During accelerations, there will be underextrusion while the pressure is still building up. **(2)**.
 
@@ -68,7 +68,7 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
 
 **1)** Visit the [:page_facing_up:pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
 - Thanks to Deuce#8801 for setting this up! (It's a modified version of Marlin's linear advance site.
-- If you are using Marlin, use [:page_facing_up:Marlin's linear advance site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead.
+- If you are using :fish:Marlin, use [:page_facing_up:Marlin's linear advance site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead.
 
 **2)** Fill out the parameters specific to your setup (printer name, bed size, retraction, etc.) 
 
@@ -95,7 +95,7 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
         - *Or the primary layer height that you intend to print at. <0.2mm can make first layer difficult, however.
 - **Speed**
     - **Slow Printing Speed**: Your `square_corner_velocity` From your printer.cfg. Default is 5.
-        - For Marlin, use your typical jerk value.
+        - :fish: For Marlin, use your typical jerk value.
     - **Fast Printing Speed**: Your perimeter speed
         - If your internal/external perimeter speeds are different, use the faster of the two.
         - :warning: **See [:page_facing_up:this table](https://docs.google.com/spreadsheets/d/1Ns3c4Yidn4unrxx7mJRS2iVHYgxszeJGdHS8gNP_Tz4/edit?usp=sharing) to ensure that you are not exceeding the maximum flow rate of your hotend.**
@@ -151,7 +151,7 @@ This PA test also serves as a nice extruder stress test, and it's a great visual
     - In **PS/SS**, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=`\<value> in your custom filament g-code.
         - You can also set different values for different nozzle sizes using [:page_facing_up:this](https://github.com/AndrewEllis93/Ellis-PIF-Profile#changing-pa-based-on-nozzle-size).
     - In **Cura**, you can set it during slicing using [:page_facing_up:this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
-- **Marlin:**
+- **:fish:Marlin:**
     - Place `M900 K`\<value\> in your filament g-code (same as above). This must be set each time.
     - You can save a permanent default to the firmware by modifying Configuration_adv.h and reflashing the firmware. Instructions in the "Saving the K-Factor in the Firmware" section [:page_facing_up:here](https://marlinfw.org/docs/features/lin_advance.html).
     - In **Cura**, you can set it during slicing using [:page_facing_up:this plugin.](https://github.com/fieldOfView/Cura-LinearAdvanceSettingPlugin)

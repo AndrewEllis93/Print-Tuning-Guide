@@ -1,6 +1,6 @@
 # Introduction
 
-Some parts of this guide are tailored to printers running **Klipper**.
+Some parts of this guide are tailored to printers running **Klipper**, but many pages work for other firmwares. See "Compatibility Icons" below.
 
 This guide was originally written for the Voron community, however all of the tuning sections should work on **any Klipper printer**. Some notes and hardware troubleshooting tips are still Voron specific, however.
 ## Notes
@@ -35,7 +35,7 @@ This guide was originally written for the Voron community, however all of the tu
 *Essentials. Read/follow these in order shown.*
 - [Build Surface Adhesion](/articles/build_surface_adhesion.md) :full_moon_with_face:
 - [First Layer Squish](/articles/first_layer_squish.md) :waxing_gibbous_moon:
-- [Pressure Advance](/articles/pressure_advance.md) :waxing_gibbous_moon:
+- [Pressure Advance](/articles/pressure_advance.md) *("Linear Advance" in Marlin)* :full_moon_with_face:
     - Why PA is Needed
     - What PA Does
     - Lines Method

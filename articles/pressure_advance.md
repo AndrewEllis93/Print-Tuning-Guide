@@ -4,14 +4,15 @@
 # Pressure Advance
 
 **:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
+- [:page_facing_up:Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
 
 **:warning: You may have to re-tune pressure advance if you enable or disable input shaper.** 
 - (I personally haven't really found this to be the case, but that's what the Klipper docs say)
 
 :waxing_gibbous_moon: If you are using Marlin, this page is still relevant, but: 
 - You will use [:page_facing_up:Marlin's calibration site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead. 
-- Marlin's version is called "linear advance", but the concepts are the same.
-- Linear advance does not have smoothing.
+- Marlin's version is called "linear advance" rather than "pressure advance", but the concepts are exactly the same.
+- Marlin's linear advance does not have smoothing.
 ## Why PA is Needed
 
 ### Without PA
@@ -150,6 +151,10 @@ This PA test also serves as a nice extruder stress test, and it's a great visual
     - In **PS/SS**, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=`\<value> in your custom filament g-code.
         - You can also set different values for different nozzle sizes using [:page_facing_up:this](https://github.com/AndrewEllis93/Ellis-PIF-Profile#changing-pa-based-on-nozzle-size).
     - In **Cura**, you can set it during slicing using [:page_facing_up:this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
+- **Marlin:**
+    - Place `M900 K`\<value\> in your filament g-code (same as above). This must be set each time.
+    - You can save a permanent default to the firmware by modifying Configuration_adv.h and reflashing the firmware. Instructions in the "Saving the K-Factor in the Firmware" section [:page_facing_up:here](https://marlinfw.org/docs/features/lin_advance.html).
+    - In **Cura**, you can set it during slicing using [:page_facing_up:this plugin.](https://github.com/fieldOfView/Cura-LinearAdvanceSettingPlugin)
 
 **8)** Try printing something! 
 

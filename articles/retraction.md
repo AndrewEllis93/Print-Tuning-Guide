@@ -100,7 +100,7 @@ We will be printing these retraction towers at three different temperatures. If 
 **8) Print it, and inspect the results.** 
 - If your hotter towers are much stringier, consider choosing a lower extrusion temperature.
 - **To get your new retraction length:**
-    - Count the rings (from the bottom), subtract 1, and multiply by your "step" value.
+    - Count the rings (from the bottom), subtract 1, and multiply by your "step" value from step 6.
         - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
         - We are subtracting 1 because the first ring is 0 retraction.
 

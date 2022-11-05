@@ -10,19 +10,24 @@ Some find that after tuning PA and EM, minor perimeter gapping is still present:
 
 ![](/images/perim-gapping-print.png)
 
-Assuming EM is well tuned, this is often caused by a slight flow dropoff at higher print speeds — since most people print their perimeters faster than their top layer.
+Assuming EM is well tuned, this is often caused by a slight [:page_facing_up:flow dropoff](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) at higher print speeds — since most people print their perimeters faster than their top layer.
 
-See [:page_facing_up:here](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) for more information on flow dropoff.
-
-There are a few different things you can do:\
+There are a few different things you can try:\
 *(in order of my preference)*
-1. Use a hotend and/or nozzle (Bondtech CHT) with a higher flow ceiling.
-    - This simply causes the flow dropoff to not start until a higher flow rate.
-    - This can reduce the effect, but may not 100% fix it.
-2. If your filament can handle it, increase hotend temperatures a bit. This also just helps with flow rates.
-3. Increase your EM until the gaps disappear. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
-4. Follow my [:page_facing_up:"determining maximum volumetric flow rate"](/articles/determining_max_volumetric_flow_rate.md) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
-5. Slow your perimeters down. The faster you print, the greater this flow dropoff becomes.
+1. Ensure that you are not [:page_facing_up:outrunning your hotend](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/articles/determining_max_volumetric_flow_rate.md) and that you do not have a partial nozzle clog.
+2. Take measures to improve your hotend's max flow rates.
+    - **Higher flow ceilings allow for better extrusion consistency at lower flow rates**, as the [:page_facing_up:flow dropoff](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) curve starts later. It is beneficial for extrusion consistency at different speeds, **even when you don't intend to use the full flow rate.**
+    - Try increasing hotend temperatures a bit.
+        - Temperature can have a significant effect on max flow rates. 
+        - Note: temp changes can have a minor effect on PA values.
+    - Use a hotend and/or nozzle with a higher flow ceiling.
+        - [:page_facing_up:Bondtech CHT](https://www.bondtech.se/product-category/nozzles/bondtech-nozzles/bondtech-cht/) and [:page_facing_up:Bozzle](https://www.fabreeko.com/products/bozzle-0-5mm-full-tungsten-carbide-nozzle-by-rentable-socks) both provide a large flow rate increase to any hotend that supports V6 nozzles. CHT also has a Volcano variant.
+        - I'm a fan of the Rapido UHF. It's the same as Rapido HF but comes with extra parts to convert it to UHF if desired. 
+            - I use it in the UHF configuration with [:page_facing_up:Bythorsthunder's mod for Stealthburner](https://github.com/bythorsthunder/VoronUsers/tree/master/printer_mods/bythorsthunder/Stealthburner_Rapido_Uhf). On its own, the flow rates aren't terribly impressive for its form factor (~30mm<sup>3</sup>/s), but a Volcano CHT nozzle takes it to the next level. I can comfortably achieve around 44mm<sup>3</sup>/s flow rate with only around 2-3% dropoff (at slightly elevated temps - ABS @ 255C).
+    - These steps can reduce the effect, but may not 100% fix it.
+5. Increase your EM until the gaps disappear. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
+6. Follow my [:page_facing_up:"determining maximum volumetric flow rate"](/articles/determining_max_volumetric_flow_rate.md) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
+7. Slow your perimeters down. The faster you print, the greater this flow dropoff becomes.
 
 ## Slight Corner Gapping
 
@@ -43,8 +48,9 @@ Here's an example.
 There are a few different things you can do:\
 *(in order of my preference)*
 1. Cover them up using single top perimeters (only available in SuperSlicer).
-2. Slowly increase your EM until the gaps are covered. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
-3. Slow your perimeters down. The faster you print, the more pronounced these PA imperfections become.
+2. Live with them! (within reason).
+3. Slowly increase your EM until the gaps are covered. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
+4. Slow your perimeters down. The faster you print, the more pronounced these PA imperfections become.
 
 ---
 

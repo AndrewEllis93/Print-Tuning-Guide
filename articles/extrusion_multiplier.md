@@ -20,7 +20,7 @@ Some Slicers seem to need slightly higher or lower EM than others.
 
 This method uses an aesthetics-first approach. For conerns about dimensional accuracy, see the [:pushpin:Rationale & Dimensional Accuracy](/articles/extrusion_multiplier.md#rationale--dimensional-accuracy) section.
 
-I have found that most ABS falls within the 91-95% range, though I have some outliars.
+I have found that most ABS falls within the 91-95% range, though I have some outliers.
 
 ## Method
 The best method I have found is purely visual/tactile.

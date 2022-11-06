@@ -41,7 +41,7 @@
 - Pressure advance consistency issues (such as causing ideal PA values to differ for accelerations and decelerations).
 
 ## Other Factors
-- Poor quality extruder or misaligned extruder parts can contribute to these issues.
+- Poor quality or misaligned extruder parts can contribute to these issues.
     - For BMG parts, Bondtech or Trianglelab are best.
     - Any [:page_facing_up:eccentricity](/images/troubleshooting/extrusion_patterns/eccentricity.png) or [:page_facing_up:misalignment](/images/troubleshooting/extrusion_patterns/filament_gear_misalignment.png) in the extruder gears will contribute to these patterns.
         - [:page_facing_up:Here](https://youtu.be/c6JmCdovE0U?t=431) is an excellent video showing this effect, and the source for the linked images.

@@ -93,6 +93,7 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
 - **Printer**
     - **Layer Height**: 0.2mm*
         - *Or the primary layer height that you intend to print at. <0.2mm can make first layer difficult, however.
+        - *On **textured beds**, you may want to try 0.25mm to verify if your results are reading high (>0.06 PA on direct drive)
 - **Speed**
     - **Slow Printing Speed**: Your `square_corner_velocity` From your printer.cfg. Default is 5.
         - :fish: For Marlin, use your typical jerk value.

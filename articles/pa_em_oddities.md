@@ -21,9 +21,7 @@ There are a few different things you can try:\
         - Temperature can have a significant effect on max flow rates. 
         - Note: temp changes can have a minor effect on PA values.
     - Use a hotend and/or nozzle with a higher flow ceiling.
-        - [:page_facing_up:Bondtech CHT](https://www.bondtech.se/product-category/nozzles/bondtech-nozzles/bondtech-cht/) and [:page_facing_up:Bozzle](https://www.fabreeko.com/products/bozzle-0-5mm-full-tungsten-carbide-nozzle-by-rentable-socks) both provide a large flow rate increase to any hotend that supports V6 nozzles. CHT also has a Volcano variant.
-        - I'm a fan of the Rapido UHF. It's the same as Rapido HF but comes with extra parts to convert it to UHF if desired. 
-            - I use it in the UHF configuration with [:page_facing_up:Bythorsthunder's mod for Stealthburner](https://github.com/bythorsthunder/VoronUsers/tree/master/printer_mods/bythorsthunder/Stealthburner_Rapido_Uhf). On its own, the flow rates aren't terribly impressive for its form factor (~30mm<sup>3</sup>/s), but a Volcano CHT nozzle takes it to the next level. I can comfortably achieve around 44mm<sup>3</sup>/s flow rate with only around 2-3% dropoff (at slightly elevated temps - ABS @ 255C).
+        - [:page_facing_up:Bondtech CHT](https://www.bondtech.se/product-category/nozzles/bondtech-nozzles/bondtech-cht/) and [:page_facing_up:Bozzle](https://www.fabreeko.com/products/bozzle-0-5mm-full-tungsten-carbide-nozzle-by-rentable-socks) both provide a sizeable flow rate increase to any hotend that supports V6 nozzles. CHT also has a Volcano variant.
     - These steps can reduce the effect, but may not 100% fix it.
 5. Increase your EM until the gaps disappear. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
 6. Follow my [:page_facing_up:"determining maximum volumetric flow rate"](/articles/determining_max_volumetric_flow_rate.md) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).

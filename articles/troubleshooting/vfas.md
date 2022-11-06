@@ -6,7 +6,7 @@
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 
 Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [:page_facing_up:here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
-If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up:this article](/articles/troubleshooting/bmg_clockwork_backlash.md) instead.
+If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up:this article](/articles/troubleshooting/extrusion_patterns.md) instead.
 
 Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
 
@@ -39,7 +39,7 @@ Try printing the test objects [:page_facing_up:here](https://mihaidesigns.com/pa
 
 Ensure that the artifacts are *always vertical or diagonal, regardless of part geometry*. These patterns can be subtle (lumps) or sharp (lines).
 
-If the pattern looks like "wood grain", or any of the example photos in that link, see [:page_facing_up:this article](/articles/troubleshooting/bmg_clockwork_backlash.md) instead.
+If the pattern looks like "wood grain", or any of the example photos in that link, see [:page_facing_up:this article](/articles/troubleshooting/extrusion_patterns.md) instead.
 
 - **Ensure that your A/B pulleys and XY joint idlers are all clean.** Debris can accumulate and compress between the teeth.
 - You may have a bad/poor quality pulley or toothed idler.

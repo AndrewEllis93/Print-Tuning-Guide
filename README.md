@@ -38,7 +38,7 @@ This guide was originally written for the Voron community, however all of the tu
 - [Pressure Advance](/articles/pressure_advance.md) *("Linear Advance" in Marlin)* :full_moon_with_face:
     - Why PA is Needed
     - What PA Does
-    - Lines Method
+    - Pattern Method
     - Fine-Tuning and What to Look For
     - [Tower Method](/articles/pressure_advance_tower_method.md) :new_moon:
 - [Extrusion Multiplier](/articles/extrusion_multiplier.md) :full_moon_with_face:
@@ -110,7 +110,11 @@ This guide was originally written for the Voron community, however all of the tu
 
 ## **Troubleshooting**
 *Even without issues, you should look through these to fmiliarize yourself with things to look out for. **Especially** thermal drift under "First Layer / Squish Consistency Issues"*
-- [BMG Clockwork Backlash Issues (Repeating Patterns / "Wood Grain")](/articles/troubleshooting/bmg_clockwork_backlash.md) :new_moon:
+- [Extrusion Patterns / "Wood Grain"](/articles/troubleshooting/extrusion_patterns.md) :first_quarter_moon:
+    - Extruder Backlash
+    - Other Factors
+    - Clockwork 1
+    - Mini Afterburner
 - [Bulging](/articles/troubleshooting/bulging.md) :full_moon_with_face:
     - Bulging Layers
     - Bulges at STL Vertices

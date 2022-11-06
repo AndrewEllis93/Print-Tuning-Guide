@@ -5,7 +5,7 @@
 
 ---
 
-**I would highly recommend using the [:page_facing_up:lines method](/articles/pressure_advance.md#lines-method) rather than this method, if you can take some time to wrap your head around a small amount of g-code.** It is quicker and more precise. This "tower method" is here for beginners, and works, but is not my preferred method as it's a bit less precise.
+**I would highly recommend using the [:page_facing_up:pattern method](/articles/pressure_advance.md#pattern-method) rather than this method, if you can take some time to wrap your head around a small amount of g-code.** It is quicker and more precise. This "tower method" is here for beginners, and works, but is not my preferred method as it's a bit less precise.
 
 This is based off of the [:page_facing_up:Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
 

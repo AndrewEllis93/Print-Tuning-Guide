@@ -55,9 +55,9 @@ Here is a practical example. The perimeters were printed counter-clockwise.
 - Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors if they are noticeably different.
 - Pressure advance needs re-tuning when changing nozzle sizes.
 
-There are two approaches - the  [:pushpin:lines method](/articles/pressure_advance.md#lines-method) (recommended), and the [:page_facing_up:tower method](/articles/pressure_advance_tower_method.md) (easier for newbies, but a bit less accurate).
+There are two approaches - the  [:pushpin:pattern method](/articles/pressure_advance.md#pattern-method) (recommended), and the [:page_facing_up:tower method](/articles/pressure_advance_tower_method.md) (easier for newbies, but a bit less accurate).
 
-## Lines Method
+## Pattern Method
 
 This method is quicker to run and more precise than the [:page_facing_up:tower method](/articles/pressure_advance_tower_method.md), but requires some additional setup, including some start g-code.
 
@@ -138,8 +138,9 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
 This PA test also serves as a nice extruder stress test, and it's a great visual indicator for extrusion issues. It ensures that your extruder/hotend can handle your requested speeds, PA, and accelerations.
 - If your best accel/decel PA values are more than a line or two apart:
     - You may have too much [:page_facing_up:backlash](https://gfycat.com/mealycautiouscoqui) in your extruder. Pressure advance uses a reverse extruder move during decelerations. Excessive backlash causes some of that reverse move to be lost. 
-        - See [:page_facing_up: here](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/articles/troubleshooting/bmg_clockwork_backlash.md) for more information on the effects of backlash/gear tension.
+        - See [:page_facing_up: here](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/articles/troubleshooting/extrusion_patterns.md) for more information on the effects of backlash/gear tension.
         - *You still want a tiny amount of backlash (when filament is loaded) to ensure your extruder gears aren't over tensioned. Essentially as little as you can manage.*
+        - This is not adjustable on some extruders like the Orbiter (doesn't have the same backlash issues anyway in my experience!)
 - If your PA numbers are unusually high:
     - This may indicate a partial nozzle clog or that your hotend temperature is too low. More back pressure means more pressure advance.
 - If the middle (fast) section is not printing, or is only partially printing:

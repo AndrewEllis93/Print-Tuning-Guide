@@ -143,7 +143,7 @@ A bit too high is better than a bit too low.
 ![](/images/EMPrints-SlightlyLow.png)
 
 ## Further Tips
-**When evaluating EM, you should *always* look at the widest areas in a given print.** 
+### **When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
 
 It's totally normal for [:page_facing_up:smaller infill areas to look a bit overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md).
 

@@ -22,35 +22,42 @@ It's also just a bit of fun. <sup>haha printer go brrrr</sup>
 - Higher voltage systems (e.g. 24v vs 12v) can also generally reach higher top speeds/accels.
 
 ## Method
+---
 
 Tune maximum accelerations first, then tune speeds second.
 
+The acceleration test does need reasonably fast speeds to ensure accuracy, however. Make sure that your `max_velocity` in your config is set to this reasonably fast speed that you already know works **reliably.**
+
+There is some interplay between accelerations and speeds. 
+
+---
+
+
 **1)** Add [:page_facing_up:this macro](/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
+- If your printer is a delta, use [:page_facing_up:this version](/macros/TEST_SPEED_DELTA.cfg) instead.
 
-**2)** If you are have increased your `max_velocity`, lower it back to the original value (check the stock configs for your printer) and `RELOAD`. 
-
-**3)** Fully heat soak your printer. 
+**2)** Fully heat soak your printer if enclosed.
 - Ideally the test should be run at the same chamber temps as your actual printing conditions.
 
-**4)** Run the `TEST_SPEED` macro using the [:pushpin:instructions below](/articles/determining_max_speeds_accels.md#usage-of-the-test_speed-macro) with increasing accelerations [:pushpin:until you experience skipping.](#determining-if-skipping-occured) 
+**3)** Run the `TEST_SPEED` macro using the [:pushpin:instructions below](/articles/determining_max_speeds_accels.md#usage-of-the-test_speed-macro) with increasing accelerations [:pushpin:until you experience skipping.](#determining-if-skipping-occured) 
 - Start with a small number of iterations.
     - Example: `TEST_SPEED ACCEL=5000 ITERATIONS=2`
 
 - Once you experience skipping, back the acceleration down and try again until you no longer get any skipping.
 
-**5)** Once you have found a rough maximum, run the test again with a large number of iterations.
+**4)** Once you have found a rough maximum, run the test again with a large number of iterations.
 
 - This is essentially an extended torture test.
     - Example: `TEST_SPEED ACCEL=5000 ITERATIONS=50`
 
 - If you experience any skipping during extended tests, back the speed down again.
 
-**6)** *Use a slightly lower value than your results.*
+**5)** *Use a slightly lower value than your results.*
 - Sometimes a maximum that works perfectly, even in extended torture tests, can skip during actual prints. Go a bit lower for a margin of safety.
 
-**7)** Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
+**6)** Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
 
-**8)** Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up:here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
+**7)** Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up:here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
 
 - This is only a theoretical maximum. I will explain more in the next step.
 
@@ -58,7 +65,7 @@ Tune maximum accelerations first, then tune speeds second.
 
     - \* Note that the test pattern is **inset 20mm by default** to help avoid collisions. Hence the distance of **260mm** *(300-20\*2)*.
 
-    - The "desired speed" field is arbitrary for our purposes. Enter anything or use the default.
+    - The "desired speed" field is mostly arbitrary for our purposes. Enter anything or use the default.
 
     - This **yellow line** shows that we would theoretically max out a bit over **900mm/s** at this acceleration/distance.
     - ![](/images/TEST_SPEED_Calc.png) 

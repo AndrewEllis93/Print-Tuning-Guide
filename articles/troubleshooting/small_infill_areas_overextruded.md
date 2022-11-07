@@ -69,6 +69,17 @@ This will cause a retraction at every direction change.
         - Minor surface scarring during travels
         - Knocking over parts if you have excessive curling
 
+### Solid Infill
+If you also set solid infill to "not connected" (in addition to the *top* solid infill), make sure you also check "only retract when crossing perimeters".
+
+- ![](/images/troubleshooting/small_infill_overextruded/not_connected_solid_setting.png)
+
+- ![](/images/troubleshooting/small_infill_overextruded/only_retract_when_crossing_perimeters_setting.png)
+
+- :warning: Otherwise, these additional retractions (and the slowdown!) will occur on **ALL solid layers, not just the top.**
+
+    - ![](/images/troubleshooting/small_infill_overextruded/not_connected_retractions_solid.png)
+
 ---
 ## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
 (Excerpt from the [:page_facing_up:Extrusion Multiplier](/articles/extrusion_multiplier.md) article)

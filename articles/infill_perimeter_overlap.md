@@ -7,9 +7,11 @@ After tuning flow and pressure advance, you may still have some pinholes where y
 
 This is *not necessarily* an indicator that your flow or pressure advance are wrong, though they can impact it. 
 
-*Some people have widely varying overlap settings. You will need to tune this for yourself. I am still figuring out why it varies between people. It may be impacted by line width, but I have not yet tested this theory.*
+One approach is to [:page_facing_up:set top infill to "not connected"](/articles/troubleshooting/small_infill_areas_overextruded.md#not-connected-top-infill-superslicer) (SS). This has some other potential benefits, and often fixes the pinholes without having to do any overlap tweaking.
 
-Simply increase "infill/perimeter overlap" (PS) or "infill/perimeters encroachment" (SS) until satisfied.
+For "connected" infill, simply adjust "infill/perimeter overlap" (PS) or "infill/perimeters encroachment" (SS) until satisfied. I ended up at about 40%. 
+
+*(Though now I use the default overlap of 25% with "not connected" top infill instead.)*
 
 ## Examples
 - ![](/images/Overlap-1.png) 
@@ -17,12 +19,6 @@ Simply increase "infill/perimeter overlap" (PS) or "infill/perimeters encroachme
 ## Overlap Tweaked:
 
 - ![](/images/Overlap-Fixed1.png) 
-
-## Regarding "Not Connected" Top Infill (SuperSlicer)
-
-- Some use "not connected" for their top infill. This does resolve the pinholes, however I find this to cause the opposite problem. It *overshoots.* 
-
-- To resolve this overshoot, you then need to *lower* your overlap. And because overlap is a global setting, this also starts to affect sparse infill/perimeter bonding - and therefore affects print strength.
 
 ---
 

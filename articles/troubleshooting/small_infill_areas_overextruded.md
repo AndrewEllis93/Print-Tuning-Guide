@@ -38,7 +38,10 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
 
 - ![](/images/troubleshooting/small_infill_overextruded/connected_not_connected_comparison.png)
 
-## The Magic Bullet (But With Downsides)
+## The Magic Bullet? (But With Downsides)
+
+This setting has yielded the largest improvement of all for me. Your mileage may vary of course, but I'm curious to hear your experiences with it.
+
 **In combination with** the "not connected" top infill setting described above, you can set "minimum travel after retraction" to 0.\
 This will cause a retraction at every direction change. 
 
@@ -54,7 +57,7 @@ This will cause a retraction at every direction change.
 - Excessive Z hopping.
     - ![](/images/troubleshooting/small_infill_overextruded/retract_min_distance_example_hop_on.png)
 
-### Making it Faster (Still With Downsides)
+### Making it Faster (Still With Some Downsides)
 - You can turn Z hop off for *only* the top layer, like so:
 
     - ![](/images/troubleshooting/small_infill_overextruded/hop_setting.png)
@@ -69,8 +72,10 @@ This will cause a retraction at every direction change.
         - Minor surface scarring during travels
         - Knocking over parts if you have excessive curling
 
-### Solid Infill
-If you also set solid infill to "not connected" (in addition to the *top* solid infill), make sure you also check "only retract when crossing perimeters".
+### Solid Infill Considerations
+If you choose to set solid infill to "not connected" (in addition to the *top* solid infill described above), make sure you also check "only retract when crossing perimeters".
+
+Personally I don't find "not connected" solid infill necessary, considering the potential conflict with the below retraction setting. I only use "not connected" for my top infill.
 
 - ![](/images/troubleshooting/small_infill_overextruded/not_connected_solid_setting.png)
 

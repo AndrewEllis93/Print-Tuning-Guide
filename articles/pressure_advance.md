@@ -66,8 +66,8 @@ This method is quicker to run and more precise than the [:page_facing_up:tower m
     - (You *probably* won't, but there's my disclaimer :grin:)
 ### Steps
 
-**1)** Visit the [:page_facing_up:pressure advance calibration site](https://realdeuce.github.io/Voron/PA/pressure_advance.html).
-- Thanks to Deuce#8801 for setting this up! (It's a modified version of Marlin's linear advance site.
+**1)** Visit the [:page_facing_up:pressure advance calibration site](https://andrewellis93.github.io/pressure_advance/pressure_advance.html).
+- Thanks to Deuce#8801 for helping with this!
 - If you are using :fish:Marlin, use [:page_facing_up:Marlin's linear advance site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead.
 
 **2)** Fill out the parameters specific to your setup (printer name, bed size, retraction, etc.) 

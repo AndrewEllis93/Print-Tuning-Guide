@@ -80,7 +80,7 @@ If there is much resistance, *figure out where it is coming from:*
             - If you have the 20mm 1a LDO motor, try ~0.65a. 
             - If you have the 17mm 1a LDO motor, try 0.35-0.4a.
 - Check your extruder motor and hotend fan's [:page_facing_up:crimps](/articles/troubleshooting/crimps.md) and wiring.
-- Check the volumetric speed preview in your slicer. See if it is [:page_facing_up:high for your particular hotend](/articles/determining_max_volumetric_flow_rate.md#approximate-values). Or see [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-PIF-Profile/articles/determining_max_volumetric_flow_rate.md) to determine your maximum.
+- Check the volumetric speed preview in your slicer. See if it is [:page_facing_up:high for your particular hotend](/articles/determining_max_volumetric_flow_rate.md#approximate-values). Or see [:page_facing_up:here](/articles/determining_max_volumetric_flow_rate.md) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
 - Try rotating the extruder (if possible) without filament loaded. It should be easy.
 - Try using a cooling mod, like the [:page_facing_up:AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN). It optimizes hotend cooling and can help with heat creep issues.

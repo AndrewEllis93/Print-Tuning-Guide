@@ -38,7 +38,7 @@ There are a few factors that can affect your retraction settings, such as:
 
 **We will be using using [:page_facing_up:SuperSlicer](https://github.com/supermerill/SuperSlicer/releases)'s calibration tools.**
 
-- If you do not typically use SuperSlicer, you can start with one of the built-in Voron profiles or use one of my [:page_facing_up:my profiles](https://github.com/AndrewEllis93/Ellis-PIF-Profile) (please read the manual, though.).
+- If you do not typically use SuperSlicer, you can start with one of the built-in Voron profiles or use one of my [:page_facing_up:my profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles) (please read the manual, though.).
 
     - The built-in profiles are not great in my opinion, but will work fine just for running the calibration tools. 
 

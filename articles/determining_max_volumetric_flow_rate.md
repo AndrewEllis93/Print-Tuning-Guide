@@ -13,7 +13,7 @@ You can use this volumetric flow rate **to determine how fast your hotend/extrud
 - Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
     - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. 
     - You can also set any print speeds to a high "absolute maximum" speed (like infill) and let it be limited by the volumetric flow limit. This essentially prints at the maximum speed your hotend will allow:
-        - This is utilized by my published SuperSlicer profile (see its [:page_facing_up:"Volumetric Speed Limiting"](https://github.com/AndrewEllis93/Ellis-PIF-Profile#volumetric-speed-limiting) section for more information.)
+        - This is utilized by my published SuperSlicer profile (see its [:page_facing_up:"Volumetric Speed Limiting"](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles#volumetric-speed-limiting) section for more information.)
         - ![](/images/determining_max_volumetric_flow_rate/volumetric-ss.png)
         - :warning:**In Prusa Slicer, this must be set in the filament settings instead.** The setting in the "auto speed" section only applies in specific circumstances in PS.
 ## Approximate Values

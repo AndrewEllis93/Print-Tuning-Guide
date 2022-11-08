@@ -27,6 +27,9 @@ Adapted from [:page_facing_up:**bythorsthunder**](https://discordapp.com/users/8
 - Increase your external perimeter line width*. 
     - This provides more overlap with the previous layer. See [:page_facing_up:stepover](/articles/stepover.md).
     - \* *Unless you are printing Voron parts - they are designed for 0.4mm external perimeter widths.*
+    - **Especially** if you are using a layer height greater than 50% of your nozzle diameter. 100% line widths do not work well when exceeding 50% layer height.
+        - For example (with a 0.4m nozzle), imagine an extrusion line of 0.3mm height and 0.4mm width. You're basically printing sausages!
+        - See [:page_facing_up:Stepover](/articles/stepover.md) for a link to a great visualization by Maker's Muse.
 - Verify your extrusion multiplier. There should be no gaps or holes in top solid surfaces. See [:page_facing_up:here](/articles/extrusion_multiplier.md).
 - Try decreasing your perimeter speed.  
     - If it only affects holes, you can slow them down in PS/SS by lowering `small_perimeter_speed`.

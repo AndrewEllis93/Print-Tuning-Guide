@@ -90,7 +90,8 @@ All samples with "not connected" are shown with [:pushpin:top retractions](#the-
 
 Lower overlaps show more small improvements, but also start to create pinholes.
 
-In my case, NC/NC/~20% turned out to be the sweet spot. 
+In my case, I decided to stick with NC/NC/25%. Still a nice improvement.\
+Anything lower would create [:page_facing_up:pinholes](/articles/infill_perimeter_overlap.md), and as mentioned in [:pushpin:this section](#the-magic-bullet-but-with-downsides), too low would start to disconnect the infill.
 
 - ![](/images/troubleshooting/small_infill_overextruded/demonstration.png)
 
@@ -100,7 +101,7 @@ In my case, NC/NC/~20% turned out to be the sweet spot.
 - **Minimum travel after retraction:** 0
 - **Z-hop:** Disabled on top layer
 - **Only retract when crossing perimeters:** Enabled
-- **Overlap (encroachment):** 20%
+- **Overlap (encroachment):** 25%
 ---
 ## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
 (Excerpt from the [:page_facing_up:Extrusion Multiplier](/articles/extrusion_multiplier.md) article)

@@ -77,7 +77,7 @@ This guide was originally written for the Voron community, however all of the tu
 
 ## **Miscellaneous**
 - [Stepover](/articles/stepover.md) :full_moon_with_face: (The black magic secret for better overhangs)
-- [Useful Macros](/articles/useful_macros.md) :new_moon:
+- [Useful Macros](/macros/useful_macros.md) :new_moon:
     - Conditional Homing
     - Conditional QGL
     - :warning: Hotend Fan RPM Monitoring

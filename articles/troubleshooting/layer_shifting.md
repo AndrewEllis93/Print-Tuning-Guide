@@ -37,17 +37,6 @@ The circles represent a printed object shifting in the direction of the arrows.
 - Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
 - Try rotating the motors by hand. Sometimes a bad motor will be the cause of the resistance.
 
-## Speeds and Accelerations
-Sometimes layer shifting can occur because you are simply asking too much of your steppers. You may be running accelerations or speeds that are too much for your motors to handle. 
-
-- Try turning accelerations down, especially if you are not using input shaper.
-    - Input shaper also allows for higher accelerations, not just less ringing.
-- Disable stealthchop.
-- Ensure that you are not running your microstepping too high.
-- Check [:page_facing_up:this article](/articles/determining_max_speeds_accels.md) to test.
-    - Try running the `TEST_SPEED` macro without any arguments to test your current maximums.
-- You can try increasing motor currents. Don't exceed the maximums described in [:page_facing_up:this article](/articles/determining_motor_currents.md). 
-    - Ensure that you have proper stepper driver cooling before doing this.
 ## Electrical
 - ### Motor Currents
     - Check your motor currents. Ensure that the `run_current` configured for your A/B/X/Y motors are correct. See [:page_facing_up:this article.](/articles/determining_motor_currents.md)
@@ -63,6 +52,17 @@ Sometimes layer shifting can occur because you are simply asking too much of you
         - Ensure that they have adequate airflow*. 
             - \* *The v0 does not spec stepper driver cooling by default. This is usually fine, as it runs lower motor currents. It may be worth trying, though, if you are having issues (especially if you are running higher motor currents.)*
 
+## Speeds and Accelerations
+Sometimes layer shifting can occur because you are simply asking too much of your steppers. You may be running accelerations or speeds that are too much for your motors to handle. 
+
+- Try turning accelerations down, especially if you are not using input shaper.
+    - Input shaper also allows for higher accelerations, not just less ringing.
+- Disable stealthchop.
+- Ensure that you are not running your microstepping too high.
+- Check [:page_facing_up:this article](/articles/determining_max_speeds_accels.md) to test.
+    - Try running the `TEST_SPEED` macro without any arguments to test your current maximums.
+- You can try increasing motor currents. Don't exceed the maximums described in [:page_facing_up:this article](/articles/determining_motor_currents.md). 
+    - Ensure that you have proper stepper driver cooling before doing this.
 ---
 
 [:arrow_left: Back to Table of Contents](/README.md)

@@ -128,8 +128,8 @@ This guide was originally written for the Voron community, however all of the tu
     - Squish Consistency (Between Prints)
 - [Layer Shifting](/articles/troubleshooting/layer_shifting.md) :first_quarter_moon:
     - Mechanical
-    - Speeds and Accelerations
     - Electrical
+    - Speeds and Accelerations
 - [Perimeter Separation](/articles/troubleshooting/perimeter_separation.md) :full_moon_with_face:
 - [PLA is Overheating](/articles/troubleshooting/pla_overheating.md) :full_moon_with_face:
 - [Pockmarks](/articles/troubleshooting/pockmarks.md) :full_moon_with_face:

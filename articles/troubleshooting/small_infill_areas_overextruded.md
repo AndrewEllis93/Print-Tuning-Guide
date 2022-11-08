@@ -73,9 +73,8 @@ This will cause a retraction at every direction change.
         - Knocking over parts if you have excessive curling
 
 ### Solid Infill Considerations
-If you choose to set solid infill to "not connected" (in addition to the *top* solid infill described above), make sure you also check "only retract when crossing perimeters".
-
-Personally I don't find "not connected" solid infill necessary, considering the potential conflict with the below retraction setting. I only use "not connected" for my top infill.
+- Further small improvements may be made by also setting solid infill to "not connected".
+- However, :warning: make sure you also check "only retract when crossing perimeters".
 
 - ![](/images/troubleshooting/small_infill_overextruded/not_connected_solid_setting.png)
 
@@ -85,6 +84,23 @@ Personally I don't find "not connected" solid infill necessary, considering the 
 
     - ![](/images/troubleshooting/small_infill_overextruded/not_connected_retractions_solid.png)
 
+### Demonstration
+
+All samples with "not connected" are shown with [:pushpin:top retractions](#the-magic-bullet-but-with-downsides) **enabled**.
+
+Lower overlaps show more small improvements, but also start to create pinholes.
+
+In my case, NC/NC/~20% turned out to be the sweet spot. 
+
+- ![](/images/troubleshooting/small_infill_overextruded/demonstration.png)
+
+### My (Personal) Final Settings
+- **Top:** "Not connected"
+- **Solid:** "Not connected"
+- **Minimum travel after retraction:** 0
+- **Z-hop:** Disabled on top layer
+- **Only retract when crossing perimeters:** Enabled
+- **Overlap (encroachment):** 20%
 ---
 ## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
 (Excerpt from the [:page_facing_up:Extrusion Multiplier](/articles/extrusion_multiplier.md) article)

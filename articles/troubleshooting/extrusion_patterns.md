@@ -41,6 +41,7 @@
 - Pressure advance consistency issues (such as causing ideal PA values to differ for accelerations and decelerations).
 
 ## Other Factors
+- Try adjusting your filament tension screw/thumbscrew (if equipped).
 - Poor quality or misaligned extruder parts can contribute to these issues.
     - For BMG parts, Bondtech or Trianglelab are best.
     - Any [:page_facing_up:eccentricity](/images/troubleshooting/extrusion_patterns/eccentricity.png) or [:page_facing_up:misalignment](/images/troubleshooting/extrusion_patterns/filament_gear_misalignment.png) in the extruder gears will contribute to these patterns.
@@ -48,8 +49,7 @@
         - [:page_facing_up:Weaslus#8108](https://discordapp.com/users/195286997240250368/) is working on a testing methodology to help narrow down causes. See his[:page_facing_up:GitHub page](https://github.com/weaslus/Inconsistent_Extrusion_Diagnostics) on the subject.
             - :warning: **This methodology is still in testing.** :warning: 
             - He is looking for feedback. Please direct any feedback to the **#off_topic_theorycrafting** channel in the [:page_facing_up:Voron Discord Server](https://discord.com/invite/voron) and tag him. 
-    
-- Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience. Bowden systems are also less prone, presumably due to the bowden springiness acting as a buffer.
+- Anecdotally, Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience. Bowden systems are also less prone, presumably due to the bowden springiness acting as a buffer.
 
 
 ## Clockwork 1

@@ -39,6 +39,7 @@
 - [:pushpin:Repeating patterns](/articles/troubleshooting/extrusion_patterns.md#repeating-patterns) in extrusion
 - Clacking noises during retraction and pressure advance moves
 - Pressure advance consistency issues (such as causing ideal PA values to differ for accelerations and decelerations).
+- Stringing
 
 ## Other Factors
 - Try adjusting your filament tension screw/thumbscrew (if equipped).

@@ -107,6 +107,7 @@ We will be printing these retraction towers at three different temperatures. If 
 ## If You Are Having Persistent Issues:
 - **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
     - Even brand new, factory sealed filament can still come wet. 
+- [:page_facing_up:Ensure that you don't have excessive backlash in your extruder gears.](/articles/troubleshooting/extrusion_patterns.md#extruder-backlash)
 - Ensure that your nozzle is relatively clean.
 - Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
     - Your nozzle should be hot tightened (to the manufacturer's recommended torque specification if possible).

@@ -2,7 +2,7 @@
 
 Some parts of this guide are tailored to printers running **Klipper**, but many pages work for other firmwares. See "Compatibility Icons" below.
 
-This guide was originally written for the Voron community, however all of the tuning sections should work on **any Klipper printer**. Some notes and hardware troubleshooting tips are still Voron specific, however.
+This guide was originally written for the Voron community. Some notes and hardware troubleshooting tips are still Voron specific.
 ## Notes
 
 - My SuperSlicer profiles are located [:page_facing_up:here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles).

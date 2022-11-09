@@ -33,8 +33,6 @@ Having a finely tuned EM also unfortunately means that any cornering imperfectio
 
 - ![](/images/corner-gapping-print.png)
 
-Firstly, try to fine-tune PA to *reduce* the gaps as much as possible. They may not completely disappear, however. PA simply isn't perfect.
-
 Here's an example.
 
 - This is the "best" PA line from my test.

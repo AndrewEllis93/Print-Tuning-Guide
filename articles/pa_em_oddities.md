@@ -45,10 +45,18 @@ Here's an example.
 
 There are a few different things you can do:\
 *(in order of my preference)*
-1. Cover them up using single top perimeters (only available in SuperSlicer).
-2. Live with them! (within reason).
-3. Slowly increase your EM until the gaps are covered. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
-4. Slow your perimeters down. The faster you print, the more pronounced these PA imperfections become.
+- Cover them up using single top perimeters (only available in SuperSlicer).
+- Live with them! (within reason). 
+    - Some corner gapping is just unavoidable when printing at speed, even with the "correct" pressure advance value, as evidenced in the above image.
+- Try lowering your pressure advance smooth time a little bit. 
+    - Don't go too low. There are diminishing returns. I run 0.02-0.025. Direct drive can handle lower than bowden. Too low will cause extruder skipping during PA movements.
+- Slow your perimeters down. The faster you print, the more pronounced these PA imperfections become.
+- These technically work, but are not my favored approaches. Some choose to do these and live with the drawbacks, however:
+    - Lowering your pressure advance. This actually means running your PA *a bit too low* to force some extra material into the corners. 
+        - **However, this can cause perimeter and top layer gapping. This likely also means having to overextrude a bit to compensate. Overextruding can affect dimensions and layer consistency.**
+    - Increasing your extrusion multiplier until the gaps are covered. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look good again. 
+        - **This likely also means overextruding a bit to compensate. Overextruding can affect dimensions and layer consistency.**
+
 
 ---
 

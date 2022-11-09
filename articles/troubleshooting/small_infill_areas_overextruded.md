@@ -39,6 +39,17 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
 - ![](/images/troubleshooting/small_infill_overextruded/connected_not_connected_comparison.png)
 
 ## The Magic Bullet? (But With Downsides)
+---
+
+Disclaimer: I am **not** using this trick in my daily driver profiles due to the drawbacks.\
+I am only using the "not connected" settings described above, with 25% overlap/enchroachment.
+
+If you are having small infill issues, it may still be worth a try, however.
+
+- I'm currently tinkering with the SuperSlicer source code to possibly add a "minimum travel after z-hop" setting, just like the "minimum travel after retraction" setting.
+- :bulb:*If you're familiar with C++ and willing to help me out here, I would be grateful! I don't think it's a super difficult change, I'm just very much stumbling my way through this and currently failing.*
+
+---
 
 This setting has yielded the largest improvement of all for me. Your mileage may vary of course, but I'm curious to hear your experiences with it.
 
@@ -98,10 +109,10 @@ Anything lower would create [:page_facing_up:pinholes](/articles/infill_perimete
 ### My (Personal) Final Settings
 - **Top:** "Not connected"
 - **Solid:** "Not connected"
-- **Minimum travel after retraction:** 0
-- **Z-hop:** Disabled on top layer
-- **Only retract when crossing perimeters:** Enabled
 - **Overlap (encroachment):** 25%
+
+I decided not to use the retraction trick in my daily driver for the time being, due to the top scarring concerns.
+
 ---
 ## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
 (Excerpt from the [:page_facing_up:Extrusion Multiplier](/articles/extrusion_multiplier.md) article)

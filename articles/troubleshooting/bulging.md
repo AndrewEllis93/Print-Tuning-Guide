@@ -4,17 +4,25 @@
 
 This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 
 
-![](/images/troubleshooting/Bulging.png) 
-![](/images/troubleshooting/Bulging2.png) 
+- ![](/images/troubleshooting/Bulging.png) 
+- ![](/images/troubleshooting/Bulging2.png) 
+    - Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
+    - Reduce perimeter accelerations.
 
-- Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
-- **Reduce perimeter accelerations considerably.**
 ## Bulges at STL Vertices
 ![](/images/troubleshooting/Vertex-Bulges.png)
 
 ![](/images/troubleshooting/Vertex-Bulges-2.png) 
 - Your square corner velocity may be too low. (Did you leave it set at 1 by chance?)
 - This can also be a sign that your perimeter speeds/accels are too high.
+
+## Bulging Around Features (SuperSlicer)
+- ![](/images/troubleshooting/bulging/feature_bulging.png) 
+    - Try this combination of settings. It will not make it *perfect*, but it made a noticeable improvement for me.\
+    *(described in further detail in [:page_facing_up:Small Infill Areas Look Overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md), but can have a positive effect for this issue too)*
+        - Top infill: "Not connected"
+        - Solid infill: "Not connected"
+        - Infill/perimeter overlap (encroachment): 25%
 ## Bulging Patterns on Overhangs (SS)
 ![](/images/troubleshooting/AboveBridgeFlow-1.png)
 ![](/images/troubleshooting/AboveBridgeFlow-2.png)

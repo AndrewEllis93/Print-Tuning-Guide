@@ -20,10 +20,10 @@ This guide was originally written for the Voron community, however all of the tu
 
 # Table of Contents
 #### Compatibility Icons
-- :new_moon: = Klipper or Voron specific.
-- :first_quarter_moon: = Concept applies to all firmwares, but notable tips/commands/configs are Klipper or Voron specific.
-- :waxing_gibbous_moon: = Applies to all firmwares, but some minor details (commands, configs) may differ.
-- :full_moon_with_face: = Applies to all printers.
+- (:new_moon:) = Klipper or Voron specific.
+- (:first_quarter_moon:) = Concept applies to all firmwares, but notable tips/commands/configs are Klipper or Voron specific.
+- (:waxing_gibbous_moon:) = Applies to all firmwares, but some minor details (commands, configs) may differ (often noted).
+- (:full_moon:) = Applies to printers, or all Marlin/Klipper printesr.
 
 ## **Before We Begin**
 - [Before We Begin](/articles/before_we_begin.md)
@@ -33,51 +33,51 @@ This guide was originally written for the Voron community, however all of the tu
 
 ## **Print Tuning** 
 *Essentials. Read/follow these in order shown.*
-- [Build Surface Adhesion](/articles/build_surface_adhesion.md) :full_moon_with_face:
-- [First Layer Squish](/articles/first_layer_squish.md) :waxing_gibbous_moon:
-- [Pressure Advance](/articles/pressure_advance.md) *("Linear Advance" in Marlin)* :full_moon_with_face:
+- [Build Surface Adhesion](/articles/build_surface_adhesion.md) (:full_moon:)
+- [First Layer Squish](/articles/first_layer_squish.md) (:waxing_gibbous_moon:)
+- [Pressure Advance](/articles/pressure_advance.md) *("Linear Advance" in Marlin)* (:full_moon:)
     - Why PA is Needed
     - What PA Does
     - Pattern Method
     - Fine-Tuning and What to Look For
-    - [Tower Method](/articles/pressure_advance_tower_method.md) :new_moon:
-- [Extrusion Multiplier](/articles/extrusion_multiplier.md) :full_moon_with_face:
+    - [Tower Method](/articles/pressure_advance_tower_method.md) (:new_moon:)
+- [Extrusion Multiplier](/articles/extrusion_multiplier.md) (:full_moon:)
     - Background 
     - Method
     - Rationale & Dimensional Accuracy
-- [PA / EM Oddities](/articles/pa_em_oddities.md) :waxing_gibbous_moon:
+- [PA / EM Oddities](/articles/pa_em_oddities.md) (:waxing_gibbous_moon:)
     - Slight Perimeter Gapping
     - Slight Corner Gapping
-- [Cooling and Layer Times](/articles/cooling_and_layer_times.md) :full_moon_with_face:
+- [Cooling and Layer Times](/articles/cooling_and_layer_times.md) (:full_moon:)
     - Signs of Overheating
     - How to Fix It
-- [Retraction](/articles/retraction.md) :full_moon_with_face:
+- [Retraction](/articles/retraction.md) (:full_moon:)
     - If You Are Having Persistent Issues
         - With PETG
-- [Infill/Perimeter Overlap](/articles/infill_perimeter_overlap.md) :full_moon_with_face:
+- [Infill/Perimeter Overlap](/articles/infill_perimeter_overlap.md) (:full_moon:)
 
 ## **Printer Tuning**
 *Mostly optional. For pushing limits, or for troubleshooting.\
 "Voron V2 Gantry Squaring" is the only essential.*
-- [Determining Maximum Volumetric Flow Rate](/articles/determining_max_volumetric_flow_rate.md) :full_moon_with_face:
+- [Determining Maximum Volumetric Flow Rate](/articles/determining_max_volumetric_flow_rate.md) (:full_moon:)
     - Why?
     - Approximate Values
     - How Volumetric Flow Rate Relates to Print Speed
     - Formulas
     - Method
     - Flow Dropoff
-- [Determining Motor Currents](/articles/determining_motor_currents.md) :waxing_gibbous_moon:
+- [Determining Motor Currents](/articles/determining_motor_currents.md) (:waxing_gibbous_moon:)
     - Determining Initial `run_current`
     - Determining Maximum `run_current`
     - Determining `hold_current`
-- [Determining Maximum Speeds and Accelerations](/articles/determining_max_speeds_accels.md) :new_moon:
+- [Determining Maximum Speeds and Accelerations](/articles/determining_max_speeds_accels.md) (:new_moon:)
     - Method
     - Usage of the `TEST_SPEED` Macro
-- [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md) :new_moon:
+- [Voron V2 Gantry Squaring](/articles/voron_v2_gantry_squaring.md) (:new_moon:)
 
 ## **Miscellaneous**
-- [Stepover](/articles/stepover.md) :full_moon_with_face: (The black magic secret for better overhangs)
-- [Useful Macros](/macros/useful_macros.md) :new_moon:
+- [Stepover](/articles/stepover.md) (:full_moon:) (The black magic secret for better overhangs)
+- [Useful Macros](/macros/useful_macros.md) (:new_moon:)
     - Conditional Homing
     - Conditional QGL
     - :warning: Hotend Fan RPM Monitoring
@@ -100,41 +100,78 @@ This guide was originally written for the Voron community, however all of the tu
     - Dump Variables
     - Get Variable
     - Replace `M109`/`M190` With `TEMPERATURE_WAIT`
-- [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md) :new_moon:
+- [Passing Slicer Variables to PRINT_START](/articles/passing_slicer_variables.md) (:new_moon:)
     - Passing Temperatures
         - SuperSlicer
         - Prusa Slicer
         - Cura
-- [Controlling Slicer Temperature G-Code Order (Simple Method)](/articles/controlling_slicer_g-code_order.md) :full_moon_with_face:
+- [Controlling Slicer Temperature G-Code Order (Simple Method)](/articles/controlling_slicer_g-code_order.md) (:full_moon:)
 - [My Setup](/articles/my_setup.md) (since people ask a lot)
 
 ## **Troubleshooting**
-*Even without issues, you should look through these to fmiliarize yourself with things to look out for. **Especially** thermal drift under "First Layer / Squish Consistency Issues"*
-- [Extrusion Patterns / "Wood Grain"](/articles/troubleshooting/extrusion_patterns.md) :first_quarter_moon:
-    - Extruder Backlash
-    - Other Factors
-    - Clockwork 1
-    - Mini Afterburner
-- [Bulging](/articles/troubleshooting/bulging.md) :full_moon_with_face:
-    - Bulging Layers
-    - Bulges at STL Vertices
-    - Bulging Patterns on Overhangs (SS)
-- [Crimps](/articles/troubleshooting/crimps.md) :full_moon_with_face:
-- [Error: "Command Format Mismatch"](/articles/troubleshooting/command_format_mismatch.md) :new_moon:
-- [Extruder Skipping](/articles/troubleshooting/extruder_skipping.md) :first_quarter_moon:
-- [First Layer / Squish Consistency Issues](/articles/troubleshooting/first_layer_squish_consistency.md) :new_moon:
-    - Thermal Drift
-    - First Layer Conistency
-    - Squish Consistency (Between Prints)
-- [Layer Shifting](/articles/troubleshooting/layer_shifting.md) :first_quarter_moon:
-    - Mechanical
-    - Electrical
-    - Speeds and Accelerations
-- [Perimeter Separation](/articles/troubleshooting/perimeter_separation.md) :full_moon_with_face:
-- [PLA is Overheating](/articles/troubleshooting/pla_overheating.md) :full_moon_with_face:
-- [Pockmarks](/articles/troubleshooting/pockmarks.md) :full_moon_with_face:
-- [VFAs (Vertical Fine Artifacts)](/articles/troubleshooting/vfas.md) :new_moon:
-    - Repeating VFAs With ~2mm Spacing
-    - Repeating VFAs With Non-2mm Spacing
-- [Slicer is Putting Heating G-codes in the Wrong Place/Order](/articles/troubleshooting/slicer_putting_heating_g-codes_wrong_order.md) :first_quarter_moon:
-- [Small Infill Areas Look Overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md) :waxing_gibbous_moon:
+*Even without issues, you should look through these to familiarize yourself with things to look out for.\
+**Especially** thermal drift under "First Layer / Squish Consistency Issues"*
+### [Extrusion Patterns / "Wood Grain"](/articles/troubleshooting/extrusion_patterns.md)(:first_quarter_moon:)
+- Extruder Backlash
+- Other Factors
+- Clockwork 1
+- Mini Afterburner
+
+![](/images/troubleshooting/Backlash-WoodGrain.png)
+
+---
+### [Bulging](/articles/troubleshooting/bulging.md) (:full_moon:)
+- Bulging Layers
+    - ![](/images/troubleshooting/Bulging.png) 
+
+- Bulges at STL Vertices
+    - ![](/images/troubleshooting/Vertex-Bulges.png) 
+
+- Bulging around features (SS)
+    - ![](/images/troubleshooting/bulging/feature_bulging.png) 
+
+- Bulging Patterns on Overhangs (SS)
+    - ![](/images/troubleshooting/AboveBridgeFlow-2.png)
+---
+### [Crimps](/articles/troubleshooting/crimps.md) (:full_moon:)
+![](/images/troubleshooting/Microfit-Crimps.png)
+---
+### [Error: "Command Format Mismatch"](/articles/troubleshooting/command_format_mismatch.md) (:new_moon:)
+---
+### [Extruder Skipping](/articles/troubleshooting/extruder_skipping.md) (:first_quarter_moon:)
+![](/images/troubleshooting/ExtruderSkips-2.png)
+![](/images/troubleshooting/ExtruderSkips-5.png)
+![](/images/pressure_advance/pa_lines_skipping.png)
+---
+### [First Layer / Squish Consistency Issues](/articles/troubleshooting/first_layer_squish_consistency.md) (:new_moon:)
+- :warning:Thermal Drift
+- First Layer Conistency
+- Squish Consistency (Between Prints)
+
+![](/images/FirstLayer-Squares-Textured.png)
+---
+### [Layer Shifting](/articles/troubleshooting/layer_shifting.md) (:first_quarter_moon:)
+- Mechanical
+- Electrical
+- Speeds and Accelerations
+
+![](/images/troubleshooting/LayerShifting/1.png)
+---
+### [Perimeter Separation](/articles/troubleshooting/perimeter_separation.md) (:full_moon:)
+![](/images/troubleshooting/perimeter_separation/perimeter_separation.jpg)
+---
+### [PLA is Overheating](/articles/troubleshooting/pla_overheating.md) (:full_moon:)
+---
+### [Pockmarks](/articles/troubleshooting/pockmarks.md) (:full_moon:)
+![](/images/troubleshooting/Pockmarks.png)
+---
+### [VFAs (Vertical Fine Artifacts)](/articles/troubleshooting/vfas.md) (:new_moon:)
+- Repeating VFAs With ~2mm Spacing
+- Repeating VFAs With Non-2mm Spacing
+
+![](/images/troubleshooting/ToothMarks.png)
+---
+### [Slicer is Putting Heating G-codes in the Wrong Place/Order](/articles/troubleshooting/slicer_putting_heating_g-codes_wrong_order.md) (:first_quarter_moon:)
+---
+### [Small Infill Areas Look Overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md) (:waxing_gibbous_moon:)
+![](/images/troubleshooting/small_infill_overextruded/example1.png) 

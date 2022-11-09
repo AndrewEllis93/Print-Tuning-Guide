@@ -29,12 +29,12 @@ gcode:
         G28 Z
     {% endif %}
 ```
-# :warning:Hotend Fan RPM Monitoring
+# Hotend Fan RPM Monitoring
 
 This macro polls your hotend fan RPM and executes custom gcode if a fan failure is detected. 
 
 **Macro located [:page_facing_up:here](/macros/fan_tach_monitor.cfg).** Written by [:page_facing_up:alch3my](https://discordapp.com/users/655029671829962752). 
-### :warning: **I highly recommend implementing this. It can save your printer from some truly catastrophic failures.**
+### :warning: **I highly recommend implementing this. It can save your printer from some pretty catastrophic failures.**
 
 ![](/images/he_fan_failure/he_fan_failure_4.png)![](/images/he_fan_failure/he_fan_failure_3.png)\
 ![](/images/he_fan_failure/he_fan_failure_1.png) ![](/images/he_fan_failure/he_fan_failure_2.png)\

@@ -40,7 +40,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
         - (Directly below, AKA `bottom_solid_min_thickness`) 
     - This just makes space for more top layers (next step).
 
-- **Top Layers:** As many as you can fit and still have at least two layers of infill. *(About 12 with 0.2mm layer height)*
+- **Top Layers:** As many as you can fit and still have at least two layers of infill. *(About 10-11 with 0.2mm layer height)*
     - This small bit of infill helps to decouple the first layer squish. Otherwise, an over-squished first layer can propagate all the way to the top - making it appear overextruded.
     - The effects of high/low EM compound with more solid layers.
     - If using thick layers, you may want to scale the cubes up in Z.

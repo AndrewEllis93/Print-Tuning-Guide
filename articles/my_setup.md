@@ -8,8 +8,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
 - **Toolhead**
     - [:page_facing_up:Stealthburner toolhead](https://github.com/VoronDesign/Voron-Stealthburner)
     - [:page_facing_up:Orbiter 1.5 extruder](https://www.aliexpress.com/item/3256803143364574.html) (LDO motor version) - mounted with [:page_facing_up:this mod](https://www.teamfdm.com/files/file/502-orbiter-15-for-stealthburner/)
-    - [:page_facing_up:Trianglelab Dragon High Flow](https://trianglelab.net/products/dragon-hotend?VariantsId=10289) with [:page_facing_up:Bondtech CHT 0.4mm nozzle](https://www.bondtech.se/product/bondtech-cht-coated-brass-nozzle/)
-        - If I were buying today, I'd probably get a Rapido instead.
+    - Rapido UHF with Bondtech CHT Volcano 0.4mm nozzle
 - **Hardware Upgrades**
     - [:page_facing_up:Fabreeko HoneyBadger textured PEI](https://www.fabreeko.com/products/honeybadger-v2-4-single-sided-black-pei-textured?variant=42614568452351)
     - LDO-42STH40-2004MAH(VRN) A/B motors
@@ -49,11 +48,11 @@ Excuse the hazy panels. Fact of life with ABS.
 
 Photos show AB-BN toolhead + smooth PEI. I have since upgraded to Stealthburner + Fabreeko HoneyBadger textured PEI.
 
-![](/images/my_setup.jpg)
+![](/images/my-setup/my_setup.jpg)
 
-![](/images/my_setup_2.jpg)
+![](/images/my-setup/my_setup_2.jpg)
 
-![](/images/my_setup_3.jpg)
+![](/images/my-setup/my_setup_3.jpg)
 
 ---
 

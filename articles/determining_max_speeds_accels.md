@@ -68,7 +68,7 @@ There is some interplay between accelerations and speeds.
     - The "desired speed" field is mostly arbitrary for our purposes. Enter anything or use the default.
 
     - This **yellow line** shows that we would theoretically max out a bit over **900mm/s** at this acceleration/distance.
-    - ![](/images/TEST_SPEED_Calc.png) 
+    - ![](/images/determining_max_speeds_accels/TEST_SPEED_Calc.png) 
 
     
         - The **blue line** just shows how far a given speed would be maintained (400mm/s in this example - arbitrarily chosen)
@@ -121,7 +121,7 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
 
 - Inspect the g-code terminal output:
     - Compare the numbers for the X and Y steppers for the first and second homing.
-    - ![](/images/TEST_SPEED_Compare.png) 
+    - ![](/images/determining_max_speeds_accels/TEST_SPEED_Compare.png) 
         - These numbers represent the microstep position of the toolhead at X/Y max position.
 
     - Ensure that the difference between these numbers **has not exceeded a full step.**

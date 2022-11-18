@@ -13,7 +13,7 @@ Z will drift upwards as the frame and gantry thermally expand with chamber heat.
 
 Look at the graph below. The red line represents Z offset drift over time as the frame comes up to temperature (this is on a V2.).
 
-![](/images/ZDrift.png)
+![](/images/troubleshooting/first_layer_squish_consistency/ZDrift.png)
 
 It's not ideal, but just get into a routine - start the heat soak from your phone when you wake up in the morning.
 
@@ -23,6 +23,10 @@ There *are* ways around this - specifically by using gantry backers in combinati
 **:warning:This guide is NOT a tutorial about any of the below, so you're on your own here!**
     - **Backers**
         - [The science behind backers](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/whoppingpochard/extrusion_backers)
+            - Featuring such smash hits as 
+                - "Why is thermal expansion such a dick?", and
+                - "Why does my mesh look like a taco?"\
+            ![](/images/troubleshooting/first_layer_squish_consistency/no_backer.jpg)
         - [My preferred backers (MGN9s)](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers)
         - [Titanium backers](https://www.fabreeko.com/products/v2-4-trident-titanium-extrusion-backers?variant=40722087968966)
             - These are available from multiple other stores.

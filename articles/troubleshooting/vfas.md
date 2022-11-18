@@ -10,7 +10,7 @@ If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up:
 
 Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
 
-![](/images/troubleshooting/ToothMarks.png)
+![](/images/troubleshooting/vfas/ToothMarks.png)
 
 - Your belts may be too tight. [:page_facing_up:Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
     - Don't miss the video link in page linked above. 

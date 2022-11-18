@@ -74,30 +74,30 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 - **SuperSlicer:**
     1) **:warning: Set your EM to 1 in the filament settings.** \
     The per-object EM settings are **multiplied by** this value.\
-    ![](/images/EM-1.png)
+    ![](/images/extrusion_multiplier/EM-1.png)
 
     2) Import the cube STL. Right-click it and select add settings > filament.\
-    ![](/images/EM-PerObject.png)
+    ![](/images/extrusion_multiplier/EM-PerObject.png)
 
     3) Check "extrusion multiplier".\
-    ![](/images/EM-PerObject-2.png)
+    ![](/images/extrusion_multiplier/EM-PerObject-2.png)
     
     6) Set your EM for each test cube.\
-    ![](/images/EM-PerObject-3.png)
+    ![](/images/extrusion_multiplier/EM-PerObject-3.png)
 
     7) Save the project for reuse later.\
-    ![](/images/EM-Save.png)
+    ![](/images/extrusion_multiplier/EM-Save.png)
     
 - **Cura:**
 
     1) Select each cube and enable the "flow" setting.\
-    ![](/images/EM-PerObject-Cura.png)
+    ![](/images/extrusion_multiplier/EM-PerObject-Cura.png)
 
     3) Set the EM on each.\
-    ![](/images/EM-SetFlow-Cura.png)
+    ![](/images/extrusion_multiplier/EM-SetFlow-Cura.png)
 
     4) Save the project for reuse later.\
-    ![](/images/EM-Save-Cura.png)
+    ![](/images/extrusion_multiplier/EM-Save-Cura.png)
 
 **2)** Print it!
 
@@ -118,52 +118,65 @@ You will get better at this through experience.
 
 Here you'll narrow down a general range to work in.
 
-![](/images/EMPrints-Coarse-Annotated.png) 
+![](/images/extrusion_multiplier/EMPrints-Coarse-Annotated.png) 
 
 The center cube is looking pretty close.
 
 ### 0.5% Intervals
 Now you can fine-tune in 0.5% intervals.
 
-![](/images/EMPrints-Fine.png) 
+![](/images/extrusion_multiplier/EMPrints-Fine.png) 
 
 In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this.
+
+
+For clarity, you are **not** tuning so the lines are "just touching".\
+Your infill lines should overlap a bit, and **fill the print in as much as possible without going over**.
+
+![](/images/extrusion_multiplier/overlap.png)
+
+<sup>Source: https://help.prusa3d.com/article/layers-and-perimeters_1748</sup>
+
+Some find magnification to help, but I don't personally find it necessary. 
 
 ### Too Low
 
 Holding it up with the infill lines pointing towards a light source can help. This cube's EM is too low - you can see between the lines.
 
-![](/images/em-light.png) 
+![](/images/extrusion_multiplier/em-light.png) 
 ### Slightly Too Low
 
 These cubes need a little more EM - you can see slight gapping / valleys / shadows between the lines. 
 
 A bit too high is better than a bit too low.
 
-![](/images/EMPrints-SlightlyLow.png)
+![](/images/extrusion_multiplier/EMPrints-SlightlyLow.png)
 
 ## Further Tips
 ### **When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
 
-It's totally normal for [:page_facing_up:smaller infill areas to look a bit overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md).
+It's fairly normal for [:page_facing_up:smaller infill areas to look a bit overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md) *(though there are a few things that can help a bit in that link- that's another topic)*
 
 In this example, I would look at the circled area. While some of the smaller areas look overextruded, the overall EM is actually pretty good.
-- ![](/images/em-wheretolook.png) 
+- ![](/images/extrusion_multiplier/em-wheretolook.png) 
 
-## Tuned Print Examples
+## More Examples
 (ABS)
-- ![](/images/EMPrint-Example.jpg) 
-- ![](/images/EMPrint-Example4.png) 
+- ![](/images/extrusion_multiplier/zoom.png) 
+- ![](/images/extrusion_multiplier/EMPrint-Example4.png) 
 
 (eSun ABS+ - more matte)
-- ![](/images/EMPrint-Example2.jpg) 
-- ![](/images/EMPrint-Example3.jpg) 
+- ![](/images/extrusion_multiplier/EMPrint-Example2.jpg) 
+- ![](/images/extrusion_multiplier/EMPrint-Example3.jpg) 
 
 ## Rationale & Dimensional Accuracy
 
 My above method is an **aesthetics-first approach**. This method creates very smooth top surfaces and can also help with layer consistency. The resulting prints generally have perfectly acceptable tolerances for most projects (Voron parts included) with no further compensation.
 
 Get your prints looking great first, THEN account for dimensions if needed. (in my opinion)
+
+### Voron Parts
+- Voron parts are designed with ABS shrinkage in mind. **You do not need any compensation apart from a good EM tune.**
 
 ### **If You Need True-to-CAD Dimensional Accuracy for Other Projects**
 - Firstly, *adjust your expectations*. 

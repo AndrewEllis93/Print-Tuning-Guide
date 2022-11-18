@@ -25,7 +25,7 @@ To force the g-code ordering, place any of the following g-codes from the follow
 - There are many other variables available in each slicer, and you can pass whatever variables you like to whatever g-codes you like. The available variables are not always documented.
 ## Example
 Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
-- ![](/images/StartGcode-CustomOrder.png) 
+- ![](/images/controlling_slicer_g-code_order/StartGcode-CustomOrder.png) 
 
 ---
 [:arrow_left: Back to Table of Contents](/README.md)

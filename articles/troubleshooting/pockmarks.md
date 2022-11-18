@@ -2,7 +2,7 @@
 
 ---
 # Pockmarks
-![](/images/troubleshooting/Pockmarks.png)
+![](/images/troubleshooting/pockmarks/Pockmarks.png)
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.

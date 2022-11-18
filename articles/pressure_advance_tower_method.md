@@ -67,8 +67,8 @@ You should now see increasing pressure advance values reporting to the g-code te
 
 Excuse the gigantic photos - high resolution is needed here.
 
-![](/images/PA-Tower.png) 
-![](/images/PA-Tower-Annotated.png) 
+![](/images/pressure_advance_tower_method/PA-Tower.png) 
+![](/images/pressure_advance_tower_method/PA-Tower-Annotated.png) 
 ---
 
 [:arrow_left: Back to Table of Contents](/README.md)

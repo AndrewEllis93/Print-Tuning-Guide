@@ -8,7 +8,7 @@
 ## Slight Perimeter Gapping
 Some find that after tuning PA and EM, minor perimeter gapping is still present:
 
-![](/images/perim-gapping-print.png)
+![](/images/pa_em_oddities/perim-gapping-print.png)
 
 Assuming EM is well tuned, this is often caused by a slight [:page_facing_up:flow dropoff](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) at higher print speeds — since most people print their perimeters faster than their top layer.
 
@@ -31,7 +31,7 @@ There are a few different things you can try:\
 
 Having a finely tuned EM also unfortunately means that any cornering imperfections are **no longer hidden by overextrusion.** 
 
-- ![](/images/corner-gapping-print.png)
+- ![](/images/pa_em_oddities/corner-gapping-print.png)
 
 Here's an example.
 
@@ -39,7 +39,7 @@ Here's an example.
 
 - The circled minor imperfections are the **exact same thing** that you are seeing in the image above.\
 *(you may have to click the photo & zoom in)*
-- ![](/images/corner-gapping.png)
+- ![](/images/pa_em_oddities/corner-gapping.png)
 
 There are a few different things you can do:\
 *(in order of my preference)*

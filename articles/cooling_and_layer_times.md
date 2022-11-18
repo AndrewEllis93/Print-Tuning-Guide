@@ -3,11 +3,11 @@
 ---
 # Cooling and Layer Times
 ## Signs of Overheating
-![](/images/Overheating-1.png) ![](/images/Overheating-4.png) 
-![](/images/Overheating-2.png) 
-![](/images/Overheating-3.png) 
-![](/images/Overheating-5.png) 
-![](/images/Overheating-6.jpg) 
+![](/images/cooling_and_layer_times/Overheating-1.png) ![](/images/cooling_and_layer_times/Overheating-4.png) 
+![](/images/cooling_and_layer_times/Overheating-2.png) 
+![](/images/cooling_and_layer_times/Overheating-3.png) 
+![](/images/cooling_and_layer_times/Overheating-5.png) 
+![](/images/cooling_and_layer_times/Overheating-6.jpg) 
 ## How to Fix It
 ### Increase Fan Speeds
 People often start printing by ABS with no cooling. While this is valid advice for unenclosed printers, it's not a universal rule. **ABS often needs some cooling, especially in an enclosure.**
@@ -42,7 +42,7 @@ People often start printing by ABS with no cooling. While this is valid advice f
 
 ### Give Objects Some Break Time Between Layers
 - You can achieve this by printing more objects at once, and spreading them out.
-    - ![](/images/Cooling-Spread.png) 
+    - ![](/images/cooling_and_layer_times/Cooling-Spread.png) 
 
     - This allows each object some "break time" between layers. Otherwise you are pumping more and more heat into the object before the previous layer has had a chance to fully solidify.
 

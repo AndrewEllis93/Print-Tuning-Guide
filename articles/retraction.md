@@ -57,15 +57,15 @@ We will be printing these retraction towers at three different temperatures. If 
 
 **4)** Select "extruder retraction calibration" from the menu.
 
-- ![](/images/Retraction-Menu.png) 
+- ![](/images/retraction/Retraction-Menu.png) 
 
 **5)** Click "remove fil. slowdown".
 
-- ![](/images/Retraction-FilSlowdown.png) 
+- ![](/images/retraction/Retraction-FilSlowdown.png) 
 
 **6)** Fill out the parameters and select "Generate".
 
-- ![](/images/Retraction-Params.png) 
+- ![](/images/retraction/Retraction-Params.png) 
 
     - **Start temp:**
         - Set a **bit higher** than your normal printing temps (maybe around 10C higher).
@@ -87,13 +87,13 @@ We will be printing these retraction towers at three different temperatures. If 
             - This will print three retraction towers. One will be at your "start temp", the other two will be 10C increments below this.
 
     - You should get output like this:
-        - ![](/images/Retraction-Sliced.png) 
+        - ![](/images/retraction/Retraction-Sliced.png) 
 
 **7) :warning: Arrange the towers front to back**\* **on your build plate.**
 - These objects are printed one at a time. **This ensures that they are not knocked over by the gantry/toolhead.** 
 - Arrange them from the hottest tower at the front, to coolest tower at the back.
     - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros). 
-- ![](/images/Retraction-Sliced-FrontToBack.png)
+- ![](/images/retraction/Retraction-Sliced-FrontToBack.png)
 
     <sup>\* If you are using a different kinematic system than CoreXY/i3 cartesian, you may need to use a different arrangement. For example, a cross gantry would need diagonal.</sup>
 

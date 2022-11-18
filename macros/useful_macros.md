@@ -25,6 +25,7 @@ I don't personally use this, I prefer to QGL every print. But some people like i
 [gcode_macro _CQGL]
 gcode:
     {% if printer.quad_gantry_level.applied == False %}
+        ; _CG28
         QUAD_GANTRY_LEVEL
         G28 Z
     {% endif %}
@@ -36,8 +37,8 @@ This macro polls your hotend fan RPM and executes custom gcode if a fan failure 
 **Macro located [:page_facing_up:here](/macros/fan_tach_monitor.cfg).** Written by [:page_facing_up:alch3my](https://discordapp.com/users/655029671829962752). 
 ### :warning: **I highly recommend implementing this. It can save your printer from some pretty catastrophic failures.**
 
-![](/images/he_fan_failure/he_fan_failure_4.png)![](/images/he_fan_failure/he_fan_failure_3.png)\
-![](/images/he_fan_failure/he_fan_failure_1.png) ![](/images/he_fan_failure/he_fan_failure_2.png)\
+![](/images/useful_macros/he_fan_failure_4.png)![](/images/useful_macros/he_fan_failure_3.png)\
+![](/images/useful_macros/he_fan_failure_1.png) ![](/images/useful_macros/he_fan_failure_2.png)\
 
 ## Info
 
@@ -149,7 +150,7 @@ gcode:
     
     {% if printer['pause_resume'].is_paused|int == 1 %}
         SET_FILAMENT_SENSOR SENSOR=filament_sensor ENABLE=1                          ; enable filament sensor
-        #RESETRGB                                                                    ; reset LCD color
+        #INITIAL_RGB                                                                    ; reset LCD color
         SET_IDLE_TIMEOUT TIMEOUT={printer.configfile.settings.idle_timeout.timeout}  ; set timeout back to configured value
         {% if etemp > 0 %}
             M109 S{etemp|int}                                                        ; wait for hotend to heat back up
@@ -185,12 +186,12 @@ gcode:
 ## Octoprint Configuration
 If you use Octoprint, put these in your "GCODE Script" section to enable the UI buttons to work properly.
 
-- ![](/images/Octoprint-Gcode-Scripts.png)
+- ![](/images/useful_macros/Octoprint-Gcode-Scripts.png)
 
 
 ## M600 (Filament Change) Alias
 
-This allows your pause to work natively with slicers that insert `M600` for color changes. This just calls the pause macro (below).
+This allows your pause to work natively with slicers that insert `M600` for color changes. This just calls the pause macro (above).
 ```
 [gcode_macro M600]
 gcode:
@@ -327,21 +328,23 @@ I have my LCD turn red during runouts, and green during filament swaps.
 
 Example usage: `LCDRGB R=0.8 G=0 B=0`
 
+Colors will default to off if not specified. For example, `LCDRGB G=1` can act as shorthand to change the color to green (turning off red/blue).
+
 ```
 [gcode_macro LCDRGB]
 gcode:
-    {% set r = params.R|default(1)|float %}
-    {% set g = params.G|default(1)|float %}
-    {% set b = params.B|default(1)|float %}
+    {% set r = params.R|default(0)|float %}
+    {% set g = params.G|default(0)|float %}
+    {% set b = params.B|default(0)|float %}
 
     SET_LED LED=lcd RED={r} GREEN={g} BLUE={b} INDEX=1 TRANSMIT=0
     SET_LED LED=lcd RED={r} GREEN={g} BLUE={b} INDEX=2 TRANSMIT=0
     SET_LED LED=lcd RED={r} GREEN={g} BLUE={b} INDEX=3
 ```
 
-To reset the RGB / set the initial RGB. (**set your default LCD colors here**, and use `RESETRGB` to call set it back.)
+To reset the RGB / set the initial RGB. (**set your default LCD colors here**, and use `INITIAL_RGB` to call set it back.)
 ```
-[gcode_macro RESETRGB]
+[gcode_macro INITIAL_RGB]
 gcode:
     SET_LED LED=lcd RED=1 GREEN=0.45 BLUE=0.4 INDEX=1 TRANSMIT=0
     SET_LED LED=lcd RED=0.25 GREEN=0.2 BLUE=0.15 INDEX=2 TRANSMIT=0
@@ -353,7 +356,7 @@ To set the default colors at startup (required)
 [delayed_gcode SETDISPLAYNEOPIXEL]
 initial_duration: 1
 gcode:
-    RESETRGB
+    INITIAL_RGB
 ```
 # Parking
 

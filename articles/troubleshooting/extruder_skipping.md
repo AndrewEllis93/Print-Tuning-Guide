@@ -4,15 +4,15 @@
 # Extruder Skipping
 These skips will typically be wider than [:page_facing_up:pockmarks.](/articles/troubleshooting/pockmarks.md)
 
-![](/images/troubleshooting/ExtruderSkips-4.png)\
-![](/images/troubleshooting/ExtruderSkips-1.png)\
-![](/images/troubleshooting/ExtruderSkips-2.png)
-![](/images/troubleshooting/ExtruderSkips-3.png)
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-4.png)\
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-1.png)\
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-2.png)
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-3.png)
 ![](/images/pressure_advance/pa_lines_skipping.png)
 
 Skipping below top layer:
 
-![](/images/troubleshooting/ExtruderSkips-5.png)
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-5.png)
 
 - If you are printing PLA, **don't do it in an enclosure**. Enclosure temps can *easily* get hot enough to soften PLA in the extruder/heatbreak and cause endless jams. Open your chamber door - or better yet, take the panels/enclosure off entirely.
 
@@ -43,7 +43,7 @@ Skipping below top layer:
         - Some vendor githubs have the `[heater_fan hotend_fan]`'s `max_power` setting at 0.4 (40%) for some    reason.
         - Ensure that you are running it at the correct voltage.
 - Ensure that your hotend thermistor is correct in your config and that you are not using temps that are too    low.
-- **:warning: If you use any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [:page_facing_up:bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [:page_facing_up:recent deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
+- **:warning: If you use are on an older version of Klipper, and have any NTC 100K B3950 thermistors**, update Klipper to the most recent version and change all instances of `sensor_type: NTC 100K beta 3950` to `sensor_type: Generic 3950` in your config. There was a [:page_facing_up:bug](https://github.com/Klipper3d/klipper/issues/4054) causing these thermistors to be inaccurate, which was fixed with a [:page_facing_up:deprecation.](https://github.com/Klipper3d/klipper/pull/4859)
 
     - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [:page_facing_up:here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
 
@@ -93,7 +93,7 @@ If there is much resistance, *figure out where it is coming from:*
         - If they are pushed together too hard, it will cause resistance.
     - Ensure that your drive shaft is not rubbing against the motor:
         - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
-        - ![](/images/troubleshooting/ExtruderSkips-Clearance.png)
+        - ![](/images/troubleshooting/extruder_skipping/ExtruderSkips-Clearance.png)
 
 ---
 

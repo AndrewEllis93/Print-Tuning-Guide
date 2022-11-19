@@ -35,12 +35,13 @@ This guide was originally written for the Voron community. Some notes and hardwa
 *Essentials. Read/follow these in order shown.*
 - [Build Surface Adhesion](/articles/build_surface_adhesion.md) (:full_moon:)
 - [First Layer Squish](/articles/first_layer_squish.md) (:waxing_gibbous_moon:)
-- [Pressure Advance](/articles/pressure_advance.md) *("Linear Advance" in Marlin)* (:full_moon:)
+- [Pressure Advance](/articles/pressure_advance.md) *("Linear Advance" in Marlin)* (:new_moon:)
     - Why PA is Needed
     - What PA Does
     - Pattern Method
     - Fine-Tuning and What to Look For
     - [Tower Method](/articles/pressure_advance_tower_method.md) (:new_moon:)
+    - [Lines Method (DEPRECATED)](/articles/lines_method_deprecated.md) (:full_moon:)
 - [Extrusion Multiplier](/articles/extrusion_multiplier.md) (:full_moon:)
     - Background 
     - Method

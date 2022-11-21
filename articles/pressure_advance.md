@@ -50,7 +50,7 @@ Here is a practical example. The perimeters were printed counter-clockwise.
 
 ## Tuning
 
-**There is rarely such thing as perfect pressure advance.** Either accelerations or decelerations will almost always be slightly imperfect. You should always err on the side of lower PA values.
+**There is rarely such thing as perfect pressure advance.** Either accelerations or decelerations will almost always be slightly imperfect.
 
 - Pressure advance can change with different filaments. Typically I only find it necessary to tune per material type - ABS, PETG, PLA, TPU, etc.  I will only tune specific brands or colors if they are noticeably different.
 - Pressure advance needs re-tuning when changing nozzle sizes.
@@ -60,7 +60,7 @@ There are three approaches. This  [:pushpin:pattern method](/articles/pressure_a
 ## Pattern Method
 ### :warning: The previous "lines method" has been deprecated!
 ### The new tool can be found [:page_facing_up:here](https://andrewellis93.github.io/pressure_advance/pressure_advance.html). 
-*If it's not displaying correctly, clear your browser cache or use incognito mode.*
+<sup>*If it's not displaying correctly, clear your browser cache or use incognito mode.*</sup>
 
 - I created this new version specifically to address the shortcomings of the "lines method".
 - This document will be updated soon with more detailed instructions! 
@@ -69,7 +69,7 @@ There are three approaches. This  [:pushpin:pattern method](/articles/pressure_a
             - With this new tool, it's generally better to err on the *higher* side, unlike with the lines method.
             - I found that choosing a PA value right before corner gapping starts resulted in the best real-world prints.
 
-- Marlin support will likely be added.
+- Marlin support will be added soon.
 
 <sup>*The old method can still be found [:page_facing_up:here](/articles/lines_method_deprecated.md) if you prefer it, but I'd highly recommend using this new tool instead.*</sup>
 

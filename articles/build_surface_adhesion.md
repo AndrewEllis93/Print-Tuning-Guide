@@ -37,7 +37,7 @@
 
     - You can refresh the surface this way on occasion, just remember to wash it again afterwards.
 
-    - You should probably keep the couring pad/sponge out of the kitchen afterwards. I'm not sure the health effects of plastic dust ending up on your dishes - better safe than sorry!
+    - You should probably keep the scouring pad/sponge out of the kitchen afterwards. I'm not sure the health effects of plastic dust ending up on your dishes - better safe than sorry!
 
 ## Troubleshooting
 :bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up:first layer squish](/articles/first_layer_squish.md).**

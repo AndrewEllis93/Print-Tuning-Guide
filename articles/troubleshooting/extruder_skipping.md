@@ -8,7 +8,6 @@ These skips will typically be wider than [:page_facing_up:pockmarks.](/articles/
 ![](/images/troubleshooting/extruder_skipping/ExtruderSkips-1.png)\
 ![](/images/troubleshooting/extruder_skipping/ExtruderSkips-2.png)
 ![](/images/troubleshooting/extruder_skipping/ExtruderSkips-3.png)
-![](/images/pressure_advance/pa_lines_skipping.png)
 
 Skipping below top layer:
 

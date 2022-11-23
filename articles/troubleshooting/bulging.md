@@ -4,7 +4,6 @@
 
 This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 
 
-- ![](/images/troubleshooting/bulging/Bulging.png) 
 - ![](/images/troubleshooting/bulging/Bulging2.png) 
     - Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
     - Reduce perimeter accelerations.

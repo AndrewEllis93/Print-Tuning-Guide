@@ -120,45 +120,45 @@ This guide was originally written for the Voron community. Some notes and hardwa
 - Clockwork 1
 - Mini Afterburner
 
-![](/images/troubleshooting/Backlash-WoodGrain.png)
+![](/images/troubleshooting/extrusion_patterns/Backlash-WoodGrain.png)
 
 ---
 ### [Bulging](/articles/troubleshooting/bulging.md) (:full_moon:)
 - Bulging Layers
-    - ![](/images/troubleshooting/Bulging.png) 
+    - ![](/images/troubleshooting/bulging/Bulging2.png) 
 
 - Bulges at STL Vertices
-    - ![](/images/troubleshooting/Vertex-Bulges.png) 
+    - ![](/images/troubleshooting/bulging/Vertex-Bulges.png) 
 
 - Bulging around features (SS)
     - ![](/images/troubleshooting/bulging/feature_bulging.png) 
 
 - Bulging Patterns on Overhangs (SS)
-    - ![](/images/troubleshooting/AboveBridgeFlow-2.png)
+    - ![](/images/troubleshooting/bulging/AboveBridgeFlow-2.png)
 ---
 ### [Crimps](/articles/troubleshooting/crimps.md) (:full_moon:)
-![](/images/troubleshooting/Microfit-Crimps.png)
+![](/images/troubleshooting/crimps/Microfit-Crimps.png)
 ---
 ### [Error: "Command Format Mismatch"](/articles/troubleshooting/command_format_mismatch.md) (:new_moon:)
 ---
 ### [Extruder Skipping](/articles/troubleshooting/extruder_skipping.md) (:first_quarter_moon:)
-![](/images/troubleshooting/ExtruderSkips-2.png)
-![](/images/troubleshooting/ExtruderSkips-5.png)
-![](/images/pressure_advance/pa_lines_skipping.png)
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-2.png)
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-3.png)
+![](/images/troubleshooting/extruder_skipping/ExtruderSkips-5.png)
 ---
 ### [First Layer / Squish Consistency Issues](/articles/troubleshooting/first_layer_squish_consistency.md) (:new_moon:)
 - :warning:Thermal Drift
 - First Layer Conistency
 - Squish Consistency (Between Prints)
 
-![](/images/FirstLayer-Squares-Textured.png)
+![](/images/first_layer_squish/FirstLayer-Squares-1.png)
 ---
 ### [Layer Shifting](/articles/troubleshooting/layer_shifting.md) (:first_quarter_moon:)
 - Mechanical
 - Electrical
 - Speeds and Accelerations
 
-![](/images/troubleshooting/LayerShifting/1.png)
+![](/images/troubleshooting/layer_shifting/1.png)
 ---
 ### [Perimeter Separation](/articles/troubleshooting/perimeter_separation.md) (:full_moon:)
 ![](/images/troubleshooting/perimeter_separation/perimeter_separation.jpg)
@@ -166,13 +166,13 @@ This guide was originally written for the Voron community. Some notes and hardwa
 ### [PLA is Overheating](/articles/troubleshooting/pla_overheating.md) (:full_moon:)
 ---
 ### [Pockmarks](/articles/troubleshooting/pockmarks.md) (:full_moon:)
-![](/images/troubleshooting/Pockmarks.png)
+![](/images/troubleshooting/pockmarks/Pockmarks.png)
 ---
 ### [VFAs (Vertical Fine Artifacts)](/articles/troubleshooting/vfas.md) (:new_moon:)
 - Repeating VFAs With ~2mm Spacing
 - Repeating VFAs With Non-2mm Spacing
 
-![](/images/troubleshooting/ToothMarks.png)
+![](/images/troubleshooting/vfas/ToothMarks.png)
 ---
 ### [Slicer is Putting Heating G-codes in the Wrong Place/Order](/articles/troubleshooting/slicer_putting_heating_g-codes_wrong_order.md) (:first_quarter_moon:)
 ---

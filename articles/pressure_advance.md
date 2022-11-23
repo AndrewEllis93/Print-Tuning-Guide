@@ -10,7 +10,6 @@
 - (I personally haven't really found this to be the case, but that's what the Klipper docs say)
 
 :fish: If you are using Marlin, this page is still relevant, but: 
-- You will use [:page_facing_up:Marlin's calibration site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead. 
 - Marlin's version is called "linear advance" rather than "pressure advance", but the concepts are exactly the same.
 - Marlin's linear advance does not have smoothing.
 ## Why PA is Needed
@@ -69,7 +68,7 @@ There are three approaches. This  [:pushpin:pattern method](/articles/pressure_a
             - With this new tool, it's generally better to err on the *higher* side, unlike with the lines method.
             - I found that choosing a PA value right before corner gapping starts resulted in the best real-world prints.
 
-- Marlin support will be added soon.
+- ~~Marlin support will be added soon.~~ Marlin is now supported!
 
 <sup>*The old method can still be found [:page_facing_up:here](/articles/lines_method_deprecated.md) if you prefer it, but I'd highly recommend using this new tool instead.*</sup>
 

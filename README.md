@@ -23,7 +23,7 @@ This guide was originally written for the Voron community. Some notes and hardwa
 - (:new_moon:) = Klipper or Voron specific.
 - (:first_quarter_moon:) = Concept applies to all firmwares, but notable tips/commands/configs are Klipper or Voron specific.
 - (:waxing_gibbous_moon:) = Applies to all firmwares, but some minor details (commands, configs) may differ (often noted).
-- (:full_moon:) = Applies to printers, or all Marlin/Klipper printesr.
+- (:full_moon:) = Applies to all printers, or all Marlin/Klipper printers.
 
 ## **Before We Begin**
 - [Before We Begin](/articles/before_we_begin.md)

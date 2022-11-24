@@ -38,16 +38,21 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
 
 - ![](/images/troubleshooting/small_infill_overextruded/connected_not_connected_comparison.png)
 
-## The Magic Bullet? (But With Downsides)
+## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
+(Excerpt from the [:page_facing_up:Extrusion Multiplier](/articles/extrusion_multiplier.md) article)
+- You want to tune your extrusion multiplier for the areas where your extrusion system has had a chance to equalize pressure and coast at a constant flow rate.
+- In this example, I would primarily be looking at the circled area. 
+- While some of this print looks overextruded, I think the overall EM is actually pretty good.
+    - ![](/images/extrusion_multiplier/em-wheretolook.png) 
+
 ---
+# The Magic Bullet?
 
-Disclaimer: I am **not** using this trick in my daily driver profiles due to the drawbacks.\
-I am only using the "not connected" settings described above, with 25% overlap/enchroachment.
+---
+### :warning: This section is advanced reading.:warning:
+**These techniques have downsides that are only addressable by an EXPERIMENTAL custom SuperSlicer build.**
 
-If you are having small infill issues, it may still be worth a try, however.
-
-- I'm currently tinkering with the SuperSlicer source code to possibly add a "minimum travel after z-hop" setting, just like the "minimum travel after retraction" setting.
-- :bulb:*If you're familiar with C++ and willing to help me out here, I would be grateful! I don't think it's a super difficult change, I'm just very much stumbling my way through this and currently failing.*
+This is only here to share some interesting findings / what I'm tinkering with.
 
 ---
 
@@ -58,7 +63,6 @@ This will cause a retraction at every direction change.
 
 :warning: **This is very slow with Z hop, however**. These successive Z hops can also be **quite loud** on many printers.
 
-<sup>*(See [:pushpin:next section](#making-it-faster-still-with-downsides) for a potential speed improvement)*</sup>
 - Setting
     - ![](/images/troubleshooting/small_infill_overextruded/retract_setting.png)
 
@@ -106,20 +110,27 @@ Anything lower would create [:page_facing_up:pinholes](/articles/infill_perimete
 
 - ![](/images/troubleshooting/small_infill_overextruded/demonstration.png)
 
-### My (Personal) Final Settings
-- **Top:** "Not connected"
-- **Solid:** "Not connected"
-- **Overlap (encroachment):** 25%
-
-I decided not to use the retraction trick in my daily driver for the time being, due to the top scarring concerns.
-
 ---
-## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
-(Excerpt from the [:page_facing_up:Extrusion Multiplier](/articles/extrusion_multiplier.md) article)
-- You want to tune your extrusion multiplier for the areas where your extrusion system has had a chance to equalize pressure and coast at a constant flow rate.
-- In this example, I would primarily be looking at the circled area. 
-- While some of this print looks overextruded, I think the overall EM is actually pretty good.
-    - ![](/images/em-wheretolook.png) 
+### The Experimental SuperSlicer build
+
+- No warranty or support provided! Most of the Mac builds are currently not working either. These are a **work in progress.**
+- Builds: https://github.com/julianschill/SuperSlicer/actions
+    - `nightly-dev` is 2.5.59 and `rc` is 2.4.58.
+    - Most of the Mac builds are not working.
+
+- This is the new setting:
+    - This (in the right combination) should address the downsides mentioned above.
+
+    - ![](/images/troubleshooting/small_infill_overextruded/experimental_setting.png)
+    - **This setting will likely MOVE and be reworked at some point, which may cause future incompatibilities with profiles you save using this.** 
+        - You should use a separate appdata folder with experimental SuperSlicer builds by having a separate shortcut using `<path to SS exe> --datadir <separate appdata path>`.
+
+    - The winning combination is:
+        - Top & solid infill: "not connected"
+        - Encroachment: ~25%
+        - "Minimum travel after z lift" (The experimental setting): 2 (default)
+        - "Minimum travel after retraction": 0
+        - "Only retract when crossing perimeters": Enabled.
 
 ---
 

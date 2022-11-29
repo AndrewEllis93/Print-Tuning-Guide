@@ -88,6 +88,9 @@ We will be printing these retraction towers at three different temperatures. If 
 
     - You should get output like this:
         - ![](/images/retraction/Retraction-Sliced.png) 
+        - :warning: If you get this misalignment, temporarily set `init_z_rotate` back to 0.
+
+            - ![](/images/retraction/misalignment.png) 
 
 **7) :warning: Arrange the towers front to back**\* **on your build plate.**
 - These objects are printed one at a time. **This ensures that they are not knocked over by the gantry/toolhead.** 

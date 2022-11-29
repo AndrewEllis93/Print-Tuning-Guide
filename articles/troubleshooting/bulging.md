@@ -50,4 +50,5 @@ When you have overextrusion issues in small areas, it greatly contributes to thi
         - ![](/images/troubleshooting/bulging/AboveBridgeFlow-DisableOverhangFlow.png)
     - **Reduce "above the bridges" flow to back to 100%**
         - ![](/images/troubleshooting/bulging/AboveBridgeFlow-Reset.png)
-- If these do not fix it, it might instead be an [:page_facing_up:overheating issue.](/articles/cooling_and_layer_times.md)
+- This can also occur above where the print has lifted from the build surface (it curls up into the nozzle a bit, and the plastic no longer has space to go, so squishes outwards)
+- If these do not fix it, it might instead be an [:page_facing_up:overheating issue.](/articles/cooling_and_layer_times.md).

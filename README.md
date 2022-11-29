@@ -37,7 +37,7 @@ This guide was originally written for the Voron community. Some notes and hardwa
     - Build Surface Preparation / Handling
     - Troubleshooting
 - [First Layer Squish](/articles/first_layer_squish.md) (:waxing_gibbous_moon:)
-- [Pressure Advance](/articles/pressure_advance.md) *("Linear Advance" in Marlin)* (:full_moon:)
+- [Pressure Advance / Linear Advance](/articles/pressure_advance.md) (:full_moon:)
     - Why PA is Needed
     - What PA Does
     - Pattern Method

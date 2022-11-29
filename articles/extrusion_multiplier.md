@@ -169,6 +169,8 @@ In this example, I would look at the circled area. While some of the smaller are
 - ![](/images/extrusion_multiplier/EMPrint-Example2.jpg) 
 - ![](/images/extrusion_multiplier/EMPrint-Example3.jpg) 
 
+---
+
 ## Rationale & Dimensional Accuracy
 
 My above method is an **aesthetics-first approach**. This method creates very smooth top surfaces and can also help with layer consistency. The resulting prints generally have perfectly acceptable tolerances for most projects (Voron parts included) with no further compensation.
@@ -194,8 +196,11 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
     - Some guides mention printing a single or two-walled object and measuring the thickness with calipers.
         - I simply never have good results with this approach, and different people seem to get (sometimes wildly) different results.
         - The measured widths can vary depending where you measure it and how much pressure you use.
-        - Any layer wobble (which all printers have in varying degrees) causes these walls to measure thicker, which can throw things off.
+        - Any layer wobble or inconsistent extrusion (which all printers have in varying degrees) causes these walls to measure thicker.
+            - ![](/images/extrusion_multiplier/z-wobble.png)\
+            <sup>Source: https://manual.slic3r.org/troubleshooting/dimension-errors</sup>
         - This method requires half-decent calipers, which many people just don't have. This limits the accessibility.
+
 
 - #### **SuperSlicer Calibration**
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:

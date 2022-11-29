@@ -4,16 +4,16 @@
 # Pressure Advance / Linear Advance
 
 ---
-This guide will call it "pressure advance", or "PA". 
-
-"Linear advance", or "LA" is the **same thing**. 
-- Marlin just calls it by a different name.
-- The only difference is that Marlin's linear advance does not have a smooth time setting.
 
 **:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
 - :fish:[:page_facing_up:Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
 
-**:warning: You may have to re-tune pressure advance if you enable or disable input shaper.** 
+
+:bulb: This guide will call it "pressure advance", or "PA".
+
+- "Linear advance", or "LA" is the **same thing**, just Marlin's version of it.
+
+    - The only difference is that Marlin's linear advance does not have a "smooth time" setting.
 
 ---
 # Why Pressure Advance is Needed

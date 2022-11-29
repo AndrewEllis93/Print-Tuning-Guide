@@ -16,12 +16,24 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 - This can also be a sign that your perimeter speeds/accels are too high.
 
 ## Bulging Around Features (SuperSlicer)
-- ![](/images/troubleshooting/bulging/feature_bulging.png) 
-    - Try this combination of settings. It will not make it *perfect*, but it made a noticeable improvement for me.\
-    *(described in further detail in [:page_facing_up:Small Infill Areas Look Overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md), but can have a positive effect for this issue too)*
-        - Top infill: "Not connected"
-        - Solid infill: "Not connected"
-        - Infill/perimeter overlap (encroachment): 25%
+- ![](/images/troubleshooting/bulging/feature_bulging.png) ![](/images/troubleshooting/bulging/feature-bulging-2.png) 
+
+These types of bulges are often caused by **overextrusion of the supporting solid infill**:
+
+- ![](/images/troubleshooting/bulging/feature_bulging-fill.png) 
+
+First of all, you should tune your [:page_facing_up:pressure advance](/articles/pressure_advance.md) and [:page_facing_up:extrusion multiplier](/articles/extrusion_multiplier.md) using this guide's methods.
+
+After that, see [:page_facing_up:Small Infill Areas Look Overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md).\
+When you have overextrusion issues in small areas, it greatly contributes to this issue.
+- The above link goes into this in much more detail about this issue, but one of the larger improvements for me was to use these settings in SuperSlicer:
+    - Top infill: "Not connected"
+    - Solid infill: "Not connected"
+    - Infill/perimeter overlap (encroachment): 20-25%
+        - *(Lower is better, but don't go too low or your infill can disconnect from the perimeters)*
+
+- There is some additional (advanced!) reading in that page with some more recent findings about a retraction trick. 
+    - BUT that trick has downsides without using an **experimental** SuperSlicer build. **No support provided!**
 ## Bulging Patterns on Overhangs (SS)
 ![](/images/troubleshooting/bulging/AboveBridgeFlow-1.png)
 ![](/images/troubleshooting/bulging/AboveBridgeFlow-2.png)

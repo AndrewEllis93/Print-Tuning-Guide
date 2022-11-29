@@ -34,6 +34,7 @@ When you have overextrusion issues in small areas, it greatly contributes to thi
 
 - There is some additional (advanced!) reading in that page with some more recent findings about a retraction trick. 
     - BUT that trick has downsides without using an **experimental** SuperSlicer build. **No support provided!**
+    - The page describes applying it to the top layer. You would have to disable "only retract when crossing perimeters" for it to apply to this solid infill too. That can slow down your print, however.
 ## Bulging Patterns on Overhangs (SS)
 ![](/images/troubleshooting/bulging/AboveBridgeFlow-1.png)
 ![](/images/troubleshooting/bulging/AboveBridgeFlow-2.png)

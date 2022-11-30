@@ -10,7 +10,7 @@
 #
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
+# https://learnxinyminutes.com/articles/yaml/
 #
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
@@ -18,20 +18,28 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Print Tuning Guide
-email: AndrewEllis93@gmail.com
+layout: default
+name: Ellis' Print Tuning Guide (WORK IN PROGRESS)
+title: Ellis' Print Tuning Guide (WORK IN PROGRESS)
 description: >- # this means to ignore newlines until "baseurl:"
-  Ellis' Print Tuning Guide
-#twitter_username: jekyllrb
+  Ellis' Print Tuning Guide (WORK IN PROGRESS)
+email: AndrewEllis93@gmail.com
 github_username:  AndrewEllis93
+github: [metadata]
 domain: andrewellis93.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://andrewellis93.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: /Print-Tuning-Guide/         # place folder name if the site is served in a subfolder
 
 # Build settings
-theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
+color_scheme: dark
 plugins:
   - jekyll-feed
+  - jemoji
+
+aux_links:
+  "Issues, Feedback, & Contributions":
+    - "https://github.com/AndrewEllis93/Print-Tuning-Guide/issues"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

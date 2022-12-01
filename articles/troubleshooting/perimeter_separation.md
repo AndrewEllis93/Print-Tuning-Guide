@@ -4,6 +4,9 @@ title: Perimeter Separation
 #nav_order: 7
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Perimeter Separation
 ---
 :dizzy: This page is compatible with **all printers.**

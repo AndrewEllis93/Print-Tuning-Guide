@@ -4,6 +4,9 @@ title: Cooling and Layer Times
 nav_order: 6
 parent: Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Cooling and Layer Times
 ---
 :dizzy: This page is compatible with **all printers.**

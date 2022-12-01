@@ -4,6 +4,9 @@ title: Controlling Temperature G-Code Order
 #nav_order: 4
 parent: Miscellaneous
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Controlling Temperature G-Code Order
 ---
 :dizzy: This page is compatible with **all printers.**

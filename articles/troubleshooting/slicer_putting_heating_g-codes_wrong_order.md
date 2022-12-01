@@ -4,6 +4,9 @@ title: Slicer is Putting Heating G-codes in the Wrong Place/Order
 #nav_order: 11
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Slicer is Putting Heating G-codes in the Wrong Place/Order
 ---
 :dizzy: The second fix is relevant to all printers, but the first fix is for **Klipper printers only.**

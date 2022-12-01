@@ -4,6 +4,9 @@ title: Shut Down Host
 #nav_order: 8
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Shut Down Host
 ---
 :dizzy: Macros are compatible with **Klipper only**.

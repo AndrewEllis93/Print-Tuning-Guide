@@ -4,6 +4,9 @@ title: Extrusion Multiplier
 nav_order: 4
 parent: Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Extrusion Multiplier
 
 ---

@@ -4,6 +4,9 @@ title: Extrusion Patterns / "Wood Grain"
 #nav_order: 1
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Extrusion Patterns / "Wood Grain"
 ---
 :dizzy: The concepts on this page is relevant to all printers, but certain parts are tailored to **Voron** printers.

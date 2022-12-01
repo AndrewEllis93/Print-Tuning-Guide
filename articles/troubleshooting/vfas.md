@@ -4,6 +4,9 @@ title: VFAs (Vertical Fine Artifacts)
 #nav_order: 10
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # VFAs (Vertical Fine Artifacts)
 ---
 :dizzy: This page is tailored for **Voron** printers.

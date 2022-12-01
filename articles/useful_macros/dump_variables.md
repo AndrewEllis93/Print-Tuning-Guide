@@ -4,6 +4,9 @@ title: Dump Variables
 #nav_order: 9
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Dump Variables
 ---
 :dizzy: Macros are compatible with **Klipper only**.

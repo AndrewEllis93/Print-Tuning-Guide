@@ -4,6 +4,9 @@ title: Pockmarks
 #nav_order: 9
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Pockmarks
 ---
 :dizzy: This page is compatible with **all printers.**

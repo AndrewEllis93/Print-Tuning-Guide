@@ -4,6 +4,9 @@ title: LCD RGB
 #nav_order: 6
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # LCD RGB
 ---
 :dizzy: Macros are compatible with **Klipper only**.

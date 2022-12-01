@@ -4,6 +4,9 @@ title: A Note About Line Width
 nav_order: 1
 parent: Before We Begin
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 
 # A Note About Line Width
 Any line widths in this guide are expressed as a **percentage of nozzle diameter.** \

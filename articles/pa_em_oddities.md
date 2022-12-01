@@ -4,6 +4,9 @@ title: PA / EM Oddities
 nav_order: 5
 parent: Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # PA / EM Oddities
 ---
 :dizzy: This page is compatible with Klipper *and* Marlin.

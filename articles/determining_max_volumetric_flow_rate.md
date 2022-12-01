@@ -4,6 +4,9 @@ title: Determining Maximum Volumetric Flow Rate
 nav_order: 1
 parent: Advanced Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Determining Maximum Volumetric Flow Rate
 
 ---

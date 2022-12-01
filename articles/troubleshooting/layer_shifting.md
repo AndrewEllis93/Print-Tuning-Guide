@@ -4,6 +4,9 @@ title: Layer Shifting
 #nav_order: 6
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Layer Shifting
 ---
 :dizzy: This page is compatible with **all printers**, but some notes are specific to Voron printers.

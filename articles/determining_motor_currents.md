@@ -4,6 +4,9 @@ title: Determining Motor Currents
 nav_order: 2
 parent: Advanced Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Determining Motor Currents
 ---
 :dizzy: This page is compatible with **Klipper only**.

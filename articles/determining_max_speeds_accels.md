@@ -4,6 +4,9 @@ title: Determining Maximum Speeds and Accelerations
 nav_order: 3
 parent: Advanced Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Determining Maximum Speeds and Accelerations
 ---
 :dizzy: This page is compatible with **Klipper only**.

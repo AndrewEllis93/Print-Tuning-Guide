@@ -4,6 +4,9 @@ title: Troubleshooting
 nav_order: 8
 has_children: true
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # **Troubleshooting**
 *Even without issues, you should look through these to familiarize yourself with things to look out for.\
 **Especially** thermal drift under "First Layer / Squish Consistency Issues"*

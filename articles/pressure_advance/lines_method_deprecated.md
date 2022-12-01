@@ -7,6 +7,9 @@ grand_parent: Tuning
 ---
 # Lines Method (DEPRECATED)
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 
 :dizzy: This page is compatible with Klipper *and* Marlin.
 

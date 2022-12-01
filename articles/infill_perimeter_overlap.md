@@ -4,6 +4,9 @@ title: Infill/Perimeter Overlap
 nav_order: 8
 parent: Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Infill/Perimeter Overlap
 ---
 :dizzy: This page is compatible with **all printers.**

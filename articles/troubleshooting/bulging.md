@@ -4,6 +4,9 @@ title: Bulging
 #nav_order: 2
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Bulging
 ---
 :dizzy: This page is compatible with **all printers.**

@@ -4,6 +4,9 @@ title: First Layer Squish
 nav_order: 2
 parent: Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # First Layer Squish
 
 I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 

@@ -5,6 +5,9 @@ nav_order: 1
 parent: First Layer Inconsistencies
 grand_parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Thermal Drift
 ---
 :dizzy: This page is tailored to **Voron** printers.

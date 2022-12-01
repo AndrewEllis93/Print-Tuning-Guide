@@ -4,6 +4,9 @@ title: Small Infill Areas Look Overextruded
 #nav_order: 12
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Small Infill Areas Look Overextruded
 ---
 :dizzy: This page is compatible with **all printers.**

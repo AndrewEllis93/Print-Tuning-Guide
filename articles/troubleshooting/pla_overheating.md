@@ -4,6 +4,9 @@ title: PLA is Overheating
 #nav_order: 8
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # PLA is Overheating
 ---
 :dizzy: This page is compatible with **all printers.**

@@ -4,6 +4,9 @@ title: "Off"
 #nav_order: 8
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Off
 ---
 :dizzy: Macros are compatible with **Klipper only**.

@@ -4,6 +4,9 @@ title: Conditional Homing
 #nav_order: 1
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Conditional Homing
 ---
 :dizzy: Macros are compatible with **Klipper only**.

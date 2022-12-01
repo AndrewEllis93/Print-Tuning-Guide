@@ -4,6 +4,9 @@ title: Replace M109/M190 With TEMPERATURE_WAIT
 #nav_order: 11
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Replace `M109`/`M190` With `TEMPERATURE_WAIT`
 ---
 :dizzy: Macros are compatible with **Klipper only**.

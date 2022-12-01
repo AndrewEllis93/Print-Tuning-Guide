@@ -4,6 +4,9 @@ title: My Setup
 #nav_order: 5
 parent: Miscellaneous
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # My Setup
 
 Voron V2.4 350mm (with a lot of V2.2 bits still on it)

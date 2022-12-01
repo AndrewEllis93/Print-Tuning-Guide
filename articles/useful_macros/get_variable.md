@@ -4,6 +4,9 @@ title: Get Variable
 #nav_order: 10
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Get Variable
 ---
 :dizzy: Macros are compatible with **Klipper only**.

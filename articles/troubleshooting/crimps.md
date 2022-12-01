@@ -4,6 +4,9 @@ title: Crimps
 #nav_order: 3
 parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Crimps
 ---
 :dizzy: This page is compatible with **all printers** that use Molex Microfit 3.0 connectors.

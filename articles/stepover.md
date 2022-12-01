@@ -4,6 +4,9 @@ title: Stepover
 nav_order: 9
 parent: Tuning
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Stepover
 ---
 :dizzy: This page is compatible with **all printers.**

@@ -4,6 +4,9 @@ title: Hotend Fan RPM Monitoring
 #nav_order: 3
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Hotend Fan RPM Monitoring
 ---
 :dizzy: Macros are compatible with **Klipper only**.

@@ -4,6 +4,9 @@ title: Parking
 #nav_order: 7
 parent: Useful Macros
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # Parking
 ---
 :dizzy: Macros are compatible with **Klipper only**.

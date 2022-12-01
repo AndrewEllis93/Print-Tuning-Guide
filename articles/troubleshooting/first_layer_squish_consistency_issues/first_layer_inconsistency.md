@@ -5,6 +5,9 @@ nav_order: 2
 parent: First Layer Inconsistencies
 grand_parent: Troubleshooting
 ---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+{% endcomment %}
 # First Layer Inconsistency
 ---
 :dizzy: This page is tailored to **Voron** / Klipper printers.

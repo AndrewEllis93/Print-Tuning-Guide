@@ -1,17 +1,19 @@
 ---
 layout: default
 title: Voron V2 Gantry Squaring
-nav_order: 4
-parent: Printer Tuning
+nav_order: 3
 ---
 # Voron V2 Gantry Squaring
 
 ## Why?
 
-Poor gantry squaring can cause a number of problems.\
+Poor gantry squaring can cause a number of problems.
+
+### Watch [this video](https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-a424-7d48def0f834.mp4).
+
 Notice that the idlers get "pinched" when moving the X extrusion back/forth (this is shown with loose Z joints).
 
-https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-a424-7d48def0f834.mp4
+
 
 This can potentially cause:
 - First Layer issues

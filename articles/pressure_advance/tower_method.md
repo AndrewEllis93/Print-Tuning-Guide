@@ -3,13 +3,15 @@ layout: default
 title: Tower Method
 nav_order: 3
 parent: Pressure Advance / Linear Advance
-grand_parent: Print Tuning
+grand_parent: Tuning
 ---
 # Tower Method
 
 ---
 
-:warning: **I would highly recommend using the [:page_facing_up: pattern method](http://localhost:4000/Print-Tuning-Guide/articles/pressure_advance_pattern_method.html) rather than this method, if you can take some time to wrap your head around it.** It is quicker and more precise. 
+:dizzy: This page is compatible with **Klipper only**.
+
+:warning: **I would generally recommend using the [:page_facing_up: pattern method](./pressure_advance_pattern_method.html) rather than this method, if you can take some time to wrap your head around it.** It is quicker and more precise. 
 
 This "tower method" is here for beginners.
 
@@ -75,5 +77,5 @@ You should now see increasing pressure advance values reporting to the g-code te
 
 Excuse the gigantic photos - high resolution is needed here.
 
-![](./images/pressure_advance_tower_method/PA-Tower.png) 
-![](./images/pressure_advance_tower_method/PA-Tower-Annotated.png) 
+![](./images/tower_method/PA-Tower.png) 
+![](./images/tower_method/PA-Tower-Annotated.png) 

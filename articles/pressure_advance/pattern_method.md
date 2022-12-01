@@ -3,9 +3,14 @@ layout: default
 title: Pattern Method
 nav_order: 2
 parent: Pressure Advance / Linear Advance
-grand_parent: Print Tuning
+grand_parent: Tuning
 ---
+
 # Pattern Method
+---
+:dizzy: This page is compatible with Klipper *and* Marlin.
+
+---
 
 **Visit [:page_facing_up: my calibration site](https://andrewellis93.github.io/pressure_advance/pressure_advance.html).**
 - Fill out the form to generate the g-code and then print it. 
@@ -13,7 +18,7 @@ grand_parent: Print Tuning
     - Most of these settings should be relatively intuitive, or have descriptions explaining what they do. 
 
 - You should get a result like this:
-![](./images/pressure_advance/pattern.jpg)
+![](./images/pattern_method/pattern.jpg)
 
 ### What You're Looking For
 You are looking for the **sharpest corner** with the fewest artifacts (gaps, bulges, divots).
@@ -25,7 +30,7 @@ Imagine you're holding a machinist's square over each corner.\
 
 In this example, I would choose around 0.04 (in green).
 
-![](./images/pressure_advance/pattern-annotated.jpg)
+![](./images/pattern_method/pattern-annotated.jpg)
 
 I find I get the best real prints when I lean toward **higher** values. 
 - For example - if your sharpest corner has a *tiny* bit of gapping, I'd still personally choose it.\
@@ -41,7 +46,7 @@ It's up to you how finely you want to tune!
 
 
 :warning: If you can't get a clean corner, or you have gapping and bulging at the same time, **you likely have extruder issues.** 
-- One thing to check is your [:page_facing_up: extruder backlash](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/extrusion_patterns.md#extruder-backlash). This is a common cause, but only one of many!
+- One thing to check is your [:page_facing_up: extruder backlash](./troubleshooting/extrusion_patterns.md#extruder-backlash). This is a common cause, but only one of many!
 - Make sure there is no "dead zone" when reversing extruder directions by hand.
 - Make sure nothing is misaligned or loose.
 - On bowden extruders, ensure that your tube fittings have minimal/no play.

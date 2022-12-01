@@ -5,6 +5,10 @@ title: Dump Variables
 parent: Useful Macros
 ---
 # Dump Variables
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 This dumps all current Klipper variables to the g-code terminal. 
 
 This helps to find Klipper system variables for use in macros. A filter for both name and value can be applied.

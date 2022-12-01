@@ -6,7 +6,14 @@ parent: Useful Macros
 ---
 # Pause/Resume & Filament Sensors
 
-**You need `[pause_resume]` specified in your config to be able to use these.**
+---
+
+:dizzy: Macros are compatible with **Klipper only**.
+- **You need `[pause_resume]` specified in your config to be able to use these.**
+
+- **:warning: My pause/resume macros work as a pair. One will not work properly without the other.**
+
+---
 
 Features:
 
@@ -179,7 +186,7 @@ runout_gcode:
     #BEEP I=12
 ```
 {% endraw %}
-#                                # Filament Sensor Management
+# Filament Sensor Management
 This disables the filament sensor 1 second after startup. This prevents it from tripping constantly while you're just loading filament, doing testing or maintenance, etc.
 
 Put your filament sensor's name after `SENSOR=`.

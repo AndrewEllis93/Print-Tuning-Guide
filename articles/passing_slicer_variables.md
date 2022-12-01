@@ -6,6 +6,11 @@ parent: Miscellaneous
 ---
 # Passing Slicer Variables to PRINT_START
 
+---
+:dizzy: This page is compatible with **Klipper only**.
+
+---
+
 This section will demonstrate passing temperature variables to PRINT_START.
 
 **This method can be used for other slicer variables too, not just temperatures / heating commands.**

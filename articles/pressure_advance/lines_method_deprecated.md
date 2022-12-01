@@ -3,12 +3,14 @@ layout: default
 title: Lines Method (DEPRECATED)
 nav_order: 4
 parent: Pressure Advance / Linear Advance
-grand_parent: Print Tuning
+grand_parent: Tuning
 ---
 # Lines Method (DEPRECATED)
 ---
 
-### :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](http://localhost:4000/Print-Tuning-Guide/articles/pressure_advance.html).
+:dizzy: This page is compatible with Klipper *and* Marlin.
+
+### :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pressure_advance.html).
 
 ### :warning: The contents of this page may be out of date!
 ---
@@ -17,7 +19,7 @@ grand_parent: Print Tuning
 
 **1)** Visit the [:page_facing_up: pressure advance calibration site](https://andrewellis93.github.io/pressure_advance_lines_method_deprecated/pressure_advance.html).
 - Thanks to Deuce#8801 for helping with this!
-- If you are using :fish:Marlin, use [:page_facing_up: Marlin's linear advance site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead.
+- If you are using :fish: Marlin, use [:page_facing_up: Marlin's linear advance site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead.
 
 **2)** Fill out the parameters specific to your setup (printer name, bed size, retraction, etc.) 
 
@@ -30,8 +32,8 @@ grand_parent: Print Tuning
     - **Klipper**
         - Stock `PRINT_START`/`START_PRINT` macros usually contain all the necessary start gcode (minus the temperatures), but please double check.
             - For **Vorons** with the stock `PRINT_START` macro, this is all you need:
-                - ![](./images/pressure_advance/pa_start_gcode.png)
-            - If you are [:page_facing_up: passing variables to `PRINT_START`](http://localhost:4000/Print-Tuning-Guide/articles/passing_slicer_variables.html), remember to append them here. Example: `PRINT_START HOTEND=240 BED=110`
+                - ![](./images/lines_method_deprecated/pa_start_gcode.png)
+            - If you are [:page_facing_up: passing variables to `PRINT_START`](./passing_slicer_variables.html), remember to append them here. Example: `PRINT_START HOTEND=240 BED=110`
                 - Your variable naming may be different, e.g. `EXTRUDER=X` instead of `HOTEND=X`.
                 - You can then comment out the separate heating g-codes.
     - Remove the `M112`. This is an emergency stop / reading comprehension check to ensure you have reviewed the start gcode.
@@ -78,7 +80,7 @@ grand_parent: Print Tuning
 
 - In the below example, I would choose about **0.055**.
     #### Result
-- ![](./images/pressure_advance/KFactor-Print.jpg) 
+- ![](./images/lines_method_deprecated/KFactor-Print.jpg) 
 - This is a great visual representation of what I mentioned earlier: **that pressure advance is rarely perfect.** 
 - Always choose the lower value if you are not entirely sure.
 - Sometimes the best acceleration and decelerations values will not be on the same line. In this case, you should pick a **midpoint between both.**
@@ -93,7 +95,7 @@ This PA test also serves as a nice extruder stress test, and it's a great visual
 - If your PA numbers are unusually high:
     - This may indicate a partial nozzle clog or that your hotend temperature is too low. More back pressure means more pressure advance.
 - If the middle (fast) section is not printing, or is only partially printing:
-    - ![](./images/pressure_advance/pa_lines_skipping.png)
+    - ![](./images/lines_method_deprecated/pa_lines_skipping.png)
     - Your printer is having issues extruding at faster speeds. You may be outrunning your hotend, have your temperature too low / incorrect thermistor type in your config, have your extruder motor currents incorrect, have a partial clog, or have an extruder assembly issue. See [:page_facing_up: here](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/articles/troubleshooting/extruder_skipping.html) for more in-depth troubleshooting.
     - If this only happens above your ideal PA value, it's not an issue.
 
@@ -102,7 +104,7 @@ This PA test also serves as a nice extruder stress test, and it's a great visual
     - In **PS/SS**, you can manage this per-filament by putting `SET_PRESSURE_ADVANCE ADVANCE=`\<value> in your custom filament g-code.
         - You can also set different values for different nozzle sizes using [:page_facing_up: this](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles#changing-pa-based-on-nozzle-size).
     - In **Cura**, you can set it during slicing using [:page_facing_up: this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
-- **:fish:Marlin:**
+- **:fish: Marlin:**
     - Place `M900 K`\<value\> in your filament g-code (same as above). This must be set each time.
     - You can save a permanent default to the firmware by modifying Configuration_adv.h and reflashing the firmware. Instructions in the "Saving the K-Factor in the Firmware" section [:page_facing_up: here](https://marlinfw.org/articles/features/lin_advance.html).
     - In **Cura**, you can set it during slicing using [:page_facing_up: this plugin.](https://github.com/fieldOfView/Cura-LinearAdvanceSettingPlugin)

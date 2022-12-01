@@ -5,6 +5,10 @@ title: Beeper
 parent: Useful Macros
 ---
 # Beeper
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 Allows you to utilize your LCD beeper. 
 This requires you to specify your beeper pin as an output pin.
 ## PWM Beeper

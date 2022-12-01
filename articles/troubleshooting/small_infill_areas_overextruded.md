@@ -5,6 +5,10 @@ title: Small Infill Areas Look Overextruded
 parent: Troubleshooting
 ---
 # Small Infill Areas Look Overextruded
+---
+:dizzy: This page is compatible with **all printers.**
+
+---
 
 ![](./images/small_infill_overextruded/example1.png) 
 
@@ -18,7 +22,7 @@ But, there are some things that *may* help a bit:
 - Try reducing top infill speeds and accelerations.
     - Again, there are diminishing returns here. On my printer, I stop seeing noticeable improvements below around 2k acceleration. Your mileage may vary.
 - Ensure that your extruder gears don't have too much [:page_facing_up: backlash](https://gfycat.com/mealycautiouscoqui). 
-    - You **want** a tiny amount of backlash (but as little as possible - this is just to make sure that you haven't over tensioned the gears. Too much tension can cause [:page_facing_up: extrusion patterns](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/extrusion_patterns.html) and accelerated wear.) 
+    - You **want** a tiny amount of backlash (but as little as possible - this is just to make sure that you haven't over tensioned the gears. Too much tension can cause [:page_facing_up: extrusion patterns](./troubleshooting/extrusion_patterns.html) and accelerated wear.) 
     - Too much backlash can cause issues with pressure advance and retractions.
     - You may need to re-tune PA (and sometimes esteps) after adjusting this.
     - This is not adjustable on some extruders like the Orbiter (doesn't have the same backlash issues anyway in my experience!)
@@ -42,7 +46,7 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
 - ![](./images/small_infill_overextruded/connected_not_connected_comparison.png)
 
 ## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
-(Excerpt from the [:page_facing_up: Extrusion Multiplier](http://localhost:4000/Print-Tuning-Guide/articles/extrusion_multiplier.html) article)
+(Excerpt from the [:page_facing_up: Extrusion Multiplier](./extrusion_multiplier.html) article)
 - You want to tune your extrusion multiplier for the areas where your extrusion system has had a chance to equalize pressure and coast at a constant flow rate.
 - In this example, I would primarily be looking at the circled area. 
 - While some of this print looks overextruded, I think the overall EM is actually pretty good.
@@ -109,7 +113,7 @@ All samples with "not connected" are shown with [:pushpin: top retractions](#the
 Lower overlaps show more small improvements, but also start to create pinholes.
 
 In my case, I decided to stick with NC/NC/25%. Still a nice improvement.\
-Anything lower would create [:page_facing_up: pinholes](http://localhost:4000/Print-Tuning-Guide/articles/infill_perimeter_overlap.html), and as mentioned in [:pushpin: this section](#the-magic-bullet-but-with-downsides), too low would start to disconnect the infill.
+Anything lower would create [:page_facing_up: pinholes](./infill_perimeter_overlap.html), and as mentioned in [:pushpin: this section](#the-magic-bullet-but-with-downsides), too low would start to disconnect the infill.
 
 - ![](./images/small_infill_overextruded/demonstration.png)
 

@@ -5,6 +5,10 @@ title: Get Variable
 parent: Useful Macros
 ---
 # Get Variable
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 *Contributed by [:page_facing_up: FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*
 
 This returns value and type of a single variable to the g-code terminal. Keys and indexes can be chained to access nested dictionaries and lists.

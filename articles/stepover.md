@@ -1,10 +1,14 @@
 ---
 layout: default
 title: Stepover
-#nav_order: 1
-parent: Miscellaneous
+nav_order: 9
+parent: Tuning
 ---
 # Stepover
+---
+:dizzy: This page is compatible with **all printers.**
+
+---
 
 I just thought this needed more awareness, it seems a lot of people don't know about it. 
 

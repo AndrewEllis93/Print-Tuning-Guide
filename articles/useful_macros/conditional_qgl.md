@@ -5,6 +5,10 @@ title: Conditional QGL
 parent: Useful Macros
 ---
 # Conditional QGL
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 QGL if not already done.
 
 I don't personally use this, I prefer to QGL every print. But some people like it.

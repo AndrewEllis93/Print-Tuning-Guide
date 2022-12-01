@@ -5,6 +5,10 @@ title: "Off"
 parent: Useful Macros
 ---
 # Off
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 
 Just an idea more than a copy-pastable macro as **yours will be different**. 
 

@@ -5,6 +5,10 @@ title: PLA is Overheating
 parent: Troubleshooting
 ---
 # PLA is Overheating
+---
+:dizzy: This page is compatible with **all printers.**
+
+---
 - Open the front door at minimum. Or take off all the side panels.
 - Use [:page_facing_up: AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN) or another cooling mod, or:
 - Point a fan at it.

@@ -5,6 +5,10 @@ title: Conditional Homing
 parent: Useful Macros
 ---
 # Conditional Homing
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 
 **Home if not already homed.** 
 

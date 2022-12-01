@@ -5,6 +5,10 @@ title: Slicer is Putting Heating G-codes in the Wrong Place/Order
 parent: Troubleshooting
 ---
 # Slicer is Putting Heating G-codes in the Wrong Place/Order
+---
+:dizzy: The second fix is relevant to all printers, but the first fix is for **Klipper printers only.**
+
+---
 
 For example:
 
@@ -16,9 +20,9 @@ The two options below allow you to control this order.
 
 - Pass variables to `PRINT_START` (allows the most control, but is more complex)
     - See the *"Passing Variables to PRINT_START"* article 
-    [:page_facing_up: here](http://localhost:4000/Print-Tuning-Guide/articles/passing_slicer_variables.html).
+    [:page_facing_up: here](./passing_slicer_variables.html).
 
 - Force g-code ordering (only allows changing the g-code order, but is easy to set up)
 
-    - See the *"Controlling Slicer Temperature G-Code Order (Simple Method)"* article [:page_facing_up: here](http://localhost:4000/Print-Tuning-Guide/articles/controlling_slicer_g-code_order.html).
+    - See the *"Controlling Slicer Temperature G-Code Order (Simple Method)"* article [:page_facing_up: here](./controlling_slicer_g-code_order.html).
 

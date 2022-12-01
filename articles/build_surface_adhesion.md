@@ -2,9 +2,13 @@
 layout: default
 title: Build Surface Adhesion
 nav_order: 1
-parent: Print Tuning
+parent: Tuning
 ---
 # Build Surface Adhesion
+---
+:dizzy: This page is compatible with **all printers.**
+
+---
 
 ## Build Surface Preparation / Handling
 - :warning: Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a paper towel or paper shop towel.
@@ -43,16 +47,16 @@ parent: Print Tuning
     - You should probably keep the scouring pad/sponge out of the kitchen afterwards. I'm not sure the health effects of plastic dust ending up on your dishes - better safe than sorry!
 
 ## Troubleshooting
-:bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up: first layer squish](http://localhost:4000/Print-Tuning-Guide/articles/first_layer_squish.html).**
+:bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up: first layer squish](./first_layer_squish.html).**
 
 This section is just for further troubleshooting if you are still having issues.
 ### All Surfaces
 
 
-- :warning: Ensure that your [:page_facing_up: first layer squish](http://localhost:4000/Print-Tuning-Guide/articles/first_layer_squish.html) is correct.
+- :warning: Ensure that your [:page_facing_up: first layer squish](./first_layer_squish.html) is correct.
 
 - Use adequately thick line widths (in your slicer) for your first layer.
-    - I use [:page_facing_up: **120%**](http://localhost:4000/Print-Tuning-Guide/articles/a_note_about_line_width.html) normally, but higher line widths can further increase adhesion. 
+    - I use [:page_facing_up: **120%**](./a_note_about_line_width.html) normally, but higher line widths can further increase adhesion. 
         - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.

@@ -2,9 +2,13 @@
 layout: default
 title: Determining Motor Currents
 nav_order: 2
-parent: Printer Tuning
+parent: Advanced Tuning
 ---
 # Determining Motor Currents
+---
+:dizzy: This page is compatible with **Klipper only**.
+
+---
 :warning: The below guidance is for **axis motors only**.
 
 Extruder motors/pancake steppers are a bit different, as there is more variance between models.
@@ -30,8 +34,8 @@ Start with around **40-50%** of rated current.
 
 - For example, with a 2a motor, start around 0.8-1a.
 
-Then you can [:page_facing_up: test your maximum speeds/accels](http://localhost:4000/Print-Tuning-Guide/articles/determining_max_speeds_accels.html) and make sure your motors are performing well. In most cases, the motors can handle speeds/accels much faster than what you would realistically be printing at, even at moderate currents.
-- If you are having issues reaching reasonable speeds/accels, you may have a mechanical problem. See [:page_facing_up: here](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/layer_shifting.html).
+Then you can [:page_facing_up: test your maximum speeds/accels](./determining_max_speeds_accels.html) and make sure your motors are performing well. In most cases, the motors can handle speeds/accels much faster than what you would realistically be printing at, even at moderate currents.
+- If you are having issues reaching reasonable speeds/accels, you may have a mechanical problem. See [:page_facing_up: here](./troubleshooting/layer_shifting.html).
 
 ## Determining Maximum `run_current`:
 
@@ -42,7 +46,7 @@ Then you can [:page_facing_up: test your maximum speeds/accels](http://localhost
 
 - Most 1.8° motors already have way more performance than you realistically need. 0.9° motors are more sensitive, however.
 
-- The ideal current is usually somewhere in the middle. Experiment with different motor currents and [:page_facing_up: test how they affect your maximum speeds/accels](http://localhost:4000/Print-Tuning-Guide/articles/determining_max_speeds_accels.html).
+- The ideal current is usually somewhere in the middle. Experiment with different motor currents and [:page_facing_up: test how they affect your maximum speeds/accels](./determining_max_speeds_accels.html).
 
 ---------------------------------
 

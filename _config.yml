@@ -32,7 +32,8 @@ baseurl: /Print-Tuning-Guide/         # place folder name if the site is served 
 
 # Build settings
 remote_theme: pmarsceill/just-the-docs
-color_scheme: dark
+#color_scheme: dark
+color_scheme: ellis_custom_theme_dark
 plugins:
   - jekyll-feed
   - jemoji

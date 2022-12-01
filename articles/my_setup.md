@@ -19,7 +19,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
     - [:page_facing_up: Genuine Gates brand pulleys/idlers](https://www.filastruder.com/search?type=product&q=gates) in gantry
     - [:page_facing_up: BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Filament-Sensor-Detection-Printer/dp/B07Z7Y5VY9)
 - **Mods**
-    - [:page_facing_up: Klicky](https://github.com/jlas1/Klicky-Probe) w/ [:page_facing_up: auto z calibration](https://github.com/protoloft/klipper_z_calibration)
+    - [:page_facing_up: Euclid](https://euclidprobe.github.io) (using Klicky macros) w/ [:page_facing_up: auto z calibration](https://github.com/protoloft/klipper_z_calibration)
     - Chamber thermistor
     - [:page_facing_up: Bed fans](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Ellis/Bed_Fans)
     - Umbilical 
@@ -48,7 +48,8 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
 ## Photos
 Excuse the hazy panels. Fact of life with ABS.
 
-Photos show AB-BN toolhead + smooth PEI. I have since upgraded to Stealthburner + Fabreeko HoneyBadger textured PEI.
+Photos show AB-BN toolhead + smooth PEI.\
+I have since upgraded to Stealthburner + Fabreeko HoneyBadger textured PEI.
 
 ![](./images/my_setup/my_setup.jpg)
 

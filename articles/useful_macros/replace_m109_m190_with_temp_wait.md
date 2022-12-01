@@ -5,6 +5,10 @@ title: Replace M109/M190 With TEMPERATURE_WAIT
 parent: Useful Macros
 ---
 # Replace `M109`/`M190` With `TEMPERATURE_WAIT`
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 Replace `M109` (wait for hotend temperature) and `M190` (wait for bed temperature) with TEMPERATURE_WAIT.
 
 This just makes Klipper resume immediately after reaching temp. Otherwise it waits for the temperature to stabilize.

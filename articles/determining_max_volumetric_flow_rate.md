@@ -2,9 +2,14 @@
 layout: default
 title: Determining Maximum Volumetric Flow Rate
 nav_order: 1
-parent: Printer Tuning
+parent: Advanced Tuning
 ---
 # Determining Maximum Volumetric Flow Rate
+
+---
+:dizzy: This page is compatible with **all printers.**
+
+---
 
 Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.\
 Volumetric flow is expressed in mm<sup>3</sup>/s (cubic millimeters per second).

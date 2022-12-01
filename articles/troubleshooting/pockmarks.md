@@ -5,6 +5,10 @@ title: Pockmarks
 parent: Troubleshooting
 ---
 # Pockmarks
+---
+:dizzy: This page is compatible with **all printers.**
+
+---
 ![](./images/pockmarks/Pockmarks.png)
 
 - Ensure your Z seam is not set to "random".

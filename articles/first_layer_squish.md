@@ -2,7 +2,7 @@
 layout: default
 title: First Layer Squish
 nav_order: 2
-parent: Print Tuning
+parent: Tuning
 ---
 # First Layer Squish
 
@@ -10,10 +10,12 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 
 ---
 
-- :warning: This section assumes that you have already done a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
+:dizzy: This page is generally compatible with **all printers.** Some commands are Klipper-specific, however.
 
-- :warning: This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
-    - :warning: See the [:page_facing_up: First Layer / Squish Consistency Issues](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/first_layer_squish_consistency.html) article, **even if you are not having any issues.** There is some important information in there that everyone should know, particularly about **thermal drift**.
+:warning: This section assumes that you have already done a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
+
+:warning: This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
+    - :warning: See the [:page_facing_up: First Layer / Squish Consistency Issues](./troubleshooting/first_layer_squish_consistency.html) article, **even if you are not having any issues.** There is some important information in there that everyone should know, particularly about **thermal drift**.
 
 ---
 
@@ -34,7 +36,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
     - ![image](https://user-images.githubusercontent.com/56029/196033444-4cd875ef-66a7-4b07-bcae-727f2f26da06.png)\
     \* *To exceed 100mm, either click the edit button on the right side, or ctrl+click the bar.*
 
-**3)** Set your first layer [:page_facing_up: line width](http://localhost:4000/Print-Tuning-Guide/articles/a_note_about_line_width.html) to **120%** or greater.
+**3)** Set your first layer [:page_facing_up: line width](./a_note_about_line_width.html) to **120%** or greater.
 
 **4)** Start the print. While it is printing, [:page_facing_up: live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height).
 

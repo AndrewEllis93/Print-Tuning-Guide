@@ -5,6 +5,10 @@ title: Shut Down Host
 parent: Useful Macros
 ---
 # Shut Down Host
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 
 OctoPrint and Moonraker use different shutdown commands, but it doesn't hurt to have both.
 

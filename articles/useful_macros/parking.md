@@ -5,6 +5,10 @@ title: Parking
 parent: Useful Macros
 ---
 # Parking
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 
 Park the toolhead at different places. Automatically determined based on your printer's configured size.
 

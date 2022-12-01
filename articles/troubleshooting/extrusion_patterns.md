@@ -5,10 +5,14 @@ title: Extrusion Patterns / "Wood Grain"
 parent: Troubleshooting
 ---
 # Extrusion Patterns / "Wood Grain"
+---
+:dizzy: The concepts on this page is relevant to all printers, but certain parts are tailored to **Voron** printers.
+
+---
 
 - Test prints: :page_facing_up: https://mihaidesigns.com/pages/inconsistent-extrusion-test
 - **Examples:**
-    - See [:page_facing_up: "Setting Expectations"](http://localhost:4000/Print-Tuning-Guide/articles/before_we_begin.md#setting-expectations). **You are very unlikely to get this perfect**, but some things can be done to potentially improve it.  
+    - See [:page_facing_up: "Setting Expectations"](./before_we_begin.md#setting-expectations). **You are very unlikely to get this perfect**, but some things can be done to potentially improve it.  
     - The left cube shows an "innie-outie" pattern across each extrusion line.\
     The right cube was printed after adjusting [:pushpin: extruder backlash](#extruder-backlash), and the pattern is lessened.
         - ![](./images/extrusion_patterns/Backlash-Comparison.png)

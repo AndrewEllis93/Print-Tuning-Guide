@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Troubleshooting
-nav_order: 7
+nav_order: 8
 has_children: true
 ---
 # **Troubleshooting**
 *Even without issues, you should look through these to familiarize yourself with things to look out for.\
 **Especially** thermal drift under "First Layer / Squish Consistency Issues"*
-## [Extrusion Patterns / "Wood Grain"](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/extrusion_patterns.html)(:first_quarter_moon:)
+## [Extrusion Patterns / "Wood Grain"](./troubleshooting/extrusion_patterns.html)
 - Extruder Backlash
 - Other Factors
 - Clockwork 1
@@ -16,7 +16,7 @@ has_children: true
 ![](./troubleshooting/images/extrusion_patterns/Backlash-WoodGrain.png)
 
 ---
-## [Bulging](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/bulging.html) (:full_moon:)
+## [Bulging](./troubleshooting/bulging.html)
 - Bulging Layers
     - ![](./troubleshooting/images/bulging/Bulging2.png) 
 
@@ -29,43 +29,43 @@ has_children: true
 - Bulging Patterns on Overhangs (SS)
     - ![](./troubleshooting/images/bulging/AboveBridgeFlow-2.png)
 ---
-## [Crimps](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/crimps.html) (:full_moon:)
-![](./articles/)
+## [Crimps](./troubleshooting/crimps.html)
+![](./troubleshooting/images/crimps/Microfit-Crimps.png)
 ---
-## [Extruder Skipping](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/extruder_skipping.html) (:first_quarter_moon:)
+## [Extruder Skipping](./troubleshooting/extruder_skipping.html) 
 ![](./troubleshooting/images/extruder_skipping/ExtruderSkips-2.png)
 ![](./troubleshooting/images/extruder_skipping/ExtruderSkips-3.png)
 ![](./troubleshooting/images/extruder_skipping/ExtruderSkips-5.png)
 ---
-## [First Layer / Squish Consistency Issues](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/first_layer_squish_consistency.html) (:new_moon:)
+## [First Layer / Squish Consistency Issues](./troubleshooting/first_layer_squish_consistency.html)
 - :warning:Thermal Drift
 - First Layer Conistency
 - Squish Consistency (Between Prints)
 
 ![](/images/first_layer_squish/FirstLayer-Squares-1.png)
 ---
-## [Layer Shifting](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/layer_shifting.html) (:first_quarter_moon:)
+## [Layer Shifting](./troubleshooting/layer_shifting.html) 
 - Mechanical
 - Electrical
 - Speeds and Accelerations
 
 ![](./troubleshooting/images/layer_shifting/1.png)
 ---
-## [Perimeter Separation](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/perimeter_separation.html) (:full_moon:)
+## [Perimeter Separation](./troubleshooting/perimeter_separation.html)
 ![](./troubleshooting/images/perimeter_separation/perimeter_separation.jpg)
 ---
-## [PLA is Overheating](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/pla_overheating.html) (:full_moon:)
+## [PLA is Overheating](./troubleshooting/pla_overheating.html)
 ---
-## [Pockmarks](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/pockmarks.html) (:full_moon:)
+## [Pockmarks](./troubleshooting/pockmarks.html)
 ![](./troubleshooting/images/pockmarks/Pockmarks.png)
 ---
-### [VFAs (Vertical Fine Artifacts)](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/vfas.html) (:new_moon:)
+### [VFAs (Vertical Fine Artifacts)](./troubleshooting/vfas.html)
 - Repeating VFAs With ~2mm Spacing
 - Repeating VFAs With Non-2mm Spacing
 
 ![](./troubleshooting/images/vfas/ToothMarks.png)
 ---
-## [Slicer is Putting Heating G-codes in the Wrong Place/Order](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/slicer_putting_heating_g-codes_wrong_order.html) (:first_quarter_moon:)
+## [Slicer is Putting Heating G-codes in the Wrong Place/Order](./troubleshooting/slicer_putting_heating_g-codes_wrong_order.html) 
 ---
-## [Small Infill Areas Look Overextruded](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/small_infill_areas_overextruded.html) (:waxing_gibbous_moon:)
+## [Small Infill Areas Look Overextruded](./troubleshooting/small_infill_areas_overextruded.html)
 ![](./troubleshooting/images/small_infill_overextruded/example1.png) 

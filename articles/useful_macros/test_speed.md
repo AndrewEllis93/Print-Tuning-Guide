@@ -5,4 +5,8 @@ title: TEST_SPEED
 parent: Useful Macros
 ---
 # TEST_SPEED
-## See [:page_facing_up: Determining Maximum Speeds and Accelerations](http://localhost:4000/Print-Tuning-Guide/articles/determining_max_speeds_accels.html)
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
+## See [:page_facing_up: Determining Maximum Speeds and Accelerations](./determining_max_speeds_accels.html)

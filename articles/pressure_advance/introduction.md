@@ -3,13 +3,14 @@ layout: default
 title: Introduction
 nav_order: 1
 parent: Pressure Advance / Linear Advance
-grand_parent: Print Tuning
+grand_parent: Tuning
 ---
 # Introduction
 ---
+:dizzy: This page is compatible with Klipper *and* Marlin.
 
 **:warning: You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
-- :fish:[:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
+- :fish: [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
 
 
 :bulb: This guide will call it "pressure advance", or "PA".
@@ -41,9 +42,9 @@ Ideally, you would have a straight line.
 
 In reality, however, this happens:
 
-- ![](./images/pressure_advance/pa_graph_off.png)\
+- ![](./images/introduction/pa_graph_off.png)\
 <sup>*(Source: :page_facing_up: https://marlinfw.org/assets../images/features/lin_advance/k-factor_low.png)*</sup>\
-![](./images/pressure_advance/pa_off_example.png)
+![](./images/introduction/pa_off_example.png)
 
 #### Explanation
 - *The numbers will refer to the image above.*
@@ -64,7 +65,7 @@ During decelerations it does the opposite - it pulls back (kind of like an early
 
 **Compare this image to the above image.** Notice how PA tries to cancel out those unwanted effects.
 
-![](./images/pressure_advance/pa_graph_annotated.png)\
+![](./images/introduction/pa_graph_annotated.png)\
 <sup>*(Generated using Klipper's [:page_facing_up: graph_extruder.py](https://github.com/Klipper3d/klipper/blob/master/scripts/graph_extruder.py).)*</sup>
 
 Keep in mind that pressure advance only changes the **distribution** of material, not the **amount** of material.
@@ -75,13 +76,13 @@ At lower values, you can see less material during the accelerations, and more at
 
 At higher values, you can see more material during accelerations, and less material in the corners (corner gaps).
 
-![](./images/pressure_advance/PA-Squares.png) 
+![](./images/introduction/PA-Squares.png) 
 
 ## Tuning
 There are three approaches:
-- The [:page_facing_up: pattern method](http://localhost:4000/Print-Tuning-Guide/articles/pressure_advance_pattern_method.html) (recommended)
-- The [:page_facing_up: tower method](http://localhost:4000/Print-Tuning-Guide/articles/pressure_advance_tower_method.html) (easier to set up for newcomers, but can be harder to read the results & less precise)
-- The deprecated [:page_facing_up: "lines method"](http://localhost:4000/Print-Tuning-Guide/articles/pressure_advance_lines_method_deprecated.html).
+- The [:page_facing_up: pattern method](./pressure_advance_pattern_method.html) (recommended)
+- The [:page_facing_up: tower method](./pressure_advance_tower_method.html) (easier to set up for newcomers, but can be harder to read the results & less precise)
+- The deprecated [:page_facing_up: "lines method"](./pressure_advance_lines_method_deprecated.html).
     - No longer recommended!
     - I created the below method specifically to address issues with the old Marlin tool!
 
@@ -95,9 +96,9 @@ Still, it's good to know what to look out for:
 ### Pressure Advance is Too High
 - Divots or underextrusion at corners and line ends.
 - Gaps between perimeters at corners.
-- ![](./images/pressure_advance/PA-High-1.png) 
+- ![](./images/introduction/PA-High-1.png) 
 
 ### Pressure Advance is Too Low
 - Bulging at corners and line ends.
 - Gaps between straight line perimeters.
-- ![](./images/pressure_advance/PA-Low-1.png) 
+- ![](./images/introduction/PA-Low-1.png) 

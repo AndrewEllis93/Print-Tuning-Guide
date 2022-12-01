@@ -5,7 +5,11 @@ title: Extruder Skipping
 parent: Troubleshooting
 ---
 # Extruder Skipping
-These skips will typically be wider than [:page_facing_up: pockmarks.](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/pockmarks.html)
+---
+:dizzy: The concepts on this page is relevant to all printers, but certain parts are tailored to **Voron** printers.
+
+---
+These skips will typically be wider than [:page_facing_up: pockmarks.](./troubleshooting/pockmarks.html)
 
 ![](./images/extruder_skipping/ExtruderSkips-4.png)\
 ![](./images/extruder_skipping/ExtruderSkips-1.png)\
@@ -24,7 +28,7 @@ Skipping below top layer:
     - Rotating normally: Either the filament isn't gripping properly, or a grub screw has come loose.
 - Try a new nozzle. It's often just a partial nozzle clog.
 
-- If it occurs mainly on the first layer, ensure that you are not printing with [:page_facing_up: too much squish](http://localhost:4000/Print-Tuning-Guide/articles/first_layer_squish.html) or with too much first layer flow.
+- If it occurs mainly on the first layer, ensure that you are not printing with [:page_facing_up: too much squish](./first_layer_squish.html) or with too much first layer flow.
 - Ensure that your filament gear tension (usually a spring tensioner screw) is not too tight or too loose.
     - Yank on the filament and keep tightening the tensioner screw until it stops slipping. Tighten it a little extra, maybe 1-2 turns. Too tight will cause skipping, and too loose will cause filament stripping.
 - **Use a reverse bowden tube*** with direct drive, and ensure that there is not too much resistance coming from the spool.
@@ -49,7 +53,7 @@ Skipping below top layer:
 
     - Please note that some other features have been deprecated recently too. If you have not updated Klipper in a while, please see [:page_facing_up: here](https://gist.github.com/FHeilmann/a8097b3e908e85de7255bbe6246ddfd5) for instructions on how to fix up your config for the new Klipper version. 
 
-        - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating. See [:page_facing_up: here](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/command_format_mismatch.html).
+        - You may also need to recompile/reflash your MCUs if you get a "command format mismatch" error after updating. See [:page_facing_up: here](./troubleshooting/command_format_mismatch.html).
 
 - Ensure that your retraction distance is not too high. 
     - The default Cura profile uses a high retraction distance, as it is configured for bowden. 
@@ -82,8 +86,8 @@ If there is much resistance, *figure out where it is coming from:*
 
             - If you have the 20mm 1a LDO motor, try ~0.65a. 
             - If you have the 17mm 1a LDO motor, try 0.35-0.4a.
-- Check your extruder motor and hotend fan's [:page_facing_up: crimps](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/crimps.html) and wiring.
-- Check the volumetric speed preview in your slicer. See if it is [:page_facing_up: high for your particular hotend](http://localhost:4000/Print-Tuning-Guide/articles/determining_max_volumetric_flow_rate.md#approximate-values). Or see [:page_facing_up: here](http://localhost:4000/Print-Tuning-Guide/articles/determining_max_volumetric_flow_rate.html) to determine your maximum.
+- Check your extruder motor and hotend fan's [:page_facing_up: crimps](./troubleshooting/crimps.html) and wiring.
+- Check the volumetric speed preview in your slicer. See if it is [:page_facing_up: high for your particular hotend](./determining_max_volumetric_flow_rate.md#approximate-values). Or see [:page_facing_up: here](./determining_max_volumetric_flow_rate.html) to determine your maximum.
     - If you are exceeding hotend limits, try lowering your volumetric speed limit in your slicer (PS/SS) or reducing line widths / layer heights / speed (other slicers) until you are under the limit.
 - Try rotating the extruder (if possible) without filament loaded. It should be easy.
 - Try using a cooling mod, like the [:page_facing_up: AB-BN](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/Badnoob/AB-BN). It optimizes hotend cooling and can help with heat creep issues.
@@ -91,7 +95,7 @@ If there is much resistance, *figure out where it is coming from:*
 - Take out the motor, and see how powerful it feels. See if you can stop it easily with your fingers. This may indicate a bad motor or bad wiring.
 ## Clockwork 1
 - Try turning the plastic gear with your finger with the motor turned off and filament unloaded. It should be relatively easy. *If there is too much resistance:* 
-    - Ensure that you have a small amount of [:page_facing_up: backlash in the plastic gear.](http://localhost:4000/Print-Tuning-Guide/articles/troubleshooting/extrusion_patterns.html)
+    - Ensure that you have a small amount of [:page_facing_up: backlash in the plastic gear.](./troubleshooting/extrusion_patterns.html)
         - If they are pushed together too hard, it will cause resistance.
     - Ensure that your drive shaft is not rubbing against the motor:
         - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.

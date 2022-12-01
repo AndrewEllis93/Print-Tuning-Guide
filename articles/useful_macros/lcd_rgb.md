@@ -5,6 +5,10 @@ title: LCD RGB
 parent: Useful Macros
 ---
 # LCD RGB
+---
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
 This just provides an easy shortcut to change your neopixel LCD color. This may need modifying depending on your particular LCD. Mine is an MINI12864.
 
 I have my LCD turn red during runouts, and green during filament swaps.

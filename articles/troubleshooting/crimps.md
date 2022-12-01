@@ -5,6 +5,10 @@ title: Crimps
 parent: Troubleshooting
 ---
 # Crimps
+---
+:dizzy: This page is compatible with **all printers** that use Molex Microfit 3.0 connectors.
+
+---
 - Pull on each wire. Ensure that none of the pins are starting to back out of the housings.
     - If any pins are backing out, it's possible that you may have crimped incorrectly. 
         - You may not have pushed the pins all the way into the housings. Push them in with some sharp tweezers, SIM card tool, or similar until you feel them click into place.

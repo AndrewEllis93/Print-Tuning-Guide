@@ -2,7 +2,7 @@
 layout: default
 title: Passing Slicer Variables to PRINT_START
 #nav_order: 3
-parent: Miscellaneous
+parent: Misc. Guides
 ---
 {% comment %} 
 # This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).

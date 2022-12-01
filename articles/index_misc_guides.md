@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Miscellaneous
+title: Misc. Guides
 nav_order: 6
 has_children: true
 ---

@@ -19,15 +19,15 @@
 # in the templates via {{ site.myvariable }}.
 
 layout: default
-name: Ellis' Print Tuning Guide (WORK IN PROGRESS)
-title: Ellis' Print Tuning Guide (WORK IN PROGRESS)
+name: Ellis' Print Tuning Guide
+title: Ellis' Print Tuning Guide
 description: >- # this means to ignore newlines until "baseurl:"
-  Ellis' Print Tuning Guide (WORK IN PROGRESS)
+  Ellis' Print Tuning Guide
 email: AndrewEllis93@gmail.com
 github_username:  AndrewEllis93
 github: [metadata]
-domain: andrewellis93.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
-url: https://andrewellis93.github.io  # the base hostname and protocol for your site, e.g. http://example.com
+domain: ellis3dp.com       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: http://ellis3dp.com  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: /Print-Tuning-Guide/         # place folder name if the site is served in a subfolder
 
 # Build settings

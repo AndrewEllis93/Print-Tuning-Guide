@@ -129,3 +129,5 @@ This can potentially cause:
     - **Stabilizes your gantry**. 
         - If you had it "tight but not too tight, so the Z joints can still articulate" (as is often recommended), you will notice that your gantry displaces back/forth while printing.
         - This can help with ringing and layer consistency.
+
+**17)** `RESTART` to reset your idle timeout.

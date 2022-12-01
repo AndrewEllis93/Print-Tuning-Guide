@@ -2,7 +2,7 @@
 layout: default
 title: Controlling Temperature G-Code Order
 #nav_order: 4
-parent: Miscellaneous
+parent: Miscellaneous Guides
 ---
 {% comment %} 
 # This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
@@ -28,7 +28,7 @@ You instead want your printer to heat BEFORE running your start routines.
 
  The below method allows you to do this.
 
- ## Method
+## Method
 
 To force the g-code ordering, place any of the following g-codes from the following lists in your start gcode where you desire:
 ### Prusa Slicer / SuperSlicer

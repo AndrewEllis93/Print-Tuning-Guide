@@ -28,6 +28,8 @@ This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not teste
 ![](./images/bulging/Vertex-Bulges-2.png) 
 - Your square corner velocity or jerk may be too low.
 - This can also be a sign that your perimeter speeds/accels are too high.
+- If you are using input shaper, try disabling or re-tuning it.
+- Check over your printer axes for mechanical issues. Move the toolhead/bed by hand and see if anything feels off.
 
 ## Bulging Around Features (SuperSlicer)
 - ![](./images/bulging/feature_bulging.png) ![](./images/bulging/feature-bulging-2.png) 

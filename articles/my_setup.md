@@ -1,15 +1,14 @@
 ---
 layout: default
 title: My Setup
-#nav_order: 5
-parent: Miscellaneous
+nav_order: 10
 ---
 {% comment %} 
 # This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
 {% endcomment %}
 # My Setup
 
-Voron V2.4 350mm (with a lot of V2.2 bits still on it)
+Voron V2.4 350mm (with some V2.2 parts still on it)
 - **Toolhead**
     - [:page_facing_up: Stealthburner toolhead](https://github.com/VoronDesign/Voron-Stealthburner)
     - [:page_facing_up: Orbiter 1.5 extruder](https://www.aliexpress.com/item/3256803143364574.html) (LDO motor version) - mounted with [:page_facing_up: this mod](https://www.teamfdm.com/files/file/502-orbiter-15-for-stealthburner/)
@@ -41,22 +40,8 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
         - These prevent the gantry from [:page_facing_up: warping with heat.](https://github.com/tanaes/whopping_Voron_mods/tree/main/extrusion_backers)
     - Frame thermistor
         - Used for sofware frame thermal expansion compensation (to combat thermal drift. Allows me to print from cold, without heat soaking. Though I do still wait for a minimum chamber temp to be reached.)
-            - This is a giant rabbit hole, be warned. Please don't ask me for help with this (sorry)
+            - There are some more links about this in [:page_facing_up: Thermal Drift](./troubleshooting/first_layer_squish_consistency_issues/thermal_drift.md).
     - [:page_facing_up: Decontaminator nozzle brush](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
     - Voron V2.2 handles & single panel front door
     - PiCam with some random Thingiverse mount
     - [:page_facing_up: Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Other_Printer_Mods/tree/master/All_Printers/Annex_Panel_2020_Clips_and_Hinges)
-
-
-## Photos
-Excuse the hazy panels. Fact of life with ABS.
-
-Photos show AB-BN toolhead + smooth PEI.\
-I have since upgraded to Stealthburner + Fabreeko HoneyBadger textured PEI.
-
-![](./images/my_setup/my_setup.jpg)
-
-![](./images/my_setup/my_setup_2.jpg)
-
-![](./images/my_setup/my_setup_3.jpg)
-

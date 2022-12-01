@@ -30,7 +30,8 @@ You can use this volumetric flow rate **to determine how fast your hotend/extrud
 ## Approximate Values
 
 These approximate values **assume a standard 0.4mm brass nozzle.** 
-| Hotend | Flow Rate (mm<sup>3</sup>/sec) |
+
+| Hotend | Flow Rate (mm3/s) |
 | --- | :---: |
 | E3D V6 | 11 |
 | E3D Revo | 11 |

@@ -21,7 +21,7 @@ Assuming EM is well tuned, this is often caused by a slight [:page_facing_up: fl
 
 There are a few different things you can try:\
 *(in order of my preference)*
-1. Ensure that you are not [:page_facing_up: outrunning your hotend](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/articles/determining_max_volumetric_flow_rate.html) and that you do not have a partial nozzle clog.
+1. Ensure that you are not [:page_facing_up: outrunning your hotend](./determining_max_volumetric_flow_rate.md) and that you do not have a partial nozzle clog.
 2. Take measures to improve your hotend's max flow rates.
     - **Higher flow ceilings allow for better extrusion consistency at lower flow rates**, as the [:page_facing_up: flow dropoff](./determining_max_volumetric_flow_rate.md#flow-dropoff) curve starts later. It is beneficial for extrusion consistency at different speeds, **even when you don't intend to use the full flow rate.**
     - Try increasing hotend temperatures a bit.

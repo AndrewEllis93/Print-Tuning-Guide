@@ -25,7 +25,7 @@ grand_parent: Troubleshooting
         - This ensures that any plastic remaining on the nozzle is squished out of the way, and is less likely to affect your Z offset.
         - This also accounts for the small amount of thermal expansion in the nozzle as it heats.
         - You can use a nozzle brush mod to automatically clean any debris. You should still home Z with a hot nozzle, though.
-        - You can control when your heating occurs by [:page_facing_up: passing variables to `PRINT_START`.](./passing_slicer_variables.html)
+        - You can control when your heating occurs by [:page_facing_up: passing variables to `PRINT_START`.](../../passing_slicer_variables.md)
 
     - Ensure that the endstop pin is square on top, otherwise it can cause your Z offset to drift as it rotates over time.
 
@@ -43,7 +43,7 @@ grand_parent: Troubleshooting
 
 - For **V2**: 
     - **:warning: Ensure that you are homing Z again after QGL**, as QGL throws off Z height.
-    - See the V2 notes under the [:pushpin: First Layer Consistency section](#first-layer-consistency) above.
+    - See the V2 notes under the [:page_facing_up: First Layer Consistency](./first_layer_inconsistency) page.
 
 - For **inductive probes *as* Z endstop (virtual endstop)**:
     - Inductive probes thermally drift, meaning that your Z offset can change at different bed/enclosure temperatures. You may need to calibrate Z offset for the temperatures you intend to print at.
@@ -55,6 +55,6 @@ grand_parent: Troubleshooting
     - Ensure that your `Calibrate_Z` macro is hitting the *body* of the Klicky microswitch on the Z endstop, not the *button* of the Klicky microswitch.
     - Try `PROBE_ACCURACY` and check how accurate your switch is. Sometimes you may need to try multiple switches to find the "best" one.
 
-- See the [:pushpin: Thermal Drift](#thermal-drift) section. Ensure that you are heat soaking for long enough on larger enclosed printers.
+- See the [:page_facing_up: Thermal Drift](./thermal_drift.md) page. Ensure that you are heat soaking for long enough on larger enclosed printers.
 
 <sup>\* This is a mod. It essentially baby steps for you, to account for different bed heights in addition to nozzle heights.</sup>

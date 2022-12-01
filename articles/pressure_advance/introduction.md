@@ -83,9 +83,9 @@ At higher values, you can see more material during accelerations, and less mater
 
 ## Tuning
 There are three approaches:
-- The [:page_facing_up: pattern method](./pressure_advance_pattern_method.html) (recommended)
-- The [:page_facing_up: tower method](./pressure_advance_tower_method.html) (easier to set up for newcomers, but can be harder to read the results & less precise)
-- The deprecated [:page_facing_up: "lines method"](./pressure_advance_lines_method_deprecated.html).
+- The [:page_facing_up: pattern method](./pattern_method.md) (recommended)
+- The [:page_facing_up: tower method](./tower_method.md) (easier to set up for newcomers, but can be harder to read the results & less precise)
+- The deprecated [:page_facing_up: "lines method"](./lines_method_deprecated.md).
     - No longer recommended!
     - I created the below method specifically to address issues with the old Marlin tool!
 

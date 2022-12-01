@@ -33,7 +33,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
         - Allows for umbilical.
         - The Y endstop relocation is also available as part of the pin mod below.
         - The toolhead X endstop is my own mod, and is outdated now. Not sure what other options are currently available, haven't looked into it.
-    - [:page_facing_up: Pin mod](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_Pins_Mod)
+    - [:page_facing_up: Pin mod](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/hartk1213/Voron2.4_Trident_Pins_Mod)
     - [:page_facing_up: GE5C mod](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_GE5C)
     - Gantry backers
         - [:page_facing_up: MGN9 Y backers](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers)
@@ -42,7 +42,7 @@ Voron V2.4 350mm (with a lot of V2.2 bits still on it)
     - Frame thermistor
         - Used for sofware frame thermal expansion compensation (to combat thermal drift. Allows me to print from cold, without heat soaking. Though I do still wait for a minimum chamber temp to be reached.)
             - This is a giant rabbit hole, be warned. Please don't ask me for help with this (sorry)
-    - [:page_facing_up: Decontaminator nozzle brush](https://github.com/VoronDesign/VoronUsers/tree/master/abandoned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
+    - [:page_facing_up: Decontaminator nozzle brush](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
     - Voron V2.2 handles & single panel front door
     - PiCam with some random Thingiverse mount
     - [:page_facing_up: Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Other_Printer_Mods/tree/master/All_Printers/Annex_Panel_2020_Clips_and_Hinges)

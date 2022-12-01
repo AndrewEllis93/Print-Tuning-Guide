@@ -36,12 +36,12 @@ These types of bulges are often caused by **overextrusion of the supporting soli
 
 - ![](./images/bulging/feature_bulging-fill.png) 
 
-First of all, you should tune your [:page_facing_up: pressure advance](./pressure_advance.html) and [:page_facing_up: extrusion multiplier](./extrusion_multiplier.html) using this guide's methods.
+First of all, you should tune your [:page_facing_up: pressure advance](../pressure_advance/introduction.md) and [:page_facing_up: extrusion multiplier](../extrusion_multiplier.md) using this guide's methods.
 
 You can also try printing external perimeters first (`external_perimeter_first` in PS/SS)
 - This can negatively affect *extreme* overhangs, but is generally fine for daily use.
 
-After that, see [:page_facing_up: Small Infill Areas Look Overextruded](./troubleshooting/small_infill_areas_overextruded.html).\
+After that, see [:page_facing_up: Small Infill Areas Look Overextruded](../troubleshooting/small_infill_areas_overextruded.md).\
 When you have overextrusion issues in small areas, it greatly contributes to this issue.
 - The above link goes into this in much more detail about this issue, but one of the larger improvements for me was to use these settings in SuperSlicer:
     - Top infill: "Not connected"
@@ -68,4 +68,4 @@ When you have overextrusion issues in small areas, it greatly contributes to thi
     - **Reduce "above the bridges" flow to back to 100%**
         - ![](./images/bulging/AboveBridgeFlow-Reset.png)
 - This can also occur above where the print has lifted from the build surface (it curls up into the nozzle a bit, and the plastic no longer has space to go, so squishes outwards)
-- If these do not fix it, it might instead be an [:page_facing_up: overheating issue.](./cooling_and_layer_times.html).
+- If these do not fix it, it might instead be an [:page_facing_up: overheating issue.](../cooling_and_layer_times.md).

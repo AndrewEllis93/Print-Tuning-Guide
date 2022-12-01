@@ -49,7 +49,7 @@ It's up to you how finely you want to tune!
 
 
 :warning: If you can't get a clean corner, or you have gapping and bulging at the same time, **you likely have extruder issues.** 
-- One thing to check is your [:page_facing_up: extruder backlash](./troubleshooting/extrusion_patterns.md#extruder-backlash). This is a common cause, but only one of many!
+- One thing to check is your [:page_facing_up: extruder backlash](../troubleshooting/extrusion_patterns.md#extruder-backlash). This is a common cause, but only one of many!
 - Make sure there is no "dead zone" when reversing extruder directions by hand.
 - Make sure nothing is misaligned or loose.
 - On bowden extruders, ensure that your tube fittings have minimal/no play.

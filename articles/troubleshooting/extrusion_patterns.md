@@ -15,7 +15,7 @@ parent: Troubleshooting
 
 - Test prints: :page_facing_up: https://mihaidesigns.com/pages/inconsistent-extrusion-test
 - **Examples:**
-    - See [:page_facing_up: "Setting Expectations"](./before_we_begin.md#setting-expectations). **You are very unlikely to get this perfect**, but some things can be done to potentially improve it.  
+    - See [:page_facing_up: "Setting Expectations"](../setting_expectations.md). **You are very unlikely to get this perfect**, but some things can be done to potentially improve it.  
     - The left cube shows an "innie-outie" pattern across each extrusion line.\
     The right cube was printed after adjusting [:pushpin: extruder backlash](#extruder-backlash), and the pattern is lessened.
         - ![](./images/extrusion_patterns/Backlash-Comparison.png)
@@ -39,8 +39,7 @@ parent: Troubleshooting
 
 
 ### Too Little Backlash:
-- [:pushpin: Repeating patterns](#repeating-patterns) in extrusion
-
+- Repeating patterns in extrusion (see above)
 - Accelerated wear and damage of the plastic gear, further contributing to repeating patterns in extrusion.
     - This can cause permanent extrusion consistency issues until replacement. Check the spaces between the gear teeth. This gear is damaged:
 
@@ -48,7 +47,7 @@ parent: Troubleshooting
 
 
 ### Too Much Backlash:
-- [:pushpin: Repeating patterns](#repeating-patterns) in extrusion
+- Repeating patterns in extrusion (see above)
 - Clacking noises during retraction and pressure advance moves
 - Pressure advance consistency issues (such as causing ideal PA values to differ for accelerations and decelerations).
 - Stringing

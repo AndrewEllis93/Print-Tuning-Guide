@@ -36,7 +36,7 @@ grand_parent: Tuning
         - Stock `PRINT_START`/`START_PRINT` macros usually contain all the necessary start gcode (minus the temperatures), but please double check.
             - For **Vorons** with the stock `PRINT_START` macro, this is all you need:
                 - ![](./images/lines_method_deprecated/pa_start_gcode.png)
-            - If you are [:page_facing_up: passing variables to `PRINT_START`](./passing_slicer_variables.html), remember to append them here. Example: `PRINT_START HOTEND=240 BED=110`
+            - If you are [:page_facing_up: passing variables to `PRINT_START`](../passing_slicer_variables.md), remember to append them here. Example: `PRINT_START HOTEND=240 BED=110`
                 - Your variable naming may be different, e.g. `EXTRUDER=X` instead of `HOTEND=X`.
                 - You can then comment out the separate heating g-codes.
     - Remove the `M112`. This is an emergency stop / reading comprehension check to ensure you have reviewed the start gcode.
@@ -92,14 +92,14 @@ grand_parent: Tuning
 This PA test also serves as a nice extruder stress test, and it's a great visual indicator for extrusion issues. It ensures that your extruder/hotend can handle your requested speeds, PA, and accelerations.
 - If your best accel/decel PA values are more than a line or two apart:
     - You may have too much [:page_facing_up: backlash](https://gfycat.com/mealycautiouscoqui) in your extruder. Pressure advance uses a reverse extruder move during decelerations. Excessive backlash causes some of that reverse move to be lost. 
-        - See [:page_facing_up: here](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/articles/troubleshooting/extrusion_patterns.html) for more information on the effects of backlash/gear tension.
+        - See [:page_facing_up: here](../troubleshooting/extrusion_patterns.md) for more information on the effects of backlash/gear tension.
         - *You still want a tiny amount of backlash (when filament is loaded) to ensure your extruder gears aren't over tensioned. Essentially as little as you can manage.*
         - This is not adjustable on some extruders like the Orbiter (doesn't have the same backlash issues anyway in my experience!)
 - If your PA numbers are unusually high:
     - This may indicate a partial nozzle clog or that your hotend temperature is too low. More back pressure means more pressure advance.
 - If the middle (fast) section is not printing, or is only partially printing:
     - ![](./images/lines_method_deprecated/pa_lines_skipping.png)
-    - Your printer is having issues extruding at faster speeds. You may be outrunning your hotend, have your temperature too low / incorrect thermistor type in your config, have your extruder motor currents incorrect, have a partial clog, or have an extruder assembly issue. See [:page_facing_up: here](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/articles/troubleshooting/extruder_skipping.html) for more in-depth troubleshooting.
+    - Your printer is having issues extruding at faster speeds. You may be outrunning your hotend, have your temperature too low / incorrect thermistor type in your config, have your extruder motor currents incorrect, have a partial clog, or have an extruder assembly issue. See [:page_facing_up: here](../troubleshooting/extruder_skipping.md) for more in-depth troubleshooting.
     - If this only happens above your ideal PA value, it's not an issue.
 
 **7)** In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.
@@ -109,7 +109,7 @@ This PA test also serves as a nice extruder stress test, and it's a great visual
     - In **Cura**, you can set it during slicing using [:page_facing_up: this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
 - **:fish: Marlin:**
     - Place `M900 K`\<value\> in your filament g-code (same as above). This must be set each time.
-    - You can save a permanent default to the firmware by modifying Configuration_adv.h and reflashing the firmware. Instructions in the "Saving the K-Factor in the Firmware" section [:page_facing_up: here](https://marlinfw.org/articles/features/lin_advance.html).
+    - You can save a permanent default to the firmware by modifying Configuration_adv.h and reflashing the firmware. Instructions [:page_facing_up: here](./saving.md).
     - In **Cura**, you can set it during slicing using [:page_facing_up: this plugin.](https://github.com/fieldOfView/Cura-LinearAdvanceSettingPlugin)
 
 **8)** Try printing something! 

@@ -20,5 +20,5 @@ In the `[extruder]` section of your config, update `pressure_advance` to the new
     - In **Cura**, you can set it during slicing using [:page_facing_up: this plugin.](https://github.com/ollyfg/cura_pressure_advance_setting)
 - **:fish: Marlin:**
     - Place `M900 K`\<value\> in your filament g-code (same as above). This must be set each time.
-    - You can save a permanent default to the firmware by modifying Configuration_adv.h and reflashing the firmware. Instructions in the "Saving the K-Factor in the Firmware" section [:page_facing_up: here](https://marlinfw.org/articles/features/lin_advance.html).
+    - You can save a permanent default to the firmware by modifying Configuration_adv.h and reflashing the firmware. Instructions in the "Saving the K-Factor in the Firmware" section [:page_facing_up: here](https://marlinfw.org/docs/features/lin_advance.html).
     - In **Cura**, you can set it during slicing using [:page_facing_up: this plugin.](https://github.com/fieldOfView/Cura-LinearAdvanceSettingPlugin)

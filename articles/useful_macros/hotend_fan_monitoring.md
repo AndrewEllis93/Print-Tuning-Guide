@@ -36,7 +36,7 @@ This macro polls your hotend fan RPM and executes custom gcode if a fan failure 
         - [:page_facing_up: DigiKey 24v search](https://www.digikey.com/en/products/filter/dc-brushless-fans-bldc/217?s=N4IgjCBcpgLFoDGUBmBDANgZwKYBoQB7KAbXAFZyAmADggF0CAHAFyhAGUWAnASwDsA5iAC%2BBWADYEIZJHTZ8RUiFgAGCQE5yAdhDj1WmiEYhW7LnyGiC5I9BmpMuAsUhkAzGG01VEfZ7AjEzNITh4BYTFwDXdpWXlnJTcQCVhvVT0U8ncqckyJHSpdAgkJVVgqY2Y2UIsI6xBbDTjHBRdlNNVc4vBNGlgjAjA%2BtMzhjQ0qeCHNScHeiapYgipVdxoCzNX3GJ7tjVg-EH33POCasMtIqKl7XgATdjANI5DL%2BoIWAE8mHHZ7rDIEQiIA)
         - [:page_facing_up: DigiKey 12v search](https://www.digikey.com/en/products/filter/dc-brushless-fans-bldc/217?s=N4IgjCBcpgLFoDGUBmBDANgZwKYBoQB7KAbRAA4B2cgNnJAF0CAHAFyhAGVWAnASwB2AcxABfArBoIQySOmz4ipELAAMNAJwBWSiAnrt9JiDYdu-YWIJb60Gaky4CxSGQDMYaqogE3WmpSUbnoqqh5g9BJgGgBMGvDGppBcvIIi4uAawXay8k5KriA0sF4hNFpuMVplOjG6BDQ0qrAxjCzsyeZpViA2GtK5joouZCWqVfXgmuSwkVMaM5NgmrHwBMsasXMbscEEMWG01fthWZMHbvE%2BIBdZ1YkdKRbpGVJ2fAAmHNHXSU-dBFYAE9mDgOB8sMhRKIgA)
 
-- I recommend using [:pushpin: this guide's pause/resume macros](#my-pauseresume-macros-for-runouts-filament-swaps-and-manual-pauses) with this. They will automatically turn the hotend off for a pause and automatically return it to temperature for resume. 
+- I recommend using [:pushpin: this guide's pause/resume macros](./pause_resume.md) with this. They will automatically turn the hotend off for a pause and automatically return it to temperature for resume. 
 ## Setup
 **1.** Connect your hotend fan's RPM/tach wire to a spare endstop port.
 - On the input pin, not the 5V or gnd pins. Refer to your board's pinout diagrams.

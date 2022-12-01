@@ -16,7 +16,7 @@ parent: Troubleshooting
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 
 Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [:page_facing_up: here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
-If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up: this article](./troubleshooting/extrusion_patterns.html) instead.
+If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up: this article](../troubleshooting/extrusion_patterns.md) instead.
 
 Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
 
@@ -30,7 +30,7 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.
-    - For V2, follow my [:page_facing_up: V2 gantry squaring](./voron_v2_gantry_squaring.html) instructions. A poorly squared gantry can be the root cause of a lot of alignment issues.
+    - For V2, follow my [:page_facing_up: V2 gantry squaring](../voron_v2_gantry_squaring.md) instructions. A poorly squared gantry can be the root cause of a lot of alignment issues.
     - On all CoreXY printers: [:page_facing_up: de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
         - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
@@ -49,7 +49,7 @@ Try printing the test objects [:page_facing_up: here](https://mihaidesigns.com/p
 
 Ensure that the artifacts are *always vertical or diagonal, regardless of part geometry*. These patterns can be subtle (lumps) or sharp (lines).
 
-If the pattern looks like "wood grain", or any of the example photos in that link, see [:page_facing_up: this article](./troubleshooting/extrusion_patterns.html) instead.
+If the pattern looks like "wood grain", or any of the example photos in that link, see [:page_facing_up: this article](../troubleshooting/extrusion_patterns.md) instead.
 
 - **Ensure that your A/B pulleys and XY joint idlers are all clean.** Debris can accumulate and compress between the teeth.
 - You may have a bad/poor quality pulley or toothed idler.
@@ -92,7 +92,7 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 - Artifacts are most prominent in in X/Y, but not A/B:
     - **A *and* B** motors
         - Certain motor models have been found to cause this when both are operating at the same time (i.e. X/Y moves)
-        - The following motor settings are [:page_facing_up: passed around on the Voron Discord](https://discord.com/channels/460117602945990666/696930677161197640/925934388703793192), and apparently can help in some cases (particularly with certain LDO motors on Voron V0). It may also help in other cases, worth a try.
+        - The following motor settings are passed around on the Voron Discord, and apparently can help in some cases (particularly with certain LDO motors on Voron V0). It may also help in other cases, worth a try.
 
 {% raw %}
 ```

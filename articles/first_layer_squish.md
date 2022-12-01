@@ -18,7 +18,8 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 :warning: This section assumes that you have already done a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
 
 :warning: This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
-    - :warning: See the [:page_facing_up: First Layer / Squish Consistency Issues](./troubleshooting/first_layer_squish_consistency.html) article, **even if you are not having any issues.** There is some important information in there that everyone should know, particularly about **thermal drift**.
+
+:bulb: See the [:page_facing_up: Thermal Drift](./troubleshooting/first_layer_squish_consistency_issues/thermal_drift.md) article, **even if you are not having any issues.** Thermal drift is in important thing to know about with larger enclosed printers.
 
 ---
 

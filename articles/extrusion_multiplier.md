@@ -18,13 +18,13 @@ parent: Tuning
 - Calibrating your extruder simply ensures that 100mm requested = 100mm extruded. 
 - Extrusion *multiplier* is a per-filament setting, depending on their material properties & tolerances.
 
-**:warning: You should [:page_facing_up: tune pressure advance](./pressure_advance.html) first.**
+**:warning: You should [:page_facing_up: tune pressure advance](./pressure_advance/introduction.md) first.**
 
 ---
 
 ## Background
 
-Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin: tuned print examples](#tuned-print-examples) below.
+Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin: tuned print examples](#more-examples) below.
 
 EM tuning must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is.
 

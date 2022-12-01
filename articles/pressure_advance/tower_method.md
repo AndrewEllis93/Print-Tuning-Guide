@@ -14,7 +14,7 @@ grand_parent: Tuning
 
 :dizzy: This page is compatible with **Klipper only**.
 
-:warning: **I would generally recommend using the [:page_facing_up: pattern method](./pressure_advance_pattern_method.html) rather than this method, if you can take some time to wrap your head around it.** It is quicker and more precise. 
+:warning: **I would generally recommend using the [:page_facing_up: pattern method](./pattern_method.md) rather than this method, if you can take some time to wrap your head around it.** It is quicker and more precise. 
 
 This "tower method" is here for beginners.
 
@@ -72,7 +72,7 @@ You should now see increasing pressure advance values reporting to the g-code te
     - \* *Unless you use Cura, which for some reason **still** doesn't support this basic functionality.*
 
 **9)** Try printing something! 
-- See [:pushpin: Fine-Tuning and What to Look For](#fine-tuning-and-what-to-look-for) to get an idea of what too high/low look like with actual prints.
+- See [:page_facing_up: Signs of Issues](./introduction.md#signs-of-issues) to get an idea of what too high/low look like with actual prints.
 - Tweaking in increments of 0.005 (with direct drive) is a good starting point.
 
 ### Example

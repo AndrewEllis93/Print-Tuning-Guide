@@ -5,7 +5,7 @@ title: Pause/Resume & Filament Sensors
 parent: Useful Macros
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](http://ellis3dp.com/Print-Tuning-Guide/).
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Pause/Resume & Filament Sensors
 

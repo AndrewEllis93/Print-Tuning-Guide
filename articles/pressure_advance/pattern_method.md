@@ -6,7 +6,7 @@ parent: Pressure Advance / Linear Advance
 grand_parent: Tuning
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+# This guide has moved! Please visit [the new site](http://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 
 # Pattern Method
@@ -15,7 +15,7 @@ grand_parent: Tuning
 
 ---
 
-**Visit [:page_facing_up: my calibration site](https://andrewellis93.github.io/pressure_advance/pressure_advance.html).**
+**Visit [:page_facing_up: my calibration site](http://ellis3dp.com/Pressure_Linear_Advance_Tool/).**
 - Fill out the form to generate the g-code and then print it. 
     - I won't go into much detail here, or this article will become 20 pages long. Treat it like a slicer.
     - Most of these settings should be relatively intuitive, or have descriptions explaining what they do. 

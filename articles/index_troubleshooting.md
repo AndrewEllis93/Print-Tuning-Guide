@@ -6,7 +6,7 @@ has_children: true
 ---
 
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+# This guide has moved! Please visit [the new site](http://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # **Troubleshooting**
 *Even without issues, you should look through these to familiarize yourself with things to look out for.\

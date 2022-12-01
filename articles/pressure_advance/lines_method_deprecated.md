@@ -8,7 +8,7 @@ grand_parent: Tuning
 # Lines Method (DEPRECATED)
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+# This guide has moved! Please visit [the new site](http://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 
 :dizzy: This page is compatible with Klipper *and* Marlin.
@@ -20,7 +20,7 @@ grand_parent: Tuning
 
 ### Steps
 
-**1)** Visit the [:page_facing_up: pressure advance calibration site](https://andrewellis93.github.io/pressure_advance_lines_method_deprecated/pressure_advance.md).
+**1)** Visit the [:page_facing_up: pressure advance calibration site](http://ellis3dp.com/Pressure_Linear_Advance_Tool/lines_method_deprecated/).
 - Thanks to Deuce#8801 for helping with this!
 - If you are using :fish: Marlin, use [:page_facing_up: Marlin's linear advance site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead.
 

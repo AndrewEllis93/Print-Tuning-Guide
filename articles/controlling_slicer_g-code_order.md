@@ -2,10 +2,10 @@
 layout: default
 title: Controlling Temperature G-Code Order
 #nav_order: 4
-parent: Miscellaneous Guides
+parent: Misc. Guides
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://andrewellis93.github.io/Print-Tuning-Guide/).
+# This guide has moved! Please visit [the new site](http://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Controlling Temperature G-Code Order
 ---

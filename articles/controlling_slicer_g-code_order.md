@@ -15,7 +15,7 @@ parent: Miscellaneous
 
 This method is a quick and easy way to move the temperature g-codes before or after your start g-code. See [:pushpin: Example](#example) for what that means.
 
-The method shown in the [:page_facing_up: "Passing Slicer Variables to PRINT_START"](./passing_slicer_variables.html) instructions allows more control than this method, but is more complex.
+The method shown in the [:page_facing_up: "Passing Slicer Variables to PRINT_START"](./passing_slicer_variables.md) instructions allows more control than this method, but is more complex.
 
 
 ## Example

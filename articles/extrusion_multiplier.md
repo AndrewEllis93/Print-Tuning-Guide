@@ -42,7 +42,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up: test_prints fold
 ### Print Settings
 - **Infill:** 30%+ 
 
-- **Top Layer [:page_facing_up: Line Width](./a_note_about_line_width.html):** 100%
+- **Top Layer [:page_facing_up: Line Width](./a_note_about_line_width.md):** 100%
    - **SS/PS:** ctrl+f, search: `top_infill_extrusion_width`
    - **Cura:** "Top/Bottom Line Width" - set to equal your nozzle size.
     - I anecdotally find 100% to create a nice finish and show off EM differences the best.
@@ -167,7 +167,7 @@ A bit too high is better than a bit too low.
 ## Further Tips
 ### **When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
 
-It's fairly normal for [:page_facing_up: smaller infill areas to look a bit overextruded](./troubleshooting/small_infill_areas_overextruded.html) *(though there are a few things that can help a bit in that link- that's another topic)*
+It's fairly normal for [:page_facing_up: smaller infill areas to look a bit overextruded](./troubleshooting/small_infill_areas_overextruded.md) *(though there are a few things that can help a bit in that link- that's another topic)*
 
 In this example, I would look at the circled area. While some of the smaller areas look overextruded, the overall EM is actually pretty good.
 - ![](./images/extrusion_multiplier/em-wheretolook.png) 
@@ -218,5 +218,5 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
         - It uses 100% infill, so the first layer squish carries through all the way to the top. This causes your first layer squish to impact your results.
         - It has ironing turned on by default.
-        - The objects are small. It's normal for [:page_facing_up: small infill areas to look a bit more overextruded than larger infill areas.](./troubleshooting/small_infill_areas_overextruded.html)
+        - The objects are small. It's normal for [:page_facing_up: small infill areas to look a bit more overextruded than larger infill areas.](./troubleshooting/small_infill_areas_overextruded.md)
 

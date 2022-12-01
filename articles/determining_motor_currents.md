@@ -37,8 +37,8 @@ Start with around **40-50%** of rated current.
 
 - For example, with a 2a motor, start around 0.8-1a.
 
-Then you can [:page_facing_up: test your maximum speeds/accels](./determining_max_speeds_accels.html) and make sure your motors are performing well. In most cases, the motors can handle speeds/accels much faster than what you would realistically be printing at, even at moderate currents.
-- If you are having issues reaching reasonable speeds/accels, you may have a mechanical problem. See [:page_facing_up: here](./troubleshooting/layer_shifting.html).
+Then you can [:page_facing_up: test your maximum speeds/accels](./determining_max_speeds_accels.md) and make sure your motors are performing well. In most cases, the motors can handle speeds/accels much faster than what you would realistically be printing at, even at moderate currents.
+- If you are having issues reaching reasonable speeds/accels, you may have a mechanical problem. See [:page_facing_up: here](./troubleshooting/layer_shifting.md).
 
 ## Determining Maximum `run_current`:
 
@@ -49,7 +49,7 @@ Then you can [:page_facing_up: test your maximum speeds/accels](./determining_ma
 
 - Most 1.8° motors already have way more performance than you realistically need. 0.9° motors are more sensitive, however.
 
-- The ideal current is usually somewhere in the middle. Experiment with different motor currents and [:page_facing_up: test how they affect your maximum speeds/accels](./determining_max_speeds_accels.html).
+- The ideal current is usually somewhere in the middle. Experiment with different motor currents and [:page_facing_up: test how they affect your maximum speeds/accels](./determining_max_speeds_accels.md).
 
 ---------------------------------
 

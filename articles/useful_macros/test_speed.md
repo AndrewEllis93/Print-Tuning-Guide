@@ -12,4 +12,4 @@ parent: Useful Macros
 :dizzy: Macros are compatible with **Klipper only**.
 
 ---
-## See [:page_facing_up: Determining Maximum Speeds and Accelerations](./determining_max_speeds_accels.html)
+## See [:page_facing_up: Determining Maximum Speeds and Accelerations](../determining_max_speeds_accels.md)

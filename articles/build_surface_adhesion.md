@@ -50,16 +50,16 @@ parent: Tuning
     - You should probably keep the scouring pad/sponge out of the kitchen afterwards. I'm not sure the health effects of plastic dust ending up on your dishes - better safe than sorry!
 
 ## Troubleshooting
-:bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up: first layer squish](./first_layer_squish.html).**
+:bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up: first layer squish](./first_layer_squish.md).**
 
 This section is just for further troubleshooting if you are still having issues.
 ### All Surfaces
 
 
-- :warning: Ensure that your [:page_facing_up: first layer squish](./first_layer_squish.html) is correct.
+- :warning: Ensure that your [:page_facing_up: first layer squish](./first_layer_squish.md) is correct.
 
 - Use adequately thick line widths (in your slicer) for your first layer.
-    - I use [:page_facing_up: **120%**](./a_note_about_line_width.html) normally, but higher line widths can further increase adhesion. 
+    - I use [:page_facing_up: **120%**](./a_note_about_line_width.md) normally, but higher line widths can further increase adhesion. 
         - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.

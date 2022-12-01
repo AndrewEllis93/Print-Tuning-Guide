@@ -29,7 +29,7 @@ People often start printing by ABS with no cooling. While this is valid advice f
         - For small plates, I may use up to 80% fan.
         - For single small objects, I may use up to 100% fan.
 
-- If your prints are curling away from the bed even at low fan speeds, it may actually be a [:page_facing_up: build surface adhesion](./build_surface_adhesion.html) issue.
+- If your prints are curling away from the bed even at low fan speeds, it may actually be a [:page_facing_up: build surface adhesion](./build_surface_adhesion.md) issue.
 
 - For optimal quality with filaments that shrink, I recommend using constant fan speeds when possible. **Varying fan speeds during a print will cause inconsistent layers and banding.** Otherwise some layers cool and shrink faster than others.
 

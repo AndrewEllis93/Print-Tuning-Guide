@@ -127,7 +127,7 @@ We will be printing these retraction towers at three different temperatures. If 
     - On most hotends *(particularly ones without a free-floating heater block like the v6 & Dragonfly)*, the nozzle should not be "bottomed out" against the heater block. You should see a little bit of a gap/thread. If the nozzle is bottomed out, that means that the heatbreak is not screwed in far enough and is not making adequate contact.
 - You may need to use less z hop (z lift). I run 0.2mm. Much higher than 0.3mm gives me stringing.
 - Your retraction/unretraction speeds may be too fast *(or too slow - but anecdotally I have had better results with slower speeds, around 30mm/s).*
-- Make sure you are not overextruding. Tuning article [:page_facing_up: here](./extrusion_multiplier.html).
+- Make sure you are not overextruding. Tuning article [:page_facing_up: here](./extrusion_multiplier.md).
 - Try extruding and then retracting (with the e motor off) by turning the extruder by hand. There shouldn't be too much of a "dead zone" when reversing directions. This could indicate too much backlash, a loose grub screw, or another extruder issue.
 - Your pressure advance may be too low.
 - Try a new nozzle.

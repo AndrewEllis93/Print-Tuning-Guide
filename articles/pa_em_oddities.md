@@ -31,5 +31,5 @@ There are a few different things you can try:\
         - [:page_facing_up: Bondtech CHT](https://www.bondtech.se/product-category/nozzles/bondtech-nozzles/bondtech-cht/) and [:page_facing_up: Bozzle](https://www.fabreeko.com/products/bozzle-0-5mm-full-tungsten-carbide-nozzle-by-rentable-socks) both provide a sizeable flow rate increase to any hotend that supports V6 nozzles. CHT also has a Volcano variant.
     - These steps can reduce the effect, but may not 100% fix it.
 5. Increase your EM until the gaps disappear. Then, lower your top layer flow (`fill_top_flow_ratio` in SS) until your top surfaces look perfect again.
-6. Follow my [:page_facing_up: "determining maximum volumetric flow rate"](./determining_max_volumetric_flow_rate.html) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
+6. Follow my [:page_facing_up: "determining maximum volumetric flow rate"](./determining_max_volumetric_flow_rate.md) instructions, and choose the "conservative" (always-100mm) value to enter into your slicer (PS/SS).
 7. Slow your perimeters down. The faster you print, the greater this flow dropoff becomes.

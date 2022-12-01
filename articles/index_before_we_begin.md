@@ -11,7 +11,7 @@ has_children: true
 # Before We Begin
 ## :warning: Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
-- Voron V2: I highly recommend following my [:page_facing_up: Voron V2 gantry squaring instructions ](./voron_v2_gantry_squaring.html) first.
+- Voron V2: I highly recommend following my [:page_facing_up: Voron V2 gantry squaring instructions ](./voron_v2_gantry_squaring.md) first.
 - **:warning: Everything is tight (seriously, check again)**
     - Go back again and re-tighten *every single screw* you can possibly find, *especially* grub screws, linear rails, and everything in the toolhead. 
     - I do this once every once in a while, and I often find something that has shaken loose and is causing me issues that are *extremely* difficult to troubleshoot.

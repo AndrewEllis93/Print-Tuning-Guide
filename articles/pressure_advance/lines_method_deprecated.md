@@ -13,14 +13,14 @@ grand_parent: Tuning
 
 :dizzy: This page is compatible with Klipper *and* Marlin.
 
-### :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pressure_advance.html).
+### :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pressure_advance.md).
 
 ### :warning: The contents of this page may be out of date!
 ---
 
 ### Steps
 
-**1)** Visit the [:page_facing_up: pressure advance calibration site](https://andrewellis93.github.io/pressure_advance_lines_method_deprecated/pressure_advance.html).
+**1)** Visit the [:page_facing_up: pressure advance calibration site](https://andrewellis93.github.io/pressure_advance_lines_method_deprecated/pressure_advance.md).
 - Thanks to Deuce#8801 for helping with this!
 - If you are using :fish: Marlin, use [:page_facing_up: Marlin's linear advance site](https://marlinfw.org/tools/lin_advance/k-factor.html) instead.
 

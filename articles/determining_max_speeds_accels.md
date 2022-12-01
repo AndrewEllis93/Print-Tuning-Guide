@@ -25,7 +25,7 @@ It's also just a bit of fun. <sup>haha printer go brrrr</sup>
 
     - For example my 2a 0.9° LDO motors top out around 450mm/s. My 2a 1.8° OMC motors could reach closer to 800-1000mm/s.
 
-- You may be able to get higher performance out of your motors by increasing currents (see [:page_facing_up: here](./determining_motor_currents.html) for more info), but be careful not to push them too high.
+- You may be able to get higher performance out of your motors by increasing currents (see [:page_facing_up: here](./determining_motor_currents.md) for more info), but be careful not to push them too high.
 
 - You may also get higher maximum accelerations by utilizing input shaper, and may want to **re-tune your max accels after tuning input shaper.**
 

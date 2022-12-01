@@ -40,7 +40,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
     - ![image](https://user-images.githubusercontent.com/56029/196033444-4cd875ef-66a7-4b07-bcae-727f2f26da06.png)\
     \* *To exceed 100mm, either click the edit button on the right side, or ctrl+click the bar.*
 
-**3)** Set your first layer [:page_facing_up: line width](./a_note_about_line_width.html) to **120%** or greater.
+**3)** Set your first layer [:page_facing_up: line width](./a_note_about_line_width.md) to **120%** or greater.
 
 **4)** Start the print. While it is printing, [:page_facing_up: live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height).
 

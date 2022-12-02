@@ -1,13 +1,37 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Layer Shifting
+#nav_order: 6
+parent: Troubleshooting
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Layer Shifting
+{: .no_toc }
 
 ---
-# Layer Shifting
 
-![](/images/troubleshooting/layer_shifting/1.png)
+{: .compat}
+:dizzy: This page is compatible with **all printers**, but some notes are specific to Voron printers.
 
-![](/images/troubleshooting/layer_shifting/2.png)
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
+
+![](./images/layer_shifting/1.png)
+
+![](./images/layer_shifting/2.png)
 ## Mechanical
-- Try using z lift (z hop), and [:page_facing_up:check your prints for signs of overheating](/articles/cooling_and_layer_times.md). Print curling can cause nozzle strikes and subsequent layer shifts.
+- Try using z lift (z hop), and [:page_facing_up: check your prints for signs of overheating](../cooling_and_layer_times.md). Print curling can cause nozzle strikes and subsequent layer shifts.
     - Around 0.2-0.3mm of z lift is usually enough. Too much can cause stringing.
 - Ensure that you have good quality motors. 
     - Some off-brand motors (notably Oukeda*) have a history of poor quality. You may have to run lower speeds/accels and sometimes higher currents with off-brand motors.
@@ -19,10 +43,10 @@ The circles represent a printed object shifting in the direction of the arrows.
     - **CoreXY:**
         - When looking at your printer from the front, the B motor is on the left, and A is on the right. \
         <sup><sup>....It goes "BBBAA" like a sheep. Sounds silly, but that's how I remember it.</sup></sup>
-        - ![](/images/troubleshooting/layer_shifting/A.jpg)![](/images/troubleshooting/layer_shifting/B.jpg)
+        - ![](./images/layer_shifting/A.jpg)![](./images/layer_shifting/B.jpg)
 
     - **Cartesian:**
-        - ![](/images/troubleshooting/layer_shifting/X.jpg)![](/images/troubleshooting/layer_shifting/Y.jpg)
+        - ![](./images/layer_shifting/X.jpg)![](./images/layer_shifting/Y.jpg)
 
 - With the motors powered off: 
     - Move the toolhead by hand in each axis. Feel if one axis has more resistance than the other.
@@ -31,7 +55,7 @@ The circles represent a printed object shifting in the direction of the arrows.
 - Make sure your belts are routed correctly.
     - Check for belt dust. This can indicate rubbing or misrouting.
     - A common mistake is to accidentally route the belts around the plastic post in the back of the A/B drives:
-        - ![](/images/troubleshooting/layer_shifting/Misrouted-Belt.png)
+        - ![](./images/layer_shifting/Misrouted-Belt.png)
     - Ensure that the belts are not rubbing/riding up against any of the bearing flanges.
         - It's normal that they may not run perfectly centered. It's usually only an issue if they are rubbing.
 - Loosen the belts, pull the belts over the side of each bearing stack, and ensure that they all spin freely by hand.
@@ -39,9 +63,9 @@ The circles represent a printed object shifting in the direction of the arrows.
 
 ## Electrical
 - ### Motor Currents
-    - Check your motor currents. Ensure that the `run_current` configured for your A/B/X/Y motors are correct. See [:page_facing_up:this article.](/articles/determining_motor_currents.md)
+    - Check your motor currents. Ensure that the `run_current` configured for your A/B/X/Y motors are correct. See [:page_facing_up: this article.](../determining_motor_currents.md)
 - ### Wiring
-    - [:page_facing_up:Check your crimps.](/articles/troubleshooting/crimps.md)
+    - [:page_facing_up: Check your crimps.](../troubleshooting/crimps.md)
     - Ensure that you are using high strand count wire, of 24awg (0.25 mm²) or thicker.
         - Low strand count wires / solid core wire will break in the drag chains with repeated bending. These breaks usually will not be visible, as they occur inside of the insulation.
         - You should always run your own wire through the drag chains. Don't trust the wire that came with anything.
@@ -59,10 +83,7 @@ Sometimes layer shifting can occur because you are simply asking too much of you
     - Input shaper also allows for higher accelerations, not just less ringing.
 - Disable stealthchop.
 - Ensure that you are not running your microstepping too high.
-- Check [:page_facing_up:this article](/articles/determining_max_speeds_accels.md) to test.
+- Check [:page_facing_up: this article](../determining_max_speeds_accels.md) to test.
     - Try running the `TEST_SPEED` macro without any arguments to test your current maximums.
-- You can try increasing motor currents. Don't exceed the maximums described in [:page_facing_up:this article](/articles/determining_motor_currents.md). 
+- You can try increasing motor currents. Don't exceed the maximums described in [:page_facing_up: this article](../determining_motor_currents.md). 
     - Ensure that you have proper stepper driver cooling before doing this.
----
-
-[:arrow_left: Back to Table of Contents](/README.md)

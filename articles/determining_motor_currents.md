@@ -1,8 +1,32 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Determining Motor Currents
+nav_order: 2
+parent: Advanced Tuning
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Determining Motor Currents
+{: .no_toc }
 
 ---
-# Determining Motor Currents
-**:warning:** The below guidance is for **axis motors only**.
+
+{: .compat}
+:dizzy: This page is compatible with **Klipper only**.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
+:warning: The below guidance is for **axis motors only**.
 
 Extruder motors/pancake steppers are a bit different, as there is more variance between models.
 
@@ -27,8 +51,8 @@ Start with around **40-50%** of rated current.
 
 - For example, with a 2a motor, start around 0.8-1a.
 
-Then you can [:page_facing_up:test your maximum speeds/accels](/articles/determining_max_speeds_accels.md) and make sure your motors are performing well. In most cases, the motors can handle speeds/accels much faster than what you would realistically be printing at, even at moderate currents.
-- If you are having issues reaching reasonable speeds/accels, you may have a mechanical problem. See [:page_facing_up:here](/articles/troubleshooting/layer_shifting.md).
+Then you can [:page_facing_up: test your maximum speeds/accels](./determining_max_speeds_accels.md) and make sure your motors are performing well. In most cases, the motors can handle speeds/accels much faster than what you would realistically be printing at, even at moderate currents.
+- If you are having issues reaching reasonable speeds/accels, you may have a mechanical problem. See [:page_facing_up: here](./troubleshooting/layer_shifting.md).
 
 ## Determining Maximum `run_current`:
 
@@ -39,7 +63,7 @@ Then you can [:page_facing_up:test your maximum speeds/accels](/articles/determi
 
 - Most 1.8° motors already have way more performance than you realistically need. 0.9° motors are more sensitive, however.
 
-- The ideal current is usually somewhere in the middle. Experiment with different motor currents and [:page_facing_up:test how they affect your maximum speeds/accels](/articles/determining_max_speeds_accels.md).
+- The ideal current is usually somewhere in the middle. Experiment with different motor currents and [:page_facing_up: test how they affect your maximum speeds/accels](./determining_max_speeds_accels.md).
 
 ---------------------------------
 
@@ -56,9 +80,7 @@ For example, a 2a motor would be about 1.4a max.
     - *You cannot accurately gauge this by feel.* Even lower temperatures will feel "too hot".
     - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
 ## Determining `hold_current`
-Recently, Klipper docs have started to [:page_facing_up:recommend against using a separate `hold_current`.](https://github.com/Klipper3d/klipper/pull/4977) You can achieve this by commenting out `hold_current`, or by setting it to the same value as your `run_current`.
+Recently, Klipper docs have started to [:page_facing_up: recommend against using a separate `hold_current`.](https://github.com/Klipper3d/klipper/pull/4977) You can achieve this by commenting out `hold_current`, or by setting it to the same value as your `run_current`.
 
 If you run a different `hold_current`, a good rule of thumb is about 70% of your `run_current`.
 
----
-[:arrow_left: Back to Table of Contents](/README.md)

@@ -1,7 +1,31 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Passing Slicer Variables to PRINT_START
+#nav_order: 3
+parent: Misc. Guides
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Passing Slicer Variables to PRINT_START
+{: .no_toc }
 
 ---
-# Passing Slicer Variables to PRINT_START
+
+{: .compat}
+:dizzy: This page is compatible with **Klipper only**.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 This section will demonstrate passing temperature variables to PRINT_START.
 
@@ -11,7 +35,7 @@ This section will demonstrate passing temperature variables to PRINT_START.
         - Others can be found in the .ini files. Either export the profile or look in the appdata folders:
             - %APPDATA%\SuperSlicer
             - %APPDATA%\PrusaSlicer
-- SuperSlicer now has support for [:page_facing_up:custom variables](https://github.com/supermerill/SuperSlicer/releases/tag/2.3.57.5).
+- SuperSlicer now has support for [:page_facing_up: custom variables](https://github.com/supermerill/SuperSlicer/releases/tag/2.3.57.5).
 
 
 ## Passing Temperatures
@@ -21,12 +45,13 @@ For example I don’t want my nozzle to heat until the very end so it’s not oo
 
 If you don’t use a chamber thermistor, just remove/comment out the chamber stuff. 
 
-### Example macro:
+### Example Macro
 
 This macro is a **template**. You will have to add things like `G32`,`QUAD_GANTRY_LEVEL`,`BED_MESH_CALIBRATE`, or whatever other routines that you need to run during your `PRINT_START`.
 
 Parameters and variables are both **case sensitive**.
 
+{% raw %}
 ```
 [gcode_macro PRINT_START]
 gcode:        
@@ -45,6 +70,7 @@ gcode:
     G28 Z                                                                        ; final z homing
     G90                                                                          ; absolute positioning
 ```
+{% endraw %}
 
 This would now be run like `PRINT_START BED=110 HOTEND=240 CHAMBER=50`. 
 Chamber defaults to 0 if not specified*.
@@ -71,12 +97,12 @@ These variables are discarded once the macro finishes. You *can* set up persiste
 Don't split any of these lines.
 #### SuperSlicer
 (3 lines)
- ```    
+```
 M104 S0 ; Stops PS/SS from sending temp waits separately
 M140 S0
 PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} CHAMBER=[chamber_temperature]
 ```
-![](/images/passing_slicer_variables/PassingVariables-SS.png) 
+![](./images/passing_slicer_variables/PassingVariables-SS.png) 
 
 #### Prusa Slicer 
 (3 lines)
@@ -88,15 +114,12 @@ M104 S0 ; Stops PS/SS from sending temp waits separately
 M140 S0
 PRINT_START BED=[first_layer_bed_temperature] HOTEND=[first_layer_temperature[initial_extruder]]
 ```
-![](/images/passing_slicer_variables/PassingVariables-PS.png) 
+![](./images/passing_slicer_variables/PassingVariables-PS.png) 
 
 #### Cura
 (1 line)
 ```
 PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temperature_layer_0} CHAMBER={build_volume_temperature}
 ```
-![](/images/passing_slicer_variables/PassingVariables-Cura.png) 
+![](./images/passing_slicer_variables/PassingVariables-Cura.png) 
 
----
-
-[:arrow_left: Back to Table of Contents](/README.md)

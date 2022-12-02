@@ -1,25 +1,50 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Determining Maximum Volumetric Flow Rate
+nav_order: 1
+parent: Advanced Tuning
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Determining Maximum Volumetric Flow Rate
+{: .no_toc }
 
 ---
-# Determining Maximum Volumetric Flow Rate
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 Volumetric flow rate indicates how much plastic that your hotend/extruder can extrude per second.\
 Volumetric flow is expressed in mm<sup>3</sup>/s (cubic millimeters per second).
 ## Why?
 You can use this volumetric flow rate **to determine how fast your hotend/extruder is able to print.**
-- See the [:pushpin:"how flow rate relates to speed"](/articles/determining_max_volumetric_flow_rate.md#how-volumetric-flow-rate-relates-to-print-speed) section to determine what maximum speeds you can print at with a given flow rate.
-    - See the [:pushpin:"approximate values"](/articles/determining_max_volumetric_flow_rate.md#approximate-values) section for approximate values for certain hotends.
+- See the [:pushpin: "how flow rate relates to speed"](#how-volumetric-flow-rate-relates-to-print-speed) section to determine what maximum speeds you can print at with a given flow rate.
+    - See the [:pushpin: "approximate values"](#approximate-values) section for approximate values for certain hotends.
 
 - Some slicers (including Prusa Slicer/SuperSlicer) let you configure this limit to ensure that you never outrun your hotend.
     - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. 
     - You can also set any print speeds to a high "absolute maximum" speed (like infill) and let it be limited by the volumetric flow limit. This essentially prints at the maximum speed your hotend will allow:
-        - This is utilized by my published SuperSlicer profile (see its [:page_facing_up:"Volumetric Speed Limiting"](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles#volumetric-speed-limiting) section for more information.)
-        - ![](/images/determining_max_volumetric_flow_rate/volumetric-ss.png)
-        - :warning:**In Prusa Slicer, this must be set in the filament settings instead.** The setting in the "auto speed" section only applies in specific circumstances in PS.
+        - This is utilized by my published SuperSlicer profile (see its [:page_facing_up: "Volumetric Speed Limiting"](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles#volumetric-speed-limiting) section for more information.)
+        - ![](./images/determining_max_volumetric_flow_rate/volumetric-ss.png)
+        - :warning: **In Prusa Slicer, this must be set in the filament settings instead.** The setting in the "auto speed" section only applies in specific circumstances in PS.
 ## Approximate Values
 
 These approximate values **assume a standard 0.4mm brass nozzle.** 
-| Hotend | Flow Rate (mm<sup>3</sup>/sec) |
+
+| Hotend | Flow Rate (mm3/s) |
 | --- | :---: |
 | E3D V6 | 11 |
 | E3D Revo | 11 |
@@ -39,7 +64,7 @@ Nozzle properties may affect these numbers. For example:
 - Plated copper and tungsten carbide have higher thermal conductivity and might allow a bit higher flow rate. 
 - Bondtech CHT nozzles use a different internal geometry that allows higher flow rates.
 
-To test your own flow rate, see [:pushpin:here](/articles/determining_max_volumetric_flow_rate.md#method).
+To test your own flow rate, see [:pushpin: here](#method).
 
 ## How Volumetric Flow Rate Relates to Print Speed
 
@@ -59,13 +84,13 @@ Working out how quickly you can print at a given volumetric flow rate is quite s
 For example, if you extrude at **5mm/sec**, that comes out to **~12mm<sup>3</sup>/sec.** (5mm * 2.4)
 
 \* <sup>*For 2.85mm filament, use 6.37 instead of 2.4.*</sup>\
-\* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [:page_facing_up:Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>
+\* <sup>*These fomulas are simplified versions of the cylinder volume equation (V=πr<sup>2</sup>h) given r and h or V, rounded to 3 significant figures. This is more than enough accuracy for our purposes (down to the thousandths). [:page_facing_up: Calculator](https://www.calculatorsoup.com/calculators/geometry-solids/cylinder.php)*</sup>
 
 ## Method
 
 ---
 
-:bulb: This is a "quick and dirty" method that will get you a rough idea of your max flow rate. It's quick, easy, and "good enough" in most cases. There are more precise methods, like [:page_facing_up:CNC Kitchen's](https://youtu.be/lBi0-NotcP0) using [:page_facing_up:this site](https://hotend-flow-tester.netlify.app), however his requires a milligram scale.
+:bulb: This is a "quick and dirty" method that will get you a rough idea of your max flow rate. It's quick, easy, and "good enough" in most cases. There are more precise methods, like [:page_facing_up: CNC Kitchen's](https://youtu.be/lBi0-NotcP0) using [:page_facing_up: this site](https://hotend-flow-tester.netlify.app), however his requires a milligram scale.
 
 If you use the CNC Kitchen method, you may need to temporarily increase your  `max_extrude_cross_section` in your `[extruder]` section.
 
@@ -95,10 +120,10 @@ G1 E100 F300 ; Extrude 100mm at 300mm/min (5mm/sec)
 
 **5)** Keep increasing speeds and extruding until it starts dropping below 100mm\*. This is your max flow rate. 
 
-- \* See the [:pushpin:"Flow Dropoff"](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) section and determine your personal dropoff tolerance. I personally try to stay under 2-3% dropoff.
+- \* See the [:pushpin: "Flow Dropoff"](#flow-dropoff) section and determine your personal dropoff tolerance. I personally try to stay under 2-3% dropoff.
 
-**6)** Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin:formulas](/articles/determining_max_volumetric_flow_rate.md#formulas).
-- Example: You reached your personal [:pushpin:flow dropoff](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff) tolerance of 2% at **F600** extrusion speed. 
+**6)** Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin: formulas](#formulas).
+- Example: You reached your personal [:pushpin: flow dropoff](#flow-dropoff) tolerance of 2% at **F600** extrusion speed. 
     - 600mm/min / 60 = 10mm/sec. 
     - 10mm/sec * 2.4 = **Flow rate of 24mm<sup>3</sup>/sec**.
 
@@ -108,20 +133,20 @@ G1 E100 F300 ; Extrude 100mm at 300mm/min (5mm/sec)
 - :warning: **In Prusa Slicer, this *must* be managed in the filament settings.** The setting in the "auto speed" section only applies in specific circumstances in PS.
 - In SuperSlicer, you should set the volumetric limit in your print profile to a lower "default" value. 
     - ABS typically achieves high flow rates. Other materials may cap out at a lower flow rate.
-    - ![](/images/determining_max_volumetric_flow_rate/volumetric-default.png)
+    - ![](./images/determining_max_volumetric_flow_rate/volumetric-default.png)
     - Then, in the filament profiles, put the higher per-filament value.
         - Example ABS profile:\
-        ![](/images/determining_max_volumetric_flow_rate/volumetric-faster.png)
+        ![](./images/determining_max_volumetric_flow_rate/volumetric-faster.png)
         - Example speed ABS profile with elevated temperatures:\
-        ![](/images/determining_max_volumetric_flow_rate/volumetric-fastest.png)
-- Cura [:page_facing_up:has not yet added this feature](https://github.com/Ultimaker/Cura/issues/5248). You will have to manually determine your max print speeds for each line width / layer height using the formulas above. You may need different profiles for different materials/temps (or just use a moderate default).
+        ![](./images/determining_max_volumetric_flow_rate/volumetric-fastest.png)
+- Cura [:page_facing_up: has not yet added this feature](https://github.com/Ultimaker/Cura/issues/5248). You will have to manually determine your max print speeds for each line width / layer height using the formulas above. You may need different profiles for different materials/temps (or just use a moderate default).
     - If you use variable layer heights, you have to limit the entire print to the volumetric speed of your largest layer height.
 ## Flow Dropoff
-Stephan from CNC Kitchen did some flow rate testing. He has a great article and video [:page_facing_up:here](https://www.cnckitchen.com/blog/flow-rate-benchmarking-of-a-hotend).
+Stephan from CNC Kitchen did some flow rate testing. He has a great article and video [:page_facing_up: here](https://www.cnckitchen.com/blog/flow-rate-benchmarking-of-a-hotend).
 
 I don't want to steal his work, so here's an artist's rendition:
 
-![](/images/determining_max_volumetric_flow_rate/flow-dropoff.png) 
+![](./images/determining_max_volumetric_flow_rate/flow-dropoff.png) 
 
 *(you should really just visit the link)*
 
@@ -137,7 +162,5 @@ Many people will actually set a higher volumetric flow rate limit, a bit past th
 
     - **Stopping before skipping starts:** you can use this number and push speeds for things like infill, BUT you will need to be more vigilant about what speeds you are printing other features (such as perimeters) to prevent underextrusion and line gaps.
 
-    - The numbers in the [:pushpin:"approximate values"](/articles/determining_max_volumetric_flow_rate.md#approximate-values) section are **somewhere in the middle** of the two extremes.
+    - The numbers in the [:pushpin: "approximate values"](#approximate-values) section are **somewhere in the middle** of the two extremes.
 
----
-[:arrow_left: Back to Table of Contents](/README.md)

@@ -1,9 +1,8 @@
-[:arrow_left: Back to Table of Contents](/README.md)
-
 ---
-
-This page has moved [:page_facing_up:here](/macros/useful_macros.md).
-
+layout: default
+title: Useful Macros (Old)
+nav_exclude: true
 ---
-
-[:arrow_left: Back to Table of Contents](/README.md)
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}

@@ -1,7 +1,31 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Determining Maximum Speeds and Accelerations
+nav_order: 3
+parent: Advanced Tuning
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Determining Maximum Speeds and Accelerations
+{: .no_toc }
 
 ---
-# Determining Maximum Speeds and Accelerations
+
+{: .compat}
+:dizzy: This page is compatible with **Klipper only**.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 This article is purely about finding your absolute maximum speeds/accels. **This does not necessarily mean that these speeds or accelerations will be practical to print with,** and in fact your max speeds/accels will often be way higher than is reasonable to daily drive (for longevity). 
 
@@ -15,7 +39,7 @@ It's also just a bit of fun. <sup>haha printer go brrrr</sup>
 
     - For example my 2a 0.9° LDO motors top out around 450mm/s. My 2a 1.8° OMC motors could reach closer to 800-1000mm/s.
 
-- You may be able to get higher performance out of your motors by increasing currents (see [:page_facing_up:here](/articles/determining_motor_currents.md) for more info), but be careful not to push them too high.
+- You may be able to get higher performance out of your motors by increasing currents (see [:page_facing_up: here](./determining_motor_currents.md) for more info), but be careful not to push them too high.
 
 - You may also get higher maximum accelerations by utilizing input shaper, and may want to **re-tune your max accels after tuning input shaper.**
 
@@ -33,13 +57,13 @@ There is some interplay between accelerations and speeds.
 ---
 
 
-**1)** Add [:page_facing_up:this macro](/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
-- If your printer is a delta, use [:page_facing_up:this version](/macros/TEST_SPEED_DELTA.cfg) instead.
+**1)** Add [:page_facing_up: this macro](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
+- If your printer is a delta, use [:page_facing_up: this version](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED_DELTA.cfg) instead.
 
 **2)** Fully heat soak your printer if enclosed.
 - Ideally the test should be run at the same chamber temps as your actual printing conditions.
 
-**3)** Run the `TEST_SPEED` macro using the [:pushpin:instructions below](/articles/determining_max_speeds_accels.md#usage-of-the-test_speed-macro) with increasing accelerations [:pushpin:until you experience skipping.](#determining-if-skipping-occured) 
+**3)** Run the `TEST_SPEED` macro using the [:pushpin: instructions below](#usage-of-the-test_speed-macro) with increasing accelerations [:pushpin: until you experience skipping.](#determining-if-skipping-occured) 
 - Start with a small number of iterations.
     - Example: `TEST_SPEED ACCEL=5000 ITERATIONS=2`
 
@@ -57,7 +81,7 @@ There is some interplay between accelerations and speeds.
 
 **6)** Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
 
-**7)** Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up:here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
+**7)** Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up: here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
 
 - This is only a theoretical maximum. I will explain more in the next step.
 
@@ -68,7 +92,7 @@ There is some interplay between accelerations and speeds.
     - The "desired speed" field is mostly arbitrary for our purposes. Enter anything or use the default.
 
     - This **yellow line** shows that we would theoretically max out a bit over **900mm/s** at this acceleration/distance.
-    - ![](/images/determining_max_speeds_accels/TEST_SPEED_Calc.png) 
+    - ![](./images/determining_max_speeds_accels/TEST_SPEED_Calc.png) 
 
     
         - The **blue line** just shows how far a given speed would be maintained (400mm/s in this example - arbitrarily chosen)
@@ -85,14 +109,15 @@ There is some interplay between accelerations and speeds.
 **9)** Save your new maximum speed to `max_velocity` in your config and `RELOAD`.
 ## Usage of the TEST_SPEED Macro
 
-The macro is available [:page_facing_up:here.](/macros/TEST_SPEED.cfg)
+The macro is available [:page_facing_up: here.](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED.cfg)
 
 This macro will home, QGL*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
 - **If your printer uses QGL / has not yet done a QGL. This is important, as a contorted gantry can cause alignment issues and skipping.*
 
-You will [:pushpin:watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
+You will [:pushpin: watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 
-### Available arguments (omitting any will use the default value)
+### Available Arguments 
+(omitting any will use the default value)
 - `SPEED` - Speed in mm/sec. 
     - *Default: your `max_velocity`*
 - `ACCEL` - Acceleration in mm/sec².
@@ -104,7 +129,7 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
 - `SMALLPATTERNSIZE` -  (Normally you do not need to specify/change this) The box size of the small movement pattern to perform at the center (in mm).
     - *Default: 20*
 
-**:warning:** Note that the speeds/accels you input can **override** the `max_velocity` and `max_accel` in your config. 
+:warning: Note that the speeds/accels you input can **override** the `max_velocity` and `max_accel` in your config. 
 
 ### Examples
 
@@ -121,7 +146,7 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
 
 - Inspect the g-code terminal output:
     - Compare the numbers for the X and Y steppers for the first and second homing.
-    - ![](/images/determining_max_speeds_accels/TEST_SPEED_Compare.png) 
+    - ![](./images/determining_max_speeds_accels/TEST_SPEED_Compare.png) 
         - These numbers represent the microstep position of the toolhead at X/Y max position.
 
     - Ensure that the difference between these numbers **has not exceeded a full step.**
@@ -133,5 +158,3 @@ You will [:pushpin:watch, listen, and compare the terminal output from before/af
         - Measuring to a full step just accounts for a bit of endstop inaccuracy. It does not necessarily mean that any microsteps were lost.\
         For **hall effect endstops**, you may need to measure to a few full steps. They can be bit less accurate, and they thermally drift.
 
----
-[:arrow_left: Back to Table of Contents](/README.md)

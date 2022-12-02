@@ -1,13 +1,37 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Cooling and Layer Times
+nav_order: 6
+parent: Tuning
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Cooling and Layer Times
+{: .no_toc }
 
 ---
-# Cooling and Layer Times
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 ## Signs of Overheating
-![](/images/cooling_and_layer_times/Overheating-1.png) ![](/images/cooling_and_layer_times/Overheating-4.png) 
-![](/images/cooling_and_layer_times/Overheating-2.png) 
-![](/images/cooling_and_layer_times/Overheating-3.png) 
-![](/images/cooling_and_layer_times/Overheating-5.png) 
-![](/images/cooling_and_layer_times/Overheating-6.jpg) 
+![](./images/cooling_and_layer_times/Overheating-1.png) ![](./images/cooling_and_layer_times/Overheating-4.png) 
+![](./images/cooling_and_layer_times/Overheating-2.png) 
+![](./images/cooling_and_layer_times/Overheating-3.png) 
+![](./images/cooling_and_layer_times/Overheating-5.png) 
+![](./images/cooling_and_layer_times/Overheating-6.jpg) 
 ## How to Fix It
 ### Increase Fan Speeds
 People often start printing by ABS with no cooling. While this is valid advice for unenclosed printers, it's not a universal rule. **ABS often needs some cooling, especially in an enclosure.**
@@ -19,7 +43,7 @@ People often start printing by ABS with no cooling. While this is valid advice f
         - For small plates, I may use up to 80% fan.
         - For single small objects, I may use up to 100% fan.
 
-- If your prints are curling away from the bed even at low fan speeds, it may actually be a [:page_facing_up:build surface adhesion](/articles/build_surface_adhesion.md) issue.
+- If your prints are curling away from the bed even at low fan speeds, it may actually be a [:page_facing_up: build surface adhesion](./build_surface_adhesion.md) issue.
 
 - For optimal quality with filaments that shrink, I recommend using constant fan speeds when possible. **Varying fan speeds during a print will cause inconsistent layers and banding.** Otherwise some layers cool and shrink faster than others.
 
@@ -42,12 +66,10 @@ People often start printing by ABS with no cooling. While this is valid advice f
 
 ### Give Objects Some Break Time Between Layers
 - You can achieve this by printing more objects at once, and spreading them out.
-    - ![](/images/cooling_and_layer_times/Cooling-Spread.png) 
+    - ![](./images/cooling_and_layer_times/Cooling-Spread.png) 
 
     - This allows each object some "break time" between layers. Otherwise you are pumping more and more heat into the object before the previous layer has had a chance to fully solidify.
 
 
     - You can also lower travel speeds or even print sacrificial objects to buy more time.
 
----
-[:arrow_left: Back to Table of Contents](/README.md)

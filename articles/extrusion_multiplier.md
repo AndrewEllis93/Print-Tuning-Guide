@@ -1,36 +1,60 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Extrusion Multiplier
+nav_order: 4
+parent: Tuning
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Extrusion Multiplier
+{: .no_toc }
 
 ---
-# Extrusion Multiplier
 
-**:warning: You should [:page_facing_up:calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
+{: .compat}
+:dizzy: This page is compatible with all printers.
 
-- Calibrating your extruder simply ensures that 100mm requested = 100mm extruded. 
-- Extrusion *multiplier* is a per-filament setting, depending on their material properties & tolerances.
+{: .prereqs}
+>-You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+>   - Calibrating your extruder simply ensures that 100mm requested = 100mm extruded. 
+>   - Extrusion *multiplier* is a per-filament setting, depending on their material properties & tolerances.
+>
+>- You should [:page_facing_up: tune pressure advance](./pressure_linear_advance/introduction.md) first.**
 
-**:warning: You should [:page_facing_up:tune pressure advance](/articles/pressure_advance.md) first.**
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 ## Background
 
-Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin:tuned print examples](/articles/extrusion_multiplier.md#tuned-print-examples) below.
+Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin: tuned print examples](#tuned-print-examples) below.
 
 EM tuning must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is.
 
 Some Slicers seem to need slightly higher or lower EM than others.
 
-This method uses an aesthetics-first approach. For conerns about dimensional accuracy, see the [:pushpin:Rationale & Dimensional Accuracy](/articles/extrusion_multiplier.md#rationale--dimensional-accuracy) section.
+This method uses an aesthetics-first approach. For conerns about dimensional accuracy, see the [:pushpin: Rationale & Dimensional Accuracy](#rationale--dimensional-accuracy) section.
 
 I have found that most ABS falls within the 91-95% range, though I have some outliers.
 
 ## Method
 The best method I have found is purely visual/tactile.
 
-We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folder](/test_prints))*
+We will print some 30x30x3mm cubes. *(see the [:page_facing_up: test_prints folder](https://github.com/AndrewEllis93/Print-Tuning-Guide/tree/main/test_prints))*
 
 ### Print Settings
 - **Infill:** 30%+ 
 
-- **Top Layer [:page_facing_up:Line Width](/articles/a_note_about_line_width.md):** 100%
+- **Top Layer [:page_facing_up: Line Width](./a_note_about_line_width.md):** 100%
    - **SS/PS:** ctrl+f, search: `top_infill_extrusion_width`
    - **Cura:** "Top/Bottom Line Width" - set to equal your nozzle size.
     - I anecdotally find 100% to create a nice finish and show off EM differences the best.
@@ -50,7 +74,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 
 - **Solid Infill Speed:** Your profile's normal value
     - **Cura:** "Top/Bottom Speed"
-    - It's best to tune for your actual speeds, as [:page_facing_up:flow can drop off the faster you print](/articles/determining_max_volumetric_flow_rate.md#flow-dropoff). ("Flow Dropoff" section)
+    - It's best to tune for your actual speeds, as [:page_facing_up: flow can drop off the faster you print](./determining_max_volumetric_flow_rate.md#flow-dropoff). ("Flow Dropoff" section)
 
 - **Top Solid Infill Speed:** Low/Moderate. 60mm/s is what I use.
     - **Cura:** "Top Surface Skin Speed"
@@ -74,36 +98,36 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up:test_prints folde
 - **SuperSlicer:**
     1) **:warning: Set your EM to 1 in the filament settings.** \
     The per-object EM settings are **multiplied by** this value.\
-    ![](/images/extrusion_multiplier/EM-1.png)
+    ![](./images/extrusion_multiplier/EM-1.png)
 
     2) Import the cube STL. Right-click it and select add settings > filament.\
-    ![](/images/extrusion_multiplier/EM-PerObject.png)
+    ![](./images/extrusion_multiplier/EM-PerObject.png)
 
     3) Check "extrusion multiplier".\
-    ![](/images/extrusion_multiplier/EM-PerObject-2.png)
+    ![](./images/extrusion_multiplier/EM-PerObject-2.png)
     
     6) Set your EM for each test cube.\
-    ![](/images/extrusion_multiplier/EM-PerObject-3.png)
+    ![](./images/extrusion_multiplier/EM-PerObject-3.png)
 
     7) Save the project for reuse later.\
-    ![](/images/extrusion_multiplier/EM-Save.png)
+    ![](./images/extrusion_multiplier/EM-Save.png)
     
 - **Cura:**
 
     1) Select each cube and enable the "flow" setting.\
-    ![](/images/extrusion_multiplier/EM-PerObject-Cura.png)
+    ![](./images/extrusion_multiplier/EM-PerObject-Cura.png)
 
     3) Set the EM on each.\
-    ![](/images/extrusion_multiplier/EM-SetFlow-Cura.png)
+    ![](./images/extrusion_multiplier/EM-SetFlow-Cura.png)
 
     4) Save the project for reuse later.\
-    ![](/images/extrusion_multiplier/EM-Save-Cura.png)
+    ![](./images/extrusion_multiplier/EM-Save-Cura.png)
 
 **2)** Print it!
 
 **3)** Inspect each cube. 
 - Near the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps or valleys between the extrusion lines.
-- See [:pushpin:examples](/articles/extrusion_multiplier.md#examples) below.
+- See [:pushpin: examples](#examples) below.
 
 **4)** If desired, run the process again but with 0.5% intervals.
 - **If you can't decide, pick the higher EM.**
@@ -115,17 +139,20 @@ Focus on **:exclamation:the center:exclamation:** of the test prints. It's norma
 
 You will get better at this through experience.
 ### 2% Intervals
+{: .no_toc }
 
 Here you'll narrow down a general range to work in.
 
-![](/images/extrusion_multiplier/EMPrints-Coarse-Annotated.png) 
+![](./images/extrusion_multiplier/EMPrints-Coarse-Annotated.png) 
 
 The center cube is looking pretty close.
 
 ### 0.5% Intervals
+{: .no_toc }
+
 Now you can fine-tune in 0.5% intervals.
 
-![](/images/extrusion_multiplier/EMPrints-Fine.png) 
+![](./images/extrusion_multiplier/EMPrints-Fine.png) 
 
 In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this.
 
@@ -133,41 +160,43 @@ In this example, I chose the second cube, as this particular filament started to
 For clarity, you are **not** tuning so the lines are "just touching".\
 Your infill lines should overlap a bit, and **fill the print in as much as possible without going over**.
 
-![](/images/extrusion_multiplier/overlap.png)
+![](./images/extrusion_multiplier/overlap.png)
 
 <sup>Source: https://help.prusa3d.com/article/layers-and-perimeters_1748</sup>
 
 Some find magnification to help, but I don't personally find it necessary. 
 
 ### Too Low
+{: .no_toc }
 
 Holding it up with the infill lines pointing towards a light source can help. This cube's EM is too low - you can see between the lines.
 
-![](/images/extrusion_multiplier/em-light.png) 
+![](./images/extrusion_multiplier/em-light.png) 
 ### Slightly Too Low
+{: .no_toc }
 
 These cubes need a little more EM - you can see slight gapping / valleys / shadows between the lines. 
 
 A bit too high is better than a bit too low.
 
-![](/images/extrusion_multiplier/EMPrints-SlightlyLow.png)
+![](./images/extrusion_multiplier/EMPrints-SlightlyLow.png)
 
 ## Further Tips
-### **When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
+**When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
 
-It's fairly normal for [:page_facing_up:smaller infill areas to look a bit overextruded](/articles/troubleshooting/small_infill_areas_overextruded.md) *(though there are a few things that can help a bit in that link- that's another topic)*
+It's fairly normal for [:page_facing_up: smaller infill areas to look a bit overextruded](./troubleshooting/small_infill_areas_overextruded.md) *(though there are a few things that can help a bit in that link- that's another topic)*
 
 In this example, I would look at the circled area. While some of the smaller areas look overextruded, the overall EM is actually pretty good.
-- ![](/images/extrusion_multiplier/em-wheretolook.png) 
+- ![](./images/extrusion_multiplier/em-wheretolook.png) 
 
-## More Examples
+## Tuned Print Examples
 (ABS)
-- ![](/images/extrusion_multiplier/zoom.png) 
-- ![](/images/extrusion_multiplier/EMPrint-Example4.png) 
+- ![](./images/extrusion_multiplier/zoom.png) 
+- ![](./images/extrusion_multiplier/EMPrint-Example4.png) 
 
 (eSun ABS+ - more matte)
-- ![](/images/extrusion_multiplier/EMPrint-Example2.jpg) 
-- ![](/images/extrusion_multiplier/EMPrint-Example3.jpg) 
+- ![](./images/extrusion_multiplier/EMPrint-Example2.jpg) 
+- ![](./images/extrusion_multiplier/EMPrint-Example3.jpg) 
 
 ---
 
@@ -180,7 +209,7 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
 ### Voron Parts
 - Voron parts are designed with ABS shrinkage in mind. **You do not need any compensation apart from a good EM tune.**
 
-### **If You Need True-to-CAD Dimensional Accuracy for Other Projects**
+### If You Need True-to-CAD Dimensional Accuracy for Other Projects
 - Firstly, *adjust your expectations*. 
     - Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
 - After tuning EM:
@@ -191,23 +220,20 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
         - Print any suitable test object and measure it. Ensure that you are measuring flat edges - not corner bulging or seams. Determine how much shrinkage compensation you need.
     - **Don't mess with your `steps_per_mm`/`rotation_distance`**. Deviations are almost always from material shrinkage, bulging, layer inconsistencies, etc, NOT issues with your axes. Tinkering with these values will usually only add another variable.
 
-### **Methods I'm Not a Fan Of**
-- #### **Measuring Wall Thickness With Calipers**
+### Methods I'm Not a Fan Of
+- **Measuring Wall Thickness With Calipers**
     - Some guides mention printing a single or two-walled object and measuring the thickness with calipers.
         - I simply never have good results with this approach, and different people seem to get (sometimes wildly) different results.
         - The measured widths can vary depending where you measure it and how much pressure you use.
         - Any layer wobble or inconsistent extrusion (which all printers have in varying degrees) causes these walls to measure thicker.
-            - ![](/images/extrusion_multiplier/z-wobble.png)\
+            - ![](./images/extrusion_multiplier/z-wobble.png)\
             <sup>Source: https://manual.slic3r.org/troubleshooting/dimension-errors</sup>
         - This method requires half-decent calipers, which many people just don't have. This limits the accessibility.
 
 
-- #### **SuperSlicer Calibration**
+- **SuperSlicer Calibration**
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
         - It uses 100% infill, so the first layer squish carries through all the way to the top. This causes your first layer squish to impact your results.
         - It has ironing turned on by default.
-        - The objects are small. It's normal for [:page_facing_up:small infill areas to look a bit more overextruded than larger infill areas.](/articles/troubleshooting/small_infill_areas_overextruded.md)
+        - The objects are small. It's normal for [:page_facing_up: small infill areas to look a bit more overextruded than larger infill areas.](./troubleshooting/small_infill_areas_overextruded.md)
 
----
-
-[:arrow_left: Back to Table of Contents](/README.md)

@@ -1,0 +1,78 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/articles/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+layout: default
+title: Ellis' Print Tuning Guide
+description: >- # this means to ignore newlines until "baseurl:"
+  Ellis' Print Tuning Guide
+email: AndrewEllis93@gmail.com
+github_username:  AndrewEllis93
+github: [metadata]
+domain: ellis3dp.com       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
+url: https://ellis3dp.com  # the base hostname and protocol for your site, e.g. http://example.com
+baseurl: /Print-Tuning-Guide/         # place folder name if the site is served in a subfolder
+
+# Build settings
+remote_theme: pmarsceill/just-the-docs
+#color_scheme: dark
+color_scheme: ellis-dark
+
+plugins:
+  - jekyll-feed
+  - jemoji
+
+callouts_level: loud
+callouts:
+  prereqs:
+    title: Prerequisites
+    color: yellow
+  compat:
+    title: Compatibility
+    color: pink
+  warning:
+    title: Warning
+    color: red
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+aux_links:
+  "Issues, Feedback, & Contributions":
+    - "https://github.com/AndrewEllis93/Print-Tuning-Guide/issues"
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

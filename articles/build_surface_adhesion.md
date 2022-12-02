@@ -1,10 +1,34 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Build Surface Adhesion
+nav_order: 1
+parent: Tuning
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Build Surface Adhesion
+{: .no_toc }
 
 ---
-# Build Surface Adhesion
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 
 ## Build Surface Preparation / Handling
-- **:warning:** Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a paper towel or paper shop towel.
+- :warning: Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a paper towel or paper shop towel.
 
 - **:warning: Thoroughly wash all build plates with dish soap and water** (and make sure to rinse thoroughly too).
     - You should do this **even for brand new surfaces.**
@@ -27,7 +51,7 @@
 
 ### Smooth PEI
 
-- **Consider scuffing it up** with a [:page_facing_up:kitchen scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
+- **Consider scuffing it up** with a [:page_facing_up: kitchen scouring pad](https://www.scotch-brite.com/3M/en_US/scotch-brite/tools/~/Scotch-Brite-Heavy-Duty-Scour-Pad/?N=4337+3294529207+3294631680&rt=rud).
 
     - **This helps immensely**, much like how you would scuff/sand a surface before painting or gluing something to it.
 
@@ -40,16 +64,16 @@
     - You should probably keep the scouring pad/sponge out of the kitchen afterwards. I'm not sure the health effects of plastic dust ending up on your dishes - better safe than sorry!
 
 ## Troubleshooting
-:bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up:first layer squish](/articles/first_layer_squish.md).**
+:bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up: first layer squish](./first_layer_squish.md).**
 
 This section is just for further troubleshooting if you are still having issues.
 ### All Surfaces
 
 
-- **:warning:** Ensure that your [:page_facing_up:first layer squish](/articles/first_layer_squish.md) is correct.
+- :warning: Ensure that your [:page_facing_up: first layer squish](./first_layer_squish.md) is correct.
 
 - Use adequately thick line widths (in your slicer) for your first layer.
-    - I use [:page_facing_up:**120%**](/articles/a_note_about_line_width.md) normally, but higher line widths can further increase adhesion. 
+    - I use [:page_facing_up: **120%**](./a_note_about_line_width.md) normally, but higher line widths can further increase adhesion. 
         - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.
@@ -58,7 +82,7 @@ This section is just for further troubleshooting if you are still having issues.
 
 - Ensure that your build surface is actually meant for printing. Some plates *appear* to be two-sided (yellow/orange coloring for aesthetics) but are actually only one-sided.
 
-- Instead of PEI (or to supplement your PEI), you can use adhesives like [:page_facing_up:Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT), [:page_facing_up:Magigoo](https://www.amazon.com/Magigoo-Pen-All-One-Adhesive/dp/B01N2JGTWJ), or a [:page_facing_up:DIY alternative](https://discord.com/channels/460117602945990666/461133450636951552/975445247637217362).
+- Instead of PEI (or to supplement your PEI), you can use adhesives like [:page_facing_up: Vision Miner Nano Polymer](https://smile.amazon.com/dp/B09JQWFVY3/ref=twister_B09JRGDWFT), [:page_facing_up: Magigoo](https://www.amazon.com/Magigoo-Pen-All-One-Adhesive/dp/B01N2JGTWJ), or a [:page_facing_up: DIY alternative](https://discord.com/channels/460117602945990666/461133450636951552/975445247637217362).
     - (Not sponsored) Vision Miner Nano Polymer, while a bit expensive, is excellent.
     
         - There is a $19 50ml bottle on Amazon but it's not always in stock. 50ml goes a long way, especially if you dilute it.
@@ -77,10 +101,7 @@ This section is just for further troubleshooting if you are still having issues.
 As a **very last resort**, you can try refreshing the surface with acetone. 
 
 Keep in mind, however, that:
- - :warning:This weakens PEI over time.
- - :warning:It can **destroy** certain surfaces (mainly certain brands of textured sheets). 
+ - :warning: This weakens PEI over time.
+ - :warning: It can **destroy** certain surfaces (mainly certain brands of textured sheets). 
  
  **Only try this if it's going in the trash otherwise.**
-
----
- [:arrow_left: Back to Table of Contents](/README.md)

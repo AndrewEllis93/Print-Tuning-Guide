@@ -1,18 +1,42 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: VFAs (Vertical Fine Artifacts)
+#nav_order: 10
+parent: Troubleshooting
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# VFAs (Vertical Fine Artifacts)
+{: .no_toc }
 
 ---
-# VFAs (Vertical Fine Artifacts)
+
+{: .compat}
+:dizzy: This page is tailored for **Voron** printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 ## Repeating VFAs With ~2mm Spacing
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 
-Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [:page_facing_up:here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
-If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up:this article](/articles/troubleshooting/extrusion_patterns.md) instead.
+Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [:page_facing_up: here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
+If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up: this article](../troubleshooting/extrusion_patterns.md) instead.
 
 Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
 
-![](/images/troubleshooting/vfas/ToothMarks.png)
+![](./images/vfas/ToothMarks.png)
 
-- Your belts may be too tight. [:page_facing_up:Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
+- Your belts may be too tight. [:page_facing_up: Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
     - Don't miss the video link in page linked above. 
     - Apps:
         - Android: Gates Carbon Drive (select "motorcyle" option) or Spectroid.
@@ -20,8 +44,8 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low.
-    - For V2, follow my [:page_facing_up:V2 gantry squaring](/articles/voron_v2_gantry_squaring.md) instructions. A poorly squared gantry can be the root cause of a lot of alignment issues.
-    - On all CoreXY printers: [:page_facing_up:de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
+    - For V2, follow my [:page_facing_up: V2 gantry squaring](../voron_v2_gantry_squaring.md) instructions. A poorly squared gantry can be the root cause of a lot of alignment issues.
+    - On all CoreXY printers: [:page_facing_up: de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
         - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
 - You may have poor quality belts. **Only use genuine Gates brand belts.**
@@ -35,11 +59,11 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
 ## Repeating VFAs With Non-2mm Spacing
 
-Try printing the test objects [:page_facing_up:here](https://mihaidesigns.com/pages/inconsistent-extrusion-test).
+Try printing the test objects [:page_facing_up: here](https://mihaidesigns.com/pages/inconsistent-extrusion-test).
 
 Ensure that the artifacts are *always vertical or diagonal, regardless of part geometry*. These patterns can be subtle (lumps) or sharp (lines).
 
-If the pattern looks like "wood grain", or any of the example photos in that link, see [:page_facing_up:this article](/articles/troubleshooting/extrusion_patterns.md) instead.
+If the pattern looks like "wood grain", or any of the example photos in that link, see [:page_facing_up: this article](../troubleshooting/extrusion_patterns.md) instead.
 
 - **Ensure that your A/B pulleys and XY joint idlers are all clean.** Debris can accumulate and compress between the teeth.
 - You may have a bad/poor quality pulley or toothed idler.
@@ -82,7 +106,9 @@ Inspect the object to see which axes the artifacts appear most prominent in.
 - Artifacts are most prominent in in X/Y, but not A/B:
     - **A *and* B** motors
         - Certain motor models have been found to cause this when both are operating at the same time (i.e. X/Y moves)
-        - The following motor settings are [:page_facing_up:passed around on the Voron Discord](https://discord.com/channels/460117602945990666/696930677161197640/925934388703793192), and apparently can help in some cases (particularly with certain LDO motors on Voron V0). It may also help in other cases, worth a try.
+        - The following motor settings are passed around on the Voron Discord, and apparently can help in some cases (particularly with certain LDO motors on Voron V0). It may also help in other cases, worth a try.
+
+{% raw %}
 ```
 # Set the below settings for both X AND Y motors, **in addition** to your current settings.
 
@@ -101,7 +127,5 @@ driver_PWM_GRAD: 8
 driver_PWM_FREQ: 1
 driver_PWM_REG: 4
 ```
+{% endraw %}
 
----
-
-[:arrow_left: Back to Table of Contents](/README.md)

@@ -1,8 +1,20 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Pockmarks
+#nav_order: 9
+parent: Troubleshooting
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Pockmarks
+---
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
 
 ---
-# Pockmarks
-![](/images/troubleshooting/pockmarks/Pockmarks.png)
+![](./images/pockmarks/Pockmarks.png)
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.
@@ -10,6 +22,3 @@
     - **Just because your filament was new/sealed, doesn't mean it's not wet.** I've had plenty of filaments come soaking wet even though they were sealed.
 - Try a new nozzle.
 
----
-
-[:arrow_left: Back to Table of Contents](/README.md)

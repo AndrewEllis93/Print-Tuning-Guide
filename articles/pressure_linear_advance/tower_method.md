@@ -1,21 +1,38 @@
-[:arrow_left: Back to Table of Contents](/README.md)
-
 ---
-# Pressure Advance Tower Method
-
+layout: default
+title: Tower Method
+nav_order: 3
+parent: Pressure Advance / Linear Advance
+grand_parent: Tuning
 ---
-
-**I would highly recommend using the [:page_facing_up:pattern method](/articles/pressure_advance.md#pattern-method) rather than this method, if you can take some time to wrap your head around a small amount of g-code.** It is quicker and more precise. This "tower method" is here for beginners, and works, but is not my preferred method as it's a bit less precise.
-
-This is based off of the [:page_facing_up:Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications. 
-
-The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. The intent behind these changes is to exaggerate the effects of pressure advance as much as possible. I'm not a fan of this approach.
-
-In my opinion, it is best to run the calibration in close to normal printing conditions. This can make it slightly harder to tell the difference, but I find it more accurate.
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+# Tower Method
 
 ---
 
-**1)** Download and slice the [:page_facing_up:Klipper3d pressure advance tower STL](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
+{: .compat}
+:dizzy: This page is compatible with **Klipper only**.
+
+---
+
+:warning: **I would generally recommend using the [:page_facing_up: pattern method](./pattern_method.md) rather than this method, if you can take some time to wrap your head around it.** It is quicker and more precise. 
+
+This "tower method" is here for beginners.
+
+This is based off of the [:page_facing_up: Klipper Pressure Advance guide](https://www.klipper3d.org/Pressure_Advance.html#tuning-pressure-advance), but with some modifications:
+
+- The Klipper guide recommends limiting acceleration to 500 and square corner velocity (SCV) to 1, among other things. The intent behind these changes is to exaggerate bulging as much as possible. I find that this causes **unrealistic** bulging, causing you to set your PA too high to compensate.
+
+    - In my opinion, it is best to run the calibration in close to normal printing conditions!
+
+---
+
+
+## Steps
+
+**1)** Download and slice the [:page_facing_up: Klipper3d pressure advance tower STL](https://www.klipper3d.org/prints/square_tower.stl) with *your normal print settings (accelerations included)*. \
 The only modifications you should make are these:
 
 - **120mm/s** external perimeter speed
@@ -42,7 +59,7 @@ You should now see increasing pressure advance values reporting to the g-code te
 
 **4)** Allow the print to run until it starts showing obvious issues/gaps. Then you may cancel.
 
-**5)** Measure the height of the perfect PA with calipers (see [:pushpin:images below](/articles/pressure_advance.md#example))
+**5)** Measure the height of the perfect PA with calipers (see [:pushpin: images below](#example))
 - Ensure you are **not** measuring your Z seam corner.
 - There should be no signs of underextrusion before or after the corner. 
     - It can help to shine a bright flashlight between the walls.
@@ -59,7 +76,7 @@ You should now see increasing pressure advance values reporting to the g-code te
     - \* *Unless you use Cura, which for some reason **still** doesn't support this basic functionality.*
 
 **9)** Try printing something! 
-- See [:pushpin:Fine-Tuning and What to Look For](/articles/pressure_advance.md#fine-tuning-and-what-to-look-for) to get an idea of what too high/low look like with actual prints.
+- See [:page_facing_up: Signs of Issues](./introduction.md#signs-of-issues) to get an idea of what too high/low look like with actual prints.
 - Tweaking in increments of 0.005 (with direct drive) is a good starting point.
 
 ### Example
@@ -67,8 +84,5 @@ You should now see increasing pressure advance values reporting to the g-code te
 
 Excuse the gigantic photos - high resolution is needed here.
 
-![](/images/pressure_advance_tower_method/PA-Tower.png) 
-![](/images/pressure_advance_tower_method/PA-Tower-Annotated.png) 
----
-
-[:arrow_left: Back to Table of Contents](/README.md)
+![](./images/tower_method/PA-Tower.png) 
+![](./images/tower_method/PA-Tower-Annotated.png) 

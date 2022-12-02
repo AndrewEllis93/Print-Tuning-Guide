@@ -1,17 +1,38 @@
-[:arrow_left: Back to Table of Contents](/README.md)
+---
+layout: default
+title: Setting Expectations
+parent: Before We Begin
+nav_order: 2
+---
+{% comment %} 
+# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+{% endcomment %}
+
+# Setting Expectations
+{: .no_toc }
 
 ---
-# Setting Expectations
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 ## Layer Consistency
 
 This is what your prints can look like!
 
-- ![](/images/setting_expectations/Setting_Expectations_DirectLight.jpg) 
+- ![](./images/setting_expectations/Setting_Expectations_DirectLight.jpg) 
 
 
 Or, wait....
 
-- ![](/images/setting_expectations/Setting_Expectations_HarshLight.jpg) 
+- ![](./images/setting_expectations/Setting_Expectations_HarshLight.jpg) 
 
 Ellis' prints look like shit? <sup> (this is directly under a bright LED lamp at a low angle) </sup>
 
@@ -35,7 +56,7 @@ These imperfections all combine with each other and create minor inconsistencies
 
 Apart from building your printer well, the single best thing you can do for this issue is simply have *fewer components*. In fact, a simple i3-style printer can achieve slightly better print quality than a CoreXY printer in this regard.
 
-The second best thing you can do is to buy higher quality filaments. Low quality filaments can have fluctuating diameters, [:page_facing_up:which can exacerbate these issues.](https://github.com/Deutherius/Filament-Width-Comp-Experiments/blob/main/README.md#some-updates)
+The second best thing you can do is to buy higher quality filaments. Low quality filaments can have fluctuating diameters, [:page_facing_up: which can exacerbate these issues.](https://github.com/Deutherius/Filament-Width-Comp-Experiments/blob/main/README.md#some-updates)
 
 The third best thing you can do is to buy higher quality printer components.
 
@@ -46,13 +67,10 @@ Think of it like the below (arbitrary) graph.
 
 Tuning efforts at the beginning (this tuning guide!) will have a much higher relative quality increase, but you get diminishing returns the closer you get to perfection. 3D printing just has an unfortunate side effect of showing off those imperfections.
 
-![](/images/setting_expectations/AnalogyGraph.png) 
+![](./images/setting_expectations/AnalogyGraph.png) 
 
 My guide should (hopefully) get you somewhere around the 5 or 10.
 
 
 Now that we've got all that out of the way, on to the tuning!
 
----
-
-[:arrow_left: Back to Table of Contents](/README.md)

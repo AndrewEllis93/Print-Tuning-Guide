@@ -103,7 +103,7 @@ There are three approaches:
 - The [:page_facing_up: tower method](./tower_method.md) (easier to set up for newcomers, but can be harder to read the results & less precise)
 - The deprecated [:page_facing_up: "lines method"](./lines_method_deprecated.md).
     - No longer recommended!
-    - I created the below method specifically to address issues with the old Marlin tool!
+    - I created the [:page_facing_up: pattern method](./pattern_method.md) specifically to address issues with the old Marlin tool!
 
 
 ## Signs of Issues

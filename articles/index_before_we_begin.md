@@ -9,7 +9,7 @@ has_children: true
 {% endcomment %}
 
 # Before We Begin
-## :warning: Important Checks
+## Important Checks
 Before you follow *any* tuning methods in this guide, ensure that:
 - Voron V2: I highly recommend following my [:page_facing_up: Voron V2 gantry squaring instructions ](./voron_v2_gantry_squaring.md) first.
 - **:warning: Everything is tight (seriously, check again)**

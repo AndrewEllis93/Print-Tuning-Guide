@@ -12,7 +12,10 @@ grand_parent: Tuning
 
 ---
 
+{: .compat}
 :dizzy: This page is compatible with **Klipper only**.
+
+---
 
 :warning: **I would generally recommend using the [:page_facing_up: pattern method](./pattern_method.md) rather than this method, if you can take some time to wrap your head around it.** It is quicker and more precise. 
 
@@ -25,6 +28,7 @@ This is based off of the [:page_facing_up: Klipper Pressure Advance guide](https
     - In my opinion, it is best to run the calibration in close to normal printing conditions!
 
 ---
+
 
 ## Steps
 

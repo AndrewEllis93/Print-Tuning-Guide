@@ -8,23 +8,35 @@ parent: Tuning
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Extrusion Multiplier
+{: .no_toc }
 
 ---
 
-:dizzy: This page is compatible with **all printers.**
+{: .compat}
+:dizzy: This page is compatible with all printers.
 
-**:warning: You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
+{: .prereqs}
+>-You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+>   - Calibrating your extruder simply ensures that 100mm requested = 100mm extruded. 
+>   - Extrusion *multiplier* is a per-filament setting, depending on their material properties & tolerances.
+>
+>- You should [:page_facing_up: tune pressure advance](./pressure_linear_advance/introduction.md) first.**
 
-- Calibrating your extruder simply ensures that 100mm requested = 100mm extruded. 
-- Extrusion *multiplier* is a per-filament setting, depending on their material properties & tolerances.
-
-**:warning: You should [:page_facing_up: tune pressure advance](./pressure_advance/introduction.md) first.**
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
 ## Background
 
-Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin: tuned print examples](#more-examples) below.
+Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin: tuned print examples](#tuned-print-examples) below.
 
 EM tuning must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is.
 
@@ -127,6 +139,7 @@ Focus on **:exclamation:the center:exclamation:** of the test prints. It's norma
 
 You will get better at this through experience.
 ### 2% Intervals
+{: .no_toc }
 
 Here you'll narrow down a general range to work in.
 
@@ -135,6 +148,8 @@ Here you'll narrow down a general range to work in.
 The center cube is looking pretty close.
 
 ### 0.5% Intervals
+{: .no_toc }
+
 Now you can fine-tune in 0.5% intervals.
 
 ![](./images/extrusion_multiplier/EMPrints-Fine.png) 
@@ -152,11 +167,13 @@ Your infill lines should overlap a bit, and **fill the print in as much as possi
 Some find magnification to help, but I don't personally find it necessary. 
 
 ### Too Low
+{: .no_toc }
 
 Holding it up with the infill lines pointing towards a light source can help. This cube's EM is too low - you can see between the lines.
 
 ![](./images/extrusion_multiplier/em-light.png) 
 ### Slightly Too Low
+{: .no_toc }
 
 These cubes need a little more EM - you can see slight gapping / valleys / shadows between the lines. 
 
@@ -165,14 +182,14 @@ A bit too high is better than a bit too low.
 ![](./images/extrusion_multiplier/EMPrints-SlightlyLow.png)
 
 ## Further Tips
-### **When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
+**When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
 
 It's fairly normal for [:page_facing_up: smaller infill areas to look a bit overextruded](./troubleshooting/small_infill_areas_overextruded.md) *(though there are a few things that can help a bit in that link- that's another topic)*
 
 In this example, I would look at the circled area. While some of the smaller areas look overextruded, the overall EM is actually pretty good.
 - ![](./images/extrusion_multiplier/em-wheretolook.png) 
 
-## More Examples
+## Tuned Print Examples
 (ABS)
 - ![](./images/extrusion_multiplier/zoom.png) 
 - ![](./images/extrusion_multiplier/EMPrint-Example4.png) 
@@ -192,7 +209,7 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
 ### Voron Parts
 - Voron parts are designed with ABS shrinkage in mind. **You do not need any compensation apart from a good EM tune.**
 
-### **If You Need True-to-CAD Dimensional Accuracy for Other Projects**
+### If You Need True-to-CAD Dimensional Accuracy for Other Projects
 - Firstly, *adjust your expectations*. 
     - Remember, our 3D printers are hobby-grade, glorified hot glue guns, not CNC. You will not reliably get 0.01mm tolerances everywhere.
 - After tuning EM:
@@ -203,8 +220,8 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
         - Print any suitable test object and measure it. Ensure that you are measuring flat edges - not corner bulging or seams. Determine how much shrinkage compensation you need.
     - **Don't mess with your `steps_per_mm`/`rotation_distance`**. Deviations are almost always from material shrinkage, bulging, layer inconsistencies, etc, NOT issues with your axes. Tinkering with these values will usually only add another variable.
 
-### **Methods I'm Not a Fan Of**
-- #### **Measuring Wall Thickness With Calipers**
+### Methods I'm Not a Fan Of
+- **Measuring Wall Thickness With Calipers**
     - Some guides mention printing a single or two-walled object and measuring the thickness with calipers.
         - I simply never have good results with this approach, and different people seem to get (sometimes wildly) different results.
         - The measured widths can vary depending where you measure it and how much pressure you use.
@@ -214,7 +231,7 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
         - This method requires half-decent calipers, which many people just don't have. This limits the accessibility.
 
 
-- #### **SuperSlicer Calibration**
+- **SuperSlicer Calibration**
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:
         - It uses 100% infill, so the first layer squish carries through all the way to the top. This causes your first layer squish to impact your results.
         - It has ironing turned on by default.

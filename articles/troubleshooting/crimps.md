@@ -9,6 +9,8 @@ parent: Troubleshooting
 {% endcomment %}
 # Crimps
 ---
+
+{: .compat}
 :dizzy: This page is compatible with **all printers** that use Molex Microfit 3.0 connectors.
 
 ---

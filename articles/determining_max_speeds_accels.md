@@ -8,8 +8,22 @@ parent: Advanced Tuning
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Determining Maximum Speeds and Accelerations
+{: .no_toc }
+
 ---
+
+{: .compat}
 :dizzy: This page is compatible with **Klipper only**.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
@@ -43,8 +57,8 @@ There is some interplay between accelerations and speeds.
 ---
 
 
-**1)** Add [:page_facing_up: this macro](http://127.0.0.1:4000/Print-Tuning-Guide/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
-- If your printer is a delta, use [:page_facing_up: this version](http://127.0.0.1:4000/Print-Tuning-Guide/macros/TEST_SPEED_DELTA.cfg) instead.
+**1)** Add [:page_facing_up: this macro](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
+- If your printer is a delta, use [:page_facing_up: this version](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED_DELTA.cfg) instead.
 
 **2)** Fully heat soak your printer if enclosed.
 - Ideally the test should be run at the same chamber temps as your actual printing conditions.
@@ -95,14 +109,15 @@ There is some interplay between accelerations and speeds.
 **9)** Save your new maximum speed to `max_velocity` in your config and `RELOAD`.
 ## Usage of the TEST_SPEED Macro
 
-The macro is available [:page_facing_up: here.](https://raw.githubusercontent.com/AndrewEllis93/Print-Tuning-Guide/main/macros/TEST_SPEED.cfg)
+The macro is available [:page_facing_up: here.](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED.cfg)
 
 This macro will home, QGL*, move the toolhead in a test pattern at the specificed speeds/accels, and home again. 
 - **If your printer uses QGL / has not yet done a QGL. This is important, as a contorted gantry can cause alignment issues and skipping.*
 
 You will [:pushpin: watch, listen, and compare the terminal output from before/after.](#determining-if-skipping-occured)
 
-### Available arguments (omitting any will use the default value)
+### Available Arguments 
+(omitting any will use the default value)
 - `SPEED` - Speed in mm/sec. 
     - *Default: your `max_velocity`*
 - `ACCEL` - Acceleration in mm/sec².

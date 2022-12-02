@@ -9,7 +9,9 @@ parent: Troubleshooting
 {% endcomment %}
 # Bulging
 ---
-:dizzy: This page is compatible with **all printers.**
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
 
 ---
 ## Bulging Layers
@@ -38,7 +40,7 @@ These types of bulges are often caused by **overextrusion of the supporting soli
 
 - ![](./images/bulging/feature_bulging-fill.png) 
 
-First of all, you should tune your [:page_facing_up: pressure advance](../pressure_advance/introduction.md) and [:page_facing_up: extrusion multiplier](../extrusion_multiplier.md) using this guide's methods.
+First of all, you should tune your [:page_facing_up: pressure advance](../pressure_linear_advance/introduction.md) and [:page_facing_up: extrusion multiplier](../extrusion_multiplier.md) using this guide's methods.
 
 You can also try printing external perimeters first (`external_perimeter_first` in PS/SS)
 - This can negatively affect *extreme* overhangs, but is generally fine for daily use.

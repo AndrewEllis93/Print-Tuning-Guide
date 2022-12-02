@@ -8,18 +8,34 @@ parent: Tuning
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # First Layer Squish
+{: .no_toc }
 
 I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 
 
 ---
 
+{: .compat}
 :dizzy: This page is generally compatible with **all printers.** Some commands are Klipper-specific, however.
 
-:warning: This section assumes that you have already done a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process).
-
-:warning: This section also assumes that you have a *consistent* first layer squish, both across the entire build surface and between prints. 
+{: .prereqs}
+>- You should do a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process) first.
+>
+>- You should also [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+>   - :fish: [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
+>
+>- This section also assumes that you have *consistent* first layer squish, both across the entire build surface and between prints. 
 
 :bulb: See the [:page_facing_up: Thermal Drift](./troubleshooting/first_layer_squish_consistency_issues/thermal_drift.md) article, **even if you are not having any issues.** Thermal drift is in important thing to know about with larger enclosed printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 

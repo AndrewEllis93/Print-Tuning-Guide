@@ -8,14 +8,17 @@ parent: Useful Macros
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Hotend Fan RPM Monitoring
+
 ---
+
+{: .compat}
 :dizzy: Macros are compatible with **Klipper only**.
 
 ---
 
 This macro polls your hotend fan RPM and executes custom gcode if a fan failure is detected. 
 
-**Macro located [:page_facing_up: here](https://raw.githubusercontent.com/AndrewEllis93/Print-Tuning-Guide/main/macros/fan_tach_monitor.cfg).** Written by [:page_facing_up: alch3my](https://discordapp.com/users/655029671829962752). 
+**Macro located [:page_facing_up: here](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/fan_tach_monitor.cfg).** Written by [:page_facing_up: alch3my](https://discordapp.com/users/655029671829962752). 
 ### :warning: **I highly recommend implementing this. It can save your printer from some pretty catastrophic failures.**
 
 ![](./images/he_fan_failure_4.png)![](./images/he_fan_failure_3.png)\

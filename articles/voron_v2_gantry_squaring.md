@@ -56,7 +56,9 @@ This can potentially cause:
 
 **8)** **PARTIALLY** loosen all connections to the extrusions.  
 - You need all of these bolts to be loose enough to freely adjust against the printed part on the extrusions. 
-- :warning::warning: Where there are Z belt clamps, **ensure that you do not loosen the bolts so much that the Z belts release**. Only loosen enough to allow for adjustments. :warning::warning: 
+
+{: .warning }
+> - Where there are Z belt clamps, **ensure that you do not loosen the bolts so much that the Z belts release**. Only loosen enough to allow for adjustments.
 
 - X/Y joints (repeat for both sides). 
     - Top:

@@ -8,12 +8,28 @@ parent: Troubleshooting
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Small Infill Areas Look Overextruded
+{: .no_toc }
+
 ---
-:dizzy: This page is compatible with **all printers.**
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
 ![](./images/small_infill_overextruded/example1.png) 
+
+## Things to Try
 
 **Some amount of this is unavoidable and is totally normal.**\
 But, there are some things that *may* help a bit:
@@ -32,7 +48,7 @@ But, there are some things that *may* help a bit:
 - Sometimes you can change your infill angle to avoid short infill lines, but this is highly geometry dependent.
     - Concentric top infill patterns can help with some STLs, but again, it's highly geometry dependent. (And the aesthetics are love-it-or-hate-it).
 
-## "Not Connected" Top Infill (SuperSlicer)
+### "Not Connected" Top Infill (SuperSlicer)
 I find that setting top infill to "not connected"  makes a noticeable improvement.\
 This is default behavior in Cura, and is not available in Prusa Slicer.
 
@@ -44,22 +60,27 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
         - ![](./images/small_infill_overextruded/encroachment_setting.png)
         - **:warning: Don't set it too low, however, as it also affects sparse infill**. A low value can cause sparse infill to become detached from the perimeters:
             - ![](./images/small_infill_overextruded/infill_disconnect.png)
-### What it Does
+#### What it Does
 
 - ![](./images/small_infill_overextruded/connected_not_connected_comparison.png)
 
-## When assessing extrusion multiplier, *always* look at the widest areas in a given print.
+---
+
+**When assessing extrusion multiplier, *always* look at the widest areas in a given print.**
+
 (Excerpt from the [:page_facing_up: Extrusion Multiplier](../extrusion_multiplier.md) article)
 - You want to tune your extrusion multiplier for the areas where your extrusion system has had a chance to equalize pressure and coast at a constant flow rate.
 - In this example, I would primarily be looking at the circled area. 
 - While some of this print looks overextruded, I think the overall EM is actually pretty good.
+
     - ![](../images/extrusion_multiplier/em-wheretolook.png) 
 
 ---
 # The Magic Bullet?
 
 ---
-### :warning: This section is advanced reading.:warning:
+:warning: **This section is advanced reading.:warning:**
+
 **These techniques have downsides that are only addressable by an EXPERIMENTAL custom SuperSlicer build.**
 
 This is only here to share some interesting findings / what I'm tinkering with.
@@ -121,7 +142,7 @@ Anything lower would create [:page_facing_up: pinholes](../infill_perimeter_over
 - ![](./images/small_infill_overextruded/demonstration.png)
 
 ---
-### The Experimental SuperSlicer build
+### The Experimental SuperSlicer Build
 
 - No warranty or support provided! Most of the Mac builds are currently not working either. These are a **work in progress.**
 - Builds: https://github.com/julianschill/SuperSlicer/actions

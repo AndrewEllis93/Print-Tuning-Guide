@@ -10,6 +10,8 @@ grand_parent: Troubleshooting
 {% endcomment %}
 # Thermal Drift
 ---
+
+{: .compat}
 :dizzy: This page is tailored to **Voron** printers.
 
 ---

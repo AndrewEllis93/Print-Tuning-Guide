@@ -8,8 +8,22 @@ parent: Misc. Guides
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Controlling Temperature G-Code Order
+{: .no_toc }
+
 ---
-:dizzy: This page is compatible with **all printers.**
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
@@ -46,6 +60,7 @@ To force the g-code ordering, place any of the following g-codes from the follow
 - **These are just lists** of available commands, they don't have to be in this order, nor do you have to use all of them. Place them as you like.
 - Each bullet point is only **ONE** line. Do not split them into multiple lines.
 - There are many other variables available in each slicer, and you can pass whatever variables you like to whatever g-codes you like. The available variables are not always documented.
+
 ### Example
 Forces both bed and hotend to heat up fully before executing `PRINT_START` (SS):
 - ![](./images/controlling_slicer_g-code_order/StartGcode-CustomOrder.png) 

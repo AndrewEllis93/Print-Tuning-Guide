@@ -8,7 +8,10 @@ parent: Useful Macros
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Off
+
 ---
+
+{: .compat}
 :dizzy: Macros are compatible with **Klipper only**.
 
 ---

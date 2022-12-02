@@ -9,6 +9,8 @@ parent: Troubleshooting
 {% endcomment %}
 # Extruder Skipping
 ---
+
+{: .compat}
 :dizzy: The concepts on this page is relevant to all printers, but certain parts are tailored to **Voron** printers.
 
 ---

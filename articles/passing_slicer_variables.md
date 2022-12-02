@@ -8,9 +8,22 @@ parent: Misc. Guides
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Passing Slicer Variables to PRINT_START
+{: .no_toc }
 
 ---
+
+{: .compat}
 :dizzy: This page is compatible with **Klipper only**.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
@@ -32,7 +45,7 @@ For example I don’t want my nozzle to heat until the very end so it’s not oo
 
 If you don’t use a chamber thermistor, just remove/comment out the chamber stuff. 
 
-### Example macro:
+### Example Macro
 
 This macro is a **template**. You will have to add things like `G32`,`QUAD_GANTRY_LEVEL`,`BED_MESH_CALIBRATE`, or whatever other routines that you need to run during your `PRINT_START`.
 

@@ -8,8 +8,22 @@ parent: Advanced Tuning
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Determining Motor Currents
+{: .no_toc }
+
 ---
+
+{: .compat}
 :dizzy: This page is compatible with **Klipper only**.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 :warning: The below guidance is for **axis motors only**.

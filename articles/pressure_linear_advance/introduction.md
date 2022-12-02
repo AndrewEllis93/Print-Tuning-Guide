@@ -9,18 +9,34 @@ grand_parent: Tuning
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Introduction
+{: .no_toc }
+
 ---
-:dizzy: This page is compatible with Klipper *and* Marlin.
 
-**:warning: You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
-- :fish: [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
+{: .compat}
+:dizzy: This page is compatible with Klipper and Marlin.
 
+{: .prereqs}
+>You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.**
+>- :fish: [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
+
+---
 
 :bulb: This guide will call it "pressure advance", or "PA".
 
 - "Linear advance", or "LA" is the **same thing**, just Marlin's version of it.
 
     - The only difference is that Marlin's linear advance does not have a "smooth time" setting.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 

@@ -8,8 +8,22 @@ parent: Tuning
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Cooling and Layer Times
+{: .no_toc }
+
 ---
-:dizzy: This page is compatible with **all printers.**
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 ## Signs of Overheating

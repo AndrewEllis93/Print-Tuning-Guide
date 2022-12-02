@@ -9,6 +9,8 @@ parent: Troubleshooting
 {% endcomment %}
 # Slicer is Putting Heating G-codes in the Wrong Place/Order
 ---
+
+{: .compat}
 :dizzy: The second fix is relevant to all printers, but the first fix is for **Klipper printers only.**
 
 ---

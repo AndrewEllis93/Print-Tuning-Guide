@@ -19,7 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 layout: default
-name: Ellis' Print Tuning Guide
 title: Ellis' Print Tuning Guide
 description: >- # this means to ignore newlines until "baseurl:"
   Ellis' Print Tuning Guide
@@ -33,10 +32,26 @@ baseurl: /Print-Tuning-Guide/         # place folder name if the site is served 
 # Build settings
 remote_theme: pmarsceill/just-the-docs
 #color_scheme: dark
-color_scheme: ellis_custom_theme_dark
+color_scheme: ellis-dark
+
 plugins:
   - jekyll-feed
   - jemoji
+
+callouts_level: loud
+callouts:
+  prereqs:
+    title: Prerequisites
+    color: yellow
+  compat:
+    title: Compatibility
+    color: pink
+  warning:
+    title: Warning
+    color: red
+
+back_to_top: true
+back_to_top_text: "Back to top"
 
 aux_links:
   "Issues, Feedback, & Contributions":

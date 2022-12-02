@@ -9,7 +9,9 @@ parent: Troubleshooting
 {% endcomment %}
 # Pockmarks
 ---
-:dizzy: This page is compatible with **all printers.**
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
 
 ---
 ![](./images/pockmarks/Pockmarks.png)

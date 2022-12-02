@@ -8,12 +8,26 @@ parent: Tuning
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Retraction
+{: .no_toc }
 
 ---
-:dizzy: This page is compatible with **all printers.**
 
-**:warning: You should [:page_facing_up: tune pressure advance](./pressure_advance/introduction.md) first.**
-Pressure advance can lower the amount of retraction needed, especially for bowden.
+{: .compat}
+:dizzy: This page is compatible with all printers.
+
+{: .prereqs}
+>You should [:page_facing_up: tune pressure advance](./pressure_linear_advance/introduction.md) first.
+>- Pressure advance can lower the amount of retraction needed, especially for bowden.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
@@ -117,7 +131,7 @@ We will be printing these retraction towers at three different temperatures. If 
         - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
         - We are subtracting 1 because the first ring is 0 retraction.
 
-## If You Are Having Persistent Issues:
+## If You Are Having Persistent Issues
 - **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
     - Even brand new, factory sealed filament can still come wet. 
 - [:page_facing_up: Ensure that you don't have excessive backlash in your extruder gears.](./troubleshooting/extrusion_patterns.md#extruder-backlash)
@@ -133,10 +147,10 @@ We will be printing these retraction towers at three different temperatures. If 
 - Try a new nozzle.
 - If all else fails, rebuild your extruder/toolhead.
 
-### **With PETG**
+### With PETG
 
 If you're using PETG, you may just need to live with some stringing. \
-PETG is near impossible to get string-free prints with.
+PETG is extremely difficult to get string-free prints with.
 
 - Well-tuned PA/EM helps.
 - Use [:page_facing_up: avoid_crossing_perimeters](https://cdn.help.prusa3d.com/wp-content/uploads/2021/01/avoid_crossing2-2048x977.jpg) in PS/SS or [:page_facing_up: combing](https://all3dp.com/2/combing-mode-cura-simply-explained/) in Cura. 

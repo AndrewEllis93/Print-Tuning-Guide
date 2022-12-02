@@ -11,7 +11,9 @@ grand_parent: Tuning
 
 # Pattern Method
 ---
-:dizzy: This page is compatible with Klipper *and* Marlin.
+
+{: .compat}
+:dizzy: This page is compatible with Klipper and Marlin.
 
 ---
 

@@ -10,6 +10,8 @@ grand_parent: Troubleshooting
 {% endcomment %}
 # First Layer Inconsistency
 ---
+
+{: .compat}
 :dizzy: This page is tailored to **Voron** / Klipper printers.
 
 ---

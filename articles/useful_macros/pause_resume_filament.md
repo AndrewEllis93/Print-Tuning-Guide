@@ -8,17 +8,34 @@ parent: Useful Macros
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Pause/Resume & Filament Sensors
+{: .no_toc }
 
 ---
 
-:dizzy: Macros are compatible with **Klipper only**.
-- **You need `[pause_resume]` specified in your config to be able to use these.**
+---
 
+{: .compat}
+:dizzy: Macros are compatible with **Klipper only**.
+
+---
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
+
+## Pause / Resume
+- **:warning: You need `[pause_resume]` specified in your config to be able to use these.**
 - **:warning: My pause/resume macros work as a pair. One will not work properly without the other.**
 
----
-
-Features:
+### Features
 
 - On pause, moves the toolhead (z hops) up by 10mm, then moves the toolhead to the front for easy loading/unloading.
     - Will not z hop if this exceeds your max Z height.
@@ -41,7 +58,7 @@ Some things are commented out that rely on other macros. You can uncomment them 
 
 *I use a [:page_facing_up: BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!***
 
-## Pause
+### Pause
 
 **:warning: My pause/resume macros work as a pair. One will not work properly without the other.**
 
@@ -79,7 +96,7 @@ gcode:
 ```
 {% endraw %}
 
-## Resume
+### Resume
 **:warning: My pause/resume macros work as a pair. One will not work properly without the other.**
 
 If you use a filament sensor, put its name in the `SET_FILAMENT_SENSOR` command. Otherwise, comment that out.
@@ -114,7 +131,7 @@ gcode:
 ```
 {% endraw %}
 
-## Cancel
+### Cancel
 
 Clears any pause and runs PRINT_END macro.
 
@@ -131,13 +148,13 @@ gcode:
 ```
 {% endraw %}
 
-## Octoprint Configuration
+### Octoprint Configuration
 If you use Octoprint, put these in your "GCODE Script" section to enable the UI buttons to work properly.
 
 - ![](./images/Octoprint-Gcode-Scripts.png)
 
 
-## M600 (Filament Change) Alias
+### M600 (Filament Change) Alias
 
 This allows your pause to work natively with slicers that insert `M600` for color changes. This just calls the pause macro (above).
 {% raw %}

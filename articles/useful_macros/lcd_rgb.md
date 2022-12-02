@@ -8,10 +8,14 @@ parent: Useful Macros
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # LCD RGB
+
 ---
+
+{: .compat}
 :dizzy: Macros are compatible with **Klipper only**.
 
 ---
+
 This just provides an easy shortcut to change your neopixel LCD color. This may need modifying depending on your particular LCD. Mine is an MINI12864.
 
 I have my LCD turn red during runouts, and green during filament swaps.

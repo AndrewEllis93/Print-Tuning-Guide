@@ -8,8 +8,22 @@ parent: Troubleshooting
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Layer Shifting
+{: .no_toc }
+
 ---
+
+{: .compat}
 :dizzy: This page is compatible with **all printers**, but some notes are specific to Voron printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 

@@ -6,16 +6,32 @@ parent: Pressure Advance / Linear Advance
 grand_parent: Tuning
 ---
 # Lines Method (DEPRECATED)
+{: .no_toc }
+
 ---
 {% comment %} 
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 
-:dizzy: This page is compatible with Klipper *and* Marlin.
+{: .compat}
+:dizzy: This page is compatible with Klipper and Marlin.
 
-### :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pressure_advance.md).
+---
 
-### :warning: The contents of this page may be out of date!
+- :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pressure_advance.md).
+
+- :warning: The contents of this page may be out of date!
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
 ---
 
 ### Steps

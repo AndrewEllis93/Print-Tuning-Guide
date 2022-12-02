@@ -9,7 +9,9 @@ parent: Tuning
 {% endcomment %}
 # PA / EM Oddities
 ---
-:dizzy: This page is compatible with Klipper *and* Marlin.
+
+{: .compat}
+:dizzy: This page is compatible with Klipper and Marlin.
 
 ---
 ## Slight Perimeter Gapping

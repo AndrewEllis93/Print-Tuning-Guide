@@ -8,8 +8,22 @@ parent: Troubleshooting
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Extrusion Patterns / "Wood Grain"
+{: .no_toc }
+
 ---
+
+{: .compat}
 :dizzy: The concepts on this page is relevant to all printers, but certain parts are tailored to **Voron** printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 
@@ -38,7 +52,7 @@ parent: Troubleshooting
 
 
 
-### Too Little Backlash:
+### Too Little Backlash
 - Repeating patterns in extrusion (see above)
 - Accelerated wear and damage of the plastic gear, further contributing to repeating patterns in extrusion.
     - This can cause permanent extrusion consistency issues until replacement. Check the spaces between the gear teeth. This gear is damaged:
@@ -46,7 +60,7 @@ parent: Troubleshooting
     - ![](./images/extrusion_patterns/bmg-tooth-damage.png)
 
 
-### Too Much Backlash:
+### Too Much Backlash
 - Repeating patterns in extrusion (see above)
 - Clacking noises during retraction and pressure advance moves
 - Pressure advance consistency issues (such as causing ideal PA values to differ for accelerations and decelerations).

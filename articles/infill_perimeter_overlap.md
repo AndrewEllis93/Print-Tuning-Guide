@@ -9,7 +9,9 @@ parent: Tuning
 {% endcomment %}
 # Infill/Perimeter Overlap
 ---
-:dizzy: This page is compatible with **all printers.**
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
 
 ---
 

@@ -9,6 +9,20 @@ nav_order: 2
 {% endcomment %}
 
 # Setting Expectations
+{: .no_toc }
+
+---
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
 ## Layer Consistency
 
 This is what your prints can look like!

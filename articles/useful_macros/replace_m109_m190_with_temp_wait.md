@@ -8,10 +8,14 @@ parent: Useful Macros
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Replace `M109`/`M190` With `TEMPERATURE_WAIT`
+
 ---
+
+{: .compat}
 :dizzy: Macros are compatible with **Klipper only**.
 
 ---
+
 Replace `M109` (wait for hotend temperature) and `M190` (wait for bed temperature) with TEMPERATURE_WAIT.
 
 This just makes Klipper resume immediately after reaching temp. Otherwise it waits for the temperature to stabilize.

@@ -8,8 +8,22 @@ parent: Troubleshooting
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # VFAs (Vertical Fine Artifacts)
+{: .no_toc }
+
 ---
+
+{: .compat}
 :dizzy: This page is tailored for **Voron** printers.
+
+---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 ## Repeating VFAs With ~2mm Spacing

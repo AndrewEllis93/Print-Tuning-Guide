@@ -9,4 +9,6 @@ has_children: true
 {% endcomment %}
 
 ---
+
+{: .compat}
 :dizzy: Macros are compatible with **Klipper only**.

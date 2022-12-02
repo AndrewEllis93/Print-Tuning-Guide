@@ -10,7 +10,9 @@ grand_parent: Tuning
 {% endcomment %}
 # Saving Your Value
 ---
-:dizzy: This page is compatible with Klipper *and* Marlin.
+
+{: .compat}
+:dizzy: This page is compatible with Klipper and Marlin.
 
 ---
 In the `[extruder]` section of your config, update `pressure_advance` to the new value and issue a `RESTART`.

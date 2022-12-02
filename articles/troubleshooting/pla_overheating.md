@@ -9,7 +9,9 @@ parent: Troubleshooting
 {% endcomment %}
 # PLA is Overheating
 ---
-:dizzy: This page is compatible with **all printers.**
+
+{: .compat}
+:dizzy: This page is compatible with all printers.
 
 ---
 - Open the front door at minimum. Or take off all the side panels.

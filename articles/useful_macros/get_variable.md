@@ -8,8 +8,23 @@ parent: Useful Macros
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Get Variable
+{: .no_toc }
+
 ---
+
+{: .compat}
 :dizzy: Macros are compatible with **Klipper only**.
+
+---
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 
 ---
 *Contributed by [:page_facing_up: FatalBulletHit](https://github.com/FatalBulletHit). Thanks!*

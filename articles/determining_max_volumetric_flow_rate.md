@@ -98,49 +98,58 @@ If you use the CNC Kitchen method, you may need to temporarily increase your  `m
 
 You will follow a similar process to extruder calibration. 
 
-**1)** Heat your hotend. 
-- :bulb: Temperature has a large impact on max flow rates.
+1. Heat your hotend. 
+    - :bulb: Temperature has a large impact on max flow rates.
 
-    - If you are going for absolute maximum flow rates, you may want to bump your temperatures. Some people print ABS at 250-270C for this reason. This is a tradeoff, however, as it can also cause oozing, overheating, or material degradation at slower speeds. I personally run higher temperatures for fast functional prints, and lower my temperatures (and volumetric limit) for more decorative prints.
+        - If you are going for absolute maximum flow rates, you may want to bump your temperatures. Some people print ABS at 250-270C for this reason. This is a tradeoff, however, as it can also cause oozing, overheating, or material degradation at slower speeds. I personally run higher temperatures for fast functional prints, and lower my temperatures (and volumetric limit) for more decorative prints.
 
-**2)** Extrude a little bit to ensure your E motor is energized and holding.
+2. Extrude a little bit to ensure your E motor is energized and holding.
 
-**3)** Mark a 100mm length of filament.
-- Use a bit of tape. Stick it at the 100mm mark on a ruler and transfer it to the filament. Using tape makes it quick & easy to mark between tests.
-- Since this is a rough test, you can also measure at the reverse bowden inlet/spool. Just pull the slack out of the filament when marking and when measuring.
+3. Mark a 100mm length of filament.
+    - Use a bit of tape. Stick it at the 100mm mark on a ruler and transfer it to the filament. Using tape makes it quick & easy to mark between tests.
+    - Since this is a rough test, you can also measure at the reverse bowden inlet/spool. Just pull the slack out of the filament when marking and when measuring.
 
-**4)** Extrude at increasing speeds. 
-- At each interval, measure to ensure that ~100mm entered the extruder.
-- The gcode uses mm/min, **not** mm/sec, so multiply your desired speed by 60.
-- For example, the gcode to extrude at 5mm/sec is:
-```
-M83 ; Relative extrusion mode
-G1 E100 F300 ; Extrude 100mm at 300mm/min (5mm/sec)
-```
+4. Extrude at increasing speeds. 
+    - At each interval, measure to ensure that ~100mm entered the extruder.
+    - The gcode uses mm/min, **not** mm/sec, so multiply your desired speed by 60.
+    - For example, the gcode to extrude at 5mm/sec is:
+    ```
+    M83 ; Relative extrusion mode
+    G1 E100 F300 ; Extrude 100mm at 300mm/min (5mm/sec)
+    ```
 
-**5)** Keep increasing speeds and extruding until it starts dropping below 100mm\*. This is your max flow rate. 
+5. Keep increasing speeds and extruding until it starts dropping below 100mm\*. This is your max flow rate. 
 
-- \* See the [:pushpin: "Flow Dropoff"](#flow-dropoff) section and determine your personal dropoff tolerance. I personally try to stay under 2-3% dropoff.
+    - \* See the [:pushpin: "Flow Dropoff"](#flow-dropoff) section and determine your personal dropoff tolerance. I personally try to stay under 2-3% dropoff.
 
-**6)** Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin: formulas](#formulas).
-- Example: You reached your personal [:pushpin: flow dropoff](#flow-dropoff) tolerance of 2% at **F600** extrusion speed. 
-    - 600mm/min / 60 = 10mm/sec. 
-    - 10mm/sec * 2.4 = **Flow rate of 24mm<sup>3</sup>/sec**.
+6. Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin: formulas](#formulas).
+    - Example: You reached your personal [:pushpin: flow dropoff](#flow-dropoff) tolerance of 2% at **F600** extrusion speed. 
+        - 600mm/min / 60 = 10mm/sec. 
+        - 10mm/sec * 2.4 = **Flow rate of 24mm<sup>3</sup>/sec**.
 
-**7)** Try extruding a longer distance (say 200-300mm). Ensure that your printer can sustain this flow rate.
+7. Try extruding a longer distance (say 200-300mm). Ensure that your printer can sustain this flow rate.
 
-**8)** Set your new value in your slicer.
-- :warning: **In Prusa Slicer, this *must* be managed in the filament settings.** The setting in the "auto speed" section only applies in specific circumstances in PS.
-- In SuperSlicer, you should set the volumetric limit in your print profile to a lower "default" value. 
-    - ABS typically achieves high flow rates. Other materials may cap out at a lower flow rate.
-    - ![](./images/determining_max_volumetric_flow_rate/volumetric-default.png)
-    - Then, in the filament profiles, put the higher per-filament value.
-        - Example ABS profile:\
-        ![](./images/determining_max_volumetric_flow_rate/volumetric-faster.png)
-        - Example speed ABS profile with elevated temperatures:\
-        ![](./images/determining_max_volumetric_flow_rate/volumetric-fastest.png)
-- Cura [:page_facing_up: has not yet added this feature](https://github.com/Ultimaker/Cura/issues/5248). You will have to manually determine your max print speeds for each line width / layer height using the formulas above. You may need different profiles for different materials/temps (or just use a moderate default).
-    - If you use variable layer heights, you have to limit the entire print to the volumetric speed of your largest layer height.
+8. Set your new value in your slicer.
+    - :warning: **In Prusa Slicer, this *must* be managed in the filament settings.** The setting in the "auto speed" section only applies in specific circumstances in PS.
+
+    - In SuperSlicer, you should set the volumetric limit in your print profile to a lower "default" value. 
+
+        - ABS typically achieves high flow rates. Other materials may cap out at a lower flow rate.
+
+        - ![](./images/determining_max_volumetric_flow_rate/volumetric-default.png)
+
+        - Then, in the filament profiles, put the higher per-filament value.
+        
+            - Example ABS profile:\
+            ![](./images/determining_max_volumetric_flow_rate/volumetric-faster.png)
+
+            - Example speed ABS profile with elevated temperatures:\
+            ![](./images/determining_max_volumetric_flow_rate/volumetric-fastest.png)
+
+    - Cura [:page_facing_up: has not yet added this feature](https://github.com/Ultimaker/Cura/issues/5248). You will have to manually determine your max print speeds for each line width / layer height using the formulas above. You may need different profiles for different materials/temps (or just use a moderate default).
+    
+        - If you use variable layer heights, you have to limit the entire print to the volumetric speed of your largest layer height.
+
 ## Flow Dropoff
 Stephan from CNC Kitchen did some flow rate testing. He has a great article and video [:page_facing_up: here](https://www.cnckitchen.com/blog/flow-rate-benchmarking-of-a-hotend).
 

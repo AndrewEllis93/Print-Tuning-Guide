@@ -57,56 +57,57 @@ There is some interplay between accelerations and speeds.
 ---
 
 
-**1)** Add [:page_facing_up: this macro](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
-- If your printer is a delta, use [:page_facing_up: this version](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED_DELTA.cfg) instead.
+1. Add [:page_facing_up: this macro](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED.cfg) to your `printer.cfg` file.
+    - If your printer is a delta, use [:page_facing_up: this version](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED_DELTA.cfg) instead.
 
-**2)** Fully heat soak your printer if enclosed.
-- Ideally the test should be run at the same chamber temps as your actual printing conditions.
+2. Fully heat soak your printer if enclosed.
+    - Ideally the test should be run at the same chamber temps as your actual printing conditions.
 
-**3)** Run the `TEST_SPEED` macro using the [:pushpin: instructions below](#usage-of-the-test_speed-macro) with increasing accelerations [:pushpin: until you experience skipping.](#determining-if-skipping-occured) 
-- Start with a small number of iterations.
-    - Example: `TEST_SPEED ACCEL=5000 ITERATIONS=2`
+3. Run the `TEST_SPEED` macro using the [:pushpin: instructions below](#usage-of-the-test_speed-macro) with increasing accelerations [:pushpin: until you experience skipping.](#determining-if-skipping-occured) 
+    - Start with a small number of iterations.
+        - Example: `TEST_SPEED ACCEL=5000 ITERATIONS=2`
 
-- Once you experience skipping, back the acceleration down and try again until you no longer get any skipping.
+    - Once you experience skipping, back the acceleration down and try again until you no longer get any skipping.
 
-**4)** Once you have found a rough maximum, run the test again with a large number of iterations.
+4. Once you have found a rough maximum, run the test again with a large number of iterations.
 
-- This is essentially an extended torture test.
-    - Example: `TEST_SPEED ACCEL=5000 ITERATIONS=50`
+    - This is essentially an extended torture test.
+        - Example: `TEST_SPEED ACCEL=5000 ITERATIONS=50`
 
-- If you experience any skipping during extended tests, back the speed down again.
+    - If you experience any skipping during extended tests, back the speed down again.
 
-**5)** *Use a slightly lower value than your results.*
-- Sometimes a maximum that works perfectly, even in extended torture tests, can skip during actual prints. Go a bit lower for a margin of safety.
+5. *Use a slightly lower value than your results.*
+    - Sometimes a maximum that works perfectly, even in extended torture tests, can skip during actual prints. Go a bit lower for a margin of safety.
 
-**6)** Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
+6. Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
 
-**7)** Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up: here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
+7. Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up: here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
 
-- This is only a theoretical maximum. I will explain more in the next step.
+    - This is only a theoretical maximum. I will explain more in the next step.
 
-- For example, for a 300mm printer*, with a max accel of 3500:
+    - For example, for a 300mm printer*, with a max accel of 3500:
 
-    - \* Note that the test pattern is **inset 20mm by default** to help avoid collisions. Hence the distance of **260mm** *(300-20\*2)*.
+        - \* Note that the test pattern is **inset 20mm by default** to help avoid collisions. Hence the distance of **260mm** *(300-20\*2)*.
 
-    - The "desired speed" field is mostly arbitrary for our purposes. Enter anything or use the default.
+        - The "desired speed" field is mostly arbitrary for our purposes. Enter anything or use the default.
 
-    - This **yellow line** shows that we would theoretically max out a bit over **900mm/s** at this acceleration/distance.
-    - ![](./images/determining_max_speeds_accels/TEST_SPEED_Calc.png) 
+        - This **yellow line** shows that we would theoretically max out a bit over **900mm/s** at this acceleration/distance.
+        - ![](./images/determining_max_speeds_accels/TEST_SPEED_Calc.png) 
 
-    
-        - The **blue line** just shows how far a given speed would be maintained (400mm/s in this example - arbitrarily chosen)
+        
+            - The **blue line** just shows how far a given speed would be maintained (400mm/s in this example - arbitrarily chosen)
 
-**8)** Repeat the process (steps 1-6), this time increasing speeds rather than accelerations. 
-- Keep in mind that you can **only go up to the theoretical maximum value you found in the previous step.**
-    - In most cases, this is very high and a non-issue. 
+8. Repeat the process (steps 1-6), this time increasing speeds rather than accelerations. 
+    - Keep in mind that you can **only go up to the theoretical maximum value you found in the previous step.**
+        - In most cases, this is very high and a non-issue. 
 
-    - In some cases, however, you may be wondering why you can achieve seemingly "infinite" speeds. This probably means that your printer is not actually able to reach the requested speed at that accel/distance!
+        - In some cases, however, you may be wondering why you can achieve seemingly "infinite" speeds. This probably means that your printer is not actually able to reach the requested speed at that accel/distance!
 
-- Once again, run an extended "torture test" once you find your rough limit. 
-- Example: `TEST_SPEED SPEED=450 ITERATIONS=50`
+    - Once again, run an extended "torture test" once you find your rough limit. 
+    - Example: `TEST_SPEED SPEED=450 ITERATIONS=50`
 
-**9)** Save your new maximum speed to `max_velocity` in your config and `RELOAD`.
+9. Save your new maximum speed to `max_velocity` in your config and `RELOAD`.
+
 ## Usage of the TEST_SPEED Macro
 
 The macro is available [:page_facing_up: here.](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/TEST_SPEED.cfg)
@@ -139,22 +140,22 @@ You will [:pushpin: watch, listen, and compare the terminal output from before/a
 
 ### Determining if Skipping Occured
 
-**1.** Watch and listen. 
-- Often, the skipping will be very obvious. Your toolhead may start shuddering and making erratic movements and loud noises.
+1. Watch and listen. 
+    - Often, the skipping will be very obvious. Your toolhead may start shuddering and making erratic movements and loud noises.
 
-**2.** If there was no apparent major skipping, check for minor skipping:
+2. If there was no apparent major skipping, check for minor skipping:
 
-- Inspect the g-code terminal output:
-    - Compare the numbers for the X and Y steppers for the first and second homing.
-    - ![](./images/determining_max_speeds_accels/TEST_SPEED_Compare.png) 
-        - These numbers represent the microstep position of the toolhead at X/Y max position.
+    - Inspect the g-code terminal output:
+        - Compare the numbers for the X and Y steppers for the first and second homing.
+        - ![](./images/determining_max_speeds_accels/TEST_SPEED_Compare.png) 
+            - These numbers represent the microstep position of the toolhead at X/Y max position.
 
-    - Ensure that the difference between these numbers **has not exceeded a full step.**
+        - Ensure that the difference between these numbers **has not exceeded a full step.**
 
-        - For example, I am running `microsteps` of **32** for my A and B motors. I would ensure that the values for each axis have not changed by more than **32**.
+            - For example, I am running `microsteps` of **32** for my A and B motors. I would ensure that the values for each axis have not changed by more than **32**.
 
-        - If the number has deviated more than this, that means that the corresponding axis has likely skipped.
+            - If the number has deviated more than this, that means that the corresponding axis has likely skipped.
 
-        - Measuring to a full step just accounts for a bit of endstop inaccuracy. It does not necessarily mean that any microsteps were lost.\
-        For **hall effect endstops**, you may need to measure to a few full steps. They can be bit less accurate, and they thermally drift.
+            - Measuring to a full step just accounts for a bit of endstop inaccuracy. It does not necessarily mean that any microsteps were lost.\
+            For **hall effect endstops**, you may need to measure to a few full steps. They can be bit less accurate, and they thermally drift.
 

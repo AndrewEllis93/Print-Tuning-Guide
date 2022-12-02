@@ -16,19 +16,23 @@ parent: Troubleshooting
 ---
 ## Bulging Layers
 
-This may or may not just be a Prusa Slicer / SuperSlicer thing. I have not tested it in other slicers. 
-
 - ![](./images/bulging/Bulging2.png) 
-    - Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
-    - Reduce perimeter accelerations.
-    - Try printing the external perimeters first (`external_perimeter_first` in PS/SS)
-        - This can negatively affect *extreme* overhangs, but is generally fine for daily use.
+
+**Possible Solutions**
+- Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
+- Reduce perimeter accelerations.
+- Try printing the external perimeters first
+    - PS/SS: `external_perimeter_first`
+    - Cura: "Wall Ordering" -> "Outside To Inside"
+    - This can negatively affect *extreme* overhangs, but is generally fine for daily use.
 
 ## Bulges at STL Vertices
-![](./images/bulging/Vertex-Bulges.png)
+- ![](./images/bulging/Vertex-Bulges.png)
 
-![](./images/bulging/Vertex-Bulges-2.png) 
-- Your square corner velocity or jerk may be too low.
+- ![](./images/bulging/Vertex-Bulges-2.png) 
+
+**Possible Solutions**
+- Your square corner velocity or jerk may be too low (or too high!)
 - This can also be a sign that your perimeter speeds/accels are too high.
 - If you are using input shaper, try disabling or re-tuning it.
 - Check over your printer axes for mechanical issues. Move the toolhead/bed by hand and see if anything feels off.
@@ -57,11 +61,11 @@ When you have overextrusion issues in small areas, it greatly contributes to thi
     - BUT that trick has downsides without using an **experimental** SuperSlicer build. **No support provided!**
     - The page describes applying it to the top layer. You would have to disable "only retract when crossing perimeters" for it to apply to this solid infill too. That can slow down your print, however.
 ## Bulging Patterns on Overhangs (SS)
-![](./images/bulging/AboveBridgeFlow-1.png)
-![](./images/bulging/AboveBridgeFlow-2.png)
-![](./images/bulging/AboveBridgeFlow-3.png)
+- ![](./images/bulging/AboveBridgeFlow-1.png)
+- ![](./images/bulging/AboveBridgeFlow-2.png)
+- ![](./images/bulging/AboveBridgeFlow-3.png)
 
-- Some SuperSlicer profiles have "above the bridges" flow set to greater than 100%. This can cause the issues you see above. 
+Some SuperSlicer profiles have "above the bridges" flow set to greater than 100%. This can cause the issues you see above. 
 - There are three solutions:
 
     - **Reduce "above the bridges" flow to back to 100%**

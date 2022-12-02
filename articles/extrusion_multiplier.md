@@ -38,13 +38,13 @@ parent: Tuning
 
 Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin: tuned print examples](#tuned-print-examples) below.
 
-EM tuning must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is.
+:bulb: EM tuning must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is.
 
-Some Slicers seem to need slightly higher or lower EM than others.
+Some slicers seem to need slightly higher or lower EM than others.
 
 This method uses an aesthetics-first approach. For conerns about dimensional accuracy, see the [:pushpin: Rationale & Dimensional Accuracy](#rationale--dimensional-accuracy) section.
 
-I have found that most ABS falls within the 91-95% range, though I have some outliers.
+I have found that most ABS falls within the 91-95% range, and most PLA in the 94-98% range (though don't take that as gospel, I have some outliers!)
 
 ## Method
 The best method I have found is purely visual/tactile.
@@ -91,46 +91,46 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up: test_prints fold
 
 ### Steps
 
-**1)** Slice the test cubes with variations of **1-2% EM.** 
-- **Prusa Slicer:**
-    - There is no way to set the EM per object. You will have to print the test objects one at a time. 
+1. Slice the test cubes with variations of **1-2% EM.** 
+    - **Prusa Slicer**
+        - There is no way to set the EM per object. You will have to print the test objects one at a time. 
 
-- **SuperSlicer:**
-    1) **:warning: Set your EM to 1 in the filament settings.** \
-    The per-object EM settings are **multiplied by** this value.\
-    ![](./images/extrusion_multiplier/EM-1.png)
+    - **SuperSlicer**
+        1. **:warning: Set your EM to 1 in the filament settings.** \
+        The per-object EM settings are **multiplied by** this value.\
+        ![](./images/extrusion_multiplier/EM-1.png)
 
-    2) Import the cube STL. Right-click it and select add settings > filament.\
-    ![](./images/extrusion_multiplier/EM-PerObject.png)
+        2. Import the cube STL. Right-click it and select add settings > filament.\
+        ![](./images/extrusion_multiplier/EM-PerObject.png)
 
-    3) Check "extrusion multiplier".\
-    ![](./images/extrusion_multiplier/EM-PerObject-2.png)
-    
-    6) Set your EM for each test cube.\
-    ![](./images/extrusion_multiplier/EM-PerObject-3.png)
+        3. Check "extrusion multiplier".\
+        ![](./images/extrusion_multiplier/EM-PerObject-2.png)
+        
+        6. Set your EM for each test cube.\
+        ![](./images/extrusion_multiplier/EM-PerObject-3.png)
 
-    7) Save the project for reuse later.\
-    ![](./images/extrusion_multiplier/EM-Save.png)
-    
-- **Cura:**
+        7. Save the project for reuse later.\
+        ![](./images/extrusion_multiplier/EM-Save.png)
+        
+    - **Cura**
 
-    1) Select each cube and enable the "flow" setting.\
-    ![](./images/extrusion_multiplier/EM-PerObject-Cura.png)
+        1. Select each cube and enable the "flow" setting.\
+        ![](./images/extrusion_multiplier/EM-PerObject-Cura.png)
 
-    3) Set the EM on each.\
-    ![](./images/extrusion_multiplier/EM-SetFlow-Cura.png)
+        3. Set the EM on each.\
+        ![](./images/extrusion_multiplier/EM-SetFlow-Cura.png)
 
-    4) Save the project for reuse later.\
-    ![](./images/extrusion_multiplier/EM-Save-Cura.png)
+        4. Save the project for reuse later.\
+        ![](./images/extrusion_multiplier/EM-Save-Cura.png)
 
-**2)** Print it!
+2. Print it!
 
-**3)** Inspect each cube. 
-- Near the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps or valleys between the extrusion lines.
-- See [:pushpin: examples](#examples) below.
+3. Inspect each cube. 
+    - Near the correct EM, the top should feel noticeably smoother. Too much EM will look and feel rougher, and too little EM will have gaps or valleys between the extrusion lines.
+    - See [:pushpin: examples](#examples) below.
 
-**4)** If desired, run the process again but with 0.5% intervals.
-- **If you can't decide, pick the higher EM.**
+4. If desired, run the process again but with 0.5% intervals.
+    - **If you can't decide, pick the higher EM.**
 
 ## Examples
 This is difficult to show in photos - you may have to zoom in. It's easier once you can manipulate and inspect them in different lighting/angles.

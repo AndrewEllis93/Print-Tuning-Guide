@@ -34,7 +34,7 @@ Or, wait....
 
 - ![](./images/setting_expectations/Setting_Expectations_HarshLight.jpg) 
 
-Ellis' prints look like shit? <sup> (this is directly under a bright LED lamp at a low angle) </sup>
+Ellis' prints look like crap?
 
 Well... there's a bit of trickery here. Trickery that everyone seems to partake in.
 
@@ -54,7 +54,8 @@ These imperfections all combine with each other and create minor inconsistencies
 
 <sup>\* (I'm making that number up, but you get the idea.).</sup> 
 
-Apart from building your printer well, the single best thing you can do for this issue is simply have *fewer components*. In fact, a simple i3-style printer can achieve slightly better print quality than a CoreXY printer in this regard.
+Apart from building your printer well, the single best thing you can do for this issue is simply have *fewer components*. In fact, a simple i3-style printer can achieve slightly better print quality than a CoreXY printer in this regard. 
+- And it does. My bowden Ender 3 *(modded with high quality components)* produces parts that look a bit better in harsh light than parts from my Voron V2.
 
 The second best thing you can do is to buy higher quality filaments. Low quality filaments can have fluctuating diameters, [:page_facing_up: which can exacerbate these issues.](https://github.com/Deutherius/Filament-Width-Comp-Experiments/blob/main/README.md#some-updates)
 

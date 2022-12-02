@@ -35,6 +35,8 @@ Imagine you're holding a machinist's square over each corner.\
 
 In this example, I would choose around 0.04 (in green).
 
+*Right click the image and select "Open image in new tab" (or your browser's equivalent) to zoom in*
+
 ![](./images/pattern_method/pattern-annotated.jpg)
 
 I find I get the best real prints when I lean toward **higher** values. 

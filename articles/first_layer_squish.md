@@ -141,13 +141,13 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 
     - ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish1.png) ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish2.png) ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish3.png) 
 
-    ## Further Fine-Tuning
-    - If you have a gappy *second* layer (or first few layers), it may indicate that you need a little more squish.
-        - There are other possible causes for this issue (like not heat soaking for long enough, or flow dropoff)
-    - This cube needs just a tiny bit more squish.\
-    You can see very slight gapping / shadows between the perimeters and some areas of the infill. The corners are also starting to pull away a bit.
-    ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4.png)
-    - Better!\
-        ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4-Better.png)
+## Further Fine-Tuning
+- If you have a gappy *second* layer (or first few layers), it may indicate that you need a little more squish.
+    - There are other possible causes for this issue (like not heat soaking for long enough, or flow dropoff)
+- This cube needs just a tiny bit more squish.\
+You can see very slight gapping / shadows between the perimeters and some areas of the infill. The corners are also starting to pull away a bit.
+![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4.png)
+- Better!\
+    ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4-Better.png)
 
 

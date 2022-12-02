@@ -13,7 +13,7 @@ parent: Troubleshooting
 ---
 
 {: .compat}
-:dizzy: The concepts on this page is relevant to all printers, but certain parts are tailored to **Voron** printers.
+:dizzy: The concepts on this page are relevant to all printers, but the specific adjustment instructions are tailored to **Voron** extruders.
 
 ---
 <details open markdown="block">

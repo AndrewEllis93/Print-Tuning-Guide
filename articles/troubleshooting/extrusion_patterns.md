@@ -77,6 +77,14 @@ parent: Troubleshooting
             - He is looking for feedback. Please direct any feedback to the **#off_topic_theorycrafting** channel in the [:page_facing_up: Voron Discord Server](https://discord.com/invite/voron) and tag him. 
 - Anecdotally, Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience. Bowden systems are also less prone, presumably due to the bowden springiness acting as a buffer.
 
+## Clockwork 2
+
+These screenshots are directly from the manual.
+
+- ![](./images/extrusion_patterns/cw2-adjust-1.png) 
+- ![](./images/extrusion_patterns/cw2-adjust-2.png) 
+- ![](./images/extrusion_patterns/cw2-adjust-3.png) 
+- ![](./images/extrusion_patterns/cw2-adjust-4.png)
 
 ## Clockwork 1
 This is adjusted by moving the motor itself up and down.\

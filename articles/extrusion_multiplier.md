@@ -16,11 +16,11 @@ parent: Tuning
 :dizzy: This page is compatible with all printers.
 
 {: .prereqs}
->-You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+>- You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
 >   - Calibrating your extruder simply ensures that 100mm requested = 100mm extruded. 
 >   - Extrusion *multiplier* is a per-filament setting, depending on their material properties & tolerances.
 >
->- You should [:page_facing_up: tune pressure advance](./pressure_linear_advance/introduction.md) first.**
+>- You should [:page_facing_up: tune pressure advance](./pressure_linear_advance/introduction.md) first.
 
 ---
 <details open markdown="block">

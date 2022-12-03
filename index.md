@@ -27,6 +27,6 @@ This guide was originally written for the Voron community. Much of the guide has
 
 ### Firmwares
 
-- ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) = Marlin
-- ![](/assets/img/duet.png) = Duet
-- ![](/assets/img/klipper.png) = Klipper
+- ![]({{ "/assets/img/klipper.png" | absolute_url }})= Klipper
+- ![]({{ "/assets/img/marlin.png" | absolute_url }}) = Marlin
+- ![]({{ "/assets/img/duet.png" | absolute_url }}) = RepRapFirmware

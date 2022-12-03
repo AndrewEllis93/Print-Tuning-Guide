@@ -75,7 +75,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
         - This may have to be [:page_facing_up: enabled in firmware](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/Marlin/Configuration_adv.h#L2057). Most printers come with it enabled already.
         - **LCD**
             - Under the "Tune" menu (may only appear while printing), look for "Babystep Z".
-        - **G-code*8
+        - **G-code**
             - `M290 Z0.01`
             - `M290 Z-0.01`
 

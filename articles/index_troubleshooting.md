@@ -14,12 +14,14 @@ has_children: true
 
 ## [Bulging](./troubleshooting/bulging.md)
 - Bulging Layers
+    - ![](./troubleshooting/images/bulging/Bulging.png) 
     - ![](./troubleshooting/images/bulging/Bulging2.png) 
 
 - Bulges at STL Vertices
     - ![](./troubleshooting/images/bulging/Vertex-Bulges.png) 
+    - ![](./troubleshooting/images/bulging/Vertex-Bulges-2.png) 
 
-- Bulging around features (SS)
+- Bulging around features
     - ![](./troubleshooting/images/bulging/feature_bulging.png) 
 
 - Bulging Patterns on Overhangs (SS)
@@ -66,6 +68,6 @@ has_children: true
 - ![](./troubleshooting/images/small_infill_overextruded/example1.png) 
 
 ## [VFAs (Vertical Fine Artifacts)](./troubleshooting/vfas.md)
-- Repeating VFAs With ~2mm Spacing
-- Repeating VFAs With Non-2mm Spacing
+- VFAs With ~2mm Spacing
+- VFAs With Non-2mm Spacing
 - ![](./troubleshooting/images/vfas/ToothMarks.png)

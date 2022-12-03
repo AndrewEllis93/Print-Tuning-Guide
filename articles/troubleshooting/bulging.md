@@ -44,9 +44,11 @@ It can also help with extrusion / layer consistency.
 
 ## Bulging Layers
 
+- ![](./images/bulging/Bulging.png) 
 - ![](./images/bulging/Bulging2.png) 
 
 **Possible Solutions**
+- Printing [:pushpin: External Perimeters First](#external-perimeters-first) can help a lot with this particular type of bulging.
 - Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
 - Reduce perimeter accelerations.
 
@@ -61,7 +63,7 @@ It can also help with extrusion / layer consistency.
 - If you are using input shaper, try disabling or re-tuning it.
 - Check over your printer axes for mechanical issues. Move the toolhead/bed by hand and see if anything feels off.
 
-## Bulging Around Features (SuperSlicer)
+## Bulging Around Features
 - ![](./images/bulging/feature_bulging.png) ![](./images/bulging/feature-bulging-2.png) 
 
 These types of bulges are often caused by **overextrusion of the supporting solid infill**:
@@ -69,6 +71,8 @@ These types of bulges are often caused by **overextrusion of the supporting soli
 - ![](./images/bulging/feature_bulging-fill.png) 
 
 First of all, you should tune your [:page_facing_up: pressure advance](../pressure_linear_advance/introduction.md) and [:page_facing_up: extrusion multiplier](../extrusion_multiplier.md) using this guide's methods.
+
+You can also try printing [:pushpin: External Perimeters First](#external-perimeters-first)
 
 After that, see [:page_facing_up: Small Infill Areas Look Overextruded](../troubleshooting/small_infill_areas_overextruded.md).\
 When you have overextrusion issues in small areas, it greatly contributes to this issue.

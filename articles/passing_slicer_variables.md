@@ -127,4 +127,4 @@ PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temper
 
 It's understandably hard to wrap your head around at first. Maybe a visualization will help clear things up:
 
-![](./images/passing_slicer_variables/varflow.png) 
+![](./images/passing_slicer_variables/varflow_dark.png) 

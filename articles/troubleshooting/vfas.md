@@ -26,7 +26,7 @@ parent: Troubleshooting
 </details>
 
 ---
-## Repeating VFAs With ~2mm Spacing
+## VFAs With ~2mm Spacing
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 
 Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [:page_facing_up: here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
@@ -43,10 +43,13 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
         - iPhone: Gates Carbon Drive (select "motorcyle" option) or Sound Spectrum Analysis.
 - Your belts may be rubbing a flange somewhere.
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
-    - Ensure your motor pulleys are not positioned too high or too low.
+    - Ensure your motor pulleys are not positioned too high or too low. Ensure they all align with the belt paths:
+
+        - ![](./images/vfas/pulley_alignment.png)
     - For V2, follow my [:page_facing_up: V2 gantry squaring](../voron_v2_gantry_squaring.md) instructions. A poorly squared gantry can be the root cause of a lot of alignment issues.
     - On all CoreXY printers: [:page_facing_up: de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
         - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
+
 - Ensure that your pulleys, idlers, and extruder gears/idlers are all clean. Debris can accumulate and compress in the teeth. 
 - You may have poor quality belts. **Only use genuine Gates brand belts.**
 - You may have poor quality motor pulleys and idlers.
@@ -57,7 +60,7 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
             - :page_facing_up: https://www.filastruder.com/products/gates-2gt-idler?variant=15443755728967
     - For idlers, there is some debate over toothed vs smooth. My personal opinion is:
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
-## Repeating VFAs With Non-2mm Spacing
+## VFAs With Non-2mm Spacing
 
 Try printing the test objects [:page_facing_up: here](https://mihaidesigns.com/pages/inconsistent-extrusion-test).
 
@@ -66,6 +69,7 @@ Ensure that the artifacts are *always vertical or diagonal, regardless of part g
 If the pattern looks like "wood grain", or any of the example photos in that link, see [:page_facing_up: this article](../troubleshooting/extrusion_patterns.md) instead.
 
 - **Ensure that your A/B pulleys and XY joint idlers are all clean.** Debris can accumulate and compress between the teeth.
+
 - You may have a bad/poor quality pulley or toothed idler.
     - See above section for more info / links.
 - You may have a bad/poor quality bearing.

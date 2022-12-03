@@ -14,11 +14,11 @@ grand_parent: Tuning
 ---
 
 {: .compat}
-:dizzy: This page is compatible with Klipper and Marlin.
+:dizzy: This page is compatible with Klipper, Marlin, and RepRapFirmware.
 
 {: .prereqs}
 >You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
->- :fish: [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
+>- ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
 
 ---
 

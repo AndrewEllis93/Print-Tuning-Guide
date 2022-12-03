@@ -27,7 +27,7 @@ github_username:  AndrewEllis93
 github: [metadata]
 domain: ellis3dp.com       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://ellis3dp.com  # the base hostname and protocol for your site, e.g. http://example.com
-baseurl: /Print-Tuning-Guide/         # place folder name if the site is served in a subfolder
+baseurl: /Print-Tuning-Guide         # place folder name if the site is served in a subfolder
 
 # Build settings
 remote_theme: pmarsceill/just-the-docs

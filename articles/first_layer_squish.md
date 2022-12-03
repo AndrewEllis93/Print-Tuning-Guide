@@ -15,13 +15,13 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 ---
 
 {: .compat}
-:dizzy: This page is generally compatible with **all printers.** Some commands are Klipper-specific, however.
+:dizzy: This page is generally compatible with **all printers.** Commands and setting locations are detailed for Klipper and Marlin.
 
 {: .prereqs}
 >- You should do a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process) first.
 >
 >- You should also [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
->   - :fish: [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
+>   - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
 >
 >- This section also assumes that you have *consistent* first layer squish, both across the entire build surface and between prints. 
 
@@ -58,9 +58,26 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 
 3. Set your first layer [:page_facing_up: line width](./a_note_about_line_width.md) to **120%** or greater.
 
-4. Start the print. While it is printing, [:page_facing_up: live adjust z](https://docs.vorondesign.com/build/startup/#fine-tuning-z-height).
-
-    - This can be done via g-codes/macros, LCD, or via web. I find it easiest to sit in front of the printer and fine-tune with the LCD.
+4. Start the print. While it is printing, live adjust z (also known as "baby stepping").
+    - This can be done via g-codes/macros, LCD, or via your printer's web interface (Fluidd / Mainsail).\
+    I find it easiest to sit in front of the printer and fine-tune with the LCD.
+    - ![]({{ "/assets/img/klipper.png" | absolute_url }}) **Klipper**
+        - **LCD**
+            - Under the "Tune" menu (may only appear while printing), look for "Offset Z".
+        - **Mainsail**
+            - ![](./images/first_layer_squish/babystep_mainsail.png)
+        - **Fluidd**
+            - ![](./images/first_layer_squish/babystep_fluidd.png)
+        - **G-code**
+            - `SET_GCODE_OFFSET A_ZDJUST=0.01 MOVE=1`
+            - `SET_GCODE_OFFSET A_ZDJUST=-0.01 MOVE=1`
+    - ![]({{ "/assets/img/marlin.png" | absolute_url }}) **Marlin**
+        - This may have to be [:page_facing_up: enabled in firmware](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/Marlin/Configuration_adv.h#L2057). Most printers come with it enabled already.
+        - **LCD**
+            - Under the "Tune" menu (may only appear while printing), look for "Babystep Z".
+        - **G-code*8
+            - `M290 Z0.01`
+            - `M290 Z-0.01`
 
     **Examples**
 
@@ -98,27 +115,26 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
             - ![](./images/first_layer_squish/FirstLayer-Squares-Textured-2.jpg)
 
 5. Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
+    - ![]({{ "/assets/img/klipper.png" | absolute_url }}) **Klipper**
+        - **Dedicated Z Endstop:**\
+        (With dedicated Z endstops. Stock V0/V2/Trident are set up this way)
+            - Enter `Z_OFFSET_APPLY_ENDSTOP`* 
+                - This will apply your new offset to your stepper_z's `position_endstop`.
+            - Enter `SAVE_CONFIG`.
+        - **Virtual Z Endstop:**\
+        (When using the probe *as* the Z endstop. Stock Switchwire and Legacy are set up this way)
+            - Enter `Z_OFFSET_APPLY_PROBE`*
+                - This will apply your new offset to your probe's `z_offset`.
+            - Enter `SAVE_CONFIG`.
+        - **Klicky Auto Z Calibration:**\
+        (This is a mod, it uses Klicky AND nozzle endstop to automatically baby step before each print. See [:page_facing_up: here](https://github.com/protoloft/klipper_z_calibration) for more information.)
+            - Manually adjust your `switch_offset` based on how much extra you had to baby step. 
+                - Higher value = more squish 
+                - Lower value = less squish
+            - If your value is straying too far from your switch's theoretical `switch_offset` (usually 0.5), there may be another issue at play. Values of 0.4-0.6 are fairly normal (for the standard Omron switches).
+    - ![]({{ "/assets/img/marlin.png" | absolute_url }}) **Marlin**
+        - Select "Store settings" on the LCD or use `M500`.
 
-    - **Dedicated Z Endstop:**\
-    (With dedicated Z endstops. Stock V0/V2/Trident are set up this way)
-        - Enter `Z_OFFSET_APPLY_ENDSTOP`* 
-            - This will apply your new offset to your stepper_z's `position_endstop`.
-        - Enter `SAVE_CONFIG`.
-
-    - **Virtual Z Endstop:**\
-    (When using the probe *as* the Z endstop. Stock Switchwire and Legacy are set up this way)
-        - Enter `Z_OFFSET_APPLY_PROBE`*
-            - This will apply your new offset to your probe's `z_offset`.
-        - Enter `SAVE_CONFIG`.
-
-    - **Klicky Auto Z Calibration:**\
-    (This is a mod, it uses Klicky AND nozzle endstop to automatically baby step before each print. See [:page_facing_up: here](https://github.com/protoloft/klipper_z_calibration) for more information.)
-        - Manually adjust your `switch_offset` based on how much extra you had to baby step. 
-            - Higher value = more squish 
-            - Lower value = less squish
-        - If your value is straying too far from your switch's theoretical `switch_offset` (usually 0.5), there may be another issue at play. Values of 0.4-0.6 are fairly normal (for the standard Omron switches).
-
-    <sup>* Requires a semi-recent version of Klipper.</sup>
 
 ## Print Examples 
 You should still clearly be able to see the lines. If it's completely smooth, your squish is too much.

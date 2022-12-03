@@ -8,12 +8,40 @@ parent: Troubleshooting
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
 # Bulging
+{: .no_toc }
+
 ---
 
 {: .compat}
 :dizzy: This page is compatible with all printers.
 
 ---
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+---
+
+## External Perimeters First
+
+This is in its own section because it can help with multiple of the other bulging sections below.
+
+It can also help with extrusion / layer consistency.
+
+- PS/SS: `external_perimeter_first`
+- Cura: "Wall Ordering" -> "Outside To Inside"
+
+- ![](./images/bulging/external_first_1.png) 
+- ![](./images/bulging/external_first_2.png) 
+
+- :warning: This can negatively affect *extreme* overhangs, and occasionally cause some other oddities, so just keep it in mind when troubleshooting. It's generally okay for daily use, though.
+    - ![](./images/bulging/external_first_3.png) 
+
 ## Bulging Layers
 
 - ![](./images/bulging/Bulging2.png) 
@@ -21,10 +49,6 @@ parent: Troubleshooting
 **Possible Solutions**
 - Disable any "extra perimeters" and "supporting dense layer" settings (PS/SS)
 - Reduce perimeter accelerations.
-- Try printing the external perimeters first
-    - PS/SS: `external_perimeter_first`
-    - Cura: "Wall Ordering" -> "Outside To Inside"
-    - This can negatively affect *extreme* overhangs, but is generally fine for daily use.
 
 ## Bulges at STL Vertices
 - ![](./images/bulging/Vertex-Bulges.png)
@@ -46,9 +70,6 @@ These types of bulges are often caused by **overextrusion of the supporting soli
 
 First of all, you should tune your [:page_facing_up: pressure advance](../pressure_linear_advance/introduction.md) and [:page_facing_up: extrusion multiplier](../extrusion_multiplier.md) using this guide's methods.
 
-You can also try printing external perimeters first (`external_perimeter_first` in PS/SS)
-- This can negatively affect *extreme* overhangs, but is generally fine for daily use.
-
 After that, see [:page_facing_up: Small Infill Areas Look Overextruded](../troubleshooting/small_infill_areas_overextruded.md).\
 When you have overextrusion issues in small areas, it greatly contributes to this issue.
 - The above link goes into this in much more detail about this issue, but one of the larger improvements for me was to use these settings in SuperSlicer:
@@ -60,6 +81,7 @@ When you have overextrusion issues in small areas, it greatly contributes to thi
 - There is some additional (advanced!) reading in that page with some more recent findings about a retraction trick. 
     - BUT that trick has downsides without using an **experimental** SuperSlicer build. **No support provided!**
     - The page describes applying it to the top layer. You would have to disable "only retract when crossing perimeters" for it to apply to this solid infill too. That can slow down your print, however.
+    
 ## Bulging Patterns on Overhangs (SS)
 - ![](./images/bulging/AboveBridgeFlow-1.png)
 - ![](./images/bulging/AboveBridgeFlow-2.png)

@@ -27,18 +27,34 @@ parent: Troubleshooting
 
 ---
 
-- Test prints: :page_facing_up: https://mihaidesigns.com/pages/inconsistent-extrusion-test
-- **Examples:**
-    - See [:page_facing_up: "Setting Expectations"](../setting_expectations.md). **You are very unlikely to get this perfect**, but some things can be done to potentially improve it.  
-    - The left cube shows an "innie-outie" pattern across each extrusion line.\
-    The right cube was printed after adjusting [:pushpin: extruder backlash](#extruder-backlash), and the pattern is lessened.
-        - ![](./images/extrusion_patterns/Backlash-Comparison.png)
-    - "Wood Grain":
-        - ![](./images/extrusion_patterns/Backlash-WoodGrain.png)
-    - Diagonal patterns:\
-    *Note: this kind of pattern can also be caused by mechanical issues with printer axes.*
-        - ![](./images/extrusion_patterns/Backlash-Pattern.png)
+## Examples
+- See [:page_facing_up: "Setting Expectations"](../setting_expectations.md). **You are very unlikely to get this perfect**, but some things can be done to potentially improve it.  
+- The left cube shows an "innie-outie" pattern across each extrusion line.\
+The right cube was printed after adjusting [:pushpin: extruder backlash](#extruder-backlash), and the pattern is lessened.
+    - ![](./images/extrusion_patterns/Backlash-Comparison.png)
+- "Wood Grain":
+    - ![](./images/extrusion_patterns/Backlash-WoodGrain.png)
+- Diagonal patterns:\
+*Note: this kind of pattern can also be caused by mechanical issues with printer axes.*
+    - ![](./images/extrusion_patterns/Backlash-Pattern.png)
 
+## Test Prints
+See the [:page_facing_up: test prints from MihaiDesigns](https://mihaidesigns.com/pages/inconsistent-extrusion-test)
+
+## External Perimeters First
+
+Printing external perimeters first can help with extrusion consistency *and* with [:page_facing_up: bulging](./bulging.md) issues.
+
+This is moreso about *general* extrusion inconsistency rather than wood grain specifically, but it may still help. 
+
+- PS/SS: `external_perimeter_first`
+- Cura: "Wall Ordering" -> "Outside To Inside"
+
+- ![](./images/extrusion_patterns/external_first_1.png) 
+- ![](./images/extrusion_patterns/external_first_2.png) 
+
+- :warning: This can negatively affect *extreme* overhangs, and occasionally cause some other oddities, so just keep it in mind when troubleshooting. It's generally okay for daily use, though.
+    - ![](./images/bulging/external_first_3.png) 
 
 ## Extruder Backlash
 
@@ -50,15 +66,12 @@ parent: Troubleshooting
 - This is not adjustable on some extruders like the Orbiter (doesn't have the same backlash issues anyway in my experience!)
 - Adjusting backlash can help considerably with these issues, but is not always guaranteed to fix it.
 
-
-
 ### Too Little Backlash
 - Repeating patterns in extrusion (see above)
 - Accelerated wear and damage of the plastic gear, further contributing to repeating patterns in extrusion.
     - This can cause permanent extrusion consistency issues until replacement. Check the spaces between the gear teeth. This gear is damaged:
 
     - ![](./images/extrusion_patterns/bmg-tooth-damage.png)
-
 
 ### Too Much Backlash
 - Repeating patterns in extrusion (see above)
@@ -78,7 +91,6 @@ parent: Troubleshooting
 - Anecdotally, Galileo/Orbiter seem to be less likely to have these extrusion patterns in my experience. Bowden systems are also less prone, presumably due to the bowden springiness acting as a buffer.
 
 ## Clockwork 2
-
 These screenshots are directly from the manual.
 
 - ![](./images/extrusion_patterns/cw2-adjust-1.png) 
@@ -94,6 +106,7 @@ The motor plate has 3 slotted screw holes to allow for adjustment:
 
 - The top two screws are easily reachable.
 - The bottom left screw can be reached by opening the filament latch fully and using a ball-end hex driver.
+
 ## Mini Afterburner
 
 I don't have a Mini Afterburner so I can't give an exact process for tweaking it. I believe it also has some slotted screw holes to allow for adjustment.

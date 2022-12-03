@@ -6,24 +6,21 @@ nav_order: 3
 {% comment %} 
 # This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
 {% endcomment %}
+
 # Voron V2 Gantry Squaring
+Poor gantry squaring can cause a number of problems, such as:
+- First Layer issues
+- Z belts rubbing against the gantry's printed parts
+- X axis to be "racked" at the front but not the back (or vice versa)
 
-## Why?
+Steps 14-16 of the instructions below can also help with gantry stability.
 
-Poor gantry squaring can cause a number of problems.
+## Demonstration
 
 ### Watch [this video](https://user-images.githubusercontent.com/34943186/154356504-b3870f34-32a3-4c2a-a424-7d48def0f834.mp4).
 
 Notice that the idlers get "pinched" when moving the X extrusion back/forth (this is shown with loose Z joints).
 
-
-
-This can potentially cause:
-- First Layer issues
-- Z belts rubbing against the gantry's printed parts
-- X axis to be "racked" at the front but not the back (or vice versa)
-
-"Bonus" steps 14-16 can also help with first layer *and* with gantry stability.
 ## Method
 
 1. Enter this g-code: `SET_IDLE_TIMEOUT TIMEOUT=99999`
@@ -44,7 +41,7 @@ This can potentially cause:
 
     - ![](./images/voron_v2_gantry_squaring/Gantry-ABTension.png) 
 
-6. Take off your left/right side panels.
+6. Take off your side panels.
 
 7. Unscrew and drop your lower Z joints. 
     - Your gantry will now be floating on just the belts.
@@ -85,7 +82,8 @@ This can potentially cause:
             - *Don't overdo it!*
             - ![](./images/voron_v2_gantry_squaring/IdlersLoosen-Bottom.png) 
 
-9. And now - what we have been prepping for! **Adjust your gantry so that it sits perfectly on top of the lower Z joints.**
+9. And now, what we have been preparing for.\
+Adjust your gantry so that it sits perfectly on top of the lower Z joints.
     - This involves moving gantry components further apart or closer together along the extrusions:
         - **Rear**
             - ![](./images/voron_v2_gantry_squaring/XAdjust.png) 
@@ -94,7 +92,7 @@ This can potentially cause:
 
     - Your gantry should align so that:
         - The Z joints feel perfectly flush along the side, and
-        - When raising and lowering your lower Z joint by hand, the bolt should slide in perfectly without hitting the sides.
+        - When raising and lowering your lower Z joint by hand, the bolt slides in perfectly without hitting the sides.
 
         - ![](./images/voron_v2_gantry_squaring/Alignment-Side.png) ![](./images/voron_v2_gantry_squaring/Alignment-Hole.png) 
 
@@ -113,24 +111,20 @@ This can potentially cause:
     - Make sure to come back here afterwards! The following steps are still important.
 
 13. [:page_facing_up: Re-tension your A/B belts](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension) (to 110hz **over a 15cm span**).
-    - Don't miss the video link in that post. It's easy to overlook.
-    - Apps:
-        - Android: Gates Carbon Drive (select "motorcyle" option) or Spectroid.
-        - iPhone: Gates Carbon Drive (select "motorcyle" option) or Sound Spectrum Analysis.
 
 14. Reinstall your panels and fully heatsoak your printer for **1½ - 2 hours minimum.**
 
 15. `QUAD_GANTRY_LEVEL` 3-5 times to "settle in" the gantry (and level it for the next step).
-    - If you are having new Z accuracy issues, you may have left your Z joints a bit *too* loose.
+    - If you are getting new tolerance / retry errors, you may have left your Z joints a bit *too* loose. Try tightening them up just a bit more.
 
-16. Open the front door and **fully hulk-tighten the M5 bolts in your Z joints*** while it's still hot.
-
-    \* *Unless your parts are printed in eSun ABS+. It's more brittle than regular ABS. Just tighten them "pretty tight".*
+16. Open the front door and fully tighten the M5 bolts in your Z joints while it's still hot.
     - This does two things:
         - Somewhat "locks in" your QGL at its state in full thermal expansion.
-            - This has helped a number of people with their first layer issues.
+            - This can help with first layer issues.
+
         - **Stabilizes your gantry**. 
-            - If you had it "tight but not too tight, so the Z joints can still articulate" (as is often recommended), you will notice that your gantry displaces back/forth while printing.
+            - If you have your Z joints too loose, you might notice that your gantry displaces back & forth a bit while printing.
+
             - This can help with ringing and layer consistency.
 
 17. `RESTART` to reset your idle timeout.

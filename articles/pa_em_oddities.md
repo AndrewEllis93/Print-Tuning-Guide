@@ -11,7 +11,7 @@ parent: Tuning
 ---
 
 {: .compat}
-:dizzy: This page is compatible with Klipper and Marlin.
+:dizzy: This page is compatible with Klipper, Marlin, and RepRapFirmware.
 
 ---
 ## Slight Perimeter Gapping

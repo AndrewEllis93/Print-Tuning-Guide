@@ -6,7 +6,12 @@ nav_order: 1
 
 # Introduction
 
-This guide was originally written for the Voron community. Much of the guide has been expanded to work for all printers, but some notes and hardware troubleshooting tips are still Voron or Klipper specific.
+This guide was originally written for the Voron community, but has since been expanded to work with most printers.
+
+{: .compat}
+:dizzy: Each page has a pink banner at the top indicating its compatibility with different printers and firmwares.
+
+The main sections have all been updated to be more universal. There may be some Voron-specific notes here and there. 
 
 ## Notes
 
@@ -24,6 +29,7 @@ This guide was originally written for the Voron community. Much of the guide has
 - :page_facing_up: = Link to another page.
 - :pushpin: = Jump to section (on same page).
 - :dizzy: = Page compatibility
+- :bulb: = Note
 
 ### Firmwares
 

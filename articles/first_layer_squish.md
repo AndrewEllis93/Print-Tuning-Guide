@@ -1,7 +1,7 @@
 ---
 layout: default
 title: First Layer Squish
-nav_order: 2
+nav_order: 3
 parent: Tuning
 ---
 {% comment %} 
@@ -20,7 +20,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 {: .prereqs}
 >- You should do a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process) first.
 >
->- You should also [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+>- You should also [:page_facing_up: calibrate your extruder](./extruder_calibration.md) first.
 >   - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
 >
 >- This section also assumes that you have *consistent* first layer squish, both across the entire build surface and between prints. 

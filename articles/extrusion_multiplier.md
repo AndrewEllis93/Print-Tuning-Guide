@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Extrusion Multiplier
-nav_order: 4
+nav_order: 5
 parent: Tuning
 ---
 {% comment %} 
@@ -16,7 +16,7 @@ parent: Tuning
 :dizzy: This page is compatible with all printers.
 
 {: .prereqs}
->- You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+>- You should [:page_facing_up: calibrate your extruder](./extruder_calibration.md) first.
 >   - Calibrating your extruder simply ensures that 100mm requested = 100mm extruded. 
 >   - Extrusion *multiplier* is a per-filament setting, depending on their material properties & tolerances.
 >

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pressure Advance / Linear Advance
-nav_order: 3
+nav_order: 4
 parent: Tuning
 has_children: true
 ---

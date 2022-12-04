@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cooling and Layer Times
-nav_order: 6
+nav_order: 7
 parent: Tuning
 ---
 {% comment %} 

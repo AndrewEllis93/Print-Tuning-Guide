@@ -5,7 +5,7 @@ title: Conditional QGL
 parent: Useful Macros
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/useful_macros/conditional_qgl.html).
 {% endcomment %}
 # Conditional QGL
 

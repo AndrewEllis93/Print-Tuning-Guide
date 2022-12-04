@@ -5,7 +5,7 @@ nav_order: 2
 parent: Tuning
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/build_surface_adhesion.html).
 {% endcomment %}
 # Build Surface Adhesion
 {: .no_toc }

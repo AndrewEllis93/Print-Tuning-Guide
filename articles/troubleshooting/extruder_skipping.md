@@ -5,7 +5,7 @@ title: Extruder Skipping
 parent: Troubleshooting
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/extruder_skipping.html).
 {% endcomment %}
 # Extruder Skipping
 ---
@@ -25,13 +25,16 @@ Skipping below top layer:
 
 ![](./images/extruder_skipping/ExtruderSkips-5.png)
 
+- Try a new nozzle. It's often just a partial nozzle clog.
+
+- **Don't burn an entire day troubleshooting when you could spend 30 minutes rebuilding your extruder.**
+
 - If you are printing PLA, **don't do it in an enclosure**. Enclosure temps can *easily* get hot enough to soften PLA in the extruder/heatbreak and cause endless jams. Open your chamber door - or better yet, take the panels/enclosure off entirely.
 
 - Mark a line on your extruder motor shaft with a sharpie (on the back side of the motor). Observe what it's doing while the issue is occuring.
     - Shuddering: A wiring issue or mechanical resistance.
     - Not moving at all: A wiring or electrical issue, or stepper driver overheating.
     - Rotating normally: Either the filament isn't gripping properly, or a grub screw has come loose.
-- Try a new nozzle. It's often just a partial nozzle clog.
 
 - If it occurs mainly on the first layer, ensure that you are not printing with [:page_facing_up: too much squish](../first_layer_squish.md) or with too much first layer flow.
 - Ensure that your filament gear tension (usually a spring tensioner screw) is not too tight or too loose.

@@ -5,7 +5,7 @@ title: Small Infill Areas Look Overextruded
 parent: Troubleshooting
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/small_infill_areas_overextruded.html).
 {% endcomment %}
 # Small Infill Areas Look Overextruded
 {: .no_toc }
@@ -60,6 +60,7 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
         - ![](./images/small_infill_overextruded/encroachment_setting.png)
         - **:warning: Don't set it too low, however, as it also affects sparse infill**. A low value can cause sparse infill to become detached from the perimeters:
             - ![](./images/small_infill_overextruded/infill_disconnect.png)
+
 #### What it Does
 
 - ![](./images/small_infill_overextruded/connected_not_connected_comparison.png)

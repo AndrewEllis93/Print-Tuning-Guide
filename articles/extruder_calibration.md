@@ -6,7 +6,7 @@ parent: Tuning
 ---
 
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/extruder_calibration.html).
 {% endcomment %}
 
 # Extruder Calibration
@@ -80,7 +80,7 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
 
         - ![](./images/extruder_calibration/ruler.png)
 
-5. Pull your filament as straight as you can against the ruler. Transfer the tape to mark 120mm.
+5. Where your filament enters your extruder, pull your filament as straight as you can against the ruler. Transfer the tape to mark 120mm.
 
     - ![](./images/extruder_calibration/2.png) ![](./images/extruder_calibration/3.png)
 
@@ -147,7 +147,8 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
 
     ---
     ![]({{ "/assets/img/marlin.png" | absolute_url }}) Marlin
-    - Set your new e-steps with `M92`, as shown in the previous step.
+    - Set your new e-steps with `M92`.
+        - Example: `M92 E421`.
     - Run `M500` to save it to EEPROM.
 
     ---

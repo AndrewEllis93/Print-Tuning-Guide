@@ -6,5 +6,5 @@ parent: Troubleshooting
 has_children: true
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/index_first_layer_squish_consistency_issues.html).
 {% endcomment %}

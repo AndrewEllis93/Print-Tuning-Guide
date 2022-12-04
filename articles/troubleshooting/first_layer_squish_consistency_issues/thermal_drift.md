@@ -6,7 +6,7 @@ parent: First Layer Inconsistencies
 grand_parent: Troubleshooting
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/first_layer_squish_consistency_issues/thermal_drift.html).
 {% endcomment %}
 # Thermal Drift
 ---

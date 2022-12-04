@@ -4,7 +4,7 @@ title: Voron V2 Gantry Squaring
 nav_order: 3
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/voron_v2_gantry_squaring.html).
 {% endcomment %}
 
 # Voron V2 Gantry Squaring

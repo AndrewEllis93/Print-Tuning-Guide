@@ -5,7 +5,7 @@ title: Replace M109/M190 With TEMPERATURE_WAIT
 parent: Useful Macros
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/useful_macros/replace_m109_m190_with_temp_wait.html).
 {% endcomment %}
 # Replace `M109`/`M190` With `TEMPERATURE_WAIT`
 

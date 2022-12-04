@@ -5,7 +5,7 @@ title: Hotend Fan RPM Monitoring
 parent: Useful Macros
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/useful_macros/hotend_fan_monitoring.html).
 {% endcomment %}
 # Hotend Fan RPM Monitoring
 
@@ -21,8 +21,8 @@ This macro polls your hotend fan RPM and executes custom gcode if a fan failure 
 **Macro located [:page_facing_up: here](https://github.com/AndrewEllis93/Print-Tuning-Guide/blob/main/macros/fan_tach_monitor.cfg).** Written by [:page_facing_up: alch3my](https://discordapp.com/users/655029671829962752). 
 ### :warning: **I highly recommend implementing this. It can save your printer from some pretty catastrophic failures.**
 
-![](./images/he_fan_failure_4.png)![](./images/he_fan_failure_3.png)\
-![](./images/he_fan_failure_1.png) ![](./images/he_fan_failure_2.png)\
+![](./images/he_fan_failure_4.png) ![](./images/he_fan_failure_3.png)\
+![](./images/he_fan_failure_1.png) ![](./images/he_fan_failure_2.png)
 
 ## Info
 
@@ -40,6 +40,7 @@ This macro polls your hotend fan RPM and executes custom gcode if a fan failure 
         - [:page_facing_up: DigiKey 12v search](https://www.digikey.com/en/products/filter/dc-brushless-fans-bldc/217?s=N4IgjCBcpgLFoDGUBmBDANgZwKYBoQB7KAbRAA4B2cgNnJAF0CAHAFyhAGVWAnASwB2AcxABfArBoIQySOmz4ipELAAMNAJwBWSiAnrt9JiDYdu-YWIJb60Gaky4CxSGQDMYaqogE3WmpSUbnoqqh5g9BJgGgBMGvDGppBcvIIi4uAawXay8k5KriA0sF4hNFpuMVplOjG6BDQ0qrAxjCzsyeZpViA2GtK5joouZCWqVfXgmuSwkVMaM5NgmrHwBMsasXMbscEEMWG01fthWZMHbvE%2BIBdZ1YkdKRbpGVJ2fAAmHNHXSU-dBFYAE9mDgOB8sMhRKIgA)
 
 - I recommend using [:pushpin: this guide's pause/resume macros](./pause_resume.md) with this. They will automatically turn the hotend off for a pause and automatically return it to temperature for resume. 
+
 ## Setup
 **1.** Connect your hotend fan's RPM/tach wire to a spare endstop port.
 - On the input pin, not the 5V or gnd pins. Refer to your board's pinout diagrams.

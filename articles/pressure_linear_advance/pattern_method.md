@@ -8,7 +8,7 @@ grand_parent: Tuning
 
 {% comment %}
 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/pressure_linear_advance/pattern_method.html).
 
 {% endcomment %}
 
@@ -38,7 +38,7 @@ You are looking for the **sharpest corner** with the fewest artifacts (gaps, bul
 - _Note - **there is rarely such thing as perfect pressure advance.** You are not looking for perfection here! Just as close as you can get._
 
 Imagine you're holding a machinist's square over each corner.\
-_(No need to ACTUALLY use a square - just an analogy.)_
+_(No need to ACTUALLY use a square.)_
 
 In this example, I would choose around 0.04 (in green).
 

@@ -5,7 +5,7 @@ nav_order: 2
 parent: Advanced Tuning
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/determining_motor_currents.html).
 {% endcomment %}
 # Determining Motor Currents
 {: .no_toc }

@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Passing Slicer Variables to PRINT_START
+title: Passing Slicer Variables to a Macro
 #nav_order: 3
 parent: Misc. Guides
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html).
 {% endcomment %}
-# Passing Slicer Variables to PRINT_START
+# Passing Slicer Variables to a Macro
 {: .no_toc }
 
 ---

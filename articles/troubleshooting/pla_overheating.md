@@ -5,7 +5,7 @@ title: PLA is Overheating
 parent: Troubleshooting
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/pla_overheating.html).
 {% endcomment %}
 # PLA is Overheating
 ---

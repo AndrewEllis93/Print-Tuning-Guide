@@ -5,7 +5,7 @@ nav_order: 9
 parent: Tuning
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/infill_perimeter_overlap.html).
 {% endcomment %}
 # Infill/Perimeter Overlap
 ---

@@ -4,4 +4,6 @@ title: Useful Macros (Old)
 nav_exclude: true
 ---
 
-# This page has moved [here](../articles/useful_macros.md).
+{% comment %} 
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/index_useful_macros.html).
+{% endcomment %}

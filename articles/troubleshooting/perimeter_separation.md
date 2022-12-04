@@ -5,7 +5,7 @@ title: Perimeter Separation
 parent: Troubleshooting
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/perimeter_separation.html).
 {% endcomment %}
 # Perimeter Separation
 {: .no_toc }

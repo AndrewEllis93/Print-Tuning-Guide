@@ -5,7 +5,7 @@ title: Controlling Temperature G-Code Order
 parent: Misc. Guides
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/controlling_slicer_g-code_order.html).
 {% endcomment %}
 # Controlling Temperature G-Code Order
 {: .no_toc }

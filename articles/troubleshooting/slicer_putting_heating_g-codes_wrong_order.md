@@ -5,7 +5,7 @@ title: Slicer is Putting Heating G-codes in the Wrong Place/Order
 parent: Troubleshooting
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/slicer_putting_heating_g-codes_wrong_order.html).
 {% endcomment %}
 # Slicer is Putting Heating G-codes in the Wrong Place/Order
 ---

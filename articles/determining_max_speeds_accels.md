@@ -5,7 +5,7 @@ nav_order: 3
 parent: Advanced Tuning
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/determining_max_speeds_accels.html).
 {% endcomment %}
 # Determining Maximum Speeds and Accelerations
 {: .no_toc }

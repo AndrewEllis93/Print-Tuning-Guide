@@ -5,7 +5,7 @@ nav_order: 1
 parent: Before We Begin
 ---
 {% comment %} 
-# This guide has moved! Please visit [the new site](https://ellis3dp.com/Print-Tuning-Guide/).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/a_note_about_line_width.html).
 {% endcomment %}
 
 # A Note About Line Width

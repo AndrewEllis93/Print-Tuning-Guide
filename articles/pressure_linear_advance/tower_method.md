@@ -38,14 +38,14 @@ This is based off of the [:page_facing_up: Klipper Pressure Advance guide](https
 1.  Download and slice the [:page_facing_up: Klipper3d pressure advance tower STL](https://www.klipper3d.org/prints/square_tower.stl) with _your normal print settings (accelerations included)_. \
     The only modifications you should make are these:
 
-        - **120mm/s** external perimeter speed
-        - **1** perimeter
-        - **0%** infill
-        - **0** top layers
-        - **0 second** "minimum layer time" / "layer time goal" / "slow down if layer print time is below"
-            - Under filament cooling settings in PS/SS.
-            - You can use **ctrl+f** to find settings by name.
-        - **High fan speed**
+    - **120mm/s** external perimeter speed
+    - **1** perimeter
+    - **0%** infill
+    - **0** top layers
+    - **0 second** "minimum layer time" / "layer time goal" / "slow down if layer print time is below"
+        - Under filament cooling settings in PS/SS.
+        - You can use **ctrl+f** to find settings by name.
+    - **High fan speed**
 
 2.  Initiate the print.
 

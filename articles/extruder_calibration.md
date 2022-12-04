@@ -80,7 +80,7 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
 
         - ![](./images/extruder_calibration/ruler.png)
 
-5. Pull your filament as straight as you can against the ruler. Transfer the tape to it to mark 120mm.
+5. Pull your filament as straight as you can against the ruler. Transfer the tape to mark 120mm.
 
     - ![](./images/extruder_calibration/2.png) ![](./images/extruder_calibration/3.png)
 
@@ -133,15 +133,17 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
     ---
 
 9. With your new value activated, mark and extrude again. It often takes a few iterations to dial in.
-    - If you get different lengths in back-to-back tests, you have an **extruder issue** \
+    - When using the formulas above, make sure you're using your updated `rotation_distance` / e-steps value for the "current" value. Don't keep using the original value. 
+
+    - :warning: If you get different lengths in back-to-back tests, you have an **extruder issue** \
     (or, if printing hot, it could also be a hotend/nozzle obstruction.).
     
 10. Once you settle on a value, save it permanently:
 
     ---
     ![]({{ "/assets/img/klipper.png" | absolute_url }}) Klipper
-    - Find the `[extruder]` section in your printer.cfg. Note your current `rotation_distance`.
-    - Update your `rotation_distance` in your config and `RESTART`.
+    - Find the `[extruder]` section in your printer.cfg.
+    - Update your `rotation_distance` and `RESTART`.
 
     ---
     ![]({{ "/assets/img/marlin.png" | absolute_url }}) Marlin
@@ -155,4 +157,4 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
     ---
 
 11. ![]({{ "/assets/img/klipper_small.png" | absolute_url }}) Klipper only:
-    - If you did the test cold, set your `min_extrude_temp` in your `[extruder]` section back to its previous value.
+    - If you did the test cold, set your `min_extrude_temp` in your `[extruder]` section back to its previous value and `RESTART`.

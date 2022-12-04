@@ -1,24 +1,33 @@
 ---
 layout: default
-title: Introduction
+title: Welcome!
 nav_order: 1
 ---
 
-# Introduction
+# Welcome!
 
-This guide was originally written for the Voron community, but has since been expanded to work with most printers.
+This guide will help you tune your 3d printer from A to Z — and should work with most common printers and firmwares!
+
+I have spent a lot of time developing and testing the methods in this guide, and I also hope to dispel some common 3d printer [:page_facing_up: misconceptions and misinformation](./articles/misconceptions_misinformation.md).
+
+I hope for this guide to be the definitive reference, free of misinformation, snake oil, and wives' tales (that are unfortunately quite prevalent.) It can be hard to differentiate the good information from the bad.
+  - On that note, I'm always willing to revise my methods and opinions given new findings. If you have any such findings, or think I am perpetuating any misconceptions myself (I hope not!), please let me know!
 
 {: .compat}
 :dizzy: Each page has a pink banner at the top indicating its compatibility with different printers and firmwares.
 
-The main sections have all been updated to be more universal. There may be some Voron-specific notes here and there. 
+*This guide was originally written for the Voron community, so there may be some Voron-specific notes and troubleshooting pages here and there. The main pages have all been made universal (or close to it).*
 
 ## Notes
 
+- For issues, feedback, and contributions, please open a [:page_facing_up: GitHub issue](https://github.com/AndrewEllis93/Print-Tuning-Guide/issues).
+
+  - I can also be reached via Discord: [:page_facing_up: Ellis#4980](https://discordapp.com/users/207622442842062849)
+
+  - For troubleshooting & print help, please use the public channels. I get a lot of messages asking for troubleshooting help!
+
 - My SuperSlicer profiles are located [:page_facing_up: here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles).
 
-- If you have issues, comments, or suggestions about the guide, please let me know on GitHub issues or via Discord: [:page_facing_up: Ellis#4980](https://discordapp.com/users/207622442842062849)
-  - For issues **not directly related to the guide content itself**, or for troubleshooting & print help, please use the public help channels in the [:page_facing_up: Voron Discord](https://discord.gg/voron) (or the appropriate community for your printer).
 - You can find the bed models and textures I am using [:page_facing_up: here](https://github.com/VoronDesign/Voron-Extras/tree/main/Bed_Models). The bed texture I am using in some of the older screenshots is from [:page_facing_up: VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape)
 - Support my drinking habits:
   [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)

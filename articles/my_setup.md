@@ -1,7 +1,7 @@
 ---
 layout: default
 title: My Setup
-nav_order: 10
+nav_order: 11
 ---
 {% comment %} 
 # This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/my_setup.html).

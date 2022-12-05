@@ -18,14 +18,16 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 :dizzy: This page is generally compatible with **all printers.** Commands and setting locations are detailed for Klipper and Marlin.
 
 {: .prereqs}
->- You should do a rough [:page_facing_up: Z offset calibration](https://docs.vorondesign.com/build/startup/#initial--simple-process) first.
->
->- You should also [:page_facing_up: calibrate your extruder](./extruder_calibration.md) first.
->   - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
->
->- This section also assumes that you have *consistent* first layer squish, both across the entire build surface and between prints. 
+> - You should [:page_facing_up: calibrate your extruder](./extruder_calibration.md) first.
+> - This page is about **fine-tuning** your first layer squish. You should do a rough adjustment first:
+>    - **Basic i3-style printers**: Level your bed and get a rough nozzle height using paper. [:page_facing_up: Instructions](https://youtu.be/ypb1OUII9Nw)
+>   - ![]({{ "/assets/img/klipper_small.png" | absolute_url }}) **Klipper**: You should do a rough Z offset calibration first.
+>       - If using probe as endstop (also known as "virtual endstop"), see [:page_facing_up: here](https://www.klipper3d.org/Probe_Calibrate.html#calibrating-probe-z-offset).
+>           - If using dedicated Z endstop, follow the same instructions but use `Z_ENDSTOP_CALIBRATE` instead of `PROBE_CALIBRATE`.
+>       - ![]({{ "/assets/img/voron_small.png" | absolute_url }}) **Vorons**: See [:page_facing_up: here](https://docs.vorondesign.com/community/howto/120decibell/z_endstop_configuration.html#initial-calibration).
+> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Baby stepping must be [:page_facing_up: enabled in firmware](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/Marlin/Configuration_adv.h#L2057). (Most printers have it enabled by default).
 
-:bulb: See the [:page_facing_up: Thermal Drift](./troubleshooting/first_layer_squish_consistency_issues/thermal_drift.md) article, **even if you are not having any issues.** Thermal drift is in important thing to know about with larger enclosed printers.
+![]({{ "/assets/img/voron.png" | absolute_url }}) **Vorons**: See the [:page_facing_up: Thermal Drift](./troubleshooting/first_layer_squish_consistency_issues/thermal_drift.md) article, **even if you are not having any issues.** Thermal drift is in important thing to know about with larger enclosed printers.
 
 ---
 <details open markdown="block">
@@ -71,8 +73,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
         - **G-code**
             - `SET_GCODE_OFFSET A_ZDJUST=0.01 MOVE=1`
             - `SET_GCODE_OFFSET A_ZDJUST=-0.01 MOVE=1`
-    - ![]({{ "/assets/img/marlin.png" | absolute_url }}) **Marlin**
-        - This may have to be [:page_facing_up: enabled in firmware](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/Marlin/Configuration_adv.h#L2057). Most printers come with it enabled already.
+    - ![]({{ "/assets/img/marlin.png" | absolute_url }}) **Marlin**:
         - **LCD**
             - Under the "Tune" menu (may only appear while printing), look for "Babystep Z".
         - **G-code**

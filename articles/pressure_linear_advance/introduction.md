@@ -13,20 +13,19 @@ grand_parent: Tuning
 
 ---
 
+:bulb: This guide will call it "pressure advance", or "PA".
+
+- ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin** calls it "Linear Advance", but it's the exact same thing.
+    - The only difference is that Marlin's linear advance does not have a "smooth time" setting.
+
+---
+
 {: .compat}
 :dizzy: This page is compatible with Klipper, Marlin, and RepRapFirmware.
 
 {: .prereqs}
->You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
->- ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) [:page_facing_up: Marlin instructions](https://www.3dmakerengineering.com/blogs/3d-printing/estep-calibration)
-
----
-
-:bulb: This guide will call it "pressure advance", or "PA".
-
-- "Linear advance", or "LA" is the **same thing**, just Marlin's version of it.
-
-    - The only difference is that Marlin's linear advance does not have a "smooth time" setting.
+> - You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Linear advance must be [:page_facing_up: enabled in firmware](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/Marlin/Configuration_adv.h#L2104). Not all printers have it enabled by default. 
 
 ---
 <details open markdown="block">
@@ -62,7 +61,7 @@ Ideally, you would have a straight line.
 In reality, however, this happens:
 
 - ![](./images/introduction/pa_graph_off.png)\
-<sup>*(Source: :page_facing_up: https://marlinfw.org/assets../images/features/lin_advance/k-factor_low.png)*</sup>\
+<sup>[Source](https://marlinfw.org/assets/images/features/lin_advance/k-factor_low.png)</sup>\
 ![](./images/introduction/pa_off_example.png)
 
 #### Explanation

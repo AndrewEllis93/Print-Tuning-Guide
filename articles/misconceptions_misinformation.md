@@ -23,7 +23,10 @@ This is just a list of things that I often see floating around that are, in my o
 
 ## Two 0.4mm Perimeters = 0.8mm
 
-(The title is just an example, this of course applies to any line width or perimeter count. I'm using 0.4mm for simplicity, even though I generally recommend printing line widths larger than nozzle diameter)
+The title is just an example, this applies to any line width or perimeter count.
+
+- I'm using 0.4mm for simplicity, even though I generally recommend printing line widths larger than nozzle diameter.
+
 
 Two 0.4mm perimeters **does not equal 0.8mm.**
 
@@ -71,25 +74,27 @@ Please excuse the upcoming vomit I used to bodge this table's widths/spacing
 
     - For example, the difference between 0.42mm and 0.4mm, an only 0.**0**2mm difference, is about **5%**.
 
-        - **That's a huge adjustment!** It's very easy to measure 0.02mm off due to consumer-grade calipers, where you measure, how much layer wobble you have, how much pressure you use, the diameter fluctuations of your filament what you ate for breakfast, when you last called your mother, etc, etc.
+        - **That's a huge adjustment!** It's very easy to measure 0.02mm off - due to consumer-grade calipers, where you measure, how much layer wobble you have, how much pressure you use, the diameter fluctuations of your filament, what you ate for breakfast, etc...
 
-            - You should always make dimensional adjustments based on **larger objects!**\*
+            - You should always make dimensional adjustments based on **larger objects**, where minor errors are proportionally much smaller.*
 
             \* *I actually don't like adjusting extrusion multiplier based on measurements at all. But that's more debatable.\
         In my opinion, it's best to print an object with 100% solid infill and tune extrusion multiplier until it fills perfectly without going over. See [:page_facing_up: here](./extrusion_multiplier.md) for specific instructions. Then adjust things like shrinkage compensation in the slicer.\
-        I don't think it makes sense to overextrude or underextrude to compensate for dimensions.*
+        I don't think it makes sense to have a gappy or rough print just to compensate for dimensions.*
 
 **This method is, much to my chagrin, extremely prevalent:**
 - [https://teachingtechyt.github.io/calibration.html#flow](https://teachingtechyt.github.io/calibration.html#flow)\
 You may notice this guide popping up a lot on this page, as I add more sections....
 - [https://help.prusa3d.com/article/extrusion-multiplier-calibration_2257](https://help.prusa3d.com/article/extrusion-multiplier-calibration_2257)\
 Even Prusa recommends it!
-- https://3dprintbeginner.com/flow-rate-calibration/
+- [https://3dprintbeginner.com/flow-rate-calibration/](https://3dprintbeginner.com/flow-rate-calibration/)
 
 <sup>Send help. I'm going insane.</sup>
 
 
-## "You Don't Need to Tune Extrusion Multiplier"
+## "You Shouldn't Tune Extrusion Multiplier"
+
+The gap between theory and reality is often larger in reality than it is in theory.
 
 More info to come...
 
@@ -108,8 +113,7 @@ More info to come...
 
 ## "You Should use 100% Extrusion Multiplier"
 
-- https://youtu.be/YPAXeBuq9qU?t=869 *(this entire video physically hurts me)*
-
+- https://youtu.be/YPAXeBuq9qU?t=869
 
 ## Calibrating Belted Axis Steps
 

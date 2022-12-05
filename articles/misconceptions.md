@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Misconceptions & Misinformation
+title: Misconceptions & Bad Advice
 nav_order: 9
 ---
 
-# Misconceptions & Misinformation
+# Misconceptions & Bad Advice
 {: .no_toc }
 
 ---
@@ -19,7 +19,7 @@ nav_order: 9
 
 ---
 
-This is just a list of things that I often see floating around that are, in my opinion, misconceptions or misinformation.
+This is just a list of things that I often see floating around that are, in my opinion, misconceptions or bad advice.
 
 ## Two 0.4mm Perimeters = 0.8mm
 

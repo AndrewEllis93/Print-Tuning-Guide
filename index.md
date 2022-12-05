@@ -8,7 +8,7 @@ nav_order: 1
 
 This guide will help you tune your 3d printer from A to Z — and should work with most common printers and firmwares!
 
-I have spent a lot of time developing and testing the methods in this guide, and I also hope to dispel some common 3d printer [:page_facing_up: misconceptions and misinformation](./articles/misconceptions_misinformation.md).
+I have spent a lot of time developing and testing the methods in this guide, and I also hope to dispel some common 3d printer [:page_facing_up: misconceptions and bad advice](./articles/misconceptions.md).
 
 I hope for this guide to be free of misinformation, snake oil, and wives' tales (that are unfortunately quite prevalent.) It can be hard to differentiate the good information from the bad.
 

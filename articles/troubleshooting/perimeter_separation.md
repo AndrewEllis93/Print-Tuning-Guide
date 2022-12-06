@@ -29,7 +29,7 @@ parent: Troubleshooting
 
 Adapted from [:page_facing_up: **bythorsthunder**](https://discordapp.com/users/830305218679144509)'s Discord pin. Thanks!
 
-![](./images/perimeter_separation/perimeter_separation.jpg)
+[![](./images/perimeter_separation/perimeter_separation.jpg)](./images/perimeter_separation/perimeter_separation.jpg){:target="_blank"}
 
 
 ## If It Happens Primarily on Lower Layers
@@ -39,9 +39,9 @@ Adapted from [:page_facing_up: **bythorsthunder**](https://discordapp.com/users/
     - Reduce the amount, disable it, or fade it (SS only).
     - Having this set too high (especially when combined with bottom chamfers) can cause perimeters to **print over nothing.**
         - **Too high:**\
-        ![](./images/perimeter_separation/comp_on.png)
+        [![](./images/perimeter_separation/comp_on.png)](./images/perimeter_separation/comp_on.png){:target="_blank"}
         - **Off:**\
-        ![](./images/perimeter_separation/comp_off.png)
+        [![](./images/perimeter_separation/comp_off.png)](./images/perimeter_separation/comp_off.png){:target="_blank"}
     - **SuperSlicer:** "XY first layer compensation" (`first_layer_size_compensation`)
         - You can also increase `first_layer_size_compensation_layers`, which gradually fades the compensation out over X number of layers.
     - **Prusa Slicer:** "Elephant foot compensation" (`elefant_foot_compensation` - yes it's misspelled)

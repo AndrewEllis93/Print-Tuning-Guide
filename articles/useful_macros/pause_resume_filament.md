@@ -11,7 +11,7 @@ parent: Useful Macros
 
 {% endcomment %}
 
-# Pause/Resume & Filament Sensors
+# Pause/Resume, Filament Swaps & Sensors
 {: .no_toc }
 
 ---
@@ -161,7 +161,7 @@ gcode:
 
 If you use Octoprint, put these in your "GCODE Script" section to enable the UI buttons to work properly.
 
-- ![](./images/Octoprint-Gcode-Scripts.png)
+- [![](./images/Octoprint-Gcode-Scripts.png)](./images/Octoprint-Gcode-Scripts.png){:target="_blank"}
 
 ### M600 (Filament Change) Alias
 

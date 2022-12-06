@@ -27,12 +27,12 @@ nav_order: 2
 
 This is what your prints can look like!
 
-- ![](./images/setting_expectations/Setting_Expectations_DirectLight.jpg) 
+- [![](./images/setting_expectations/Setting_Expectations_DirectLight.jpg)](./images/setting_expectations/Setting_Expectations_DirectLight.jpg){:target="_blank"} 
 
 
 Or, wait....
 
-- ![](./images/setting_expectations/Setting_Expectations_HarshLight.jpg) 
+- [![](./images/setting_expectations/Setting_Expectations_HarshLight.jpg)](./images/setting_expectations/Setting_Expectations_HarshLight.jpg){:target="_blank"} 
 
 Ellis' prints look like crap?
 
@@ -68,7 +68,7 @@ Think of it like the below (arbitrary) graph.
 
 Tuning efforts at the beginning (this tuning guide!) will have a much higher relative quality increase, but you get diminishing returns the closer you get to perfection. 3D printing just has an unfortunate side effect of showing off those imperfections.
 
-![](./images/setting_expectations/AnalogyGraph.png) 
+[![](./images/setting_expectations/AnalogyGraph.png)](./images/setting_expectations/AnalogyGraph.png){:target="_blank"} 
 
 My guide should (hopefully) get you somewhere around the 5 or 10.
 

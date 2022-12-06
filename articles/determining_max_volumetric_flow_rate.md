@@ -38,7 +38,7 @@ You can use this volumetric flow rate **to determine how fast your hotend/extrud
     - This means that you can change layer heights, nozzle sizes, line widths, and speeds without worrying about outrunning your hotend. 
     - You can also set any print speeds to a high "absolute maximum" speed (like infill) and let it be limited by the volumetric flow limit. This essentially prints at the maximum speed your hotend will allow:
         - This is utilized by my published SuperSlicer profile (see its [:page_facing_up: "Volumetric Speed Limiting"](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles#volumetric-speed-limiting) section for more information.)
-        - ![](./images/determining_max_volumetric_flow_rate/volumetric-ss.png)
+        - [![](./images/determining_max_volumetric_flow_rate/volumetric-ss.png)](./images/determining_max_volumetric_flow_rate/volumetric-ss.png){:target="_blank"}
         - :warning: **In Prusa Slicer, this must be set in the filament settings instead.** The setting in the "auto speed" section only applies in specific circumstances in PS.
 ## Approximate Values
 
@@ -136,15 +136,15 @@ You will follow a similar process to extruder calibration.
 
         - ABS typically achieves high flow rates. Other materials may cap out at a lower flow rate.
 
-        - ![](./images/determining_max_volumetric_flow_rate/volumetric-default.png)
+        - [![](./images/determining_max_volumetric_flow_rate/volumetric-default.png)](./images/determining_max_volumetric_flow_rate/volumetric-default.png){:target="_blank"}
 
         - Then, in the filament profiles, put the higher per-filament value.
         
             - Example ABS profile:\
-            ![](./images/determining_max_volumetric_flow_rate/volumetric-faster.png)
+            [![](./images/determining_max_volumetric_flow_rate/volumetric-faster.png)](./images/determining_max_volumetric_flow_rate/volumetric-faster.png){:target="_blank"}
 
             - Example speed ABS profile with elevated temperatures:\
-            ![](./images/determining_max_volumetric_flow_rate/volumetric-fastest.png)
+            [![](./images/determining_max_volumetric_flow_rate/volumetric-fastest.png)](./images/determining_max_volumetric_flow_rate/volumetric-fastest.png){:target="_blank"}
 
     - Cura [:page_facing_up: has not yet added this feature](https://github.com/Ultimaker/Cura/issues/5248). You will have to manually determine your max print speeds for each line width / layer height using the formulas above. You may need different profiles for different materials/temps (or just use a moderate default).
     
@@ -155,7 +155,7 @@ Stephan from CNC Kitchen did some flow rate testing. He has a great article and 
 
 I don't want to steal his work, so here's an artist's rendition:
 
-![](./images/determining_max_volumetric_flow_rate/flow-dropoff.png) 
+[![](./images/determining_max_volumetric_flow_rate/flow-dropoff.png)](./images/determining_max_volumetric_flow_rate/flow-dropoff.png){:target="_blank"} 
 
 *(you should really just visit the link)*
 

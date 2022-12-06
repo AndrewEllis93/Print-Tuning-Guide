@@ -11,6 +11,6 @@ These cubes are the same, but simply have numbers imprinted on the bottom to hel
 
 You still have to set the extrusion multiplier for each in your slicer.
 
-![](/./images/example_slicer.png)
+[![](/./images/example_slicer.png)](/./images/example_slicer.png){:target="_blank"}
 
-![](./images/example_printed.png)
+[![](./images/example_printed.png)](./images/example_printed.png){:target="_blank"}

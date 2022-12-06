@@ -53,7 +53,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
         - Choose a patch that matches your first layer height.\
         *(`First_Layer_Patch-0.25mm.stl` if you chose to follow step 1)*
 
-    - ![](./images/first_layer_squish/FirstLayer-Plate.png)  
+    - [![](./images/first_layer_squish/FirstLayer-Plate.png)](./images/first_layer_squish/FirstLayer-Plate.png){:target="_blank"}  
         - Tip: in PS/PSS, you can right-click the "arrange" button and set the distance to a large value.*
         - ![image](https://user-images.githubusercontent.com/56029/196033444-4cd875ef-66a7-4b07-bcae-727f2f26da06.png)\
         \* *To exceed 100mm, either click the edit button on the right side, or ctrl+click the bar.*
@@ -67,9 +67,9 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
         - **LCD**
             - Under the "Tune" menu (may only appear while printing), look for "Offset Z".
         - **Mainsail**
-            - ![](./images/first_layer_squish/babystep_mainsail.png)
+            - [![](./images/first_layer_squish/babystep_mainsail.png)](./images/first_layer_squish/babystep_mainsail.png){:target="_blank"}
         - **Fluidd**
-            - ![](./images/first_layer_squish/babystep_fluidd.png)
+            - [![](./images/first_layer_squish/babystep_fluidd.png)](./images/first_layer_squish/babystep_fluidd.png){:target="_blank"}
         - **G-code**
             - `SET_GCODE_OFFSET A_ZDJUST=0.01 MOVE=1`
             - `SET_GCODE_OFFSET A_ZDJUST=-0.01 MOVE=1`
@@ -95,25 +95,25 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
             - You shouldn't see any gaps* between the lines.
                 - It's fine to have some very small pinholes where the infill meets the     perimeters.
             - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal.
-            - ![](./images/first_layer_squish/FirstLayer-Squares-2.png)
-            - ![](./images/first_layer_squish/FirstLayer-Squares-2-Annotated.png)
+            - [![](./images/first_layer_squish/FirstLayer-Squares-2.png)](./images/first_layer_squish/FirstLayer-Squares-2.png){:target="_blank"}
+            - [![](./images/first_layer_squish/FirstLayer-Squares-2-Annotated.png)](./images/first_layer_squish/FirstLayer-Squares-2-Annotated.png){:target="_blank"}
 
         - **Bottom Surface**
             - You should not have any gaps between the lines.
             - You should still be able to clearly see the lines at the center. They should not be fading or invisible.
                 - It's normal for the lines to fade a bit near the edges/corners.
             - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal.
-            - ![](./images/first_layer_squish/FirstLayer-Squares-1-Annotated.png)
+            - [![](./images/first_layer_squish/FirstLayer-Squares-1-Annotated.png)](./images/first_layer_squish/FirstLayer-Squares-1-Annotated.png){:target="_blank"}
     - #### Textured Build Surface
         - **Top Surface**
             - Follow the same guidance as for smooth build surfaces (above). You can see hairs/lumps with too much squish, and gaps with not enough squish.
-            - ![](./images/first_layer_squish/FirstLayer-Squares-Textured.png)
+            - [![](./images/first_layer_squish/FirstLayer-Squares-Textured.png)](./images/first_layer_squish/FirstLayer-Squares-Textured.png){:target="_blank"}
         - **Bottom Surface**
             - **The lines will not be as visible as on a smooth build surface.**
                 - *Note: this doesn't mean they should be **invisible**.*
             - As with smooth build surfaces, you should not have any gaps between the lines.
             - With textured, it's a bit easier to tell squish using the top surface rather than the bottom surface.
-            - ![](./images/first_layer_squish/FirstLayer-Squares-Textured-2.jpg)
+            - [![](./images/first_layer_squish/FirstLayer-Squares-Textured-2.jpg)](./images/first_layer_squish/FirstLayer-Squares-Textured-2.jpg){:target="_blank"}
 
 5. Once you are happy with your squish, cancel the print and then save your new offset with one of the below methods:
     - ![]({{ "/assets/img/klipper.png" | absolute_url }}) **Klipper**
@@ -142,24 +142,24 @@ You should still clearly be able to see the lines. If it's completely smooth, yo
 If you see gaps between the lines, you need more squish.
 
 ### Good Squish
-- ![](./images/first_layer_squish/FirstLayer-PrintExample.jpg) 
+- [![](./images/first_layer_squish/FirstLayer-PrintExample.jpg)](./images/first_layer_squish/FirstLayer-PrintExample.jpg){:target="_blank"} 
 
 
 ### Too Much Squish
 
 - Can't see any lines, or the lines are starting to fade (smooth PEI):
 
-    - ![](./images/first_layer_squish/FirstLayer-TooMuchSquish2.png) ![](./images/first_layer_squish/FirstLayer-TooMuchSquish1.png) 
+    - [![](./images/first_layer_squish/FirstLayer-TooMuchSquish2.png)](./images/first_layer_squish/FirstLayer-TooMuchSquish2.png){:target="_blank"} [![](./images/first_layer_squish/FirstLayer-TooMuchSquish1.png)](./images/first_layer_squish/FirstLayer-TooMuchSquish1.png){:target="_blank"} 
 
 - Wavy patterns appear:
 
-    - ![](./images/first_layer_squish/FirstLayer-TooMuchSquish3.png) ![](./images/first_layer_squish/FirstLayer-TooMuchSquish4.png) 
+    - [![](./images/first_layer_squish/FirstLayer-TooMuchSquish3.png)](./images/first_layer_squish/FirstLayer-TooMuchSquish3.png){:target="_blank"} [![](./images/first_layer_squish/FirstLayer-TooMuchSquish4.png)](./images/first_layer_squish/FirstLayer-TooMuchSquish4.png){:target="_blank"} 
 
 
 ### Not Enough Squish
 - There are gaps between the lines (you can see through to the next layer):
 
-    - ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish1.png) ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish2.png) ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish3.png) 
+    - [![](./images/first_layer_squish/FirstLayer-NotEnoughSquish1.png)](./images/first_layer_squish/FirstLayer-NotEnoughSquish1.png){:target="_blank"} [![](./images/first_layer_squish/FirstLayer-NotEnoughSquish2.png)](./images/first_layer_squish/FirstLayer-NotEnoughSquish2.png){:target="_blank"} [![](./images/first_layer_squish/FirstLayer-NotEnoughSquish3.png)](./images/first_layer_squish/FirstLayer-NotEnoughSquish3.png){:target="_blank"} 
 
 ## Further Fine-Tuning
 
@@ -170,9 +170,9 @@ If you see gaps between the lines, you need more squish.
 - This cube needs just a tiny bit more squish.\
 You can see very slight gapping / shadows between the perimeters and some areas of the infill. The corners are also starting to pull away a bit.
 
-- ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4.png)
+- [![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4.png)](./images/first_layer_squish/FirstLayer-NotEnoughSquish4.png){:target="_blank"}
 
 - **Better!**
-    - ![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4-Better.png)
+    - [![](./images/first_layer_squish/FirstLayer-NotEnoughSquish4-Better.png)](./images/first_layer_squish/FirstLayer-NotEnoughSquish4-Better.png){:target="_blank"}
 
 

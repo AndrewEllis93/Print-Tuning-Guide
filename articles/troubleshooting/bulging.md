@@ -36,16 +36,16 @@ It can also help with extrusion / layer consistency.
 - PS/SS: `external_perimeter_first`
 - Cura: "Wall Ordering" -> "Outside To Inside"
 
-- ![](./images/bulging/external_first_1.png) 
-- ![](./images/bulging/external_first_2.png) 
+- [![](./images/bulging/external_first_1.png)](./images/bulging/external_first_1.png){:target="_blank"} 
+- [![](./images/bulging/external_first_2.png)](./images/bulging/external_first_2.png){:target="_blank"} 
 
 - :warning: This can negatively affect *extreme* overhangs, and occasionally cause some other oddities, so just keep it in mind when troubleshooting. It's generally okay for daily use, though.
-    - ![](./images/bulging/external_first_3.png) 
+    - [![](./images/bulging/external_first_3.png)](./images/bulging/external_first_3.png){:target="_blank"} 
 
 ## Bulging Layers
 
-- ![](./images/bulging/Bulging.png) 
-- ![](./images/bulging/Bulging2.png) 
+- [![](./images/bulging/Bulging.png)](./images/bulging/Bulging.png){:target="_blank"} 
+- [![](./images/bulging/Bulging2.png)](./images/bulging/Bulging2.png){:target="_blank"} 
 
 **Possible Solutions**
 - Printing [:pushpin: External Perimeters First](#external-perimeters-first) can help a lot with this particular type of bulging.
@@ -53,9 +53,9 @@ It can also help with extrusion / layer consistency.
 - Reduce perimeter accelerations.
 
 ## Bulges at STL Vertices
-- ![](./images/bulging/Vertex-Bulges.png)
+- [![](./images/bulging/Vertex-Bulges.png)](./images/bulging/Vertex-Bulges.png){:target="_blank"}
 
-- ![](./images/bulging/Vertex-Bulges-2.png) 
+- [![](./images/bulging/Vertex-Bulges-2.png)](./images/bulging/Vertex-Bulges-2.png){:target="_blank"} 
 
 **Possible Solutions**
 - Your square corner velocity or jerk may be too low (or too high!)
@@ -64,11 +64,11 @@ It can also help with extrusion / layer consistency.
 - Check over your printer axes for mechanical issues. Move the toolhead/bed by hand and see if anything feels off.
 
 ## Bulging Around Features
-- ![](./images/bulging/feature_bulging.png) ![](./images/bulging/feature-bulging-2.png) 
+- [![](./images/bulging/feature_bulging.png)](./images/bulging/feature_bulging.png){:target="_blank"} [![](./images/bulging/feature-bulging-2.png)](./images/bulging/feature-bulging-2.png){:target="_blank"} 
 
 These types of bulges are often caused by **overextrusion of the supporting solid infill**:
 
-- ![](./images/bulging/feature_bulging-fill.png) 
+- [![](./images/bulging/feature_bulging-fill.png)](./images/bulging/feature_bulging-fill.png){:target="_blank"} 
 
 First of all, you should tune your [:page_facing_up: pressure advance](../pressure_linear_advance/introduction.md) and [:page_facing_up: extrusion multiplier](../extrusion_multiplier.md) using this guide's methods.
 
@@ -87,24 +87,24 @@ When you have overextrusion issues in small areas, it greatly contributes to thi
     - The page describes applying it to the top layer. You would have to disable "only retract when crossing perimeters" for it to apply to this solid infill too. That can slow down your print, however.
     
 ## Bulging Patterns on Overhangs (SS)
-- ![](./images/bulging/AboveBridgeFlow-1.png)
-- ![](./images/bulging/AboveBridgeFlow-2.png)
-- ![](./images/bulging/AboveBridgeFlow-3.png)
+- [![](./images/bulging/AboveBridgeFlow-1.png)](./images/bulging/AboveBridgeFlow-1.png){:target="_blank"}
+- [![](./images/bulging/AboveBridgeFlow-2.png)](./images/bulging/AboveBridgeFlow-2.png){:target="_blank"}
+- [![](./images/bulging/AboveBridgeFlow-3.png)](./images/bulging/AboveBridgeFlow-3.png){:target="_blank"}
 
 Some SuperSlicer profiles have "above the bridges" flow set to greater than 100%. This can cause the issues you see above. 
 - There are three solutions:
 
     - **Reduce "above the bridges" flow to back to 100%**
         - **You should definitely do this**, in my opinion. 110% "above the bridges" flow can also cause [:page_facing_up: other issues](https://github.com/supermerill/SuperSlicer/issues/3410). The other two options can be used in addition, but are more of a preference. 
-        - ![](./images/bulging/AboveBridgeFlow-Reset.png)
+        - [![](./images/bulging/AboveBridgeFlow-Reset.png)](./images/bulging/AboveBridgeFlow-Reset.png){:target="_blank"}
         
     - **Set "threshold for bridge speed and fan" to 0**
         - This totally prevents SS from applying bridging settings to overhangs.
-        - ![](./images/bulging/AboveBridgeFlow-DisableOverhang.png)
+        - [![](./images/bulging/AboveBridgeFlow-DisableOverhang.png)](./images/bulging/AboveBridgeFlow-DisableOverhang.png){:target="_blank"}
 
     - **Set "threshold for bridge flow" to 0**
         - This prevents SS from applying *bridging flow* settings to overhangs, but still applies bridging speeds/fan settings.
-        - ![](./images/bulging/AboveBridgeFlow-DisableOverhangFlow.png)
+        - [![](./images/bulging/AboveBridgeFlow-DisableOverhangFlow.png)](./images/bulging/AboveBridgeFlow-DisableOverhangFlow.png){:target="_blank"}
 
 - This can also occur above where the print has lifted from the build surface (it curls up into the nozzle a bit, and the plastic no longer has space to go, so squishes outwards)
 - If these do not fix it, it might instead be an [:page_facing_up: overheating issue.](../cooling_and_layer_times.md).

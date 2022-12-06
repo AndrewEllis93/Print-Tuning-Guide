@@ -102,7 +102,7 @@ M104 S0 ; Stops PS/SS from sending temp waits separately
 M140 S0
 PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} CHAMBER=[chamber_temperature]
 ```
-![](./images/passing_slicer_variables/PassingVariables-SS.png) 
+[![](./images/passing_slicer_variables/PassingVariables-SS.png)](./images/passing_slicer_variables/PassingVariables-SS.png){:target="_blank"} 
 
 #### Prusa Slicer 
 (3 lines)
@@ -114,17 +114,17 @@ M104 S0 ; Stops PS/SS from sending temp waits separately
 M140 S0
 PRINT_START BED=[first_layer_bed_temperature] HOTEND=[first_layer_temperature[initial_extruder]]
 ```
-![](./images/passing_slicer_variables/PassingVariables-PS.png) 
+[![](./images/passing_slicer_variables/PassingVariables-PS.png)](./images/passing_slicer_variables/PassingVariables-PS.png){:target="_blank"} 
 
 #### Cura
 (1 line)
 ```
 PRINT_START BED={material_bed_temperature_layer_0} HOTEND={material_print_temperature_layer_0} CHAMBER={build_volume_temperature}
 ```
-![](./images/passing_slicer_variables/PassingVariables-Cura.png) 
+[![](./images/passing_slicer_variables/PassingVariables-Cura.png)](./images/passing_slicer_variables/PassingVariables-Cura.png){:target="_blank"} 
 
 ### Visualization
 
 It's understandably hard to wrap your head around at first. Maybe a visualization will help clear things up:
 
-![](./images/passing_slicer_variables/varflow_dark.png) 
+[![](./images/passing_slicer_variables/varflow_dark.png)](./images/passing_slicer_variables/varflow_dark.png){:target="_blank"} 

@@ -60,9 +60,9 @@ Ideally, you would have a straight line.
 
 In reality, however, this happens:
 
-- ![](./images/introduction/pa_graph_off.png)\
+- [![](./images/introduction/pa_graph_off.png)](./images/introduction/pa_graph_off.png){:target="_blank"}\
 <sup>[Source](https://marlinfw.org/assets/images/features/lin_advance/k-factor_low.png)</sup>\
-![](./images/introduction/pa_off_example.png)
+[![](./images/introduction/pa_off_example.png)](./images/introduction/pa_off_example.png){:target="_blank"}
 
 #### Explanation
 - *The numbers will refer to the image above.*
@@ -83,7 +83,7 @@ During decelerations it does the opposite - it pulls back (kind of like an early
 
 **Compare this image to the above image.** Notice how PA tries to cancel out those unwanted effects.
 
-![](./images/introduction/pa_graph_annotated.png)\
+[![](./images/introduction/pa_graph_annotated.png)](./images/introduction/pa_graph_annotated.png){:target="_blank"}\
 <sup>*(Generated using Klipper's [:page_facing_up: graph_extruder.py](https://github.com/Klipper3d/klipper/blob/master/scripts/graph_extruder.py).)*</sup>
 
 Keep in mind that pressure advance only changes the **distribution** of material, not the **amount** of material.
@@ -94,7 +94,7 @@ At lower values, you can see less material during the accelerations, and more at
 
 At higher values, you can see more material during accelerations, and less material in the corners (corner gaps).
 
-![](./images/introduction/PA-Squares.png) 
+[![](./images/introduction/PA-Squares.png)](./images/introduction/PA-Squares.png){:target="_blank"} 
 
 ## Tuning
 There are three approaches:
@@ -114,9 +114,9 @@ Still, it's good to know what to look out for:
 ### Pressure Advance is Too High
 - Divots or underextrusion at corners and line ends.
 - Gaps between perimeters at corners.
-- ![](./images/introduction/PA-High-1.png) 
+- [![](./images/introduction/PA-High-1.png)](./images/introduction/PA-High-1.png){:target="_blank"} 
 
 ### Pressure Advance is Too Low
 - Bulging at corners and line ends.
 - Gaps between straight line perimeters.
-- ![](./images/introduction/PA-Low-1.png) 
+- [![](./images/introduction/PA-Low-1.png)](./images/introduction/PA-Low-1.png){:target="_blank"} 

@@ -98,30 +98,30 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up: test_prints fold
     - **SuperSlicer**
         1. **:warning: Set your EM to 1 in the filament settings.** \
         The per-object EM settings are **multiplied by** this value.\
-        ![](./images/extrusion_multiplier/EM-1.png)
+        [![](./images/extrusion_multiplier/EM-1.png)](./images/extrusion_multiplier/EM-1.png){:target="_blank"}
 
         2. Import the cube STL. Right-click it and select add settings > filament.\
-        ![](./images/extrusion_multiplier/EM-PerObject.png)
+        [![](./images/extrusion_multiplier/EM-PerObject.png)](./images/extrusion_multiplier/EM-PerObject.png){:target="_blank"}
 
         3. Check "extrusion multiplier".\
-        ![](./images/extrusion_multiplier/EM-PerObject-2.png)
+        [![](./images/extrusion_multiplier/EM-PerObject-2.png)](./images/extrusion_multiplier/EM-PerObject-2.png){:target="_blank"}
         
         6. Set your EM for each test cube.\
-        ![](./images/extrusion_multiplier/EM-PerObject-3.png)
+        [![](./images/extrusion_multiplier/EM-PerObject-3.png)](./images/extrusion_multiplier/EM-PerObject-3.png){:target="_blank"}
 
         7. Save the project for reuse later.\
-        ![](./images/extrusion_multiplier/EM-Save.png)
+        [![](./images/extrusion_multiplier/EM-Save.png)](./images/extrusion_multiplier/EM-Save.png){:target="_blank"}
         
     - **Cura**
 
         1. Select each cube and enable the "flow" setting.\
-        ![](./images/extrusion_multiplier/EM-PerObject-Cura.png)
+        [![](./images/extrusion_multiplier/EM-PerObject-Cura.png)](./images/extrusion_multiplier/EM-PerObject-Cura.png){:target="_blank"}
 
         3. Set the EM on each.\
-        ![](./images/extrusion_multiplier/EM-SetFlow-Cura.png)
+        [![](./images/extrusion_multiplier/EM-SetFlow-Cura.png)](./images/extrusion_multiplier/EM-SetFlow-Cura.png){:target="_blank"}
 
         4. Save the project for reuse later.\
-        ![](./images/extrusion_multiplier/EM-Save-Cura.png)
+        [![](./images/extrusion_multiplier/EM-Save-Cura.png)](./images/extrusion_multiplier/EM-Save-Cura.png){:target="_blank"}
 
 2. Print it!
 
@@ -143,7 +143,8 @@ You will get better at this through experience.
 
 Here you'll narrow down a general range to work in.
 
-![](./images/extrusion_multiplier/EMPrints-Coarse-Annotated.png) 
+<sup>*Click the image to open. Ctrl + scroll up / down to zoom.*</sup>\
+[![](./images/extrusion_multiplier/EMPrints-Coarse-Annotated.png)](./images/extrusion_multiplier/EMPrints-Coarse-Annotated.png){:target="_blank"} 
 
 The center cube is looking pretty close.
 
@@ -152,7 +153,8 @@ The center cube is looking pretty close.
 
 Now you can fine-tune in 0.5% intervals.
 
-![](./images/extrusion_multiplier/EMPrints-Fine.png) 
+<sup>*Click the image to open. Ctrl + scroll up / down to zoom.*</sup>\
+[![](./images/extrusion_multiplier/EMPrints-Fine.png)](./images/extrusion_multiplier/EMPrints-Fine.png){:target="_blank"} 
 
 In this example, I chose the second cube, as this particular filament started to look nice and shiny with no gapping. Your particular filament may not shine like this.
 
@@ -160,9 +162,9 @@ In this example, I chose the second cube, as this particular filament started to
 For clarity, you are **not** tuning so the lines are "just touching".\
 Your infill lines should overlap a bit, and **fill the print in as much as possible without going over**.
 
-![](./images/extrusion_multiplier/overlap.png)
+[![](./images/extrusion_multiplier/overlap.png)](./images/extrusion_multiplier/overlap.png){:target="_blank"}
 
-<sup>Source: https://help.prusa3d.com/article/layers-and-perimeters_1748</sup>
+<sup>[Source](https://help.prusa3d.com/article/layers-and-perimeters_1748)</sup>
 
 Some find magnification to help, but I don't personally find it necessary. 
 
@@ -171,7 +173,7 @@ Some find magnification to help, but I don't personally find it necessary.
 
 Holding it up with the infill lines pointing towards a light source can help. This cube's EM is too low - you can see between the lines.
 
-![](./images/extrusion_multiplier/em-light.png) 
+[![](./images/extrusion_multiplier/em-light.png)](./images/extrusion_multiplier/em-light.png){:target="_blank"} 
 ### Slightly Too Low
 {: .no_toc }
 
@@ -179,7 +181,7 @@ These cubes need a little more EM - you can see slight gapping / valleys / shado
 
 A bit too high is better than a bit too low.
 
-![](./images/extrusion_multiplier/EMPrints-SlightlyLow.png)
+[![](./images/extrusion_multiplier/EMPrints-SlightlyLow.png)](./images/extrusion_multiplier/EMPrints-SlightlyLow.png){:target="_blank"}
 
 ## Further Tips
 **When assessing extrusion multiplier, *always* look at the widest areas in a given print.** 
@@ -187,16 +189,16 @@ A bit too high is better than a bit too low.
 It's fairly normal for [:page_facing_up: smaller infill areas to look a bit overextruded](./troubleshooting/small_infill_areas_overextruded.md) *(though there are a few things that can help a bit in that link- that's another topic)*
 
 In this example, I would look at the circled area. While some of the smaller areas look overextruded, the overall EM is actually pretty good.
-- ![](./images/extrusion_multiplier/em-wheretolook.png) 
+- [![](./images/extrusion_multiplier/em-wheretolook.png)](./images/extrusion_multiplier/em-wheretolook.png){:target="_blank"} 
 
 ## Tuned Print Examples
 (ABS)
-- ![](./images/extrusion_multiplier/zoom.png) 
-- ![](./images/extrusion_multiplier/EMPrint-Example4.png) 
+- [![](./images/extrusion_multiplier/zoom.png)](./images/extrusion_multiplier/zoom.png){:target="_blank"} 
+- [![](./images/extrusion_multiplier/EMPrint-Example4.png)](./images/extrusion_multiplier/EMPrint-Example4.png){:target="_blank"} 
 
 (eSun ABS+ - more matte)
-- ![](./images/extrusion_multiplier/EMPrint-Example2.jpg) 
-- ![](./images/extrusion_multiplier/EMPrint-Example3.jpg) 
+- [![](./images/extrusion_multiplier/EMPrint-Example2.jpg)](./images/extrusion_multiplier/EMPrint-Example2.jpg){:target="_blank"} 
+- [![](./images/extrusion_multiplier/EMPrint-Example3.jpg)](./images/extrusion_multiplier/EMPrint-Example3.jpg){:target="_blank"} 
 
 ---
 

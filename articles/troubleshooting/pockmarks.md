@@ -14,7 +14,7 @@ parent: Troubleshooting
 :dizzy: This page is compatible with all printers.
 
 ---
-![](./images/pockmarks/Pockmarks.png)
+[![](./images/pockmarks/Pockmarks.png)](./images/pockmarks/Pockmarks.png){:target="_blank"}
 
 - Ensure your Z seam is not set to "random".
 - Dry your filament. This can be caused be moisture turning to steam and popping.

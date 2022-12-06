@@ -35,18 +35,18 @@ The "spacing" (center-to-center distance - 0.357 in the below example) is not eq
 <sup>[Source](https://manual.slic3r.org/advanced/flow-math)</sup>
 
 At 0.2mm layer height, two perimeters actually equals **0.757mm!**
-- ![](./images/misconceptions/spacing.png)
+- [![](./images/misconceptions/spacing.png)](./images/misconceptions/spacing.png){:target="_blank"}
 
     - And then three perimeters would equal **1.114mm!**
 
-        - ![](./images/misconceptions/spacing_3x.png)
+        - [![](./images/misconceptions/spacing_3x.png)](./images/misconceptions/spacing_3x.png){:target="_blank"}
 
 
 ### If You Want Clean Multiples (SuperSlicer Only)
 If you want two walls to equal a clean multiple like you may expect, SuperSlicer allows you to specify **spacings** rather than line widths.
 
 You would put a **spacing** *(or "width & spacing combo" for external perimeters)* of 0.4mm / 100% rather than a **line width** of 0.4mm / 100%:
-- ![](./images/misconceptions/ss_spacing.png)
+- [![](./images/misconceptions/ss_spacing.png)](./images/misconceptions/ss_spacing.png){:target="_blank"}
 
 - Then two lines would equal 0.8mm, three lines would equal 1.2mm, and so on.
 
@@ -66,7 +66,7 @@ Please excuse the upcoming vomit I used to bodge this table's widths/spacing
 
 | <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Layer Wobble** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br> | <br>**Inconsistent Extrusion /**<br>&nbsp;&nbsp;&nbsp;&nbsp;**Filament Diameter Fluctuations**&nbsp;&nbsp;&nbsp;&nbsp;<br><br> |
 | :-----------: | :-----------: |
-| <br>![](./images/misconceptions/layer_wobble_marked.png)<br><br> | ![](./images/misconceptions/extrusion_inconsistency_marked.png) |
+| <br>[![](./images/misconceptions/layer_wobble_marked.png)](./images/misconceptions/layer_wobble_marked.png){:target="_blank"}<br><br> | [![](./images/misconceptions/extrusion_inconsistency_marked.png)](./images/misconceptions/extrusion_inconsistency_marked.png){:target="_blank"} |
 
 - Your measurement will basically **always** be a bit too large because of this!
 
@@ -92,19 +92,15 @@ Even Prusa recommends it!
 <sup>Send help. I'm going insane.</sup>
 
 
-## "You Shouldn't Tune Extrusion Multiplier"
+## Tuning Extrusion Multiplier is a Bodge
 
 The gap between theory and reality is often larger in reality than it is in theory.
 
 More info to come...
 
-## Calibrating Belted Axis Steps
-
-Don't mess with your axes!
-
-More info to come...
-
 ## Using Paper to Set Z Offset
+
+It's fine to get a very rough starting point - but paper is otherwise not to be used for absolute measurements, only relative ones.
 
 More info to come...
 
@@ -121,10 +117,5 @@ More info to come...
 - https://teachingtechyt.github.io/calibration.html#xyzsteps
 - https://all3dp.com/2/how-to-calibrate-a-3d-printer-simply-explained/
 - https://www.3dbeginners.com/how-to-calibrate-a-3d-printer/
-
-<sup>SEND HELP. I'M GOING INSANE.</sup>
-
-
-
 
 {% endcomment %} 

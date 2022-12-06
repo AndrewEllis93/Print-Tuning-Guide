@@ -26,9 +26,9 @@ For "connected" infill, simply adjust "infill/perimeter overlap" (PS) or "infill
 *(Though now I use the default overlap of 25% with "not connected" top infill instead.)*
 
 ## Examples
-- ![](./images/infill_perimeter_overlap/Overlap-1.png) 
-- ![](./images/infill_perimeter_overlap/Overlap-2.png) 
+- [![](./images/infill_perimeter_overlap/Overlap-1.png)](./images/infill_perimeter_overlap/Overlap-1.png){:target="_blank"} 
+- [![](./images/infill_perimeter_overlap/Overlap-2.png)](./images/infill_perimeter_overlap/Overlap-2.png){:target="_blank"} 
 ## Overlap Tweaked:
 
-- ![](./images/infill_perimeter_overlap/Overlap-Fixed1.png) 
+- [![](./images/infill_perimeter_overlap/Overlap-Fixed1.png)](./images/infill_perimeter_overlap/Overlap-Fixed1.png){:target="_blank"} 
 

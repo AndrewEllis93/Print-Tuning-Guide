@@ -16,14 +16,14 @@ parent: Troubleshooting
 ---
 These skips will typically be wider than [:page_facing_up: pockmarks.](./pockmarks.md)
 
-![](./images/extruder_skipping/ExtruderSkips-4.png)\
-![](./images/extruder_skipping/ExtruderSkips-1.png)\
-![](./images/extruder_skipping/ExtruderSkips-2.png)
-![](./images/extruder_skipping/ExtruderSkips-3.png)
+[![](./images/extruder_skipping/ExtruderSkips-4.png)](./images/extruder_skipping/ExtruderSkips-4.png){:target="_blank"}\
+[![](./images/extruder_skipping/ExtruderSkips-1.png)](./images/extruder_skipping/ExtruderSkips-1.png){:target="_blank"}\
+[![](./images/extruder_skipping/ExtruderSkips-2.png)](./images/extruder_skipping/ExtruderSkips-2.png){:target="_blank"}
+[![](./images/extruder_skipping/ExtruderSkips-3.png)](./images/extruder_skipping/ExtruderSkips-3.png){:target="_blank"}
 
 Skipping below top layer:
 
-![](./images/extruder_skipping/ExtruderSkips-5.png)
+[![](./images/extruder_skipping/ExtruderSkips-5.png)](./images/extruder_skipping/ExtruderSkips-5.png){:target="_blank"}
 
 - Try a new nozzle. It's often just a partial nozzle clog.
 
@@ -101,5 +101,5 @@ If there is much resistance, *figure out where it is coming from:*
         - If they are pushed together too hard, it will cause resistance.
     - Ensure that your drive shaft is not rubbing against the motor:
         - A little cheat I have heard here is to test continuity between the drive shaft and the motor. Test throughout the full rotation.
-        - ![](./images/extruder_skipping/ExtruderSkips-Clearance.png)
+        - [![](./images/extruder_skipping/ExtruderSkips-Clearance.png)](./images/extruder_skipping/ExtruderSkips-Clearance.png){:target="_blank"}
 

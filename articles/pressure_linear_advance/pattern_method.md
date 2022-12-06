@@ -29,7 +29,9 @@ grand_parent: Tuning
   - Most of these settings should be relatively intuitive, or have descriptions explaining what they do.
 
 - You should get a result like this:
-  ![](./images/pattern_method/pattern.jpg)
+
+  <sup>*Click the image to open. Ctrl + scroll up / down to zoom.*</sup>\
+  [![](./images/pattern_method/pattern.jpg)](./images/pattern_method/pattern.jpg){:target="_blank"}
 
 ### What You're Looking For
 
@@ -42,9 +44,8 @@ _(No need to ACTUALLY use a square.)_
 
 In this example, I would choose around 0.04 (in green).
 
-_Right click the image and select "Open image in new tab" (or your browser's equivalent) to zoom in_
-
-![](./images/pattern_method/pattern-annotated.jpg)
+<sup>*Click the image to open. Ctrl + scroll up / down to zoom.*</sup>\
+[![](./images/pattern_method/pattern-annotated.jpg)](./images/pattern_method/pattern-annotated.jpg){:target="_blank"}
 
 I find I get the best real prints when I lean toward **higher** values.
 

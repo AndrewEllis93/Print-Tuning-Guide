@@ -81,5 +81,7 @@ This is based off of the [:page_facing_up: Klipper Pressure Advance guide](https
 
 **You may need to zoom in here, the differences are subtle.** There is always some ambiguity.
 
-- ![](./images/tower_method/PA-Tower.png)
-- ![](./images/tower_method/PA-Tower-Annotated.png)
+- <sup>*Click the image to open. Ctrl + scroll up / down to zoom.*</sup>\
+[![](./images/tower_method/PA-Tower.png)](./images/tower_method/PA-Tower.png){:target="_blank"}
+- <sup>*Click the image to open. Ctrl + scroll up / down to zoom.*</sup>\
+[![](./images/tower_method/PA-Tower-Annotated.png)](./images/tower_method/PA-Tower-Annotated.png){:target="_blank"}

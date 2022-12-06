@@ -39,7 +39,7 @@ Notice that the idlers get "pinched" when moving the X extrusion back/forth (thi
     - This prevents the A/B belt tension from pulling the gantry out of alignment while you work on it.
     - Your belts should be fully disengaged. If there is still remaining tension with the idlers fully backed off, you may need to release the belt ends from the X carriage.
 
-    - ![](./images/voron_v2_gantry_squaring/Gantry-ABTension.png) 
+    - [![](./images/voron_v2_gantry_squaring/Gantry-ABTension.png)](./images/voron_v2_gantry_squaring/Gantry-ABTension.png){:target="_blank"} 
 
 6. Take off your side panels.
 
@@ -47,9 +47,9 @@ Notice that the idlers get "pinched" when moving the X extrusion back/forth (thi
     - Your gantry will now be floating on just the belts.
         - Make sure your printer is on a fairly level surface, otherwise your gantry could swing too much to one side. (it doesn't have to be perfect, just don't do it on a hill),
 
-    - ![](./images/voron_v2_gantry_squaring/ZJoint-Lowered.png) 
+    - [![](./images/voron_v2_gantry_squaring/ZJoint-Lowered.png)](./images/voron_v2_gantry_squaring/ZJoint-Lowered.png){:target="_blank"} 
 
-    - ![](./images/voron_v2_gantry_squaring/ZJoints-Lowered.png)
+    - [![](./images/voron_v2_gantry_squaring/ZJoints-Lowered.png)](./images/voron_v2_gantry_squaring/ZJoints-Lowered.png){:target="_blank"}
 
 8. **PARTIALLY** loosen all connections to the extrusions.
 
@@ -60,46 +60,46 @@ Notice that the idlers get "pinched" when moving the X extrusion back/forth (thi
 
     - X/Y joints (repeat for both sides). 
         - Top:
-            - ![](./images/voron_v2_gantry_squaring/XYLoosen-Top.png) 
+            - [![](./images/voron_v2_gantry_squaring/XYLoosen-Top.png)](./images/voron_v2_gantry_squaring/XYLoosen-Top.png){:target="_blank"} 
 
         - Bottom:
-            - ![](./images/voron_v2_gantry_squaring/XYLoosen-Bottom.png) 
+            - [![](./images/voron_v2_gantry_squaring/XYLoosen-Bottom.png)](./images/voron_v2_gantry_squaring/XYLoosen-Bottom.png){:target="_blank"} 
 
     - A/B joints (repeat for both sides):
         - Top:
             - *Don't overdo the belt clamps!*
-            - ![](./images/voron_v2_gantry_squaring/ABLoosen-Top.png) 
+            - [![](./images/voron_v2_gantry_squaring/ABLoosen-Top.png)](./images/voron_v2_gantry_squaring/ABLoosen-Top.png){:target="_blank"} 
 
         - Bottom:
             - *Don't overdo the belt clamps!*
-            - ![](./images/voron_v2_gantry_squaring/ABLoosen-Bottom.png) 
+            - [![](./images/voron_v2_gantry_squaring/ABLoosen-Bottom.png)](./images/voron_v2_gantry_squaring/ABLoosen-Bottom.png){:target="_blank"} 
 
     - Front idlers (repeat for both sides):
         - Top:
             - *Don't overdo it!*
-            - ![](./images/voron_v2_gantry_squaring/IdlersLoosen-Top.png) 
+            - [![](./images/voron_v2_gantry_squaring/IdlersLoosen-Top.png)](./images/voron_v2_gantry_squaring/IdlersLoosen-Top.png){:target="_blank"} 
         - Bottom:
             - *Don't overdo it!*
-            - ![](./images/voron_v2_gantry_squaring/IdlersLoosen-Bottom.png) 
+            - [![](./images/voron_v2_gantry_squaring/IdlersLoosen-Bottom.png)](./images/voron_v2_gantry_squaring/IdlersLoosen-Bottom.png){:target="_blank"} 
 
 9. And now, what we have been preparing for.\
 Adjust your gantry so that it sits perfectly on top of the lower Z joints.
     - This involves moving gantry components further apart or closer together along the extrusions:
         - **Rear**
-            - ![](./images/voron_v2_gantry_squaring/XAdjust.png) 
+            - [![](./images/voron_v2_gantry_squaring/XAdjust.png)](./images/voron_v2_gantry_squaring/XAdjust.png){:target="_blank"} 
         - **Sides**
-            - ![](./images/voron_v2_gantry_squaring/YAdjust.png)
+            - [![](./images/voron_v2_gantry_squaring/YAdjust.png)](./images/voron_v2_gantry_squaring/YAdjust.png){:target="_blank"}
 
     - Your gantry should align so that:
         - The Z joints feel perfectly flush along the side, and
         - When raising and lowering your lower Z joint by hand, the bolt slides in perfectly without hitting the sides.
 
-        - ![](./images/voron_v2_gantry_squaring/Alignment-Side.png) ![](./images/voron_v2_gantry_squaring/Alignment-Hole.png) 
+        - [![](./images/voron_v2_gantry_squaring/Alignment-Side.png)](./images/voron_v2_gantry_squaring/Alignment-Side.png){:target="_blank"} [![](./images/voron_v2_gantry_squaring/Alignment-Hole.png)](./images/voron_v2_gantry_squaring/Alignment-Hole.png){:target="_blank"} 
 
     - Ensure that you do not inadvertently rotate your A/B joints during this process.
-        - ![](./images/voron_v2_gantry_squaring/Alignment-AB-Good.png) 
+        - [![](./images/voron_v2_gantry_squaring/Alignment-AB-Good.png)](./images/voron_v2_gantry_squaring/Alignment-AB-Good.png){:target="_blank"} 
         - (Exaggerated)\
-        ![](./images/voron_v2_gantry_squaring/Alignment-AB-Bad.png) 
+        [![](./images/voron_v2_gantry_squaring/Alignment-AB-Bad.png)](./images/voron_v2_gantry_squaring/Alignment-AB-Bad.png){:target="_blank"} 
 
 10. Tighten every extrusion bolt again, *except* those in the X/Y joints. (you will tighten those during step 12)
     - Ensure that your Z joints still align properly. Sometimes tightening can move things around.

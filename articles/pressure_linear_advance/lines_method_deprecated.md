@@ -59,7 +59,7 @@ grand_parent: Tuning
      - **Klipper**
        - Stock `PRINT_START`/`START_PRINT` macros usually contain all the necessary start gcode (minus the temperatures), but please double check.
          - For **Vorons** with the stock `PRINT_START` macro, this is all you need:
-           - ![](./images/lines_method_deprecated/pa_start_gcode.png)
+           - [![](./images/lines_method_deprecated/pa_start_gcode.png)](./images/lines_method_deprecated/pa_start_gcode.png){:target="_blank"}
          - If you are [:page_facing_up: passing variables to `PRINT_START`](../passing_slicer_variables.md), remember to append them here. Example: `PRINT_START HOTEND=240 BED=110`
            - Your variable naming may be different, e.g. `EXTRUDER=X` instead of `HOTEND=X`.
            - You can then comment out the separate heating g-codes.
@@ -107,7 +107,7 @@ grand_parent: Tuning
 
    - In the below example, I would choose about **0.055**.
      #### Result
-   - ![](./images/lines_method_deprecated/KFactor-Print.jpg)
+   - [![](./images/lines_method_deprecated/KFactor-Print.jpg)](./images/lines_method_deprecated/KFactor-Print.jpg){:target="_blank"}
    - This is a great visual representation of what I mentioned earlier: **that pressure advance is rarely perfect.**
    - Always choose the lower value if you are not entirely sure.
    - Sometimes the best acceleration and decelerations values will not be on the same line. In this case, you should pick a **midpoint between both.**
@@ -127,6 +127,6 @@ This PA test also serves as a nice extruder stress test, and it's a great visual
 - If your PA numbers are unusually high:
   - This may indicate a partial nozzle clog or that your hotend temperature is too low. More back pressure means more pressure advance.
 - If the middle (fast) section is not printing, or is only partially printing:
-  - ![](./images/lines_method_deprecated/pa_lines_skipping.png)
+  - [![](./images/lines_method_deprecated/pa_lines_skipping.png)](./images/lines_method_deprecated/pa_lines_skipping.png){:target="_blank"}
   - Your printer is having issues extruding at faster speeds. You may be outrunning your hotend, have your temperature too low / incorrect thermistor type in your config, have your extruder motor currents incorrect, have a partial clog, or have an extruder assembly issue. See [:page_facing_up: here](../troubleshooting/extruder_skipping.md) for more in-depth troubleshooting.
   - If this only happens above your ideal PA value, it's not an issue.

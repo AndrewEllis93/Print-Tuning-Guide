@@ -75,14 +75,14 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
 4. Take a ruler and place a piece of tape at the 120mm mark.
 
     - You can use a marker too - I just find tape easier and a bit more precise.
-    - ![](./images/extruder_calibration/1.png)
+    - [![](./images/extruder_calibration/1.png)](./images/extruder_calibration/1.png){:target="_blank"}
     - *Don't worry if your ruler has extra length at the ends. We're only taking a relative measurement.*
 
-        - ![](./images/extruder_calibration/ruler.png)
+        - [![](./images/extruder_calibration/ruler.png)](./images/extruder_calibration/ruler.png){:target="_blank"}
 
 5. Where your filament enters your extruder, pull your filament as straight as you can against the ruler. Transfer the tape to mark 120mm.
 
-    - ![](./images/extruder_calibration/2.png) ![](./images/extruder_calibration/3.png)
+    - [![](./images/extruder_calibration/2.png)](./images/extruder_calibration/2.png){:target="_blank"} [![](./images/extruder_calibration/3.png)](./images/extruder_calibration/3.png){:target="_blank"}
 
 6. Extrude 100mm :warning: **at 1mm/s**. :warning:
 
@@ -93,7 +93,7 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
         - `G1 E100 F60 ; Extrude 100mm at 1mm/s (60mm/min)`
     - **Only use the LCD to extrude if it allows you to choose a speed.**
 
-    - ![](./images/extruder_calibration/4.png)
+    - [![](./images/extruder_calibration/4.png)](./images/extruder_calibration/4.png){:target="_blank"}
 
 7. Measure how much is left. Subtract it from 120 and note the value for later.
 
@@ -101,7 +101,7 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
         - I had 21mm left. 
         - 120mm - 21mm = **99mm actual extrusion**.
 
-    - ![](./images/extruder_calibration/5.png)
+    - [![](./images/extruder_calibration/5.png)](./images/extruder_calibration/5.png){:target="_blank"}
 
 8. Calculate your new `rotation_distance` / e-steps and activate it:
 
@@ -116,7 +116,7 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
     ---
     ![]({{ "/assets/img/marlin.png" | absolute_url }}) Marlin
     - Run `M503`. In the output, find the `M92` line and note your current E value.
-        - ![](./images/extruder_calibration/M503.png)
+        - [![](./images/extruder_calibration/M503.png)](./images/extruder_calibration/M503.png){:target="_blank"}
     - Calculate your new e-steps using this formula:
         - \<new_e-steps\> = \<current_e-steps\> * ( 100 / \<actual_extrude_distance\> )
     - Temporarily set your new e-steps with `M92`.

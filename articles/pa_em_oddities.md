@@ -17,7 +17,7 @@ parent: Tuning
 ## Slight Perimeter Gapping
 Some find that after tuning PA and EM, minor perimeter gapping is still present:
 
-![](./images/pa_em_oddities/perim-gapping-print.png)
+[![](./images/pa_em_oddities/perim-gapping-print.png)](./images/pa_em_oddities/perim-gapping-print.png){:target="_blank"}
 
 Assuming EM is well tuned, this is often caused by a slight [:page_facing_up: flow dropoff](./determining_max_volumetric_flow_rate.md#flow-dropoff) at higher print speeds — since most people print their perimeters faster than their top layer.
 

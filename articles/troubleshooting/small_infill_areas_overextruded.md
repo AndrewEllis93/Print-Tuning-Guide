@@ -27,7 +27,7 @@ parent: Troubleshooting
 
 ---
 
-![](./images/small_infill_overextruded/example1.png) 
+[![](./images/small_infill_overextruded/example1.png)](./images/small_infill_overextruded/example1.png){:target="_blank"} 
 
 ## Things to Try
 
@@ -52,18 +52,18 @@ But, there are some things that *may* help a bit:
 I find that setting top infill to "not connected"  makes a noticeable improvement.\
 This is default behavior in Cura, and is not available in Prusa Slicer.
 
-- ![](./images/small_infill_overextruded/not_connected_setting.png)
+- [![](./images/small_infill_overextruded/not_connected_setting.png)](./images/small_infill_overextruded/not_connected_setting.png){:target="_blank"}
 - :warning: This setting overshoots perimeters more than "connected" does. If you have raised your infill/perimeters encroachment (overlap), **consider setting it back to default** (for now. You can fine-tune later).
     - Overshoot
-        - ![](./images/small_infill_overextruded/overshoot.png)
+        - [![](./images/small_infill_overextruded/overshoot.png)](./images/small_infill_overextruded/overshoot.png){:target="_blank"}
     - Reset infill/perimeter encroachment
-        - ![](./images/small_infill_overextruded/encroachment_setting.png)
+        - [![](./images/small_infill_overextruded/encroachment_setting.png)](./images/small_infill_overextruded/encroachment_setting.png){:target="_blank"}
         - **:warning: Don't set it too low, however, as it also affects sparse infill**. A low value can cause sparse infill to become detached from the perimeters:
-            - ![](./images/small_infill_overextruded/infill_disconnect.png)
+            - [![](./images/small_infill_overextruded/infill_disconnect.png)](./images/small_infill_overextruded/infill_disconnect.png){:target="_blank"}
 
 #### What it Does
 
-- ![](./images/small_infill_overextruded/connected_not_connected_comparison.png)
+- [![](./images/small_infill_overextruded/connected_not_connected_comparison.png)](./images/small_infill_overextruded/connected_not_connected_comparison.png){:target="_blank"}
 
 ---
 
@@ -74,7 +74,7 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
 - In this example, I would primarily be looking at the circled area. 
 - While some of this print looks overextruded, I think the overall EM is actually pretty good.
 
-    - ![](../images/extrusion_multiplier/em-wheretolook.png) 
+    - [![](../images/extrusion_multiplier/em-wheretolook.png)](../images/extrusion_multiplier/em-wheretolook.png){:target="_blank"} 
 
 ---
 # The Magic Bullet?
@@ -96,21 +96,21 @@ This will cause a retraction at every direction change.
 :warning: **This is very slow with Z hop, however**. These successive Z hops can also be **quite loud** on many printers.
 
 - Setting
-    - ![](./images/small_infill_overextruded/retract_setting.png)
+    - [![](./images/small_infill_overextruded/retract_setting.png)](./images/small_infill_overextruded/retract_setting.png){:target="_blank"}
 
 - Each purple spot is a retraction.
-    - ![](./images/small_infill_overextruded/not_connected_retractions.png)
+    - [![](./images/small_infill_overextruded/not_connected_retractions.png)](./images/small_infill_overextruded/not_connected_retractions.png){:target="_blank"}
 
 - Excessive Z hopping.
-    - ![](./images/small_infill_overextruded/retract_min_distance_example_hop_on.png)
+    - [![](./images/small_infill_overextruded/retract_min_distance_example_hop_on.png)](./images/small_infill_overextruded/retract_min_distance_example_hop_on.png){:target="_blank"}
 
 ### Making it Faster (Still With Some Downsides)
 - You can turn Z hop off for *only* the top layer, like so:
 
-    - ![](./images/small_infill_overextruded/hop_setting.png)
+    - [![](./images/small_infill_overextruded/hop_setting.png)](./images/small_infill_overextruded/hop_setting.png){:target="_blank"}
 
     - Result
-        - ![](./images/small_infill_overextruded/retract_min_distance_example_hop_off.png)
+        - [![](./images/small_infill_overextruded/retract_min_distance_example_hop_off.png)](./images/small_infill_overextruded/retract_min_distance_example_hop_off.png){:target="_blank"}
 
 - This is considerably faster and quieter, however it too carries some downsides:
 - :warning: **Downsides**
@@ -123,13 +123,13 @@ This will cause a retraction at every direction change.
 - Further small improvements may be made by also setting solid infill to "not connected".
 - However, :warning: make sure you also check "only retract when crossing perimeters".
 
-- ![](./images/small_infill_overextruded/not_connected_solid_setting.png)
+- [![](./images/small_infill_overextruded/not_connected_solid_setting.png)](./images/small_infill_overextruded/not_connected_solid_setting.png){:target="_blank"}
 
-- ![](./images/small_infill_overextruded/only_retract_when_crossing_perimeters_setting.png)
+- [![](./images/small_infill_overextruded/only_retract_when_crossing_perimeters_setting.png)](./images/small_infill_overextruded/only_retract_when_crossing_perimeters_setting.png){:target="_blank"}
 
 - :warning: Otherwise, these additional retractions (and the slowdown!) will occur on **ALL solid layers, not just the top.**
 
-    - ![](./images/small_infill_overextruded/not_connected_retractions_solid.png)
+    - [![](./images/small_infill_overextruded/not_connected_retractions_solid.png)](./images/small_infill_overextruded/not_connected_retractions_solid.png){:target="_blank"}
 
 ### Demonstration
 
@@ -140,7 +140,7 @@ Lower overlaps show more small improvements, but also start to create pinholes.
 In my case, I decided to stick with NC/NC/25%. Still a nice improvement.\
 Anything lower would create [:page_facing_up: pinholes](../infill_perimeter_overlap.md), and as mentioned in [:pushpin: this section](#the-magic-bullet), too low would start to disconnect the infill.
 
-- ![](./images/small_infill_overextruded/demonstration.png)
+- [![](./images/small_infill_overextruded/demonstration.png)](./images/small_infill_overextruded/demonstration.png){:target="_blank"}
 
 ---
 ### The Experimental SuperSlicer Build
@@ -153,7 +153,7 @@ Anything lower would create [:page_facing_up: pinholes](../infill_perimeter_over
 - This is the new setting:
     - This (in the right combination) should address the downsides mentioned above.
 
-    - ![](./images/small_infill_overextruded/experimental_setting.png)
+    - [![](./images/small_infill_overextruded/experimental_setting.png)](./images/small_infill_overextruded/experimental_setting.png){:target="_blank"}
     - **This setting will likely MOVE and be reworked at some point, which may cause future incompatibilities with profiles you save using this.** 
         - You should use a separate appdata folder with experimental SuperSlicer builds by having a separate shortcut using `<path to SS exe> --datadir <separate appdata path>`.
 

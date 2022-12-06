@@ -80,15 +80,15 @@ We will be printing these retraction towers at three different temperatures. If 
 
 4. Select "extruder retraction calibration" from the menu.
 
-    - ![](./images/retraction/Retraction-Menu.png) 
+    - [![](./images/retraction/Retraction-Menu.png)](./images/retraction/Retraction-Menu.png){:target="_blank"} 
 
 5. Click "remove fil. slowdown".
 
-    - ![](./images/retraction/Retraction-FilSlowdown.png) 
+    - [![](./images/retraction/Retraction-FilSlowdown.png)](./images/retraction/Retraction-FilSlowdown.png){:target="_blank"} 
 
 6. Fill out the parameters and select "Generate".
 
-    - ![](./images/retraction/Retraction-Params.png) 
+    - [![](./images/retraction/Retraction-Params.png)](./images/retraction/Retraction-Params.png){:target="_blank"} 
 
         - **Start temp:**
             - Set a **bit higher** than your normal printing temps (maybe around 10C higher).
@@ -111,16 +111,16 @@ We will be printing these retraction towers at three different temperatures. If 
                 - This will print three retraction towers. One will be at your "start temp", the other two will be 10C increments below this.
 
         - You should get output like this:
-            - ![](./images/retraction/Retraction-Sliced.png) 
+            - [![](./images/retraction/Retraction-Sliced.png)](./images/retraction/Retraction-Sliced.png){:target="_blank"} 
             - :warning: If you get this misalignment, temporarily set `init_z_rotate` back to 0.
 
-                - ![](./images/retraction/misalignment.png) 
+                - [![](./images/retraction/misalignment.png)](./images/retraction/misalignment.png){:target="_blank"} 
 
 7. Arrange the towers front to back\* on your build plate.
     - These objects are printed one at a time. This ensures that they are not knocked over by the gantry/toolhead.
     - Arrange them from the hottest tower at the front, to coolest tower at the back.
         - The towers are printed from hottest to coldest. This just lowers the chance of collisions (particularly with poorly written `PRINT_END` macros). 
-    - ![](./images/retraction/Retraction-Sliced-FrontToBack.png)
+    - [![](./images/retraction/Retraction-Sliced-FrontToBack.png)](./images/retraction/Retraction-Sliced-FrontToBack.png){:target="_blank"}
 
         <sup>\* If you are using a different kinematic system than CoreXY/i3 cartesian, you may need to use a different arrangement. For example, a cross gantry would need diagonal.</sup>
 

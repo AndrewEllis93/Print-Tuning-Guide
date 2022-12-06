@@ -34,7 +34,7 @@ If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up:
 
 Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
 
-![](./images/vfas/ToothMarks.png)
+[![](./images/vfas/ToothMarks.png)](./images/vfas/ToothMarks.png){:target="_blank"}
 
 - Your belts may be too tight. [:page_facing_up: Your A/B belts should be about 110Hz over a 150mm length.](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension)
     - Don't miss the video link in page linked above. 
@@ -45,7 +45,7 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
     - It's nearly impossible to have them all running dead-center, but you can look around for belt wear and belt dust to find where it may be rubbing too much.
     - Ensure your motor pulleys are not positioned too high or too low. Ensure they all align with the belt paths:
 
-        - ![](./images/vfas/pulley_alignment.png)
+        - [![](./images/vfas/pulley_alignment.png)](./images/vfas/pulley_alignment.png){:target="_blank"}
     - For V2, follow my [:page_facing_up: V2 gantry squaring](../voron_v2_gantry_squaring.md) instructions. A poorly squared gantry can be the root cause of a lot of alignment issues.
     - On all CoreXY printers: [:page_facing_up: de-rack](https://www.youtube.com/watch?v=cOn6u9kXvy0). 
         - For V2, this is part of the gantry squaring instructions above. Please follow those first/instead.
@@ -56,8 +56,8 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
     - I, and a few others, have had improvements from switching to authentic Gates brand pulleys and idlers. They are more expensive, but are worth it in my opinion. 
         - On v2 at least, you only need them for A/B motors and X/Y idlers. Don't waste the money on Z.
         - US source:
-            - :page_facing_up: https://www.filastruder.com/products/gates-2gt-pulley?variant=15443750518855
-            - :page_facing_up: https://www.filastruder.com/products/gates-2gt-idler?variant=15443755728967
+            - :page_facing_up: [https://www.filastruder.com/products/gates-2gt-pulley?variant=15443750518855](https://www.filastruder.com/products/gates-2gt-pulley?variant=15443750518855)
+            - :page_facing_up: [https://www.filastruder.com/products/gates-2gt-idler?variant=15443755728967](https://www.filastruder.com/products/gates-2gt-idler?variant=15443755728967)
     - For idlers, there is some debate over toothed vs smooth. My personal opinion is:
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
 ## VFAs With Non-2mm Spacing

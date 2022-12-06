@@ -79,6 +79,7 @@ For example, a 2a motor would be about 1.4a max.
         - Some multimeters come with a k-type thermocouple. You can kapton tape it to the motor housing.
     - *You cannot accurately gauge this by feel.* Even lower temperatures will feel "too hot".
     - The motors themselves can generally handle much more. This temp limit comes from the printed parts rather than the motors themselves.
+    
 ## Determining `hold_current`
 Recently, Klipper docs have started to [:page_facing_up: recommend against using a separate `hold_current`.](https://github.com/Klipper3d/klipper/pull/4977) You can achieve this by commenting out `hold_current`, or by setting it to the same value as your `run_current`.
 

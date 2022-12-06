@@ -20,8 +20,9 @@
 
 layout: default
 title: Ellis' Print Tuning Guide
-description: >- # this means to ignore newlines until "baseurl:"
-  Ellis' Print Tuning Guide
+#description: >- # this means to ignore newlines until "baseurl:"
+#  Ellis' Print Tuning Guide
+description: Ellis' Print Tuning Guide
 email: AndrewEllis93@gmail.com
 github_username:  AndrewEllis93
 github: [metadata]

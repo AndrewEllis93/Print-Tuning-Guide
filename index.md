@@ -15,6 +15,7 @@ I hope for this guide to be free of misinformation, snake oil, and wives' tales 
 **To follow this tuning guide, you will need:**
 - A ruler. 
 - Some tape or a marker.
+- Maybe a piece of paper.
 - ...that's it. 
 
 No calipers, micrometers, feeler gauges, or flux capacitors needed.\
@@ -51,5 +52,3 @@ Some patience and willpower helps too.
   - For troubleshooting & print help, please use the public channels. I get a lot of messages asking for troubleshooting help!
 - My SuperSlicer profiles are located [:page_facing_up: here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles).
 - You can find the bed models and textures I am using [:page_facing_up: here](https://github.com/VoronDesign/Voron-Extras/tree/main/Bed_Models). The bed texture I am using in some of the older screenshots is from [:page_facing_up: VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape)
-- Support my drinking habits:
-  [![](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/paypalme/AndrewEllis93)

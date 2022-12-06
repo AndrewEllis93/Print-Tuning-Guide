@@ -222,14 +222,7 @@ Get your prints looking great first, THEN account for dimensions if needed. (in 
 
 ### Methods I'm Not a Fan Of
 - **Measuring Wall Thickness With Calipers**
-    - Some guides mention printing a single or two-walled object and measuring the thickness with calipers.
-        - I simply never have good results with this approach, and different people seem to get (sometimes wildly) different results.
-        - The measured widths can vary depending where you measure it and how much pressure you use.
-        - Any layer wobble or inconsistent extrusion (which all printers have in varying degrees) causes these walls to measure thicker.
-            - ![](./images/extrusion_multiplier/z-wobble.png)\
-            <sup>Source: https://manual.slic3r.org/troubleshooting/dimension-errors</sup>
-        - This method requires half-decent calipers, which many people just don't have. This limits the accessibility.
-
+    - More on that [:page_facing_up: here](./misconceptions.md).
 
 - **SuperSlicer Calibration**
     - SuperSlicer has a built-in flow calibration tool, however I do not like this either, for a few reasons:

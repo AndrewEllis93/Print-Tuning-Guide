@@ -71,8 +71,8 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
         - **Fluidd**
             - [![](./images/first_layer_squish/babystep_fluidd.png)](./images/first_layer_squish/babystep_fluidd.png){:target="_blank"}
         - **G-code**
-            - `SET_GCODE_OFFSET A_ZDJUST=0.01 MOVE=1`
-            - `SET_GCODE_OFFSET A_ZDJUST=-0.01 MOVE=1`
+            - `SET_GCODE_OFFSET Z_ADJUST=0.01 MOVE=1`
+            - `SET_GCODE_OFFSET Z_ADJUST=-0.01 MOVE=1`
     - ![]({{ "/assets/img/marlin.png" | absolute_url }}) **Marlin**:
         - **LCD**
             - Under the "Tune" menu (may only appear while printing), look for "Babystep Z".

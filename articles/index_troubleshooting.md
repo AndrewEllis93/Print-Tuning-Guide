@@ -46,7 +46,7 @@ has_children: true
 - :warning:Thermal Drift
 - First Layer Conistency
 - Squish Consistency (Between Prints)
-[![](/images/first_layer_squish/FirstLayer-Squares-1.png)](/images/first_layer_squish/FirstLayer-Squares-1.png){:target="_blank"}
+[![](./images/first_layer_squish/FirstLayer-Squares-1.png)](./images/first_layer_squish/FirstLayer-Squares-1.png){:target="_blank"}
 
 ## [Layer Shifting](./troubleshooting/layer_shifting.md) 
 - Mechanical

@@ -53,7 +53,10 @@ This is moreso about *general* extrusion inconsistency rather than wood grain sp
 - [![](./images/extrusion_patterns/external_first_1.png)](./images/extrusion_patterns/external_first_1.png){:target="_blank"} 
 - [![](./images/extrusion_patterns/external_first_2.png)](./images/extrusion_patterns/external_first_2.png){:target="_blank"} 
 
-- :warning: This can negatively affect *extreme* overhangs, and occasionally cause some other oddities, so just keep it in mind when troubleshooting. It's generally okay for daily use, though.
+- :warning: With external perimeters first, it's especially important to ensure that you have a good [:page_facing_up: stepover](../stepover.md) for your overhangs. It's less resistant to poor stepover.
+
+    - External perimeters first can still negatively affect *extreme* overhangs, and occasionally cause some other oddities, so just keep it in mind when troubleshooting. It's generally okay for daily use, though.
+    
     - [![](./images/bulging/external_first_3.png)](./images/bulging/external_first_3.png){:target="_blank"} 
 
 ## Extruder Backlash

@@ -25,7 +25,7 @@ I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can b
 >       - If using probe as endstop (also known as "virtual endstop"), see [:page_facing_up: here](https://www.klipper3d.org/Probe_Calibrate.html#calibrating-probe-z-offset).
 >           - If using dedicated Z endstop, follow the same instructions but use `Z_ENDSTOP_CALIBRATE` instead of `PROBE_CALIBRATE`.
 >       - ![]({{ "/assets/img/voron_small.png" | absolute_url }}) **Vorons**: See [:page_facing_up: here](https://docs.vorondesign.com/community/howto/120decibell/z_endstop_configuration.html#initial-calibration).
-> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Baby stepping must be [:page_facing_up: enabled in firmware](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/Marlin/Configuration_adv.h#L2057). (Most printers have it enabled by default).
+> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Baby stepping must be [:page_facing_up: enabled in firmware](https://marlinfw.org/docs/configuration/configuration.html#babystepping). (Most printers have it enabled by default).
 
 ![]({{ "/assets/img/voron.png" | absolute_url }}) **Vorons**: See the [:page_facing_up: Thermal Drift](./troubleshooting/first_layer_squish_consistency_issues/thermal_drift.md) article, **even if you are not having any issues.** Thermal drift is in important thing to know about with larger enclosed printers.
 

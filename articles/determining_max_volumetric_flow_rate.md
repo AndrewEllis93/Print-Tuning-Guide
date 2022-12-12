@@ -98,18 +98,21 @@ If you use the CNC Kitchen method, you may need to temporarily increase your  `m
 
 You will follow a similar process to extruder calibration. 
 
-1. Heat your hotend. 
+1. Open your printer.cfg and find the `[extruder]` section. Set `max_extrude_only_distance` to 101 or higher and `RESTART`.\
+*(+1 just helps avoid rounding error issues)*
+
+2. Heat your hotend. 
     - :bulb: Temperature has a large impact on max flow rates.
 
         - If you are going for absolute maximum flow rates, you may want to bump your temperatures. Some people print ABS at 250-270C for this reason. This is a tradeoff, however, as it can also cause oozing, overheating, or material degradation at slower speeds. I personally run higher temperatures for fast functional prints, and lower my temperatures (and volumetric limit) for more decorative prints.
 
-2. Extrude a little bit to ensure your E motor is energized and holding.
+3. Extrude a little bit to ensure your E motor is energized and holding.
 
-3. Mark a 100mm length of filament.
+4. Mark a 100mm length of filament.
     - Use a bit of tape. Stick it at the 100mm mark on a ruler and transfer it to the filament. Using tape makes it quick & easy to mark between tests.
     - Since this is a rough test, you can also measure at the reverse bowden inlet/spool. Just pull the slack out of the filament when marking and when measuring.
 
-4. Extrude at increasing speeds. 
+5. Extrude at increasing speeds. 
     - At each interval, measure to ensure that ~100mm entered the extruder.
     - The gcode uses mm/min, **not** mm/sec, so multiply your desired speed by 60.
     - For example, the gcode to extrude at 5mm/sec is:
@@ -118,18 +121,22 @@ You will follow a similar process to extruder calibration.
     G1 E100 F300 ; Extrude 100mm at 300mm/min (5mm/sec)
     ```
 
-5. Keep increasing speeds and extruding until it starts dropping below 100mm\*. This is your max flow rate. 
+6. Keep increasing speeds and extruding until it starts dropping below 100mm\*. This is your max flow rate. 
 
     - \* See the [:pushpin: "Flow Dropoff"](#flow-dropoff) section and determine your personal dropoff tolerance. I personally try to stay under 2-3% dropoff.
 
-6. Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin: formulas](#formulas).
+7. Convert the maximum extrusion speed you found to volumetric speed using the [:pushpin: formulas](#formulas).
     - Example: You reached your personal [:pushpin: flow dropoff](#flow-dropoff) tolerance of 2% at **F600** extrusion speed. 
         - 600mm/min / 60 = 10mm/sec. 
         - 10mm/sec * 2.4 = **Flow rate of 24mm<sup>3</sup>/sec**.
 
-7. Try extruding a longer distance (say 200-300mm). Ensure that your printer can sustain this flow rate.
+8. Try extruding a longer distance (say 200-300mm). Ensure that your printer can sustain this flow rate.
 
-8. Set your new value in your slicer.
+9. Choose a **slightly lower value than your results**.
+    - Real-world flow rates will be a bit less than your synthetic results. 
+        - Real prints have more resistance to overcome - they have to press against the previous layer, whereas we only tested an ideal scenario with zero resistance.
+
+10. Set your new value in your slicer.
     - :warning: **In Prusa Slicer, this *must* be managed in the filament settings.** The setting in the "auto speed" section only applies in specific circumstances in PS.
 
     - In SuperSlicer, you should set the volumetric limit in your print profile to a lower "default" value. 

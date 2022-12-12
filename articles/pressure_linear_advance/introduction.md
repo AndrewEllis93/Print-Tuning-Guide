@@ -25,7 +25,7 @@ grand_parent: Tuning
 
 {: .prereqs}
 > - You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
-> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Linear advance must be [:page_facing_up: enabled in firmware](https://github.com/MarlinFirmware/Marlin/blob/bugfix-2.1.x/Marlin/Configuration_adv.h#L2104). Not all printers have it enabled by default. 
+> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Linear advance must be [:page_facing_up: enabled in firmware](https://marlinfw.org/docs/configuration/configuration.html#linear-advance). Not all printers have it enabled by default. 
 
 ---
 <details open markdown="block">

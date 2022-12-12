@@ -23,6 +23,8 @@ Notice that the idlers get "pinched" when moving the X extrusion back/forth (thi
 
 ## Method
 
+:bulb: Some have found [:page_facing_up: Z Locks](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/tallman5/z-locks/) to be useful for this procedure. They are not required, however.
+
 1. Enter this g-code: `SET_IDLE_TIMEOUT TIMEOUT=99999`
     - This arbitrarily high timeout just gives us time to work. We need the Z motors to be energized and holding for the whole process.
 
@@ -56,7 +58,7 @@ Notice that the idlers get "pinched" when moving the X extrusion back/forth (thi
     - You need all of these bolts to be loose enough to freely adjust against the printed part on the extrusions. 
 
     {: .warning }
-    > Where there are Z belt clamps, **ensure that you do not loosen the bolts so much that the Z belts release**. Only loosen enough to allow for adjustments.
+    > Where there are Z belt clamps, ensure that you do not loosen the bolts so much that the Z belts release. Only loosen enough to allow for adjustments.
 
     - X/Y joints (repeat for both sides). 
         - Top:
@@ -105,7 +107,7 @@ Adjust your gantry so that it sits perfectly on top of the lower Z joints.
     - Ensure that your Z joints still align properly. Sometimes tightening can move things around.
 
 11. Re-install your lower Z joints and *lightly* tighten the M5 bolts.
-    - Do NOT hulk them down yet, or even make them tight. The "ball joint" should still be able to articulate completely freely.
+    - Don't fully tighten them down yet - just lightly. The joint should still be able to articulate freely.
 
 12. Follow [:page_facing_up: Nero's de-racking video.](https://www.youtube.com/watch?v=cOn6u9kXvy0) 
     - Make sure to come back here afterwards! The following steps are still important.

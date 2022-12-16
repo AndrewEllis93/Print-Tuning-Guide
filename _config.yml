@@ -50,6 +50,11 @@ callouts:
   warning:
     title: Warning
     color: red
+  attention:
+    color: orange
+  note:
+    title: Note
+    color: blue
 
 back_to_top: true
 back_to_top_text: "Back to top"

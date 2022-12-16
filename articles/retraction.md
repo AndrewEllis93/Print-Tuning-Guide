@@ -16,8 +16,8 @@ parent: Tuning
 :dizzy: This page is compatible with all printers.
 
 {: .prereqs}
->You should [:page_facing_up: tune pressure advance](./pressure_linear_advance/introduction.md) first.
->- Pressure advance can lower the amount of retraction needed, especially for bowden.
+> You should [:page_facing_up: tune pressure advance](./pressure_linear_advance/introduction.md) first.
+> - Pressure advance can lower the amount of retraction needed, especially for bowden.
 
 ---
 <details open markdown="block">
@@ -34,13 +34,45 @@ parent: Tuning
 **In many cases, following this tuning method is not necessary.** 
 
 I usually just pick a reasonable retraction distance and just bump it up if I have issues.
-- **Direct drive** - Start at 0.5mm @ 30mm/s. 
+- **Direct drive** - Start at 0.5mm @ 35mm/s. 
     - Try to stay under 1mm.
-- **Bowden** - Start at 1mm @ 30mm/s. 
+- **Bowden** - Start at 1mm @ 35mm/s. 
     - The upper limit depends on your bowden length/slack/tolerances.
     - Pressure advance can *significantly* reduce retraction needed for bowden.
 
-If you continue to have persistent stringing issues, it's often caused by [:pushpin: something else](#if-you-are-having-persistent-issues). I'd recommend reading through that section before continuing with the tuning towers.
+If you continue to have persistent stringing issues, it's often caused by [:pushpin: something else](#if-you-are-having-persistent-stringing-issues). I'd recommend reading through that section before continuing with the tuning towers.
+
+---
+## If You Are Having Persistent Stringing Issues
+- **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
+    - Even brand new, factory sealed filament can still come wet. 
+- [:page_facing_up: Ensure that you don't have excessive backlash in your extruder gears.](./troubleshooting/extrusion_patterns.md#extruder-backlash)
+- With Bowden extruders, make sure that the bowden tubes are not moving too much in the fittings. 
+    - You can stick a piece of tape on the tube near the fitting and see if it moves in and out during printing. 
+- Ensure that your nozzle is relatively clean.
+- Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
+    - Your nozzle should be hot tightened (to the manufacturer's recommended torque specification if possible).
+    - On most hotends *(particularly ones without a free-floating heater block like the v6 & Dragonfly)*, the nozzle should not be "bottomed out" against the heater block. You should see a little bit of a gap/thread. If the nozzle is bottomed out, that means that the heatbreak is not screwed in far enough and is not making adequate contact.
+- You may need to use less z hop (z lift). I run 0.2mm. Much higher than 0.3mm gives me stringing.
+- Your retraction/unretraction speeds may be too fast *(or too slow - but anecdotally I have had better results with slower speeds, around 30mm/s).*
+- Make sure you are not overextruding. Tuning article [:page_facing_up: here](./extrusion_multiplier.md).
+- Try extruding and then retracting (with the e motor off) by turning the extruder by hand. There shouldn't be too much of a "dead zone" when reversing directions. This could indicate too much backlash, a loose grub screw, or another extruder issue.
+- Your pressure advance may be too low.
+- Try a new nozzle.
+- If all else fails, rebuild your extruder/toolhead.
+
+### With PETG
+
+If you're using PETG, you may just need to live with some stringing. \
+PETG is extremely difficult to get string-free prints with.
+
+- Well-tuned PA/EM helps.
+- You may need to tinker with temps and cooling.
+- Use [:page_facing_up: avoid_crossing_perimeters](https://cdn.help.prusa3d.com/wp-content/uploads/2021/01/avoid_crossing2-2048x977.jpg) in PS/SS or [:page_facing_up: combing](https://all3dp.com/2/combing-mode-cura-simply-explained/) in Cura. 
+    - This keeps travels/stringing inside the infill where possible. 
+    - It increases slicing and print times, however, so there's no need to keep it on for other materials.
+- [:page_facing_up: E3D Nozzle X](https://e3d-online.com/blogs/news/nozzle-x-the-one-nozzle-to-rule-them-all) has a nonstick coating that *might* help, however I have not tested this theory. 
+    - If you try it, let me know. I'm curious.
 
 ---
 
@@ -130,32 +162,3 @@ We will be printing these retraction towers at three different temperatures. If 
         - Count the rings (from the bottom), subtract 1, and multiply by your "step" value from step 6.
             - In my opinion, choose a height **1-2 rings higher** than where the stringing disappears. This just gives you a bit more headroom for filaments that may behave a bit differently.
             - We are subtracting 1 because the first ring is 0 retraction.
-
-## If You Are Having Persistent Issues
-- **Ensure that your filament is dry.** Wet filament can cause near-unfixable stringing.
-    - Even brand new, factory sealed filament can still come wet. 
-- [:page_facing_up: Ensure that you don't have excessive backlash in your extruder gears.](./troubleshooting/extrusion_patterns.md#extruder-backlash)
-- Ensure that your nozzle is relatively clean.
-- Ensure that your hotend is not leaking around the threads or heat break. This can indicate that your nozzle or heatbreak is loose or not making adequate contact.
-    - Your nozzle should be hot tightened (to the manufacturer's recommended torque specification if possible).
-    - On most hotends *(particularly ones without a free-floating heater block like the v6 & Dragonfly)*, the nozzle should not be "bottomed out" against the heater block. You should see a little bit of a gap/thread. If the nozzle is bottomed out, that means that the heatbreak is not screwed in far enough and is not making adequate contact.
-- You may need to use less z hop (z lift). I run 0.2mm. Much higher than 0.3mm gives me stringing.
-- Your retraction/unretraction speeds may be too fast *(or too slow - but anecdotally I have had better results with slower speeds, around 30mm/s).*
-- Make sure you are not overextruding. Tuning article [:page_facing_up: here](./extrusion_multiplier.md).
-- Try extruding and then retracting (with the e motor off) by turning the extruder by hand. There shouldn't be too much of a "dead zone" when reversing directions. This could indicate too much backlash, a loose grub screw, or another extruder issue.
-- Your pressure advance may be too low.
-- Try a new nozzle.
-- If all else fails, rebuild your extruder/toolhead.
-
-### With PETG
-
-If you're using PETG, you may just need to live with some stringing. \
-PETG is extremely difficult to get string-free prints with.
-
-- Well-tuned PA/EM helps.
-- Use [:page_facing_up: avoid_crossing_perimeters](https://cdn.help.prusa3d.com/wp-content/uploads/2021/01/avoid_crossing2-2048x977.jpg) in PS/SS or [:page_facing_up: combing](https://all3dp.com/2/combing-mode-cura-simply-explained/) in Cura. 
-    - This keeps travels/stringing inside the infill where possible. 
-    - It increases slicing and print times, however, so there's no need to keep it on for other materials.
-- [:page_facing_up: E3D Nozzle X](https://e3d-online.com/blogs/news/nozzle-x-the-one-nozzle-to-rule-them-all) has a nonstick coating that *might* help, however I have not tested this theory. 
-    - If you try it, let me know. I'm curious.
-

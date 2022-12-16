@@ -62,6 +62,15 @@ Even Prusa recommends it!
 
 ## "Two 0.4mm Perimeters = 0.8mm"
 
+---
+
+{: .attention }
+> **This applies to Slic3r and its derivatives (Prusa Slicer & SuperSlicer).**
+> - Cura uses different flow math that assumes a simple rectangular cross-section.
+>   - I am still looking into Cura's behavior, and I have not yet looked into other slicers.
+
+---
+
 The title is just an example, this applies to any line width or perimeter count.
 
 - I'm using 0.4mm for simplicity, even though I generally recommend printing line widths larger than nozzle diameter.
@@ -93,13 +102,21 @@ You would put a **spacing** *(or "width & spacing combo" for external perimeters
 ## "You Shouldn't Tune Extrusion Multiplier, The Slicer Knows Best"
 ..."e-steps / extruder calibration is all you need to do"
 
+---
+
+{: .attention }
+> **This section uses flow math from Slic3r and its derivatives (Prusa Slicer & SuperSlicer) as an example.**\
+> Different slicers may use different models. The overall argument is the same, however - each have their unique quirks, and none of them can perfectly predict reality.
+
+---
+
 <sup>This section was created by heavily referencing [:page_facing_up: Slic3r Flow Math documentation](https://manual.slic3r.org/advanced/flow-math). Prusa Slicer is a fork of Slic3r, and SuperSlicer is a fork of Prusa Slicer. They both use this math as their basis. Other major slicers also use the same math.</sup>
 
 In a perfect world, the slicer would be perfect, and know exactly how much plastic to extrude. But - nothing can ever be simple, can it?
 
 ### The Assumptions
 
-Slicers make some assumptions.\
+Slic3r-based slicers make some assumptions.\
 The first major assumption they make is that extrusion comes out in this exact shape:
 - [![](./images/misconceptions/slic3r_cross-section.png)](./images/misconceptions/slic3r_cross-section.png){:target="_blank"}\
 [Source](https://manual.slic3r.org/advanced/flow-math)

@@ -32,24 +32,31 @@ parent: Tuning
 [![](./images/cooling_and_layer_times/Overheating-3.png)](./images/cooling_and_layer_times/Overheating-3.png){:target="_blank"} 
 [![](./images/cooling_and_layer_times/Overheating-5.png)](./images/cooling_and_layer_times/Overheating-5.png){:target="_blank"} 
 [![](./images/cooling_and_layer_times/Overheating-6.jpg)](./images/cooling_and_layer_times/Overheating-6.jpg){:target="_blank"} 
-## How to Fix It
-### Increase Fan Speeds
-People often start printing by ABS with no cooling. While this is valid advice for unenclosed printers, it's not a universal rule. **ABS often needs some cooling, especially in an enclosure.**
-- You probably need higher fan speeds than you think. 
 
+## How to Fix It
+
+### Increase Fan Speeds
+
+**PLA**
+- PLA is very resistant to cooling. For the most part -  the more cooling, the better.\
+Excessive cooling *can* moderately reduce part strength, however.
+
+**ABS & Other Shrinking Materials**
+- People often start printing by ABS with no cooling. While this is valid advice for unenclosed printers, it's not a universal rule. **ABS often needs some cooling, especially in an enclosure.**
+- You probably need higher fan speeds than you think. 
 - The higher your chamber temperature is, the higher fan speeds you will need.
     - For example I run AB-BN (5015 fan mod) and have a 63C chamber.
         - For large plates, I use 40-50% fan.
         - For small plates, I may use up to 80% fan.
         - For single small objects, I may use up to 100% fan.
 
+- I generally recommend using constant fan speeds when possible. **Varying fan speeds during a print will cause inconsistent layers and banding.** Otherwise some layers cool and shrink faster than others.
+    - For very large objects, however, you may want to be more conservative with cooling. Large objects are much more prone to warping.
+        - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
+
 - If your prints are curling away from the bed even at low fan speeds, it may actually be a [:page_facing_up: build surface adhesion](./build_surface_adhesion.md) issue.
 
-- For optimal quality with filaments that shrink, I recommend using constant fan speeds when possible. **Varying fan speeds during a print will cause inconsistent layers and banding.** Otherwise some layers cool and shrink faster than others.
 
-- For very large objects, however, you may want to be more conservative with cooling. Large objects are much more prone to warping.
-
-    - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
 
 ### Increase Layer Times
 - This can be forced in the slicer using "minimum layer time" / "layer time goal" / "slow down if layer print time is below". This will slow down your print speed to ensure each layer takes at least X amount of time.

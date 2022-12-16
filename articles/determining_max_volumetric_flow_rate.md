@@ -40,6 +40,7 @@ You can use this volumetric flow rate **to determine how fast your hotend/extrud
         - This is utilized by my published SuperSlicer profile (see its [:page_facing_up: "Volumetric Speed Limiting"](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles#volumetric-speed-limiting) section for more information.)
         - [![](./images/determining_max_volumetric_flow_rate/volumetric-ss.png)](./images/determining_max_volumetric_flow_rate/volumetric-ss.png){:target="_blank"}
         - :warning: **In Prusa Slicer, this must be set in the filament settings instead.** The setting in the "auto speed" section only applies in specific circumstances in PS.
+        
 ## Approximate Values
 
 These approximate values **assume a standard 0.4mm brass nozzle.** 

@@ -39,14 +39,15 @@ grand_parent: Tuning
 
 ---
 
-:bulb: **Pressure advance will change:**
-- With different filaments and brands.
-    - *Different colors of the same material/brand *can* behave differently, but it's \*usually\* not significant.*
-- With different nozzle sizes.
-- With large hotend temperature changes.
-    - *Large temp changes can affect the viscosity of the plastic (and therefore the back pressure / resistance).*
-- When enabling or disabling input shaper.
-- When changing hotend, extruder, or bowden tube length (NOT reverse bowden)
+{: .note }
+>:bulb: **Pressure advance will change:**
+>- With different filaments and brands.
+>    - *Different colors of the same material/brand can behave differently, but it's \*usually\* not significant.*
+>- With different nozzle sizes.
+>- With large hotend temperature changes.
+>    - *Large temp changes can affect the viscosity of the plastic (and therefore the back pressure / resistance).*
+>- When enabling or disabling input shaper.
+>- When changing hotend, extruder, or bowden tube length (NOT reverse bowden)
 
 ---
 

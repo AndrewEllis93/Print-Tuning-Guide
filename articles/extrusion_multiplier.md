@@ -10,10 +10,13 @@ parent: Tuning
 # Extrusion Multiplier
 {: .no_toc }
 
+:bulb: I’m going to call it "extrusion multiplier" to be unambiguous.\
+It is sometimes referred to as "flow", which can be confused with *volumetric flow rate.*
+
 ---
 
 {: .compat}
-:dizzy: This page is compatible with all printers.
+>:dizzy: This page is compatible with all printers.
 
 {: .prereqs}
 >- You should [:page_facing_up: calibrate your extruder](./extruder_calibration.md) first.
@@ -34,17 +37,26 @@ parent: Tuning
 
 ---
 
+## Cura Terminology
+
+Cura uses the term "flow" both for its extrusion multiplier *and* for its volumetric flow rate preview. They are separate concepts, however.
+- Cura's version of extrusion multiplier:
+    - [![](./images/extrusion_multiplier/cura_em.png)](./images/extrusion_multiplier/cura_em.png){:target="_blank"}
+- Cura's flow *rate* preview - not the same thing!
+    - [![](./images/extrusion_multiplier/cura_flowrate.png)](./images/extrusion_multiplier/cura_flowrate.png){:target="_blank"}
+
+---
+
 ## Background
 
-Getting the perfect extrusion multiplier (EM) is *crucial* for good looking prints. There are some [:pushpin: tuned print examples](#tuned-print-examples) below.
+{: .note }
+:bulb: Extrusion multiplier (EM) tuning must be done, at a minimum, per filament brand/type. It may vary by color or by spool, depending how consistent your filament brand of choice is.
 
-:bulb: EM tuning must be done, at a minimum, per filament brand/type. It may vary by color or by roll, depending how consistent your filament brand of choice is.
+Extrusion multiplier EM is a huge part of achieving good looking prints. There are some [:pushpin: tuned print examples](#tuned-print-examples) below.
 
-Some slicers seem to need slightly higher or lower EM than others.
+Different slicers may use different flow math, and may need higher or lower EM than others.
 
-This method uses an aesthetics-first approach. For conerns about dimensional accuracy, see the [:pushpin: Rationale & Dimensional Accuracy](#rationale--dimensional-accuracy) section.
-
-I have found that most ABS falls within the 91-95% range, and most PLA in the 94-98% range (though don't take that as gospel, I have some outliers!)
+This method uses an aesthetics-first approach. For concerns about dimensional accuracy, see the [:pushpin: Rationale & Dimensional Accuracy](#rationale--dimensional-accuracy) section.
 
 ## Method
 The best method I have found is purely visual/tactile.
@@ -142,6 +154,8 @@ You will get better at this through experience.
 {: .no_toc }
 
 Here you'll narrow down a general range to work in.
+
+I usually start from 92% to 98%. Most filaments will fall in this range, **but not all**.
 
 <sup>*Click the image to open. Ctrl + scroll up / down to zoom.*</sup>\
 [![](./images/extrusion_multiplier/EMPrints-Coarse-Annotated.png)](./images/extrusion_multiplier/EMPrints-Coarse-Annotated.png){:target="_blank"} 

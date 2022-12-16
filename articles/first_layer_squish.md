@@ -10,7 +10,7 @@ parent: Tuning
 # First Layer Squish
 {: .no_toc }
 
-I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 
+:bulb: I'm going to call it "squish" to be unambiguous. "Z offset" and "z height" can be conflated with other concepts. 
 
 ---
 

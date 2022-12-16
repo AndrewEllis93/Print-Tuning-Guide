@@ -19,6 +19,9 @@ parent: Useful Macros
 {: .compat}
 :dizzy: Macros are compatible with **Klipper only**.
 
+{: .prereqs}
+> You need `[pause_resume]` specified in your config to be able to use these.
+
 ---
 
 <details open markdown="block">
@@ -34,8 +37,8 @@ parent: Useful Macros
 
 ## Pause / Resume
 
-- **:warning: You need `[pause_resume]` specified in your config to be able to use these.**
-- **:warning: My pause/resume macros work as a pair. One will not work properly without the other.**
+{: .attention}
+> My pause/resume macros work as a pair. One will not work properly without the other.
 
 ### Features
 
@@ -61,8 +64,6 @@ Some things are commented out that rely on other macros. You can uncomment them 
 *I use a [:page_facing_up: BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot\* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!\***
 
 ### Pause
-
-**:warning: My pause/resume macros work as a pair. One will not work properly without the other.**
 
 If you use a filament sensor, put its name in the `SET_FILAMENT_SENSOR` command. Otherwise, comment that out.
 
@@ -102,7 +103,9 @@ gcode:
 
 ### Resume
 
-**:warning: My pause/resume macros work as a pair. One will not work properly without the other.**
+{: .warning}
+> This resume macro will move **directly** back to its previous position.\
+> If using "complete individual objects" or "one at a time" in your slicer, **ensure that the objects are printed from back to front on the build plate to avoid collisions on the return.**
 
 If you use a filament sensor, put its name in the `SET_FILAMENT_SENSOR` command. Otherwise, comment that out.
 {% raw %}

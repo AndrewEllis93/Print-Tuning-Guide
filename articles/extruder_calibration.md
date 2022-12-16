@@ -11,6 +11,9 @@ parent: Tuning
 
 # Extruder Calibration
 {: .no_toc }
+
+Also known as "e-steps", or extruder "rotation distance" or "steps per mm".
+
 ---
 
 {: .compat}

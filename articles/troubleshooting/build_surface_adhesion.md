@@ -1,12 +1,12 @@
 ---
 layout: default
 title: Build Surface Adhesion
-nav_order: 2
-parent: Tuning
+parent: Troubleshooting
 ---
 {% comment %} 
-# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/build_surface_adhesion.html).
+# This page has moved! Please visit [the new location](https://ellis3dp.com/Print-Tuning-Guide/articles/troubleshooting/build_surface_adhesion.html).
 {% endcomment %}
+
 # Build Surface Adhesion
 {: .no_toc }
 
@@ -27,27 +27,20 @@ parent: Tuning
 
 ---
 
-## Build Surface Preparation / Handling
-- :warning: Avoid touching your build surface as much as possible. Oils from your fingers will cause issues. Handle your spring steel with a paper towel or paper shop towel.
+{: .attention }
+>- **:warning: Thoroughly wash all print surfaces with dish soap and water**.
+>    - You should do this **even for brand new surfaces.**
+>    - Use some elbow grease, especially with textured plates. Scrub thoroughly in small circles and then rinse.*
+>    - :warning: Don't dry it using cloth. Many laundry products contain fats, oils, or waxes. You may use paper towels\*\*, or preferably, **air dry it**.
+>- :warning: Avoid touching your build surface as much as possible. Oils from your fingers will cause adhesion issues. Pick it up using the tabs, or by the sides. You may also handle it with paper towels**
+>- Isopropyl alcohol does not do a great job of cleaning oils. It's okay for maintenance, but you should still plan to wash it occasionally.
 
-- **:warning: Thoroughly wash all build plates with dish soap and water** (and make sure to rinse thoroughly too).
-    - You should do this **even for brand new surfaces.**
+\* *If your build surface is not detachable, carefully spritz it with water or use isopropyl alcohol. Be thorough - you don't want any remaining soap residue.*\
+\*\* *Some brands of paper towels contain conditioners that may cause issues.*
 
-    - Dry it with a paper towel rather than a cloth/rag. Many laundry products contain fats, oils, or waxes.
+---
 
-    - Isopropyl alcohol does not do a great job of cleaning oils. It mostly just spreads them around.
-
-        - You can use IPA most of the time, with occasional soap when it needs further refreshing. Soap is not necessary for every print. 
-
-    - I keep a spray bottle of (SLIGHTLY) soapy water next to my printer. I spray 1-2 spritzes, and scrub with a shop towel. Then I scrub again with isopropyl alcohol (IPA) to remove the remaining soap residue. 
-        - This means fewer trips to the kitchen sink, though it may still be necessary for a full refresh on occasion!
-
-- User a proper first layer temperature.
-    - PLA: ~60C
-    - PETG: ~80C
-    - ABS: ~90-100C*
-        - *:warning: Voron V2 and Trident have a ~10-15C temperature drop due to the thickness of the bed. Most people run ~110C for ABS because of this.
-    - Some filament brands recommend inaccurate/conservative temperatures. Try standard temps instead if you are having issues.
+{: .note }
 
 ### Smooth PEI
 
@@ -63,11 +56,14 @@ parent: Tuning
 
     - You should probably keep the scouring pad/sponge out of the kitchen afterwards. I'm not sure the health effects of plastic dust ending up on your dishes - better safe than sorry!
 
-## Troubleshooting
-:bulb: **If this is your first time through this guide, skip to the next step - [:page_facing_up: first layer squish](./first_layer_squish.md).**
-
-This section is just for further troubleshooting if you are still having issues.
 ### All Surfaces
+
+- Ensure that you are using a proper first layer temperature.\
+Some filament brands recommend inaccurate/conservative temperatures. Try standard temps instead if you are having issues.
+    - PLA: ~60C
+    - PETG: ~80C
+    - ABS: ~90-100C*
+        - *:warning: Voron V2 and Trident have a ~10-15C temperature drop due to the thickness of the bed. Most people run ~110C for ABS because of this.
 
 
 - :warning: Ensure that your [:page_facing_up: first layer squish](./first_layer_squish.md) is correct.

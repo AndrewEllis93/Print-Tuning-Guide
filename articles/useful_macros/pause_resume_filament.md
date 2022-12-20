@@ -61,7 +61,7 @@ Some things are commented out that rely on other macros. You can uncomment them 
 
 ---
 
-*I use a [:page_facing_up: BTT Smart Filament Sensor](https://www.amazon.com/BIGTREETECH-Printer-Filament-Detection-Detector/dp/B07Z97582P), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot\* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!\***
+*I use a [:page_facing_up: BTT Smart Filament Sensor](https://www.aliexpress.us/item/2255800154703522.html) (also on Amazon), and highly recommend it, as it can catch skipping and jams, not just runouts. It has saved a *lot\* of prints for me, often due to partial nozzle clogs that are causing extruder skipping. Just **don't forget the pullup on the pin (`^`)!!\***
 
 ### Pause
 

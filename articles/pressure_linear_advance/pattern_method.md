@@ -27,6 +27,11 @@ grand_parent: Tuning
 
   - I won't go into much detail here, or this article will become 20 pages long. Treat it like a slicer.
   - Most of these settings should be relatively intuitive, or have descriptions explaining what they do.
+  - Some tips:
+    - :bulb: Make sure to read all the tooltips! *(hover over the tooltip icon to the right of some input boxes).*
+    - :warning: If you use slicer acceleration control, **make sure you enable that option and set it to your external perimeter acceleration.** 
+      - Otherwise it will use your **default (max) acceleration**, or whatever you currently have it set to. If you have a high maximum, this will cause ringing and throw off the test results.\
+      <sup>*(I disabled this by default because that option was confusing newer folks who don't yet use slicer acceleration control)*</sup>
 
 - You should get a result like this:
 

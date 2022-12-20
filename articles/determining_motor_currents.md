@@ -43,8 +43,14 @@ Extruder motors/pancake steppers are a bit different, as there is more variance 
 
     - My OMC 1.8° motors, on the other hand, performed very well even at moderate currents.
 
-- We are derating the motors/drivers for margin of safety. Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
-- TMC2209 drivers are rated to 2a RMS, but I would not exceed 1.4a RMS.
+- **Different stepper drivers have different maximum currents**.
+    - See [:page_facing_up: here](https://learn.watterott.com/silentstepstick/comparison/). Try not to exceed ~70-80% of the rated maximum of your drivers (and remember that higher currents need more stepper driver cooling).
+
+        - For example TMC2209 drivers are rated to 2a RMS, but I would generally not exceed 1.4a RMS.
+
+- We are derating the motors/drivers for margin of safety. 
+    - Rated currents are the absolute maximum *in ideal conditions*. In reality, things like chamber and driver temperature come into play. Margin of safety is also standard practice.
+
 
 ## Determining Initial `run_current`:
 Start with around **40-50%** of rated current.

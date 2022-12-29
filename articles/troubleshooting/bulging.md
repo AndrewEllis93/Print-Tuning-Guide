@@ -98,16 +98,16 @@ Some SuperSlicer profiles have "above the bridges" flow set to greater than 100%
 - There are three solutions:
 
     - **Reduce "above the bridges" flow to back to 100%**
-        - **You should definitely do this**, in my opinion. 110% "above the bridges" flow can also cause [:page_facing_up: other issues](https://github.com/supermerill/SuperSlicer/issues/3410). The other two options can be used in addition, but are more of a preference. 
+        - **You should definitely do this**, in my opinion. 110% "above the bridges" flow can also cause [:page_facing_up: other issues](https://github.com/supermerill/SuperSlicer/issues/3410). The other two options can be used in addition, but are more of a preference.
         - [![](./images/bulging/AboveBridgeFlow-Reset.png)](./images/bulging/AboveBridgeFlow-Reset.png){:target="_blank"}
-        
-    - **Set "threshold for bridge speed and fan" to 0**
-        - This totally prevents SS from applying bridging settings to overhangs.
-        - [![](./images/bulging/AboveBridgeFlow-DisableOverhang.png)](./images/bulging/AboveBridgeFlow-DisableOverhang.png){:target="_blank"}
 
     - **Set "threshold for bridge flow" to 0**
-        - This prevents SS from applying *bridging flow* settings to overhangs, but still applies bridging speeds/fan settings.
+        - This prevents SS from applying *bridging flow* settings to overhangs, but still applies overhang speed / bridge fan settings.
         - [![](./images/bulging/AboveBridgeFlow-DisableOverhangFlow.png)](./images/bulging/AboveBridgeFlow-DisableOverhangFlow.png){:target="_blank"}
+        
+    - **Set "threshold for bridge speed and fan" to 0**
+        - This totally prevents SS from applying different settings to overhangs.
+        - [![](./images/bulging/AboveBridgeFlow-DisableOverhang.png)](./images/bulging/AboveBridgeFlow-DisableOverhang.png){:target="_blank"}
 
 - This can also occur above where the print has lifted from the build surface (it curls up into the nozzle a bit, and the plastic no longer has space to go, so squishes outwards)
 - If these do not fix it, it might instead be an [:page_facing_up: overheating issue.](../cooling_and_layer_times.md).

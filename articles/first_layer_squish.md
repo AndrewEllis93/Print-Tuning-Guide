@@ -94,7 +94,7 @@ parent: Tuning
                 - It's normal to have a *little* bit of this near the corners, or in small print areas.
             - You shouldn't see any gaps* between the lines.
                 - It's fine to have some very small pinholes where the infill meets the     perimeters.
-            - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal.
+            - **NOTE:** Upon review, somewhere between square 3 and 4 is closer to ideal. If you're not sure, it's generally better to lean on the side of a bit too much squish (especially if your offset varies a little between prints).
             - [![](./images/first_layer_squish/FirstLayer-Squares-2.png)](./images/first_layer_squish/FirstLayer-Squares-2.png){:target="_blank"}
             - [![](./images/first_layer_squish/FirstLayer-Squares-2-Annotated.png)](./images/first_layer_squish/FirstLayer-Squares-2-Annotated.png){:target="_blank"}
 
@@ -107,6 +107,7 @@ parent: Tuning
     - #### Textured Build Surface
         - **Top Surface**
             - Follow the same guidance as for smooth build surfaces (above). You can see hairs/lumps with too much squish, and gaps with not enough squish.
+            - With textured, I find that I sometimes need to use a bit of extra squish to get a good second layer. I might choose closer to #4.
             - [![](./images/first_layer_squish/FirstLayer-Squares-Textured.png)](./images/first_layer_squish/FirstLayer-Squares-Textured.png){:target="_blank"}
         - **Bottom Surface**
             - **The lines will not be as visible as on a smooth build surface.**

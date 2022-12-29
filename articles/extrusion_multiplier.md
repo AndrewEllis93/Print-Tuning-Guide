@@ -67,6 +67,7 @@ We will print some 30x30x3mm cubes. *(see the [:page_facing_up: test_prints fold
 - **Infill:** 30%+ 
 
 - **Top Layer [:page_facing_up: Line Width](./a_note_about_line_width.md):** 100%
+   - :warning: Remember, [:page_facing_up: don't use these percentages in PS and Cura](./a_note_about_line_width.md). you must instead put the actual number in millimeters (e.g. **0.4** with a 0.4mm nozzle)
    - **SS/PS:** ctrl+f, search: `top_infill_extrusion_width`
    - **Cura:** "Top/Bottom Line Width" - set to equal your nozzle size.
     - I anecdotally find 100% to create a nice finish and show off EM differences the best.

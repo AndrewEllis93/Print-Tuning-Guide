@@ -58,12 +58,12 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
         - [![](./images/small_infill_overextruded/overshoot.png)](./images/small_infill_overextruded/overshoot.png){:target="_blank"}
     - Reset infill/perimeter encroachment
         - [![](./images/small_infill_overextruded/encroachment_setting.png)](./images/small_infill_overextruded/encroachment_setting.png){:target="_blank"}
-        - **:warning:Setting it low can cause sparse infill to disconnect**.
+        - **:warning: Lower values can cause sparse infill to disconnect from the perimeters.**
             - [![](./images/small_infill_overextruded/infill_disconnect.png)](./images/small_infill_overextruded/infill_disconnect.png){:target="_blank"}
             - One fix for this is to enable `infill_anchor_max`:
                 - [![](./images/small_infill_overextruded/infill_anchor_max.png)](./images/small_infill_overextruded/infill_anchor_max.png){:target="_blank"}
-                    - Result:\
-                    [![](./images/small_infill_overextruded/infill_disconnect_fix.png)](./images/small_infill_overextruded/infill_disconnect_fix.png){:target="_blank"}
+                - Result:\
+                [![](./images/small_infill_overextruded/infill_disconnect_fix.png)](./images/small_infill_overextruded/infill_disconnect_fix.png){:target="_blank"}
 
 #### What it Does
 
@@ -84,7 +84,7 @@ This is default behavior in Cura, and is not available in Prusa Slicer.
 # The Magic Bullet?
 
 ---
-:warning: **This section is advanced reading.:warning:**
+:warning: **This section is advanced reading.** :warning:
 
 **These techniques have downsides that are only addressable by an EXPERIMENTAL custom SuperSlicer build.**
 

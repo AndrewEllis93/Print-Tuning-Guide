@@ -31,6 +31,9 @@ parent: Troubleshooting
 
 [![](./images/layer_shifting/2.png)](./images/layer_shifting/2.png){:target="_blank"}
 ## Mechanical
+- Check your belt tension. When tensioning belts by feel, most people tend to make them way too tight. Too loose can also cause tooth slipping. 
+    - For Vorons, see [:page_facing_up:here](https://docs.vorondesign.com/tuning/secondary_printer_tuning.html#belt-tension). I use 120hz for X/Y and 140hz for Z (over a 15cm span of belt).
+    - 120hz (again, over a **15cm span of belt**) would likely also work on other printers, but I can't say for sure.
 - Try using z lift (z hop), and [:page_facing_up: check your prints for signs of overheating](../cooling_and_layer_times.md). Print curling can cause nozzle strikes and subsequent layer shifts.
     - Around 0.2-0.3mm of z lift is usually enough. Too much can cause stringing.
 - Ensure that you have good quality motors. 

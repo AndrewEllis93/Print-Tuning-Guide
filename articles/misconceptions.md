@@ -110,7 +110,7 @@ You would put a **spacing** *(or "width & spacing combo" for external perimeters
 
 ---
 
-<sup>This section was created by heavily referencing [:page_facing_up: Slic3r Flow Math documentation](https://manual.slic3r.org/advanced/flow-math). Prusa Slicer is a fork of Slic3r, and SuperSlicer is a fork of Prusa Slicer. They both use this math as their basis. Other major slicers also use the same math.</sup>
+<sup>This section was created by heavily referencing [:page_facing_up: Slic3r Flow Math documentation](https://manual.slic3r.org/advanced/flow-math).</sup>
 
 In a perfect world, the slicer would be perfect, and know exactly how much plastic to extrude. But - nothing can ever be simple, can it?
 

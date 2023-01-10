@@ -23,7 +23,7 @@ This is just a list of things that I often see floating around that are, in my o
 
 ## Tuning Extrusion Multiplier By Measuring 1-2 Cube Walls
 
-When measuring two walls, you run into the [:pushpin: issue described above](#two-04mm-perimeters--08mm). Two walls does **NOT equal line width * 2**!
+When measuring two walls, you may run into the [:pushpin: issue described below](#two-04mm-perimeters--08mm). Two walls does **NOT equal line width * 2** in some slicers!
 
 In both cases, you are also measuring **layer wobble and inconsistent extrusion**, which all printers and filaments have in some degree. You will always be measuring the bit that sticks out most.
 

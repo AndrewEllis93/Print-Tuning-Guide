@@ -29,7 +29,7 @@ parent: Troubleshooting
 ## VFAs With ~2mm Spacing
 If the marks are about 2mm apart, that usually means that it's coming from **belt/pulley/idler teeth** somewhere. 
 
-Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [:page_facing_up: here](https://mihaidesigns.com/pages/inconsistent-extrusion-test). \
+Ensure that these artifacts are **still perfectly vertical** even when printing irregularly shaped objects like the *"rectangular 2 recommended.stl"* object [:page_facing_up: here](https://mihaidesigns.com/inconsistent-extrusion/). \
 If they are not vertical (i.e. wood grain, diagonal, etc), see [:page_facing_up: this article](../troubleshooting/extrusion_patterns.md) instead.
 
 Print a square object at 45 degrees and see if it appears A, B, or both. This will tell you which axis/axes to look at.
@@ -62,7 +62,7 @@ Print a square object at 45 degrees and see if it appears A, B, or both. This wi
         - Gates toothed idlers > smooth idlers (2x F695 bearings) > china toothed idlers.
 ## VFAs With Non-2mm Spacing
 
-Try printing the test objects [:page_facing_up: here](https://mihaidesigns.com/pages/inconsistent-extrusion-test).
+Try printing the test objects [:page_facing_up: here](https://mihaidesigns.com/inconsistent-extrusion/).
 
 Ensure that the artifacts are *always vertical or diagonal, regardless of part geometry*. These patterns can be subtle (lumps) or sharp (lines).
 

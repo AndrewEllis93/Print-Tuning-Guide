@@ -54,7 +54,7 @@ Excessive cooling *can* moderately reduce part strength, however.
     - For very large objects, however, you may want to be more conservative with cooling. Large objects are much more prone to warping.
         - This is the only time I might use differing fan speeds. Lower fan speeds for the majority of the print, with higher fan speeds for overhangs.
 
-- If your prints are curling away from the bed even at low fan speeds, it may actually be a [:page_facing_up: build surface adhesion](./build_surface_adhesion.md) issue.
+- If your prints are curling away from the bed even at low fan speeds, it may actually be a [:page_facing_up: build surface adhesion](./troubleshooting/build_surface_adhesion.md) issue.
 
 
 

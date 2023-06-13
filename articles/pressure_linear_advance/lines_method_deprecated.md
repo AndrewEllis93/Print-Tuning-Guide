@@ -23,7 +23,7 @@ grand_parent: Tuning
 
 ---
 
-- :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pressure_advance.md).
+- :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pattern_method.md).
 
 - :warning: The contents of this page may be out of date!
 

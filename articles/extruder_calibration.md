@@ -112,7 +112,7 @@ You may choose to do the test cold (bypassing the hotend). This can ensure thing
     ![]({{ "/assets/img/klipper.png" | absolute_url }}) Klipper
     - Find the `[extruder]` section in your printer.cfg. Note your current `rotation_distance`.
     - Calculate your new `rotation_distance` using this formula:
-        - \<new_rotation_distance\> = \<previous_rotation_distance\> * ( \<actual_extrude_distance\> / 100 )
+        - \<new_rotation_distance\> = \<previous_rotation_distance\> * ( 100 / \<actual_extrude_distance\> )
     - Temporarily set your new value with `SET_EXTRUDER_ROTATION_DISTANCE`.
         - Example: `SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder DISTANCE=34.99312407591`
 

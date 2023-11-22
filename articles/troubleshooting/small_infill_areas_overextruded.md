@@ -40,7 +40,7 @@ But, there are some things that *may* help a bit:
     - **There seem to be diminishing returns here**, at least in my testing. There's no need to tune this down as low as physically possible.
 - Try reducing top infill speeds and accelerations.
     - Again, there are diminishing returns here. On my printer, I stop seeing noticeable improvements below around 2k acceleration. Your mileage may vary.
-- Ensure that your extruder gears don't have too much [:page_facing_up: backlash](https://gfycat.com/mealycautiouscoqui). 
+- Ensure that your extruder gears don't have too much [:page_facing_up: backlash](https://i.gifer.com/N4k2.gif). 
     - You **want** a tiny amount of backlash (but as little as possible - this is just to make sure that you haven't over tensioned the gears. Too much tension can cause [:page_facing_up: extrusion patterns](../troubleshooting/extrusion_patterns.md) and accelerated wear.) 
     - Too much backlash can cause issues with pressure advance and retractions.
     - You may need to re-tune PA (and sometimes esteps) after adjusting this.

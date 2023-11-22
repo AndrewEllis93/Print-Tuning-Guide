@@ -28,12 +28,12 @@ Voron V2.4 350mm (with some V2.2 parts still on it)
         - i.e. "flappy cable". No X/Y cable chains. 
         - This saves a fair bit of weight on the X axis, and I have not had a single wire break since (I had a lot of wire breaks with cable chains and got sick of them.) It's also WAY easier to service. You do lose a bit of Z height, though.
         - I just did this the janky way - I just wrapped the wires up and zip tied the far end to the Z chain, and the toolhead side to the reverse bowden tube. There are prettier mods out there for it.
-    - Toolhead X endstop & [:page_facing_up: relocated Y endstop](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_Y_Endstop_Relocation)
+    - Toolhead X endstop & [:page_facing_up: relocated Y endstop](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/hartk1213/Voron2.4_Y_Endstop_Relocation)
         - Allows for umbilical.
         - The Y endstop relocation is also available as part of the pin mod below.
         - The toolhead X endstop is my own mod, and is outdated now. Not sure what other options are currently available, haven't looked into it.
     - [:page_facing_up: Pin mod](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/hartk1213/Voron2.4_Trident_Pins_Mod)
-    - [:page_facing_up: GE5C mod](https://github.com/hartk1213/MISC/tree/main/Voron%20Mods/Voron%202/2.4/Voron2.4_GE5C)
+    - [:page_facing_up: GE5C mod](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/hartk1213/Voron2.4_GE5C)
     - Gantry backers
         - [:page_facing_up: MGN9 Y backers](https://github.com/VoronDesign/VoronUsers/tree/master/printer_mods/bythorsthunder/MGN9_Backers)
         - [:page_facing_up: Titanium X backer](https://www.fabreeko.com/products/v2-4-trident-titanium-extrusion-backers?variant=40722088034502) 
@@ -44,4 +44,4 @@ Voron V2.4 350mm (with some V2.2 parts still on it)
     - [:page_facing_up: Decontaminator nozzle brush](https://github.com/VoronDesign/VoronUsers/tree/master/orphaned_mods/printer_mods/edwardyeeks/Decontaminator_Purge_Bucket_%26_Nozzle_Scrubber)
     - Voron V2.2 handles & single panel front door
     - PiCam with some random Thingiverse mount
-    - [:page_facing_up: Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Other_Printer_Mods/tree/master/All_Printers/Annex_Panel_2020_Clips_and_Hinges)
+    - [:page_facing_up: Annex Engineering twist-lock panel clips](https://github.com/Annex-Engineering/Annex-Engineering_User_Mods/tree/main/Printers/All_Printers/annex_dev-Panel_2020_Clips_and_Hinges)

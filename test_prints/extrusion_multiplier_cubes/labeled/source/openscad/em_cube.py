@@ -16,7 +16,7 @@ def cli():
 def generate_cube(cube_width, cube_depth, cube_height, layer_height, label, text_size):
    command = [
         'openscad', 'em_cube.scad',
-        '-D', f'em_value={label}',
+        '-D', f'em_value="{label}"',
         '-D', f'cube_width={cube_width:.3f}',
         '-D', f'cube_depth={cube_depth:.3f}',
         '-D', f'cube_height={cube_height:.3f}',
@@ -26,8 +26,9 @@ def generate_cube(cube_width, cube_depth, cube_height, layer_height, label, text
         '--export-format', 'binstl',
         ]
    result = subprocess.run(command, capture_output=True)
-   print(f'openscad ..... -D em_value="{label}" -o em_cube_{label}.stl .....') 
-   print(result)
+   #print(f'openscad ..... -D em_value="{label}" -o em_cube_{label}.stl .....') 
+   print(*command)
+   #print(result)
  
 
 @click.command('generate')

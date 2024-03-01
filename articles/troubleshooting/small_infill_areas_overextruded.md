@@ -50,7 +50,7 @@ But, there are some things that *may* help a bit:
 
 ### "Not Connected" Top Infill (SuperSlicer)
 I find that setting top infill to "not connected"  makes a noticeable improvement.\
-This is default behavior in Cura, and is not available in Prusa Slicer.
+This is default behavior in Cura. In Prusa Slicer, it can be configured by setting the "Top fill pattern" to "Monotonic lines".
 
 - [![](./images/small_infill_overextruded/not_connected_setting.png)](./images/small_infill_overextruded/not_connected_setting.png){:target="_blank"}
 - :warning: This setting overshoots perimeters more than "connected" does. If you have raised your infill/perimeters encroachment (overlap), **consider setting it back to default** (for now. You can fine-tune later).

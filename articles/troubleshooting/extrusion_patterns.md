@@ -39,7 +39,7 @@ The right cube was printed after adjusting [:pushpin: extruder backlash](#extrud
     - [![](./images/extrusion_patterns/Backlash-Pattern.png)](./images/extrusion_patterns/Backlash-Pattern.png){:target="_blank"}
 
 ## Test Prints
-See the [:page_facing_up: test prints from MihaiDesigns](https://mihaidesigns.com/pages/inconsistent-extrusion-test)
+See the [:page_facing_up: test prints from MihaiDesigns](https://mihaidesigns.com/inconsistent-extrusion/)
 
 ## External Perimeters First
 

@@ -66,10 +66,10 @@ Some filament brands recommend inaccurate/conservative temperatures. Try standar
         - *:warning: Voron V2 and Trident have a ~10-15C temperature drop due to the thickness of the bed. Most people run ~110C for ABS because of this.
 
 
-- :warning: Ensure that your [:page_facing_up: first layer squish](./first_layer_squish.md) is correct.
+- :warning: Ensure that your [:page_facing_up: first layer squish](../first_layer_squish.md) is correct.
 
 - Use adequately thick line widths (in your slicer) for your first layer.
-    - I use [:page_facing_up: **120%**](./a_note_about_line_width.md) normally, but higher line widths can further increase adhesion. 
+    - I use [:page_facing_up: **120%**](../a_note_about_line_width.md) normally, but higher line widths can further increase adhesion. 
         - Thicker widths create more pressure against the build surface, resulting in a better bond.
 
 - Ensure your PEI is not counterfeit. You may have to ask in the Discord for others' experiences with a given brand. If your PEI is clear rather than yellowish, it's fake.

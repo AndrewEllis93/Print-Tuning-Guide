@@ -31,7 +31,8 @@ url: https://ellis3dp.com  # the base hostname and protocol for your site, e.g. 
 baseurl: /Print-Tuning-Guide         # place folder name if the site is served in a subfolder
 
 # Build settings
-remote_theme: pmarsceill/just-the-docs
+#remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 #color_scheme: dark
 color_scheme: ellis-dark
 

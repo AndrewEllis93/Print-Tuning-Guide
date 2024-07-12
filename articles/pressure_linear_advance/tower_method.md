@@ -19,6 +19,10 @@ grand_parent: Tuning
 {: .compat}
 :dizzy: This page is compatible with **Klipper only**.
 
+{: .prereqs}
+> - You should [:page_facing_up: calibrate your extruder](../extruder_calibration.md) first.
+
+
 ---
 
 **I would generally recommend using the [:page_facing_up: pattern method](./pattern_method.md) rather than this method, if you can take some time to wrap your head around it.** It is quicker and more precise.

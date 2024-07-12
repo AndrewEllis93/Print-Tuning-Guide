@@ -52,7 +52,8 @@ Tune maximum accelerations first, then tune speeds second.
 
 The acceleration test does need reasonably fast speeds to ensure accuracy, however. Make sure that your `max_velocity` in your config is set to this reasonably fast speed that you already know works **reliably.**
 
-There is some interplay between accelerations and speeds. 
+{: .note }
+>:bulb: There is some interplay between accelerations and speeds. You may get a slightly higher maximum speed with a slightly lower maximum acceleration and vice versa. Experiment!
 
 ---
 
@@ -76,12 +77,11 @@ There is some interplay between accelerations and speeds.
 
     - If you experience any skipping during extended tests, back the speed down again.
 
-5. *Use a slightly lower value than your results.*
-    - Sometimes a maximum that works perfectly, even in extended torture tests, can skip during actual prints. Go a bit lower for a margin of safety.
+5. Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
+    - *Use a slightly lower value than your results.*
+        - Often times, a maximum found through synthetic tests (even in extended tests) can skip during actual prints. Go a bit lower for a margin of safety. ~15% lower often works for me, but your mileage may vary.
 
-6. Save your new maximum acceleration to `max_accel` in your config and `RELOAD`.
-
-7. Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up: here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
+6. Use the "acceleration" graphing calculator at the bottom of the page [:page_facing_up: here](https://blog.prusaprinters.org/calculator_3416/) to find the theoretical maximum speed for your acceleration/print area. Remember it for the next step.
 
     - This is only a theoretical maximum. I will explain more in the next step.
 
@@ -97,7 +97,7 @@ There is some interplay between accelerations and speeds.
         
             - The **blue line** just shows how far a given speed would be maintained (400mm/s in this example - arbitrarily chosen)
 
-8. Repeat the process (steps 1-6), this time increasing speeds rather than accelerations. 
+7. Repeat the process (steps 1-6), this time increasing speeds rather than accelerations. 
     - Keep in mind that you can **only go up to the theoretical maximum value you found in the previous step.**
         - In most cases, this is very high and a non-issue. 
 
@@ -106,7 +106,9 @@ There is some interplay between accelerations and speeds.
     - Once again, run an extended "torture test" once you find your rough limit. 
     - Example: `TEST_SPEED SPEED=450 ITERATIONS=50`
 
-9. Save your new maximum speed to `max_velocity` in your config and `RELOAD`.
+8. Save your new maximum speed to `max_velocity` in your config and `RELOAD`. 
+    - *Use a slightly lower value than your results.*
+        - Often times, a maximum found through synthetic tests (even in extended tests) can skip during actual prints. Go a bit lower for a margin of safety. ~15% lower often works for me, but your mileage may vary.
 
 ## Usage of the TEST_SPEED Macro
 

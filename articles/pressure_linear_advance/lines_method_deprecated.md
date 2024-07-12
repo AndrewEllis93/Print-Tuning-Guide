@@ -21,6 +21,10 @@ grand_parent: Tuning
 {: .compat}
 :dizzy: This page is compatible with Klipper and Marlin.
 
+{: .prereqs}
+> - You should [:page_facing_up: calibrate your extruder](https://docs.vorondesign.com/build/startup/#extruder-calibration-e-steps) first.
+> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Linear advance must be [:page_facing_up: enabled in firmware](https://marlinfw.org/docs/configuration/configuration.html#linear-advance). Not all printers have it enabled by default. 
+
 ---
 
 - :warning: This has been deprecated in favor of my new pressure advance tuning tool! See [:page_facing_up: here](./pattern_method.md).

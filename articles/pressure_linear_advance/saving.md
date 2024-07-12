@@ -19,6 +19,9 @@ grand_parent: Tuning
 {: .compat}
 :dizzy: This page is compatible with Klipper, Marlin, and RepRapFirmware.
 
+{: .prereqs}
+> - ![]({{ "/assets/img/marlin_small.png" | absolute_url }}) **Marlin**: Linear advance must be [:page_facing_up: enabled in firmware](https://marlinfw.org/docs/configuration/configuration.html#linear-advance). Not all printers have it enabled by default. 
+
 ---
 
 ![]({{ "/assets/img/klipper.png" | absolute_url }})

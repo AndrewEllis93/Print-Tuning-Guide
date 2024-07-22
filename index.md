@@ -48,7 +48,5 @@ Some patience and willpower helps too.
 ## Notes
 
 - For issues, feedback, and contributions, please open a [:page_facing_up: GitHub issue](https://github.com/AndrewEllis93/Print-Tuning-Guide/issues).
-  - I can also be reached via Discord: [:page_facing_up: Ellis#4980](https://discordapp.com/users/207622442842062849)
-  - For troubleshooting & print help, please use the public channels. I get a lot of messages asking for troubleshooting help!
 - My SuperSlicer profiles are located [:page_facing_up: here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles).
 - You can find the bed models and textures I am using [:page_facing_up: here](https://github.com/VoronDesign/Voron-Extras/tree/main/Bed_Models). The bed texture I am using in some of the older screenshots is from [:page_facing_up: VoronUsers.](https://github.com/VoronDesign/VoronUsers/tree/master/slicer_configurations/PrusaSlicer/hartk1213/V0/Bed_Shape)

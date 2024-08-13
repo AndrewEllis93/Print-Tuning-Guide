@@ -35,6 +35,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 #gem "webrick", "~> 1.7"
 gem "webrick", "~> 1.8.1"
-gem "just-the-docs", "~> 0.8.2" # pinned version
+gem "just-the-docs", "~> 0.9.0" # pinned version
 gem 'jemoji', "~> 0.13.0"
 gem 'kramdown-parser-gfm', "~> 1.1.0"

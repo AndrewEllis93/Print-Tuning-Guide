@@ -271,7 +271,7 @@ GEM
     unicode-display_width (1.8.0)
     uri (0.13.0)
     wdm (0.1.1)
-    webrick (1.8.1)
+    webrick (1.9.0)
 
 PLATFORMS
   x64-mingw-ucrt
@@ -288,7 +288,7 @@ DEPENDENCIES
   tzinfo
   tzinfo-data
   wdm
-  webrick (~> 1.8.1)
+  webrick (~> 1.9.0)
 
 BUNDLED WITH
    2.3.26
